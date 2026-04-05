@@ -45,8 +45,8 @@ export function KeyboardShortcutsRefTool() {
         <p className="text-sm text-muted-foreground">
           Use the toolbar on the homepage for headings, lists, tables, and
           find/replace. Open this page anytime from{" "}
-          <span className="font-medium text-foreground">Writing Tools</span> in
-          the footer.
+          <span className="font-medium text-foreground">Tools</span> in the
+          footer.
         </p>
       </ToolCard>
     </ToolChrome>

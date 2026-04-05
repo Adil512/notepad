@@ -83,7 +83,7 @@ export function AdminShell({
       </Link>
       <Link href={L("/tools")} className={linkClass(false)}>
         <Wrench className="h-4 w-4 shrink-0 opacity-80" />
-        Writing Tools
+        Tools
       </Link>
     </nav>
   );
