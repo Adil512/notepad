@@ -6,6 +6,35 @@ import { getHomeSeoCopy, homeSeoRtlLocales } from "@/lib/home-seo-content";
 
 export type BlogTeaserItem = { slug: string; title: string };
 
+/** English copy links “distraction-free writing” to the distraction-free writer tool. */
+function WhatSecondParagraph({
+  locale,
+  text,
+}: {
+  locale: string;
+  text: string;
+}) {
+  const href = localizedPath(locale, "/distraction-free-writer");
+  const needle = "distraction-free writing";
+  if (locale === "en") {
+    const idx = text.indexOf(needle);
+    if (idx === -1) return <p>{text}</p>;
+    return (
+      <p>
+        {text.slice(0, idx)}
+        <Link
+          href={href}
+          className="text-primary hover:underline font-medium underline-offset-2"
+        >
+          {needle}
+        </Link>
+        {text.slice(idx + needle.length)}
+      </p>
+    );
+  }
+  return <p>{text}</p>;
+}
+
 export function SEOContent({
   locale,
   latestBlogPosts = [],
@@ -30,7 +59,7 @@ export function SEOContent({
           </h2>
           <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
             <p>{seo.whatParagraphs[0]}</p>
-            <p>{seo.whatParagraphs[1]}</p>
+            <WhatSecondParagraph locale={locale} text={seo.whatParagraphs[1]} />
           </div>
         </section>
 

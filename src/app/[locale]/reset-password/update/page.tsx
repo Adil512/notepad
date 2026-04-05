@@ -20,6 +20,11 @@ export default function UpdatePasswordPage() {
     e.preventDefault();
     setLoading(true);
     setError(null);
+    if (!supabase) {
+      setError("Password update is not configured for this deployment.");
+      setLoading(false);
+      return;
+    }
     const { error } = await supabase.auth.updateUser({ password });
     setLoading(false);
     if (error) {
@@ -39,6 +44,11 @@ export default function UpdatePasswordPage() {
         <p className="text-sm text-muted-foreground mb-6">
           Enter a new password for your account.
         </p>
+        {!supabase && (
+          <div className="bg-amber-500/10 text-amber-950 dark:text-amber-100 text-sm p-3 rounded-md mb-4 border border-amber-500/25">
+            This action requires Supabase environment variables on the server.
+          </div>
+        )}
         {error && (
           <div className="bg-destructive/10 text-destructive text-sm p-3 rounded-md mb-4 border border-destructive/20">
             {error}
@@ -56,7 +66,7 @@ export default function UpdatePasswordPage() {
           />
           <button
             type="submit"
-            disabled={loading}
+            disabled={loading || !supabase}
             className="w-full py-2.5 px-4 bg-primary text-primary-foreground rounded-md font-medium disabled:opacity-70 flex items-center justify-center"
           >
             {loading ? (

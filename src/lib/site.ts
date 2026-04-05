@@ -1,10 +1,25 @@
 import { localizedPath } from "@/lib/i18n";
 
+const FALLBACK_SITE = "https://notepad.is";
+
 /** Canonical site origin (no trailing slash). Override with NEXT_PUBLIC_SITE_URL in production. */
 export function getSiteUrl(): string {
   const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-  if (raw) return raw.replace(/\/$/, "");
-  return "https://notepad.is";
+  if (!raw) return FALLBACK_SITE;
+  let base = raw.replace(/\/$/, "");
+  if (!/^https?:\/\//i.test(base)) {
+    base = `https://${base}`;
+  }
+  return base;
+}
+
+/** Safe for `metadataBase`; never throws on bad env. */
+export function getMetadataBase(): URL {
+  try {
+    return new URL(`${getSiteUrl().replace(/\/$/, "")}/`);
+  } catch {
+    return new URL(`${FALLBACK_SITE}/`);
+  }
 }
 
 /**

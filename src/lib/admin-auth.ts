@@ -4,8 +4,7 @@ export { getAdminEmails, isAdminEmail } from "@/lib/admin-email";
 
 export async function getSessionUser() {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  return user;
+  if (!supabase) return null;
+  const { data } = await supabase.auth.getUser();
+  return data.user;
 }

@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { getLocaleMetadata } from "@/lib/locale-metadata";
 import { defaultLocale } from "@/lib/i18n";
 import { LOCALE_REQUEST_HEADER } from "@/lib/request-locale-header";
-import { getSiteUrl } from "@/lib/site";
+import { getMetadataBase } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
@@ -21,7 +21,7 @@ export const viewport: Viewport = {
 const rootMeta = getLocaleMetadata(defaultLocale);
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`${getSiteUrl().replace(/\/$/, "")}/`),
+  metadataBase: getMetadataBase(),
   title: rootMeta.title,
   description: rootMeta.description,
 };

@@ -20,6 +20,11 @@ export default function ResetPasswordPage() {
     setLoading(true);
     setError(null);
     setSuccess(null);
+    if (!supabase) {
+      setError("Password reset is not configured for this deployment.");
+      setLoading(false);
+      return;
+    }
 
     const resetLocale = locale || defaultLocale;
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
@@ -45,6 +50,12 @@ export default function ResetPasswordPage() {
         >
           <ArrowLeft className="w-4 h-4 mr-1" /> Back to login
         </Link>
+
+        {!supabase && (
+          <div className="bg-amber-500/10 text-amber-950 dark:text-amber-100 text-sm p-3 rounded-md mb-6 border border-amber-500/25">
+            Password reset requires Supabase environment variables on the server.
+          </div>
+        )}
 
         <div className="flex flex-col items-center mb-8">
           <div className="bg-primary/10 p-2 rounded-xl mb-6">
@@ -85,7 +96,7 @@ export default function ResetPasswordPage() {
 
           <button
             type="submit"
-            disabled={loading || success !== null}
+            disabled={loading || success !== null || !supabase}
             className="w-full py-2.5 px-4 bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-md shadow transition-colors flex items-center justify-center mt-6 disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {loading ? (

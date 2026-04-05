@@ -26,6 +26,11 @@ export default function SignupPage() {
     setLoading(true);
     setError(null);
     setSuccess(null);
+    if (!supabase) {
+      setError("Sign-up is not configured for this deployment.");
+      setLoading(false);
+      return;
+    }
 
     const { error, data } = await supabase.auth.signUp({
       email,
@@ -73,6 +78,12 @@ export default function SignupPage() {
             Start saving your notes securely in the cloud
           </p>
         </div>
+
+        {!supabase && (
+          <div className="bg-amber-500/10 text-amber-950 dark:text-amber-100 text-sm p-3 rounded-md mb-6 border border-amber-500/25">
+            Sign-up requires Supabase environment variables on the server.
+          </div>
+        )}
 
         {error && (
           <div className="bg-destructive/10 text-destructive text-sm p-3 rounded-md mb-6 text-center border border-destructive/20 font-medium">
@@ -129,7 +140,7 @@ export default function SignupPage() {
 
           <button
             type="submit"
-            disabled={loading || success !== null}
+            disabled={loading || success !== null || !supabase}
             className="w-full py-2.5 px-4 bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-md shadow transition-colors flex items-center justify-center mt-6 disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {loading ? (

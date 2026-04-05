@@ -25,9 +25,11 @@ export default async function Home({
 }) {
   const { locale } = await params;
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  let user = null;
+  if (supabase) {
+    const { data } = await supabase.auth.getUser();
+    user = data.user;
+  }
 
   const latest = await getLatestBlogPosts(3);
   const latestBlogPosts = latest.map((p) => ({

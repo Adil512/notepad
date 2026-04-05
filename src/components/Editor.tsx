@@ -248,6 +248,11 @@ export function Editor({ user }: { user?: User | null }) {
     
     setIsSharing(true);
     const supabase = createClient();
+    if (!supabase) {
+      alert("Sign-in is not available (app configuration).");
+      setIsSharing(false);
+      return;
+    }
     const { data, error } = await supabase.from('notes').insert([
       { user_id: user.id, content: htmlData, is_public: true }
     ]).select().single();

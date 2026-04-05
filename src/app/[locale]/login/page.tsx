@@ -23,6 +23,11 @@ export default function LoginPage() {
     e.preventDefault();
     setLoading(true);
     setError(null);
+    if (!supabase) {
+      setError("Sign-in is not configured for this deployment.");
+      setLoading(false);
+      return;
+    }
 
     const { error } = await supabase.auth.signInWithPassword({
       email,
@@ -57,6 +62,12 @@ export default function LoginPage() {
             Enter your email and password to sign in
           </p>
         </div>
+
+        {!supabase && (
+          <div className="bg-amber-500/10 text-amber-950 dark:text-amber-100 text-sm p-3 rounded-md mb-6 border border-amber-500/25">
+            Sign-in requires Supabase environment variables on the server.
+          </div>
+        )}
 
         {error && (
           <div className="bg-destructive/10 text-destructive text-sm p-3 rounded-md mb-6 text-center border border-destructive/20 font-medium">
@@ -100,7 +111,7 @@ export default function LoginPage() {
 
           <button
             type="submit"
-            disabled={loading}
+            disabled={loading || !supabase}
             className="w-full py-2.5 px-4 bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-md shadow transition-colors flex items-center justify-center mt-6 disabled:opacity-70 disabled:cursor-not-allowed"
           >
             {loading ? (

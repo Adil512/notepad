@@ -147,7 +147,7 @@ export function Footer({ locale }: { locale: string }) {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-foreground">Writing tools</h3>
+            <h3 className="font-semibold mb-4 text-foreground">Writing Tools</h3>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -162,7 +162,7 @@ export function Footer({ locale }: { locale: string }) {
                   href={L("/distraction-free-writer")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Distraction-free writer
+                  Distraction-Free Writer
                 </Link>
               </li>
               <li>
@@ -170,7 +170,7 @@ export function Footer({ locale }: { locale: string }) {
                   href={L("/quick-notes")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Quick notes
+                  Quick Notes
                 </Link>
               </li>
               <li>
@@ -178,7 +178,7 @@ export function Footer({ locale }: { locale: string }) {
                   href={L("/secure-text-editor")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Secure text editor
+                  Secure Text Editor
                 </Link>
               </li>
             </ul>
@@ -197,7 +197,7 @@ export function Footer({ locale }: { locale: string }) {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href={L("/terms")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   Terms of Service
@@ -219,7 +219,7 @@ export function Footer({ locale }: { locale: string }) {
               Privacy
             </Link>
             <Link
-              href="#"
+              href={L("/terms")}
               className="text-xs text-muted-foreground hover:text-foreground"
             >
               Terms
