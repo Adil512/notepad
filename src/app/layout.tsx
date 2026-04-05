@@ -24,6 +24,12 @@ export const metadata: Metadata = {
   metadataBase: getMetadataBase(),
   title: rootMeta.title,
   description: rootMeta.description,
+  icons: {
+    icon: "/favicon.ico",
+  },
+  verification: {
+    google: "3Wjg5usa-zMVqbzgIUeoxq83rj-X1IuiyQHqN44ZSNU",
+  },
 };
 
 export default async function RootLayout({
