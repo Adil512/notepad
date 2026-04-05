@@ -159,6 +159,174 @@ export function Footer({ locale }: { locale: string }) {
               </li>
               <li>
                 <Link
+                  href={L("/tools/markdown-notepad")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Markdown Editor
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/code-notepad")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Code Notepad
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/json-editor")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  JSON Editor
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/html-editor")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  HTML Editor
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/word-counter")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Word counter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/character-counter")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Character counter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/sentence-counter")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Sentence counter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/paragraph-counter")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Paragraph counter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/reading-time-calculator")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Reading time calculator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/case-converter")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Case converter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/text-cleaner")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Text cleaner
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/duplicate-remover")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Duplicate line remover
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/text-sorter")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Text sorter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/text-compare-diff")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Text compare (diff)
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/json-formatter")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  JSON formatter & validator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/html-minifier")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  HTML minifier
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/css-beautifier")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  CSS beautifier
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/base64-codec")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Base64 encoder & decoder
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/url-codec")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  URL encoder & decoder
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/regex-tester")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Regex tester
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/xml-formatter")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  XML formatter
+                </Link>
+              </li>
+              <li>
+                <Link
                   href={L("/distraction-free-writer")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >

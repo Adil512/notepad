@@ -14,10 +14,13 @@ export function AdminBlogPostsManager({
   locale,
   posts,
   stats,
+  adminListError = null,
 }: {
   locale: string;
   posts: DbBlogPostRow[];
   stats: { total: number; published: number; drafts: number };
+  /** Set when admin DB list fails (e.g. missing SUPABASE_SERVICE_ROLE_KEY on Vercel). */
+  adminListError?: string | null;
 }) {
   const L = (p: string) => localizedPath(locale, p);
   const [query, setQuery] = useState("");
@@ -40,6 +43,33 @@ export function AdminBlogPostsManager({
 
   return (
     <div className="space-y-8">
+      {adminListError && (
+        <div
+          className="rounded-2xl border border-amber-500/40 bg-amber-50 px-4 py-3 text-sm text-amber-950 dark:border-amber-500/30 dark:bg-amber-950/40 dark:text-amber-100"
+          role="alert"
+        >
+          <p className="font-semibold">Admin can’t load posts from the database</p>
+          <p className="mt-1 text-amber-900/90 dark:text-amber-100/90">
+            The public blog uses the <strong>anon</strong> key (published posts
+            only). This list needs the <strong>service role</strong> key to read
+            all rows (including drafts).
+          </p>
+          <p className="mt-2 font-mono text-xs opacity-90">{adminListError}</p>
+          <p className="mt-3 text-xs">
+            On Vercel: Project → Settings → Environment Variables → add{" "}
+            <code className="rounded bg-amber-100/80 px-1 py-0.5 dark:bg-amber-900/60">
+              SUPABASE_SERVICE_ROLE_KEY
+            </code>{" "}
+            (from Supabase → Project Settings → API → service_role secret), then
+            redeploy. Never expose this key in the browser or prefix it with{" "}
+            <code className="rounded bg-amber-100/80 px-1 py-0.5 dark:bg-amber-900/60">
+              NEXT_PUBLIC_
+            </code>
+            .
+          </p>
+        </div>
+      )}
+
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-3xl font-display">
@@ -121,7 +151,12 @@ export function AdminBlogPostsManager({
         />
       </div>
 
-      {posts.length === 0 ? (
+      {posts.length === 0 && adminListError ? (
+        <p className="rounded-xl border border-zinc-200 bg-white py-8 text-center text-sm text-zinc-600 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-zinc-400">
+          After fixing the configuration above, refresh this page. Saving or
+          creating posts also requires the service role key.
+        </p>
+      ) : posts.length === 0 ? (
         <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-zinc-300 bg-white px-6 py-16 text-center dark:border-zinc-700 dark:bg-zinc-900/40">
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-100 text-violet-600 dark:bg-violet-950 dark:text-violet-400">
             <FileText className="h-7 w-7" />

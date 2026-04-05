@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import {
   WRITING_TOOL_CATEGORY_ORDER,
   WRITING_TOOL_IDS,
+  PRIMARY_EDITOR_TOOL_IDS,
+  TEXT_ANALYSIS_TOOL_IDS,
+  DEVTOOLS_TOOL_IDS,
   writingToolCategoryCopy,
   writingToolCategoryAccent,
   writingToolsMeta,
@@ -94,7 +97,107 @@ export default async function ToolsHubPage({
               Quick notes
             </Link>
           </div>
+
+          <div className="mt-6 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/[0.07] via-card/80 to-cyan-500/[0.06] p-4 dark:from-primary/10 dark:to-cyan-500/10 sm:p-5">
+            <p className="text-center text-xs font-semibold uppercase tracking-wider text-primary lg:text-left">
+              Online editors
+            </p>
+            <div className="mt-3 flex flex-wrap justify-center gap-2 lg:justify-start">
+              {PRIMARY_EDITOR_TOOL_IDS.map((id) => {
+                const m = writingToolsMeta[id];
+                return (
+                  <Link
+                    key={id}
+                    href={L(`/tools/${id}`)}
+                    className="inline-flex items-center gap-2 rounded-xl border border-border/80 bg-background/90 px-4 py-2 text-sm font-semibold text-foreground shadow-sm backdrop-blur-sm transition hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
+                  >
+                    <ToolIcon id={id} className="h-4 w-4 text-primary" />
+                    {m.h1}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-2xl border border-rose-500/20 bg-gradient-to-br from-rose-500/[0.06] via-card/80 to-orange-500/[0.05] p-4 dark:from-rose-500/10 dark:to-orange-500/10 sm:p-5">
+            <p className="text-center text-xs font-semibold uppercase tracking-wider text-rose-700 dark:text-rose-300 lg:text-left">
+              Text analysis
+            </p>
+            <div className="mt-3 flex flex-wrap justify-center gap-2 lg:justify-start">
+              {TEXT_ANALYSIS_TOOL_IDS.map((id) => {
+                const m = writingToolsMeta[id];
+                return (
+                  <Link
+                    key={id}
+                    href={L(`/tools/${id}`)}
+                    className="inline-flex items-center gap-2 rounded-xl border border-border/80 bg-background/90 px-3 py-2 text-sm font-semibold text-foreground shadow-sm backdrop-blur-sm transition hover:border-rose-400/50 hover:bg-rose-500/5 hover:text-rose-800 dark:hover:text-rose-200"
+                  >
+                    <ToolIcon id={id} className="h-4 w-4 text-rose-600 dark:text-rose-400" />
+                    {m.h1}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-2xl border border-indigo-500/25 bg-gradient-to-br from-indigo-500/[0.07] via-card/80 to-violet-500/[0.06] p-4 dark:from-indigo-500/10 dark:to-violet-500/10 sm:p-5">
+            <p className="text-center text-xs font-semibold uppercase tracking-wider text-indigo-800 dark:text-indigo-200 lg:text-left">
+              Developer utilities
+            </p>
+            <div className="mt-3 flex flex-wrap justify-center gap-2 lg:justify-start">
+              {DEVTOOLS_TOOL_IDS.map((id) => {
+                const m = writingToolsMeta[id];
+                return (
+                  <Link
+                    key={id}
+                    href={L(`/tools/${id}`)}
+                    className="inline-flex items-center gap-2 rounded-xl border border-border/80 bg-background/90 px-3 py-2 text-sm font-semibold text-foreground shadow-sm backdrop-blur-sm transition hover:border-indigo-400/50 hover:bg-indigo-500/5 hover:text-indigo-900 dark:hover:text-indigo-100"
+                  >
+                    <ToolIcon id={id} className="h-4 w-4 text-indigo-600 dark:text-indigo-400" />
+                    {m.h1}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
         </header>
+
+        <section
+          className="mt-14 sm:mt-16"
+          aria-labelledby="featured-editor-cards"
+        >
+          <div className="mb-6 flex flex-col gap-2 border-b border-border/60 pb-5 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <div
+                className={`mb-2 inline-flex h-1 w-12 rounded-full bg-gradient-to-r ${writingToolCategoryAccent.text}`}
+                aria-hidden
+              />
+              <h2
+                id="featured-editor-cards"
+                className="font-display text-2xl font-bold tracking-tight text-foreground"
+              >
+                Professional editors
+              </h2>
+              <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
+                Syntax highlighting, previews, validation, and local autosave —
+                no install required.
+              </p>
+            </div>
+            <span className="text-xs font-medium tabular-nums text-muted-foreground">
+              {PRIMARY_EDITOR_TOOL_IDS.length} editors
+            </span>
+          </div>
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2 lg:gap-5">
+            {PRIMARY_EDITOR_TOOL_IDS.map((id) => (
+              <ToolHubCard
+                key={id}
+                id={id}
+                href={L(`/tools/${id}`)}
+                accent={writingToolCategoryAccent.text}
+              />
+            ))}
+          </ul>
+        </section>
 
         <div className="mt-16 space-y-16 sm:mt-20">
           {WRITING_TOOL_CATEGORY_ORDER.map((cat) => {

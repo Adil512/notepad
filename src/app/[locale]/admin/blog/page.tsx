@@ -29,20 +29,30 @@ export default async function AdminBlogListPage({
   if (!user?.email || !isAdminEmail(user.email)) notFound();
 
   let rows: DbBlogPostRow[] = [];
+  let adminListError: string | null = null;
   try {
     const admin = createAdminSupabaseClient();
     const { data, error } = await admin
       .from("blog_posts")
       .select("*")
       .order("updated_at", { ascending: false });
-    if (!error && data) rows = data as DbBlogPostRow[];
-  } catch {
-    rows = [];
+    if (error) adminListError = error.message;
+    else if (data) rows = data as DbBlogPostRow[];
+  } catch (e) {
+    adminListError =
+      e instanceof Error
+        ? e.message
+        : "Could not load posts (check server configuration).";
   }
 
   const stats = await getAdminBlogStats();
 
   return (
-    <AdminBlogPostsManager locale={locale} posts={rows} stats={stats} />
+    <AdminBlogPostsManager
+      locale={locale}
+      posts={rows}
+      stats={stats}
+      adminListError={adminListError}
+    />
   );
 }
