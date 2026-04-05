@@ -13,7 +13,7 @@ function hasExplicitNonEnLocale(pathname: string): boolean {
   return Boolean(seg && isValidLocale(seg) && seg !== defaultLocale);
 }
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (

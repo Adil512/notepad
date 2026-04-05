@@ -18,30 +18,59 @@ export async function updateSession(
     NextResponse.next({ request: { headers } });
   let supabaseResponse = base();
 
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        getAll() {
-          return request.cookies.getAll();
-        },
-        setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value, options }) =>
-            request.cookies.set(name, value)
-          );
-          supabaseResponse = base();
-          cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options)
-          );
-        },
-      },
-    }
-  );
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!supabaseUrl?.trim() || !supabaseAnonKey?.trim()) {
+    console.error(
+      "Missing NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY (middleware)"
+    );
+    return supabaseResponse;
+  }
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  /**
+   * Do not call `request.cookies.set` here (breaks on Edge; unnecessary on Node proxy).
+   * @supabase/ssr requires `getAll()` to reflect `setAll()` in the same tick — track overrides here.
+   */
+  const cookieOverrides = new Map<string, string>();
+
+  const supabase = createServerClient(supabaseUrl, supabaseAnonKey, {
+    cookies: {
+      getAll() {
+        const merged = new Map<string, { name: string; value: string }>();
+        for (const c of request.cookies.getAll()) {
+          merged.set(c.name, { name: c.name, value: c.value });
+        }
+        for (const [name, value] of cookieOverrides) {
+          if (value === "") merged.delete(name);
+          else merged.set(name, { name, value });
+        }
+        return [...merged.values()];
+      },
+      setAll(cookiesToSet, responseHeaders) {
+        cookiesToSet.forEach(({ name, value }) => {
+          cookieOverrides.set(name, value);
+        });
+        supabaseResponse = base();
+        cookiesToSet.forEach(({ name, value, options }) => {
+          supabaseResponse.cookies.set(name, value, options);
+        });
+        for (const [key, value] of Object.entries(responseHeaders)) {
+          supabaseResponse.headers.set(key, value);
+        }
+      },
+    },
+  });
+
+  let user: Awaited<
+    ReturnType<typeof supabase.auth.getUser>
+  >["data"]["user"] = null;
+  try {
+    ({
+      data: { user },
+    } = await supabase.auth.getUser());
+  } catch (err) {
+    console.error("supabase.auth.getUser() failed in proxy/middleware:", err);
+  }
 
   const pathname = request.nextUrl.pathname;
   const pathAfterLocale = getPathWithoutLocale(pathname);
