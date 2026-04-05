@@ -1,26 +1,243 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Primary Accent - Vibrant Purple/Indigo */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  /* Secondary Accent */
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  /* Muted / Neutral */
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  /* Status Colors */
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-inter), sans-serif;
+  --font-display: var(--font-outfit), sans-serif;
+  
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 2px);
+  --radius-2xl: calc(var(--radius) + 6px);
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #09090b;
+
+    /* A vibrant violet for primary actions */
+    --primary: #7c3aed;
+    --primary-foreground: #ffffff;
+
+    --secondary: #f4f4f5;
+    --secondary-foreground: #18181b;
+
+    --muted: #f4f4f5;
+    --muted-foreground: #71717a;
+
+    --accent: #f4f4f5;
+    --accent-foreground: #18181b;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --border: #e4e4e7;
+    --input: #e4e4e7;
+    --ring: #7c3aed;
+    
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: #09090b;
+    --foreground: #fafafa;
+
+    --primary: #8b5cf6;
+    --primary-foreground: #ffffff;
+
+    --secondary: #27272a;
+    --secondary-foreground: #fafafa;
+
+    --muted: #27272a;
+    --muted-foreground: #a1a1aa;
+
+    --accent: #27272a;
+    --accent-foreground: #fafafa;
+
+    --destructive: #7f1d1d;
+    --destructive-foreground: #fafafa;
+
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #8b5cf6;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply font-sans selection:bg-primary selection:text-white transition-colors duration-300;
+  }
+  
+  /* Focus rings */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background transition-shadow duration-200;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  opacity: 0.5;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+  opacity: 0.8;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* CMS blog HTML (TipTap) — explicit styles because @tailwindcss/typography is not installed (prose-* classes would be inert). */
+@layer components {
+  .blog-post-body {
+    @apply max-w-none text-[1.0625rem] leading-relaxed text-muted-foreground;
+  }
+
+  .blog-post-body :where(h1) {
+    @apply font-display text-3xl sm:text-[2rem] font-bold text-foreground mt-10 mb-4 first:mt-0 leading-tight;
+    scroll-margin-top: 7rem;
+  }
+
+  .blog-post-body :where(h2) {
+    @apply font-display text-2xl sm:text-[1.75rem] font-bold text-foreground mt-10 mb-3 pb-2 border-b border-border leading-tight;
+    scroll-margin-top: 7rem;
+  }
+
+  .blog-post-body :where(h3) {
+    @apply font-display text-xl sm:text-[1.35rem] font-bold text-foreground mt-8 mb-2 leading-snug;
+    scroll-margin-top: 7rem;
+  }
+
+  .blog-post-body :where(h4) {
+    @apply font-display text-lg font-semibold text-foreground mt-6 mb-2 leading-snug;
+    scroll-margin-top: 7rem;
+  }
+
+  .blog-post-body :where(h5) {
+    @apply font-display text-base font-semibold text-foreground mt-5 mb-2;
+  }
+
+  .blog-post-body :where(h6) {
+    @apply font-display text-sm font-semibold uppercase tracking-wide text-foreground mt-5 mb-2;
+  }
+
+  .blog-post-body :where(p) {
+    @apply my-4 first:mt-0 last:mb-0;
+  }
+
+  .blog-post-body :where(strong) {
+    @apply font-semibold text-foreground;
+  }
+
+  .blog-post-body :where(a) {
+    @apply text-primary font-medium underline underline-offset-2 hover:text-primary/80;
+  }
+
+  .blog-post-body :where(ul) {
+    @apply my-4 list-disc pl-6 space-y-2;
+  }
+
+  .blog-post-body :where(ol) {
+    @apply my-4 list-decimal pl-6 space-y-2;
+  }
+
+  .blog-post-body :where(li) {
+    @apply leading-relaxed;
+  }
+
+  .blog-post-body :where(li > p) {
+    @apply my-1;
+  }
+
+  .blog-post-body :where(blockquote) {
+    @apply my-6 border-l-4 border-primary/35 pl-4 italic text-muted-foreground;
+  }
+
+  .blog-post-body :where(hr) {
+    @apply my-10 border-0 border-t border-border;
+  }
+
+  .blog-post-body :where(pre) {
+    @apply my-6 overflow-x-auto rounded-xl bg-muted p-4 text-sm text-foreground;
+  }
+
+  .blog-post-body :where(pre code) {
+    @apply bg-transparent p-0 text-sm font-mono;
+  }
+
+  .blog-post-body :where(:not(pre) > code) {
+    @apply rounded-md bg-muted px-1.5 py-0.5 text-[0.9em] font-mono text-foreground;
+  }
+
+  .blog-post-body :where(img) {
+    @apply my-6 max-w-full h-auto rounded-xl border border-border;
+  }
+
+  .blog-post-body :where(table) {
+    @apply my-6 w-full text-sm border-collapse border border-border rounded-lg overflow-hidden;
+  }
+
+  .blog-post-body :where(th, td) {
+    @apply border border-border px-3 py-2 text-left;
+  }
+
+  .blog-post-body :where(th) {
+    @apply bg-muted font-semibold text-foreground;
+  }
+}
+
+/* Editor Styles */
+.editor-content {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5rem;
+}
+
+.editor-content[data-placeholder]:empty:before {
+  content: attr(data-placeholder);
+  color: var(--muted-foreground);
+  pointer-events: none;
+  display: block;
 }
