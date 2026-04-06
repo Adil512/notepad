@@ -14,6 +14,15 @@ import { defaultLocale } from "@/lib/i18n";
 import { localizedPath } from "@/lib/i18n";
 import { canonicalUrlForPage } from "@/lib/site";
 import { ToolIcon } from "@/components/tools/ToolIcon";
+import {
+  getMarkdownNotepadHero,
+  getMarkdownNotepadSeo,
+} from "@/lib/seo/markdown-notepad-seo";
+import { ToolPageEducation } from "@/components/tools/ToolPageEducation";
+import {
+  formatToolNameForHeading,
+  getToolPageEducation,
+} from "@/lib/tool-page-education-content";
 
 export const dynamicParams = true;
 
@@ -35,6 +44,19 @@ export async function generateMetadata({
   }
   const m = writingToolsMeta[tool];
   const canonical = canonicalUrlForPage(locale, `/tools/${tool}`);
+  if (tool === "markdown-notepad") {
+    const seo = getMarkdownNotepadSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  }
   return {
     title: m.title,
     description: m.description,
@@ -55,6 +77,12 @@ export default async function WritingToolPage({
   const m = writingToolsMeta[id];
   const hub = localizedPath(locale, "/tools");
   const accent = writingToolCategoryAccent[m.category];
+  const hero =
+    id === "markdown-notepad"
+      ? getMarkdownNotepadHero(locale)
+      : { h1: m.h1, description: m.description };
+  const education = getToolPageEducation(id);
+  const educationToolName = formatToolNameForHeading(hero.h1);
 
   return (
     <div className="flex flex-col flex-1 min-h-0">
@@ -83,10 +111,10 @@ export default async function WritingToolPage({
             </div>
             <div className="min-w-0 flex-1">
               <h1 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                {m.h1}
+                {hero.h1}
               </h1>
               <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">
-                {m.description}
+                {hero.description}
               </p>
             </div>
           </div>
@@ -96,6 +124,13 @@ export default async function WritingToolPage({
       <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
         <WritingToolView id={id} />
       </div>
+
+      {education ? (
+        <ToolPageEducation
+          toolName={educationToolName}
+          content={education}
+        />
+      ) : null}
     </div>
   );
 }

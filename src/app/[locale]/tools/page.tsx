@@ -4,8 +4,6 @@ import {
   WRITING_TOOL_CATEGORY_ORDER,
   WRITING_TOOL_IDS,
   PRIMARY_EDITOR_TOOL_IDS,
-  TEXT_ANALYSIS_TOOL_IDS,
-  DEVTOOLS_TOOL_IDS,
   writingToolCategoryCopy,
   writingToolCategoryAccent,
   writingToolsMeta,
@@ -24,9 +22,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: "Tools | Notepad.is",
+    title: "Writing Tools | Notepad.is",
     description:
-      "Free online tools: editors, text analysis, formatters, and more — timers, Markdown, goals, dictation, templates, all in one place.",
+      "Professional writing tools for free, unlimited: timers, Markdown, goals, dictation, templates, and more.",
     alternates: { canonical: canonicalUrlForPage(locale, "/tools") },
     openGraph: { url: canonicalUrlForPage(locale, "/tools") },
   };
@@ -56,10 +54,11 @@ export default async function ToolsHubPage({
             Toolkit
           </div>
           <h1 className="mt-5 font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
-            Tools
+            Writing Tools
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground lg:mx-0 lg:text-lg">
-            Find all the professional tools you can use for free, unlimited.
+            Find all the professional writing tools that you can use for free,
+            unlimited.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
@@ -84,6 +83,30 @@ export default async function ToolsHubPage({
               <ArrowRight className="h-4 w-4 opacity-90" />
             </Link>
             <Link
+              href={L("/tools/markdown-notepad")}
+              className="rounded-xl border border-border bg-background/80 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition hover:border-primary/30 hover:bg-muted/50"
+            >
+              Markdown Editor
+            </Link>
+            <Link
+              href={L("/tools/code-notepad")}
+              className="rounded-xl border border-border bg-background/80 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition hover:border-primary/30 hover:bg-muted/50"
+            >
+              Code Notepad
+            </Link>
+            <Link
+              href={L("/tools/json-editor")}
+              className="rounded-xl border border-border bg-background/80 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition hover:border-primary/30 hover:bg-muted/50"
+            >
+              JSON Editor
+            </Link>
+            <Link
+              href={L("/tools/html-editor")}
+              className="rounded-xl border border-border bg-background/80 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition hover:border-primary/30 hover:bg-muted/50"
+            >
+              HTML Editor
+            </Link>
+            <Link
               href={L("/distraction-free-writer")}
               className="rounded-xl border border-border bg-background/80 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition hover:border-primary/30 hover:bg-muted/50"
             >
@@ -96,74 +119,11 @@ export default async function ToolsHubPage({
               Quick notes
             </Link>
           </div>
-
-          <div className="mt-6 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/[0.07] via-card/80 to-cyan-500/[0.06] p-4 dark:from-primary/10 dark:to-cyan-500/10 sm:p-5">
-            <p className="text-center text-xs font-semibold uppercase tracking-wider text-primary lg:text-left">
-              Online editors
-            </p>
-            <div className="mt-3 flex flex-wrap justify-center gap-2 lg:justify-start">
-              {PRIMARY_EDITOR_TOOL_IDS.map((id) => {
-                const m = writingToolsMeta[id];
-                return (
-                  <Link
-                    key={id}
-                    href={L(`/tools/${id}`)}
-                    className="inline-flex items-center gap-2 rounded-xl border border-border/80 bg-background/90 px-4 py-2 text-sm font-semibold text-foreground shadow-sm backdrop-blur-sm transition hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
-                  >
-                    <ToolIcon id={id} className="h-4 w-4 text-primary" />
-                    {m.h1}
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="mt-4 rounded-2xl border border-rose-500/20 bg-gradient-to-br from-rose-500/[0.06] via-card/80 to-orange-500/[0.05] p-4 dark:from-rose-500/10 dark:to-orange-500/10 sm:p-5">
-            <p className="text-center text-xs font-semibold uppercase tracking-wider text-rose-700 dark:text-rose-300 lg:text-left">
-              Text analysis
-            </p>
-            <div className="mt-3 flex flex-wrap justify-center gap-2 lg:justify-start">
-              {TEXT_ANALYSIS_TOOL_IDS.map((id) => {
-                const m = writingToolsMeta[id];
-                return (
-                  <Link
-                    key={id}
-                    href={L(`/tools/${id}`)}
-                    className="inline-flex items-center gap-2 rounded-xl border border-border/80 bg-background/90 px-3 py-2 text-sm font-semibold text-foreground shadow-sm backdrop-blur-sm transition hover:border-rose-400/50 hover:bg-rose-500/5 hover:text-rose-800 dark:hover:text-rose-200"
-                  >
-                    <ToolIcon id={id} className="h-4 w-4 text-rose-600 dark:text-rose-400" />
-                    {m.h1}
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="mt-4 rounded-2xl border border-indigo-500/25 bg-gradient-to-br from-indigo-500/[0.07] via-card/80 to-violet-500/[0.06] p-4 dark:from-indigo-500/10 dark:to-violet-500/10 sm:p-5">
-            <p className="text-center text-xs font-semibold uppercase tracking-wider text-indigo-800 dark:text-indigo-200 lg:text-left">
-              Developer utilities
-            </p>
-            <div className="mt-3 flex flex-wrap justify-center gap-2 lg:justify-start">
-              {DEVTOOLS_TOOL_IDS.map((id) => {
-                const m = writingToolsMeta[id];
-                return (
-                  <Link
-                    key={id}
-                    href={L(`/tools/${id}`)}
-                    className="inline-flex items-center gap-2 rounded-xl border border-border/80 bg-background/90 px-3 py-2 text-sm font-semibold text-foreground shadow-sm backdrop-blur-sm transition hover:border-indigo-400/50 hover:bg-indigo-500/5 hover:text-indigo-900 dark:hover:text-indigo-100"
-                  >
-                    <ToolIcon id={id} className="h-4 w-4 text-indigo-600 dark:text-indigo-400" />
-                    {m.h1}
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
         </header>
 
         <section
           className="mt-14 sm:mt-16"
-          aria-labelledby="featured-editor-cards"
+          aria-labelledby="hub-editors-heading"
         >
           <div className="mb-6 flex flex-col gap-2 border-b border-border/60 pb-5 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -172,21 +132,18 @@ export default async function ToolsHubPage({
                 aria-hidden
               />
               <h2
-                id="featured-editor-cards"
-                className="font-display text-2xl font-bold tracking-tight text-foreground"
+                id="hub-editors-heading"
+                className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
               >
-                Professional editors
+                Code &amp; markup editors
               </h2>
-              <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
-                Syntax highlighting, previews, validation, and local autosave —
-                no install required.
+              <p className="mt-1 max-w-2xl text-sm text-muted-foreground sm:text-base">
+                Syntax highlighting, live preview, validation, and local autosave.
+                No install — runs entirely in your browser.
               </p>
             </div>
-            <span className="text-xs font-medium tabular-nums text-muted-foreground">
-              {PRIMARY_EDITOR_TOOL_IDS.length} editors
-            </span>
           </div>
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2 lg:gap-5">
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {PRIMARY_EDITOR_TOOL_IDS.map((id) => (
               <ToolHubCard
                 key={id}
