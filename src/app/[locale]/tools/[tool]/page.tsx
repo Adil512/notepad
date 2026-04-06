@@ -19,6 +19,10 @@ import {
   getMarkdownNotepadHero,
   getMarkdownNotepadSeo,
 } from "@/lib/seo/markdown-notepad-seo";
+import {
+  getJsonEditorHero,
+  getJsonEditorSeo,
+} from "@/lib/seo/json-editor-seo";
 import { ToolPageEducation } from "@/components/tools/ToolPageEducation";
 import {
   formatToolNameForHeading,
@@ -57,6 +61,18 @@ export async function generateMetadata({
         description: seo.description,
       },
     };
+  } else if (tool === "json-editor") {
+    const seo = getJsonEditorSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
   }
   return {
     title: m.title,
@@ -78,10 +94,12 @@ export default async function WritingToolPage({
   const m = writingToolsMeta[id];
   const hub = localizedPath(locale, "/tools");
   const accent = writingToolCategoryAccent[m.category];
-  const hero =
-    id === "markdown-notepad"
-      ? getMarkdownNotepadHero(locale)
-      : { h1: m.h1, description: m.description };
+  let hero = { h1: m.h1, description: m.description };
+  if (id === "markdown-notepad") {
+    hero = getMarkdownNotepadHero(locale);
+  } else if (id === "json-editor") {
+    hero = getJsonEditorHero(locale);
+  }
   const education = getToolPageEducation(id);
   const educationToolName = formatToolNameForHeading(hero.h1);
   const heroPanel = toolHeroPanelClass(m.category);
