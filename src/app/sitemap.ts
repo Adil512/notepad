@@ -18,7 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes: MetadataRoute.Sitemap = [];
   const now = new Date();
 
-  // 1) Default-locale homepage first — highest priority (trailing slash)
+  // 1) Default-locale homepage first (highest priority, trailing slash)
   routes.push({
     url: absoluteUrl("/"),
     lastModified: now,
@@ -37,7 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
-  // 3) Remaining static routes (skip "" — already emitted)
+  // 3) Remaining static routes (skip ""; already emitted)
   for (const locale of locales) {
     for (const path of staticPaths) {
       if (path === "") continue;

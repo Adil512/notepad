@@ -71,7 +71,7 @@ Use **bold** and lists:
 
 - Item one
 - Item two`,
-  plain: `Plain text — no highlighting.
+  plain: `Plain text: no highlighting.
 
 Use this for logs, drafts, or any freeform writing.`,
 };

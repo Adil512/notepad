@@ -1,4 +1,4 @@
-/** Homepage FAQ — shared by visible accordions and FAQPage JSON-LD */
+/** Homepage FAQ: shared by visible accordions and FAQPage JSON-LD */
 
 export const NOTEPAD_ONLINE_FAQS: { q: string; a: string }[] = [
   {

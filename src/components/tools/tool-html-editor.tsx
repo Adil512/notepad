@@ -21,7 +21,7 @@ const SAMPLE = `<!DOCTYPE html>
 </head>
 <body>
   <h1>Live HTML preview</h1>
-  <p>Edit the source on the left — updates appear here safely in a sandbox.</p>
+  <p>Edit the source on the left; updates appear here safely in a sandbox.</p>
 </body>
 </html>`;
 

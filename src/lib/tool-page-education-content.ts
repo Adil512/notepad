@@ -41,7 +41,7 @@ export function formatToolNameForHeading(h1: string): string {
 const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   "markdown-notepad": {
     whatIs: [
-      "A Markdown editor lets you write structured documents using simple punctuation—headings with #, lists with - or 1., emphasis with asterisks, and links in brackets—without a traditional word processor.",
+      "A Markdown editor lets you write structured documents using simple punctuation: headings with #, lists with - or 1., emphasis with asterisks, and links in brackets, without a traditional word processor.",
       "This tool highlights your syntax, previews GitHub-flavored Markdown, and keeps your draft in the browser so you can focus on content.",
     ],
     howToUse: [
@@ -78,7 +78,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   },
   "code-notepad": {
     whatIs: [
-      "A code notepad is a lightweight editor with syntax highlighting for many languages—ideal for snippets, experiments, and quick edits without opening a full IDE.",
+      "A code notepad is a lightweight editor with syntax highlighting for many languages, ideal for snippets, experiments, and quick edits without opening a full IDE.",
       "Switch languages, keep a scratch buffer, and download your file when you are done.",
     ],
     howToUse: [
@@ -94,7 +94,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
       {
         question: "Does it run or compile my code?",
         answer:
-          "No—it is an editor with highlighting only. Run code in your terminal or a runtime environment.",
+          "No. It is an editor with highlighting only. Run code in your terminal or a runtime environment.",
       },
       {
         question: "Where is my code stored?",
@@ -166,7 +166,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   },
   "word-counter": {
     whatIs: [
-      "A word counter measures words, characters, sentences, and paragraphs from any text you paste—useful for assignments, SEO drafts, and social limits.",
+      "A word counter measures words, characters, sentences, and paragraphs from any text you paste, useful for assignments, SEO drafts, and social limits.",
     ],
     howToUse: [
       "Paste or type your text in the box.",
@@ -190,11 +190,11 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   },
   "character-counter": {
     whatIs: [
-      "A character counter reports length with and without spaces, plus helpful extras like lines—ideal for tweets, meta descriptions, and SMS-style limits.",
+      "A character counter reports length with and without spaces, plus helpful extras like lines, ideal for tweets, meta descriptions, and SMS-style limits.",
     ],
     howToUse: [
       "Enter your string in the text area.",
-      "Compare “all characters” vs “no spaces” to match the limit you care about.",
+      "Compare \"all characters\" vs \"no spaces\" to match the limit you care about.",
     ],
     whyUse: [
       "Avoid submit errors on platforms with strict character caps.",
@@ -209,7 +209,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   },
   "sentence-counter": {
     whatIs: [
-      "A sentence counter estimates how many sentences appear in a passage using punctuation cues—helpful for readability checks and editing goals.",
+      "A sentence counter estimates how many sentences appear in a passage using punctuation cues, helpful for readability checks and editing goals.",
     ],
     howToUse: [
       "Paste your article or chapter.",
@@ -228,7 +228,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   },
   "paragraph-counter": {
     whatIs: [
-      "A paragraph counter splits text on blank lines to approximate how many distinct paragraphs you have—useful for essays, blogs, and reports.",
+      "A paragraph counter splits text on blank lines to approximate how many distinct paragraphs you have, useful for essays, blogs, and reports.",
     ],
     howToUse: [
       "Paste text with paragraphs separated by one or more empty lines.",
@@ -266,7 +266,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   },
   "case-converter": {
     whatIs: [
-      "A case converter reshapes letter casing—UPPERCASE, lowercase, Title Case, and sentence case—in one click for drafts, data cleanup, and coding prep.",
+      "A case converter reshapes letter casing (UPPERCASE, lowercase, Title Case, and sentence case) in one click for drafts, data cleanup, and coding prep.",
     ],
     howToUse: [
       "Paste source text.",
@@ -299,13 +299,13 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
       {
         question: "Will this strip intentional formatting?",
         answer:
-          "Yes—actions are aggressive. Keep a backup if you might need original spacing.",
+          "Yes. Actions are aggressive. Keep a backup if you might need original spacing.",
       },
     ],
   },
   "duplicate-remover": {
     whatIs: [
-      "A duplicate line remover keeps the first occurrence of each line and drops later repeats—great for log excerpts, keyword lists, and merged notes.",
+      "A duplicate line remover keeps the first occurrence of each line and drops later repeats, great for log excerpts, keyword lists, and merged notes.",
     ],
     howToUse: [
       "Paste one item per line (or as your data allows).",
@@ -324,7 +324,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   },
   "text-sorter": {
     whatIs: [
-      "A text sorter alphabetizes lines A→Z or Z→A using locale-aware comparison—handy for glossaries, tags, and quick data hygiene.",
+      "A text sorter alphabetizes lines A→Z or Z→A using locale-aware comparison, handy for glossaries, tags, and quick data hygiene.",
     ],
     howToUse: [
       "Paste lines to sort.",
@@ -381,7 +381,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   },
   "html-minifier": {
     whatIs: [
-      "An HTML minifier strips comments and collapses whitespace between tags to shrink file size—often used before deployment (always verify output).",
+      "An HTML minifier strips comments and collapses whitespace between tags to shrink file size, often used before deployment (always verify output).",
     ],
     howToUse: [
       "Paste HTML and click Minify.",
@@ -419,7 +419,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   },
   "base64-codec": {
     whatIs: [
-      "Base64 encoding represents binary or text as ASCII-safe strings—common for data URLs, tokens, and small attachments in configs.",
+      "Base64 encoding represents binary or text as ASCII-safe strings, common for data URLs, tokens, and small attachments in configs.",
     ],
     howToUse: [
       "Encode plain text to Base64 or decode a Base64 string back to UTF-8 text.",
@@ -432,7 +432,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
       {
         question: "Is Base64 encryption?",
         answer:
-          "No—it is encoding, not secrecy. Anyone can decode Base64.",
+          "No. It is encoding, not secrecy. Anyone can decode Base64.",
       },
     ],
   },
@@ -476,7 +476,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   },
   "xml-formatter": {
     whatIs: [
-      "An XML formatter parses your document, reports structural errors, and re-indents elements for readability—similar to “pretty print” in desktop XML tools.",
+      "An XML formatter parses your document, reports structural errors, and re-indents elements for readability, similar to \"pretty print\" in desktop XML tools.",
     ],
     howToUse: [
       "Paste XML including optional declaration.",

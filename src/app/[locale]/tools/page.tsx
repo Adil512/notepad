@@ -1,19 +1,23 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import {
-  WRITING_TOOL_CATEGORY_ORDER,
-  WRITING_TOOL_IDS,
+  DEVTOOLS_TOOL_IDS,
   PRIMARY_EDITOR_TOOL_IDS,
-  writingToolCategoryCopy,
-  writingToolCategoryAccent,
+  TEXT_ANALYSIS_TOOL_IDS,
+  WRITING_TOOL_IDS,
   writingToolsMeta,
-  toolsInCategory,
   type WritingToolId,
 } from "@/lib/writing-tools-registry";
 import { localizedPath } from "@/lib/i18n";
 import { ToolIcon } from "@/components/tools/ToolIcon";
-import { ArrowRight, Shield, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { canonicalUrlForPage } from "@/lib/site";
+
+const HUB_TOOL_IDS = new Set<WritingToolId>([
+  ...PRIMARY_EDITOR_TOOL_IDS,
+  ...TEXT_ANALYSIS_TOOL_IDS,
+  ...DEVTOOLS_TOOL_IDS,
+]);
 
 export async function generateMetadata({
   params,
@@ -37,17 +41,15 @@ export default async function ToolsHubPage({
 }) {
   const { locale } = await params;
   const L = (p: string) => localizedPath(locale, p);
-  const toolCount = WRITING_TOOL_IDS.length;
+  const moreToolIds = WRITING_TOOL_IDS.filter((id) => !HUB_TOOL_IDS.has(id));
 
   return (
     <div className="relative min-h-full overflow-hidden">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute -top-48 left-1/2 h-[32rem] w-[min(100%,64rem)] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgb(124_58_237/0.14),transparent_68%)] dark:bg-[radial-gradient(ellipse_at_center,rgb(139_92_246/0.22),transparent_68%)]" />
-        <div className="absolute top-24 right-0 h-72 w-72 translate-x-1/4 rounded-full bg-cyan-500/5 blur-3xl dark:bg-cyan-400/10" />
-        <div className="absolute bottom-0 left-0 h-80 w-80 -translate-x-1/4 rounded-full bg-violet-500/5 blur-3xl dark:bg-violet-400/10" />
+        <div className="absolute -top-48 left-1/2 h-[32rem] w-[min(100%,64rem)] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgb(124_58_237/0.12),transparent_68%)] dark:bg-[radial-gradient(ellipse_at_center,rgb(139_92_246/0.18),transparent_68%)]" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-12 lg:px-8">
         <header className="mx-auto max-w-3xl text-center lg:mx-0 lg:max-w-none lg:text-left">
           <div className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/70 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary shadow-sm backdrop-blur-md dark:bg-background/40">
             <Sparkles className="h-3.5 w-3.5" />
@@ -61,141 +63,73 @@ export default async function ToolsHubPage({
             unlimited.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-            <div className="inline-flex items-center gap-2 rounded-xl border border-border bg-card/90 px-4 py-2.5 text-sm font-medium shadow-sm backdrop-blur-sm">
-              <span className="tabular-nums text-2xl font-bold text-foreground">
-                {toolCount}
-              </span>
-              <span className="text-muted-foreground">specialized tools</span>
-            </div>
-            <div className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/[0.06] px-4 py-2.5 text-sm text-emerald-800 dark:text-emerald-200/90">
-              <Shield className="h-4 w-4 shrink-0" />
-              Privacy-first · local storage
-            </div>
-          </div>
-
-          <div className="mt-10 flex flex-wrap justify-center gap-2 lg:justify-start">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5 lg:justify-start">
             <Link
               href={L("/")}
-              className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:bg-primary/90"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:bg-primary/90"
             >
               Notepad Online
               <ArrowRight className="h-4 w-4 opacity-90" />
             </Link>
             <Link
-              href={L("/tools/markdown-notepad")}
-              className="rounded-xl border border-border bg-background/80 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition hover:border-primary/30 hover:bg-muted/50"
-            >
-              Markdown Editor
-            </Link>
-            <Link
-              href={L("/tools/code-notepad")}
-              className="rounded-xl border border-border bg-background/80 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition hover:border-primary/30 hover:bg-muted/50"
-            >
-              Code Notepad
-            </Link>
-            <Link
-              href={L("/tools/json-editor")}
-              className="rounded-xl border border-border bg-background/80 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition hover:border-primary/30 hover:bg-muted/50"
-            >
-              JSON Editor
-            </Link>
-            <Link
-              href={L("/tools/html-editor")}
-              className="rounded-xl border border-border bg-background/80 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition hover:border-primary/30 hover:bg-muted/50"
-            >
-              HTML Editor
-            </Link>
-            <Link
               href={L("/distraction-free-writer")}
-              className="rounded-xl border border-border bg-background/80 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition hover:border-primary/30 hover:bg-muted/50"
+              className="rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
               Distraction-free
             </Link>
             <Link
               href={L("/quick-notes")}
-              className="rounded-xl border border-border bg-background/80 px-5 py-2.5 text-sm font-medium text-foreground backdrop-blur-sm transition hover:border-primary/30 hover:bg-muted/50"
+              className="rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
               Quick notes
             </Link>
           </div>
         </header>
 
-        <section
-          className="mt-14 sm:mt-16"
-          aria-labelledby="hub-editors-heading"
-        >
-          <div className="mb-6 flex flex-col gap-2 border-b border-border/60 pb-5 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <div
-                className={`mb-2 inline-flex h-1 w-12 rounded-full bg-gradient-to-r ${writingToolCategoryAccent.text}`}
-                aria-hidden
-              />
-              <h2
-                id="hub-editors-heading"
-                className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
-              >
-                Code &amp; markup editors
-              </h2>
-              <p className="mt-1 max-w-2xl text-sm text-muted-foreground sm:text-base">
-                Syntax highlighting, live preview, validation, and local autosave.
-                No install — runs entirely in your browser.
-              </p>
-            </div>
-          </div>
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
-            {PRIMARY_EDITOR_TOOL_IDS.map((id) => (
-              <ToolHubCard
-                key={id}
-                id={id}
-                href={L(`/tools/${id}`)}
-                accent={writingToolCategoryAccent.text}
-              />
-            ))}
-          </ul>
-        </section>
-
-        <div className="mt-16 space-y-16 sm:mt-20">
-          {WRITING_TOOL_CATEGORY_ORDER.map((cat) => {
-            const ids = toolsInCategory(cat);
-            if (ids.length === 0) return null;
-            const copy = writingToolCategoryCopy[cat];
-            const accent = writingToolCategoryAccent[cat];
-
-            return (
-              <section key={cat} aria-labelledby={`cat-${cat}`}>
-                <div className="mb-6 flex flex-col gap-2 border-b border-border/60 pb-5 sm:flex-row sm:items-end sm:justify-between">
-                  <div>
-                    <div
-                      className={`mb-2 inline-flex h-1 w-12 rounded-full bg-gradient-to-r ${accent}`}
-                      aria-hidden
-                    />
-                    <h2
-                      id={`cat-${cat}`}
-                      className="font-display text-2xl font-bold tracking-tight text-foreground"
-                    >
-                      {copy.title}
-                    </h2>
-                    <p className="mt-1 max-w-xl text-sm text-muted-foreground">
-                      {copy.description}
-                    </p>
-                  </div>
-                  <span className="text-xs font-medium tabular-nums text-muted-foreground">
-                    {ids.length} tool{ids.length === 1 ? "" : "s"}
-                  </span>
-                </div>
-
-                <ul className="grid gap-4 sm:grid-cols-2 lg:gap-5">
-                  {ids.map((id) => (
-                    <ToolHubCard key={id} id={id} href={L(`/tools/${id}`)} accent={accent} />
-                  ))}
-                </ul>
-              </section>
-            );
-          })}
+        <div className="mt-12 space-y-6 sm:mt-14">
+          <ToolsHubStrip
+            title="Online editors"
+            titleClass="text-violet-700 dark:text-violet-300"
+            panelClass="border-violet-200/80 bg-violet-50/70 dark:border-violet-900/45 dark:bg-violet-950/25"
+            ids={[...PRIMARY_EDITOR_TOOL_IDS]}
+            L={L}
+          />
+          <ToolsHubStrip
+            title="Text analysis"
+            titleClass="text-rose-800 dark:text-rose-300"
+            panelClass="border-rose-200/80 bg-orange-50/60 dark:border-rose-900/40 dark:bg-rose-950/20"
+            ids={[...TEXT_ANALYSIS_TOOL_IDS]}
+            L={L}
+          />
+          <ToolsHubStrip
+            title="Developer utilities"
+            titleClass="text-indigo-800 dark:text-indigo-300"
+            panelClass="border-indigo-200/80 bg-indigo-50/65 dark:border-indigo-900/45 dark:bg-indigo-950/25"
+            ids={[...DEVTOOLS_TOOL_IDS]}
+            L={L}
+          />
         </div>
 
-        <footer className="mt-20 rounded-2xl border border-dashed border-border/80 bg-muted/20 px-6 py-8 text-center dark:bg-muted/10 sm:text-left">
+        {moreToolIds.length > 0 ? (
+          <section
+            className="mt-10 rounded-2xl border border-border/70 bg-muted/25 p-5 dark:bg-muted/10 sm:p-6"
+            aria-labelledby="more-tools-heading"
+          >
+            <h2
+              id="more-tools-heading"
+              className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground"
+            >
+              More writing tools
+            </h2>
+            <ul className="flex flex-wrap gap-2.5">
+              {moreToolIds.map((id) => (
+                <ToolHubPill key={id} id={id} href={L(`/tools/${id}`)} />
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
+        <footer className="mt-14 rounded-2xl border border-dashed border-border/80 bg-muted/20 px-6 py-8 text-center dark:bg-muted/10 sm:text-left">
           <p className="text-sm text-muted-foreground">
             Looking for the classic canvas? The{" "}
             <Link
@@ -213,39 +147,57 @@ export default async function ToolsHubPage({
   );
 }
 
-function ToolHubCard({
+function ToolsHubStrip({
+  title,
+  titleClass,
+  panelClass,
+  ids,
+  L,
+}: {
+  title: string;
+  titleClass: string;
+  panelClass: string;
+  ids: WritingToolId[];
+  L: (p: string) => string;
+}) {
+  return (
+    <section
+      className={`rounded-2xl border p-5 shadow-sm sm:p-6 ${panelClass}`}
+      aria-label={title}
+    >
+      <h2
+        className={`mb-4 text-xs font-bold uppercase tracking-[0.22em] ${titleClass}`}
+      >
+        {title}
+      </h2>
+      <ul className="flex flex-wrap gap-2.5">
+        {ids.map((id) => (
+          <li key={id}>
+            <ToolHubPill id={id} href={L(`/tools/${id}`)} />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function ToolHubPill({
   id,
   href,
-  accent,
 }: {
   id: WritingToolId;
   href: string;
-  accent: string;
 }) {
   const m = writingToolsMeta[id];
   return (
-    <li>
-      <Link
-        href={href}
-        className="group relative flex h-full gap-4 rounded-2xl border border-border/70 bg-card/90 p-5 shadow-sm ring-1 ring-black/[0.03] transition duration-200 hover:-translate-y-0.5 hover:border-primary/25 hover:shadow-md hover:shadow-primary/5 dark:bg-card/60 dark:ring-white/[0.04] dark:hover:shadow-primary/10 sm:p-6"
-      >
-        <div
-          className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${accent} text-white shadow-md transition group-hover:scale-[1.03] group-hover:shadow-lg`}
-        >
-          <ToolIcon id={id} className="h-7 w-7" />
-        </div>
-        <div className="min-w-0 flex-1 pt-0.5">
-          <div className="flex items-start justify-between gap-2">
-            <h3 className="font-display text-lg font-semibold tracking-tight text-foreground transition group-hover:text-primary">
-              {m.h1}
-            </h3>
-            <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-muted-foreground opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100" />
-          </div>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
-            {m.tagline}
-          </p>
-        </div>
-      </Link>
-    </li>
+    <Link
+      href={href}
+      className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/95 px-3.5 py-2 text-sm font-medium text-foreground shadow-[0_1px_2px_rgb(0_0_0/0.05)] ring-1 ring-black/[0.03] transition hover:-translate-y-px hover:border-primary/35 hover:shadow-md dark:bg-background/90 dark:ring-white/[0.05] dark:hover:shadow-primary/10"
+    >
+      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-muted/80 text-primary dark:bg-muted/50">
+        <ToolIcon id={id} className="h-3.5 w-3.5" />
+      </span>
+      {m.h1}
+    </Link>
   );
 }

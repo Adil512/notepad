@@ -1,4 +1,4 @@
-/** Homepage “What is…” / “Why notepad.is?” copy — per locale */
+/** Homepage "What is…" / "Why notepad.is?" copy, per locale */
 
 export type HomeSeoCopy = {
   whatTitle: string;

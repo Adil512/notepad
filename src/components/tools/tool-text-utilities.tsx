@@ -271,11 +271,11 @@ export function ReadingTimeCalculatorTool() {
         <div className="grid gap-3 sm:grid-cols-2">
           <Stat
             label={`~${slow} words / min`}
-            value={words ? `${readingMinutes(words, slow)} min` : "—"}
+            value={words ? `${readingMinutes(words, slow)} min` : "-"}
           />
           <Stat
             label={`~${fast} words / min`}
-            value={words ? `${readingMinutes(words, fast)} min` : "—"}
+            value={words ? `${readingMinutes(words, fast)} min` : "-"}
           />
           <Stat label="Word count" value={words} />
         </div>

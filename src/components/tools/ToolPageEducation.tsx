@@ -133,7 +133,7 @@ export function ToolPageEducation({
             </div>
             <div className="min-w-0 flex-1 space-y-5">
               <h2 className="font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl">
-                Relevant FAQs For {toolName}
+                FAQs
               </h2>
               <div className="space-y-2.5">
                 {content.faqs.map((faq, i) => (

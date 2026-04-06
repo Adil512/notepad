@@ -7,6 +7,7 @@ import {
   writingToolsMeta,
   writingToolCategoryAccent,
   isWritingToolId,
+  type WritingToolCategory,
   type WritingToolId,
 } from "@/lib/writing-tools-registry";
 import { WritingToolView } from "@/components/tools/WritingToolView";
@@ -83,21 +84,17 @@ export default async function WritingToolPage({
       : { h1: m.h1, description: m.description };
   const education = getToolPageEducation(id);
   const educationToolName = formatToolNameForHeading(hero.h1);
+  const heroPanel = toolHeroPanelClass(m.category);
 
   return (
-    <div className="flex flex-col flex-1 min-h-0">
-      <div className="relative border-b border-border/60 bg-gradient-to-b from-muted/50 via-background to-background dark:from-muted/10 dark:via-background">
+    <div className="flex min-h-0 flex-1 flex-col">
+      <div className="relative mx-auto w-full max-w-6xl px-4 pt-6 sm:px-6 sm:pt-8 lg:px-8">
         <div
-          className="pointer-events-none absolute inset-0 opacity-40 dark:opacity-30"
-          aria-hidden
+          className={`rounded-2xl border p-6 shadow-sm sm:p-8 ${heroPanel}`}
         >
-          <div className="absolute -top-24 right-0 h-56 w-56 rounded-full bg-[radial-gradient(circle_at_center,rgb(124_58_237/0.12),transparent_70%)] dark:bg-[radial-gradient(circle_at_center,rgb(139_92_246/0.2),transparent_70%)]" />
-        </div>
-
-        <div className="relative mx-auto max-w-6xl px-4 pb-10 pt-6 sm:px-6 sm:pb-12 sm:pt-8 lg:px-8">
           <Link
             href={hub}
-            className="inline-flex w-fit items-center gap-1.5 rounded-full border border-border/80 bg-background/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground shadow-sm backdrop-blur-sm transition hover:border-primary/30 hover:text-primary"
+            className="inline-flex w-fit items-center gap-1.5 rounded-full border border-border/80 bg-background/90 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground shadow-sm transition hover:border-primary/30 hover:text-primary dark:bg-background/70"
           >
             <ChevronLeft className="h-3.5 w-3.5" />
             Toolkit
@@ -133,4 +130,15 @@ export default async function WritingToolPage({
       ) : null}
     </div>
   );
+}
+
+function toolHeroPanelClass(cat: WritingToolCategory): string {
+  switch (cat) {
+    case "analysis":
+      return "border-rose-200/80 bg-orange-50/60 dark:border-rose-900/40 dark:bg-rose-950/20";
+    case "devtools":
+      return "border-indigo-200/80 bg-indigo-50/65 dark:border-indigo-900/45 dark:bg-indigo-950/25";
+    default:
+      return "border-violet-200/80 bg-violet-50/65 dark:border-violet-900/45 dark:bg-violet-950/25";
+  }
 }

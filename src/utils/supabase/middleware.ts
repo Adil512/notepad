@@ -29,7 +29,7 @@ export async function updateSession(
 
   /**
    * Do not call `request.cookies.set` here (breaks on Edge; unnecessary on Node proxy).
-   * @supabase/ssr requires `getAll()` to reflect `setAll()` in the same tick — track overrides here.
+   * @supabase/ssr requires `getAll()` to reflect `setAll()` in the same tick; track overrides here.
    */
   const cookieOverrides = new Map<string, string>();
 

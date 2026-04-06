@@ -17,7 +17,7 @@ export function markdownNotepadHeadlineFromTitle(
   title: string,
   fallback: string
 ): string {
-  for (const sep of [" – ", " — ", " - "] as const) {
+  for (const sep of [" – ", " - "] as const) {
     const i = title.indexOf(sep);
     if (i > 0) return title.slice(0, i).trim();
   }

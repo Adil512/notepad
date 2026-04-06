@@ -84,8 +84,8 @@ export const markdownNotepadSeoPacksB: Record<
     description: `Scrieți și editați Markdown online cu un editor rapid și gratuit. Previzualizare live, evidențiere sintaxă și opțiuni ușoare de export. Fără login necesar – începeți să scrieți instant.`,
   },
   ru: {
-    title: `Онлайн-редактор Markdown — бесплатный MD-редактор, предпросмотр и экспорт заметок`,
-    description: `Пишите и редактируйте Markdown онлайн с помощью быстрого бесплатного редактора. Живой предпросмотр, подсветка синтаксиса и удобные опции экспорта. Без регистрации — начинайте писать мгновенно.`,
+    title: `Онлайн-редактор Markdown: бесплатный MD-редактор, предпросмотр и экспорт заметок`,
+    description: `Пишите и редактируйте Markdown онлайн с помощью быстрого бесплатного редактора. Живой предпросмотр, подсветка синтаксиса и удобные опции экспорта. Без регистрации, начинайте писать мгновенно.`,
   },
   si: {
     title: `මාර්ක්ඩවුන් සංස්කාරකය මාර්ගගතව – නොමිලේ MD සංස්කාරකය, පෙරදසුන සහ සටහන් අපනයනය`,
@@ -164,8 +164,8 @@ export const markdownNotepadSeoPacksB: Record<
     description: `Lomi mo fakatonutonu e Markdown ʻi he ʻinitaneti mo ha ʻeditā vave mo taʻe totongi. Tokanga moʻoni, fakahaaaki e syntax mo e fili fakaholoholo fakafaingofie. ʻIkai ke fie kau ki ai – kamata lomi he taimi ni.`,
   },
   uk: {
-    title: `Онлайн-редактор Markdown — безкоштовний MD-редактор, попередній перегляд та експорт нотаток`,
-    description: `Пишіть і редагуйте Markdown онлайн за допомогою швидкого безкоштовного редактора. Живий попередній перегляд, підсвітка синтаксису та прості опції експорту. Без входу — починайте писати миттєво.`,
+    title: `Онлайн-редактор Markdown: безкоштовний MD-редактор, попередній перегляд та експорт нотаток`,
+    description: `Пишіть і редагуйте Markdown онлайн за допомогою швидкого безкоштовного редактора. Живий попередній перегляд, підсвітка синтаксису та прості опції експорту. Без входу, починайте писати миттєво.`,
   },
   ur: {
     title: `آن لائن Markdown ایڈیٹر – مفت MD ایڈیٹر، پیش نظارہ اور نوٹس ایکسپورٹ`,

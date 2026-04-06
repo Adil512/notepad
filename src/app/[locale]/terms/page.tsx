@@ -114,8 +114,8 @@ export default async function TermsPage({
               </li>
             </ul>
             <p>
-              We may investigate and take appropriate action—including removing
-              content, suspending access, or cooperating with authorities—if we
+              We may investigate and take appropriate action, including removing
+              content, suspending access, or cooperating with authorities, if we
               believe you have violated these Terms or pose a risk to the Service
               or others.
             </p>

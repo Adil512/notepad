@@ -26,7 +26,7 @@ export function formatAdminDateTime(iso: string): string {
   try {
     return `${new Intl.DateTimeFormat(ADMIN_LOCALE, dateTimeOpts).format(new Date(iso))} UTC`;
   } catch {
-    return "—";
+    return "-";
   }
 }
 
@@ -34,6 +34,6 @@ export function formatAdminDate(iso: string): string {
   try {
     return `${new Intl.DateTimeFormat(ADMIN_LOCALE, dateOpts).format(new Date(iso))} UTC`;
   } catch {
-    return "—";
+    return "-";
   }
 }

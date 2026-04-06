@@ -89,7 +89,7 @@ export default function PrivacyPage() {
               We and our partners may use cookies, local storage, pixels, and
               similar technologies for purposes that may include: keeping the
               site working (e.g., preferences, session or security-related
-              cookies), analytics, and—where enabled—personalized or
+              cookies), analytics, and, where enabled, personalized or
               non-personalized advertising.
             </p>
             <p>

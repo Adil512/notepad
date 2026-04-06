@@ -1,4 +1,4 @@
-/** Shown first on /tools and in the footer “editor” row — excluded from category grids to avoid duplicates. */
+/** Shown first on /tools and in the footer "editor" row; excluded from category grids to avoid duplicates. */
 export const PRIMARY_EDITOR_TOOL_IDS = [
   "markdown-notepad",
   "code-notepad",
@@ -8,7 +8,7 @@ export const PRIMARY_EDITOR_TOOL_IDS = [
 
 export type PrimaryEditorToolId = (typeof PRIMARY_EDITOR_TOOL_IDS)[number];
 
-/** Text counters, converters, and diff — own hub section + `analysis` category. */
+/** Text counters, converters, and diff: own hub section + `analysis` category. */
 export const TEXT_ANALYSIS_TOOL_IDS = [
   "word-counter",
   "character-counter",
@@ -24,7 +24,7 @@ export const TEXT_ANALYSIS_TOOL_IDS = [
 
 export type TextAnalysisToolId = (typeof TEXT_ANALYSIS_TOOL_IDS)[number];
 
-/** Formatters, encoders, regex — hub strip + `devtools` category. */
+/** Formatters, encoders, regex: hub strip + `devtools` category. */
 export const DEVTOOLS_TOOL_IDS = [
   "json-formatter",
   "html-minifier",
@@ -89,7 +89,7 @@ export const writingToolCategoryCopy: Record<
   analysis: {
     title: "Text analysis & counters",
     description:
-      "Count words and characters, estimate reading time, convert case, clean and sort lines, and compare drafts — all locally in your browser.",
+      "Count words and characters, estimate reading time, convert case, clean and sort lines, and compare drafts, all locally in your browser.",
   },
   text: {
     title: "Text & Structure",
@@ -99,7 +99,7 @@ export const writingToolCategoryCopy: Record<
   devtools: {
     title: "Developer utilities",
     description:
-      "Format JSON and XML, minify HTML, beautify CSS, encode Base64 and URLs, and test regular expressions — all client-side.",
+      "Format JSON and XML, minify HTML, beautify CSS, encode Base64 and URLs, and test regular expressions, all client-side.",
   },
   capture: {
     title: "Capture & Reuse",
@@ -153,7 +153,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     title:
       "Markdown Editor Online – Free MD Editor, Preview & Export Notes",
     description:
-      "Write and edit Markdown online with a fast, free editor. Live preview, syntax highlighting, and easy export options. No login required—start writing instantly.",
+      "Write and edit Markdown online with a fast, free editor. Live preview, syntax highlighting, and easy export options. No login required. Start writing instantly.",
     h1: "Markdown Editor",
     tagline: "Highlighting, GFM preview, split view, export",
     category: "text",

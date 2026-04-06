@@ -128,7 +128,7 @@
   background-clip: padding-box;
 }
 
-/* CMS blog HTML (TipTap) — explicit styles because @tailwindcss/typography is not installed (prose-* classes would be inert). */
+/* CMS blog HTML (TipTap): explicit styles because @tailwindcss/typography is not installed (prose-* classes would be inert). */
 @layer components {
   .blog-post-body {
     @apply max-w-none text-[1.0625rem] leading-relaxed text-muted-foreground;

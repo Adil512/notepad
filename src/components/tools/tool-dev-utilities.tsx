@@ -323,7 +323,7 @@ export function HtmlMinifierTool() {
     <ToolChrome>
       <ToolCard
         title="Source HTML"
-        description="Removes HTML comments and collapses whitespace between tags. Best for markup snippets — always verify output for production."
+        description="Removes HTML comments and collapses whitespace between tags. Best for markup snippets; always verify output for production."
       >
         <div className="mb-4 flex flex-wrap gap-2">
           <button
@@ -380,7 +380,7 @@ export function CssBeautifierTool() {
     <ToolChrome>
       <ToolCard
         title="CSS input"
-        description="Heuristic formatter for typical stylesheets — complex nested rules may need manual touch-ups."
+        description="Heuristic formatter for typical stylesheets; complex nested rules may need manual touch-ups."
       >
         <div className="mb-4 flex flex-wrap gap-2">
           <button
