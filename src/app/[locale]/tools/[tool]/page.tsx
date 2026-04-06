@@ -23,6 +23,10 @@ import {
   getJsonEditorHero,
   getJsonEditorSeo,
 } from "@/lib/seo/json-editor-seo";
+import {
+  getHtmlEditorHero,
+  getHtmlEditorSeo,
+} from "@/lib/seo/html-editor-seo";
 import { ToolPageEducation } from "@/components/tools/ToolPageEducation";
 import {
   formatToolNameForHeading,
@@ -73,6 +77,18 @@ export async function generateMetadata({
         description: seo.description,
       },
     };
+  } else if (tool === "html-editor") {
+    const seo = getHtmlEditorSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
   }
   return {
     title: m.title,
@@ -99,6 +115,8 @@ export default async function WritingToolPage({
     hero = getMarkdownNotepadHero(locale);
   } else if (id === "json-editor") {
     hero = getJsonEditorHero(locale);
+  } else if (id === "html-editor") {
+    hero = getHtmlEditorHero(locale);
   }
   const education = getToolPageEducation(id);
   const educationToolName = formatToolNameForHeading(hero.h1);
