@@ -7,6 +7,19 @@ export type ToolEducationContent = {
   faqs: { question: string; answer: string }[];
 };
 
+export type ToolFaqSchema = {
+  "@context": "https://schema.org";
+  "@type": "FAQPage";
+  mainEntity: {
+    "@type": "Question";
+    name: string;
+    acceptedAnswer: {
+      "@type": "Answer";
+      text: string;
+    };
+  }[];
+};
+
 /** Title-case tool name for H2 headings (preserves acronyms). */
 export function formatToolNameForHeading(h1: string): string {
   const upper = new Set([
@@ -55,24 +68,104 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
     faqs: [
       {
-        question: "Is my text sent to your servers?",
+        question: "What is a Markdown editor?",
         answer:
-          "No. Your content stays in this browser (local storage) unless you copy or download it.",
+          "A Markdown editor is a tool that allows users to write and format text using simple Markdown syntax instead of complex HTML or rich-text editors and preview it live and download in .md format at the same time. It converts plain text into structured and formatted content like headings, lists, links, and code blocks.",
       },
       {
-        question: "Which Markdown flavor is supported?",
+        question: "What is Markdown and how does it work?",
         answer:
-          "The preview follows common GitHub-flavored Markdown (GFM) conventions such as tables and task lists where supported.",
+          "Markdown is a lightweight markup language that uses simple symbols to format plain text into structured documents. It allows you to create formatted content such as headings, bold text, links, and images using easy-to-learn syntax.",
       },
       {
-        question: "Can I work offline?",
+        question: "Why should I use a Markdown editor instead of a rich text editor?",
         answer:
-          "After the page loads once, many browsers let you keep editing with cached assets; connectivity may still be needed for first load.",
+          "A Markdown editor helps you focus on writing instead of formatting by removing unnecessary visual distractions. Unlike traditional editors, it allows you to write faster using keyboard-based syntax instead of clicking formatting buttons.",
+      },
+      {
+        question: "Is this Markdown editor free to use online?",
+        answer:
+          "Yes, browser-based Markdown editors like this tool are completely free and require no installation or signup. You can instantly start writing and formatting content directly in your browser.",
+      },
+      {
+        question: "Can I convert Markdown to HTML using this editor?",
+        answer:
+          "Yes, a Markdown editor automatically converts your Markdown syntax into HTML in real time or through export options. This allows you to use the content directly on websites or blogs.",
+      },
+      {
+        question: "Does this Markdown editor support live preview?",
+        answer:
+          "Yes, this Markdown editor provides a live preview feature that shows how your formatted content will look in real time. This helps you quickly verify formatting like headings, links, and code blocks.",
+      },
+      {
+        question: "Can beginners use a Markdown editor easily?",
+        answer:
+          "Yes, Markdown is very beginner-friendly and can be learned in a short time because it uses simple and intuitive syntax. Most users can understand basic formatting like headings and bold text quickly.",
+      },
+      {
+        question: "What are the main features of a good Markdown editor?",
+        answer:
+          "A good Markdown editor typically includes features like live preview, syntax highlighting, auto-formatting, export options, and keyboard shortcuts. These features help users write faster and manage content more efficiently.",
+      },
+      {
+        question: "Can I download or export my Markdown content?",
+        answer:
+          "Yes, most Markdown editors allow users to export content in multiple formats, such as .md, HTML, or PDF. This makes it easy to reuse content across different platforms.",
+      },
+      {
+        question: "Is Markdown better than HTML for writing content?",
+        answer:
+          "Markdown is easier and faster to write compared to HTML because it uses simple syntax instead of complex tags. It allows users to focus on content creation rather than code structure.",
+      },
+      {
+        question: "Can I use a Markdown editor for blogging?",
+        answer:
+          "Yes, Markdown editors are widely used for blogging because they allow fast writing and clean formatting. Many blogging platforms and static site generators support Markdown natively.",
+      },
+      {
+        question: "Does Markdown support images and links?",
+        answer:
+          "Yes, Markdown supports adding images and links using simple syntax. You can easily embed images and create hyperlinks without writing complex HTML code.",
+      },
+      {
+        question: "Is a Markdown editor useful for developers?",
+        answer:
+          "Markdown editors are extremely useful for developers as they are commonly used for writing documentation, README files, and technical guides. They integrate well with version control systems like Git.",
+      },
+      {
+        question: "Can I use Markdown offline?",
+        answer:
+          "Yes, Markdown files are plain text files, so they can be created and edited offline using any text editor or Markdown tool. This makes them highly portable and accessible across devices, but the web editor should be loaded fully online first.",
+      },
+      {
+        question: "What makes the Markdown editor different from Notepad?",
+        answer:
+          "A Markdown editor provides formatting capabilities using syntax and often includes a live preview, while basic Notepad only supports plain text editing without formatting features.",
+      },
+      {
+        question: "Is Markdown future-proof for content writing?",
+        answer:
+          "Yes, Markdown is considered future-proof because it is plain text and not dependent on any proprietary software. It can be opened and edited in any text editor without compatibility issues.",
+      },
+      {
+        question: "Can I use a Markdown editor for technical documentation?",
+        answer:
+          "Markdown is widely used for technical documentation because it allows clean formatting, code blocks, and easy version control. It is supported by platforms like GitHub and many documentation tools.",
+      },
+      {
+        question: "Does Markdown support code formatting?",
+        answer:
+          "Yes, Markdown supports code blocks and inline code formatting, making it ideal for developers and programmers. You can easily display code snippets with proper formatting.",
+      },
+      {
+        question: "Is an online Markdown editor secure?",
+        answer:
+          "Yes. This Markdown editor processes content locally in your browser, meaning your data is not stored on external servers.",
       },
       {
         question: "Does it replace a full IDE?",
         answer:
-          "It is optimized for writing and previewing Markdown quickly, not for large project management or Git workflows.",
+          "This Markdown editor is optimized for writing and previewing Markdown quickly, not for large project management or Git workflows. For larger projects, use a professional IDE.",
       },
     ],
   },
@@ -92,19 +185,54 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
     faqs: [
       {
-        question: "Does it run or compile my code?",
+        question: "What is a code notepad?",
         answer:
-          "No. It is an editor with highlighting only. Run code in your terminal or a runtime environment.",
+          "A code notepad is an online tool that allows users to write, edit, and manage programming code directly in the browser without installing any software. It provides features like syntax highlighting and formatting to make code easier to read and debug.",
       },
       {
-        question: "Where is my code stored?",
+        question: "Can I write code online without installing software?",
         answer:
-          "Locally in your browser. Clearing site data removes it unless you export first.",
+          "Yes, a code notepad lets you write and edit code online without downloading or installing any application. It runs directly in your browser, making it perfect for quick coding tasks, testing snippets, and learning programming.",
       },
       {
-        question: "Is this suitable for secrets?",
+        question: "Which programming languages are supported in this code notepad?",
         answer:
-          "Avoid pasting passwords or keys into any web page. Use offline tools for highly sensitive material.",
+          "This code notepad supports multiple programming languages such as JavaScript, TypeScript, CSS, JSON, HTML, Markdown, and plain text.",
+      },
+      {
+        question: "Does this code notepad support syntax highlighting?",
+        answer:
+          "Yes, syntax highlighting is a core feature of a code notepad that visually differentiates keywords, variables, and code structures. This improves readability and helps developers quickly identify errors and understand code logic.",
+      },
+      {
+        question: "Is this online code editor free to use?",
+        answer:
+          "Yes, the code notepad is completely free to use and does not require any signup or subscription. Users can instantly start coding, making it a convenient tool for beginners and professionals alike.",
+      },
+      {
+        question: "Can I use this code notepad for debugging code?",
+        answer:
+          "A code notepad can help identify syntax errors through highlighting and formatting, making it useful for basic debugging. However, advanced debugging may require additional tools or integrated development environments.",
+      },
+      {
+        question: "Does the code notepad auto-format code?",
+        answer:
+          "Yes, this notepad includes formatting options that help structure and organize your code. This improves readability, especially for larger code files.",
+      },
+      {
+        question: "Is an online code notepad safe to use?",
+        answer:
+          "Yes, this online code notepad is safe to use. Nothing is installed on your machine and editing happens in the browser.",
+      },
+      {
+        question: "Who should use a code notepad?",
+        answer:
+          "A code notepad is ideal for developers, students, and beginners who want a fast and simple way to write and test code. It is especially useful for quick edits, practice, and sharing code snippets.",
+      },
+      {
+        question: "What is the difference between a code notepad and a full IDE?",
+        answer:
+          "A code notepad is lightweight and browser-based, focusing on quick editing and simplicity, while a full IDE offers advanced features like debugging, version control, and project management. Code notepads are best for speed and convenience, whereas IDEs are suited for large-scale development.",
       },
     ],
   },
@@ -504,3 +632,21 @@ export function getToolPageEducation(
 export const TOOL_PAGE_EDUCATION_IDS = new Set(
   Object.keys(EDU) as WritingToolId[]
 );
+
+export function getToolFaqSchema(id: WritingToolId): ToolFaqSchema | null {
+  if (id !== "markdown-notepad" && id !== "code-notepad") return null;
+  const content = EDU[id];
+  if (!content || content.faqs.length === 0) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: content.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}

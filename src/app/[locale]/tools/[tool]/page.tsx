@@ -31,9 +31,14 @@ import {
   getWordCounterHero,
   getWordCounterSeo,
 } from "@/lib/seo/word-counter-seo";
+import {
+  getCharacterCounterHero,
+  getCharacterCounterSeo,
+} from "@/lib/seo/character-counter-seo";
 import { ToolPageEducation } from "@/components/tools/ToolPageEducation";
 import {
   formatToolNameForHeading,
+  getToolFaqSchema,
   getToolPageEducation,
 } from "@/lib/tool-page-education-content";
 
@@ -105,6 +110,18 @@ export async function generateMetadata({
         description: seo.description,
       },
     };
+  } else if (tool === "character-counter") {
+    const seo = getCharacterCounterSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
   }
   return {
     title: m.title,
@@ -135,8 +152,11 @@ export default async function WritingToolPage({
     hero = getHtmlEditorHero(locale);
   } else if (id === "word-counter") {
     hero = getWordCounterHero(locale);
+  } else if (id === "character-counter") {
+    hero = getCharacterCounterHero(locale);
   }
   const education = getToolPageEducation(id);
+  const faqSchema = getToolFaqSchema(id);
   const educationToolName = formatToolNameForHeading(hero.h1);
   const heroPanel = toolHeroPanelClass(m.category);
 
@@ -180,6 +200,12 @@ export default async function WritingToolPage({
         <ToolPageEducation
           toolName={educationToolName}
           content={education}
+        />
+      ) : null}
+      {faqSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       ) : null}
     </div>
