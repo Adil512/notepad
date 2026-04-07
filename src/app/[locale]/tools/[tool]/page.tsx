@@ -27,6 +27,10 @@ import {
   getHtmlEditorHero,
   getHtmlEditorSeo,
 } from "@/lib/seo/html-editor-seo";
+import {
+  getWordCounterHero,
+  getWordCounterSeo,
+} from "@/lib/seo/word-counter-seo";
 import { ToolPageEducation } from "@/components/tools/ToolPageEducation";
 import {
   formatToolNameForHeading,
@@ -89,6 +93,18 @@ export async function generateMetadata({
         description: seo.description,
       },
     };
+  } else if (tool === "word-counter") {
+    const seo = getWordCounterSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
   }
   return {
     title: m.title,
@@ -117,6 +133,8 @@ export default async function WritingToolPage({
     hero = getJsonEditorHero(locale);
   } else if (id === "html-editor") {
     hero = getHtmlEditorHero(locale);
+  } else if (id === "word-counter") {
+    hero = getWordCounterHero(locale);
   }
   const education = getToolPageEducation(id);
   const educationToolName = formatToolNameForHeading(hero.h1);
