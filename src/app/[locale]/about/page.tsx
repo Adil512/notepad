@@ -49,6 +49,8 @@ export default async function AboutPage({
 }) {
   const { locale } = await params;
   const home = localizedPath(locale, "/");
+  const tools = localizedPath(locale, "/tools");
+  const blog = localizedPath(locale, "/blog");
 
   return (
     <div className="min-h-screen">
@@ -90,6 +92,23 @@ export default async function AboutPage({
             a paragraph, a URL, a reminder. We wanted one place that opens
             instantly, saves automatically, and respects your attention. That
             is Notepad.is.
+          </p>
+          <p className="mt-4 text-muted-foreground leading-relaxed text-base sm:text-lg">
+            You can explore our{" "}
+            <Link
+              href={tools}
+              className="font-medium text-primary underline-offset-4 hover:underline"
+            >
+              Writing tools
+            </Link>{" "}
+            directory, follow product notes on the{" "}
+            <Link
+              href={blog}
+              className="font-medium text-primary underline-offset-4 hover:underline"
+            >
+              Blog
+            </Link>
+            , or start typing in the notepad anytime.
           </p>
         </div>
 

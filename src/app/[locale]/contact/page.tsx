@@ -1,4 +1,6 @@
+import Link from "next/link";
 import type { Metadata } from "next";
+import { localizedPath } from "@/lib/i18n";
 import { canonicalUrlForPage } from "@/lib/site";
 
 export async function generateMetadata({
@@ -16,14 +18,45 @@ export async function generateMetadata({
   };
 }
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const L = (path: string) => localizedPath(locale, path);
+
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 max-w-2xl mx-auto w-full px-6 py-12 md:py-20">
         <h1 className="text-4xl font-bold tracking-tight mb-4">Contact Us</h1>
-        <p className="text-lg text-muted-foreground mb-8">
+        <p className="text-lg text-muted-foreground mb-4">
           Have a question, feedback, or need support? Send us a message below and
           our team will get back to you shortly.
+        </p>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-8">
+          Looking for something without waiting? Browse the{" "}
+          <Link
+            href={L("/tools")}
+            className="font-medium text-primary underline-offset-4 hover:underline"
+          >
+            writing tools directory
+          </Link>
+          , read the{" "}
+          <Link
+            href={L("/blog")}
+            className="font-medium text-primary underline-offset-4 hover:underline"
+          >
+            Blog
+          </Link>
+          , or open the{" "}
+          <Link
+            href={L("/")}
+            className="font-medium text-primary underline-offset-4 hover:underline"
+          >
+            online notepad
+          </Link>
+          .
         </p>
 
         <form className="space-y-6 bg-background border shadow-sm p-6 sm:p-8 rounded-xl">
