@@ -643,9 +643,29 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
     faqs: [
       {
-        question: "Numbers vs text?",
+        question: "What is a text sorter tool?",
         answer:
-          "Locale-aware sort may interleave digits and letters differently than spreadsheet tools.",
+          "A text sorter is an online tool that arranges text in a specific order, such as alphabetical (A–Z) or reverse alphabetical (Z–A). It is commonly used to organize lists, keywords, and data quickly and efficiently.",
+      },
+      {
+        question: "How does a text sorter work?",
+        answer:
+          "A text sorter processes each line of text and rearranges it based on the selected sorting method. It instantly organizes your content without altering the original data, making it easy to manage large text lists.",
+      },
+      {
+        question: "Why should I use a text sorter?",
+        answer:
+          "A text sorter helps improve organization and readability by structuring your text in a logical order. It is especially useful for managing keyword lists, names, datasets, and other structured content.",
+      },
+      {
+        question: "Can I use a text sorter for SEO keywords?",
+        answer:
+          "Yes, a text sorter is very useful for SEO as it helps organize keyword lists alphabetically. This makes it easier to analyze, group, and manage keywords for better content planning and optimization.",
+      },
+      {
+        question: "Is this text sorter free and accurate?",
+        answer:
+          "Yes, this text sorter is completely free to use and provides accurate results instantly. It works directly in your browser without requiring signup or installation, ensuring a fast and seamless experience.",
       },
     ],
   },
@@ -662,9 +682,29 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
     faqs: [
       {
-        question: "Line vs word diff?",
+        question: "What is a text compare or diff tool?",
         answer:
-          "This view is line-oriented; very fine-grained word diff may need specialized merge tools.",
+          "A text compare tool, also known as a diff checker, is an online tool that compares two pieces of text and highlights the differences between them. It helps users quickly identify changes, edits, or mismatches.",
+      },
+      {
+        question: "How does a text diff checker work?",
+        answer:
+          "A text diff checker analyzes both inputs line by line or word by word to detect differences. It then highlights added, removed, or modified content, making it easy to track changes.",
+      },
+      {
+        question: "Why should I use a text compare tool?",
+        answer:
+          "A text compare tool saves time by instantly identifying differences between two texts. It is useful for developers, writers, and editors who need to review updates, revisions, or versions of content.",
+      },
+      {
+        question: "Can I use a diff checker for code comparison?",
+        answer:
+          "Yes, a diff checker is widely used by developers to compare code files and detect changes. It helps in debugging, version control, and ensuring code accuracy during updates.",
+      },
+      {
+        question: "Is this text compare tool free and secure?",
+        answer:
+          "Yes, this text compare tool is completely free and works directly in your browser without requiring login. It ensures fast performance and keeps your data private while comparing text.",
       },
     ],
   },
