@@ -721,9 +721,29 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
     faqs: [
       {
-        question: "How is this different from the JSON editor?",
+        question: "What is a JSON formatter and validator?",
         answer:
-          "Both overlap; this page emphasizes format/validate/minify workflows in a focused layout.",
+          "A JSON formatter and validator is an online tool that helps you format, beautify, and validate JSON data instantly. It ensures your JSON is properly structured and error-free, making it easier to read and use in applications.",
+      },
+      {
+        question: "How does a JSON formatter work?",
+        answer:
+          "A JSON formatter restructures raw or minified JSON into a clean, readable format with proper indentation and spacing. At the same time, it checks for syntax errors and highlights issues that need to be fixed.",
+      },
+      {
+        question: "Why should I validate JSON data?",
+        answer:
+          "Validating JSON ensures that your data follows the correct syntax required for APIs, web applications, and databases. Proper validation prevents errors, improves data integrity, and ensures smooth data processing.",
+      },
+      {
+        question: "Can I minify JSON using this tool?",
+        answer:
+          "Yes, this tool allows you to minify JSON by removing unnecessary spaces and line breaks. This reduces file size and improves performance when sending or storing JSON data.",
+      },
+      {
+        question: "Is this JSON formatter free and secure?",
+        answer:
+          "Yes, this JSON formatter and validator is completely free and works directly in your browser without requiring login. It provides fast processing and ensures your data remains private and secure.",
       },
     ],
   },
@@ -740,9 +760,29 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
     faqs: [
       {
-        question: "Is every minified file safe to ship?",
+        question: "What is an HTML minifier?",
         answer:
-          "Test in target browsers. Some whitespace-sensitive layouts can behave differently.",
+          "An HTML minifier is a tool that compresses HTML code by removing unnecessary spaces, comments, and line breaks. This helps reduce file size and improves website loading speed.",
+      },
+      {
+        question: "How does an HTML minifier improve performance?",
+        answer:
+          "An HTML minifier reduces the size of your code, which decreases page load time and improves website performance. Faster loading pages can enhance user experience and contribute to better SEO rankings.",
+      },
+      {
+        question: "Is it safe to minify HTML code?",
+        answer:
+          "Yes, HTML minification is safe as it only removes redundant characters without affecting the functionality of your code. It preserves the structure while making the file more efficient.",
+      },
+      {
+        question: "Can I use an HTML minifier for SEO optimization?",
+        answer:
+          "Yes, an HTML minifier helps improve SEO by reducing page load speed, which is a key ranking factor. Faster websites provide a better user experience and can lead to higher search engine visibility.",
+      },
+      {
+        question: "Is this HTML minifier free to use online?",
+        answer:
+          "Yes, this HTML minifier is completely free and requires no signup or installation. You can instantly paste your code and get compressed HTML output in seconds.",
       },
     ],
   },
@@ -759,9 +799,29 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
     faqs: [
       {
-        question: "Will it understand every preprocessor?",
+        question: "What is a CSS beautifier tool?",
         answer:
-          "Plain CSS works best. Sass/Less-specific syntax may need native toolchain formatters.",
+          "A CSS beautifier is an online tool that formats messy or minified CSS code into a clean, readable structure with proper indentation. It helps developers understand and manage stylesheets more efficiently.",
+      },
+      {
+        question: "How does a CSS beautifier work?",
+        answer:
+          "A CSS beautifier automatically restructures your CSS code by adding line breaks, spacing, and indentation. This improves readability without changing the actual functionality of the code.",
+      },
+      {
+        question: "Why should I beautify CSS code?",
+        answer:
+          "Beautifying CSS makes it easier to debug, edit, and maintain stylesheets, especially in large projects. Clean code improves productivity and reduces the chances of errors during development.",
+      },
+      {
+        question: "Is CSS beautification useful for developers?",
+        answer:
+          "Yes, CSS beautification is highly useful for developers because it converts compressed or messy code into a readable format. It is especially helpful when working with third-party or minified stylesheets.",
+      },
+      {
+        question: "Is this CSS beautifier free to use?",
+        answer:
+          "Yes, this CSS beautifier is completely free and works directly in your browser without requiring login or installation. It provides instant formatting for fast and efficient workflow.",
       },
     ],
   },
@@ -778,9 +838,29 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
     faqs: [
       {
-        question: "Is Base64 encryption?",
+        question: "What is a Base64 encoder and decoder?",
         answer:
-          "No. It is encoding, not secrecy. Anyone can decode Base64.",
+          "A Base64 encoder and decoder is an online tool that converts text or files into Base64 format and decodes Base64 strings back into readable data. It is commonly used in web development and data transmission.",
+      },
+      {
+        question: "How does Base64 encoding work?",
+        answer:
+          "Base64 encoding converts binary or text data into an ASCII string format using a specific encoding scheme. This allows data to be safely transmitted over systems that only support text-based formats.",
+      },
+      {
+        question: "Why is Base64 encoding used?",
+        answer:
+          "Base64 encoding is used to safely transfer data such as images, files, and text over networks or APIs without data corruption. It ensures compatibility across different systems and platforms.",
+      },
+      {
+        question: "Can I decode Base64 strings using this tool?",
+        answer:
+          "Yes, this tool allows you to easily decode Base64 strings back into their original text or file format. It provides instant results, making it useful for developers and data handling tasks.",
+      },
+      {
+        question: "Is this Base64 encoder and decoder free?",
+        answer:
+          "Yes, this Base64 tool is completely free and works directly in your browser without any signup. It provides fast and accurate encoding and decoding for both text and file data.",
       },
     ],
   },
@@ -797,9 +877,29 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
     faqs: [
       {
-        question: "Plus signs in query strings?",
+        question: "Why do URLs need to be encoded or decoded?",
         answer:
-          "Decoding may treat + as space in some contexts; know what your server expects.",
+          "URLs need encoding because special characters like spaces, symbols, or non-ASCII text are not allowed in raw form inside a web address. Encoding converts them into a safe format so browsers and servers can correctly interpret the URL without breaking.",
+      },
+      {
+        question: "What does a URL encoder and decoder tool do?",
+        answer:
+          "A URL encoder and decoder tool converts unsafe or special characters into a valid URL format and also reverses encoded URLs back into readable text. This ensures proper data transmission in web applications, APIs, and browser requests.",
+      },
+      {
+        question: "When should I use URL encoding?",
+        answer:
+          "URL encoding is required whenever you are passing data through a URL, such as query parameters, API requests, or form submissions. It prevents errors caused by spaces, symbols, or reserved characters in web addresses.",
+      },
+      {
+        question: "Can I decode an encoded URL using this tool?",
+        answer:
+          "Yes, this tool allows you to instantly decode any encoded URL back into its original readable format. This is especially useful for debugging, analyzing links, or understanding API request parameters.",
+      },
+      {
+        question: "Is this URL encoder and decoder free to use?",
+        answer:
+          "Yes, this URL codec tool is completely free and works directly in your browser without any signup. It provides fast and accurate encoding and decoding for developers and general users.",
       },
     ],
   },
@@ -816,9 +916,29 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
     faqs: [
       {
-        question: "Same regex in every language?",
+        question: "What is a regex tester tool used for?",
         answer:
-          "Engines differ slightly. Validate again in Python, Go, or PCRE if you port patterns.",
+          "A regex tester is an online tool that helps you test and validate regular expressions against sample text. It is widely used by developers to ensure patterns correctly match or extract the desired data.",
+      },
+      {
+        question: "How does a regex tester help in development?",
+        answer:
+          "A regex tester provides real-time feedback by highlighting matches, groups, and errors in your regular expression. This helps developers debug patterns quickly and avoid mistakes in production code.",
+      },
+      {
+        question: "Why is regex testing important?",
+        answer:
+          "Regex testing is important because regular expressions can be complex and error-prone. Testing ensures that patterns behave as expected before being used in applications, reducing bugs and improving reliability.",
+      },
+      {
+        question: "Can beginners use a regex tester?",
+        answer:
+          "Yes, beginners can use a regex tester to learn how regular expressions work in a visual and interactive way. It helps users understand pattern matching step by step with instant results.",
+      },
+      {
+        question: "Is this regex tester free and real-time?",
+        answer:
+          "Yes, this regex tester is completely free and provides real-time matching results. It allows you to test patterns instantly without installation or login.",
       },
     ],
   },
@@ -835,9 +955,29 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
     faqs: [
       {
-        question: "Huge documents?",
+        question: "What is an XML formatter tool?",
         answer:
-          "Very large XML may stress the browser; consider streaming validators for multi-megabyte files.",
+          "An XML formatter is an online tool that formats and organizes messy XML code into a clean, structured, and readable format. It helps improve readability and makes XML easier to debug and maintain.",
+      },
+      {
+        question: "How does an XML formatter work?",
+        answer:
+          "An XML formatter automatically adds proper indentation, line breaks, and structure to raw XML code. It also helps identify syntax errors so you can fix issues quickly.",
+      },
+      {
+        question: "Why should I format XML code?",
+        answer:
+          "Formatting XML makes it easier to read, understand, and debug large datasets or configuration files. Clean XML structure also reduces errors and improves development efficiency.",
+      },
+      {
+        question: "Can this tool validate XML errors?",
+        answer:
+          "Yes, many XML formatters also help detect syntax errors such as missing tags or incorrect nesting. This ensures your XML data is properly structured and compatible with applications.",
+      },
+      {
+        question: "Is this XML formatter free to use online?",
+        answer:
+          "Yes, this XML formatter is completely free and works instantly in your browser. It requires no signup or installation and provides fast formatting and validation.",
       },
     ],
   },
