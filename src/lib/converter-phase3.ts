@@ -354,7 +354,7 @@ export async function runPhase3Conversion(
       break;
   }
 
-  throw new Error("Unhandled Phase 3 tool.");
+  throw new Error("This conversion is not available. Please try a different file or format.");
 }
 
 const XLSX_MIME =

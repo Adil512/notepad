@@ -26,34 +26,6 @@ export function GenericConverterTool({ id }: { id: WritingToolId }) {
 
   const supportsPhase3 = useMemo(() => isPhase3ToolId(id), [id]);
 
-  const supportsPhase2 = useMemo(
-    () =>
-      new Set<WritingToolId>([
-        "json-to-csv",
-        "csv-to-json",
-        "json-to-xml",
-        "xml-to-json",
-        "yaml-to-json",
-        "json-to-yaml",
-        "sql-to-csv",
-        "csv-to-sql",
-        "text-to-json",
-        "json-to-text",
-        "text-to-xml",
-        "xml-to-text",
-        "text-uppercase-lowercase",
-        "text-to-camel-case",
-        "text-to-snake-case",
-        "text-to-kebab-case",
-        "split-text-to-columns",
-        "merge-text-lines",
-        "convert-line-endings",
-        "minify-json",
-        "minify-xml",
-      ]).has(id),
-    [id]
-  );
-
   useEffect(() => {
     if (!downloadBlob) {
       setDownloadUrl(null);
@@ -86,7 +58,7 @@ export function GenericConverterTool({ id }: { id: WritingToolId }) {
         if (res.kind === "text") {
           setOutput(res.text);
         } else {
-          setOutput(`Ready: ${res.filename} — use Download file below.`);
+          setOutput(`Your file is ready: ${res.filename}. Use Download file to save it.`);
           setDownloadBlob(res.blob);
           setDownloadFilename(res.filename);
         }
@@ -208,7 +180,7 @@ export function GenericConverterTool({ id }: { id: WritingToolId }) {
         }
         default: {
           setOutput(
-            "This tool UI is ready. Advanced conversion engine will be added in the next phase."
+            "This action is not available for the current input. Check the format and try again."
           );
         }
       }
@@ -335,13 +307,6 @@ export function GenericConverterTool({ id }: { id: WritingToolId }) {
             Download file
           </a>
         ) : null}
-        <p className="text-xs text-muted-foreground">
-          {supportsPhase3
-            ? "Phase 3: conversions run in your browser. PDF/Office results depend on file structure."
-            : supportsPhase2
-              ? "Phase 2 logic enabled for this tool."
-              : ""}
-        </p>
       </div>
       {error ? (
         <p className="mt-3 text-sm text-red-600 dark:text-red-400">{error}</p>
