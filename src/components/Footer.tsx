@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FileText } from "lucide-react";
 import { localizedPath } from "@/lib/i18n";
 import { getFooterTagline } from "@/lib/footer-tagline";
+import { getFooterLabels } from "@/lib/footer-labels";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -59,6 +60,7 @@ export function Footer({ locale }: { locale: string }) {
   const currentYear = new Date().getFullYear();
   const L = (path: string) => localizedPath(locale, path);
   const tagline = getFooterTagline(locale);
+  const labels = getFooterLabels(locale);
 
   return (
     <footer className="w-full bg-muted/40 border-t mt-auto">
@@ -117,14 +119,14 @@ export function Footer({ locale }: { locale: string }) {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-foreground">Company</h3>
+            <h3 className="font-semibold mb-4 text-foreground">{labels.company}</h3>
             <ul className="space-y-3">
               <li>
                 <Link
                   href={L("/about")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  About Us
+                  {labels.aboutUs}
                 </Link>
               </li>
               <li>
@@ -132,7 +134,7 @@ export function Footer({ locale }: { locale: string }) {
                   href={L("/contact")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Contact Support
+                  {labels.contactSupport}
                 </Link>
               </li>
               <li>
@@ -140,21 +142,21 @@ export function Footer({ locale }: { locale: string }) {
                   href={L("/blog")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Blog
+                  {labels.blog}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-foreground">Tools</h3>
+            <h3 className="font-semibold mb-4 text-foreground">{labels.tools}</h3>
             <ul className="space-y-3">
               <li>
                 <Link
                   href={L("/tools")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium"
                 >
-                  All tools
+                  {labels.allTools}
                 </Link>
               </li>
               <li>
@@ -162,7 +164,7 @@ export function Footer({ locale }: { locale: string }) {
                   href={L("/tools/markdown-notepad")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Markdown Editor
+                  {labels.markdownEditor}
                 </Link>
               </li>
               <li>
@@ -170,7 +172,7 @@ export function Footer({ locale }: { locale: string }) {
                   href={L("/tools/code-notepad")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Code Notepad
+                  {labels.codeNotepad}
                 </Link>
               </li>
               <li>
@@ -178,7 +180,7 @@ export function Footer({ locale }: { locale: string }) {
                   href={L("/tools/json-editor")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  JSON Editor
+                  {labels.jsonEditor}
                 </Link>
               </li>
               <li>
@@ -186,21 +188,21 @@ export function Footer({ locale }: { locale: string }) {
                   href={L("/tools/html-editor")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  HTML Editor
+                  {labels.htmlEditor}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-foreground">Legal</h3>
+            <h3 className="font-semibold mb-4 text-foreground">{labels.legal}</h3>
             <ul className="space-y-3">
               <li>
                 <Link
                   href={L("/privacy")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Privacy Policy
+                  {labels.privacyPolicy}
                 </Link>
               </li>
               <li>
@@ -208,7 +210,7 @@ export function Footer({ locale }: { locale: string }) {
                   href={L("/terms")}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Terms of Service
+                  {labels.termsOfService}
                 </Link>
               </li>
             </ul>
@@ -217,20 +219,20 @@ export function Footer({ locale }: { locale: string }) {
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            © {currentYear} Notepad.is. All rights reserved.
+            © {currentYear} Notepad.is. {labels.copyrightRights}
           </p>
           <div className="flex gap-4">
             <Link
               href={L("/privacy")}
               className="text-xs text-muted-foreground hover:text-foreground"
             >
-              Privacy
+              {labels.privacyShort}
             </Link>
             <Link
               href={L("/terms")}
               className="text-xs text-muted-foreground hover:text-foreground"
             >
-              Terms
+              {labels.termsShort}
             </Link>
           </div>
         </div>
