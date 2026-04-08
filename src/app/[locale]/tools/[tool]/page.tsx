@@ -59,6 +59,14 @@ import {
   getTextSorterHero,
   getTextSorterSeo,
 } from "@/lib/seo/text-sorter-seo";
+import {
+  getTextCompareDiffHero,
+  getTextCompareDiffSeo,
+} from "@/lib/seo/text-compare-diff-seo";
+import {
+  getJsonFormatterHero,
+  getJsonFormatterSeo,
+} from "@/lib/seo/json-formatter-seo";
 import { ToolPageEducation } from "@/components/tools/ToolPageEducation";
 import {
   formatToolNameForHeading,
@@ -218,6 +226,30 @@ export async function generateMetadata({
         description: seo.description,
       },
     };
+  } else if (tool === "text-compare-diff") {
+    const seo = getTextCompareDiffSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  } else if (tool === "json-formatter") {
+    const seo = getJsonFormatterSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
   }
   return {
     title: m.title,
@@ -262,6 +294,10 @@ export default async function WritingToolPage({
     hero = getDuplicateRemoverHero(locale);
   } else if (id === "text-sorter") {
     hero = getTextSorterHero(locale);
+  } else if (id === "text-compare-diff") {
+    hero = getTextCompareDiffHero(locale);
+  } else if (id === "json-formatter") {
+    hero = getJsonFormatterHero(locale);
   }
   const education = getToolPageEducation(id);
   const faqSchema = getToolFaqSchema(id);
