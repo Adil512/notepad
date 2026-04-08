@@ -31,7 +31,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: "Writing Tools | Notepad.is",
+    title: "All Tools | Notepad.is",
     description:
       "Professional writing tools for free, unlimited: timers, Markdown, goals, dictation, templates, and more.",
     alternates: { canonical: canonicalUrlForPage(locale, "/tools") },
@@ -64,11 +64,10 @@ export default async function ToolsHubPage({
             Toolkit
           </div>
           <h1 className="mt-5 font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
-            Writing Tools
+            All Tools
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground lg:mx-0 lg:text-lg">
-            Find all the professional writing tools that you can use for free,
-            unlimited.
+            Find all the professional tools that you can use for free, unlimited.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5 lg:justify-start">
