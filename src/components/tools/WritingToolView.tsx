@@ -40,7 +40,6 @@ import {
   XmlFormatterTool,
 } from "@/components/tools/tool-dev-utilities";
 import { GenericConverterTool } from "@/components/tools/tool-generic-converter";
-import { ExcelToPdfTool } from "@/components/tools/tool-excel-to-pdf";
 
 export function WritingToolView({ id }: { id: WritingToolId }) {
   switch (id) {
@@ -112,8 +111,6 @@ export function WritingToolView({ id }: { id: WritingToolId }) {
       return <InstallAppTool />;
     case "keyboard-shortcuts":
       return <KeyboardShortcutsRefTool />;
-    case "excel-to-pdf":
-      return <ExcelToPdfTool />;
     default:
       return <GenericConverterTool id={id} />;
   }

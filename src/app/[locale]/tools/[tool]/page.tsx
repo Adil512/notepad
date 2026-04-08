@@ -405,7 +405,7 @@ export default async function WritingToolPage({
   const m = writingToolsMeta[id];
   const hub = localizedPath(locale, "/tools");
   const accent = writingToolCategoryAccent[m.category];
-  let hero = { h1: m.h1, description: m.description };
+  let hero = { h1: m.h1, description: m.heroDescription ?? m.description };
   if (id === "markdown-notepad") {
     hero = getMarkdownNotepadHero(locale);
   } else if (id === "json-editor") {
