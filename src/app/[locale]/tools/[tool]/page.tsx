@@ -67,6 +67,34 @@ import {
   getJsonFormatterHero,
   getJsonFormatterSeo,
 } from "@/lib/seo/json-formatter-seo";
+import {
+  getSentenceCounterHero,
+  getSentenceCounterSeo,
+} from "@/lib/seo/sentence-counter-seo";
+import {
+  getHtmlMinifierHero,
+  getHtmlMinifierSeo,
+} from "@/lib/seo/html-minifier-seo";
+import {
+  getCssBeautifierHero,
+  getCssBeautifierSeo,
+} from "@/lib/seo/css-beautifier-seo";
+import {
+  getBase64CodecHero,
+  getBase64CodecSeo,
+} from "@/lib/seo/base64-codec-seo";
+import {
+  getUrlCodecHero,
+  getUrlCodecSeo,
+} from "@/lib/seo/url-codec-seo";
+import {
+  getRegexTesterHero,
+  getRegexTesterSeo,
+} from "@/lib/seo/regex-tester-seo";
+import {
+  getXmlFormatterHero,
+  getXmlFormatterSeo,
+} from "@/lib/seo/xml-formatter-seo";
 import { ToolPageEducation } from "@/components/tools/ToolPageEducation";
 import {
   formatToolNameForHeading,
@@ -250,6 +278,90 @@ export async function generateMetadata({
         description: seo.description,
       },
     };
+  } else if (tool === "sentence-counter") {
+    const seo = getSentenceCounterSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  } else if (tool === "html-minifier") {
+    const seo = getHtmlMinifierSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  } else if (tool === "css-beautifier") {
+    const seo = getCssBeautifierSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  } else if (tool === "base64-codec") {
+    const seo = getBase64CodecSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  } else if (tool === "url-codec") {
+    const seo = getUrlCodecSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  } else if (tool === "regex-tester") {
+    const seo = getRegexTesterSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  } else if (tool === "xml-formatter") {
+    const seo = getXmlFormatterSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
   }
   return {
     title: m.title,
@@ -298,6 +410,20 @@ export default async function WritingToolPage({
     hero = getTextCompareDiffHero(locale);
   } else if (id === "json-formatter") {
     hero = getJsonFormatterHero(locale);
+  } else if (id === "sentence-counter") {
+    hero = getSentenceCounterHero(locale);
+  } else if (id === "html-minifier") {
+    hero = getHtmlMinifierHero(locale);
+  } else if (id === "css-beautifier") {
+    hero = getCssBeautifierHero(locale);
+  } else if (id === "base64-codec") {
+    hero = getBase64CodecHero(locale);
+  } else if (id === "url-codec") {
+    hero = getUrlCodecHero(locale);
+  } else if (id === "regex-tester") {
+    hero = getRegexTesterHero(locale);
+  } else if (id === "xml-formatter") {
+    hero = getXmlFormatterHero(locale);
   }
   const education = getToolPageEducation(id);
   const faqSchema = getToolFaqSchema(id);
