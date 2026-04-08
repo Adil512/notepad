@@ -35,6 +35,30 @@ import {
   getCharacterCounterHero,
   getCharacterCounterSeo,
 } from "@/lib/seo/character-counter-seo";
+import {
+  getParagraphCounterHero,
+  getParagraphCounterSeo,
+} from "@/lib/seo/paragraph-counter-seo";
+import {
+  getReadingTimeCalculatorHero,
+  getReadingTimeCalculatorSeo,
+} from "@/lib/seo/reading-time-calculator-seo";
+import {
+  getCaseConverterHero,
+  getCaseConverterSeo,
+} from "@/lib/seo/case-converter-seo";
+import {
+  getTextCleanerHero,
+  getTextCleanerSeo,
+} from "@/lib/seo/text-cleaner-seo";
+import {
+  getDuplicateRemoverHero,
+  getDuplicateRemoverSeo,
+} from "@/lib/seo/duplicate-remover-seo";
+import {
+  getTextSorterHero,
+  getTextSorterSeo,
+} from "@/lib/seo/text-sorter-seo";
 import { ToolPageEducation } from "@/components/tools/ToolPageEducation";
 import {
   formatToolNameForHeading,
@@ -122,6 +146,78 @@ export async function generateMetadata({
         description: seo.description,
       },
     };
+  } else if (tool === "paragraph-counter") {
+    const seo = getParagraphCounterSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  } else if (tool === "reading-time-calculator") {
+    const seo = getReadingTimeCalculatorSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  } else if (tool === "case-converter") {
+    const seo = getCaseConverterSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  } else if (tool === "text-cleaner") {
+    const seo = getTextCleanerSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  } else if (tool === "duplicate-remover") {
+    const seo = getDuplicateRemoverSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
+  } else if (tool === "text-sorter") {
+    const seo = getTextSorterSeo(locale);
+    return {
+      title: seo.title,
+      description: seo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: seo.title,
+        description: seo.description,
+      },
+    };
   }
   return {
     title: m.title,
@@ -154,6 +250,18 @@ export default async function WritingToolPage({
     hero = getWordCounterHero(locale);
   } else if (id === "character-counter") {
     hero = getCharacterCounterHero(locale);
+  } else if (id === "paragraph-counter") {
+    hero = getParagraphCounterHero(locale);
+  } else if (id === "reading-time-calculator") {
+    hero = getReadingTimeCalculatorHero(locale);
+  } else if (id === "case-converter") {
+    hero = getCaseConverterHero(locale);
+  } else if (id === "text-cleaner") {
+    hero = getTextCleanerHero(locale);
+  } else if (id === "duplicate-remover") {
+    hero = getDuplicateRemoverHero(locale);
+  } else if (id === "text-sorter") {
+    hero = getTextSorterHero(locale);
   }
   const education = getToolPageEducation(id);
   const faqSchema = getToolFaqSchema(id);
