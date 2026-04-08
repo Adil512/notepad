@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Check, X, ArrowRight } from "lucide-react";
-import { NOTEPAD_ONLINE_FAQS } from "@/lib/faq-data";
+import { getHomeFaqs } from "@/lib/faq-data";
 import { localizedPath } from "@/lib/i18n";
 import { getHomeSeoCopy, homeSeoRtlLocales } from "@/lib/home-seo-content";
 
@@ -43,6 +43,7 @@ export function SEOContent({
   latestBlogPosts?: BlogTeaserItem[];
 }) {
   const seo = getHomeSeoCopy(locale);
+  const faqs = getHomeFaqs(locale);
   const dir = homeSeoRtlLocales.has(locale) ? "rtl" : "ltr";
 
   return (
@@ -114,8 +115,8 @@ export function SEOContent({
           </div>
         </section>
 
-        {/* Section 3: FAQ (English copy; keep LTR) */}
-        <section className="max-w-3xl mx-auto space-y-8" dir="ltr">
+        {/* Section 3: FAQ */}
+        <section className="max-w-3xl mx-auto space-y-8" dir={dir}>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground font-display">
               FAQs
@@ -123,7 +124,7 @@ export function SEOContent({
           </div>
 
           <div className="divide-y divide-border border-t border-b">
-            {NOTEPAD_ONLINE_FAQS.map((faq, i) => (
+            {faqs.map((faq, i) => (
               <details key={i} className="group py-5 [&_summary::-webkit-details-marker]:hidden">
                 <summary className="flex cursor-pointer items-center justify-between gap-1.5 font-medium text-lg text-foreground hover:text-primary transition-colors focus:outline-none">
                   <h3>{faq.q}</h3>

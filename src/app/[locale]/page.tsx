@@ -41,7 +41,7 @@ export default async function Home({
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <HomeGraphJsonLd locale={locale} />
-      <FaqJsonLd />
+      <FaqJsonLd locale={locale} />
       <main className="flex-1 flex flex-col items-center relative">
         <Editor user={user} />
         <SEOContent locale={locale} latestBlogPosts={latestBlogPosts} />
