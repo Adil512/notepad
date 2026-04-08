@@ -162,6 +162,34 @@ export function ToolPageEducation({
             </div>
           </div>
         </article>
+
+        {content.testimonials && content.testimonials.length > 0 ? (
+          <article className="relative mt-6 overflow-hidden rounded-2xl border border-border/70 bg-card/70 p-6 shadow-[0_1px_0_0_rgb(0_0_0/0.03),0_12px_32px_-8px_rgb(0_0_0/0.08)] backdrop-blur-md sm:mt-8 sm:p-8">
+            <div className="space-y-5">
+              <h2 className="font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl">
+                User Testimonials
+              </h2>
+              <div className="grid gap-4 md:grid-cols-3">
+                {content.testimonials.map((item, i) => (
+                  <blockquote
+                    key={`${item.name}-${i}`}
+                    className="rounded-xl border border-border/60 bg-background/60 p-4"
+                  >
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      "{item.quote}"
+                    </p>
+                    <footer className="mt-3 text-xs">
+                      <span className="font-semibold text-foreground">
+                        {item.name}
+                      </span>
+                      <span className="text-muted-foreground"> - {item.role}</span>
+                    </footer>
+                  </blockquote>
+                ))}
+              </div>
+            </div>
+          </article>
+        ) : null}
       </div>
     </section>
   );

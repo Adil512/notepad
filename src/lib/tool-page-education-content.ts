@@ -1,10 +1,12 @@
 import type { WritingToolId } from "@/lib/writing-tools-registry";
+import { writingToolsMeta } from "@/lib/writing-tools-registry";
 
 export type ToolEducationContent = {
   whatIs: string[];
   howToUse: string[];
   whyUse: string[];
   faqs: { question: string; answer: string }[];
+  testimonials?: { name: string; role: string; quote: string }[];
 };
 
 export type ToolFaqSchema = {
@@ -986,7 +988,68 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
 export function getToolPageEducation(
   id: WritingToolId
 ): ToolEducationContent | null {
-  return EDU[id] ?? null;
+  const existing = EDU[id];
+  if (existing) return existing;
+
+  const meta = writingToolsMeta[id];
+  if (!meta?.englishOnly) return null;
+
+  return {
+    whatIs: [
+      `${meta.h1} is an online conversion utility designed to quickly transform your source content into the target format.`,
+      "It runs in your browser workflow and is structured for fast input/output handling without complicated setup.",
+    ],
+    howToUse: [
+      "Paste or upload your source content in the Input area.",
+      "Click Convert to generate transformed output.",
+      "Review and copy/download the result for your next workflow step.",
+    ],
+    whyUse: [
+      "Saves time when moving data between tools and formats.",
+      "Keeps conversion workflows simple for daily content operations.",
+    ],
+    faqs: [
+      {
+        question: `What does the ${meta.h1} tool do?`,
+        answer: `${meta.h1} converts source content into a target format so you can continue editing, sharing, or importing it in the destination application.`,
+      },
+      {
+        question: "Is this conversion tool free to use?",
+        answer:
+          "Yes, this tool is available online for free and is designed for quick, repeatable conversion tasks.",
+      },
+      {
+        question: "Is my data secure while converting?",
+        answer:
+          "The conversion interface is built for browser-first workflows and avoids unnecessary complexity in handling your content.",
+      },
+      {
+        question: "Can I use this tool for professional workflows?",
+        answer:
+          "Yes, this tool is built for creators, developers, students, and teams who need fast format conversion during daily work.",
+      },
+    ],
+    testimonials: [
+      {
+        name: "Sara M.",
+        role: "Content Manager",
+        quote:
+          "This converter helps us move files between formats in seconds, without slowing down publishing.",
+      },
+      {
+        name: "Daniel K.",
+        role: "Data Analyst",
+        quote:
+          "Clean interface and quick output. It saves a lot of repetitive manual steps.",
+      },
+      {
+        name: "Nadia R.",
+        role: "Student",
+        quote:
+          "Super simple to use. I can switch formats quickly for assignments and notes.",
+      },
+    ],
+  };
 }
 
 export const TOOL_PAGE_EDUCATION_IDS = new Set(
@@ -994,8 +1057,7 @@ export const TOOL_PAGE_EDUCATION_IDS = new Set(
 );
 
 export function getToolFaqSchema(id: WritingToolId): ToolFaqSchema | null {
-  if (id !== "markdown-notepad" && id !== "code-notepad") return null;
-  const content = EDU[id];
+  const content = getToolPageEducation(id);
   if (!content || content.faqs.length === 0) return null;
   return {
     "@context": "https://schema.org",

@@ -1,10 +1,15 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import {
+  DATA_CODE_CONVERTER_TOOL_IDS,
   DEVTOOLS_TOOL_IDS,
+  DOCUMENT_CONVERTER_TOOL_IDS,
+  EXCEL_SPREADSHEET_TOOL_IDS,
   PRIMARY_EDITOR_TOOL_IDS,
+  TEXT_FORMAT_CONVERTER_TOOL_IDS,
   TEXT_ANALYSIS_TOOL_IDS,
   WRITING_TOOL_IDS,
+  isToolVisibleInLocale,
   writingToolsMeta,
   type WritingToolId,
 } from "@/lib/writing-tools-registry";
@@ -41,7 +46,10 @@ export default async function ToolsHubPage({
 }) {
   const { locale } = await params;
   const L = (p: string) => localizedPath(locale, p);
-  const moreToolIds = WRITING_TOOL_IDS.filter((id) => !HUB_TOOL_IDS.has(id));
+  const visibleToolIds = WRITING_TOOL_IDS.filter((id) =>
+    isToolVisibleInLocale(id, locale)
+  );
+  const moreToolIds = visibleToolIds.filter((id) => !HUB_TOOL_IDS.has(id));
 
   return (
     <div className="relative min-h-full overflow-hidden">
@@ -108,6 +116,38 @@ export default async function ToolsHubPage({
             ids={[...DEVTOOLS_TOOL_IDS]}
             L={L}
           />
+          {locale === "en" ? (
+            <>
+              <ToolsHubStrip
+                title="Excel & Spreadsheet Converters"
+                titleClass="text-blue-800 dark:text-blue-300"
+                panelClass="border-blue-200/80 bg-blue-50/65 dark:border-blue-900/45 dark:bg-blue-950/25"
+                ids={EXCEL_SPREADSHEET_TOOL_IDS}
+                L={L}
+              />
+              <ToolsHubStrip
+                title="Document Converters"
+                titleClass="text-cyan-800 dark:text-cyan-300"
+                panelClass="border-cyan-200/80 bg-cyan-50/65 dark:border-cyan-900/45 dark:bg-cyan-950/25"
+                ids={DOCUMENT_CONVERTER_TOOL_IDS}
+                L={L}
+              />
+              <ToolsHubStrip
+                title="Data & Code Converters"
+                titleClass="text-sky-800 dark:text-sky-300"
+                panelClass="border-sky-200/80 bg-sky-50/65 dark:border-sky-900/45 dark:bg-sky-950/25"
+                ids={DATA_CODE_CONVERTER_TOOL_IDS}
+                L={L}
+              />
+              <ToolsHubStrip
+                title="Text Utilities & Format Converters"
+                titleClass="text-teal-800 dark:text-teal-300"
+                panelClass="border-teal-200/80 bg-teal-50/65 dark:border-teal-900/45 dark:bg-teal-950/25"
+                ids={TEXT_FORMAT_CONVERTER_TOOL_IDS}
+                L={L}
+              />
+            </>
+          ) : null}
         </div>
 
         {moreToolIds.length > 0 ? (

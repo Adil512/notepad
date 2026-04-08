@@ -39,6 +39,7 @@ import {
   UrlCodecTool,
   XmlFormatterTool,
 } from "@/components/tools/tool-dev-utilities";
+import { GenericConverterTool } from "@/components/tools/tool-generic-converter";
 
 export function WritingToolView({ id }: { id: WritingToolId }) {
   switch (id) {
@@ -111,6 +112,6 @@ export function WritingToolView({ id }: { id: WritingToolId }) {
     case "keyboard-shortcuts":
       return <KeyboardShortcutsRefTool />;
     default:
-      return null;
+      return <GenericConverterTool id={id} />;
   }
 }

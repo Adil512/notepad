@@ -54,6 +54,60 @@ export const WRITING_TOOL_IDS = [
   "import-export",
   "install-app",
   "keyboard-shortcuts",
+  "text-to-excel",
+  "csv-to-excel",
+  "json-to-excel",
+  "xml-to-excel",
+  "html-to-excel",
+  "pdf-to-excel",
+  "excel-to-csv",
+  "excel-to-json",
+  "excel-to-xml",
+  "excel-to-pdf",
+  "google-sheet-to-excel",
+  "numbers-to-excel",
+  "ods-to-excel",
+  "excel-to-ods",
+  "excel-to-google-sheet",
+  "pdf-to-word",
+  "word-to-pdf",
+  "text-to-pdf",
+  "pdf-to-text",
+  "word-to-txt",
+  "txt-to-word",
+  "html-to-pdf",
+  "pdf-to-html",
+  "markdown-to-pdf",
+  "pdf-to-markdown",
+  "ppt-to-pdf",
+  "pdf-to-ppt",
+  "rtf-to-pdf",
+  "pdf-to-rtf",
+  "txt-to-markdown",
+  "markdown-to-txt",
+  "html-to-word",
+  "word-to-html",
+  "json-to-csv",
+  "csv-to-json",
+  "json-to-xml",
+  "xml-to-json",
+  "yaml-to-json",
+  "json-to-yaml",
+  "sql-to-csv",
+  "csv-to-sql",
+  "text-to-json",
+  "json-to-text",
+  "text-to-xml",
+  "xml-to-text",
+  "text-uppercase-lowercase",
+  "text-to-camel-case",
+  "text-to-snake-case",
+  "text-to-kebab-case",
+  "split-text-to-columns",
+  "merge-text-lines",
+  "convert-line-endings",
+  "minify-json",
+  "minify-xml",
 ] as const;
 
 export type WritingToolId = (typeof WRITING_TOOL_IDS)[number];
@@ -63,12 +117,14 @@ export type WritingToolCategory =
   | "analysis"
   | "text"
   | "devtools"
+  | "converters"
   | "capture"
   | "export"
   | "workspace";
 
 export const WRITING_TOOL_CATEGORY_ORDER: WritingToolCategory[] = [
   "analysis",
+  "converters",
   "focus",
   "text",
   "devtools",
@@ -101,6 +157,11 @@ export const writingToolCategoryCopy: Record<
     description:
       "Format JSON and XML, minify HTML, beautify CSS, encode Base64 and URLs, and test regular expressions, all client-side.",
   },
+  converters: {
+    title: "Converters",
+    description:
+      "Convert between document, spreadsheet, and structured data formats from a single English-only toolbox.",
+  },
   capture: {
     title: "Capture & Reuse",
     description:
@@ -128,6 +189,8 @@ export const writingToolCategoryAccent: Record<
   text: "from-sky-600 to-cyan-600 dark:from-sky-500 dark:to-cyan-400",
   devtools:
     "from-indigo-600 to-violet-600 dark:from-indigo-500 dark:to-violet-500",
+  converters:
+    "from-blue-600 to-cyan-600 dark:from-blue-500 dark:to-cyan-400",
   capture: "from-amber-500 to-orange-600 dark:from-amber-400 dark:to-orange-500",
   export: "from-emerald-600 to-teal-600 dark:from-emerald-500 dark:to-teal-400",
   workspace: "from-slate-600 to-zinc-600 dark:from-slate-500 dark:to-zinc-400",
@@ -145,6 +208,7 @@ export type WritingToolMeta = {
   /** Short label for cards */
   tagline: string;
   category: WritingToolCategory;
+  englishOnly?: boolean;
 };
 
 export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
@@ -457,7 +521,83 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     tagline: "Power-user reference",
     category: "workspace",
   },
+  "text-to-excel": { id: "text-to-excel", title: "Text to Excel Converter Online", description: "Convert plain text into spreadsheet-ready Excel tables quickly.", h1: "Text to Excel", tagline: "Convert text rows to sheets", category: "converters", englishOnly: true },
+  "csv-to-excel": { id: "csv-to-excel", title: "CSV to Excel Converter Online", description: "Turn CSV files into Excel format instantly.", h1: "CSV to Excel", tagline: "CSV file to XLSX", category: "converters", englishOnly: true },
+  "json-to-excel": { id: "json-to-excel", title: "JSON to Excel Converter Online", description: "Convert JSON arrays to Excel columns and rows.", h1: "JSON to Excel", tagline: "JSON data to XLSX", category: "converters", englishOnly: true },
+  "xml-to-excel": { id: "xml-to-excel", title: "XML to Excel Converter Online", description: "Transform XML data into Excel sheets.", h1: "XML to Excel", tagline: "XML nodes to cells", category: "converters", englishOnly: true },
+  "html-to-excel": { id: "html-to-excel", title: "HTML to Excel Converter Online", description: "Convert HTML table markup into Excel files.", h1: "HTML to Excel", tagline: "HTML tables to XLSX", category: "converters", englishOnly: true },
+  "pdf-to-excel": { id: "pdf-to-excel", title: "PDF to Excel Converter Online", description: "Extract table-like PDF content for Excel editing.", h1: "PDF to Excel", tagline: "PDF tables to sheets", category: "converters", englishOnly: true },
+  "excel-to-csv": { id: "excel-to-csv", title: "Excel to CSV Converter Online", description: "Convert Excel sheets to standard CSV output.", h1: "Excel to CSV", tagline: "XLSX to CSV", category: "converters", englishOnly: true },
+  "excel-to-json": { id: "excel-to-json", title: "Excel to JSON Converter Online", description: "Export Excel data as clean JSON.", h1: "Excel to JSON", tagline: "Sheets to objects", category: "converters", englishOnly: true },
+  "excel-to-xml": { id: "excel-to-xml", title: "Excel to XML Converter Online", description: "Convert Excel rows to XML output.", h1: "Excel to XML", tagline: "Spreadsheet to XML", category: "converters", englishOnly: true },
+  "excel-to-pdf": { id: "excel-to-pdf", title: "Excel to PDF Converter Online", description: "Create PDF-ready outputs from Excel data.", h1: "Excel to PDF", tagline: "Sheet to document", category: "converters", englishOnly: true },
+  "google-sheet-to-excel": { id: "google-sheet-to-excel", title: "Google Sheet to Excel Converter", description: "Convert Google Sheet exports to Excel format.", h1: "Google Sheet to Excel", tagline: "Sheet export to XLSX", category: "converters", englishOnly: true },
+  "numbers-to-excel": { id: "numbers-to-excel", title: "Numbers to Excel Converter", description: "Convert Apple Numbers files to Excel-compatible format.", h1: "Numbers to Excel", tagline: "Apple Numbers to XLSX", category: "converters", englishOnly: true },
+  "ods-to-excel": { id: "ods-to-excel", title: "ODS to Excel Converter Online", description: "Convert OpenDocument Spreadsheet files to Excel.", h1: "ODS to Excel", tagline: "ODS to XLSX", category: "converters", englishOnly: true },
+  "excel-to-ods": { id: "excel-to-ods", title: "Excel to ODS Converter Online", description: "Convert Excel files to OpenDocument spreadsheets.", h1: "Excel to ODS", tagline: "XLSX to ODS", category: "converters", englishOnly: true },
+  "excel-to-google-sheet": { id: "excel-to-google-sheet", title: "Excel to Google Sheet Converter", description: "Prepare Excel data for Google Sheets imports.", h1: "Excel to Google Sheet", tagline: "XLSX import prep", category: "converters", englishOnly: true },
+  "pdf-to-word": { id: "pdf-to-word", title: "PDF to Word Converter Online", description: "Convert PDF documents into editable Word files.", h1: "PDF to Word", tagline: "PDF to DOCX", category: "converters", englishOnly: true },
+  "word-to-pdf": { id: "word-to-pdf", title: "Word to PDF Converter Online", description: "Convert Word documents to PDF in seconds.", h1: "Word to PDF", tagline: "DOCX to PDF", category: "converters", englishOnly: true },
+  "text-to-pdf": { id: "text-to-pdf", title: "Text to PDF Converter Online", description: "Convert plain text content into a printable PDF.", h1: "Text to PDF", tagline: "TXT to PDF", category: "converters", englishOnly: true },
+  "pdf-to-text": { id: "pdf-to-text", title: "PDF to Text Converter Online", description: "Extract plain text from PDF documents quickly.", h1: "PDF to Text", tagline: "PDF text extraction", category: "converters", englishOnly: true },
+  "word-to-txt": { id: "word-to-txt", title: "Word to TXT Converter Online", description: "Convert Word documents to plain TXT.", h1: "Word to TXT", tagline: "DOCX to TXT", category: "converters", englishOnly: true },
+  "txt-to-word": { id: "txt-to-word", title: "TXT to Word Converter Online", description: "Convert plain text files into Word-friendly documents.", h1: "TXT to Word", tagline: "TXT to DOCX", category: "converters", englishOnly: true },
+  "html-to-pdf": { id: "html-to-pdf", title: "HTML to PDF Converter Online", description: "Convert HTML content into PDF output.", h1: "HTML to PDF", tagline: "Markup to PDF", category: "converters", englishOnly: true },
+  "pdf-to-html": { id: "pdf-to-html", title: "PDF to HTML Converter Online", description: "Convert PDF content into editable HTML format.", h1: "PDF to HTML", tagline: "PDF to markup", category: "converters", englishOnly: true },
+  "markdown-to-pdf": { id: "markdown-to-pdf", title: "Markdown to PDF Converter Online", description: "Render Markdown and export it as PDF.", h1: "Markdown to PDF", tagline: "MD to PDF", category: "converters", englishOnly: true },
+  "pdf-to-markdown": { id: "pdf-to-markdown", title: "PDF to Markdown Converter Online", description: "Convert PDF content into Markdown text.", h1: "PDF to Markdown", tagline: "PDF to MD", category: "converters", englishOnly: true },
+  "ppt-to-pdf": { id: "ppt-to-pdf", title: "PPT to PDF Converter Online", description: "Convert PowerPoint slides into PDF files.", h1: "PPT to PDF", tagline: "Slides to PDF", category: "converters", englishOnly: true },
+  "pdf-to-ppt": { id: "pdf-to-ppt", title: "PDF to PPT Converter Online", description: "Convert PDF pages into editable slide format.", h1: "PDF to PPT", tagline: "PDF to slides", category: "converters", englishOnly: true },
+  "rtf-to-pdf": { id: "rtf-to-pdf", title: "RTF to PDF Converter Online", description: "Convert Rich Text Format files to PDF.", h1: "RTF to PDF", tagline: "RTF document to PDF", category: "converters", englishOnly: true },
+  "pdf-to-rtf": { id: "pdf-to-rtf", title: "PDF to RTF Converter Online", description: "Convert PDF content into editable RTF format.", h1: "PDF to RTF", tagline: "PDF to rich text", category: "converters", englishOnly: true },
+  "txt-to-markdown": { id: "txt-to-markdown", title: "TXT to Markdown Converter Online", description: "Convert plain text to Markdown-friendly output.", h1: "TXT to Markdown", tagline: "TXT to MD", category: "converters", englishOnly: true },
+  "markdown-to-txt": { id: "markdown-to-txt", title: "Markdown to TXT Converter Online", description: "Convert Markdown files to plain text output.", h1: "Markdown to TXT", tagline: "MD to TXT", category: "converters", englishOnly: true },
+  "html-to-word": { id: "html-to-word", title: "HTML to Word Converter Online", description: "Convert HTML content into Word-compatible documents.", h1: "HTML to Word", tagline: "HTML to DOCX", category: "converters", englishOnly: true },
+  "word-to-html": { id: "word-to-html", title: "Word to HTML Converter Online", description: "Convert Word documents into clean HTML.", h1: "Word to HTML", tagline: "DOCX to HTML", category: "converters", englishOnly: true },
+  "json-to-csv": { id: "json-to-csv", title: "JSON to CSV Converter Online", description: "Convert JSON arrays into CSV tables instantly.", h1: "JSON to CSV", tagline: "JSON records to CSV", category: "converters", englishOnly: true },
+  "csv-to-json": { id: "csv-to-json", title: "CSV to JSON Converter Online", description: "Convert CSV rows into JSON objects quickly.", h1: "CSV to JSON", tagline: "CSV rows to JSON", category: "converters", englishOnly: true },
+  "json-to-xml": { id: "json-to-xml", title: "JSON to XML Converter Online", description: "Transform JSON structures into XML output.", h1: "JSON to XML", tagline: "JSON to XML tree", category: "converters", englishOnly: true },
+  "xml-to-json": { id: "xml-to-json", title: "XML to JSON Converter Online", description: "Convert XML documents into JSON structures.", h1: "XML to JSON", tagline: "XML nodes to JSON", category: "converters", englishOnly: true },
+  "yaml-to-json": { id: "yaml-to-json", title: "YAML to JSON Converter Online", description: "Convert YAML files to valid JSON.", h1: "YAML to JSON", tagline: "YAML to JSON", category: "converters", englishOnly: true },
+  "json-to-yaml": { id: "json-to-yaml", title: "JSON to YAML Converter Online", description: "Convert JSON into clean YAML format.", h1: "JSON to YAML", tagline: "JSON to YAML", category: "converters", englishOnly: true },
+  "sql-to-csv": { id: "sql-to-csv", title: "SQL to CSV Converter Online", description: "Convert SQL-like row data into CSV files.", h1: "SQL to CSV", tagline: "SQL rows to CSV", category: "converters", englishOnly: true },
+  "csv-to-sql": { id: "csv-to-sql", title: "CSV to SQL Converter Online", description: "Generate SQL inserts from CSV data.", h1: "CSV to SQL", tagline: "CSV to INSERT statements", category: "converters", englishOnly: true },
+  "text-to-json": { id: "text-to-json", title: "Text to JSON Converter Online", description: "Convert structured text into JSON quickly.", h1: "Text to JSON", tagline: "Text parsing to JSON", category: "converters", englishOnly: true },
+  "json-to-text": { id: "json-to-text", title: "JSON to Text Converter Online", description: "Flatten JSON into readable plain text.", h1: "JSON to Text", tagline: "JSON to readable text", category: "converters", englishOnly: true },
+  "text-to-xml": { id: "text-to-xml", title: "Text to XML Converter Online", description: "Turn structured text into XML output.", h1: "Text to XML", tagline: "Text to XML format", category: "converters", englishOnly: true },
+  "xml-to-text": { id: "xml-to-text", title: "XML to Text Converter Online", description: "Extract readable text from XML data.", h1: "XML to Text", tagline: "XML to plain text", category: "converters", englishOnly: true },
+  "text-uppercase-lowercase": { id: "text-uppercase-lowercase", title: "Text Uppercase Lowercase Converter", description: "Convert text to uppercase or lowercase instantly.", h1: "Text Uppercase/Lowercase", tagline: "UPPER/lower in one click", category: "converters", englishOnly: true },
+  "text-to-camel-case": { id: "text-to-camel-case", title: "Text to camelCase Converter", description: "Convert phrases into camelCase format.", h1: "Text to camelCase", tagline: "camelCase conversion", category: "converters", englishOnly: true },
+  "text-to-snake-case": { id: "text-to-snake-case", title: "Text to snake_case Converter", description: "Convert text to snake_case format.", h1: "Text to snake_case", tagline: "snake_case conversion", category: "converters", englishOnly: true },
+  "text-to-kebab-case": { id: "text-to-kebab-case", title: "Text to kebab-case Converter", description: "Convert text to kebab-case format.", h1: "Text to kebab-case", tagline: "kebab-case conversion", category: "converters", englishOnly: true },
+  "split-text-to-columns": { id: "split-text-to-columns", title: "Split Text to Columns Tool", description: "Split text using delimiters into columnar output.", h1: "Split Text to Columns", tagline: "Delimiter-based split", category: "converters", englishOnly: true },
+  "merge-text-lines": { id: "merge-text-lines", title: "Merge Text Lines Tool", description: "Merge multiple lines into a single text output.", h1: "Merge Text Lines", tagline: "Join lines with separators", category: "converters", englishOnly: true },
+  "convert-line-endings": { id: "convert-line-endings", title: "Convert Line Endings LF CRLF Tool", description: "Convert text line endings between LF and CRLF.", h1: "Convert Line Endings (LF ↔ CRLF)", tagline: "Normalize line endings", category: "converters", englishOnly: true },
+  "minify-json": { id: "minify-json", title: "Minify JSON Tool Online", description: "Compress JSON by removing whitespace and line breaks.", h1: "Minify JSON", tagline: "Compact JSON output", category: "converters", englishOnly: true },
+  "minify-xml": { id: "minify-xml", title: "Minify XML Tool Online", description: "Compress XML into a single-line compact form.", h1: "Minify XML", tagline: "Compact XML output", category: "converters", englishOnly: true },
 };
+
+export const ENGLISH_ONLY_TOOL_IDS = WRITING_TOOL_IDS.filter(
+  (id) => writingToolsMeta[id].englishOnly
+) as WritingToolId[];
+
+export const EXCEL_SPREADSHEET_TOOL_IDS: WritingToolId[] = [
+  "text-to-excel","csv-to-excel","json-to-excel","xml-to-excel","html-to-excel","pdf-to-excel","excel-to-csv","excel-to-json","excel-to-xml","excel-to-pdf","google-sheet-to-excel","numbers-to-excel","ods-to-excel","excel-to-ods","excel-to-google-sheet",
+];
+export const DOCUMENT_CONVERTER_TOOL_IDS: WritingToolId[] = [
+  "pdf-to-word","word-to-pdf","text-to-pdf","pdf-to-text","word-to-txt","txt-to-word","html-to-pdf","pdf-to-html","markdown-to-pdf","pdf-to-markdown","ppt-to-pdf","pdf-to-ppt","rtf-to-pdf","pdf-to-rtf","txt-to-markdown","markdown-to-txt","html-to-word","word-to-html",
+];
+export const DATA_CODE_CONVERTER_TOOL_IDS: WritingToolId[] = [
+  "json-to-csv","csv-to-json","json-to-xml","xml-to-json","yaml-to-json","json-to-yaml","sql-to-csv","csv-to-sql","text-to-json","json-to-text","text-to-xml","xml-to-text",
+];
+export const TEXT_FORMAT_CONVERTER_TOOL_IDS: WritingToolId[] = [
+  "text-uppercase-lowercase","text-to-camel-case","text-to-snake-case","text-to-kebab-case","split-text-to-columns","merge-text-lines","convert-line-endings","minify-json","minify-xml",
+];
+
+export function isToolVisibleInLocale(id: WritingToolId, locale: string): boolean {
+  if (!writingToolsMeta[id].englishOnly) return true;
+  return locale === "en";
+}
 
 export function toolsInCategory(
   cat: WritingToolCategory

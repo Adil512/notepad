@@ -9,6 +9,7 @@ import {
   isWritingToolId,
   type WritingToolCategory,
   type WritingToolId,
+  isToolVisibleInLocale,
 } from "@/lib/writing-tools-registry";
 import { WritingToolView } from "@/components/tools/WritingToolView";
 import { defaultLocale } from "@/lib/i18n";
@@ -122,6 +123,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, tool } = await params;
   if (!isWritingToolId(tool)) {
+    return { title: "Tool" };
+  }
+  if (!isToolVisibleInLocale(tool, locale)) {
     return { title: "Tool" };
   }
   const m = writingToolsMeta[tool];
@@ -397,6 +401,7 @@ export default async function WritingToolPage({
   if (!isWritingToolId(tool)) notFound();
 
   const id = tool as WritingToolId;
+  if (!isToolVisibleInLocale(id, locale)) notFound();
   const m = writingToolsMeta[id];
   const hub = localizedPath(locale, "/tools");
   const accent = writingToolCategoryAccent[m.category];
