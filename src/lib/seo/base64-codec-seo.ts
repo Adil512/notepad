@@ -1,15 +1,12 @@
 import { writingToolsMeta } from "@/lib/writing-tools-registry";
 import { jsonFormatterSeo } from "@/lib/seo/json-formatter-seo";
 
-const locales = Object.keys(jsonFormatterSeo);
-
 export const base64CodecSeo = Object.fromEntries(
-  locales.map((locale) => [
+  Object.entries(jsonFormatterSeo).map(([locale, seo]) => [
     locale,
     {
-      title: "Base64 Encoder & Decoder – Encode or Decode Text Online Free",
-      description:
-        "Encode and decode Base64 text instantly with this free online tool. Fast, accurate, and perfect for developers, APIs, and data conversion tasks.",
+      title: seo.title.replaceAll("JSON", "Base64"),
+      description: seo.description.replaceAll("JSON", "Base64"),
     },
   ])
 ) as Record<string, { title: string; description: string }>;

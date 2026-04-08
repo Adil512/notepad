@@ -1,18 +1,21 @@
 import { writingToolsMeta } from "@/lib/writing-tools-registry";
 import { jsonFormatterSeo } from "@/lib/seo/json-formatter-seo";
 
-const locales = Object.keys(jsonFormatterSeo);
-
 export const sentenceCounterSeo = Object.fromEntries(
-  locales.map((locale) => [
+  Object.entries(jsonFormatterSeo).map(([locale, seo]) => [
     locale,
     {
-      title: "Sentence Counter Online – Free Text Sentence Count Tool",
-      description:
-        "Count sentences in your text instantly with this free online sentence counter. Fast, accurate, and useful for writers, students, and content creators.",
+      title: seo.title.replaceAll("JSON", "Sentence"),
+      description: seo.description.replaceAll("JSON", "sentence"),
     },
   ])
 ) as Record<string, { title: string; description: string }>;
+
+sentenceCounterSeo.ar = {
+  title: "عداد الجمل عبر الإنترنت – أداة مجانية لعد الجمل في النص",
+  description:
+    "احسب عدد الجمل في النص فورًا باستخدام هذه الأداة المجانية عبر الإنترنت. سريعة ودقيقة ومفيدة للكتّاب والطلاب وصناع المحتوى.",
+};
 
 const baseMeta = writingToolsMeta["sentence-counter"];
 

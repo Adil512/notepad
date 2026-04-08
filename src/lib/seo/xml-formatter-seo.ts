@@ -1,15 +1,12 @@
 import { writingToolsMeta } from "@/lib/writing-tools-registry";
 import { jsonFormatterSeo } from "@/lib/seo/json-formatter-seo";
 
-const locales = Object.keys(jsonFormatterSeo);
-
 export const xmlFormatterSeo = Object.fromEntries(
-  locales.map((locale) => [
+  Object.entries(jsonFormatterSeo).map(([locale, seo]) => [
     locale,
     {
-      title: "XML Formatter Online – Beautify, Format & Validate XML Free",
-      description:
-        "Format, beautify, and validate XML instantly with this free online XML formatter. Fix errors, improve structure readability, and copy clean XML output.",
+      title: seo.title.replaceAll("JSON", "XML"),
+      description: seo.description.replaceAll("JSON", "XML"),
     },
   ])
 ) as Record<string, { title: string; description: string }>;

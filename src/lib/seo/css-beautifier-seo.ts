@@ -1,15 +1,12 @@
 import { writingToolsMeta } from "@/lib/writing-tools-registry";
 import { jsonFormatterSeo } from "@/lib/seo/json-formatter-seo";
 
-const locales = Object.keys(jsonFormatterSeo);
-
 export const cssBeautifierSeo = Object.fromEntries(
-  locales.map((locale) => [
+  Object.entries(jsonFormatterSeo).map(([locale, seo]) => [
     locale,
     {
-      title: "CSS Beautifier Online – Format & Pretty Print CSS Code Free",
-      description:
-        "Beautify and format CSS code instantly with this free online CSS beautifier. Improve readability, clean up messy styles, and copy clean output fast.",
+      title: seo.title.replaceAll("JSON", "CSS"),
+      description: seo.description.replaceAll("JSON", "CSS"),
     },
   ])
 ) as Record<string, { title: string; description: string }>;

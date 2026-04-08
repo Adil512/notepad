@@ -95,6 +95,10 @@ import {
   getXmlFormatterHero,
   getXmlFormatterSeo,
 } from "@/lib/seo/xml-formatter-seo";
+import {
+  getProductivityToolHero,
+  getProductivityToolSeo,
+} from "@/lib/seo/productivity-tools-seo";
 import { ToolPageEducation } from "@/components/tools/ToolPageEducation";
 import {
   formatToolNameForHeading,
@@ -363,6 +367,19 @@ export async function generateMetadata({
       },
     };
   }
+  const productivitySeo = getProductivityToolSeo(tool, locale);
+  if (productivitySeo) {
+    return {
+      title: productivitySeo.title,
+      description: productivitySeo.description,
+      alternates: { canonical },
+      openGraph: {
+        url: canonical,
+        title: productivitySeo.title,
+        description: productivitySeo.description,
+      },
+    };
+  }
   return {
     title: m.title,
     description: m.description,
@@ -424,6 +441,9 @@ export default async function WritingToolPage({
     hero = getRegexTesterHero(locale);
   } else if (id === "xml-formatter") {
     hero = getXmlFormatterHero(locale);
+  } else {
+    const productivityHero = getProductivityToolHero(id, locale);
+    if (productivityHero) hero = productivityHero;
   }
   const education = getToolPageEducation(id);
   const faqSchema = getToolFaqSchema(id);

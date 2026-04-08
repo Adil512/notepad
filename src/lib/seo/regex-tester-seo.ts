@@ -1,15 +1,12 @@
 import { writingToolsMeta } from "@/lib/writing-tools-registry";
 import { jsonFormatterSeo } from "@/lib/seo/json-formatter-seo";
 
-const locales = Object.keys(jsonFormatterSeo);
-
 export const regexTesterSeo = Object.fromEntries(
-  locales.map((locale) => [
+  Object.entries(jsonFormatterSeo).map(([locale, seo]) => [
     locale,
     {
-      title: "Regex Tester Online – Test & Debug Regular Expressions Free",
-      description:
-        "Test and debug regex patterns instantly with this free online regex tester. Validate matches in real time and improve pattern accuracy quickly.",
+      title: seo.title.replaceAll("JSON", "Regex"),
+      description: seo.description.replaceAll("JSON", "Regex"),
     },
   ])
 ) as Record<string, { title: string; description: string }>;

@@ -8,7 +8,7 @@ const TEMPLATES = [
   {
     id: "meeting",
     name: "Meeting notes",
-    body: `# Meeting - ${new Date().toLocaleDateString()}
+    body: `# Meeting - YYYY-MM-DD
 
 ## Attendees
 - 
@@ -26,7 +26,7 @@ const TEMPLATES = [
   {
     id: "journal",
     name: "Daily journal",
-    body: `## ${new Date().toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" })}
+    body: `## Weekday, Month Day
 
 ### Grateful for
 

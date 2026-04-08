@@ -1,15 +1,12 @@
 import { writingToolsMeta } from "@/lib/writing-tools-registry";
 import { jsonFormatterSeo } from "@/lib/seo/json-formatter-seo";
 
-const locales = Object.keys(jsonFormatterSeo);
-
 export const urlCodecSeo = Object.fromEntries(
-  locales.map((locale) => [
+  Object.entries(jsonFormatterSeo).map(([locale, seo]) => [
     locale,
     {
-      title: "URL Encoder & Decoder – Encode or Decode URLs Online Free",
-      description:
-        "Encode or decode URLs instantly with this free online URL encoder/decoder. Convert special characters safely for web links, APIs, and query strings.",
+      title: seo.title.replaceAll("JSON", "URL"),
+      description: seo.description.replaceAll("JSON", "URL"),
     },
   ])
 ) as Record<string, { title: string; description: string }>;

@@ -1,15 +1,12 @@
 import { writingToolsMeta } from "@/lib/writing-tools-registry";
 import { jsonFormatterSeo } from "@/lib/seo/json-formatter-seo";
 
-const locales = Object.keys(jsonFormatterSeo);
-
 export const htmlMinifierSeo = Object.fromEntries(
-  locales.map((locale) => [
+  Object.entries(jsonFormatterSeo).map(([locale, seo]) => [
     locale,
     {
-      title: "HTML Minifier Online – Compress & Optimize HTML Code Free",
-      description:
-        "Minify and compress HTML code instantly with this free online HTML minifier. Reduce file size, speed up pages, and optimize website performance.",
+      title: seo.title.replaceAll("JSON", "HTML"),
+      description: seo.description.replaceAll("JSON", "HTML"),
     },
   ])
 ) as Record<string, { title: string; description: string }>;
