@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Check, X, ArrowRight, ExternalLink } from "lucide-react";
+import { Check, X, ArrowRight } from "lucide-react";
 import { getHomeFaqs } from "@/lib/faq-data";
 import { localizedPath } from "@/lib/i18n";
 import { getHomeSeoCopy, homeSeoRtlLocales } from "@/lib/home-seo-content";
@@ -172,17 +172,6 @@ export function SEOContent({
             </div>
           )}
 
-          <div className="pt-2 text-center">
-            <a
-              href="https://chrome.google.com/webstore"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/20"
-            >
-              Install Our Free Extension
-              <ExternalLink className="h-4 w-4" />
-            </a>
-          </div>
         </section>
 
       </div>
