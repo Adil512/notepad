@@ -557,9 +557,9 @@ export function Editor({ user }: { user?: User | null }) {
         <ToolbarItem onClick={() => editor.chain().focus().toggleOrderedList().run()} isActive={editor.isActive("orderedList")} title="Numbered List"><ListOrdered className="w-4 h-4" /></ToolbarItem>
       </div>
       {isHomeEditor ? (
-        <div className="mt-2 flex items-center justify-end">
+        <div className="mt-2 flex items-center justify-end gap-2">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/90 px-2 py-1 shadow-sm">
-            <span className="hidden sm:inline text-xs font-medium text-muted-foreground px-1">
+            <span className="hidden sm:inline px-1 text-xs font-medium text-muted-foreground">
               Voice typing
             </span>
             <button
