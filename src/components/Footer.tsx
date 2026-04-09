@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FileText } from "lucide-react";
 import { localizedPath } from "@/lib/i18n";
+import { toolDetailPublicPath } from "@/lib/writing-tools-registry";
 import { getFooterTagline } from "@/lib/footer-tagline";
 import { getFooterLabels } from "@/lib/footer-labels";
 
@@ -161,7 +162,7 @@ export function Footer({ locale }: { locale: string }) {
               </li>
               <li>
                 <Link
-                  href={L("/tools/markdown-notepad")}
+                  href={L(toolDetailPublicPath("markdown-notepad"))}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   {labels.markdownEditor}
@@ -169,7 +170,7 @@ export function Footer({ locale }: { locale: string }) {
               </li>
               <li>
                 <Link
-                  href={L("/tools/code-notepad")}
+                  href={L(toolDetailPublicPath("code-notepad"))}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   {labels.codeNotepad}
@@ -177,7 +178,7 @@ export function Footer({ locale }: { locale: string }) {
               </li>
               <li>
                 <Link
-                  href={L("/tools/json-editor")}
+                  href={L(toolDetailPublicPath("json-editor"))}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   {labels.jsonEditor}
@@ -185,7 +186,7 @@ export function Footer({ locale }: { locale: string }) {
               </li>
               <li>
                 <Link
-                  href={L("/tools/html-editor")}
+                  href={L(toolDetailPublicPath("html-editor"))}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   {labels.htmlEditor}

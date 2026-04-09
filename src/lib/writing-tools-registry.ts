@@ -8,6 +8,15 @@ export const PRIMARY_EDITOR_TOOL_IDS = [
 
 export type PrimaryEditorToolId = (typeof PRIMARY_EDITOR_TOOL_IDS)[number];
 
+/** Same ids as {@link PRIMARY_EDITOR_TOOL_IDS}; canonical under `/tools/editors/:id/`. */
+export const EDITOR_HUB_TOOL_IDS = PRIMARY_EDITOR_TOOL_IDS;
+
+export type EditorHubToolId = PrimaryEditorToolId;
+
+export function isEditorHubToolId(s: string): s is EditorHubToolId {
+  return (PRIMARY_EDITOR_TOOL_IDS as readonly string[]).includes(s);
+}
+
 /** Text counters, converters, and diff: own hub section + `analysis` category. */
 export const TEXT_ANALYSIS_TOOL_IDS = [
   "word-counter",
@@ -24,6 +33,17 @@ export const TEXT_ANALYSIS_TOOL_IDS = [
 
 export type TextAnalysisToolId = (typeof TEXT_ANALYSIS_TOOL_IDS)[number];
 
+/** Same ids as {@link TEXT_ANALYSIS_TOOL_IDS}; canonical under `/tools/text/:id/`. */
+export const TEXT_ANALYSIS_HUB_TOOL_IDS = TEXT_ANALYSIS_TOOL_IDS;
+
+export type TextAnalysisHubToolId = TextAnalysisToolId;
+
+export function isTextAnalysisHubToolId(
+  s: string
+): s is TextAnalysisHubToolId {
+  return (TEXT_ANALYSIS_TOOL_IDS as readonly string[]).includes(s);
+}
+
 /** Formatters, encoders, regex: hub strip + `devtools` category. */
 export const DEVTOOLS_TOOL_IDS = [
   "json-formatter",
@@ -36,6 +56,15 @@ export const DEVTOOLS_TOOL_IDS = [
 ] as const;
 
 export type DevtoolsToolId = (typeof DEVTOOLS_TOOL_IDS)[number];
+
+/** Same ids as {@link DEVTOOLS_TOOL_IDS}; canonical under `/tools/dev-tools/:id/`. */
+export const DEV_TOOLS_HUB_TOOL_IDS = DEVTOOLS_TOOL_IDS;
+
+export type DevToolsHubToolId = DevtoolsToolId;
+
+export function isDevToolsHubToolId(s: string): s is DevToolsHubToolId {
+  return (DEVTOOLS_TOOL_IDS as readonly string[]).includes(s);
+}
 
 export const WRITING_TOOL_IDS = [
   ...PRIMARY_EDITOR_TOOL_IDS,
@@ -111,6 +140,46 @@ export const WRITING_TOOL_IDS = [
 ] as const;
 
 export type WritingToolId = (typeof WRITING_TOOL_IDS)[number];
+
+/**
+ * Productivity “writing” tools: canonical URL `/tools/writing/:id/` with 301 from
+ * legacy `/tools/:id/`. (Paste/compare live under flat `/tools/` until a format hub exists.)
+ */
+export const WRITING_PRODUCTIVITY_TOOL_IDS = [
+  "focus-timer",
+  "goal-tracker",
+  "speech-dictation",
+  "templates",
+  "snippet-shelf",
+  "reading-mode",
+  "print-note",
+  "share-note",
+  "import-export",
+  "install-app",
+  "keyboard-shortcuts",
+] as const satisfies readonly WritingToolId[];
+
+export type WritingProductivityToolId =
+  (typeof WRITING_PRODUCTIVITY_TOOL_IDS)[number];
+
+export function isWritingProductivityToolId(
+  s: string
+): s is WritingProductivityToolId {
+  return (WRITING_PRODUCTIVITY_TOOL_IDS as readonly string[]).includes(s);
+}
+
+/** Path segment after domain, with leading slash, no locale prefix. */
+export function toolDetailPublicPath(id: WritingToolId): string {
+  if (isWritingProductivityToolId(id)) return `/tools/writing/${id}`;
+  if (isEditorHubToolId(id)) return `/tools/editors/${id}`;
+  if (isTextAnalysisHubToolId(id)) return `/tools/text/${id}`;
+  if (isDevToolsHubToolId(id)) return `/tools/dev-tools/${id}`;
+  if (isExcelHubToolId(id)) return `/tools/excel/${id}`;
+  if (isDocumentHubToolId(id)) return `/tools/documents/${id}`;
+  if (isDataHubToolId(id)) return `/tools/data/${id}`;
+  if (isFormatHubToolId(id)) return `/tools/format/${id}`;
+  return `/tools/${id}`;
+}
 
 export type WritingToolCategory =
   | "focus"
@@ -1136,8 +1205,24 @@ export const DATA_CODE_CONVERTER_TOOL_IDS: WritingToolId[] = [
   "json-to-csv","csv-to-json","json-to-xml","xml-to-json","yaml-to-json","json-to-yaml","sql-to-csv","csv-to-sql","text-to-json","json-to-text","text-to-xml","xml-to-text",
 ];
 export const TEXT_FORMAT_CONVERTER_TOOL_IDS: WritingToolId[] = [
-  "text-uppercase-lowercase","text-to-camel-case","text-to-snake-case","text-to-kebab-case","split-text-to-columns","merge-text-lines","convert-line-endings","minify-json","minify-xml",
+  "text-uppercase-lowercase","text-to-camel-case","text-to-snake-case","text-to-kebab-case","split-text-to-columns","merge-text-lines","convert-line-endings","minify-json","minify-xml","paste-clean","compare-drafts",
 ];
+
+export function isExcelHubToolId(s: string): s is WritingToolId {
+  return EXCEL_SPREADSHEET_TOOL_IDS.includes(s as WritingToolId);
+}
+
+export function isDocumentHubToolId(s: string): s is WritingToolId {
+  return DOCUMENT_CONVERTER_TOOL_IDS.includes(s as WritingToolId);
+}
+
+export function isDataHubToolId(s: string): s is WritingToolId {
+  return DATA_CODE_CONVERTER_TOOL_IDS.includes(s as WritingToolId);
+}
+
+export function isFormatHubToolId(s: string): s is WritingToolId {
+  return TEXT_FORMAT_CONVERTER_TOOL_IDS.includes(s as WritingToolId);
+}
 
 export function isToolVisibleInLocale(id: WritingToolId, locale: string): boolean {
   if (!writingToolsMeta[id].englishOnly) return true;

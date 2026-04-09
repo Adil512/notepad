@@ -1,21 +1,19 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import {
-  WRITING_TOOL_IDS,
-  isWritingToolId,
+  EXCEL_SPREADSHEET_TOOL_IDS,
+  isExcelHubToolId,
   isToolVisibleInLocale,
-  toolDetailPublicPath,
-  type WritingToolId,
+  writingToolsMeta,
 } from "@/lib/writing-tools-registry";
-import { localizedPath } from "@/lib/i18n";
-import { defaultLocale } from "@/lib/i18n";
+import { localizedPath, defaultLocale } from "@/lib/i18n";
 import { buildWritingToolPageMetadata } from "@/lib/writing-tool-page-shared";
 import { WritingToolPageView } from "@/components/tools/WritingToolPageView";
 
 export const dynamicParams = true;
 
 export function generateStaticParams() {
-  return WRITING_TOOL_IDS.map((tool) => ({
+  return EXCEL_SPREADSHEET_TOOL_IDS.map((tool) => ({
     locale: defaultLocale,
     tool,
   }));
@@ -27,34 +25,44 @@ export async function generateMetadata({
   params: Promise<{ locale: string; tool: string }>;
 }): Promise<Metadata> {
   const { locale, tool } = await params;
-  const canonicalPath = isWritingToolId(tool)
-    ? toolDetailPublicPath(tool)
-    : `/tools/${tool}`;
+  if (!isExcelHubToolId(tool)) {
+    return { title: "Not found" };
+  }
   return buildWritingToolPageMetadata({
     locale,
     tool,
-    canonicalPath,
+    canonicalPath: `/tools/excel/${tool}`,
   });
 }
 
-export default async function WritingToolPage({
+export default async function ExcelCategoryToolPage({
   params,
 }: {
   params: Promise<{ locale: string; tool: string }>;
 }) {
   const { locale, tool } = await params;
-  if (!isWritingToolId(tool)) notFound();
+  if (!isExcelHubToolId(tool)) notFound();
 
-  const id = tool as WritingToolId;
+  const id = tool;
   if (!isToolVisibleInLocale(id, locale)) notFound();
-  const hub = localizedPath(locale, "/tools");
+
+  const L = (p: string) => localizedPath(locale, p);
+  const hub = L("/tools/excel");
+  const breadcrumbs = [
+    { href: L("/"), label: "Home" },
+    { href: L("/tools"), label: "Tools" },
+    { href: hub, label: "Excel" },
+    { href: L(`/tools/excel/${id}`), label: writingToolsMeta[id].h1 },
+  ];
 
   return (
     <WritingToolPageView
       locale={locale}
       id={id}
       hubHref={hub}
-      hubLabel="All tools"
+      hubLabel="Excel converter tools"
+      breadcrumbs={breadcrumbs}
+      categoryHub={{ href: hub, label: "Browse all Excel converter tools" }}
     />
   );
 }

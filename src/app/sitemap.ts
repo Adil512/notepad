@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next";
 import { seoPages } from "@/lib/seo-data";
-import { WRITING_TOOL_IDS } from "@/lib/writing-tools-registry";
+import {
+  WRITING_TOOL_IDS,
+  toolDetailPublicPath,
+} from "@/lib/writing-tools-registry";
 import { defaultLocale, locales } from "@/lib/i18n";
 import { absoluteUrl } from "@/lib/site";
 import { blogPostPath } from "@/lib/blog-urls";
@@ -12,6 +15,14 @@ const staticPaths = [
   "/blog",
   "/about",
   "/tools",
+  "/tools/writing",
+  "/tools/editors",
+  "/tools/text",
+  "/tools/dev-tools",
+  "/tools/excel",
+  "/tools/documents",
+  "/tools/data",
+  "/tools/format",
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -57,7 +68,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 4) Writing tools (/tools/:id)
   for (const locale of locales) {
     for (const tool of WRITING_TOOL_IDS) {
-      const path = `/tools/${tool}`;
+      const path = toolDetailPublicPath(tool);
       const url =
         locale === defaultLocale
           ? absoluteUrl(path)
