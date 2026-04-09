@@ -218,7 +218,7 @@ export default async function ToolsHubPage({
 
         <section className="mt-12 rounded-2xl border border-border/70 bg-muted/20 p-6 sm:p-8">
           <h2 className="font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-            About Uur Free Online Tools
+            About Our Free Online Tools
           </h2>
           <p className="mt-4 max-w-4xl text-base leading-relaxed text-muted-foreground">
             Welcome to our complete collection of free online tools designed to
