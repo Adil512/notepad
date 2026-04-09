@@ -19,6 +19,7 @@ import { TableHeader } from "@tiptap/extension-table-header";
 import { TableCell } from "@tiptap/extension-table-cell";
 
 import { useEffect, useState, useRef } from "react";
+import { usePathname } from "next/navigation";
 import {
   Bold, Italic, Underline as UnderlineIcon, Strikethrough,
   List, ListOrdered, Undo, Redo, Printer,
@@ -28,17 +29,31 @@ import {
   Search, Maximize, Minimize, Highlighter, FilePlus, Share, AlertCircle,
   FileCode,
   Keyboard,
+  Mic,
+  MicOff,
 } from "lucide-react";
 import type { User } from "@supabase/supabase-js";
 import { createClient } from "@/utils/supabase/client";
 import NextLink from "next/link";
 import { useLocale } from "@/components/locale-context";
-import { localizedPath } from "@/lib/i18n";
+import { getPathWithoutLocale, localizedPath } from "@/lib/i18n";
 import { findNextInEditor, replaceSelectionIfMatches } from "@/lib/editor-search";
 
 const STORAGE_KEY = "notepad.is-saved-content";
 
+type SpeechRecognitionLike = {
+  continuous: boolean;
+  interimResults: boolean;
+  lang: string;
+  start: () => void;
+  stop: () => void;
+  onresult: ((event: Event) => void) | null;
+  onerror: ((event: Event) => void) | null;
+  onend: (() => void) | null;
+};
+
 export function Editor({ user }: { user?: User | null }) {
+  const pathname = usePathname();
   const locale = useLocale();
   const [isMounted, setIsMounted] = useState(false);
   const [saveStatus, setSaveStatus] = useState<"saved" | "saving">("saved");
@@ -54,6 +69,11 @@ export function Editor({ user }: { user?: User | null }) {
   const [dismissedNotice, setDismissedNotice] = useState(false);
   const [isSharing, setIsSharing] = useState(false);
   const [showKeyboardHelp, setShowKeyboardHelp] = useState(false);
+  const [speechSupported, setSpeechSupported] = useState(false);
+  const [isDictating, setIsDictating] = useState(false);
+  const [speechError, setSpeechError] = useState<string | null>(null);
+  const recognitionRef = useRef<SpeechRecognitionLike | null>(null);
+  const isHomeEditor = getPathWithoutLocale(pathname || "/") === "/";
 
   useEffect(() => {
     setIsMounted(true);
@@ -132,6 +152,72 @@ export function Editor({ user }: { user?: User | null }) {
       }
     }
   }, [editor, isMounted]);
+
+  useEffect(() => {
+    if (!editor || !isMounted || !isHomeEditor) return;
+
+    const W = window as unknown as {
+      SpeechRecognition?: new () => SpeechRecognitionLike;
+      webkitSpeechRecognition?: new () => SpeechRecognitionLike;
+    };
+    const Ctor = W.SpeechRecognition || W.webkitSpeechRecognition;
+    if (!Ctor) {
+      setSpeechSupported(false);
+      return;
+    }
+
+    const recognition = new Ctor();
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = locale || "en";
+    recognitionRef.current = recognition;
+    setSpeechSupported(true);
+
+    recognition.onresult = (event: Event) => {
+      const e = event as unknown as {
+        resultIndex: number;
+        results: ArrayLike<{
+          isFinal: boolean;
+          0: { transcript: string };
+        }>;
+      };
+      let finalText = "";
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        const result = e.results[i];
+        const transcript = result[0]?.transcript ?? "";
+        if (result.isFinal) finalText += transcript;
+      }
+      if (finalText.trim()) {
+        editor.chain().focus().insertContent(finalText.trim() + " ").run();
+      }
+    };
+
+    recognition.onerror = (event: Event) => {
+      const e = event as unknown as { error?: string };
+      const code = e.error || "unknown";
+      if (code === "not-allowed") {
+        setSpeechError("Microphone permission blocked. Please allow mic access.");
+      } else if (code === "no-speech") {
+        setSpeechError("No speech detected. Try speaking closer to the microphone.");
+      } else {
+        setSpeechError("Speech recognition error. Please try again.");
+      }
+      setIsDictating(false);
+    };
+
+    recognition.onend = () => {
+      setIsDictating(false);
+    };
+
+    return () => {
+      try {
+        recognition.stop();
+      } catch {
+        // noop
+      }
+      recognitionRef.current = null;
+    };
+  }, [editor, isMounted, isHomeEditor, locale]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -272,6 +358,24 @@ export function Editor({ user }: { user?: User | null }) {
     if (confirm("Are you sure you want to delete everything?")) {
       editor.commands.setContent("");
       localStorage.removeItem(STORAGE_KEY);
+    }
+  };
+
+  const toggleDictation = () => {
+    if (!speechSupported || !recognitionRef.current) return;
+    setSpeechError(null);
+    if (isDictating) {
+      recognitionRef.current.stop();
+      setIsDictating(false);
+      return;
+    }
+    try {
+      recognitionRef.current.lang = locale || "en";
+      recognitionRef.current.start();
+      setIsDictating(true);
+    } catch {
+      setSpeechError("Could not start speech recognition in this browser.");
+      setIsDictating(false);
     }
   };
 
@@ -452,6 +556,45 @@ export function Editor({ user }: { user?: User | null }) {
         <ToolbarItem onClick={() => editor.chain().focus().toggleBulletList().run()} isActive={editor.isActive("bulletList")} title="Bullet List"><List className="w-4 h-4" /></ToolbarItem>
         <ToolbarItem onClick={() => editor.chain().focus().toggleOrderedList().run()} isActive={editor.isActive("orderedList")} title="Numbered List"><ListOrdered className="w-4 h-4" /></ToolbarItem>
       </div>
+      {isHomeEditor ? (
+        <div className="mt-2 flex items-center justify-end">
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/90 px-2 py-1 shadow-sm">
+            <span className="hidden sm:inline text-xs font-medium text-muted-foreground px-1">
+              Voice typing
+            </span>
+            <button
+              onClick={toggleDictation}
+              disabled={!speechSupported}
+              title={
+                speechSupported
+                  ? isDictating
+                    ? "Stop voice typing"
+                    : "Start voice typing"
+                  : "Voice typing is not supported in this browser"
+              }
+              className={`inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold transition-colors ${
+                !speechSupported
+                  ? "cursor-not-allowed bg-muted text-muted-foreground opacity-70"
+                  : isDictating
+                    ? "bg-red-600 text-white hover:bg-red-700"
+                    : "bg-primary text-primary-foreground hover:bg-primary/90"
+              }`}
+            >
+              {isDictating ? (
+                <MicOff className="h-3.5 w-3.5 animate-pulse" />
+              ) : (
+                <Mic className="h-3.5 w-3.5" />
+              )}
+              {isDictating ? "Listening" : "Speak"}
+            </button>
+          </div>
+        </div>
+      ) : null}
+      {isHomeEditor && (isDictating || speechError) ? (
+        <div className="mt-2 rounded-md border border-border bg-background px-3 py-2 text-xs text-muted-foreground">
+          {isDictating ? "Listening... Speak to type in the editor." : speechError}
+        </div>
+      ) : null}
 
       {/* Editor Container with Ruled Notebook Pattern */}
       <div className={`notebook-paper border border-t-0 bg-[#fafafa] dark:bg-[#121212] dark:text-gray-100 flex-1 relative ${isFullscreen ? 'mb-0 rounded-none w-full min-h-screen' : 'mb-20 rounded-b-xl shadow-md overflow-hidden'}`}>
