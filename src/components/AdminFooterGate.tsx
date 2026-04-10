@@ -12,7 +12,7 @@ export function AdminFooterGate({ locale }: { locale: string }) {
       <div className="w-full border-t border-border/60 bg-background py-8">
         <div className="mx-auto flex max-w-[85rem] justify-center px-4 sm:px-6 lg:px-8">
           <a
-            href="https://chrome.google.com/webstore"
+            href="https://chromewebstore.google.com/detail/notepadis/dhmnleochiopeodajekdgidhglodiodb"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/20"
