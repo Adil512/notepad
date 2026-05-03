@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Shield, Zap, Globe, Heart } from "lucide-react";
+import { getAboutPageSeo } from "@/lib/about-page-seo";
 import { localizedPath } from "@/lib/i18n";
 import { canonicalUrlForPage } from "@/lib/site";
 
@@ -10,12 +11,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const { title, description } = getAboutPageSeo(locale);
+  const canonical = canonicalUrlForPage(locale, "/about");
   return {
-    title: "About",
-    description:
-      "Learn more about Notepad.is: a fast, minimal online notepad built for focus and privacy.",
-    alternates: { canonical: canonicalUrlForPage(locale, "/about") },
-    openGraph: { url: canonicalUrlForPage(locale, "/about") },
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: { url: canonical, title, description },
   };
 }
 
