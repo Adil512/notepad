@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { seoPages } from "@/lib/seo-data";
 import {
   WRITING_TOOL_IDS,
+  isToolVisibleInLocale,
   toolDetailPublicPath,
 } from "@/lib/writing-tools-registry";
 import { defaultLocale, locales } from "@/lib/i18n";
@@ -65,9 +66,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // 4) Writing tools (/tools/:id)
+  // 4) Writing tools — only URLs that actually render (englishOnly tools are en-only)
   for (const locale of locales) {
     for (const tool of WRITING_TOOL_IDS) {
+      if (!isToolVisibleInLocale(tool, locale)) continue;
       const path = toolDetailPublicPath(tool);
       const url =
         locale === defaultLocale
