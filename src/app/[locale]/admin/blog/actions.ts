@@ -26,6 +26,7 @@ function revalidateBlogPaths(slug?: string) {
     }
   }
   revalidatePath("/sitemap.xml");
+  revalidatePath("/sitemap.xml/");
 }
 
 async function ensureUniqueSlug(

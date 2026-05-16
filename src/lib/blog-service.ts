@@ -3,6 +3,7 @@ import {
   type BlogSection,
 } from "@/lib/blog-data";
 import { createPublicSupabaseClient } from "@/utils/supabase/public";
+import { unstable_noStore as noStore } from "next/cache";
 
 export type TocItem = { id: string; title: string };
 
@@ -173,21 +174,38 @@ export async function getAllPublishedSlugs(): Promise<string[]> {
   return posts.map((p) => p.slug);
 }
 
-/** For sitemap: published DB posts with last modified time. */
+/** For sitemap: published posts (DB + static fallback) with last modified time. */
 export async function getPublishedBlogSlugsForSitemap(): Promise<
   { slug: string; lastModified: Date }[]
 > {
+  noStore();
+  const bySlug = new Map<string, Date>();
   const supabase = createPublicSupabaseClient();
-  if (!supabase) return [];
 
-  const { data, error } = await supabase
-    .from("blog_posts")
-    .select("slug, updated_at")
-    .eq("published", true);
+  if (supabase) {
+    const { data, error } = await supabase
+      .from("blog_posts")
+      .select("slug, updated_at")
+      .eq("published", true);
 
-  if (error || !data) return [];
-  return (data as { slug: string; updated_at: string }[]).map((row) => ({
-    slug: row.slug,
-    lastModified: new Date(row.updated_at || Date.now()),
+    if (!error && data) {
+      for (const row of data as { slug: string; updated_at: string }[]) {
+        bySlug.set(row.slug, new Date(row.updated_at || Date.now()));
+      }
+    }
+  }
+
+  for (const post of staticBlogPosts) {
+    if (bySlug.has(post.slug)) continue;
+    const parsed = Date.parse(post.date);
+    bySlug.set(
+      post.slug,
+      Number.isFinite(parsed) ? new Date(parsed) : new Date()
+    );
+  }
+
+  return [...bySlug.entries()].map(([slug, lastModified]) => ({
+    slug,
+    lastModified,
   }));
 }

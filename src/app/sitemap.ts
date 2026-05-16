@@ -10,6 +10,9 @@ import { absoluteUrl } from "@/lib/site";
 import { blogPostPath } from "@/lib/blog-urls";
 import { getPublishedBlogSlugsForSitemap } from "@/lib/blog-service";
 
+/** Regenerate on a schedule and when blog admin actions call `revalidatePath`. */
+export const revalidate = 3600;
+
 /** Indexed static paths only (no auth, account, or legal utility pages). */
 const staticPaths = [
   "",
@@ -100,16 +103,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
+  // Blog articles are English-only; list each post once at the default locale URL.
   const blogRows = await getPublishedBlogSlugsForSitemap();
-  for (const locale of locales) {
-    for (const { slug, lastModified } of blogRows) {
-      routes.push({
-        url: absoluteUrl(blogPostPath(locale, slug)),
-        lastModified,
-        changeFrequency: "weekly",
-        priority: 0.75,
-      });
-    }
+  for (const { slug, lastModified } of blogRows) {
+    routes.push({
+      url: absoluteUrl(blogPostPath(defaultLocale, slug)),
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.75,
+    });
   }
 
   return routes;
