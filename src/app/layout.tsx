@@ -44,11 +44,13 @@ export default async function RootLayout({
 
   return (
     <html lang={lang} suppressHydrationWarning>
+      <head>
+        <GoogleAdSense />
+      </head>
       <body
         className={`${inter.variable} ${outfit.variable} antialiased selection:bg-primary/30`}
         suppressHydrationWarning
       >
-        <GoogleAdSense />
         <GoogleAnalytics />
         <ThemeProvider
           attribute="class"

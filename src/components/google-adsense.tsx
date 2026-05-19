@@ -1,14 +1,10 @@
-import Script from "next/script";
-
-const ADSENSE_CLIENT = "ca-pub-5436484523285274";
-
+/** AdSense site tag — must be a literal <script> in <head> for Google verification crawlers. */
 export function GoogleAdSense() {
   return (
-    <Script
+    <script
       async
-      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5436484523285274"
       crossOrigin="anonymous"
-      strategy="afterInteractive"
     />
   );
 }
