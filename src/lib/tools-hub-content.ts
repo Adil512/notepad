@@ -26,6 +26,11 @@ export type ToolsHubCopy = {
    * layout for languages whose counter does not follow "number + word".
    */
   toolsCountTemplate?: string;
+  /**
+   * Optional full count-phrase builder for languages with grammatical number
+   * (e.g. Russian/Slavic plurals). Takes precedence over the template/word.
+   */
+  formatToolsCount?: (count: number) => string;
   categories: {
     writing: ToolsHubCategoryCopy;
     editors: ToolsHubCategoryCopy;
@@ -997,6 +1002,87 @@ const ca: ToolsHubCopy = {
   },
 };
 
+/** Russian plural: 1 → инструмент, 2–4 → инструмента, else → инструментов. */
+function russianToolsCount(count: number): string {
+  const mod100 = count % 100;
+  const mod10 = count % 10;
+  let word: string;
+  if (mod100 >= 11 && mod100 <= 14) word = "инструментов";
+  else if (mod10 === 1) word = "инструмент";
+  else if (mod10 >= 2 && mod10 <= 4) word = "инструмента";
+  else word = "инструментов";
+  return `${count} ${word}`;
+}
+
+const ru: ToolsHubCopy = {
+  pageTitle: "Все инструменты",
+  intro:
+    "Найдите все профессиональные инструменты, которые вы можете использовать бесплатно и без ограничений.",
+  ctaNotepad: "Онлайн блокнот",
+  chips: {
+    writing: "Инструменты для письма",
+    editors: "Инструменты редактора",
+    text: "Анализ текста",
+    devTools: "Инструменты разработчика",
+    excel: "Конвертеры Excel",
+  },
+  categoryLabel: "Категория",
+  openCategory: "Открыть категорию",
+  toolsCountWord: "инструментов",
+  formatToolsCount: russianToolsCount,
+  categories: {
+    writing: {
+      title: "Инструменты для письма",
+      description:
+        "Письмо без отвлечений, быстрые заметки, сессии концентрации, цели, диктовка, шаблоны, фрагменты и помощники рабочего процесса.",
+    },
+    editors: {
+      title: "Инструменты редактора",
+      description:
+        "Редакторы Markdown, кода, JSON и HTML для технического письма и работы со структурированным контентом.",
+    },
+    text: {
+      title: "Инструменты анализа текста",
+      description:
+        "Счетчики слов, символов, предложений и абзацев с инструментами читабельности и сравнения.",
+    },
+    devTools: {
+      title: "Инструменты разработчика",
+      description:
+        "Форматтеры, минификаторы, кодировщики и Regex-инструменты для повседневной веб-разработки.",
+    },
+    excel: {
+      title: "Инструменты конвертации Excel",
+      description:
+        "Конвертация между Excel и CSV, JSON, XML, PDF, ODS, Google Sheets и другими форматами таблиц.",
+    },
+    documents: {
+      title: "Инструменты конвертации документов",
+      description:
+        "Преобразование файлов PDF, Word, TXT, Markdown, HTML, RTF и PowerPoint для редактирования и публикации.",
+    },
+    data: {
+      title: "Инструменты конвертации данных и кода",
+      description:
+        "Перемещение данных между форматами JSON, CSV, XML, YAML, SQL и обычным текстом для API и рабочих процессов данных.",
+    },
+    format: {
+      title: "Текстовые утилиты",
+      description:
+        "Преобразование регистра, операции со строками, очистка текста и компактное форматирование для быстрых преобразований текста.",
+    },
+  },
+  aboutTitle: "О наших бесплатных онлайн-инструментах",
+  aboutBody:
+    "Добро пожаловать в нашу полную коллекцию бесплатных онлайн-инструментов, предназначенных для упрощения редактирования текста, преобразования данных, обработки документов и рабочих процессов разработчиков.",
+  footer: {
+    before: "Ищете классическое рабочее пространство? ",
+    linkLabel: "Notepad Editor",
+    after:
+      " по-прежнему предлагает полноценный rich-text опыт с таблицами, изображениями и форматированием.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -1012,6 +1098,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   bg,
   my,
   ca,
+  ru,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
