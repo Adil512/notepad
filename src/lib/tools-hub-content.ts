@@ -650,6 +650,74 @@ const eu: ToolsHubCopy = {
   },
 };
 
+const bn: ToolsHubCopy = {
+  pageTitle: "সব টুলস",
+  intro:
+    "সব পেশাদার টুল খুঁজে নিন যেগুলো আপনি বিনামূল্যে এবং সীমাহীনভাবে ব্যবহার করতে পারেন।",
+  ctaNotepad: "অনলাইন নোটপ্যাড",
+  chips: {
+    writing: "লেখার টুলস",
+    editors: "এডিটর টুলস",
+    text: "টেক্সট বিশ্লেষণ",
+    devTools: "ডেভেলপার টুলস",
+    excel: "এক্সেল কনভার্টার",
+  },
+  categoryLabel: "ক্যাটাগরি",
+  openCategory: "ক্যাটাগরি খুলুন",
+  toolsCountWord: "টি টুল",
+  categories: {
+    writing: {
+      title: "লেখার টুলস",
+      description:
+        "বিঘ্নহীন লেখা, দ্রুত নোট, ফোকাস সেশন, লক্ষ্য নির্ধারণ, ভয়েস ডিকটেশন, টেমপ্লেট, স্নিপেট এবং ওয়ার্কফ্লো সহায়তা।",
+    },
+    editors: {
+      title: "এডিটর টুলস",
+      description:
+        "Markdown, কোড, JSON এবং HTML এডিটর প্রযুক্তিগত লেখা এবং স্ট্রাকচারড কনটেন্ট কাজের জন্য।",
+    },
+    text: {
+      title: "টেক্সট বিশ্লেষণ টুলস",
+      description:
+        "শব্দ, অক্ষর, বাক্য এবং অনুচ্ছেদ গণনা টুল, সাথে পড়ার সহজতা এবং তুলনা সুবিধা।",
+    },
+    devTools: {
+      title: "ডেভেলপার টুলস",
+      description:
+        "ফরম্যাটার, মিনিফায়ার, এনকোডার এবং Regex টুলস দৈনন্দিন ওয়েব ডেভেলপমেন্টের জন্য।",
+    },
+    excel: {
+      title: "এক্সেল কনভার্টার টুলস",
+      description:
+        "Excel এবং CSV, JSON, XML, PDF, ODS, Google Sheets এবং আরও স্প্রেডশিট ফরম্যাটের মধ্যে রূপান্তর করুন।",
+    },
+    documents: {
+      title: "ডকুমেন্ট কনভার্টার টুলস",
+      description:
+        "PDF, Word, TXT, Markdown, HTML, RTF এবং PowerPoint ফাইল সম্পাদনা ও প্রকাশনার জন্য রূপান্তর করুন।",
+    },
+    data: {
+      title: "ডাটা ও কোড কনভার্টার টুলস",
+      description:
+        "API এবং ডাটা ওয়ার্কফ্লোর জন্য JSON, CSV, XML, YAML, SQL এবং সাধারণ টেক্সট ফরম্যাটের মধ্যে ডাটা স্থানান্তর করুন।",
+    },
+    format: {
+      title: "টেক্সট ইউটিলিটি টুলস",
+      description:
+        "বড় হাতা/ছোট হাতা পরিবর্তন, লাইন অপারেশন, টেক্সট পরিষ্কার এবং দ্রুত টেক্সট পরিবর্তনের জন্য কম্প্যাক্ট ফরম্যাটিং টুলস।",
+    },
+  },
+  aboutTitle: "আমাদের ফ্রি অনলাইন টুলস সম্পর্কে",
+  aboutBody:
+    "আমাদের ফ্রি অনলাইন টুলসের সম্পূর্ণ সংগ্রহে স্বাগতম, যা টেক্সট এডিটিং, ডাটা কনভার্সন, ডকুমেন্ট প্রসেসিং এবং ডেভেলপার ওয়ার্কফ্লো সহজ করার জন্য ডিজাইন করা হয়েছে।",
+  footer: {
+    before: "ক্লাসিক ক্যানভাস খুঁজছেন? ",
+    linkLabel: "Notepad Editor",
+    after:
+      " এখনও টেবিল, ছবি এবং ফরম্যাটিং সহ পূর্ণ রিচ-টেক্সট অভিজ্ঞতা দেয়।",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -660,6 +728,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   ay,
   az,
   eu,
+  bn,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
