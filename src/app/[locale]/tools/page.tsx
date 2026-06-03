@@ -14,7 +14,7 @@ import {
 import { localizedPath } from "@/lib/i18n";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { canonicalUrlForPage } from "@/lib/site";
-import { getToolsHubCopy } from "@/lib/tools-hub-content";
+import { getToolsHubCopy, toolsHubRtlLocales } from "@/lib/tools-hub-content";
 
 export async function generateMetadata({
   params,
@@ -39,6 +39,7 @@ export default async function ToolsHubPage({
   const { locale } = await params;
   const L = (p: string) => localizedPath(locale, p);
   const t = getToolsHubCopy(locale);
+  const dir = toolsHubRtlLocales.has(locale) ? "rtl" : "ltr";
   const categories = [
     {
       href: "/tools/writing",
@@ -121,7 +122,7 @@ export default async function ToolsHubPage({
   ];
 
   return (
-    <div className="relative min-h-full overflow-hidden">
+    <div className="relative min-h-full overflow-hidden" dir={dir}>
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div className="absolute -top-48 left-1/2 h-[32rem] w-[min(100%,64rem)] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(ellipse_at_center,rgb(124_58_237/0.12),transparent_68%)] dark:bg-[radial-gradient(ellipse_at_center,rgb(139_92_246/0.18),transparent_68%)]" />
       </div>

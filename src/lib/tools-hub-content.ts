@@ -310,12 +310,84 @@ const am: ToolsHubCopy = {
   },
 };
 
+const ar: ToolsHubCopy = {
+  pageTitle: "جميع الأدوات",
+  intro:
+    "اعثر على جميع الأدوات الاحترافية التي يمكنك استخدامها مجانًا وبدون أي حدود.",
+  ctaNotepad: "المفكرة عبر الإنترنت",
+  chips: {
+    writing: "أدوات الكتابة",
+    editors: "أدوات التحرير",
+    text: "تحليل النصوص",
+    devTools: "أدوات المطورين",
+    excel: "محولات Excel",
+  },
+  categoryLabel: "الفئة",
+  openCategory: "فتح الفئة",
+  toolsCountWord: "أداة",
+  categories: {
+    writing: {
+      title: "أدوات الكتابة",
+      description:
+        "كتابة خالية من التشتيت، وملاحظات سريعة، وجلسات تركيز، وأهداف، وإملاء صوتي، وقوالب، ومقتطفات، وأدوات مساعدة لسير العمل.",
+    },
+    editors: {
+      title: "أدوات التحرير",
+      description:
+        "محررات Markdown وCode وJSON وHTML للكتابة التقنية والعمل على المحتوى المنظم.",
+    },
+    text: {
+      title: "أدوات تحليل النصوص",
+      description:
+        "عدادات الكلمات والأحرف والجمل والفقرات مع أدوات قياس قابلية القراءة وأدوات المقارنة.",
+    },
+    devTools: {
+      title: "أدوات المطورين",
+      description:
+        "أدوات التنسيق والتصغير والترميز وأدوات التعبيرات النمطية (Regex) للاستخدام اليومي في تطوير الويب.",
+    },
+    excel: {
+      title: "أدوات تحويل Excel",
+      description:
+        "التحويل بين Excel وCSV وJSON وXML وPDF وODS وGoogle Sheets والمزيد من تنسيقات جداول البيانات.",
+    },
+    documents: {
+      title: "أدوات تحويل المستندات",
+      description:
+        "تحويل ملفات PDF وWord وTXT وMarkdown وHTML وRTF وPowerPoint لأغراض التحرير والنشر.",
+    },
+    data: {
+      title: "أدوات تحويل البيانات والأكواد",
+      description:
+        "نقل البيانات بين JSON وCSV وXML وYAML وSQL والنصوص العادية لتدفقات عمل واجهات البرمجة (API) والبيانات.",
+    },
+    format: {
+      title: "أدوات النص المساعدة",
+      description:
+        "تحويل حالة الأحرف، وعمليات معالجة الأسطر، وتنظيف النصوص، وأدوات التنسيق المضغوط لإجراء تحويلات نصية سريعة.",
+    },
+  },
+  aboutTitle: "حول أدواتنا المجانية عبر الإنترنت",
+  aboutBody:
+    "مرحبًا بك في مجموعتنا الكاملة من الأدوات المجانية عبر الإنترنت المصممة لتبسيط تحرير النصوص، وتحويل البيانات، ومعالجة المستندات، وسير عمل المطورين.",
+  footer: {
+    before: "هل تبحث عن المحرر الكلاسيكي؟ لا يزال ",
+    linkLabel: "محرر المفكرة (Notepad Editor)",
+    after:
+      " يوفر تجربة تحرير نصوص غنية بالكامل مع الجداول والصور وخيارات التنسيق.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
   sq,
   am,
+  ar,
 };
+
+/** Locales rendered right-to-left on the tools hub page. */
+export const toolsHubRtlLocales = new Set(["ar", "ur", "fa", "he", "ps"]);
 
 export function getToolsHubCopy(locale: string): ToolsHubCopy {
   return byLocale[locale] ?? en;
