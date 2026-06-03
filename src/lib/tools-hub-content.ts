@@ -32,6 +32,11 @@ export type ToolsHubCopy = {
   };
   aboutTitle: string;
   aboutBody: string;
+  footer: {
+    before: string;
+    linkLabel: string;
+    after: string;
+  };
 };
 
 const en: ToolsHubCopy = {
@@ -93,6 +98,12 @@ const en: ToolsHubCopy = {
   aboutTitle: "About Our Free Online Tools",
   aboutBody:
     "Welcome to our complete collection of free online tools designed to simplify text editing, data conversion, document processing, and developer workflows.",
+  footer: {
+    before: "Looking for the classic canvas? The ",
+    linkLabel: "Notepad Editor",
+    after:
+      " is still the full rich-text experience with tables, images, and formatting.",
+  },
 };
 
 const af: ToolsHubCopy = {
@@ -155,11 +166,86 @@ const af: ToolsHubCopy = {
   aboutTitle: "Oor Ons Gratis Aanlyn Gereedskap",
   aboutBody:
     "Welkom by ons volledige versameling gratis aanlyn gereedskap wat ontwerp is om teksredigering, data-omskakeling, dokumentverwerking en ontwikkelaarswerkvloeie makliker te maak.",
+  footer: {
+    before: "Looking for the classic canvas? The ",
+    linkLabel: "Notepad Editor",
+    after:
+      " is still the full rich-text experience with tables, images, and formatting.",
+  },
+};
+
+const sq: ToolsHubCopy = {
+  pageTitle: "Të Gjitha Mjete",
+  intro:
+    "Gjeni të gjitha mjetet profesionale që mund t’i përdorni falas dhe pa kufi.",
+  ctaNotepad: "Notepad Online",
+  chips: {
+    writing: "Mjete shkrimi",
+    editors: "Mjete redaktimi",
+    text: "Analizë teksti",
+    devTools: "Mjete zhvilluesish",
+    excel: "Konvertues Excel",
+  },
+  categoryLabel: "Kategoria",
+  openCategory: "Hape kategorinë",
+  toolsCountWord: "mjete",
+  categories: {
+    writing: {
+      title: "Mjete Shkrimi",
+      description:
+        "Shkrim pa shpërqendrim, shënime të shpejta, sesione fokusi, qëllime, diktime, shabllone, copëza dhe ndihmës për rrjedhën e punës.",
+    },
+    editors: {
+      title: "Mjete Redaktimi",
+      description:
+        "Redaktues Markdown, kodi, JSON dhe HTML për shkrim teknik dhe punë me përmbajtje të strukturuar.",
+    },
+    text: {
+      title: "Mjete Analize Teksti",
+      description:
+        "Numërues fjalësh, shenjash, fjalish dhe paragrafesh me vegla lexueshmërie dhe krahasimi.",
+    },
+    devTools: {
+      title: "Mjete Zhvilluesish",
+      description:
+        "Formues, minifikues, kodues dhe vegla regex për zhvillimin e përditshëm të uebit.",
+    },
+    excel: {
+      title: "Mjete Konvertimi Excel",
+      description:
+        "Konverto mes Excel dhe CSV, JSON, XML, PDF, ODS, Google Sheets dhe formate të tjera tabelash.",
+    },
+    documents: {
+      title: "Mjete Konvertimi Dokumentesh",
+      description:
+        "Transformo skedarë PDF, Word, TXT, Markdown, HTML, RTF dhe PowerPoint për redaktim dhe publikim.",
+    },
+    data: {
+      title: "Mjete Konvertimi të të Dhënave & Kodit",
+      description:
+        "Zhvendos të dhëna mes JSON, CSV, XML, YAML, SQL dhe formate teksti të thjeshtë për API dhe rrjedha të dhënash.",
+    },
+    format: {
+      title: "Mjete Ndihmëse Teksti",
+      description:
+        "Konvertim shkronjash, operacione rreshtash, pastrim teksti dhe vegla formatimi kompakt për transformime të shpejta të tekstit.",
+    },
+  },
+  aboutTitle: "Rreth Mjeteve tona Falas Online",
+  aboutBody:
+    "Mirë se vini në koleksionin tonë të plotë të mjeteve falas online të dizajnuara për të thjeshtuar redaktimin e tekstit, konvertimin e të dhënave, përpunimin e dokumenteve dhe rrjedhat e punës së zhvilluesve.",
+  footer: {
+    before: "Po kërkon kanavacën klasike? ",
+    linkLabel: "Notepad Editor",
+    after:
+      " është ende përvoja e plotë me tekst të pasur me tabela, imazhe dhe formatim.",
+  },
 };
 
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
+  sq,
 };
 
 export function getToolsHubCopy(locale: string): ToolsHubCopy {

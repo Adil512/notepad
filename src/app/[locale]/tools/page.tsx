@@ -221,15 +221,14 @@ export default async function ToolsHubPage({
 
         <footer className="mt-14 rounded-2xl border border-dashed border-border/80 bg-muted/20 px-6 py-8 text-center dark:bg-muted/10 sm:text-left">
           <p className="text-sm text-muted-foreground">
-            Looking for the classic canvas? The{" "}
+            {t.footer.before}
             <Link
               href={L("/")}
               className="font-semibold text-primary hover:underline"
             >
-              Notepad Editor
-            </Link>{" "}
-            is still the full rich-text experience with tables, images, and
-            formatting.
+              {t.footer.linkLabel}
+            </Link>
+            {t.footer.after}
           </p>
         </footer>
       </div>
