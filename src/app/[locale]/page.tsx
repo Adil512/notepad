@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Editor } from "@/components/Editor";
+import { SocialShare } from "@/components/SocialShare";
 import { SEOContent } from "@/components/SEOContent";
 import { FaqJsonLd } from "@/components/FaqJsonLd";
 import { HomeGraphJsonLd } from "@/components/HomeGraphJsonLd";
@@ -44,6 +45,7 @@ export default async function Home({
       <FaqJsonLd locale={locale} />
       <main className="flex-1 flex flex-col items-center relative">
         <Editor user={user} />
+        <SocialShare />
         <SEOContent locale={locale} latestBlogPosts={latestBlogPosts} />
       </main>
     </div>

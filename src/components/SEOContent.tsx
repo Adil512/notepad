@@ -1,5 +1,20 @@
 import Link from "next/link";
-import { Check, X, ArrowRight } from "lucide-react";
+import {
+  Check,
+  X,
+  ArrowRight,
+  Save,
+  Download,
+  Maximize2,
+  ZoomIn,
+  LayoutGrid,
+  Heading,
+  Type,
+  Palette,
+  Mic,
+  Share2,
+  History,
+} from "lucide-react";
 import { getHomeFaqs } from "@/lib/faq-data";
 import { localizedPath } from "@/lib/i18n";
 import { getHomeSeoCopy, homeSeoRtlLocales } from "@/lib/home-seo-content";
@@ -113,6 +128,95 @@ export function SEOContent({
               </tbody>
             </table>
           </div>
+        </section>
+
+        {/* Section: Key Features of Notepad Online */}
+        <section className="max-w-6xl mx-auto space-y-12" dir="ltr">
+          <div className="text-center space-y-4 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground font-display">
+              Key Features of Notepad Online
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
+            {[
+              {
+                Icon: Save,
+                title: "Auto Save Online",
+                desc: "Our online notepad automatically saves your work as you type, so you never lose a single word, even if your browser crashes or you accidentally close the tab.",
+              },
+              {
+                Icon: Download,
+                title: "Download in TXT and PDF formats",
+                desc: "With our notepad, you can export your notes instantly as a clean TXT or PDF file, making it easy to save, print, or share your work offline.",
+              },
+              {
+                Icon: Maximize2,
+                title: "Full Screen",
+                desc: "Switch to full-screen mode and let this distraction-free notepad give you a clean, edge-to-edge writing canvas perfect for focused drafting sessions.",
+              },
+              {
+                Icon: ZoomIn,
+                title: "200% Zoom Feature",
+                desc: "This online notepad lets you zoom in up to 200%, making it easier on the eyes for long writing sessions or when working with small text on any screen.",
+              },
+              {
+                Icon: LayoutGrid,
+                title: "Insert Images, Table, Auto-Update Dates, Export HTML",
+                desc: "From inserting images and structured tables to auto-updating dates and exporting your content as HTML, this notepad goes far beyond basic text editing.",
+              },
+              {
+                Icon: Heading,
+                title: "Headings from H1 to H6",
+                desc: "Organize your content with a full heading hierarchy, H1 through H6, giving this notepad the structure of a proper document editor right in your browser.",
+              },
+              {
+                Icon: Type,
+                title: "Different Font Styles",
+                desc: "Choose from a variety of font styles to personalize your writing experience and make your notepad documents more readable, expressive, or professional.",
+              },
+              {
+                Icon: Palette,
+                title: "Change Text Color",
+                desc: "This online notepad lets you highlight key points and add visual clarity by changing text color, a simple but powerful formatting tool for any writer.",
+              },
+              {
+                Icon: Mic,
+                title: "AI-Powered Speech to Text Without Any Error",
+                desc: "Speak your thoughts and watch them appear on screen with high accuracy. This notepad's AI-powered speech-to-text feature instantly turns your voice into clean, error-free text. So you can save a lot of time.",
+              },
+              {
+                Icon: Share2,
+                title: "Generate Shareable Link After Sign-In",
+                desc: "Once signed in, our notepad lets you generate a unique shareable link for any note, making collaboration and quick sharing as simple as copying a URL.",
+              },
+              {
+                Icon: History,
+                title: "Create Account to Record History",
+                desc: "Create a free account on this notepad to unlock note history so you can revisit, recover, and manage everything you've ever written, all in one place.",
+              },
+            ].map(({ Icon, title, desc }, i) => (
+              <div
+                key={i}
+                className="group relative flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+              >
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Icon className="h-6 w-6" />
+                </span>
+                <h3 className="text-lg font-semibold text-foreground">
+                  {title}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-lg text-muted-foreground max-w-2xl mx-auto">
+            Apart from these, there are a lot of other unique features you can
+            use and enjoy for free.
+          </p>
         </section>
 
         {/* Section 3: FAQ */}
