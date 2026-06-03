@@ -929,6 +929,74 @@ const my: ToolsHubCopy = {
   },
 };
 
+const ca: ToolsHubCopy = {
+  pageTitle: "Totes les eines",
+  intro:
+    "Troba totes les eines professionals que pots utilitzar de manera gratuïta i il·limitada.",
+  ctaNotepad: "Bloc de notes en línia",
+  chips: {
+    writing: "Eines d’escriptura",
+    editors: "Eines d’edició",
+    text: "Anàlisi de text",
+    devTools: "Eines per a desenvolupadors",
+    excel: "Convertidors d’Excel",
+  },
+  categoryLabel: "Categoria",
+  openCategory: "Obre la categoria",
+  toolsCountWord: "eines",
+  categories: {
+    writing: {
+      title: "Eines d’escriptura",
+      description:
+        "Escriptura sense distraccions, notes ràpides, sessions de concentració, objectius, dictat, plantilles, fragments i ajudants de flux de treball.",
+    },
+    editors: {
+      title: "Eines d’edició",
+      description:
+        "Editors de Markdown, codi, JSON i HTML per a escriptura tècnica i treball amb contingut estructurat.",
+    },
+    text: {
+      title: "Eines d’anàlisi de text",
+      description:
+        "Comptadors de paraules, caràcters, frases i paràgrafs amb eines de llegibilitat i comparació.",
+    },
+    devTools: {
+      title: "Eines per a desenvolupadors",
+      description:
+        "Formatadors, minificadors, codificadors i utilitats regex per al desenvolupament web diari.",
+    },
+    excel: {
+      title: "Eines de conversió d’Excel",
+      description:
+        "Converteix entre Excel i CSV, JSON, XML, PDF, ODS, Google Sheets i altres formats de full de càlcul.",
+    },
+    documents: {
+      title: "Eines de conversió de documents",
+      description:
+        "Transforma fitxers PDF, Word, TXT, Markdown, HTML, RTF i PowerPoint per a l’edició i la publicació.",
+    },
+    data: {
+      title: "Eines de conversió de dades i codi",
+      description:
+        "Mou dades entre formats JSON, CSV, XML, YAML, SQL i text pla per a APIs i fluxos de treball de dades.",
+    },
+    format: {
+      title: "Eines d’utilitat de text",
+      description:
+        "Conversió de majúscules i minúscules, operacions de línies, neteja de text i eines de format compacte per a transformacions ràpides de text.",
+    },
+  },
+  aboutTitle: "Sobre les nostres eines en línia gratuïtes",
+  aboutBody:
+    "Benvingut a la nostra col·lecció completa d’eines en línia gratuïtes dissenyades per simplificar l’edició de text, la conversió de dades, el processament de documents i els fluxos de treball de desenvolupament.",
+  footer: {
+    before: "Busques el llenç clàssic? ",
+    linkLabel: "L’Editor de Notepad",
+    after:
+      " encara ofereix una experiència de text enriquit completa amb taules, imatges i format.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -943,6 +1011,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   bs,
   bg,
   my,
+  ca,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
