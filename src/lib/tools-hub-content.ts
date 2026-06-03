@@ -1151,6 +1151,74 @@ const zh: ToolsHubCopy = {
   },
 };
 
+const fr: ToolsHubCopy = {
+  pageTitle: "Tous les outils",
+  intro:
+    "Trouvez tous les outils professionnels que vous pouvez utiliser gratuitement et sans limite.",
+  ctaNotepad: "Bloc-notes en ligne",
+  chips: {
+    writing: "Outils d’écriture",
+    editors: "Outils d’édition",
+    text: "Analyse de texte",
+    devTools: "Outils pour développeurs",
+    excel: "Convertisseurs Excel",
+  },
+  categoryLabel: "Catégorie",
+  openCategory: "Ouvrir la catégorie",
+  toolsCountWord: "outils",
+  categories: {
+    writing: {
+      title: "Outils d’écriture",
+      description:
+        "Écriture sans distraction, notes rapides, sessions de concentration, objectifs, dictée, modèles, extraits et outils d’aide au flux de travail.",
+    },
+    editors: {
+      title: "Outils d’édition",
+      description:
+        "Éditeurs Markdown, code, JSON et HTML pour l’écriture technique et le travail de contenu structuré.",
+    },
+    text: {
+      title: "Outils d’analyse de texte",
+      description:
+        "Compteurs de mots, caractères, phrases et paragraphes avec outils de lisibilité et de comparaison.",
+    },
+    devTools: {
+      title: "Outils pour développeurs",
+      description:
+        "Formateurs, minificateurs, encodeurs et outils regex pour le développement web quotidien.",
+    },
+    excel: {
+      title: "Outils de conversion Excel",
+      description:
+        "Convertir entre Excel et CSV, JSON, XML, PDF, ODS, Google Sheets et d’autres formats de feuilles de calcul.",
+    },
+    documents: {
+      title: "Outils de conversion de documents",
+      description:
+        "Transformer des fichiers PDF, Word, TXT, Markdown, HTML, RTF et PowerPoint pour l’édition et la publication.",
+    },
+    data: {
+      title: "Outils de conversion de données et de code",
+      description:
+        "Déplacer des données entre les formats JSON, CSV, XML, YAML, SQL et texte brut pour les API et les flux de données.",
+    },
+    format: {
+      title: "Outils utilitaires de texte",
+      description:
+        "Conversion de casse, opérations sur les lignes, nettoyage de texte et outils de formatage compact pour des transformations rapides de texte.",
+    },
+  },
+  aboutTitle: "À propos de nos outils en ligne gratuits",
+  aboutBody:
+    "Bienvenue dans notre collection complète d’outils en ligne gratuits conçus pour simplifier l’édition de texte, la conversion de données, le traitement de documents et les flux de travail des développeurs.",
+  footer: {
+    before: "Vous cherchez le canevas classique ? ",
+    linkLabel: "L’éditeur Notepad",
+    after:
+      " offre toujours une expérience riche en texte avec tableaux, images et mise en forme.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -1168,6 +1236,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   ca,
   ru,
   zh,
+  fr,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
