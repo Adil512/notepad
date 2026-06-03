@@ -514,6 +514,74 @@ const ay: ToolsHubCopy = {
   },
 };
 
+const az: ToolsHubCopy = {
+  pageTitle: "Bütün alətlər",
+  intro:
+    "Pulsuz və limitsiz istifadə edə biləcəyiniz bütün peşəkar alətləri tapın.",
+  ctaNotepad: "Onlayn Notepad",
+  chips: {
+    writing: "Yazı alətləri",
+    editors: "Redaktor alətləri",
+    text: "Mətn analizi",
+    devTools: "Tərtibatçı alətləri",
+    excel: "Excel çeviriciləri",
+  },
+  categoryLabel: "Kateqoriya",
+  openCategory: "Kateqoriyanı açın",
+  toolsCountWord: "alət",
+  categories: {
+    writing: {
+      title: "Yazı alətləri",
+      description:
+        "Diqqəti yayındırmayan yazı, sürətli qeydlər, fokus sessiyaları, məqsədlər, diktə, şablonlar, qısa parçalar və iş axını köməkçiləri.",
+    },
+    editors: {
+      title: "Redaktor alətləri",
+      description:
+        "Markdown, kod, JSON və HTML redaktorları texniki yazı və strukturlaşdırılmış məzmun işi üçün.",
+    },
+    text: {
+      title: "Mətn analizi alətləri",
+      description:
+        "Söz, simvol, cümlə və paraqraf sayğacları, oxunaqlılıq və müqayisə vasitələri ilə birlikdə.",
+    },
+    devTools: {
+      title: "Tərtibatçı alətləri",
+      description:
+        "Formatlayıcılar, kiçildicilər, kodlaşdırıcılar və regex vasitələri gündəlik veb inkişaf üçün.",
+    },
+    excel: {
+      title: "Excel çeviriciləri",
+      description:
+        "Excel ilə CSV, JSON, XML, PDF, ODS, Google Sheets və digər cədvəl formatları arasında çevirmə.",
+    },
+    documents: {
+      title: "Sənəd çevirici alətləri",
+      description:
+        "PDF, Word, TXT, Markdown, HTML, RTF və PowerPoint fayllarını redaktə və nəşr üçün çevirmək.",
+    },
+    data: {
+      title: "Məlumat və kod çevirici alətləri",
+      description:
+        "API və məlumat iş axınları üçün JSON, CSV, XML, YAML, SQL və sadə mətn formatları arasında məlumat ötürmə.",
+    },
+    format: {
+      title: "Mətn yardımçı alətləri",
+      description:
+        "Böyük/kiçik hərf çevirmə, sətir əməliyyatları, mətn təmizləmə və sürətli mətn çevirmələri üçün kompakt format alətləri.",
+    },
+  },
+  aboutTitle: "Pulsuz onlayn alətlərimiz haqqında",
+  aboutBody:
+    "Mətn redaktəsi, məlumat çevirmə, sənəd işlənməsi və tərtibatçı iş axınlarını asanlaşdırmaq üçün hazırlanmış pulsuz onlayn alətlər kolleksiyamıza xoş gəlmisiniz.",
+  footer: {
+    before: "Klassik redaktor axtarırsınız? ",
+    linkLabel: "Notepad Editor",
+    after:
+      " hələ də cədvəllər, şəkillər və formatlama ilə tam rich-text təcrübəsi təqdim edir.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -522,6 +590,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   ar,
   hy,
   ay,
+  az,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
