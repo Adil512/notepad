@@ -14,6 +14,7 @@ import {
 import { localizedPath } from "@/lib/i18n";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { canonicalUrlForPage } from "@/lib/site";
+import { getToolsHubCopy } from "@/lib/tools-hub-content";
 
 export async function generateMetadata({
   params,
@@ -21,10 +22,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const t = getToolsHubCopy(locale);
   return {
-    title: "All Tools | Notepad.is",
-    description:
-      "Professional writing tools for free, unlimited: timers, Markdown, goals, dictation, templates, and more.",
+    title: `${t.pageTitle} | Notepad.is`,
+    description: t.intro,
     alternates: { canonical: canonicalUrlForPage(locale, "/tools") },
     openGraph: { url: canonicalUrlForPage(locale, "/tools") },
   };
@@ -37,12 +38,12 @@ export default async function ToolsHubPage({
 }) {
   const { locale } = await params;
   const L = (p: string) => localizedPath(locale, p);
+  const t = getToolsHubCopy(locale);
   const categories = [
     {
       href: "/tools/writing",
-      title: "Writing Tools",
-      description:
-        "Distraction-free writing, quick notes, focus sessions, goals, dictation, templates, snippets, and workflow helpers.",
+      title: t.categories.writing.title,
+      description: t.categories.writing.description,
       count: WRITING_PRODUCTIVITY_TOOL_IDS.filter((id) =>
         isToolVisibleInLocale(id, locale)
       ).length,
@@ -51,9 +52,8 @@ export default async function ToolsHubPage({
     },
     {
       href: "/tools/editors",
-      title: "Editor Tools",
-      description:
-        "Markdown, code, JSON, and HTML editors for technical writing and structured content work.",
+      title: t.categories.editors.title,
+      description: t.categories.editors.description,
       count: EDITOR_HUB_TOOL_IDS.filter((id) => isToolVisibleInLocale(id, locale))
         .length,
       accent:
@@ -61,9 +61,8 @@ export default async function ToolsHubPage({
     },
     {
       href: "/tools/text",
-      title: "Text Analysis Tools",
-      description:
-        "Word, character, sentence, and paragraph counters with readability and comparison utilities.",
+      title: t.categories.text.title,
+      description: t.categories.text.description,
       count: TEXT_ANALYSIS_HUB_TOOL_IDS.filter((id) =>
         isToolVisibleInLocale(id, locale)
       ).length,
@@ -72,9 +71,8 @@ export default async function ToolsHubPage({
     },
     {
       href: "/tools/dev-tools",
-      title: "Developer Tools",
-      description:
-        "Formatters, minifiers, encoders, and regex utilities for day-to-day web development.",
+      title: t.categories.devTools.title,
+      description: t.categories.devTools.description,
       count: DEV_TOOLS_HUB_TOOL_IDS.filter((id) => isToolVisibleInLocale(id, locale))
         .length,
       accent:
@@ -82,9 +80,8 @@ export default async function ToolsHubPage({
     },
     {
       href: "/tools/excel",
-      title: "Excel Converter Tools",
-      description:
-        "Convert between Excel and CSV, JSON, XML, PDF, ODS, Google Sheets, and more spreadsheet formats.",
+      title: t.categories.excel.title,
+      description: t.categories.excel.description,
       count: EXCEL_SPREADSHEET_TOOL_IDS.filter((id) =>
         isToolVisibleInLocale(id, locale)
       ).length,
@@ -93,9 +90,8 @@ export default async function ToolsHubPage({
     },
     {
       href: "/tools/documents",
-      title: "Document Converter Tools",
-      description:
-        "Transform PDF, Word, TXT, Markdown, HTML, RTF, and PowerPoint files for editing and publishing.",
+      title: t.categories.documents.title,
+      description: t.categories.documents.description,
       count: DOCUMENT_CONVERTER_TOOL_IDS.filter((id) =>
         isToolVisibleInLocale(id, locale)
       ).length,
@@ -104,9 +100,8 @@ export default async function ToolsHubPage({
     },
     {
       href: "/tools/data",
-      title: "Data & Code Converter Tools",
-      description:
-        "Move data between JSON, CSV, XML, YAML, SQL, and plain text formats for API and data workflows.",
+      title: t.categories.data.title,
+      description: t.categories.data.description,
       count: DATA_CODE_CONVERTER_TOOL_IDS.filter((id) =>
         isToolVisibleInLocale(id, locale)
       ).length,
@@ -115,9 +110,8 @@ export default async function ToolsHubPage({
     },
     {
       href: "/tools/format",
-      title: "Text Utility Tools",
-      description:
-        "Case conversion, line operations, text cleanup, and compact formatting tools for quick text transformations.",
+      title: t.categories.format.title,
+      description: t.categories.format.description,
       count: TEXT_FORMAT_CONVERTER_TOOL_IDS.filter((id) =>
         isToolVisibleInLocale(id, locale)
       ).length,
@@ -139,10 +133,10 @@ export default async function ToolsHubPage({
             Tools
           </div>
           <h1 className="mt-5 font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
-            All Tools
+            {t.pageTitle}
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground lg:mx-0 lg:text-lg">
-            Find all the professional tools that you can use for free, unlimited.
+            {t.intro}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-2.5 lg:justify-start">
@@ -150,38 +144,38 @@ export default async function ToolsHubPage({
               href={L("/")}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:bg-primary/90"
             >
-              Notepad Online
+              {t.ctaNotepad}
               <ArrowRight className="h-4 w-4 opacity-90" />
             </Link>
             <Link
               href={L("/tools/writing")}
               className="rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              Writing tools
+              {t.chips.writing}
             </Link>
             <Link
               href={L("/tools/editors")}
               className="rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              Editor tools
+              {t.chips.editors}
             </Link>
             <Link
               href={L("/tools/text")}
               className="rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              Text analysis
+              {t.chips.text}
             </Link>
             <Link
               href={L("/tools/dev-tools")}
               className="rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              Developer tools
+              {t.chips.devTools}
             </Link>
             <Link
               href={L("/tools/excel")}
               className="rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              Excel converters
+              {t.chips.excel}
             </Link>
           </div>
         </header>
@@ -197,7 +191,7 @@ export default async function ToolsHubPage({
               className={`group rounded-2xl border p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-md sm:p-6 ${cat.accent}`}
             >
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
-                Category
+                {t.categoryLabel}
               </p>
               <h2 className="mt-2 font-display text-xl font-semibold text-foreground">
                 {cat.title}
@@ -206,11 +200,11 @@ export default async function ToolsHubPage({
                 {cat.description}
               </p>
               <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                Open category
+                {t.openCategory}
                 <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
               </p>
               <p className="mt-1 text-xs text-muted-foreground">
-                {cat.count} tools
+                {cat.count} {t.toolsCountWord}
               </p>
             </Link>
           ))}
@@ -218,12 +212,10 @@ export default async function ToolsHubPage({
 
         <section className="mt-12 rounded-2xl border border-border/70 bg-muted/20 p-6 sm:p-8">
           <h2 className="font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-            About Our Free Online Tools
+            {t.aboutTitle}
           </h2>
           <p className="mt-4 max-w-4xl text-base leading-relaxed text-muted-foreground">
-            Welcome to our complete collection of free online tools designed to
-            simplify text editing, data conversion, document processing, and
-            developer workflows.
+            {t.aboutBody}
           </p>
         </section>
 

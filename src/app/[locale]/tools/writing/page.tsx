@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import {
   WRITING_PRODUCTIVITY_TOOL_IDS,
   isToolVisibleInLocale,
+  isWritingProductivityToolId,
   writingToolsMeta,
   type WritingToolId,
 } from "@/lib/writing-tools-registry";
@@ -10,6 +11,10 @@ import { localizedPath } from "@/lib/i18n";
 import { canonicalUrlForPage } from "@/lib/site";
 import { ToolIcon } from "@/components/tools/ToolIcon";
 import { ArrowRight } from "lucide-react";
+import {
+  getWritingToolsCopy,
+  type WritingToolLabel,
+} from "@/lib/tools-writing-content";
 
 export async function generateMetadata({
   params,
@@ -18,8 +23,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const canonical = canonicalUrlForPage(locale, "/tools/writing");
+  const t = getWritingToolsCopy(locale);
   return {
-    title: "Writing tools | Notepad.is",
+    title: `${t.pageTitle} | Notepad.is`,
     description:
       "Distraction-free workflows, quick notes, dictation, goals, templates, and export utilities—free in your browser.",
     alternates: { canonical },
@@ -34,6 +40,7 @@ export default async function WritingToolsCategoryPage({
 }) {
   const { locale } = await params;
   const L = (p: string) => localizedPath(locale, p);
+  const t = getWritingToolsCopy(locale);
   const visibleIds = WRITING_PRODUCTIVITY_TOOL_IDS.filter((id) =>
     isToolVisibleInLocale(id, locale)
   );
@@ -47,55 +54,23 @@ export default async function WritingToolsCategoryPage({
       <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-12 lg:px-8">
         <header className="mx-auto max-w-3xl lg:mx-0">
           <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Writing tools
+            {t.pageTitle}
           </h1>
           <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
             <p>
-              Our writing tools help you create, organize, and manage digital
-              notes, content, and drafts in the browser. Start from a{" "}
-              <Link
-                href={L("/distraction-free-writer")}
-                className="font-semibold text-primary hover:underline"
-              >
-                distraction-free writing mode
-              </Link>{" "}
-              or capture thoughts with{" "}
-              <Link
-                href={L("/quick-notes")}
-                className="font-semibold text-primary hover:underline"
-              >
-                quick notes
-              </Link>
-              , then layer on productivity helpers: a{" "}
-              <Link
-                href={L("/tools/writing/focus-timer")}
-                className="font-semibold text-primary hover:underline"
-              >
-                focus timer
-              </Link>
-              ,{" "}
-              <Link
-                href={L("/tools/writing/speech-dictation")}
-                className="font-semibold text-primary hover:underline"
-              >
-                speech-to-text dictation
-              </Link>
-              ,{" "}
-              <Link
-                href={L("/tools/writing/goal-tracker")}
-                className="font-semibold text-primary hover:underline"
-              >
-                writing goals
-              </Link>
-              , and{" "}
-              <Link
-                href={L("/tools/writing/templates")}
-                className="font-semibold text-primary hover:underline"
-              >
-                content templates
-              </Link>
-              . Whether you blog, draft for work, or study, these utilities
-              improve focus and throughput without leaving Notepad.is.
+              {t.intro.map((seg, i) =>
+                "link" in seg ? (
+                  <Link
+                    key={i}
+                    href={L(seg.link)}
+                    className="font-semibold text-primary hover:underline"
+                  >
+                    {seg.label}
+                  </Link>
+                ) : (
+                  <span key={i}>{seg.text}</span>
+                )
+              )}
             </p>
           </div>
 
@@ -104,13 +79,13 @@ export default async function WritingToolsCategoryPage({
               href={L("/tools")}
               className="inline-flex items-center gap-2 rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              All tools
+              {t.ctaAllTools}
             </Link>
             <Link
               href={L("/")}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:bg-primary/90"
             >
-              Notepad editor
+              {t.ctaNotepadEditor}
               <ArrowRight className="h-4 w-4 opacity-90" />
             </Link>
           </div>
@@ -124,18 +99,20 @@ export default async function WritingToolsCategoryPage({
             id="writing-landings-heading"
             className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground"
           >
-            Writing experiences
+            {t.experiencesHeading}
           </h2>
           <ul className="grid gap-4 sm:grid-cols-2">
             <WritingLandingCard
               href={L("/distraction-free-writer")}
-              title="Distraction-free writer"
-              description="A calm full-screen canvas for deep work—no clutter, just your words."
+              title={t.landings.distractionFree.title}
+              description={t.landings.distractionFree.description}
+              openLabel={t.open}
             />
             <WritingLandingCard
               href={L("/quick-notes")}
-              title="Quick notes"
-              description="Lightweight capture for ideas and lists when you do not need the full editor."
+              title={t.landings.quickNotes.title}
+              description={t.landings.quickNotes.description}
+              openLabel={t.open}
             />
           </ul>
         </section>
@@ -145,11 +122,20 @@ export default async function WritingToolsCategoryPage({
             id="writing-utilities-heading"
             className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground"
           >
-            Utilities
+            {t.utilitiesHeading}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {visibleIds.map((id) => (
-              <WritingToolCard key={id} id={id} href={L(`/tools/writing/${id}`)} />
+              <WritingToolCard
+                key={id}
+                id={id}
+                href={L(`/tools/writing/${id}`)}
+                label={
+                  isWritingProductivityToolId(id)
+                    ? t.toolLabels?.[id]
+                    : undefined
+                }
+              />
             ))}
           </ul>
         </section>
@@ -162,10 +148,12 @@ function WritingLandingCard({
   href,
   title,
   description,
+  openLabel,
 }: {
   href: string;
   title: string;
   description: string;
+  openLabel: string;
 }) {
   return (
     <li>
@@ -180,7 +168,7 @@ function WritingLandingCard({
           {description}
         </span>
         <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-          Open
+          {openLabel}
           <ArrowRight className="h-4 w-4" />
         </span>
       </Link>
@@ -191,11 +179,15 @@ function WritingLandingCard({
 function WritingToolCard({
   id,
   href,
+  label,
 }: {
   id: WritingToolId;
   href: string;
+  label?: WritingToolLabel;
 }) {
   const m = writingToolsMeta[id];
+  const h1 = label?.h1 ?? m.h1;
+  const tagline = label?.tagline ?? m.tagline;
   return (
     <li>
       <Link
@@ -206,9 +198,9 @@ function WritingToolCard({
           <ToolIcon id={id} className="h-6 w-6" />
         </span>
         <span className="min-w-0">
-          <span className="block font-medium text-foreground">{m.h1}</span>
+          <span className="block font-medium text-foreground">{h1}</span>
           <span className="mt-1 block text-sm text-muted-foreground">
-            {m.tagline}
+            {tagline}
           </span>
         </span>
       </Link>
