@@ -20,6 +20,12 @@ export type ToolsHubCopy = {
   openCategory: string;
   /** Suffix used after the count, e.g. "12 tools". */
   toolsCountWord: string;
+  /**
+   * Optional count phrase template using the `{count}` placeholder, e.g.
+   * "tools {count}". When present it overrides the default `{count} {word}`
+   * layout for languages whose counter does not follow "number + word".
+   */
+  toolsCountTemplate?: string;
   categories: {
     writing: ToolsHubCategoryCopy;
     editors: ToolsHubCategoryCopy;
@@ -854,6 +860,75 @@ const bg: ToolsHubCopy = {
   },
 };
 
+const my: ToolsHubCopy = {
+  pageTitle: "ကိရိယာအားလုံး",
+  intro:
+    "သင် အခမဲ့နှင့် အကန့်အသတ်မရှိ အသုံးပြုနိုင်သော ပရော်ဖက်ရှင်နယ် ကိရိယာအားလုံးကို ရှာဖွေပါ။",
+  ctaNotepad: "အွန်လိုင်း Notepad",
+  chips: {
+    writing: "ရေးသားရေး ကိရိယာများ",
+    editors: "တည်းဖြတ်ရေး ကိရိယာများ",
+    text: "စာသား ခွဲခြမ်းစိတ်ဖြာခြင်း",
+    devTools: "Developer ကိရိယာများ",
+    excel: "Excel ပြောင်းလဲကိရိယာများ",
+  },
+  categoryLabel: "အမျိုးအစား",
+  openCategory: "အမျိုးအစားဖွင့်ရန်",
+  toolsCountWord: "ကိရိယာ",
+  toolsCountTemplate: "ကိရိယာ {count} ခု",
+  categories: {
+    writing: {
+      title: "ရေးသားရေး ကိရိယာများ",
+      description:
+        "အာရုံမပြန့်ပွားစေသော ရေးသားခြင်း၊ အမြန်မှတ်စုများ၊ အာရုံစိုက် အလုပ်ချိန်များ၊ ရည်မှန်းချက်များ၊ အသံဖြင့် ရေးသားခြင်း၊ template များ၊ snippet များနှင့် အလုပ်လုပ်ဆောင်မှု အထောက်အကူများ။",
+    },
+    editors: {
+      title: "တည်းဖြတ်ရေး ကိရိယာများ",
+      description:
+        "Markdown, code, JSON နှင့် HTML တည်းဖြတ်ကိရိယာများသည် နည်းပညာရေးသားမှုနှင့် ဖွဲ့စည်းထားသော အကြောင်းအရာအလုပ်များအတွက် ဖြစ်သည်။",
+    },
+    text: {
+      title: "စာသား ခွဲခြမ်းစိတ်ဖြာ ကိရိယာများ",
+      description:
+        "စကားလုံး၊ အက္ခရာ၊ ဝါကျနှင့် အပိုဒ်များကို ရေတွက်နိုင်သော၊ ဖတ်ရှုရလွယ်ကူမှုနှင့် နှိုင်းယှဉ်မှု ကိရိယာများပါဝင်သည်။",
+    },
+    devTools: {
+      title: "Developer ကိရိယာများ",
+      description:
+        "နေ့စဉ် ဝဘ်ဖွံ့ဖြိုးရေးအတွက် format ပြုလုပ်ခြင်း၊ အရွယ်လျှော့ခြင်း၊ encoding လုပ်ခြင်းနှင့် regex ကိရိယာများ။",
+    },
+    excel: {
+      title: "Excel ပြောင်းလဲကိရိယာများ",
+      description:
+        "Excel နှင့် CSV, JSON, XML, PDF, ODS, Google Sheets နှင့် အခြား spreadsheet format များအကြား ပြောင်းလဲနိုင်သည်။",
+    },
+    documents: {
+      title: "စာရွက်စာတမ်း ပြောင်းလဲကိရိယာများ",
+      description:
+        "PDF, Word, TXT, Markdown, HTML, RTF နှင့် PowerPoint ဖိုင်များကို တည်းဖြတ်ရန်နှင့် ထုတ်ဝေရန်အတွက် ပြောင်းလဲနိုင်သည်။",
+    },
+    data: {
+      title: "ဒေတာနှင့် ကုဒ် ပြောင်းလဲကိရိယာများ",
+      description:
+        "API နှင့် data workflow များအတွက် JSON, CSV, XML, YAML, SQL နှင့် plain text format များအကြား ဒေတာများကို ပြောင်းရွှေ့နိုင်သည်။",
+    },
+    format: {
+      title: "စာသား အသုံးဝင် ကိရိယာများ",
+      description:
+        "စာလုံးအကြီး/အသေး ပြောင်းလဲခြင်း၊ လိုင်းလုပ်ဆောင်မှုများ၊ စာသားသန့်ရှင်းရေးနှင့် အမြန်စာသားပြောင်းလဲမှုများအတွက် compact format ကိရိယာများ။",
+    },
+  },
+  aboutTitle: "ကျွန်ုပ်တို့၏ အခမဲ့အွန်လိုင်း ကိရိယာများအကြောင်း",
+  aboutBody:
+    "စာသားတည်းဖြတ်ခြင်း၊ ဒေတာပြောင်းလဲခြင်း၊ စာရွက်စာတမ်းလုပ်ငန်းများနှင့် developer workflow များကို လွယ်ကူစေရန် ဒီဇိုင်းထုတ်ထားသော အခမဲ့အွန်လိုင်း ကိရိယာစုစည်းမှုသို့ ကြိုဆိုပါသည်။",
+  footer: {
+    before: "ဂန္တဝင် canvas ကိုရှာနေပါသလား? ",
+    linkLabel: "Notepad Editor",
+    after:
+      " သည် ဇယားများ၊ ပုံများနှင့် formatting ပါဝင်သော full rich-text အတွေ့အကြုံကို ဆက်လက်ပေးနေဆဲဖြစ်သည်။",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -867,6 +942,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   bn,
   bs,
   bg,
+  my,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */

@@ -205,7 +205,9 @@ export default async function ToolsHubPage({
                 <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
               </p>
               <p className="mt-1 text-xs text-muted-foreground">
-                {cat.count} {t.toolsCountWord}
+                {t.toolsCountTemplate
+                  ? t.toolsCountTemplate.replace("{count}", String(cat.count))
+                  : `${cat.count} ${t.toolsCountWord}`}
               </p>
             </Link>
           ))}
