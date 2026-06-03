@@ -446,6 +446,74 @@ const hy: ToolsHubCopy = {
   },
 };
 
+const ay: ToolsHubCopy = {
+  pageTitle: "Taqi yänaka (herramientas)",
+  intro:
+    "Taqi profesional yänaka uñt’ama, ukanakax qhispiyata ukhamarak jan tukusiraki apnaqasispa.",
+  ctaNotepad: "Onlayn notepad",
+  chips: {
+    writing: "Qillqañ yänaka",
+    editors: "Editar yänaka",
+    text: "Textu yatxatawi",
+    devTools: "Desarrollador yänaka",
+    excel: "Excel mayjt’irinaka",
+  },
+  categoryLabel: "Kategoriya",
+  openCategory: "Kategoriya jist’araña",
+  toolsCountWord: "yänaka",
+  categories: {
+    writing: {
+      title: "Qillqañ yänaka",
+      description:
+        "Jan ch’iqiyata qillqañ, jank’a notanak luraña, concentración sesiones, metas, voz tuqi qillqaña, plantillanak, fragmentos ukhamarak irnaqawi thakhi yanapt’irinaka.",
+    },
+    editors: {
+      title: "Editar yänaka",
+      description:
+        "Markdown, código, JSON ukhamarak HTML editar yänaka técnico qillqañataki ukhamarak estructurado contenido lurañataki.",
+    },
+    text: {
+      title: "Textu yatxatawi yänaka",
+      description:
+        "Arunak, chimpunak, aruskipäwinaka ukhamarak parrafo jakhuwi yänaka, uñt’awi ukhamarak jikthaptawi yanapt’irinaka.",
+    },
+    devTools: {
+      title: "Desarrollador yänaka",
+      description:
+        "Formato luririnaka, jisk’achirinaka, codificador yänaka ukhamarak Regex yanapt’irinaka, sapa uru web desarrollo lurañataki.",
+    },
+    excel: {
+      title: "Excel mayjt’irinaka",
+      description:
+        "Excel ukhamarak CSV, JSON, XML, PDF, ODS, Google Sheets ukhamarak yaqha tabla formato mayjt’ayaña.",
+    },
+    documents: {
+      title: "Documento mayjt’irinaka yänaka",
+      description:
+        "PDF, Word, TXT, Markdown, HTML, RTF ukhamarak PowerPoint archivonaka editar ukhamarak publicar lurañataki mayjt’ayaña.",
+    },
+    data: {
+      title: "Datos ukhamarak código mayjt’irinaka",
+      description:
+        "JSON, CSV, XML, YAML, SQL ukhamarak plano text formato ukar datos mayjt’ayaña API ukhamarak datos irnaqawi thakhinaka.",
+    },
+    format: {
+      title: "Textu yanapt’iri yänaka",
+      description:
+        "Mayjt’awi capital/minúscula, lineanak irnaqawi, textu q’umachaña ukhamarak compacta formato yänaka jank’a textu mayjt’ayañataki.",
+    },
+  },
+  aboutTitle: "Jiwasan qhispiyata onlayn yänaka tuqita",
+  aboutBody:
+    "Qhispiyata onlayn yänaka taqi uñt’awi ukar katuqt’asiñani, ukax textu editar, datos mayjt’ayaña, documento irnaqawi ukhamarak desarrollador workflow lurawinaka jisk’achañataki wakicht’atawa.",
+  footer: {
+    before: "Clásico canvas thaqhasktati? ",
+    linkLabel: "Notepad Editor",
+    after:
+      " ukax jichhakamax taqi rich-text experiencia uñacht’ayi, tabla, imagen ukhamarak formato ukampiwa.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -453,6 +521,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   am,
   ar,
   hy,
+  ay,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
