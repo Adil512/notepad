@@ -582,6 +582,74 @@ const az: ToolsHubCopy = {
   },
 };
 
+const eu: ToolsHubCopy = {
+  pageTitle: "Tresna guztiak",
+  intro:
+    "Aurki itzazu doan eta mugarik gabe erabil ditzakezun tresna profesional guztiak.",
+  ctaNotepad: "Online Notepad-a",
+  chips: {
+    writing: "Idazketa tresnak",
+    editors: "Editore tresnak",
+    text: "Testu analisia",
+    devTools: "Garatzaile tresnak",
+    excel: "Excel bihurgailuak",
+  },
+  categoryLabel: "Kategoria",
+  openCategory: "Kategoria ireki",
+  toolsCountWord: "tresna",
+  categories: {
+    writing: {
+      title: "Idazketa tresnak",
+      description:
+        "Distrakziorik gabeko idazketa, ohar azkarrak, kontzentrazio saioak, helburuak, diktaketa, txantiloiak, zatiak eta lan-fluxu laguntzaileak.",
+    },
+    editors: {
+      title: "Editore tresnak",
+      description:
+        "Markdown, kodea, JSON eta HTML editoreak idazketa teknikorako eta eduki egituraturako lanetarako.",
+    },
+    text: {
+      title: "Testu analisi tresnak",
+      description:
+        "Hitz, karaktere, esaldi eta paragrafo kontagailuak, irakurgarritasun eta konparazio tresnekin.",
+    },
+    devTools: {
+      title: "Garatzaile tresnak",
+      description:
+        "Formateatzaileak, txikigailuak, kodetzaileak eta regex utilitateak eguneroko web garapenerako.",
+    },
+    excel: {
+      title: "Excel bihurgailu tresnak",
+      description:
+        "Excel eta CSV, JSON, XML, PDF, ODS, Google Sheets eta beste kalkulu-orri formatuen artean bihurtzeko.",
+    },
+    documents: {
+      title: "Dokumentu bihurgailu tresnak",
+      description:
+        "PDF, Word, TXT, Markdown, HTML, RTF eta PowerPoint fitxategiak editatzeko eta argitaratzeko bihurtu.",
+    },
+    data: {
+      title: "Datu eta kode bihurgailu tresnak",
+      description:
+        "JSON, CSV, XML, YAML, SQL eta testu arrunt formatuen artean datuak mugitzea API eta datu lan-fluxuetarako.",
+    },
+    format: {
+      title: "Testu utilitate tresnak",
+      description:
+        "Maiuskula/minuskula bihurketa, lerro eragiketak, testu garbiketa eta formatu trinkoko tresnak testu aldaketa azkarrak egiteko.",
+    },
+  },
+  aboutTitle: "Gure doako online tresnei buruz",
+  aboutBody:
+    "Ongi etorri gure doako online tresnen bilduma osora, testu edizioa, datu bihurketa, dokumentu prozesamendua eta garatzaile lan-fluxuak errazteko diseinatua.",
+  footer: {
+    before: "Ohiko lan-eremua bilatzen ari zara? ",
+    linkLabel: "Notepad Editor",
+    after:
+      " oraindik ere testu aberatsaren esperientzia osoa eskaintzen du, taulak, irudiak eta formatuekin.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -591,6 +659,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   hy,
   ay,
   az,
+  eu,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
