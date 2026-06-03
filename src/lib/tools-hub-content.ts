@@ -1083,6 +1083,74 @@ const ru: ToolsHubCopy = {
   },
 };
 
+const zh: ToolsHubCopy = {
+  pageTitle: "所有工具",
+  intro: "查找所有可以免费无限使用的专业工具。",
+  ctaNotepad: "在线记事本",
+  chips: {
+    writing: "写作工具",
+    editors: "编辑工具",
+    text: "文本分析",
+    devTools: "开发者工具",
+    excel: "Excel 转换工具",
+  },
+  categoryLabel: "分类",
+  openCategory: "打开分类",
+  toolsCountWord: "个工具",
+  toolsCountTemplate: "{count} 个工具",
+  categories: {
+    writing: {
+      title: "写作工具",
+      description:
+        "无干扰写作、快速笔记、专注会话、目标设定、语音输入、模板、代码片段和工作流程辅助工具。",
+    },
+    editors: {
+      title: "编辑工具",
+      description:
+        "Markdown、代码、JSON 和 HTML 编辑器，用于技术写作和结构化内容处理。",
+    },
+    text: {
+      title: "文本分析工具",
+      description:
+        "字数、字符、句子和段落统计工具，并提供可读性和对比功能。",
+    },
+    devTools: {
+      title: "开发者工具",
+      description:
+        "格式化工具、压缩工具、编码工具以及正则表达式工具，用于日常网页开发。",
+    },
+    excel: {
+      title: "Excel 转换工具",
+      description:
+        "在 Excel 与 CSV、JSON、XML、PDF、ODS、Google Sheets 等多种表格格式之间进行转换。",
+    },
+    documents: {
+      title: "文档转换工具",
+      description:
+        "将 PDF、Word、TXT、Markdown、HTML、RTF 和 PowerPoint 文件转换为可编辑和发布的格式。",
+    },
+    data: {
+      title: "数据与代码转换工具",
+      description:
+        "在 JSON、CSV、XML、YAML、SQL 和纯文本格式之间移动数据，用于 API 和数据工作流。",
+    },
+    format: {
+      title: "文本实用工具",
+      description:
+        "大小写转换、行操作、文本清理和紧凑格式化工具，用于快速文本处理。",
+    },
+  },
+  aboutTitle: "关于我们的免费在线工具",
+  aboutBody:
+    "欢迎使用我们完整的免费在线工具集合，旨在简化文本编辑、数据转换、文档处理和开发者工作流程。",
+  footer: {
+    before: "在寻找经典编辑界面吗？",
+    linkLabel: "Notepad 编辑器",
+    after:
+      "仍然提供完整的富文本体验，包括表格、图片和格式化功能。",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -1099,6 +1167,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   my,
   ca,
   ru,
+  zh,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
