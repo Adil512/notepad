@@ -718,6 +718,74 @@ const bn: ToolsHubCopy = {
   },
 };
 
+const bs: ToolsHubCopy = {
+  pageTitle: "Svi alati",
+  intro:
+    "Pronađite sve profesionalne alate koje možete koristiti besplatno i neograničeno.",
+  ctaNotepad: "Online Notepad",
+  chips: {
+    writing: "Alati za pisanje",
+    editors: "Alati za uređivanje",
+    text: "Analiza teksta",
+    devTools: "Alati za programere",
+    excel: "Excel konverteri",
+  },
+  categoryLabel: "Kategorija",
+  openCategory: "Otvori kategoriju",
+  toolsCountWord: "alata",
+  categories: {
+    writing: {
+      title: "Alati za pisanje",
+      description:
+        "Pisanje bez ometanja, brze bilješke, sesije fokusiranja, ciljevi, diktiranje, predlošci, isječci i alati za pomoć u radu.",
+    },
+    editors: {
+      title: "Alati za uređivanje",
+      description:
+        "Markdown, kod, JSON i HTML uređivači za tehničko pisanje i rad sa strukturiranim sadržajem.",
+    },
+    text: {
+      title: "Alati za analizu teksta",
+      description:
+        "Brojači riječi, znakova, rečenica i pasusa sa alatima za čitljivost i poređenje.",
+    },
+    devTools: {
+      title: "Alati za programere",
+      description:
+        "Alati za formatiranje, minifikaciju, kodiranje i regex za svakodnevni web razvoj.",
+    },
+    excel: {
+      title: "Excel konverter alati",
+      description:
+        "Pretvaranje između Excel, CSV, JSON, XML, PDF, ODS, Google Sheets i drugih formata tabela.",
+    },
+    documents: {
+      title: "Alati za konverziju dokumenata",
+      description:
+        "Pretvaranje PDF, Word, TXT, Markdown, HTML, RTF i PowerPoint fajlova za uređivanje i objavljivanje.",
+    },
+    data: {
+      title: "Alati za konverziju podataka i koda",
+      description:
+        "Prenos podataka između JSON, CSV, XML, YAML, SQL i običnog teksta za API i tokove podataka.",
+    },
+    format: {
+      title: "Alati za tekstualne usluge",
+      description:
+        "Promjena velikih/malih slova, operacije nad linijama, čišćenje teksta i alati za kompaktno formatiranje za brze izmjene teksta.",
+    },
+  },
+  aboutTitle: "O našim besplatnim online alatima",
+  aboutBody:
+    "Dobrodošli u našu kompletnu kolekciju besplatnih online alata dizajniranih da pojednostave uređivanje teksta, konverziju podataka, obradu dokumenata i radne tokove programera.",
+  footer: {
+    before: "Tražite klasično radno okruženje? ",
+    linkLabel: "Notepad Editor",
+    after:
+      " i dalje nudi potpuno rich-text iskustvo sa tabelama, slikama i formatiranjem.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -729,6 +797,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   az,
   eu,
   bn,
+  bs,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
