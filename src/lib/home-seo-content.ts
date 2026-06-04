@@ -2932,6 +2932,413 @@ const featuresByLocale: Record<string, HomeFeaturesCopy> = {
     outro:
       "Selain itu, masih banyak fitur unik lainnya yang dapat Anda gunakan dan nikmati secara gratis.",
   },
+  iu: {
+    title: "ᐊᓯᖏᑦ ᐱᔪᓐᓇᕈᑏᑦ ᓄᑖᒥ ᑎᑎᕋᐅᓯᕆᔾᔪᑎᒧᑦ (Notepad Online)",
+    features: [
+      {
+        title: "ᐊᐅᓚᔾᔪᑎᖃᖅᑐᖅ ᐊᓯᖏᓐᓂ ᓄᑖᒥ ᐱᓯᒪᔪᓂᒃ (Auto Save) ᐃᓄᖕᓄᑦ ᓄᑖᒥ",
+        desc: "ᓄᑖᒥ ᑎᑎᕋᐅᓯᕆᔾᔪᑎᕗᑦ ᐊᐅᓚᔾᔪᑎᖃᖅᑐᖅ ᐊᓯᖏᓐᓂ ᐱᓯᒪᔪᓂᒃ ᑎᑎᕋᓕᕐᓂᐊᕐᓗᑎᑦ, ᑕᐃᒪᓐᓇ ᐊᓯᖏᑦ ᐃᓚᒋᐊᖅᑐᑦ ᐃᓕᓐᓂᒃ ᐊᔪᖅᑐᖅ ᐊᓯᐊᓂ ᐃᓚᖏᑦ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᑦ, ᐊᓯᐊᓂ ᐅᐃᒍᓐᓇᐃᑦ ᓄᑖᒥ ᑎᑎᕋᐅᓯᕆᔾᔪᑎ ᓱᕐᕋᔭᖅᑐᖅ ᐅᕙᓂ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ.",
+      },
+      {
+        title: "TXT ᐊᒻᒪ PDF ᐱᔭᕇᖅᑐᑦ ᐊᓯᖏᓐᓂ ᓄᑖᒥ",
+        desc: "ᓄᑖᒥ ᑎᑎᕋᐅᓯᕆᔾᔪᑎᕗᑦ ᐊᔪᖏᑦᑐᖅ ᐱᓯᒪᔪᓂᒃ TXT ᐅᕝᕙᓘᓐᓃᑦ PDF ᐊᓯᖏᓐᓂ ᐱᓯᒪᔪᓂᒃ ᓄᑖᒥ, ᑕᐃᒪᓐᓇ ᐊᓯᖏᑦ ᐱᔭᕇᖅᑐᑦ, ᐅᐃᒍᓐᓇᐃᑦ, ᐊᒻᒪ ᐱᖃᑖᖅᑐᑦ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᑦ.",
+      },
+      {
+        title: "ᐱᔭᕇᖅᑐᖅ ᓵᓚᐅᑎᒥ (Full Screen)",
+        desc: "ᓵᓚᐅᑎᒥ ᐊᓯᐊᓂ ᐊᓯᖏᑦ ᐱᓯᒪᔪᓂᒃ ᓄᑖᒥ ᑎᑎᕋᐅᓯᕆᔾᔪᑎ ᐊᐅᓚᔾᔪᑎᖃᖅᑐᖅ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ ᓄᑖᒥ ᐱᔭᕇᖅᑐᖅ ᐊᓯᐊᓂ ᑎᑎᕋᓂᒃ ᐱᔭᕇᖅᑐᖅ ᓄᑖᒥ.",
+      },
+      {
+        title: "200% ᐊᔾᔨᖏᑦ (Zoom)",
+        desc: "ᓄᑖᒥ ᑎᑎᕋᐅᓯᕆᔾᔪᑎ ᐊᔪᖏᑦᑐᖅ ᐊᔾᔨᖏᑦ 200% ᐱᔭᕇᖅᑐᖅ, ᑕᐃᒪᓐᓇ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ ᐱᔭᕇᖅᑐᖅ.",
+      },
+      {
+        title: "ᐃᓚᓯᒋᑦ ᐊᔾᔨᓐᓂᒃ, ᑐᐊᐸᓪ, ᑕᐃᒪᓐᓇ ᐊᐅᓚᔾᔪᑎᖃᖅᑐᖅ ᐅᑭᐅᑦ, HTML ᐱᔭᕇᖅᑐᑦ",
+        desc: "ᐃᓚᓯᒋᑦ ᐊᔾᔨᓐᓂᒃ ᐊᒻᒪ ᑐᐊᐸᓪ ᐊᓯᖏᑦ ᐱᔭᕇᖅᑐᑦ, HTML ᐱᔭᕇᖅᑐᑦ, ᐊᓯᐊᓂ ᓄᑖᒥ ᑎᑎᕋᐅᓯᕆᔾᔪᑎ ᐊᓯᖏᓐᓂ.",
+      },
+      {
+        title: "H1 ᐊᒻᒪ H6 ᐊᓯᖏᑦ",
+        desc: "ᐊᓯᐊᓂ ᑎᑎᕋᐅᓯᕆᔾᔪᑎ ᐊᓯᐊᓂ H1 ᐊᒻᒪ H6, ᐱᔭᕇᖅᑐᖅ ᓄᑖᒥ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ.",
+      },
+      {
+        title: "ᐊᓯᖏᑦ ᐱᔭᕇᖅᑐᑦ ᐊᓯᖏᑦ",
+        desc: "ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᑦ ᐱᔭᕇᖅᑐᖅ ᐊᓯᐊᓂ ᐊᓯᖏᑦ ᐱᔭᕇᖅᑐᖅ.",
+      },
+      {
+        title: "ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ (ᑕᐃᒪᓐᓇ ᐊᓯᖏᑦ)",
+        desc: "ᓄᑖᒥ ᑎᑎᕋᐅᓯᕆᔾᔪᑎ ᐊᓯᐊᓂ ᐊᔪᖏᑦᑐᖅ ᐱᔭᕇᖅᑐᖅ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ ᐊᓯᐊᓂ.",
+      },
+      {
+        title: "AI ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ (ᐱᔭᕇᖅᑐᖅ ᐊᓯᖏᑦ)",
+        desc: "ᐅᖃᓗᒃᑎᑦ ᐱᔭᕇᖅᑐᑦ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ.",
+      },
+      {
+        title: "ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ ᓄᑖᒥ (link)",
+        desc: "ᓄᑖᒥ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ ᐱᔭᕇᖅᑐᖅ ᓄᑖᒥ.",
+      },
+      {
+        title: "ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ ᐱᔭᕇᖅᑐᖅ (history)",
+        desc: "ᓄᑖᒥ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ ᐱᔭᕇᖅᑐᖅ ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ.",
+      },
+    ],
+    outro:
+      "ᐊᓯᐊᓂ ᐱᔭᕇᖅᑐᖅ, ᐊᓯᖏᑦ ᐱᔭᕇᖅᑐᑦ ᐊᔪᖏᑦᑐᑦ ᐱᔭᕇᖅᑐᑦ ᐱᔭᕇᖅᑐᑦ.",
+  },
+  ga: {
+    title: "Príomhghnéithe an Notepad Ar Líne",
+    features: [
+      {
+        title: "Sábháil Uathoibríoch Ar Líne",
+        desc: "Sábhálann ár notepad ar líne do chuid oibre go huathoibríoch agus tú ag clóscríobh, ionas nach gcaillfidh tú aon fhocal riamh, fiú má thuairteálann do bhrabhsálaí nó má dhúnann tú an cluaisín trí thimpiste.",
+      },
+      {
+        title: "Íoslódáil i bhformáidí TXT agus PDF",
+        desc: "Leis an notepad seo, is féidir leat do nótaí a easpórtáil láithreach mar chomhad glan TXT nó PDF, rud a fhágann go bhfuil sé éasca iad a shábháil, a phriontáil nó a roinnt as líne.",
+      },
+      {
+        title: "Lánscáileán",
+        desc: "Athraigh go mód lánscáileáin agus lig don notepad seo gan seachráin canbhás scríbhneoireachta glan, ó imeall go imeall, a thabhairt duit atá foirfe do sheisiúin scríbhneoireachta dírithe.",
+      },
+      {
+        title: "Gné súmála 200%",
+        desc: "Ligeann an notepad ar líne seo duit súmáil isteach suas le 200%, rud a fhágann go bhfuil sé níos éasca ar na súile le linn seisiúin fhada scríbhneoireachta nó agus tú ag obair le téacs beag ar aon scáileán.",
+      },
+      {
+        title: "Cuir isteach íomhánna, táblaí, nuashonrú uathoibríoch dátaí, easpórtáil HTML",
+        desc: "Ó íomhánna agus táblaí struchtúrtha a chur isteach go nuashonrú uathoibríoch dátaí agus d’inneachar a easpórtáil mar HTML, téann an notepad seo i bhfad níos faide ná eagarthóireacht bhunúsach téacs.",
+      },
+      {
+        title: "Ceannteidil ó H1 go H6",
+        desc: "Eagraigh d’inneachar le hiarrachas iomlán ceannteideal ó H1 go H6, rud a thugann struchtúr eagarthóra doiciméad cheart don notepad seo i do bhrabhsálaí.",
+      },
+      {
+        title: "Stíleanna éagsúla cló",
+        desc: "Roghnaigh ó éagsúlacht stíleanna cló chun do thaithí scríbhneoireachta a phearsanú agus chun do chuid doiciméad a dhéanamh níos inléite, níos léiritheacha nó níos gairmiúla.",
+      },
+      {
+        title: "Athraigh dath an téacs",
+        desc: "Ligeann an notepad ar líne seo duit príomhphointí a aibhsiú agus soiléireacht amhairc a chur leis trí dhath an téacs a athrú, uirlis fhormáidithe shimplí ach chumhachtach d’aon scríbhneoir.",
+      },
+      {
+        title: "Ó chaint go téacs faoi thiomáint AI gan aon earráid",
+        desc: "Abair do chuid smaointe agus féach orthu ag teacht chun cinn ar an scáileán le cruinneas ard. Tiontaíonn gné AI an notepad seo do ghuth ina théacs glan gan earráid láithreach, rud a shábhálann go leor ama duit.",
+      },
+      {
+        title: "Cruthaigh nasc inroinnte tar éis logáil isteach",
+        desc: "Nuair atá tú logáilte isteach, ligeann ár notepad duit nasc uathúil inroinnte a ghiniúint do nóta ar bith, rud a fhágann go bhfuil comhoibriú agus comhroinnt tapa chomh simplí le URL a chóipeáil.",
+      },
+      {
+        title: "Cruthaigh cuntas chun stair a thaifeadadh",
+        desc: "Cruthaigh cuntas saor in aisce ar an notepad seo chun stair na nótaí a dhíghlasáil, ionas gur féidir leat gach rud a scríobh tú riamh a athbhreithniú, a aisghabháil agus a bhainistiú in aon áit amháin.",
+      },
+    ],
+    outro:
+      "Seachas iad seo, tá go leor gnéithe uathúla eile ann ar féidir leat a úsáid agus taitneamh a bhaint astu saor in aisce.",
+  },
+  it: {
+    title: "Caratteristiche principali del Blocco Note Online",
+    features: [
+      {
+        title: "Salvataggio automatico online",
+        desc: "Il nostro blocco note online salva automaticamente il tuo lavoro mentre scrivi, così non perdi mai nemmeno una parola, anche se il browser si blocca o chiudi accidentalmente la scheda.",
+      },
+      {
+        title: "Download in formato TXT e PDF",
+        desc: "Con il nostro blocco note puoi esportare subito le tue note come file TXT o PDF puliti, rendendo facile salvarle, stamparle o condividerle offline.",
+      },
+      {
+        title: "Schermo intero",
+        desc: "Passa alla modalità a schermo intero e usa questo blocco note senza distrazioni che ti offre una superficie di scrittura pulita da bordo a bordo, perfetta per sessioni di scrittura concentrate.",
+      },
+      {
+        title: "Funzione zoom al 200%",
+        desc: "Questo blocco note online ti permette di ingrandire fino al 200%, rendendo più facile la lettura durante lunghe sessioni di scrittura o quando lavori con testo piccolo su qualsiasi schermo.",
+      },
+      {
+        title: "Inserisci immagini, tabelle, aggiornamento automatico delle date, esporta HTML",
+        desc: "Dall’inserimento di immagini e tabelle strutturate all’aggiornamento automatico delle date fino all’esportazione dei contenuti in HTML, questo blocco note va ben oltre la semplice modifica del testo.",
+      },
+      {
+        title: "Intestazioni da H1 a H6",
+        desc: "Organizza i tuoi contenuti con una gerarchia completa di intestazioni da H1 a H6, dando a questo blocco note la struttura di un vero editor di documenti direttamente nel tuo browser.",
+      },
+      {
+        title: "Diversi stili di carattere",
+        desc: "Scegli tra vari stili di carattere per personalizzare la tua esperienza di scrittura e rendere i tuoi documenti più leggibili, espressivi o professionali.",
+      },
+      {
+        title: "Cambia colore del testo",
+        desc: "Questo blocco note online ti permette di evidenziare i punti chiave e migliorare la chiarezza visiva cambiando il colore del testo, uno strumento di formattazione semplice ma potente per ogni scrittore.",
+      },
+      {
+        title: "Trascrizione vocale con IA senza errori",
+        desc: "Pronuncia i tuoi pensieri e guardali apparire sullo schermo con alta precisione. La funzione di trascrizione vocale con IA di questo blocco note trasforma istantaneamente la tua voce in testo pulito e senza errori, facendoti risparmiare molto tempo.",
+      },
+      {
+        title: "Genera link condivisibile dopo l’accesso",
+        desc: "Una volta effettuato l’accesso, il nostro blocco note ti permette di generare un link unico condivisibile per qualsiasi nota, rendendo la collaborazione e la condivisione rapida semplice come copiare un URL.",
+      },
+      {
+        title: "Crea un account per registrare la cronologia",
+        desc: "Crea un account gratuito su questo blocco note per sbloccare la cronologia delle note, così puoi rivedere, recuperare e gestire tutto ciò che hai scritto in un unico posto.",
+      },
+    ],
+    outro:
+      "Oltre a queste, ci sono molte altre funzionalità uniche che puoi usare e goderti gratuitamente.",
+  },
+  ja: {
+    title: "オンラインメモ帳の主な機能",
+    features: [
+      {
+        title: "オンライン自動保存",
+        desc: "このオンラインメモ帳は入力中の作業を自動的に保存するため、ブラウザがクラッシュしたりタブを誤って閉じてしまっても、一文字も失うことはありません。",
+      },
+      {
+        title: "TXTおよびPDF形式でダウンロード",
+        desc: "このメモ帳では、メモをすぐにきれいなTXTまたはPDFファイルとしてエクスポートでき、保存・印刷・オフライン共有が簡単に行えます。",
+      },
+      {
+        title: "全画面表示",
+        desc: "全画面モードに切り替えることで、この集中できるメモ帳は余計な要素のない、端から端まで使えるクリーンな書き込みキャンバスを提供し、集中した執筆に最適です。",
+      },
+      {
+        title: "200%ズーム機能",
+        desc: "このオンラインメモ帳は最大200%までズームできるため、長時間の執筆や小さな文字を扱う際でも目に優しくなります。",
+      },
+      {
+        title: "画像・表の挿入、自動日付更新、HTMLエクスポート",
+        desc: "画像や構造化された表の挿入から、自動日付更新、そしてコンテンツのHTMLエクスポートまで、このメモ帳は基本的なテキスト編集をはるかに超えています。",
+      },
+      {
+        title: "H1からH6までの見出し",
+        desc: "H1からH6までの完全な見出し階層でコンテンツを整理でき、このメモ帳はブラウザ上で本格的なドキュメントエディタの構造を提供します。",
+      },
+      {
+        title: "さまざまなフォントスタイル",
+        desc: "さまざまなフォントスタイルから選択して、執筆体験を自分好みにカスタマイズし、ドキュメントをより読みやすく、表現豊かで、プロフェッショナルに仕上げることができます。",
+      },
+      {
+        title: "テキストの色を変更",
+        desc: "このオンラインメモ帳では、テキストの色を変更することで重要なポイントを強調し、視覚的な分かりやすさを向上させることができます。これは誰にとってもシンプルでありながら強力な書式ツールです。",
+      },
+      {
+        title: "AI搭載の音声テキスト変換（エラーなし）",
+        desc: "考えを話すだけで、高精度で画面上に文字として表示されます。このメモ帳のAI音声認識機能は、あなたの声を瞬時にクリーンでエラーのないテキストへ変換し、大幅な時間短縮を実現します。",
+      },
+      {
+        title: "サインイン後に共有リンクを生成",
+        desc: "サインインすると、このメモ帳は任意のノートに対して固有の共有リンクを生成でき、コラボレーションや素早い共有をURLをコピーするだけで簡単に行えます。",
+      },
+      {
+        title: "アカウント作成で履歴を保存",
+        desc: "このメモ帳で無料アカウントを作成するとノート履歴が利用可能になり、これまで書いたすべてを1か所で確認・復元・管理できます。",
+      },
+    ],
+    outro: "これら以外にも、無料で使えて楽しめる多くのユニークな機能があります。",
+  },
+  jv: {
+    title: "Fitur Utama Notepad Online",
+    features: [
+      {
+        title: "Simpen otomatis online",
+        desc: "Notepad online iki otomatis nyimpen gaweyanmu nalika kowe ngetik, dadi kowe ora bakal ilang siji tembung wae, sanajan browsermu rusak utawa kowe ora sengaja nutup tab.",
+      },
+      {
+        title: "Undhuh ing format TXT lan PDF",
+        desc: "Kanthi notepad iki, kowe bisa ngekspor cathetanmu langsung dadi file TXT utawa PDF sing resik, supaya gampang disimpen, dicithak, utawa dienggo bareng tanpa internet.",
+      },
+      {
+        title: "Layar kebak",
+        desc: "Ganti menyang mode layar kebak lan gunakake notepad sing tanpa gangguan iki sing menehi papan nulis resik saka pinggir nganti pinggir, pas banget kanggo sesi nulis sing fokus.",
+      },
+      {
+        title: "Fitur zoom 200%",
+        desc: "Notepad online iki ngidini kowe nggedhekake nganti 200%, supaya luwih nyaman kanggo mripat nalika nulis suwe utawa nalika kerja karo teks cilik ing layar apa wae.",
+      },
+      {
+        title: "Lebokake gambar, tabel, update tanggal otomatis, ekspor HTML",
+        desc: "Saka nglebokake gambar lan tabel terstruktur nganti update tanggal otomatis lan ngekspor kontenmu dadi HTML, notepad iki luwih maju tinimbang editor teks biasa.",
+      },
+      {
+        title: "Judhul saka H1 nganti H6",
+        desc: "Atur kontenmu nganggo hirarki judhul lengkap saka H1 nganti H6, sing nggawe notepad iki kaya editor dokumen profesional langsung ing browsermu.",
+      },
+      {
+        title: "Macem-macem gaya font",
+        desc: "Pilih saka macem-macem gaya font kanggo nggawe pengalaman nulis luwih pribadi lan nggawe dokumenmu luwih gampang diwaca, luwih ekspresif, utawa luwih profesional.",
+      },
+      {
+        title: "Ganti warna teks",
+        desc: "Notepad online iki ngidini kowe nyorot poin penting lan nambah kejelasan visual kanthi ngganti warna teks, alat formatting sing sederhana nanging kuat kanggo saben penulis.",
+      },
+      {
+        title: "Speech-to-text nganggo AI tanpa kesalahan",
+        desc: "Omongna pikiranmu lan delengen carane muncul ing layar kanthi akurasi dhuwur. Fitur speech-to-text nganggo AI saka notepad iki langsung ngowahi swaramu dadi teks sing resik lan tanpa kesalahan, supaya kowe bisa ngirit akeh wektu.",
+      },
+      {
+        title: "Gawe link sing bisa dienggo bareng sawise login",
+        desc: "Sawise login, notepad iki ngidini kowe nggawe link unik sing bisa dienggo bareng kanggo saben cathetan, supaya kerja bareng lan nuduhake dadi gampang kaya nyalin URL.",
+      },
+      {
+        title: "Gawe akun kanggo nyimpen riwayat",
+        desc: "Gawe akun gratis ing notepad iki kanggo mbukak riwayat cathetan, supaya kowe bisa ndeleng maneh, mbalekake, lan ngatur kabeh sing tau kowe tulis ing siji panggonan.",
+      },
+    ],
+    outro:
+      "Saliyane iki, ana akeh fitur unik liyane sing bisa kowe gunakake lan nikmati kanthi gratis.",
+  },
+  kn: {
+    title: "ಆನ್‌ಲೈನ್ ನೋಟ್ಪ್ಯಾಡ್‌ನ ಪ್ರಮುಖ ವೈಶಿಷ್ಟ್ಯಗಳು",
+    features: [
+      {
+        title: "ಆನ್‌ಲೈನ್ ಸ್ವಯಂ-ಉಳಿಕೆ",
+        desc: "ನಮ್ಮ ಆನ್‌ಲೈನ್ ನೋಟ್ಪ್ಯಾಡ್ ನೀವು ಟೈಪ್ ಮಾಡುತ್ತಿದ್ದಂತೆಯೇ ನಿಮ್ಮ ಕೆಲಸವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಉಳಿಸುತ್ತದೆ, ಆದ್ದರಿಂದ ಬ್ರೌಸರ್ ಕ್ರ್ಯಾಶ್ ಆದರೂ ಅಥವಾ ನೀವು ತಪ್ಪಾಗಿ ಟ್ಯಾಬ್ ಮುಚ್ಚಿದರೂ ಒಂದೇ ಒಂದು ಪದವೂ ಕಳೆದುಹೋಗುವುದಿಲ್ಲ.",
+      },
+      {
+        title: "TXT ಮತ್ತು PDF ಸ್ವರೂಪಗಳಲ್ಲಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+        desc: "ನಮ್ಮ ನೋಟ್ಪ್ಯಾಡ್‌ನೊಂದಿಗೆ ನೀವು ನಿಮ್ಮ ಟಿಪ್ಪಣಿಗಳನ್ನು ತಕ್ಷಣವೇ ಸ್ವಚ್ಛವಾದ TXT ಅಥವಾ PDF ಫೈಲ್ ಆಗಿ ಎಕ್ಸ್ಪೋರ್ಟ್ ಮಾಡಬಹುದು, ಇದರಿಂದ ನಿಮ್ಮ ಕೆಲಸವನ್ನು ಉಳಿಸುವುದು, ಮುದ್ರಿಸುವುದು ಅಥವಾ ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿ ಹಂಚಿಕೊಳ್ಳುವುದು ಸುಲಭವಾಗುತ್ತದೆ.",
+      },
+      {
+        title: "ಪೂರ್ಣ ಪರದೆ",
+        desc: "ಪೂರ್ಣ ಪರದೆ ಮೋಡ್‌ಗೆ ಬದಲಿಸಿ, ಈ ವ್ಯತ್ಯಯರಹಿತ ನೋಟ್ಪ್ಯಾಡ್ ನಿಮಗೆ ಸ್ವಚ್ಛವಾದ, ಅಂಚಿನಿಂದ ಅಂಚಿಗೆ ಬರೆಯುವ ಕ್ಯಾನ್ವಾಸ್ ಅನ್ನು ನೀಡುತ್ತದೆ, ಇದು ಗಮನ ಕೇಂದ್ರೀಕರಿಸಿದ ಬರವಣಿಗೆಗೆ ಪರಿಪೂರ್ಣವಾಗಿದೆ.",
+      },
+      {
+        title: "200% ಜೂಮ್ ವೈಶಿಷ್ಟ್ಯ",
+        desc: "ಈ ಆನ್‌ಲೈನ್ ನೋಟ್ಪ್ಯಾಡ್ ನಿಮಗೆ 200% ವರೆಗೆ ಜೂಮ್ ಮಾಡಲು ಅವಕಾಶ ನೀಡುತ್ತದೆ, ಇದರಿಂದ ದೀರ್ಘ ಬರವಣಿಗೆ ಅವಧಿಗಳಲ್ಲಿ ಅಥವಾ ಚಿಕ್ಕ ಅಕ್ಷರಗಳೊಂದಿಗೆ ಕೆಲಸ ಮಾಡುವಾಗ ಕಣ್ಣಿಗೆ ಸುಲಭವಾಗುತ್ತದೆ.",
+      },
+      {
+        title: "ಚಿತ್ರಗಳು, ಟೇಬಲ್, ಸ್ವಯಂ ದಿನಾಂಕ ನವೀಕರಣ, HTML ಎಕ್ಸ್ಪೋರ್ಟ್ ಸೇರಿಸಿ",
+        desc: "ಚಿತ್ರಗಳು ಮತ್ತು ರಚನಾತ್ಮಕ ಟೇಬಲ್‌ಗಳನ್ನು ಸೇರಿಸುವುದರಿಂದ ಹಿಡಿದು ಸ್ವಯಂ ದಿನಾಂಕ ನವೀಕರಣ ಮತ್ತು ನಿಮ್ಮ ವಿಷಯವನ್ನು HTML ಆಗಿ ಎಕ್ಸ್ಪೋರ್ಟ್ ಮಾಡುವವರೆಗೆ, ಈ ನೋಟ್ಪ್ಯಾಡ್ ಮೂಲ ಪಠ್ಯ ಸಂಪಾದನೆಯಿಗಿಂತ ಬಹಳ ಮುಂದಿದೆ.",
+      },
+      {
+        title: "H1 ರಿಂದ H6 ವರೆಗೆ ಶೀರ್ಷಿಕೆಗಳು",
+        desc: "H1 ರಿಂದ H6 ವರೆಗೆ ಸಂಪೂರ್ಣ ಶೀರ್ಷಿಕೆ ಕ್ರಮದೊಂದಿಗೆ ನಿಮ್ಮ ವಿಷಯವನ್ನು ಸಂಘಟಿಸಿ, ಇದರಿಂದ ಈ ನೋಟ್ಪ್ಯಾಡ್ ನಿಮ್ಮ ಬ್ರೌಸರ್‌ನಲ್ಲೇ ವೃತ್ತಿಪರ ಡಾಕ್ಯುಮೆಂಟ್ ಎಡಿಟರ್‌ನ ರಚನೆಯನ್ನು ನೀಡುತ್ತದೆ.",
+      },
+      {
+        title: "ವಿವಿಧ ಫಾಂಟ್ ಶೈಲಿಗಳು",
+        desc: "ನಿಮ್ಮ ಬರವಣಿಗೆ ಅನುಭವವನ್ನು ವೈಯಕ್ತಿಕಗೊಳಿಸಲು ಮತ್ತು ನಿಮ್ಮ ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳನ್ನು ಹೆಚ್ಚು ಓದಲು ಸುಲಭವಾಗುವಂತೆ, ಅಭಿವ್ಯಕ್ತಿಪೂರ್ಣವಾಗಿ ಅಥವಾ ವೃತ್ತಿಪರವಾಗಿ ಮಾಡಲು ವಿವಿಧ ಫಾಂಟ್ ಶೈಲಿಗಳಿಂದ ಆಯ್ಕೆಮಾಡಿ.",
+      },
+      {
+        title: "ಪಠ್ಯದ ಬಣ್ಣ ಬದಲಾಯಿಸಿ",
+        desc: "ಈ ಆನ್‌ಲೈನ್ ನೋಟ್ಪ್ಯಾಡ್ ನಿಮಗೆ ಪ್ರಮುಖ ಅಂಶಗಳನ್ನು ಹೈಲೈಟ್ ಮಾಡಲು ಮತ್ತು ಪಠ್ಯದ ಬಣ್ಣವನ್ನು ಬದಲಾಯಿಸುವ ಮೂಲಕ ದೃಶ್ಯ ಸ್ಪಷ್ಟತೆಯನ್ನು ಹೆಚ್ಚಿಸಲು ಅವಕಾಶ ನೀಡುತ್ತದೆ, ಇದು ಯಾವುದೇ ಬರಹಗಾರರಿಗೆ ಸರಳ ಆದರೆ ಶಕ್ತಿಶಾಲಿ ಫಾರ್ಮ್ಯಾಟಿಂಗ್ ಸಾಧನವಾಗಿದೆ.",
+      },
+      {
+        title: "AI ಚಾಲಿತ ಮಾತು-ಇಂದ-ಪಠ್ಯ (Speech to Text) ಯಾವುದೇ ದೋಷವಿಲ್ಲದೆ",
+        desc: "ನಿಮ್ಮ ಆಲೋಚನೆಗಳನ್ನು ಮಾತನಾಡಿ, ಅವು ಪರದೆ ಮೇಲೆ ಹೆಚ್ಚಿನ ನಿಖರತೆಯೊಂದಿಗೆ ಕಾಣುವುದನ್ನು ನೋಡಿ. ಈ ನೋಟ್ಪ್ಯಾಡ್‌ನ AI ಚಾಲಿತ ಮಾತು-ಇಂದ-ಪಠ್ಯ ವೈಶಿಷ್ಟ್ಯವು ನಿಮ್ಮ ಧ್ವನಿಯನ್ನು ತಕ್ಷಣವೇ ಸ್ವಚ್ಛವಾದ, ದೋಷರಹಿತ ಪಠ್ಯವಾಗಿ ಪರಿವರ್ತಿಸುತ್ತದೆ, ಇದರಿಂದ ನೀವು ಬಹಳ ಸಮಯವನ್ನು ಉಳಿಸಬಹುದು.",
+      },
+      {
+        title: "ಲಾಗಿನ್ ಆದ ನಂತರ ಹಂಚಬಹುದಾದ ಲಿಂಕ್ ರಚಿಸಿ",
+        desc: "ಲಾಗಿನ್ ಆದ ನಂತರ, ನಮ್ಮ ನೋಟ್ಪ್ಯಾಡ್ ಯಾವುದೇ ಟಿಪ್ಪಣಿಗಾಗಿ ವಿಶೇಷ ಹಂಚಬಹುದಾದ ಲಿಂಕ್ ಅನ್ನು ರಚಿಸಲು ಅವಕಾಶ ನೀಡುತ್ತದೆ, ಇದರಿಂದ ಸಹಕಾರ ಮತ್ತು ವೇಗವಾದ ಹಂಚಿಕೆ URL ನಕಲಿಸುವಷ್ಟೇ ಸುಲಭವಾಗುತ್ತದೆ.",
+      },
+      {
+        title: "ಇತಿಹಾಸವನ್ನು ದಾಖಲಿಸಲು ಖಾತೆ ರಚಿಸಿ",
+        desc: "ಈ ನೋಟ್ಪ್ಯಾಡ್‌ನಲ್ಲಿ ಉಚಿತ ಖಾತೆ ರಚಿಸಿ ಟಿಪ್ಪಣಿ ಇತಿಹಾಸವನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ, ಇದರಿಂದ ನೀವು ಬರೆದಿರುವ ಎಲ್ಲವನ್ನೂ ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ ಮರುಪರಿಶೀಲಿಸಲು, ಮರುಪಡೆಯಲು ಮತ್ತು ನಿರ್ವಹಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ.",
+      },
+    ],
+    outro:
+      "ಇವುಗಳ ಹೊರತಾಗಿ, ನೀವು ಉಚಿತವಾಗಿ ಬಳಸಬಹುದಾದ ಮತ್ತು ಆನಂದಿಸಬಹುದಾದ ಇನ್ನೂ ಅನೇಕ ವಿಶಿಷ್ಟ ವೈಶಿಷ್ಟ್ಯಗಳು ಇವೆ.",
+  },
+  kk: {
+    title: "Онлайн блокноттың негізгі мүмкіндіктері",
+    features: [
+      {
+        title: "Онлайн автоматты сақтау",
+        desc: "Біздің онлайн блокнот теріп жатқан кезде жұмысыңызды автоматты түрде сақтайды, сондықтан браузеріңіз істен шықса немесе қойындыны байқаусызда жауып қойсаңыз да, бірде-бір сөзіңіз жоғалмайды.",
+      },
+      {
+        title: "TXT және PDF форматында жүктеу",
+        desc: "Біздің блокнот арқылы жазбаларыңызды бірден таза TXT немесе PDF файл ретінде экспорттай аласыз, бұл оларды сақтау, басып шығару немесе офлайн бөлісу үшін өте ыңғайлы.",
+      },
+      {
+        title: "Толық экран",
+        desc: "Толық экран режиміне ауысып, осы алаңдатпайтын блокноттың көмегімен шеттен шетке дейін таза жазу кеңістігін пайдаланыңыз, бұл назарды толық шоғырландыруға өте қолайлы.",
+      },
+      {
+        title: "200% үлкейту мүмкіндігі",
+        desc: "Бұл онлайн блокнот мәтінді 200%-ға дейін үлкейтуге мүмкіндік береді, бұл ұзақ жазу кезінде немесе шағын мәтінмен жұмыс істегенде көзге жеңіл болады.",
+      },
+      {
+        title: "Суреттер, кестелер қосу, күндерді автоматты жаңарту, HTML экспорт",
+        desc: "Суреттер мен құрылымдалған кестелерді қосудан бастап, күндерді автоматты жаңартуға және мазмұнды HTML ретінде экспорттауға дейін, бұл блокнот қарапайым мәтін өңдеуден әлдеқайда кең мүмкіндіктер ұсынады.",
+      },
+      {
+        title: "H1-ден H6-ға дейінгі тақырыптар",
+        desc: "Мазмұныңызды H1-ден H6-ға дейінгі толық тақырыптар иерархиясымен ұйымдастырыңыз, бұл блокнотқа браузер ішінде кәсіби құжат редакторының құрылымын береді.",
+      },
+      {
+        title: "Әртүрлі қаріп стильдері",
+        desc: "Жазу тәжірибеңізді жекелендіру үшін әртүрлі қаріп стильдерін таңдаңыз, бұл құжаттарыңызды оқуға жеңіл, мәнерлі немесе кәсіби етеді.",
+      },
+      {
+        title: "Мәтін түсін өзгерту",
+        desc: "Бұл онлайн блокнот мәтін түсін өзгерту арқылы маңызды ойларды ерекшелеуге және көрнекі айқындықты арттыруға мүмкіндік береді — бұл кез келген жазушы үшін қарапайым, бірақ қуатты құрал.",
+      },
+      {
+        title: "Қатесіз AI-мен жұмыс істейтін сөйлеуді мәтінге айналдыру",
+        desc: "Ойыңызды дауыстап айтыңыз, олар экранда жоғары дәлдікпен пайда болады. Бұл блокноттың AI-ға негізделген сөйлеуді мәтінге айналдыру мүмкіндігі дауысыңызды бірден таза әрі қатесіз мәтінге айналдырады, бұл сізге көп уақыт үнемдеуге көмектеседі.",
+      },
+      {
+        title: "Кіруден кейін бөлісуге болатын сілтеме жасау",
+        desc: "Кіргеннен кейін, біздің блокнот кез келген жазба үшін бірегей бөлісу сілтемесін жасауға мүмкіндік береді, бұл бірлесіп жұмыс істеуді және жылдам бөлісуді URL көшіру сияқты оңай етеді.",
+      },
+      {
+        title: "Тарихты сақтау үшін аккаунт жасау",
+        desc: "Осы блокнотта тегін аккаунт жасап, жазбалар тарихын ашыңыз, сонда сіз бұрын жазған барлық нәрсені бір жерден қарап, қалпына келтіріп және басқара аласыз.",
+      },
+    ],
+    outro:
+      "Бұлардан бөлек, сіз тегін қолдана алатын көптеген басқа да ерекше мүмкіндіктер бар.",
+  },
+  km: {
+    title: "លក្ខណៈពិសេសសំខាន់ៗរបស់ Notepad អនឡាញ",
+    features: [
+      {
+        title: "រក្សាទុកដោយស្វ័យប្រវត្តិលើអនឡាញ",
+        desc: "Notepad អនឡាញរបស់យើងរក្សាទុកការងាររបស់អ្នកដោយស្វ័យប្រវត្តិពេលអ្នកកំពុងវាយ ដូច្នេះអ្នកមិនបាត់បង់ពាក្យណាមួយឡើយ ទោះបីជា browser គាំង ឬអ្នកបិទ tab ដោយចៃដន្យក៏ដោយ។",
+      },
+      {
+        title: "ទាញយកជាទ្រង់ទ្រាយ TXT និង PDF",
+        desc: "ជាមួយ Notepad របស់យើង អ្នកអាចនាំចេញកំណត់ត្រារបស់អ្នកភ្លាមៗជាឯកសារ TXT ឬ PDF ស្អាតៗ ដែលធ្វើឲ្យងាយស្រួលក្នុងការរក្សាទុក បោះពុម្ព ឬចែករំលែកការងាររបស់អ្នកដោយមិនចាំបាច់មានអ៊ីនធឺណិត។",
+      },
+      {
+        title: "អេក្រង់ពេញ",
+        desc: "ប្តូរទៅរបៀបអេក្រង់ពេញ ហើយអនុញ្ញាតឲ្យ Notepad ដែលគ្មានការរំខាននេះ ផ្តល់ឲ្យអ្នកនូវផ្ទៃសរសេរស្អាតពីគែមទៅគែម ដែលសមស្របសម្រាប់ការសរសេរដែលផ្តោតអារម្មណ៍។",
+      },
+      {
+        title: "មុខងារពង្រីក 200%",
+        desc: "Notepad អនឡាញនេះអនុញ្ញាតឲ្យអ្នកពង្រីករហូតដល់ 200% ដែលធ្វើឲ្យភ្នែកងាយស្រួលពេលសរសេរយូរ ឬពេលធ្វើការជាមួយអក្សរតូចៗលើអេក្រង់ណាមួយ។",
+      },
+      {
+        title: "បញ្ចូលរូបភាព តារាង ការធ្វើបច្ចុប្បន្នភាពកាលបរិច្ឆេទដោយស្វ័យប្រវត្តិ នាំចេញជា HTML",
+        desc: "ចាប់ពីការបញ្ចូលរូបភាព និងតារាងមានរចនាសម្ព័ន្ធ រហូតដល់ការធ្វើបច្ចុប្បន្នភាពកាលបរិច្ឆេទដោយស្វ័យប្រវត្តិ និងនាំចេញមាតិកាជា HTML Notepad នេះមានមុខងារលើសពីការកែសម្រួលអត្ថបទធម្មតា។",
+      },
+      {
+        title: "ចំណងជើងពី H1 ដល់ H6",
+        desc: "រៀបចំមាតិការបស់អ្នកដោយប្រើលំដាប់ចំណងជើងពេញលេញពី H1 ដល់ H6 ដែលធ្វើឲ្យ Notepad នេះមានរចនាសម្ព័ន្ធដូចកម្មវិធីកែសម្រួលឯកសារអាជីពនៅក្នុង browser របស់អ្នក។",
+      },
+      {
+        title: "រចនាប័ទ្មអក្សរផ្សេងៗ",
+        desc: "ជ្រើសរើសពីរចនាប័ទ្មអក្សរជាច្រើន ដើម្បីកែតម្រូវបទពិសោធន៍សរសេររបស់អ្នក និងធ្វើឲ្យឯកសាររបស់អ្នកអានងាយ សម្តែងអារម្មណ៍បានល្អ ឬមានភាពជាអាជីព។",
+      },
+      {
+        title: "ប្តូរពណ៌អត្ថបទ",
+        desc: "Notepad អនឡាញនេះអនុញ្ញាតឲ្យអ្នកបន្លិចចំណុចសំខាន់ៗ និងបន្ថែមភាពច្បាស់លាស់ដោយការប្តូរពណ៌អត្ថបទ ដែលជាឧបករណ៍រៀបចំទ្រង់ទ្រាយសាមញ្ញ តែមានអានុភាពសម្រាប់អ្នកសរសេរគ្រប់រូប។",
+      },
+      {
+        title: "បម្លែងសម្លេងទៅជាអត្ថបទដោយ AI ដោយគ្មានកំហុស",
+        desc: "និយាយគំនិតរបស់អ្នក ហើយមើលវាបង្ហាញលើអេក្រង់ដោយភាពត្រឹមត្រូវខ្ពស់។ មុខងារ AI បម្លែងសម្លេងទៅជាអត្ថបទរបស់ Notepad នេះនឹងបម្លែងសម្លេងរបស់អ្នកទៅជាអត្ថបទស្អាត និងគ្មានកំហុសភ្លាមៗ ដែលជួយសន្សំពេលវេលាបានច្រើន។",
+      },
+      {
+        title: "បង្កើតតំណចែករំលែកបន្ទាប់ពីចូលគណនី",
+        desc: "បន្ទាប់ពីចូលគណនីរួច Notepad របស់យើងអនុញ្ញាតឲ្យអ្នកបង្កើតតំណចែករំលែកពិសេសសម្រាប់កំណត់ត្រាណាមួយ ដែលធ្វើឲ្យការសហការនិងការចែករំលែកលឿនៗងាយស្រួលដូចការចម្លង URL។",
+      },
+      {
+        title: "បង្កើតគណនីដើម្បីរក្សាទុកប្រវត្តិ",
+        desc: "បង្កើតគណនីឥតគិតថ្លៃលើ Notepad នេះ ដើម្បីបើកប្រវត្តិកំណត់ត្រា ដើម្បីឲ្យអ្នកអាចត្រឡប់មកមើល ស្ដារឡើងវិញ និងគ្រប់គ្រងអ្វីៗដែលអ្នកបានសរសេរទាំងអស់នៅកន្លែងតែមួយ។",
+      },
+    ],
+    outro:
+      "ក្រៅពីមុខងារទាំងនេះ ក៏មានមុខងារពិសេសជាច្រើនផ្សេងទៀតដែលអ្នកអាចប្រើ និងរីករាយបានដោយឥតគិតថ្លៃ។",
+  },
 };
 
 export function getHomeFeaturesCopy(locale: string): HomeFeaturesCopy {
