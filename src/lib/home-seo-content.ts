@@ -2626,6 +2626,159 @@ const featuresByLocale: Record<string, HomeFeaturesCopy> = {
     outro:
       "Baya ga waɗannan, akwai wasu fasaloli na musamman da yawa da za ku iya amfani da su kuma ku more su kyauta.",
   },
+  he: {
+    title: "תכונות עיקריות של פנקס הרשימות המקוון",
+    features: [
+      {
+        title: "שמירה אוטומטית אונליין",
+        desc: "פנקס הרשימות המקוון שלנו שומר אוטומטית את העבודה שלך בזמן ההקלדה, כך שלעולם לא תאבד אפילו מילה אחת, גם אם הדפדפן קורס או שסגרת בטעות את הלשונית.",
+      },
+      {
+        title: "הורדה בפורמט TXT ו-PDF",
+        desc: "באמצעות פנקס הרשימות שלנו ניתן לייצא את ההערות שלך באופן מיידי כקובץ TXT או PDF נקי, מה שמקל על שמירה, הדפסה או שיתוף של העבודה שלך ללא חיבור לאינטרנט.",
+      },
+      {
+        title: "מסך מלא",
+        desc: "עברו למצב מסך מלא והשתמשו בפנקס הרשימות נטול ההסחות הזה שמעניק לכם מרחב כתיבה נקי מקצה לקצה, מושלם לכתיבה ממוקדת.",
+      },
+      {
+        title: "אפשרות זום של 200%",
+        desc: "פנקס הרשימות המקוון הזה מאפשר הגדלה עד 200%, מה שמקל על העיניים במהלך כתיבה ממושכת או עבודה עם טקסט קטן בכל מסך.",
+      },
+      {
+        title: "הוספת תמונות, טבלאות, עדכון תאריכים אוטומטי, ייצוא HTML",
+        desc: "מהוספת תמונות וטבלאות מובנות ועד עדכון תאריכים אוטומטי וייצוא התוכן שלך כ-HTML, פנקס הרשימות הזה חורג הרבה מעבר לעריכת טקסט בסיסית.",
+      },
+      {
+        title: "כותרות מ-H1 עד H6",
+        desc: "ארגנו את התוכן שלכם עם היררכיית כותרות מלאה מ-H1 עד H6, מה שמעניק לפנקס הרשימות הזה מבנה של עורך מסמכים מקצועי ישירות בדפדפן.",
+      },
+      {
+        title: "סגנונות גופן שונים",
+        desc: "בחרו מתוך מגוון סגנונות גופן כדי להתאים אישית את חוויית הכתיבה שלכם ולהפוך את המסמכים לקריאים, אקספרסיביים או מקצועיים יותר.",
+      },
+      {
+        title: "שינוי צבע טקסט",
+        desc: "פנקס הרשימות המקוון הזה מאפשר לכם להדגיש נקודות חשובות ולהוסיף בהירות חזותית באמצעות שינוי צבע הטקסט, כלי עיצוב פשוט אך עוצמתי לכל כותב.",
+      },
+      {
+        title: "המרת דיבור לטקסט מבוססת בינה מלאכותית ללא שגיאות",
+        desc: "אמרו את מחשבותיכם וצפו בהן מופיעות על המסך בדיוק גבוה. תכונת ההמרה מדיבור לטקסט מבוססת הבינה המלאכותית של פנקס הרשימות הזה ממירה את קולכם מיד לטקסט נקי וללא שגיאות, כך שתוכלו לחסוך הרבה זמן.",
+      },
+      {
+        title: "יצירת קישור לשיתוף לאחר התחברות",
+        desc: "לאחר התחברות, פנקס הרשימות שלנו מאפשר לכם ליצור קישור ייחודי לשיתוף עבור כל הערה, מה שהופך שיתוף ושיתוף פעולה לפשוטים כמו העתקת כתובת URL.",
+      },
+      {
+        title: "יצירת חשבון לשמירת היסטוריה",
+        desc: "צרו חשבון חינמי בפנקס הרשימות הזה כדי לפתוח את היסטוריית ההערות, כך שתוכלו לעיין, לשחזר ולנהל את כל מה שכתבתם אי פעם במקום אחד.",
+      },
+    ],
+    outro:
+      "בנוסף לכך, יש עוד הרבה תכונות ייחודיות שתוכלו להשתמש בהן וליהנות מהן בחינם.",
+  },
+  hi: {
+    title: "ऑनलाइन नोटपैड की मुख्य विशेषताएँ",
+    features: [
+      {
+        title: "ऑटो सेव ऑनलाइन",
+        desc: "हमारा ऑनलाइन नोटपैड आपके टाइप करते ही आपका काम अपने आप सेव कर देता है, इसलिए आप एक भी शब्द नहीं खोते, चाहे आपका ब्राउज़र क्रैश हो जाए या आप गलती से टैब बंद कर दें।",
+      },
+      {
+        title: "TXT और PDF फॉर्मेट में डाउनलोड करें",
+        desc: "हमारे नोटपैड से आप अपनी नोट्स को तुरंत एक साफ TXT या PDF फाइल के रूप में एक्सपोर्ट कर सकते हैं, जिससे इसे सेव करना, प्रिंट करना या ऑफलाइन शेयर करना आसान हो जाता है।",
+      },
+      {
+        title: "फुल स्क्रीन",
+        desc: "फुल-स्क्रीन मोड पर स्विच करें और इस बिना ध्यान भटकाने वाले नोटपैड का उपयोग करें, जो आपको एक साफ और किनारे से किनारे तक लिखने का कैनवास देता है, जो फोकस्ड लेखन के लिए बिल्कुल सही है।",
+      },
+      {
+        title: "200% ज़ूम फीचर",
+        desc: "यह ऑनलाइन नोटपैड आपको 200% तक ज़ूम करने की सुविधा देता है, जिससे लंबे लेखन सत्रों में या छोटे टेक्स्ट के साथ काम करते समय आंखों पर कम दबाव पड़ता है।",
+      },
+      {
+        title: "छवियाँ, टेबल, ऑटो-अपडेट तिथियाँ, HTML एक्सपोर्ट जोड़ें",
+        desc: "छवियाँ और संरचित टेबल जोड़ने से लेकर तिथियों के ऑटो-अपडेट और आपकी सामग्री को HTML के रूप में एक्सपोर्ट करने तक, यह नोटपैड साधारण टेक्स्ट एडिटिंग से कहीं आगे है।",
+      },
+      {
+        title: "H1 से H6 तक हेडिंग्स",
+        desc: "अपनी सामग्री को H1 से H6 तक की पूरी हेडिंग हायरार्की के साथ व्यवस्थित करें, जिससे यह नोटपैड आपके ब्राउज़र में ही एक प्रोफेशनल डॉक्यूमेंट एडिटर जैसी संरचना देता है।",
+      },
+      {
+        title: "विभिन्न फ़ॉन्ट स्टाइल्स",
+        desc: "अपने लेखन अनुभव को व्यक्तिगत बनाने और अपने दस्तावेज़ों को अधिक पठनीय, अभिव्यक्तिपूर्ण या पेशेवर बनाने के लिए विभिन्न फ़ॉन्ट स्टाइल्स में से चुनें।",
+      },
+      {
+        title: "टेक्स्ट का रंग बदलें",
+        desc: "यह ऑनलाइन नोटपैड आपको टेक्स्ट का रंग बदलकर महत्वपूर्ण बिंदुओं को हाइलाइट करने और दृश्य स्पष्टता जोड़ने की सुविधा देता है, जो किसी भी लेखक के लिए एक सरल लेकिन शक्तिशाली फ़ॉर्मेटिंग टूल है।",
+      },
+      {
+        title: "AI-संचालित स्पीच टू टेक्स्ट बिना किसी त्रुटि के",
+        desc: "अपने विचार बोलें और उन्हें उच्च सटीकता के साथ स्क्रीन पर दिखाई देते हुए देखें। इस नोटपैड की AI-संचालित स्पीच-टू-टेक्स्ट सुविधा आपकी आवाज़ को तुरंत साफ और त्रुटिरहित टेक्स्ट में बदल देती है, जिससे आपका बहुत समय बचता है।",
+      },
+      {
+        title: "साइन इन के बाद शेयर करने योग्य लिंक बनाएं",
+        desc: "साइन इन करने के बाद, हमारा नोटपैड किसी भी नोट के लिए एक यूनिक शेयर करने योग्य लिंक बनाने की सुविधा देता है, जिससे सहयोग और तेज़ शेयरिंग URL कॉपी करने जितना आसान हो जाता है।",
+      },
+      {
+        title: "इतिहास रिकॉर्ड करने के लिए अकाउंट बनाएं",
+        desc: "इस नोटपैड पर एक मुफ्त अकाउंट बनाएं ताकि नोट हिस्ट्री अनलॉक हो सके और आप अपनी लिखी हुई हर चीज़ को एक ही जगह पर देख, रिकवर और मैनेज कर सकें।",
+      },
+    ],
+    outro:
+      "इनके अलावा भी कई अन्य अनोखी सुविधाएँ हैं जिन्हें आप मुफ्त में उपयोग कर सकते हैं और आनंद ले सकते हैं।",
+  },
+  hu: {
+    title: "Az online jegyzettömb fő funkciói",
+    features: [
+      {
+        title: "Automatikus online mentés",
+        desc: "Az online jegyzettömb automatikusan menti a munkádat gépelés közben, így soha nem veszíted el egyetlen szavadat sem, még akkor sem, ha a böngésző összeomlik vagy véletlenül bezárod a fület.",
+      },
+      {
+        title: "Letöltés TXT és PDF formátumban",
+        desc: "A jegyzettömbünkkel azonnal exportálhatod a jegyzeteidet tiszta TXT vagy PDF fájlként, így könnyen elmentheted, kinyomtathatod vagy megoszthatod a munkádat offline.",
+      },
+      {
+        title: "Teljes képernyő",
+        desc: "Válts teljes képernyős módra, és használd ezt a zavaró tényezőktől mentes jegyzettömböt, amely tiszta, széltől szélig írófelületet biztosít, tökéletes a koncentrált íráshoz.",
+      },
+      {
+        title: "200%-os nagyítási funkció",
+        desc: "Ez az online jegyzettömb akár 200%-os nagyítást is lehetővé tesz, így kíméli a szemet hosszú írási munkamenetek során vagy kis szöveg olvasásakor bármilyen képernyőn.",
+      },
+      {
+        title: "Képek, táblázatok beszúrása, automatikus dátumfrissítés, HTML export",
+        desc: "A képek és strukturált táblázatok beszúrásától kezdve az automatikus dátumfrissítésen át a tartalom HTML-ként történő exportálásáig ez a jegyzettömb messze túlmutat az alapvető szövegszerkesztésen.",
+      },
+      {
+        title: "Címsorok H1-től H6-ig",
+        desc: "Rendezd a tartalmadat teljes címsor-hierarchiával H1-től H6-ig, így ez a jegyzettömb egy valódi dokumentumszerkesztő struktúráját kapja a böngésződben.",
+      },
+      {
+        title: "Különböző betűstílusok",
+        desc: "Válassz különböző betűstílusok közül, hogy személyre szabhasd az írási élményt, és a dokumentumaid olvashatóbbak, kifejezőbbek vagy professzionálisabbak legyenek.",
+      },
+      {
+        title: "Szöveg színének megváltoztatása",
+        desc: "Ez az online jegyzettömb lehetővé teszi a fontos pontok kiemelését és a vizuális átláthatóság növelését a szöveg színének megváltoztatásával, ami egy egyszerű, de erőteljes formázóeszköz minden író számára.",
+      },
+      {
+        title: "Mesterséges intelligencia által támogatott beszédfelismerés szöveggé hibák nélkül",
+        desc: "Mondd ki a gondolataidat, és figyeld, ahogy nagy pontossággal megjelennek a képernyőn. Ennek a jegyzettömbnek az AI-alapú beszédből szöveggé alakító funkciója azonnal tiszta, hibamentes szöveggé alakítja a hangodat, így sok időt takaríthatsz meg.",
+      },
+      {
+        title: "Megosztható link létrehozása bejelentkezés után",
+        desc: "Bejelentkezés után a jegyzettömbünk lehetővé teszi, hogy bármely jegyzethez egyedi megosztható linket hozz létre, így az együttműködés és a gyors megosztás olyan egyszerű, mint egy URL másolása.",
+      },
+      {
+        title: "Fiók létrehozása az előzmények rögzítéséhez",
+        desc: "Hozz létre egy ingyenes fiókot ezen a jegyzettömbön, hogy elérd a jegyzetelőzményeket, így újra megtekintheted, helyreállíthatod és kezelheted mindazt, amit valaha írtál, egy helyen.",
+      },
+    ],
+    outro:
+      "Ezeken kívül még sok más egyedi funkció is elérhető, amelyeket ingyen használhatsz és élvezhetsz.",
+  },
 };
 
 export function getHomeFeaturesCopy(locale: string): HomeFeaturesCopy {
