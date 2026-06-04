@@ -4104,6 +4104,567 @@ const featuresByLocale: Record<string, HomeFeaturesCopy> = {
     outro:
       "Эдгээрээс гадна та үнэгүй ашиглаж, таашааж болох олон бусад өвөрмөц боломжууд бий.",
   },
+  nv: {
+    title: "Naaltsoos Online yázhí bik’ehgo bee áká’áníłt’áá’ígíí",
+    features: [
+      {
+        title: "Online doo łahgo ádingo áká’áníłt’áá’ígíí",
+        desc: "Nił naaltsoos online bik’ehgo shił bééhózinígíí áádóó nida’iilyé yázhí bik’ehgo áká’áníłt’áá’ígíí, éí biniinaa t’áá ajiłii t’áá yá’át’ééh dooleeł, browser nílínígíí ííł’ínígíí dóó tab yázhí ádingo adahodííłt’įįhígíí daaztsałígíí bee doo nihwiiłnááh da.",
+      },
+      {
+        title: "TXT dóó PDF bee naaltsoos yázhí bikáá’ áníłt’áá’ígíí",
+        desc: "Naaltsoos online yázhí bee shikaadééłt’áá’ígíí t’áá anáá’í bikáá’ áníłt’áá’ígíí TXT dóó PDF yázhí bee, éí biniinaa bee áká’áníłt’áá’ígíí, bee áłts’íísí, dóó offline bee nihił hólǫ́.",
+      },
+      {
+        title: "T’áá ajiłii bikáá’ łahgo áníłt’áá’ígíí",
+        desc: "Full-screen bee áníłt’áá’ígíí bee yá’át’ééhgo áníłt’áá’ígíí, éí doo łahgo ádingo naaltsoos yázhí bee t’áá ajiłii bikáá’ bee shikaadééłt’áá’ígíí, bee hózhǫ́ǫ́go nidahwiil’aahígíí.",
+      },
+      {
+        title: "200% bee yit’éédą́ą́’ áníłt’áá’ígíí",
+        desc: "Naaltsoos online yázhí bee 200% bikáá’ yit’éédą́ą́’ áníłt’áá’ígíí, éí biniinaa t’áá ajiłii bee shikaadééłt’áá’ígíí dóó t’óó yázhí bee nida’iilyégo doo nihwiiłnááh da.",
+      },
+      {
+        title: "Hózhǫ́ǫ́go naaltsoos bee bikáá’ áníłt’áá’ígíí, table dóó HTML bee áká’áníłt’áá’ígíí",
+        desc: "Shikaadééłt’áá’ígíí bee naaltsoos online yázhí t’áá ajiłii bikáá’ áníłt’áá’ígíí, images dóó tables bee áká’áníłt’áá’ígíí dóó HTML bikáá’ áníłt’áá’ígíí, éí doo t’áá yázhí bee shikaadééłt’áá’ígíí da.",
+      },
+      {
+        title: "H1 dóó H6 bee naaltsoos yázhí bikáá’ áníłt’áá’ígíí",
+        desc: "H1 dóó H6 bee naaltsoos yázhí bikáá’ áníłt’áá’ígíí bee shikaadééłt’áá’ígíí, éí t’áá ajiłii bikáá’ áníłt’áá’ígíí dóó document editor yázhí bikáá’ áníłt’áá’ígíí.",
+      },
+      {
+        title: "Naaltsoos bee t’óó ahéhee’ bee át’éego áníłt’áá’ígíí",
+        desc: "T’óó ahéhee’ font styles bee át’éego bee áníłt’áá’ígíí bee nizhónígo bee shikaadééłt’áá’ígíí, éí t’áá ajiłii bee yá’át’ééhgo bee naaltsoos yázhí.",
+      },
+      {
+        title: "Naaltsoos bee bikáá’ ííł’ínígíí yázhí bee áníłt’áá’ígíí",
+        desc: "Naaltsoos online yázhí bee t’áá ajiłii bikáá’ bee ííł’ínígíí áádóó t’áá yá’át’ééhgo bee shikaadééłt’áá’ígíí, éí t’áá ajiłii bee áká’áníłt’áá’ígíí.",
+      },
+      {
+        title: "AI bee yá’át’ééhgo shííłt’áá’ígíí bee naaltsoos",
+        desc: "Nihił shikaadééłt’áá’ígíí bee shííłt’áá’ígíí dóó t’áá ajiłii bikáá’ áníłt’áá’ígíí, AI bee naaltsoos yázhí bee shííłt’áá’ígíí doo łahgo ádingo.",
+      },
+      {
+        title: "Sign-in yázhí bikáá’ áníłt’áá’ígíí bee link áníłt’áá’ígíí",
+        desc: "Sign-in bikáá’ áníłt’áá’ígíí dóó naaltsoos online yázhí bee link t’áá ajiłii áníłt’áá’ígíí, éí bee t’áá yá’át’ééhgo bee shikaadééłt’áá’ígíí.",
+      },
+      {
+        title: "Account áníłt’áá’ígíí bee history áká’áníłt’áá’ígíí",
+        desc: "Free account bee naaltsoos online yázhí bee history áká’áníłt’áá’ígíí, éí biniinaa t’áá ajiłii bee naaltsoos yázhí bee shikaadééłt’áá’ígíí.",
+      },
+    ],
+    outro:
+      "T’áá ajiłii bee áádóó t’óó ahéhee’ bee áníłt’áá’ígíí, éí doo łahgo ádingo bee shikaadééłt’áá’ígíí.",
+  },
+  ne: {
+    title: "अनलाइन नोटप्याडका मुख्य विशेषताहरू",
+    features: [
+      {
+        title: "अनलाइन स्वतः सेभ",
+        desc: "तपाईं टाइप गर्दै गर्दा हाम्रो अनलाइन नोटप्याडले स्वतः तपाईंको काम सेभ गर्छ, त्यसैले ब्राउजर क्र्यास भए पनि वा तपाईंले गल्तीले ट्याब बन्द गरे पनि तपाईंको एक शब्द पनि हराउँदैन।",
+      },
+      {
+        title: "TXT र PDF ढाँचामा डाउनलोड गर्नुहोस्",
+        desc: "हाम्रो नोटप्याडबाट तपाईंले आफ्ना नोटहरू तुरुन्तै सफा TXT वा PDF फाइलको रूपमा एक्सपोर्ट गर्न सक्नुहुन्छ, जसले सेभ, प्रिन्ट वा अफलाइन सेयर गर्न सजिलो बनाउँछ।",
+      },
+      {
+        title: "फुल स्क्रिन",
+        desc: "फुल स्क्रिन मोडमा स्विच गर्नुहोस् र यो विचलनरहित नोटप्याडले तपाईंलाई किनारादेखि किनारासम्म सफा लेखन क्यानभास दिन्छ, जुन केन्द्रित लेखन सत्रका लागि उत्तम हुन्छ।",
+      },
+      {
+        title: "200% जुम सुविधा",
+        desc: "यो अनलाइन नोटप्याडले 200% सम्म जुम गर्न दिन्छ, जसले लामो लेखन सत्र वा सानो टेक्स्टसँग काम गर्दा आँखालाई सजिलो बनाउँछ।",
+      },
+      {
+        title: "तस्बिर, तालिका राख्नुहोस्, मिति स्वतः अपडेट, HTML एक्सपोर्ट",
+        desc: "तस्बिर र संरचित तालिकाहरू राख्नेदेखि लिएर मिति स्वतः अपडेट गर्ने र तपाईंको सामग्रीलाई HTML रूपमा एक्सपोर्ट गर्नेसम्म, यो नोटप्याड सामान्य टेक्स्ट एडिटिङभन्दा धेरै अगाडि छ।",
+      },
+      {
+        title: "H1 देखि H6 सम्मका हेडिङहरू",
+        desc: "H1 देखि H6 सम्मको पूर्ण हेडिङ संरचना प्रयोग गरेर आफ्नो सामग्री व्यवस्थित गर्नुहोस्, जसले यो नोटप्याडलाई ब्राउजरमै एक प्रोफेशनल डकुमेन्ट एडिटरको संरचना दिन्छ।",
+      },
+      {
+        title: "विभिन्न फन्ट शैलीहरू",
+        desc: "तपाईंको लेखन अनुभवलाई व्यक्तिगत बनाउन विभिन्न फन्ट शैलीहरू छनोट गर्नुहोस् र आफ्नो डकुमेन्टलाई अझ पढ्न सजिलो, अभिव्यक्तिपूर्ण वा व्यावसायिक बनाउनुहोस्।",
+      },
+      {
+        title: "टेक्स्टको रङ परिवर्तन गर्नुहोस्",
+        desc: "यो अनलाइन नोटप्याडले महत्त्वपूर्ण बुँदाहरू हाइलाइट गर्न र टेक्स्टको रङ परिवर्तन गरेर दृश्य स्पष्टता बढाउन मद्दत गर्छ, जुन हरेक लेखकका लागि सरल तर शक्तिशाली फर्म्याटिङ टुल हो।",
+      },
+      {
+        title: "AI-संचालित स्पीच टु टेक्स्ट (त्रुटिविना)",
+        desc: "आफ्ना विचारहरू बोल्नुहोस् र ती उच्च शुद्धतासहित स्क्रिनमा देखिनुहोस्। यस नोटप्याडको AI-संचालित स्पीच-टु-टेक्स्ट फिचरले तपाईंको आवाजलाई तुरुन्तै सफा र त्रुटिविहीन टेक्स्टमा रूपान्तरण गर्छ, जसले तपाईंको धेरै समय बचत गर्छ।",
+      },
+      {
+        title: "साइन इन पछि सेयर गर्न मिल्ने लिंक बनाउनुहोस्",
+        desc: "साइन इन गरेपछि हाम्रो नोटप्याडले कुनै पनि नोटका लागि विशेष सेयर गर्न मिल्ने लिंक बनाउन दिन्छ, जसले सहकार्य र छिटो सेयरिङलाई URL कपी गरेजस्तै सजिलो बनाउँछ।",
+      },
+      {
+        title: "इतिहास रेकर्ड गर्न खाता बनाउनुहोस्",
+        desc: "यस नोटप्याडमा निःशुल्क खाता बनाउनुहोस् ताकि नोट इतिहास अनलक होस् र तपाईंले लेखेका सबै कुरा एकै ठाउँमा पुनः हेर्न, पुनः प्राप्त गर्न र व्यवस्थापन गर्न सक्नुहोस्।",
+      },
+    ],
+    outro:
+      "यी बाहेक पनि धेरै अन्य अनौठा सुविधाहरू छन् जुन तपाईंले निःशुल्क प्रयोग गर्न र आनन्द लिन सक्नुहुन्छ।",
+  },
+  no: {
+    title: "Viktige funksjoner i nettbasert notatblokk",
+    features: [
+      {
+        title: "Automatisk lagring på nett",
+        desc: "Vår nettbaserte notatblokk lagrer arbeidet ditt automatisk mens du skriver, slik at du aldri mister et eneste ord, selv om nettleseren krasjer eller du ved et uhell lukker fanen.",
+      },
+      {
+        title: "Last ned i TXT- og PDF-formater",
+        desc: "Med vår notatblokk kan du eksportere notatene dine umiddelbart som en ren TXT- eller PDF-fil, noe som gjør det enkelt å lagre, skrive ut eller dele arbeidet ditt offline.",
+      },
+      {
+        title: "Fullskjerm",
+        desc: "Bytt til fullskjermmodus og la denne distraksjonsfrie notatblokken gi deg et rent skriveområde fra kant til kant, perfekt for konsentrerte skriveøkter.",
+      },
+      {
+        title: "200 % zoom-funksjon",
+        desc: "Denne nettbaserte notatblokken lar deg zoome inn opptil 200 %, noe som gjør det lettere for øynene under lange skriveøkter eller når du arbeider med liten tekst på hvilken som helst skjerm.",
+      },
+      {
+        title: "Sett inn bilder, tabeller, automatisk datouppdatering, HTML-eksport",
+        desc: "Fra å sette inn bilder og strukturerte tabeller til automatisk oppdatering av datoer og eksport av innholdet ditt som HTML, går denne notatblokken langt utover enkel tekstredigering.",
+      },
+      {
+        title: "Overskrifter fra H1 til H6",
+        desc: "Organiser innholdet ditt med et komplett overskriftshierarki fra H1 til H6, noe som gir denne notatblokken strukturen til en fullverdig dokumentredigerer rett i nettleseren.",
+      },
+      {
+        title: "Ulike skrifttyper",
+        desc: "Velg blant ulike skrifttyper for å tilpasse skriveopplevelsen din og gjøre notatene dine mer lesbare, uttrykksfulle eller profesjonelle.",
+      },
+      {
+        title: "Endre tekstfarge",
+        desc: "Denne nettbaserte notatblokken lar deg fremheve viktige punkter og øke visuell tydelighet ved å endre tekstfarge, et enkelt men kraftig formateringsverktøy for alle skribenter.",
+      },
+      {
+        title: "AI-drevet tale-til-tekst uten feil",
+        desc: "Si tankene dine og se dem dukke opp på skjermen med høy nøyaktighet. Denne notatblokkens AI-drevne tale-til-tekst-funksjon gjør stemmen din umiddelbart om til ren og feilfri tekst, slik at du sparer mye tid.",
+      },
+      {
+        title: "Generer delbar lenke etter innlogging",
+        desc: "Når du er logget inn, lar vår notatblokk deg generere en unik delbar lenke for ethvert notat, noe som gjør samarbeid og rask deling like enkelt som å kopiere en URL.",
+      },
+      {
+        title: "Opprett konto for å lagre historikk",
+        desc: "Opprett en gratis konto i denne notatblokken for å låse opp notathistorikk, slik at du kan se, gjenopprette og administrere alt du noen gang har skrevet, på ett sted.",
+      },
+    ],
+    outro:
+      "I tillegg til dette finnes det mange andre unike funksjoner du kan bruke og nyte gratis.",
+  },
+  om: {
+    title: "Amaloota Ijoo Notepad Toora Intarneetii",
+    features: [
+      {
+        title: "Ofumaan Kuusuu Toora Intarneetii",
+        desc: "Notepad keenya toora intarneetii irratti yoo barreessitu hojii kee ofumaan kuusa, kanaaf jecha browser kee yoo caccabe ykn tab yoo dogoggoraan cufte iyyuu jecha tokko illee hin dhabdu.",
+      },
+      {
+        title: "Furmaata TXT fi PDF irratti buufachuu",
+        desc: "Notepad keenya fayyadamuun yaadawwan kee saffisaan akka faayilii TXT ykn PDF qulqulluu ta’etti al-erguu dandeessa, kunis kuufachuu, maxxansuu ykn alatti qooduu salphaa taasisa.",
+      },
+      {
+        title: "Sikirii Guutuu",
+        desc: "Haala sikirii guutuu irratti jijjiiriitii notepad jeequmsa hin qabne kun bakka barreessuu qulqulluu daangaa irraa gara daangaa siif kenna, kunis yeroo barreessuu irratti xiyyeeffachuuf mijataa dha.",
+      },
+      {
+        title: "Amaloota Zuumii 200%",
+        desc: "Notepad toora intarneetii kun hanga 200% tti guddisuu siif eeyyama, kunis yeroo dheeraa barreessuu ykn barruu xiqqaa irratti hojjechuu keessatti ijaaf salphaa taasisa.",
+      },
+      {
+        title: "Suuraa, gabatee galchuu, guyyaa ofumaan haaromsuu, HTML al-erguu",
+        desc: "Suuraa fi gabateewwan sirnaan qindaa’an galchuu irraa kaasee hanga guyyaa ofumaan haaromsuu fi qabiyyee kee HTML taasisuun al-erguutti, notepad kun gulaallii barruu salphaa irra darbee tajaajila bal’aa kenna.",
+      },
+      {
+        title: "Mataduree H1 irraa hanga H6 tti",
+        desc: "Qabiyyee kee sirnaan qindeessi mata duree H1 irraa hanga H6 tti fayyadamuun, kunis notepad kanaaf bocaa gulaalaa sanadootaa sirrii ta’e browser kee keessatti kenna.",
+      },
+      {
+        title: "Akkaataa Font garaagaraa",
+        desc: "Akkaataa font garaagaraa keessaa filadhuun muuxannoo barreessuu kee dhuunfachiisi, akkasumas sanadoota kee dubbifamuu salphaa, ibsaa fi ogummaa qabu taasisi.",
+      },
+      {
+        title: "Halluu Barreeffamaa Jijjiiruu",
+        desc: "Notepad toora intarneetii kun qixxata ijoo adda baasuuf fi iftoomina mul’ataa dabaluuf halluu barreeffamaa jijjiiru siif eeyyama, kunis meeshaa gulaallii salphaa garuu humna guddaa qabu dha.",
+      },
+      {
+        title: "Sagalee gara Barreeffamaa (AI’n hojjetamu, dogoggora malee)",
+        desc: "Yaada kee dubbadhu, isaanis sirritti iskiriinii irratti akka mul’atan ilaali. Amalni AI’n hojjetame kan sagalee gara barreeffamaa jijjiiru kun sagalee kee hatattamaan gara barreeffama qulqulluu fi dogoggora hin qabneetti jijjiira, kanaanis yeroo baay’ee si qusata.",
+      },
+      {
+        title: "Erga seentee booda link qoodamuu danda’u uumuu",
+        desc: "Erga seentee booda, notepad keenya yaadannoo kamiyyuu irratti link qoodamuu danda’u addaa uumuuf si dandeessisa, kunis waliin hojjechuu fi saffisaan qooduu URL koppii gochuu qofaatti salphisa.",
+      },
+      {
+        title: "Seenaa galmeessuuf account uumu",
+        desc: "Notepad kana irratti account bilisaa uumiiti seenaa yaadannoo banadhu, kanaanis wanta barreessite hunda bakka tokko keessatti irra deebi’uun ilaaluu, deebisanii argachuu fi bulchuu dandeessa.",
+      },
+    ],
+    outro:
+      "Kana malees amaloota addaa hedduu biroo bilisaan itti fayyadamuu fi itti gammaduu ni dandeessa.",
+  },
+  ps: {
+    title: "د آنلاین نوټپېډ مهمې ځانګړتیاوې",
+    features: [
+      {
+        title: "آنلاین خودکار خوندي کول",
+        desc: "زموږ آنلاین نوټپېډ ستا کار په اتومات ډول د لیکلو پر مهال خوندي کوي، نو که براوزر خراب شي یا ته په تېروتنه ټب بند کړې هم، هېڅ یو کلمه به له لاسه ورنکړې.",
+      },
+      {
+        title: "د TXT او PDF بڼه کې ډاونلوډ",
+        desc: "زموږ نوټپېډ سره ته کولی شې خپل نوټونه سمدستي د TXT یا PDF پاک فایل په بڼه صادر کړې، چې خوندي کول، چاپ کول او آفلاین شریکول اسانه کړي.",
+      },
+      {
+        title: "بشپړ سکرین",
+        desc: "بشپړ سکرین حالت ته لاړ شه او دا د پام نه اړوونکی نوټپېډ دې ته اجازه ورکړه چې تا ته له یوې څنډې تر بلې پاک د لیکلو ساحه درکړي، چې د تمرکز لپاره غوره ده.",
+      },
+      {
+        title: "۲۰۰٪ زوم ځانګړتیا",
+        desc: "دا آنلاین نوټپېډ تا ته تر ۲۰۰٪ پورې د زوم کولو اجازه درکوي، چې د اوږدو لیکلو پر مهال یا د کوچني متن سره کار کولو کې سترګو ته اسانتیا ورکوي.",
+      },
+      {
+        title: "انځورونه، جدول، د نېټو خودکار تازه کول، HTML صادرول",
+        desc: "له انځورونو او منظم جدولونو د داخلولو څخه نیولې تر د نېټو خودکار تازه کولو او د HTML په بڼه د محتوا صادرولو پورې، دا نوټپېډ له عادي متن ایډیټنګ څخه ډېر وړاندې دی.",
+      },
+      {
+        title: "له H1 څخه تر H6 پورې سرلیکونه",
+        desc: "خپل محتوا د H1 څخه تر H6 پورې د بشپړ سرلیک جوړښت سره منظم کړه، چې دا نوټپېډ په براوزر کې د مسلکي سند ایډیټر بڼه ورکوي.",
+      },
+      {
+        title: "بېلابېل فونټ سټایلونه",
+        desc: "د بېلابېلو فونټ سټایلونو څخه انتخاب وکړه ترڅو د لیکلو تجربه شخصي کړې او خپل اسناد لا ډېر د لوستلو وړ، څرګند او مسلکي کړې.",
+      },
+      {
+        title: "د متن رنګ بدلول",
+        desc: "دا آنلاین نوټپېډ تا ته اجازه درکوي چې مهم ټکي روښانه کړې او د متن رنګ بدلولو سره بصري وضاحت زیات کړې، چې د هر لیکوال لپاره ساده خو قوي فورمېټینګ وسیله ده.",
+      },
+      {
+        title: "د AI په مرسته غږ ته متن (بې له تېروتنې)",
+        desc: "خپل فکرونه ووایه او وګوره چې په لوړه دقت سره په سکرین څرګندېږي. د دې نوټپېډ د AI پر بنسټ غږ-ته-متن ځانګړتیا ستا غږ سمدستي پاک او بې له تېروتنې متن ته اړوي، نو ته ډېر وخت سپمولی شې.",
+      },
+      {
+        title: "له ننوتلو وروسته د شریکولو لینک جوړول",
+        desc: "کله چې ته داخل شې، زموږ نوټپېډ تا ته اجازه درکوي چې د هر نوټ لپاره ځانګړی د شریکولو لینک جوړ کړې، چې همکاري او چټک شریکول د URL د کاپي کولو په څېر اسانه کوي.",
+      },
+      {
+        title: "د تاریخ ثبتولو لپاره حساب جوړ کړه",
+        desc: "په دې نوټپېډ کې وړیا حساب جوړ کړه ترڅو د نوټونو تاریخ خلاص شي، او ته وکولی شې خپل ټول لیکل شوي شیان بیا وګورې، بیرته ترلاسه کړې او په یوه ځای کې یې اداره کړې.",
+      },
+    ],
+    outro:
+      "له دې پرته ډېر نور ځانګړي فیچرونه هم شته چې ته یې وړیا کارولی او خوند ترې اخیستلی شې.",
+  },
+  fa: {
+    title: "ویژگی‌های اصلی نوت‌پد آنلاین",
+    features: [
+      {
+        title: "ذخیره‌سازی خودکار آنلاین",
+        desc: "نوت‌پد آنلاین ما هنگام تایپ به‌طور خودکار کارهای شما را ذخیره می‌کند، بنابراین حتی اگر مرورگر شما خراب شود یا به‌طور تصادفی تب را ببندید، حتی یک کلمه هم از دست نمی‌دهید.",
+      },
+      {
+        title: "دانلود در فرمت‌های TXT و PDF",
+        desc: "با نوت‌پد ما می‌توانید یادداشت‌های خود را فوراً به‌صورت فایل TXT یا PDF تمیز خروجی بگیرید، که ذخیره‌سازی، چاپ یا اشتراک‌گذاری آفلاین را آسان می‌کند.",
+      },
+      {
+        title: "تمام‌صفحه",
+        desc: "به حالت تمام‌صفحه بروید و بگذارید این نوت‌پد بدون حواس‌پرتی یک بوم نوشتاری تمیز از لبه تا لبه در اختیار شما قرار دهد، که برای نوشتن‌های متمرکز بسیار مناسب است.",
+      },
+      {
+        title: "ویژگی بزرگ‌نمایی ۲۰۰٪",
+        desc: "این نوت‌پد آنلاین به شما اجازه می‌دهد تا ۲۰۰٪ بزرگ‌نمایی کنید، که برای جلسات طولانی نوشتن یا کار با متن‌های کوچک روی هر صفحه‌نمایش، فشار چشم را کاهش می‌دهد.",
+      },
+      {
+        title: "درج تصویر، جدول، به‌روزرسانی خودکار تاریخ، خروجی HTML",
+        desc: "از درج تصاویر و جدول‌های ساختاریافته گرفته تا به‌روزرسانی خودکار تاریخ و خروجی گرفتن از محتوا به‌صورت HTML، این نوت‌پد بسیار فراتر از ویرایش ساده متن است.",
+      },
+      {
+        title: "تیترها از H1 تا H6",
+        desc: "محتوای خود را با یک ساختار کامل تیتر از H1 تا H6 سازمان‌دهی کنید، که به این نوت‌پد ساختار یک ویرایشگر حرفه‌ای سند را در مرورگر شما می‌دهد.",
+      },
+      {
+        title: "انواع سبک‌های فونت",
+        desc: "از میان انواع سبک‌های فونت انتخاب کنید تا تجربه نوشتن خود را شخصی‌سازی کرده و اسناد خود را خواناتر، بیانگرتر یا حرفه‌ای‌تر کنید.",
+      },
+      {
+        title: "تغییر رنگ متن",
+        desc: "این نوت‌پد آنلاین به شما اجازه می‌دهد نکات مهم را برجسته کنید و با تغییر رنگ متن، وضوح بصری اضافه کنید؛ یک ابزار ساده اما قدرتمند برای هر نویسنده.",
+      },
+      {
+        title: "تبدیل گفتار به متن با هوش مصنوعی بدون خطا",
+        desc: "افکار خود را بیان کنید و ببینید که با دقت بالا روی صفحه ظاهر می‌شوند. قابلیت تبدیل گفتار به متن مبتنی بر هوش مصنوعی این نوت‌پد، صدای شما را فوراً به متنی تمیز و بدون خطا تبدیل می‌کند، بنابراین زمان زیادی صرفه‌جویی می‌شود.",
+      },
+      {
+        title: "ایجاد لینک قابل اشتراک پس از ورود",
+        desc: "پس از ورود، نوت‌پد ما به شما اجازه می‌دهد برای هر یادداشت یک لینک قابل اشتراک منحصربه‌فرد ایجاد کنید، که همکاری و اشتراک‌گذاری سریع را به سادگی کپی کردن یک URL می‌کند.",
+      },
+      {
+        title: "ایجاد حساب برای ثبت تاریخچه",
+        desc: "یک حساب رایگان در این نوت‌پد ایجاد کنید تا تاریخچه یادداشت‌ها فعال شود و بتوانید همه نوشته‌های خود را در یک مکان مشاهده، بازیابی و مدیریت کنید.",
+      },
+    ],
+    outro:
+      "علاوه بر این‌ها، بسیاری از ویژگی‌های منحصربه‌فرد دیگر نیز وجود دارد که می‌توانید به‌صورت رایگان از آن‌ها استفاده و لذت ببرید.",
+  },
+  pl: {
+    title: "Najważniejsze funkcje notatnika online",
+    features: [
+      {
+        title: "Automatyczne zapisywanie online",
+        desc: "Nasz notatnik online automatycznie zapisuje Twoją pracę podczas pisania, dzięki czemu nigdy nie stracisz ani jednego słowa, nawet jeśli przeglądarka się zawiesi lub przypadkowo zamkniesz kartę.",
+      },
+      {
+        title: "Pobieranie w formacie TXT i PDF",
+        desc: "W naszym notatniku możesz natychmiast eksportować swoje notatki jako czysty plik TXT lub PDF, co ułatwia zapisywanie, drukowanie i udostępnianie pracy offline.",
+      },
+      {
+        title: "Tryb pełnoekranowy",
+        desc: "Przełącz się na tryb pełnoekranowy i pozwól temu notatnikowi bez rozpraszania zapewnić Ci czyste pole do pisania od krawędzi do krawędzi, idealne do skupionych sesji pisania.",
+      },
+      {
+        title: "Funkcja powiększenia 200%",
+        desc: "Ten notatnik online pozwala powiększyć tekst aż do 200%, co ułatwia czytanie podczas długich sesji pisania lub pracy z małym tekstem na każdym ekranie.",
+      },
+      {
+        title: "Wstawianie obrazów, tabel, automatyczna aktualizacja dat, eksport HTML",
+        desc: "Od wstawiania obrazów i uporządkowanych tabel po automatyczną aktualizację dat i eksport treści jako HTML — ten notatnik wykracza daleko poza podstawową edycję tekstu.",
+      },
+      {
+        title: "Nagłówki od H1 do H6",
+        desc: "Organizuj swoją treść za pomocą pełnej hierarchii nagłówków od H1 do H6, dzięki czemu ten notatnik działa jak profesjonalny edytor dokumentów bezpośrednio w przeglądarce.",
+      },
+      {
+        title: "Różne style czcionek",
+        desc: "Wybierz spośród różnych stylów czcionek, aby spersonalizować swoje doświadczenie pisania i sprawić, by Twoje dokumenty były bardziej czytelne, wyraziste lub profesjonalne.",
+      },
+      {
+        title: "Zmień kolor tekstu",
+        desc: "Ten notatnik online pozwala wyróżniać kluczowe punkty i zwiększać przejrzystość wizualną poprzez zmianę koloru tekstu — proste, ale bardzo skuteczne narzędzie formatowania dla każdego pisarza.",
+      },
+      {
+        title: "Konwersja mowy na tekst z AI bez błędów",
+        desc: "Wypowiedz swoje myśli, a zobaczysz je na ekranie z dużą dokładnością. Funkcja zamiany mowy na tekst oparta na AI natychmiast zamienia Twój głos w czysty i bezbłędny tekst, co pozwala oszczędzić dużo czasu.",
+      },
+      {
+        title: "Generowanie linku do udostępniania po zalogowaniu",
+        desc: "Po zalogowaniu nasz notatnik umożliwia generowanie unikalnego linku do udostępniania dowolnej notatki, co sprawia, że współpraca i szybkie udostępnianie są tak proste jak skopiowanie adresu URL.",
+      },
+      {
+        title: "Utwórz konto, aby zapisywać historię",
+        desc: "Utwórz darmowe konto w tym notatniku, aby odblokować historię notatek, dzięki czemu możesz przeglądać, odzyskiwać i zarządzać wszystkim, co kiedykolwiek napisałeś, w jednym miejscu.",
+      },
+    ],
+    outro:
+      "Oprócz tego istnieje wiele innych unikalnych funkcji, z których możesz korzystać i cieszyć się nimi za darmo.",
+  },
+  pt: {
+    title: "Principais Recursos do Bloco de Notas Online",
+    features: [
+      {
+        title: "Salvamento Automático Online",
+        desc: "O nosso bloco de notas online salva automaticamente o seu trabalho enquanto você digita, para que você nunca perca uma única palavra, mesmo que o navegador trave ou você feche a aba por engano.",
+      },
+      {
+        title: "Baixar nos formatos TXT e PDF",
+        desc: "Com o nosso bloco de notas, você pode exportar suas anotações instantaneamente como um arquivo TXT ou PDF limpo, facilitando salvar, imprimir ou compartilhar seu trabalho offline.",
+      },
+      {
+        title: "Tela Cheia",
+        desc: "Mude para o modo tela cheia e deixe este bloco de notas livre de distrações oferecer uma área de escrita limpa de ponta a ponta, perfeita para sessões de escrita focadas.",
+      },
+      {
+        title: "Recurso de Zoom 200%",
+        desc: "Este bloco de notas online permite ampliar até 200%, tornando mais confortável para os olhos durante longas sessões de escrita ou ao trabalhar com textos pequenos em qualquer tela.",
+      },
+      {
+        title: "Inserir Imagens, Tabelas, Atualização Automática de Datas, Exportar HTML",
+        desc: "Desde inserir imagens e tabelas estruturadas até atualizar datas automaticamente e exportar seu conteúdo como HTML, este bloco de notas vai muito além da edição básica de texto.",
+      },
+      {
+        title: "Títulos de H1 a H6",
+        desc: "Organize seu conteúdo com uma hierarquia completa de títulos, de H1 a H6, dando a este bloco de notas a estrutura de um editor de documentos profissional diretamente no seu navegador.",
+      },
+      {
+        title: "Diferentes Estilos de Fonte",
+        desc: "Escolha entre vários estilos de fonte para personalizar sua experiência de escrita e tornar seus documentos mais legíveis, expressivos ou profissionais.",
+      },
+      {
+        title: "Alterar Cor do Texto",
+        desc: "Este bloco de notas online permite destacar pontos importantes e adicionar clareza visual ao alterar a cor do texto, uma ferramenta de formatação simples, mas poderosa para qualquer escritor.",
+      },
+      {
+        title: "Conversão de Fala em Texto com IA Sem Erros",
+        desc: "Fale os seus pensamentos e veja-os aparecer na tela com alta precisão. O recurso de fala para texto com IA deste bloco de notas transforma instantaneamente sua voz em texto limpo e sem erros, economizando muito tempo.",
+      },
+      {
+        title: "Gerar Link Compartilhável Após Login",
+        desc: "Depois de fazer login, o nosso bloco de notas permite gerar um link exclusivo compartilhável para qualquer nota, tornando a colaboração e o compartilhamento tão simples quanto copiar uma URL.",
+      },
+      {
+        title: "Criar Conta para Registrar Histórico",
+        desc: "Crie uma conta gratuita neste bloco de notas para desbloquear o histórico de notas, permitindo rever, recuperar e gerir tudo o que você já escreveu, tudo em um só lugar.",
+      },
+    ],
+    outro:
+      "Além disso, há muitos outros recursos únicos que você pode usar e aproveitar gratuitamente.",
+  },
+  qu: {
+    title: "Notepad Online nisqapa allin kayninkuna",
+    features: [
+      {
+        title: "Internetpi auto-save",
+        desc: "Kay online notepadqa llank’aykita qillqachkanki chaymanta sapa kuti auto-saves, chayrayku mana huk simillatachus chinkachinkichu, navegador urmachkan utaq tab mana munasqayki llawqayku chaypas.",
+      },
+      {
+        title: "TXT hinallataq PDF formatpi hurquy",
+        desc: "Kay notepadwanqa notasniykita ch’uyanchasqa TXT utaq PDF file hina utqaylla hurquyta atinki, chaymi ima imapas waqaychay, imprimiy utaq offline qunqayta facilta ruwakun.",
+      },
+      {
+        title: "Tukuy pantalla",
+        desc: "Tukuy pantalla modoman tikray, chaymi kay mana hark’ayniyuq notepadqa ch’uyanchasqa qillqana kanchata qawachisunki, chayqa allinmi concentracionpi qillqaypaq.",
+      },
+      {
+        title: "200% zoom ruwana",
+        desc: "Kay online notepadqa 200%kama zoom ruwanata qusqanki, chaymi ñawiyki mana phiñakunachu chay hatun tiempo qillqaykunapi utaq uchuy qillqawan llank’achkanki chaypi.",
+      },
+      {
+        title: "Rikch’akunata, tabla, fecha auto-actualización, HTML hurquy",
+        desc: "Rikch’akunata churasqanmanta, estructurayuq tablakunamanta hinallataq fecha automatiko actualizasqamanta HTML hina hurqusqankama, kay notepadqa sapa textu edicionmanta aswan hatunmi.",
+      },
+      {
+        title: "H1manta H6kama titulokuna",
+        desc: "Contenido nisqaykita H1manta H6kama titulokunawan allinta organizay, chaymi kay notepadqa profesional document editor hina navegadorniykipi kan.",
+      },
+      {
+        title: "Mana hukninnaq font estilos",
+        desc: "Achka font estilokunamanta akllay, qillqay experienciaykita personalizaypaq, chaymi qillqasqayki aswan leeq, expresivo utaq profesional kananpaq.",
+      },
+      {
+        title: "Qillqa llimp’ita tikray",
+        desc: "Kay online notepadqa allin puntoskunata resaltayta qusqanki hinallataq textu llimp’ita tikraywan sut’ita rikuchiyta yapakun, chayqa llank’aqkunapaq aswan facil hina atiyniyuq herramienta.",
+      },
+      {
+        title: "AIwan yanapasqa rimaymanta qillqaman mana pantayniyuq",
+        desc: "Rimaykita rimay, chaymanta ñawpaq pantalla nisqapi allin chiqaywan rikurinqa. Kay notepadpa AIwan yanapasqa rimaymanta qillqaman tukuylla mana pantayniyuq textuta utqaylla tikran, chaymi achka tiempota qispichisunki.",
+      },
+      {
+        title: "Sign-in urasqanmanta compartikuy link paqarichiy",
+        desc: "Sign-in ruwakusqanmanta, kay notepadqa ima notapas huk ch’iqin compartikuy linkta paqarichiyta qusqanki, chaymi llamk’aykuna yanapanakuy hinallataq utqaylla compartirqa URL copy hina facilmi.",
+      },
+      {
+        title: "Historialta qillqaypaq cuenta ruway",
+        desc: "Kay notepadpi mana qullqiyuq cuenta ruwaspa historialta kichay, chaymi tukuy qillqasqaykita huk lugarllapi kutichiy, kutimuy, hinallataq kamachiy atinki.",
+      },
+    ],
+    outro:
+      "Kaykunamanta hukmanpas achka sapaq ruwaykuna kan, chaykunata mana qullqiyuqta llamk’achiyta atinki.",
+  },
+  ro: {
+    title: "Caracteristici principale ale Notepad-ului online",
+    features: [
+      {
+        title: "Salvare automată online",
+        desc: "Notepad-ul nostru online îți salvează automat munca în timp ce tastezi, astfel încât nu vei pierde niciun cuvânt, chiar dacă browserul se blochează sau închizi accidental fila.",
+      },
+      {
+        title: "Descărcare în formatele TXT și PDF",
+        desc: "Cu notepad-ul nostru poți exporta instant notițele ca fișier TXT sau PDF curat, ceea ce face ușoară salvarea, imprimarea sau partajarea offline.",
+      },
+      {
+        title: "Ecran complet",
+        desc: "Treci în modul ecran complet și lasă acest notepad fără distrageri să îți ofere o suprafață de scriere curată, perfectă pentru sesiuni de redactare concentrate.",
+      },
+      {
+        title: "Funcție de zoom 200%",
+        desc: "Acest notepad online îți permite să mărești până la 200%, făcând mai ușoară citirea în sesiunile lungi de scriere sau atunci când lucrezi cu text mic pe orice ecran.",
+      },
+      {
+        title: "Inserare imagini, tabele, actualizare automată a datelor, export HTML",
+        desc: "De la inserarea imaginilor și a tabelelor structurate până la actualizarea automată a datelor și exportul conținutului ca HTML, acest notepad merge mult dincolo de editarea simplă de text.",
+      },
+      {
+        title: "Titluri de la H1 la H6",
+        desc: "Organizează-ți conținutul cu o ierarhie completă de titluri, de la H1 la H6, oferind acestui notepad structura unui editor de documente direct în browser.",
+      },
+      {
+        title: "Stiluri diferite de font",
+        desc: "Alege dintr-o varietate de stiluri de font pentru a-ți personaliza experiența de scriere și pentru a face documentele mai ușor de citit, mai expresive sau mai profesionale.",
+      },
+      {
+        title: "Schimbarea culorii textului",
+        desc: "Acest notepad online îți permite să evidențiezi punctele importante și să adaugi claritate vizuală prin schimbarea culorii textului, un instrument simplu dar puternic de formatare pentru orice scriitor.",
+      },
+      {
+        title: "Conversie voce-text cu AI fără erori",
+        desc: "Spune-ți gândurile și vezi-le apărând pe ecran cu o acuratețe ridicată. Funcția de conversie voce-text bazată pe AI transformă instant vocea ta în text curat și fără erori, economisind mult timp.",
+      },
+      {
+        title: "Generare link partajabil după autentificare",
+        desc: "După autentificare, notepad-ul nostru îți permite să generezi un link unic de partajare pentru orice notiță, făcând colaborarea și partajarea rapidă la fel de simplă ca un simplu copy-paste al unui URL.",
+      },
+      {
+        title: "Crearea unui cont pentru salvarea istoricului",
+        desc: "Creează un cont gratuit pe acest notepad pentru a debloca istoricul notițelor, astfel încât să poți revizita, recupera și gestiona tot ce ai scris vreodată, într-un singur loc.",
+      },
+    ],
+    outro:
+      "Pe lângă acestea, există multe alte funcții unice pe care le poți folosi și de care te poți bucura gratuit.",
+  },
+  ru: {
+    title: "Основные функции онлайн-блокнота",
+    features: [
+      {
+        title: "Автосохранение онлайн",
+        desc: "Наш онлайн-блокнот автоматически сохраняет вашу работу во время набора текста, поэтому вы никогда не потеряете ни одного слова, даже если браузер зависнет или вы случайно закроете вкладку.",
+      },
+      {
+        title: "Скачать в форматах TXT и PDF",
+        desc: "С нашим блокнотом вы можете мгновенно экспортировать заметки в чистый файл TXT или PDF, что делает сохранение, печать и офлайн-обмен простыми и удобными.",
+      },
+      {
+        title: "Полноэкранный режим",
+        desc: "Переключитесь в полноэкранный режим, и этот блокнот без отвлекающих факторов предоставит вам чистое поле для письма от края до края, идеально подходящее для сосредоточенной работы.",
+      },
+      {
+        title: "Функция увеличения 200%",
+        desc: "Этот онлайн-блокнот позволяет увеличивать масштаб до 200%, что облегчает чтение при длительной работе или при использовании мелкого текста на любом экране.",
+      },
+      {
+        title: "Вставка изображений, таблиц, автоматическое обновление дат, экспорт HTML",
+        desc: "От вставки изображений и структурированных таблиц до автоматического обновления дат и экспорта контента в HTML — этот блокнот выходит далеко за рамки простого редактирования текста.",
+      },
+      {
+        title: "Заголовки от H1 до H6",
+        desc: "Организуйте свой контент с полной иерархией заголовков от H1 до H6, превращая этот блокнот в полноценный редактор документов прямо в браузере.",
+      },
+      {
+        title: "Разные стили шрифтов",
+        desc: "Выбирайте из различных стилей шрифтов, чтобы персонализировать процесс письма и сделать ваши документы более читаемыми, выразительными или профессиональными.",
+      },
+      {
+        title: "Изменение цвета текста",
+        desc: "Этот онлайн-блокнот позволяет выделять ключевые моменты и добавлять визуальную ясность с помощью изменения цвета текста — простой, но мощный инструмент форматирования для любого автора.",
+      },
+      {
+        title: "Распознавание речи в текст на базе ИИ без ошибок",
+        desc: "Говорите свои мысли, и они будут отображаться на экране с высокой точностью. Функция преобразования речи в текст на базе ИИ мгновенно превращает ваш голос в чистый и безошибочный текст, экономя ваше время.",
+      },
+      {
+        title: "Создание ссылки для совместного доступа после входа",
+        desc: "После входа в систему наш блокнот позволяет создавать уникальную ссылку для любой заметки, делая совместную работу и быстрый обмен такими же простыми, как копирование URL.",
+      },
+      {
+        title: "Создать аккаунт для сохранения истории",
+        desc: "Создайте бесплатный аккаунт в этом блокноте, чтобы открыть историю заметок и иметь возможность просматривать, восстанавливать и управлять всеми своими записями в одном месте.",
+      },
+    ],
+    outro:
+      "Кроме этого, существует множество других уникальных функций, которыми вы можете пользоваться бесплатно и с удовольствием.",
+  },
 };
 
 export function getHomeFeaturesCopy(locale: string): HomeFeaturesCopy {
