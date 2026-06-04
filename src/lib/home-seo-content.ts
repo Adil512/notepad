@@ -3339,6 +3339,261 @@ const featuresByLocale: Record<string, HomeFeaturesCopy> = {
     outro:
       "ក្រៅពីមុខងារទាំងនេះ ក៏មានមុខងារពិសេសជាច្រើនផ្សេងទៀតដែលអ្នកអាចប្រើ និងរីករាយបានដោយឥតគិតថ្លៃ។",
   },
+  ko: {
+    title: "온라인 메모장의 주요 기능",
+    features: [
+      {
+        title: "온라인 자동 저장",
+        desc: "온라인 메모장은 입력하는 동안 작업 내용을 자동으로 저장하므로 브라우저가 충돌하거나 실수로 탭을 닫더라도 단 한 글자도 잃어버리지 않습니다.",
+      },
+      {
+        title: "TXT 및 PDF 형식으로 다운로드",
+        desc: "이 메모장을 사용하면 메모를 깔끔한 TXT 또는 PDF 파일로 즉시 내보낼 수 있어 저장, 인쇄 또는 오프라인 공유가 매우 간편합니다.",
+      },
+      {
+        title: "전체 화면",
+        desc: "전체 화면 모드로 전환하면 방해 요소 없는 깨끗한 작업 공간을 제공하여 집중해서 글을 작성하기에 최적의 환경을 만들어 줍니다.",
+      },
+      {
+        title: "200% 확대 기능",
+        desc: "이 온라인 메모장은 최대 200%까지 확대할 수 있어 장시간 글을 작성하거나 작은 글씨를 읽고 편집할 때 눈의 피로를 줄여줍니다.",
+      },
+      {
+        title: "이미지 삽입, 표 추가, 날짜 자동 업데이트, HTML 내보내기",
+        desc: "이미지와 구조화된 표를 삽입하고 날짜를 자동으로 업데이트하며 콘텐츠를 HTML로 내보낼 수 있어, 이 메모장은 기본적인 텍스트 편집 기능을 훨씬 뛰어넘습니다.",
+      },
+      {
+        title: "H1부터 H6까지의 제목 지원",
+        desc: "H1부터 H6까지의 완전한 제목 계층 구조를 사용하여 콘텐츠를 정리할 수 있으며, 브라우저에서 전문 문서 편집기와 같은 구조를 제공합니다.",
+      },
+      {
+        title: "다양한 글꼴 스타일",
+        desc: "다양한 글꼴 스타일 중에서 선택하여 작성 환경을 개인화하고 문서를 더욱 읽기 쉽고, 표현력 있게 또는 전문적으로 만들 수 있습니다.",
+      },
+      {
+        title: "텍스트 색상 변경",
+        desc: "텍스트 색상을 변경하여 중요한 내용을 강조하고 시각적인 가독성을 높일 수 있으며, 이는 모든 작성자에게 유용한 강력한 서식 도구입니다.",
+      },
+      {
+        title: "AI 기반 음성 텍스트 변환 기능",
+        desc: "생각을 말하기만 하면 높은 정확도로 화면에 텍스트가 표시됩니다. 이 메모장의 AI 기반 음성-텍스트 변환 기능은 사용자의 음성을 즉시 깔끔하고 오류 없는 텍스트로 변환하여 많은 시간을 절약해 줍니다.",
+      },
+      {
+        title: "로그인 후 공유 링크 생성",
+        desc: "로그인하면 모든 메모에 대해 고유한 공유 링크를 생성할 수 있어 협업과 빠른 공유를 URL 복사만큼 간단하게 만들 수 있습니다.",
+      },
+      {
+        title: "기록 저장을 위한 계정 생성",
+        desc: "이 메모장에서 무료 계정을 만들면 메모 기록 기능이 활성화되어 지금까지 작성한 모든 내용을 한곳에서 확인하고 복구하며 관리할 수 있습니다.",
+      },
+    ],
+    outro:
+      "이 외에도 무료로 사용하고 즐길 수 있는 다양한 고유 기능들이 많이 제공됩니다.",
+  },
+  ku: {
+    title: "Taybetmendiyên Sereke yên Notepadê Online",
+    features: [
+      {
+        title: "Tomarkirina Xweser a Online",
+        desc: "Notepadê me ya online dema ku tu dinivîsî karê te bixweber tomar dike, ji ber vê yekê tu qet yek peyv jî winda nakî, heta ger browserê te bixete an jî tabê bi xeletî bigirî.",
+      },
+      {
+        title: "Daxistin bi formatên TXT û PDF",
+        desc: "Bi notepadê me re, tu dikarî notên xwe di cih de wekî pelgeyek TXT an PDF ya paqij derxe, ku tomarkirin, çapkirin an parvekirina karê te offline hêsan dike.",
+      },
+      {
+        title: "Ekrana Tevahî",
+        desc: "Biguherîne moda ekrana tevahî û bila ev notepadê bêalîkarî ji te re qadeke nivîsandinê ya paqij ji serî heta dawiyê peyda bike ku ji bo danûstandin û nivîsandina bi baldarî pir guncaw e.",
+      },
+      {
+        title: "Taybetmendiya Mezinbûnê ya 200%",
+        desc: "Ev notepadê online dihêle ku tu heta 200% mezin bikî, ku ji bo çavan di demên nivîsandina dirêj an dema kar bi nivîsên biçûk li ser her ekranekê de hêsantir dike.",
+      },
+      {
+        title: "Têxistina Wêneyan, Tabloyan, Nûkirina Xweser a Dîrokan, Derxistina HTML",
+        desc: "Ji têxistina wêneyan û tabloyên rêkxistî heta nûkirina bixweber a dîrokan û derxistina naveroka te wekî HTML, ev notepad ji sererastkirina nivîsê ya bingehîn gelek pêştir diçe.",
+      },
+      {
+        title: "Sernivîs ji H1 heta H6",
+        desc: "Naveroka xwe bi hiyerarşiya tevahî ya sernivîsan ji H1 heta H6 rêk bixe, da ku ev notepad di nav browserê te de avahiya edîtorek belgeyê ya profesyonel peyda bike.",
+      },
+      {
+        title: "Şêwazên Cûda yên Fontê",
+        desc: "Ji nav gelek şêwazên fontê hilbijêre da ku ezmûna nivîsandina xwe kesane bikî û belgeyên xwe xwendinê hêsantir, bêtir vegotinî an profesyoneltir bikî.",
+      },
+      {
+        title: "Guherandina Rengê Nivîsê",
+        desc: "Ev notepadê online dihêle ku tu xalên girîng ronî bikî û bi guherandina rengê nivîsê zelaliya dîtbarî zêde bikî. Ev amûrek formatkirinê ya sade lê bihêz e ji bo her nivîskarî.",
+      },
+      {
+        title: "Veguhastina Deng bo Nivîsê bi AI bê Çewtî",
+        desc: "Ramanên xwe bibêje û bibîne ku bi rastiya bilind li ser ekranê xuya dibin. Taybetmendiya veguhastina deng bo nivîsê ya bi AI ya vê notepadê dengê te di cih de vediguherîne bo nivîsek paqij û bê çewtî, ji ber vê yekê tu gelek demê xilas dikî.",
+      },
+      {
+        title: "Piştî Têketinê Linkek Parvekirinê Çêbike",
+        desc: "Piştî ku têketî hesabê xwe bûyî, notepadê me dihêle ku ji bo her notekê linkek taybet a parvekirinê çêbikî, ku hevkarî û parvekirina bilez hêsan dike wek kopîkirina URL-ekê.",
+      },
+      {
+        title: "Çêkirina Hesabê ji bo Tomarkirina Dîrokê",
+        desc: "Li ser vê notepadê hesabek belaş çêbike da ku dîroka notan vekî, û tu bikaribî hemû tiştên ku te nivîsandine li yek cihê bibînî, vegerînî û birêve bibî.",
+      },
+    ],
+    outro:
+      "Ji bilî van taybetmendiyan, gelek taybetmendiyên din ên taybet hene ku tu dikarî wan belaş bikar bînî û jê kêfxweş bibî.",
+  },
+  ky: {
+    title: "Онлайн блокноттун негизги мүмкүнчүлүктөрү",
+    features: [
+      {
+        title: "Онлайн автоматтык сактоо",
+        desc: "Биздин онлайн блокнот сиз терип жатканда ишиңизди автоматтык түрдө сактайт. Ошондуктан браузериңиз жабылып калса же өтмөктү кокусунан жаап алсаңыз да, бир дагы сөзүңүз жоголбойт.",
+      },
+      {
+        title: "TXT жана PDF форматтарында жүктөп алуу",
+        desc: "Биздин блокноттун жардамы менен жазууларыңызды дароо таза TXT же PDF файл катары экспорттой аласыз. Бул аларды сактоону, басып чыгарууну же интернетсиз бөлүшүүнү жеңилдетет.",
+      },
+      {
+        title: "Толук экран",
+        desc: "Толук экран режимине өтүп, алаксыткан нерселерден арылган бул блокноттун четинен четине чейин таза жазуу мейкиндигин пайдаланыңыз. Ал көңүл коюп жазуу үчүн эң ылайыктуу шарттарды түзөт.",
+      },
+      {
+        title: "200% чоңойтуу мүмкүнчүлүгү",
+        desc: "Бул онлайн блокнот 200% чейин чоңойтууга мүмкүндүк берет. Бул узак убакыт жазганда же каалаган экранда майда текст менен иштегенде көзгө ыңгайлуулук жаратат.",
+      },
+      {
+        title: "Сүрөттөрдү жана таблицаларды кошуу, даталарды автоматтык жаңыртуу, HTML экспорттоо",
+        desc: "Сүрөттөрдү жана түзүмдүү таблицаларды кошуудан тартып, даталарды автоматтык жаңыртууга жана мазмунуңузду HTML катары экспорттоого чейин бул блокнот жөнөкөй текст редакторунан алда канча кең мүмкүнчүлүктөрдү сунуштайт.",
+      },
+      {
+        title: "H1ден H6га чейинки аталыштар",
+        desc: "Мазмунуңузду H1ден H6га чейинки толук аталыштар иерархиясы менен уюштуруңуз. Бул блокнот браузериңиздин ичинде эле профессионалдуу документ редакторунун түзүмүн камсыз кылат.",
+      },
+      {
+        title: "Ар кандай шрифт стилдери",
+        desc: "Жазуу тажрыйбаңызды жекелештирүү үчүн ар кандай шрифт стилдерин тандаңыз жана документтериңизди окууга жеңил, таасирдүү же профессионалдуу кылыңыз.",
+      },
+      {
+        title: "Тексттин түсүн өзгөртүү",
+        desc: "Бул онлайн блокнот тексттин түсүн өзгөртүү аркылуу маанилүү ойлорду баса белгилөөгө жана көрүү ыңгайлуулугун жогорулатууга мүмкүндүк берет. Бул ар бир жазуучу үчүн жөнөкөй, бирок күчтүү форматтоо куралы болуп саналат.",
+      },
+      {
+        title: "AI негизиндеги катасыз үнүн текстке айландыруу",
+        desc: "Ойлоруңузду сүйлөңүз жана алардын экранда жогорку тактык менен пайда болгонун көрүңүз. Бул блокноттун AI негизиндеги үнүн текстке айландыруу функциясы үнүңүздү дароо таза жана катасыз текстке айландырып, көп убакытты үнөмдөөгө жардам берет.",
+      },
+      {
+        title: "Киргенден кийин бөлүшүүгө боло турган шилтеме түзүү",
+        desc: "Аккаунтуңузга киргенден кийин, биздин блокнот каалаган жазуу үчүн уникалдуу бөлүшүү шилтемесин түзүүгө мүмкүндүк берет. Бул кызматташуу жана тез бөлүшүүнү URL көчүргөндөй эле оңой кылат.",
+      },
+      {
+        title: "Тарыхты сактоо үчүн аккаунт түзүү",
+        desc: "Бул блокнотто акысыз аккаунт түзүп, жазуулар тарыхын ачыңыз. Ошондо буга чейин жазган бардык нерселериңизди бир жерден көрүп, калыбына келтирип жана башкара аласыз.",
+      },
+    ],
+    outro:
+      "Мындан тышкары, сиз акысыз пайдаланып жана ырахат ала турган дагы көптөгөн өзгөчө мүмкүнчүлүктөр бар.",
+  },
+  lo: {
+    title: "ຄຸນສົມບັດຫຼັກຂອງ Notepad ອອນລາຍ",
+    features: [
+      {
+        title: "ບັນທຶກອັດຕະໂນມັດອອນລາຍ",
+        desc: "Notepad ອອນລາຍຂອງພວກເຮົາຈະບັນທຶກວຽກຂອງທ່ານໂດຍອັດຕະໂນມັດໃນຂະນະທີ່ທ່ານກຳລັງພິມ ເຮັດໃຫ້ທ່ານບໍ່ສູນເສຍແມ່ນແຕ່ຄຳດຽວ ແມ່ນວ່າ browser ຂອງທ່ານຈະຂັດຂ້ອງ ຫຼື ປິດແຖບໂດຍບໍ່ຕັ້ງໃຈກໍຕາມ.",
+      },
+      {
+        title: "ດາວໂຫລດໃນຮູບແບບ TXT ແລະ PDF",
+        desc: "ດ້ວຍ Notepad ຂອງພວກເຮົາ ທ່ານສາມາດສົ່ງອອກບັນທຶກຂອງທ່ານໄດ້ທັນທີເປັນໄຟລ໌ TXT ຫຼື PDF ທີ່ສະອາດ ເຮັດໃຫ້ການບັນທຶກ ການພິມ ຫຼື ການແບ່ງປັນວຽກຂອງທ່ານແບບອອບໄລນ໌ເປັນເລື່ອງງ່າຍ.",
+      },
+      {
+        title: "ເຕັມໜ້າຈໍ",
+        desc: "ປ່ຽນໄປເປັນໂໝດເຕັມໜ້າຈໍ ແລະ ໃຫ້ Notepad ທີ່ປາດຈາກສິ່ງລົບກວນນີ້ ມອບພື້ນທີ່ຂຽນທີ່ສະອາດຈາກຂອບຫາຂອບ ເໝາະສຳລັບການຂຽນຢ່າງມີສະມາທິ.",
+      },
+      {
+        title: "ຟັງຊັນຂະຫຍາຍ 200%",
+        desc: "Notepad ອອນລາຍນີ້ອະນຸຍາດໃຫ້ທ່ານຂະຫຍາຍໄດ້ສູງສຸດ 200% ເຮັດໃຫ້ສະບາຍຕາຫຼາຍຂຶ້ນເມື່ອຂຽນເປັນເວລາດົນ ຫຼື ເມື່ອເຮັດວຽກກັບຂໍ້ຄວາມຂະໜາດນ້ອຍໃນໜ້າຈໍໃດກໍຕາມ.",
+      },
+      {
+        title: "ແຊກຮູບພາບ, ຕາຕະລາງ, ອັບເດດວັນທີອັດຕະໂນມັດ, ສົ່ງອອກ HTML",
+        desc: "ຕັ້ງແຕ່ການແຊກຮູບພາບ ແລະ ຕາຕະລາງທີ່ມີໂຄງສ້າງ ຈົນເຖິງການອັບເດດວັນທີອັດຕະໂນມັດ ແລະ ການສົ່ງອອກເນື້ອຫາເປັນ HTML, Notepad ນີ້ກ້າວລ້ຳກວ່າການແກ້ໄຂຂໍ້ຄວາມພື້ນຖານຫຼາຍ.",
+      },
+      {
+        title: "ຫົວຂໍ້ຈາກ H1 ຫາ H6",
+        desc: "ຈັດລະບຽບເນື້ອຫາຂອງທ່ານດ້ວຍລຳດັບຫົວຂໍ້ຄົບຖ້ວນຈາກ H1 ຫາ H6 ເຮັດໃຫ້ Notepad ນີ້ມີໂຄງສ້າງເໝືອນຕົວແກ້ໄຂເອກະສານແບບມືອາຊີບໃນ browser ຂອງທ່ານ.",
+      },
+      {
+        title: "ຮູບແບບຟອນຫຼາຍຮູບແບບ",
+        desc: "ເລືອກຈາກຮູບແບບຟອນຫຼາຍຊະນິດເພື່ອປັບແຕ່ງປະສົບການຂຽນຂອງທ່ານ ແລະ ເຮັດໃຫ້ເອກະສານຂອງທ່ານອ່ານງ່າຍ ສື່ຄວາມໄດ້ດີ ຫຼື ມີຄວາມເປັນມືອາຊີບຫຼາຍຂຶ້ນ.",
+      },
+      {
+        title: "ປ່ຽນສີຂໍ້ຄວາມ",
+        desc: "Notepad ອອນລາຍນີ້ອະນຸຍາດໃຫ້ທ່ານເນັ້ນຈຸດສຳຄັນ ແລະ ເພີ່ມຄວາມຊັດເຈນດ້ານສາຍຕາໂດຍການປ່ຽນສີຂໍ້ຄວາມ ເປັນເຄື່ອງມືຈັດຮູບແບບທີ່ງ່າຍແຕ່ຊົງພະລັງສຳລັບນັກຂຽນທຸກຄົນ.",
+      },
+      {
+        title: "ປ່ຽນສຽງເປັນຂໍ້ຄວາມດ້ວຍ AI ຢ່າງແມ່ນຍຳ",
+        desc: "ພຽງແຕ່ເວົ້າຄວາມຄິດຂອງທ່ານ ແລະ ເບິ່ງມັນປາກົດຂຶ້ນໃນໜ້າຈໍດ້ວຍຄວາມແມ່ນຍຳສູງ. ຟັງຊັນປ່ຽນສຽງເປັນຂໍ້ຄວາມດ້ວຍ AI ຂອງ Notepad ນີ້ຈະປ່ຽນສຽງຂອງທ່ານເປັນຂໍ້ຄວາມທີ່ສະອາດ ແລະ ບໍ່ມີຂໍ້ຜິດພາດໃນທັນທີ ຊ່ວຍປະຢັດເວລາໄດ້ຫຼາຍ.",
+      },
+      {
+        title: "ສ້າງລິ້ງສຳລັບແບ່ງປັນຫຼັງຈາກເຂົ້າລະບົບ",
+        desc: "ເມື່ອເຂົ້າລະບົບແລ້ວ Notepad ຂອງພວກເຮົາຈະອະນຸຍາດໃຫ້ທ່ານສ້າງລິ້ງສະເພາະສຳລັບແບ່ງປັນບັນທຶກໃດໆ ເຮັດໃຫ້ການຮ່ວມມື ແລະ ການແບ່ງປັນຢ່າງລວດເລັວງ່າຍດາຍເທົ່າກັບການຄັດລອກ URL.",
+      },
+      {
+        title: "ສ້າງບັນຊີເພື່ອບັນທຶກປະຫວັດ",
+        desc: "ສ້າງບັນຊີຟຣີໃນ Notepad ນີ້ເພື່ອເປີດໃຊ້ປະຫວັດບັນທຶກ ເພື່ອໃຫ້ທ່ານສາມາດກັບມາເບິ່ງ ກູ້ຄືນ ແລະ ຈັດການທຸກສິ່ງທີ່ທ່ານເຄີຍຂຽນໄວ້ໃນບ່ອນດຽວ.",
+      },
+    ],
+    outro:
+      "ນອກຈາກຄຸນສົມບັດເຫຼົ່ານີ້ ຍັງມີຟັງຊັນພິເສດອື່ນໆອີກຫຼາຍຢ່າງທີ່ທ່ານສາມາດໃຊ້ ແລະ ເພີດເພີນໄດ້ຟຣີ.",
+  },
+  lv: {
+    title: "Tiešsaistes piezīmju bloka galvenās funkcijas",
+    features: [
+      {
+        title: "Automātiskā saglabāšana tiešsaistē",
+        desc: "Mūsu tiešsaistes piezīmju bloks automātiski saglabā jūsu darbu rakstīšanas laikā, tāpēc jūs nezaudēsiet nevienu vārdu pat tad, ja pārlūkprogramma avarē vai nejauši aizverat cilni.",
+      },
+      {
+        title: "Lejupielāde TXT un PDF formātos",
+        desc: "Ar mūsu piezīmju bloku jūs varat uzreiz eksportēt savas piezīmes kā tīru TXT vai PDF failu, padarot to saglabāšanu, drukāšanu vai kopīgošanu bezsaistē vienkāršu.",
+      },
+      {
+        title: "Pilnekrāna režīms",
+        desc: "Pārslēdzieties uz pilnekrāna režīmu un izmantojiet šo netraucējošo piezīmju bloku, kas nodrošina tīru rakstīšanas vidi no malas līdz malai, ideāli piemērotu koncentrētam darbam.",
+      },
+      {
+        title: "200% tālummaiņas funkcija",
+        desc: "Šis tiešsaistes piezīmju bloks ļauj palielināt tekstu līdz 200%, padarot ilgstošu rakstīšanu vai darbu ar mazu tekstu daudz ērtāku acīm.",
+      },
+      {
+        title: "Ievietojiet attēlus, tabulas, automātiski atjauniniet datumus, eksportējiet HTML formātā",
+        desc: "No attēlu un strukturētu tabulu ievietošanas līdz automātiskai datumu atjaunināšanai un satura eksportēšanai HTML formātā — šis piezīmju bloks piedāvā daudz vairāk nekā vienkāršu teksta rediģēšanu.",
+      },
+      {
+        title: "Virsraksti no H1 līdz H6",
+        desc: "Sakārtojiet savu saturu, izmantojot pilnu virsrakstu hierarhiju no H1 līdz H6, piešķirot šim piezīmju blokam profesionāla dokumentu redaktora struktūru tieši jūsu pārlūkprogrammā.",
+      },
+      {
+        title: "Dažādi fontu stili",
+        desc: "Izvēlieties no dažādiem fontu stiliem, lai pielāgotu savu rakstīšanas pieredzi un padarītu dokumentus vieglāk lasāmus, izteiksmīgākus vai profesionālākus.",
+      },
+      {
+        title: "Mainīt teksta krāsu",
+        desc: "Šis tiešsaistes piezīmju bloks ļauj izcelt svarīgākos punktus un uzlabot vizuālo pārskatāmību, mainot teksta krāsu. Tas ir vienkāršs, bet jaudīgs formatēšanas rīks jebkuram rakstītājam.",
+      },
+      {
+        title: "Ar mākslīgo intelektu darbināta runas pārvēršana tekstā bez kļūdām",
+        desc: "Izsakiet savas domas balsī un vērojiet, kā tās ar augstu precizitāti parādās ekrānā. Šī piezīmju bloka AI balstītā runas pārvēršanas tekstā funkcija acumirklī pārvērš jūsu balsi tīrā un bezkļūdu tekstā, palīdzot ietaupīt daudz laika.",
+      },
+      {
+        title: "Izveidojiet kopīgojamu saiti pēc pierakstīšanās",
+        desc: "Pēc pierakstīšanās mūsu piezīmju bloks ļauj izveidot unikālu kopīgojamu saiti jebkurai piezīmei, padarot sadarbību un ātru kopīgošanu tikpat vienkāršu kā URL kopēšanu.",
+      },
+      {
+        title: "Izveidojiet kontu, lai saglabātu vēsturi",
+        desc: "Izveidojiet bezmaksas kontu šajā piezīmju blokā, lai piekļūtu piezīmju vēsturei un vienuviet pārskatītu, atjaunotu un pārvaldītu visu, ko jebkad esat rakstījis.",
+      },
+    ],
+    outro:
+      "Papildus šīm iespējām ir pieejamas daudzas citas unikālas funkcijas, kuras varat izmantot un baudīt pilnīgi bez maksas.",
+  },
 };
 
 export function getHomeFeaturesCopy(locale: string): HomeFeaturesCopy {
