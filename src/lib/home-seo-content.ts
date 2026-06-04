@@ -2473,6 +2473,159 @@ const featuresByLocale: Record<string, HomeFeaturesCopy> = {
     outro:
       "Ko’ã mba’e ykére, oĩ heta ambue mba’e porã rehegua ikatúva reipuru ha reñembovy’a reiete.",
   },
+  gu: {
+    title: "ઑનલાઇન નોટપેડની મુખ્ય સુવિધાઓ",
+    features: [
+      {
+        title: "ઓટો સેવ ઑનલાઇન",
+        desc: "અમારું ઑનલાઇન નોટપેડ તમે લખો તે સાથે જ આપમેળે તમારું કામ સેવ કરે છે, તેથી તમે એકપણ શબ્દ ગુમાવતા નથી, ભલે તમારો બ્રાઉઝર ક્રેશ થઈ જાય અથવા તમે ભૂલથી ટેબ બંધ કરી દો.",
+      },
+      {
+        title: "TXT અને PDF ફોર્મેટમાં ડાઉનલોડ કરો",
+        desc: "અમારા નોટપેડ સાથે તમે તમારી નોંધોને તરત જ સ્વચ્છ TXT અથવા PDF ફાઇલ તરીકે એક્સપોર્ટ કરી શકો છો, જેથી તેને સેવ કરવું, પ્રિન્ટ કરવું અથવા ઑફલાઇન શેર કરવું સરળ બને છે.",
+      },
+      {
+        title: "ફુલ સ્ક્રીન",
+        desc: "ફુલ-સ્ક્રીન મોડ પર સ્વિચ કરો અને આ ડિસ્ટ્રેક્શન-ફ્રી નોટપેડ તમને એક સ્વચ્છ અને એજ-ટુ-એજ લખાણ માટેનું કેનવાસ આપે છે, જે ફોકસ્ડ લખાણ સત્રો માટે સંપૂર્ણ છે.",
+      },
+      {
+        title: "200% ઝૂમ સુવિધા",
+        desc: "આ ઑનલાઇન નોટપેડ તમને 200% સુધી ઝૂમ કરવાની સુવિધા આપે છે, જેથી લાંબા લખાણ સત્રો દરમિયાન અથવા નાના ટેક્સ્ટ સાથે કામ કરતી વખતે આંખોને આરામ મળે.",
+      },
+      {
+        title: "છબીઓ, ટેબલ, ઓટો-અપડેટ તારીખો, HTML એક્સપોર્ટ ઉમેરો",
+        desc: "છબીઓ અને સ્ટ્રક્ચર્ડ ટેબલ ઉમેરવાથી લઈને તારીખોનું ઓટો-અપડેટ અને તમારી સામગ્રીને HTML તરીકે એક્સપોર્ટ કરવા સુધી, આ નોટપેડ સામાન્ય ટેક્સ્ટ એડિટિંગથી ઘણું આગળ છે.",
+      },
+      {
+        title: "H1 થી H6 સુધી હેડિંગ્સ",
+        desc: "તમારી સામગ્રીને સંપૂર્ણ હેડિંગ હાયરાર્કી H1 થી H6 સાથે ગોઠવો, જે આ નોટપેડને તમારા બ્રાઉઝરમાં જ એક વ્યાવસાયિક ડોક્યુમેન્ટ એડિટર જેવી રચના આપે છે.",
+      },
+      {
+        title: "વિવિધ ફૉન્ટ શૈલીઓ",
+        desc: "તમારા લખાણના અનુભવને વ્યક્તિગત બનાવવા અને તમારા દસ્તાવેજોને વધુ વાંચવા યોગ્ય, અભિવ્યક્તિપૂર્ણ અથવા વ્યાવસાયિક બનાવવા માટે વિવિધ ફૉન્ટ શૈલીઓમાંથી પસંદ કરો.",
+      },
+      {
+        title: "ટેક્સ્ટનો રંગ બદલો",
+        desc: "આ ઑનલાઇન નોટપેડ તમને ટેક્સ્ટનો રંગ બદલીને મહત્વપૂર્ણ મુદ્દાઓ હાઇલાઇટ કરવા અને દૃશ્ય સ્પષ્ટતા ઉમેરવા દે છે, જે દરેક લેખક માટે એક સરળ પરંતુ શક્તિશાળી ફોર્મેટિંગ ટૂલ છે.",
+      },
+      {
+        title: "AI આધારિત સ્પીચ ટુ ટેક્સ્ટ (ભૂલ વગર)",
+        desc: "તમારા વિચારો બોલો અને તેને ઉચ્ચ ચોકસાઈ સાથે સ્ક્રીન પર દેખાતા જુઓ. આ નોટપેડની AI આધારિત સ્પીચ-ટુ-ટેક્સ્ટ સુવિધા તમારી અવાજને તરત જ સ્વચ્છ અને ભૂલરહિત ટેક્સ્ટમાં ફેરવે છે, જેથી તમારો ઘણો સમય બચી જાય છે.",
+      },
+      {
+        title: "લૉગિન પછી શેર કરી શકાય તેવો લિંક બનાવો",
+        desc: "લૉગિન થયા પછી, અમારું નોટપેડ તમને કોઈપણ નોંધ માટે અનન્ય શેર કરી શકાય તેવો લિંક બનાવવા દે છે, જેથી સહકાર અને ઝડપી શેરિંગ URL કોપી કરવા જેટલું સરળ બને છે.",
+      },
+      {
+        title: "ઇતિહાસ સાચવવા માટે એકાઉન્ટ બનાવો",
+        desc: "આ નોટપેડ પર મફત એકાઉન્ટ બનાવો જેથી નોટ ઇતિહાસ અનલૉક થાય અને તમે જે કંઈ લખ્યું છે તે બધું એક જ જગ્યાએ ફરી જોઈ, પુનઃપ્રાપ્ત કરી અને મેનેજ કરી શકો.",
+      },
+    ],
+    outro:
+      "આ ઉપરાંત ઘણી બધી અન્ય અનન્ય સુવિધાઓ છે જેને તમે મફતમાં ઉપયોગ કરી શકો છો અને માણી શકો છો.",
+  },
+  ht: {
+    title: "Prensipal Karakteristik Notepad sou Entènèt",
+    features: [
+      {
+        title: "Sove otomatik sou entènèt",
+        desc: "Notepad sou entènèt nou an sove travay ou otomatikman pandan w ap ekri, konsa ou pa janm pèdi yon sèl mo, menm si navigatè ou a fè fay oswa ou fèmen onglet la pa erè.",
+      },
+      {
+        title: "Telechaje nan fòma TXT ak PDF",
+        desc: "Avèk notepad nou an, ou ka ekspòte nòt ou yo imedyatman kòm yon fichye TXT oswa PDF pwòp, sa ki fè li fasil pou sove, enprime oswa pataje travay ou offline.",
+      },
+      {
+        title: "Plein ekran",
+        desc: "Chanje nan mòd plein ekran epi sèvi ak notepad sa a ki san distraksyon ki ba ou yon espas ekriti pwòp soti yon bò rive lòt, pafè pou sesyon ekriti konsantre.",
+      },
+      {
+        title: "Fonksyon zoom 200%",
+        desc: "Notepad sou entènèt sa a pèmèt ou agrandi jiska 200%, sa ki fè li pi fasil pou je yo pandan sesyon ekriti long oswa lè w ap travay ak tèks piti sou nenpòt ekran.",
+      },
+      {
+        title: "Antre imaj, tablo, aktyalizasyon otomatik dat, ekspòte HTML",
+        desc: "Soti nan mete imaj ak tablo estriktire rive nan aktyalizasyon otomatik dat ak ekspòtasyon kontni ou kòm HTML, notepad sa a ale pi lwen pase senp koreksyon tèks.",
+      },
+      {
+        title: "Tit soti H1 rive H6",
+        desc: "Òganize kontni ou ak yon yerachi tit konplè soti H1 rive H6, sa ki bay notepad sa a estrikti yon editè dokiman pwofesyonèl dirèk nan navigatè ou.",
+      },
+      {
+        title: "Diferan estil polis (font)",
+        desc: "Chwazi pami plizyè estil polis pou pèsonalize eksperyans ekriti ou epi fè dokiman ou yo pi fasil pou li, pi ekspresif oswa pi pwofesyonèl.",
+      },
+      {
+        title: "Chanje koulè tèks",
+        desc: "Notepad sou entènèt sa a pèmèt ou make pwen enpòtan yo epi ajoute plis klète vizyèl lè w chanje koulè tèks, yon zouti fòma senp men pwisan pou nenpòt ekriven.",
+      },
+      {
+        title: "Konvèsyon vwa an tèks ak entèlijans atifisyèl san erè",
+        desc: "Pale panse ou epi gade yo parèt sou ekran ak gwo presizyon. Fonksyon konvèsyon vwa an tèks ak entèlijans atifisyèl nan notepad sa a transfòme vwa ou imedyatman an tèks pwòp san erè, sa ki ekonomize ou anpil tan.",
+      },
+      {
+        title: "Jenere lyen pou pataje apre koneksyon",
+        desc: "Yon fwa ou konekte, notepad nou an pèmèt ou jenere yon lyen inik pou pataje nenpòt nòt, sa ki fè kolaborasyon ak pataj rapid vin senp tankou kopye yon URL.",
+      },
+      {
+        title: "Kreye kont pou anrejistre istwa",
+        desc: "Kreye yon kont gratis sou notepad sa a pou ouvri istwa nòt yo, konsa ou ka revize, rekipere epi jere tout sa ou te janm ekri, nan yon sèl kote.",
+      },
+    ],
+    outro:
+      "Apa de sa yo, gen anpil lòt karakteristik inik ou ka itilize epi jwi gratis.",
+  },
+  ha: {
+    title: "Muhimman fasalolin Notepad na yanar gizo",
+    features: [
+      {
+        title: "Ajiya ta atomatik a yanar gizo",
+        desc: "Notepad ɗinmu na yanar gizo yana adana aikinku ta atomatik yayin da kuke rubutawa, don haka ba za ku taɓa rasa ko da kalma ɗaya ba, ko da burauzar ku ya fadi ko kuma kun rufe tab da kuskure.",
+      },
+      {
+        title: "Sauke a tsarin TXT da PDF",
+        desc: "Da wannan notepad ɗin, za ku iya fitar da bayananku nan take a matsayin fayil TXT ko PDF mai tsabta, wanda ke sauƙaƙa adanawa, bugawa ko raba aikinku ba tare da intanet ba.",
+      },
+      {
+        title: "Cikakken allo",
+        desc: "Canja zuwa yanayin cikakken allo kuma ku yi amfani da wannan notepad mara shagala wanda ke ba ku tsaftataccen filin rubutu daga gefe zuwa gefe, mai kyau don rubutu mai mayar da hankali.",
+      },
+      {
+        title: "Fasalin zuƙowa har zuwa 200%",
+        desc: "Wannan notepad na yanar gizo yana ba ku damar zuƙowa har zuwa 200%, yana sa ya fi sauƙi ga idanu yayin dogon zaman rubutu ko lokacin aiki da ƙaramin rubutu a kowane allo.",
+      },
+      {
+        title: "Saka hotuna, teburi, sabunta kwanan wata ta atomatik, fitar da HTML",
+        desc: "Daga saka hotuna da teburi masu tsari zuwa sabunta kwanan wata ta atomatik da fitar da abun cikin ku a matsayin HTML, wannan notepad ya wuce gyaran rubutu na yau da kullum sosai.",
+      },
+      {
+        title: "Kanun labarai daga H1 zuwa H6",
+        desc: "Tsara abun cikin ku da cikakken tsarin kanun labarai daga H1 zuwa H6, yana ba wannan notepad tsarin editan takardu na gaskiya kai tsaye a cikin burauzarku.",
+      },
+      {
+        title: "Daban-daban salon rubutu (font)",
+        desc: "Zaɓi daga nau’ikan salon rubutu daban-daban don keɓance kwarewar rubutunku kuma ku sa takardunku su zama masu sauƙin karantawa, masu bayyana ji ko ƙwararru.",
+      },
+      {
+        title: "Canza launin rubutu",
+        desc: "Wannan notepad na yanar gizo yana ba ku damar haskaka muhimman abubuwa da ƙara bayyananniyar gani ta hanyar canza launin rubutu, kayan aikin gyaran rubutu mai sauƙi amma mai ƙarfi ga kowane marubuci.",
+      },
+      {
+        title: "Rubutu daga murya da AI ba tare da kuskure ba",
+        desc: "Faɗi tunaninku kuma ku ga yadda suke bayyana a allo da cikakkiyar daidaito. Fasalin AI na canza murya zuwa rubutu na wannan notepad yana juya muryarku zuwa rubutu mai tsabta ba tare da kuskure ba nan take, yana taimaka muku adana lokaci sosai.",
+      },
+      {
+        title: "Ƙirƙiri hanyar haɗi don rabawa bayan shiga",
+        desc: "Bayan kun shiga, notepad ɗinmu yana ba ku damar ƙirƙirar keɓaɓɓen hanyar haɗi don kowane rubutu, yana sa haɗin gwiwa da rabawa cikin sauƙi kamar kwafin URL.",
+      },
+      {
+        title: "Ƙirƙiri asusu don adana tarihin rubutu",
+        desc: "Ƙirƙiri asusun kyauta a wannan notepad don buɗe tarihin rubutu, domin ku iya duba, dawo da kuma sarrafa duk abin da kuka taɓa rubutawa a wuri ɗaya.",
+      },
+    ],
+    outro:
+      "Baya ga waɗannan, akwai wasu fasaloli na musamman da yawa da za ku iya amfani da su kuma ku more su kyauta.",
+  },
 };
 
 export function getHomeFeaturesCopy(locale: string): HomeFeaturesCopy {
