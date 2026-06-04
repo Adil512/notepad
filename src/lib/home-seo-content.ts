@@ -5226,6 +5226,873 @@ const featuresByLocale: Record<string, HomeFeaturesCopy> = {
     outro:
       "Förutom detta finns det många andra unika funktioner som du kan använda och njuta av gratis.",
   },
+  tl: {
+    title: "Mga Pangunahing Tampok ng Online Notepad",
+    features: [
+      {
+        title: "Awtomatikong Pag-save Online",
+        desc: "Awtomatikong sine-save ng aming online notepad ang iyong ginagawa habang ikaw ay nagta-type, kaya hindi ka mawawalan ng kahit isang salita, kahit mag-crash ang browser o aksidenteng maisara mo ang tab.",
+      },
+      {
+        title: "I-download sa mga format na TXT at PDF",
+        desc: "Sa aming notepad, maaari mong i-export agad ang iyong mga tala bilang malinis na TXT o PDF file, na nagpapadali sa pag-save, pag-print, o pagbabahagi offline.",
+      },
+      {
+        title: "Buong Screen",
+        desc: "Lumipat sa full-screen mode at hayaan ang notepad na walang sagabal na magbigay sa iyo ng malinis na writing space mula gilid hanggang gilid, perpekto para sa nakatutok na pagsusulat.",
+      },
+      {
+        title: "200% na Zoom Feature",
+        desc: "Ang online notepad na ito ay nagbibigay-daan sa iyo na mag-zoom hanggang 200%, na nagpapagaan sa mata sa mahabang pagsusulat o kapag gumagawa gamit ang maliliit na teksto sa anumang screen.",
+      },
+      {
+        title: "Paglalagay ng mga Larawan, Talahanayan, Awtomatikong Pag-update ng Petsa, Pag-export ng HTML",
+        desc: "Mula sa paglalagay ng mga larawan at organisadong talahanayan hanggang sa awtomatikong pag-update ng petsa at pag-export ng iyong nilalaman bilang HTML, ang notepad na ito ay higit pa sa simpleng pag-edit ng teksto.",
+      },
+      {
+        title: "Mga Heading mula H1 hanggang H6",
+        desc: "Ayusin ang iyong nilalaman gamit ang kumpletong hierarchy ng mga heading mula H1 hanggang H6, na nagbibigay sa notepad na ito ng istruktura ng isang propesyonal na document editor sa iyong browser.",
+      },
+      {
+        title: "Iba’t ibang Estilo ng Font",
+        desc: "Pumili mula sa iba’t ibang estilo ng font upang i-personalize ang iyong karanasan sa pagsusulat at gawing mas madaling basahin, mas malinaw ang ekspresyon, o mas propesyonal ang iyong mga dokumento.",
+      },
+      {
+        title: "Pagbabago ng Kulay ng Teksto",
+        desc: "Pinapayagan ka ng online notepad na ito na i-highlight ang mahahalagang punto at dagdagan ang linaw sa pamamagitan ng pagbabago ng kulay ng teksto, isang simple ngunit makapangyarihang tool para sa sinumang manunulat.",
+      },
+      {
+        title: "AI na Speech-to-Text na Walang Mali",
+        desc: "Ibigkas ang iyong mga iniisip at panoorin itong lumilitaw sa screen nang may mataas na katumpakan. Ang AI speech-to-text feature ng notepad na ito ay agad na ginagawang malinis at walang mali ang iyong boses na teksto, kaya nakakatipid ka ng maraming oras.",
+      },
+      {
+        title: "Pagbuo ng Shareable Link Pagkatapos Mag-sign In",
+        desc: "Kapag naka-sign in na, pinapayagan ka ng aming notepad na gumawa ng natatanging shareable link para sa anumang note, na ginagawang kasing simple ng pagkopya ng URL ang pakikipagtulungan at mabilis na pagbabahagi.",
+      },
+      {
+        title: "Gumawa ng Account para sa History ng Tala",
+        desc: "Gumawa ng libreng account sa notepad na ito upang ma-unlock ang history ng mga tala, upang maaari mong balikan, mabawi, at pamahalaan ang lahat ng iyong naisulat sa isang lugar.",
+      },
+    ],
+    outro:
+      "Bukod sa mga ito, marami pang ibang natatanging feature na maaari mong gamitin at matamasa nang libre.",
+  },
+  tg: {
+    title: "Хусусиятҳои асосии Notepad онлайн",
+    features: [
+      {
+        title: "Захиракунии худкор онлайн",
+        desc: "Notepad-и онлайни мо ҳангоми навиштан кори шуморо ба таври худкор захира мекунад, то шумо ҳеҷ гоҳ ҳатто як калимаро гум накунед, ҳатто агар браузер қатъ шавад ё шумо тасодуфан табро пӯшед.",
+      },
+      {
+        title: "Боргирӣ дар форматҳои TXT ва PDF",
+        desc: "Бо Notepad-и мо шумо метавонед ёддоштҳои худро фавран ҳамчун файли тозаи TXT ё PDF содир кунед, ки ин нигоҳ доштан, чоп кардан ё мубодила карданро осон мекунад.",
+      },
+      {
+        title: "Ҳолати пурраэкран",
+        desc: "Ба ҳолати пурраэкран гузаред ва ба ин Notepad-и бе парешон иҷозат диҳед, ки барои шумо майдони тозаи навиштан аз канор то канор фароҳам оварад, ки барои навиштани тамаркузшуда комил аст.",
+      },
+      {
+        title: "Хусусияти 200% калонкунӣ",
+        desc: "Ин Notepad-и онлайн ба шумо имкон медиҳад то 200% калон кунед, ки ин барои чашм ҳангоми навиштани тӯлонӣ ё кор бо матни хурд дар ҳар экран осонтар аст.",
+      },
+      {
+        title: "Ворид кардани тасвирҳо, ҷадвалҳо, навсозии худкори санаҳо, содироти HTML",
+        desc: "Аз ворид кардани тасвирҳо ва ҷадвалҳои сохторӣ то навсозии худкори санаҳо ва содироти мундариҷа ҳамчун HTML, ин Notepad аз таҳрири оддии матн хеле фаротар меравад.",
+      },
+      {
+        title: "Сарлавҳаҳо аз H1 то H6",
+        desc: "Мундариҷаи худро бо иерархияи пурраи сарлавҳаҳо аз H1 то H6 ба тартиб дароред, ки ба ин Notepad сохтори муҳаррири ҳуҷҷати касбӣ дар браузери шуморо медиҳад.",
+      },
+      {
+        title: "Услубҳои гуногуни ҳуруф",
+        desc: "Аз байни услубҳои гуногуни ҳуруф интихоб кунед, то таҷрибаи навиштани худро шахсӣ кунед ва ҳуҷҷатҳои худро хонданбоб, ифоданок ё касбӣ гардонед.",
+      },
+      {
+        title: "Тағйир додани ранги матн",
+        desc: "Ин Notepad-и онлайн ба шумо имкон медиҳад нуқтаҳои муҳимро равшан намоед ва бо тағйир додани ранги матн возеҳи визуалӣ илова кунед, ки ин як абзори оддӣ вале пурқуввати форматсозӣ барои ҳар нависанда аст.",
+      },
+      {
+        title: "Гуфтор ба матн бо AI бе хато",
+        desc: "Фикрҳои худро баён кунед ва онҳоро бо дақиқии баланд дар экран бинед. Хусусияти AI-и гуфтор ба матн фавран овози шуморо ба матни тоза ва бе хато табдил медиҳад, то вақти зиёдеро сарфа кунед.",
+      },
+      {
+        title: "Эҷоди пайванди мубодила пас аз ворид шудан",
+        desc: "Пас аз ворид шудан, Notepad-и мо ба шумо имкон медиҳад барои ҳар як ёддошт пайванди махсуси мубодила эҷод кунед, ки ҳамкорӣ ва мубодиларо ба мисли нусхабардории URL осон мекунад.",
+      },
+      {
+        title: "Эҷоди ҳисоб барои сабти таърих",
+        desc: "Ҳисоби ройгон дар ин Notepad эҷод кунед, то таърихи ёддоштҳоро боз кунед ва ҳама чизеро, ки навиштаед, дар як ҷо дубора бинед, барқарор кунед ва идора намоед.",
+      },
+    ],
+    outro:
+      "Ғайр аз инҳо, бисёр хусусиятҳои беназири дигар низ ҳастанд, ки шумо метавонед онҳоро ройгон истифода баред ва лаззат баред.",
+  },
+  ta: {
+    title: "ஆன்லைன் நோட்பேட் முக்கிய அம்சங்கள்",
+    features: [
+      {
+        title: "தானியங்கி சேமிப்பு (ஆன்லைன்)",
+        desc: "எங்கள் ஆன்லைன் நோட்பேட் நீங்கள் தட்டச்சு செய்யும் போதே உங்கள் பணியை தானாகவே சேமிக்கிறது, அதனால் உங்களின் ஒரு சொல்லையும் இழக்க வேண்டியதில்லை, உலாவி (browser) முடங்கினாலும் அல்லது நீங்கள் தவறுதலாக tab ஐ மூடியாலும் கூட.",
+      },
+      {
+        title: "TXT மற்றும் PDF வடிவங்களில் பதிவிறக்கம்",
+        desc: "எங்கள் நோட்பேடில், நீங்கள் உங்கள் குறிப்புகளை உடனடியாக சுத்தமான TXT அல்லது PDF கோப்பாக ஏற்றுமதி செய்யலாம், இதனால் சேமிக்கவும், அச்சிடவும் அல்லது ஆஃப்லைனில் பகிரவும் எளிதாக இருக்கும்.",
+      },
+      {
+        title: "முழுத்திரை முறை",
+        desc: "முழுத்திரை முறைக்கு மாறி, கவனச்சிதறல் இல்லாத இந்த நோட்பேட் உங்களுக்கு விளிம்புக்கு விளிம்பு வரை சுத்தமான எழுதும் இடத்தை வழங்கும், இது கவனம் செலுத்தி எழுதுவதற்கு மிகவும் பொருத்தமானது.",
+      },
+      {
+        title: "200% பெரிதாக்கும் அம்சம்",
+        desc: "இந்த ஆன்லைன் நோட்பேட் நீங்கள் 200% வரை பெரிதாக்க அனுமதிக்கிறது, இது நீண்ட நேர எழுத்துப் பணிகளில் அல்லது சிறிய எழுத்துகளுடன் வேலை செய்யும்போது கண்களுக்கு எளிதாக இருக்கும்.",
+      },
+      {
+        title: "படங்கள், அட்டவணை, தானியங்கி தேதி புதுப்பிப்பு, HTML ஏற்றுமதி",
+        desc: "படங்களை மற்றும் கட்டமைக்கப்பட்ட அட்டவணைகளை சேர்ப்பதிலிருந்து தானாக தேதிகளை புதுப்பிப்பது மற்றும் உங்கள் உள்ளடக்கத்தை HTML ஆக ஏற்றுமதி செய்வது வரை, இந்த நோட்பேட் சாதாரண உரை திருத்தத்தை விட மிகவும் முன்னேறியது.",
+      },
+      {
+        title: "H1 முதல் H6 வரை தலைப்புகள்",
+        desc: "H1 முதல் H6 வரை முழுமையான தலைப்பு அமைப்புடன் உங்கள் உள்ளடக்கத்தை ஒழுங்குபடுத்துங்கள், இது இந்த நோட்பேட்டுக்கு உங்கள் உலாவியில் ஒரு தொழில்முறை ஆவணத் தொகுப்பி போன்ற அமைப்பை வழங்குகிறது.",
+      },
+      {
+        title: "பல்வேறு எழுத்துரு பாணிகள்",
+        desc: "உங்கள் எழுத்து அனுபவத்தை தனிப்பயனாக்கவும், உங்கள் ஆவணங்களை மேலும் வாசிக்க எளிதாக, வெளிப்பாடானதாக அல்லது தொழில்முறையாக மாற்றவும் பல்வேறு எழுத்துரு பாணிகளில் இருந்து தேர்வு செய்யுங்கள்.",
+      },
+      {
+        title: "உரையின் நிறத்தை மாற்றுதல்",
+        desc: "இந்த ஆன்லைன் நோட்பேட் முக்கிய புள்ளிகளை வெளிப்படுத்தவும், உரையின் நிறத்தை மாற்றுவதன் மூலம் காட்சித் தெளிவை அதிகரிக்கவும் உதவுகிறது; இது எளிய ஆனால் சக்திவாய்ந்த வடிவமைப்பு கருவியாகும்.",
+      },
+      {
+        title: "AI மூலம் குரல் முதல் உரையாக மாற்றம் (பிழையில்லாமல்)",
+        desc: "உங்கள் எண்ணங்களை பேசுங்கள், அவை அதிக துல்லியத்துடன் திரையில் தோன்றுவதை காணுங்கள். இந்த நோட்பேட்டின் AI குரல்-முதல்-உரை அம்சம் உங்கள் குரலை உடனடியாக சுத்தமான, பிழையற்ற உரையாக மாற்றுகிறது, இதனால் நீங்கள் அதிக நேரத்தை சேமிக்கலாம்.",
+      },
+      {
+        title: "உள்நுழைந்த பிறகு பகிரக்கூடிய இணைப்பு உருவாக்குதல்",
+        desc: "உள்நுழைந்த பிறகு, எங்கள் நோட்பேட் எந்த குறிப்பிற்கும் தனித்துவமான பகிரக்கூடிய இணைப்பை உருவாக்க அனுமதிக்கிறது, இதனால் இணைந்து வேலை செய்வதும் விரைவாக பகிர்வதும் URL ஐ நகலெடுப்பது போல எளிதாகிறது.",
+      },
+      {
+        title: "வரலாற்றைப் பதிவு செய்ய கணக்கை உருவாக்குதல்",
+        desc: "இந்த நோட்பேட்டில் இலவச கணக்கை உருவாக்கி, குறிப்பு வரலாற்றை திறக்கலாம்; இதனால் நீங்கள் எழுதிய அனைத்தையும் ஒரே இடத்தில் மீண்டும் பார்க்கவும், மீட்டெடுக்கவும், நிர்வகிக்கவும் முடியும்.",
+      },
+    ],
+    outro:
+      "இவற்றைத் தவிர, நீங்கள் இலவசமாக பயன்படுத்தவும் மகிழவும் பல்வேறு தனித்துவமான அம்சங்கள் உள்ளன.",
+  },
+  te: {
+    title: "ఆన్‌లైన్ నోట్ప్యాడ్ ముఖ్య లక్షణాలు",
+    features: [
+      {
+        title: "ఆటో సేవ్ ఆన్‌లైన్",
+        desc: "మీరు టైప్ చేస్తూనే మా ఆన్‌లైన్ నోట్ప్యాడ్ మీ పనిని ఆటోమేటిక్‌గా సేవ్ చేస్తుంది, కాబట్టి బ్రౌజర్ క్రాష్ అయినా లేదా మీరు పొరపాటున ట్యాబ్‌ను మూసినా ఒక్క పదం కూడా కోల్పోరు.",
+      },
+      {
+        title: "TXT మరియు PDF ఫార్మాట్లలో డౌన్‌లోడ్ చేయడం",
+        desc: "మా నోట్ప్యాడ్‌తో మీరు మీ నోట్స్‌ను వెంటనే శుభ్రమైన TXT లేదా PDF ఫైల్‌గా ఎగుమతి చేయవచ్చు, దీని వల్ల సేవ్ చేయడం, ప్రింట్ చేయడం లేదా ఆఫ్‌లైన్‌లో పంచుకోవడం సులభం అవుతుంది.",
+      },
+      {
+        title: "పూర్తి స్క్రీన్",
+        desc: "ఫుల్-స్క్రీన్ మోడ్‌కి మారి, ఈ డిస్ట్రాక్షన్-ఫ్రీ నోట్ప్యాడ్ మీకు అంచు నుంచి అంచు వరకు శుభ్రమైన రైటింగ్ కాన్వాస్‌ను ఇస్తుంది, ఇది కేంద్రీకరించి రాయడానికి చాలా అనుకూలం.",
+      },
+      {
+        title: "200% జూమ్ ఫీచర్",
+        desc: "ఈ ఆన్‌లైన్ నోట్ప్యాడ్ ద్వారా మీరు 200% వరకు జూమ్ చేయవచ్చు, దీని వల్ల ఎక్కువసేపు రాయడం లేదా చిన్న టెక్స్ట్‌తో పని చేయడం కళ్లకు సులభంగా ఉంటుంది.",
+      },
+      {
+        title: "చిత్రాలు, పట్టికలు, ఆటో-అప్‌డేట్ తేదీలు, HTML ఎగుమతి",
+        desc: "చిత్రాలు మరియు నిర్మిత పట్టికలను చేర్చడం నుండి తేదీలను ఆటోమేటిక్‌గా అప్‌డేట్ చేయడం మరియు మీ కంటెంట్‌ను HTML‌గా ఎగుమతి చేయడం వరకు, ఈ నోట్ప్యాడ్ సాధారణ టెక్స్ట్ ఎడిటింగ్ కంటే చాలా ముందుకు వెళుతుంది.",
+      },
+      {
+        title: "H1 నుండి H6 వరకు శీర్షికలు",
+        desc: "H1 నుండి H6 వరకు పూర్తి హెడింగ్ హైరార్కీతో మీ కంటెంట్‌ను క్రమబద్ధం చేయండి, దీని వల్ల ఈ నోట్ప్యాడ్ మీ బ్రౌజర్‌లోనే ఒక ప్రొఫెషనల్ డాక్యుమెంట్ ఎడిటర్‌లా పనిచేస్తుంది.",
+      },
+      {
+        title: "వివిధ ఫాంట్ శైలులు",
+        desc: "మీ రాయడం అనుభవాన్ని వ్యక్తిగతీకరించడానికి మరియు మీ డాక్యుమెంట్లు మరింత చదవడానికి సులభంగా, వ్యక్తీకరణతో లేదా ప్రొఫెషనల్‌గా ఉండేలా వివిధ ఫాంట్ శైలుల నుండి ఎంపిక చేసుకోండి.",
+      },
+      {
+        title: "టెక్స్ట్ రంగు మార్చడం",
+        desc: "ఈ ఆన్‌లైన్ నోట్ప్యాడ్ టెక్స్ట్ రంగును మార్చడం ద్వారా ముఖ్యమైన పాయింట్లను హైలైట్ చేయడానికి మరియు విజువల్ క్లారిటీని పెంచడానికి సహాయపడుతుంది, ఇది ప్రతి రచయితకు ఉపయోగపడే సరళమైన కానీ శక్తివంతమైన ఫార్మాటింగ్ టూల్.",
+      },
+      {
+        title: "AI ఆధారిత స్పీచ్ టు టెక్స్ట్ (లోపాలు లేకుండా)",
+        desc: "మీ ఆలోచనలను మాట్లాడండి, అవి అధిక ఖచ్చితత్వంతో స్క్రీన్‌పై కనిపిస్తాయి. ఈ నోట్ప్యాడ్ యొక్క AI స్పీచ్-టు-టెక్స్ట్ ఫీచర్ మీ వాయిస్‌ను వెంటనే శుభ్రమైన, లోపాలు లేని టెక్స్ట్‌గా మార్చుతుంది, దీని వల్ల మీరు చాలా సమయం ఆదా చేసుకోవచ్చు.",
+      },
+      {
+        title: "సైన్-ఇన్ తర్వాత షేర్ చేయగల లింక్ సృష్టించడం",
+        desc: "సైన్-ఇన్ అయిన తర్వాత, మా నోట్ప్యాడ్ ఏ నోట్‌కైనా ప్రత్యేకమైన షేర్ చేయగల లింక్‌ను సృష్టించడానికి అనుమతిస్తుంది, దీని వల్ల సహకారం మరియు వేగంగా షేర్ చేయడం URL కాపీ చేయడం లాగా సులభమవుతుంది.",
+      },
+      {
+        title: "హిస్టరీ సేవ్ చేయడానికి అకౌంట్ సృష్టించండి",
+        desc: "ఈ నోట్ప్యాడ్‌లో ఉచిత అకౌంట్ సృష్టించడం ద్వారా నోట్ హిస్టరీని అన్‌లాక్ చేసుకోవచ్చు, దీని వల్ల మీరు రాసిన ప్రతిదాన్ని ఒకే చోట తిరిగి చూడడం, రికవర్ చేయడం మరియు నిర్వహించడం సాధ్యమవుతుంది.",
+      },
+    ],
+    outro:
+      "ఇవన్నీ కాకుండా, మీరు ఉచితంగా ఉపయోగించి ఆనందించగల మరెన్నో ప్రత్యేకమైన ఫీచర్లు ఉన్నాయి.",
+  },
+  th: {
+    title: "คุณสมบัติหลักของ Notepad ออนไลน์",
+    features: [
+      {
+        title: "บันทึกอัตโนมัติออนไลน์",
+        desc: "Notepad ออนไลน์ของเราจะบันทึกงานของคุณโดยอัตโนมัติขณะพิมพ์ ดังนั้นคุณจะไม่สูญเสียแม้แต่คำเดียว แม้ว่าเบราว์เซอร์จะค้างหรือคุณปิดแท็บโดยไม่ได้ตั้งใจก็ตาม",
+      },
+      {
+        title: "ดาวน์โหลดในรูปแบบ TXT และ PDF",
+        desc: "ด้วย Notepad ของเรา คุณสามารถส่งออกโน้ตของคุณเป็นไฟล์ TXT หรือ PDF ที่สะอาดได้ทันที ทำให้สามารถบันทึก พิมพ์ หรือแชร์แบบออฟไลน์ได้ง่าย",
+      },
+      {
+        title: "โหมดเต็มหน้าจอ",
+        desc: "สลับไปโหมดเต็มหน้าจอ แล้วให้ Notepad ที่ไม่มีสิ่งรบกวนนี้มอบพื้นที่เขียนที่สะอาดเต็มขอบหน้าจอ เหมาะสำหรับการเขียนที่ต้องการสมาธิ",
+      },
+      {
+        title: "ฟีเจอร์ซูม 200%",
+        desc: "Notepad ออนไลน์นี้ให้คุณซูมได้สูงสุดถึง 200% ทำให้สบายตาเมื่อเขียนเป็นเวลานาน หรือทำงานกับข้อความตัวเล็กบนหน้าจอใด ๆ",
+      },
+      {
+        title: "แทรกรูปภาพ ตาราง อัปเดตวันที่อัตโนมัติ ส่งออก HTML",
+        desc: "ตั้งแต่การแทรกรูปภาพและตารางที่มีโครงสร้าง ไปจนถึงการอัปเดตวันที่อัตโนมัติและการส่งออกเนื้อหาเป็น HTML Notepad นี้ทำได้มากกว่าการแก้ไขข้อความพื้นฐาน",
+      },
+      {
+        title: "หัวข้อจาก H1 ถึง H6",
+        desc: "จัดระเบียบเนื้อหาของคุณด้วยโครงสร้างหัวข้อแบบครบถ้วนตั้งแต่ H1 ถึง H6 ทำให้ Notepad นี้มีโครงสร้างเหมือนโปรแกรมแก้ไขเอกสารระดับมืออาชีพในเบราว์เซอร์ของคุณ",
+      },
+      {
+        title: "รูปแบบฟอนต์ที่หลากหลาย",
+        desc: "เลือกจากรูปแบบฟอนต์ที่หลากหลายเพื่อปรับประสบการณ์การเขียนของคุณให้เป็นแบบเฉพาะตัว และทำให้เอกสารของคุณอ่านง่าย แสดงอารมณ์ได้ดี หรือดูเป็นมืออาชีพมากขึ้น",
+      },
+      {
+        title: "เปลี่ยนสีข้อความ",
+        desc: "Notepad ออนไลน์นี้ช่วยให้คุณเน้นประเด็นสำคัญและเพิ่มความชัดเจนด้วยการเปลี่ยนสีข้อความ ซึ่งเป็นเครื่องมือจัดรูปแบบที่เรียบง่ายแต่ทรงพลังสำหรับนักเขียนทุกคน",
+      },
+      {
+        title: "แปลงเสียงเป็นข้อความด้วย AI แบบไม่มีข้อผิดพลาด",
+        desc: "พูดความคิดของคุณแล้วเห็นมันปรากฏบนหน้าจอด้วยความแม่นยำสูง ฟีเจอร์แปลงเสียงเป็นข้อความด้วย AI ของ Notepad นี้จะเปลี่ยนเสียงของคุณเป็นข้อความที่สะอาดและไม่มีข้อผิดพลาดทันที ช่วยประหยัดเวลาได้มาก",
+      },
+      {
+        title: "สร้างลิงก์แชร์ได้หลังเข้าสู่ระบบ",
+        desc: "เมื่อเข้าสู่ระบบแล้ว Notepad ของเราจะให้คุณสร้างลิงก์แชร์เฉพาะสำหรับโน้ตแต่ละรายการ ทำให้การทำงานร่วมกันและการแชร์ทำได้ง่ายเหมือนการคัดลอก URL",
+      },
+      {
+        title: "สร้างบัญชีเพื่อบันทึกประวัติ",
+        desc: "สร้างบัญชีฟรีบน Notepad นี้เพื่อปลดล็อกประวัติการบันทึก ทำให้คุณสามารถย้อนดู กู้คืน และจัดการทุกสิ่งที่คุณเคยเขียนไว้ได้ในที่เดียว",
+      },
+    ],
+    outro:
+      "นอกจากสิ่งเหล่านี้ ยังมีฟีเจอร์พิเศษอื่น ๆ อีกมากมายที่คุณสามารถใช้งานและเพลิดเพลินได้ฟรี",
+  },
+  ti: {
+    title: "መሰረታዊ ባህሪታት ናይ ኦንላይን Notepad",
+    features: [
+      {
+        title: "ብራምታ ዝሰርሕ ናይ ኦንላይን ምዝገባ",
+        desc: "እዚ ኦንላይን Notepad እንከሎ ትጽሕፍ ስራሕካ ብራምታ ይዕቅብ፣ ስለዚ ሓደ ቃል እኳ ኣይትጠፍእን፣ እንተ ብራውዘር እንተ ተሰብረ ወይ ታብ ብስሕተት እንተ ዘጸውዕካ እኳ።",
+      },
+      {
+        title: "ብTXTን PDFን ፎርማት ምውሳድ",
+        desc: "በዚ Notepad ብቕልጡፍ መልእኽትኻ ከም ጽሩይ TXT ወይ PDF ፋይል ክትወስድ ትኽእል፣ እዚ ምዝገባ፣ ምሕታም ወይ ብኦፍላይን ምክፋል ይቀላል።",
+      },
+      {
+        title: "ሙሉ ስክሪን ሞድ",
+        desc: "ናብ ሙሉ ስክሪን ሞድ ተቀይር፣ እዚ ዘይዘናጋዕ Notepad ጽሩይ ካንቫስ ናይ ምጽሓፍ ክህበካ እዩ፣ ንምትኩር ጽሕፈት ፍጹም እዩ።",
+      },
+      {
+        title: "200% ምዕባይ (Zoom)",
+        desc: "እዚ ኦንላይን Notepad ክሳብ 200% ክትዕብይ ይፈቅደልካ፣ ንዝረጋገጹ ግዜ ጽሕፈት ወይ ንንኡስ ጽሑፍ ምስራሕ ንዓይኒ ዝቐለለ ይገብር።",
+      },
+      {
+        title: "ምእታው ስእሊ፣ ጠረጴዛ፣ ብራምታ ዝሰርሕ ምዕባይ ዕለት፣ HTML ምውጻእ",
+        desc: "ካብ ምእታው ስእሊን ዝተዋሃዱ ጠረጴዛታትን ክሳብ ብራምታ ምዕባይ ዕለትን ንዝትሓዝ ይዘት ከም HTML ምውጻእን፣ እዚ Notepad ካብ መሰረታዊ ጽሕፈት ብጣዕሚ ይልዕል እዩ።",
+      },
+      {
+        title: "ካብ H1 ክሳብ H6 ዝርከቡ ርእሰ-ጽሑፋት",
+        desc: "ይዘትካ ብሙሉ ደረጃ ርእሰ-ጽሑፋት H1 ክሳብ H6 ተዋህዶ ኣደራጅ፣ እዚ Notepad ኣብ ብራውዘርካ ከም ፕሮፌሽናል ዶክመንት ኤዲተር ይገብሮ።",
+      },
+      {
+        title: "ዝተፈላለዩ ስታይል ፎንት",
+        desc: "ካብ ብዙሕ ዓይነት ስታይል ፎንት ምረጽ፣ ተመክሮ ጽሕፈትካ ንምስርሕ እና ዶክመንትካ ንምንባብ ቀሊል፣ ገላጺ ወይ ፕሮፌሽናል ክገብር።",
+      },
+      {
+        title: "ሕብሪ ጽሑፍ ምቅያር",
+        desc: "እዚ Notepad ንኣገዳሲ ነጥብታት ንምግላጽን ግልጺ ምርኣይ ንምውሳኽን ብምቅያር ሕብሪ ጽሑፍ ይሕግዝ፣ ቀሊል ግን ሓያል መሳርሒ እዩ።",
+      },
+      {
+        title: "ብAI ዝሰርሕ ድምጺ ናብ ጽሑፍ ምቅያር ብዘይ ጌጋ",
+        desc: "ሓሳብካ ተናገር፣ ብልክዕ ኣብ ስክሪን ክትርእዮ ኢኻ። እዚ Notepad ብAI ዝሰርሕ ድምጺ ናብ ጽሑፍ ብቕልጡፍ ናብ ጽሩይን ዘይጌጋን ጽሑፍ ይቕይሮ፣ ብዙሕ ግዜ ይቑጥብ።",
+      },
+      {
+        title: "ድሕሪ መግቢ ምእታው ዝክፈት ዝክፈል ሊንክ ምፍጣር",
+        desc: "ድሕሪ መግቢ ምእታው፣ እዚ Notepad ንዝኾነ መልእኽቲ ልዩ ዝኾነ ዝክፈል ሊንክ ክፈጥር ይፈቅድ፣ ምስራሕን ምክፋልን ከም URL ምንጻፍ ቀሊል ይገብር።",
+      },
+      {
+        title: "ሂሳብ ምፍጣር ንታሪኽ ምዝገባ",
+        desc: "ነዚ Notepad ብነጻ ሂሳብ ፍጠር ንታሪኽ መልእኽቲ ክትከፍት እንተ ትኽእል፣ ዝጻሕፍካዮ ኩሉ ኣብ ሓደ ቦታ ክትርእዮን ክትመልሶን ክትመሓየሽን ትኽእል።",
+      },
+    ],
+    outro:
+      "ካብዚ ብዝሓለፈ፣ ብዙሕ ካልእ ልዩ ባህሪታት ብነጻ ክትጥቀመሉን ክትሕጐስን ትኽእል።",
+  },
+  to: {
+    title: "Ngaahi Fakatotolo Mahuʻinga ʻo e Notepad ʻi he ʻInitaneti",
+    features: [
+      {
+        title: "Seivi ʻaunoa ʻi he ʻinitaneti",
+        desc: "ʻOku seivi ʻe he notepad ʻi he ʻinitaneti ʻi he taimi ʻokú ke tohi ai, ko ia ʻe ʻikai ʻaupito ke mole ha foʻi lea ʻe taha, neongo ʻoku ʻi ai ha paʻusiʻanga ʻa e browser pe ke ke tāpuni taʻetokanga ʻa e tab.",
+      },
+      {
+        title: "Laveʻi ʻi he ngaahi fōmisi TXT mo PDF",
+        desc: "ʻI heʻemau notepad, ʻe lava ke ke fakahū vave hoʻo ngaahi tohi ko ha faile TXT pe PDF maʻa, ʻoku faingofua ke seivi, paaki, pe vahevahe ʻi he offline.",
+      },
+      {
+        title: "Sikīlini kakato",
+        desc: "Liliu ki he mode sikīlini kakato pea tuku ʻa e notepad taʻefakangāue ni ke ne ʻoatu ha feituʻu tohi maʻa mei he tapa ki he tapa, ʻoku lelei taha ki he ngaahi taimi tohi tokanga.",
+      },
+      {
+        title: "Fakalelei (zoom) 200%",
+        desc: "ʻOku ʻai ʻe he notepad ʻi he ʻinitaneti ke ke fakalelei (zoom) ʻo aʻu ki he 200%, ʻa ia ʻoku fakafiemālie ki he mata ʻi he taimi tohi fuoloa pe taimi ngāue mo e tohi siʻisiʻi ʻi ha sikīlini pē.",
+      },
+      {
+        title: "Fakahu ngaahi fakatātā, tepile, fakalelei ʻaunoa ʻo e ʻaho, pea fakahū ki he HTML",
+        desc: "Mei he fakahu ʻo e ngaahi fakatātā mo e ngaahi tepile faʻu lelei, ki he fakalelei ʻaunoa ʻo e ʻaho pea mo e fakahū ʻo hoʻo konga tohi ki he HTML, ʻoku lahi ange ʻaupito ʻeni ʻi he edit tohi faingofua pē.",
+      },
+      {
+        title: "Ngaahi hingoa ʻuluaki mei H1 ki H6",
+        desc: "Fokotuʻutuʻu hoʻo konga tohi ʻaki ha hierarchy kakato ʻo e ngaahi hingoa mei H1 ki H6, ʻa ia ʻoku ne ʻai ʻa e notepad ni ke hangē ha document editor totonu ʻi hoʻo browser.",
+      },
+      {
+        title: "Ngaahi faingāue kehekehe ʻo e letā tohi",
+        desc: "Fili mei he ngaahi faingāue kehekehe ʻo e letā tohi ke ke fakahoa ai hoʻo founga tohi pea ke fakahāhā lelei ange hoʻo ngaahi tohi, faingofua ke lau, pe fakaʻofoʻofa mo fakapalofesinale.",
+      },
+      {
+        title: "Liliu ʻa e lanu ʻo e tohi",
+        desc: "ʻOku ʻai ʻe he notepad ʻi he ʻinitaneti ke ke fakaʻilongaʻi ʻa e ngaahi konga mahuʻinga pea fakaʻofoʻofa ange ʻa e tohi ʻaki hono liliu ʻo e lanu, ko ha meʻa faingofua kae mālohi ki he tokotaha tohi kotoa pē.",
+      },
+      {
+        title: "Fakalelei lea ki he tohi ʻi he AI ʻikai ha fehalaaki",
+        desc: "Lea hoʻo ngaahi fakakaukau pea sio ki hono hā mai ʻi he sikīlini ʻaki ha tonu māʻolunga. ʻOku liliu vave ʻe he AI speech-to-text ʻa e notepad ni hoʻo leʻo ki he tohi maʻa mo taʻefehalaaki, ʻa ia ʻoku tokoni lahi ke ke fakahaofi taimi.",
+      },
+      {
+        title: "Fakatupu ha link vahevahe hili hono hu ki loto",
+        desc: "Hili hono hu ki loto, ʻoku fakaʻatā ʻe he notepad ke ke fakatupu ha link makehe ke vahevahe ki ha tohi kotoa pē, ʻa ia ʻoku ne ʻai ke faingofua ʻa e ngāue fakataha mo e vahevahe hangē ko hono hiki kopi ha URL.",
+      },
+      {
+        title: "Fakatupu ha ʻakauni ke tohi ʻa e hisitōlia",
+        desc: "Fakatupu ha ʻakauni taʻetotongi ʻi he notepad ni ke fakaava ʻa e hisitōlia ʻo e ngaahi tohi, ke ke toe vakai, toe maʻu mai, pea puleʻi ʻa e meʻa kotoa pē kuo ke tohi ʻi ha feituʻu pē ʻe taha.",
+      },
+    ],
+    outro:
+      "ʻI he tafaʻaki ʻeni, ʻoku toe lahi ʻa e ngaahi meʻa makehe kehe ʻe lava ke ke fakaʻaongaʻi mo fiefia ai taʻetotongi.",
+  },
+  tr: {
+    title: "Online Not Defterinin Temel Özellikleri",
+    features: [
+      {
+        title: "Çevrimiçi Otomatik Kaydetme",
+        desc: "Online not defterimiz siz yazarken çalışmalarınızı otomatik olarak kaydeder, böylece tarayıcı çökerse veya sekmeyi yanlışlıkla kapatsanız bile tek bir kelimeyi bile kaybetmezsiniz.",
+      },
+      {
+        title: "TXT ve PDF formatlarında indirme",
+        desc: "Not defterimizle notlarınızı anında temiz bir TXT veya PDF dosyası olarak dışa aktarabilirsiniz; böylece kaydetmek, yazdırmak veya çevrimdışı paylaşmak çok kolay olur.",
+      },
+      {
+        title: "Tam Ekran",
+        desc: "Tam ekran moduna geçin ve dikkat dağıtmayan bu not defterinin size kenardan kenara temiz bir yazım alanı sunmasına izin verin; odaklanmış yazım oturumları için mükemmeldir.",
+      },
+      {
+        title: "%200 Yakınlaştırma Özelliği",
+        desc: "Bu çevrimiçi not defteri %200’e kadar yakınlaştırma yapmanıza izin verir, bu da uzun yazım oturumlarında veya küçük metinlerle çalışırken göz yorgunluğunu azaltır.",
+      },
+      {
+        title: "Görsel ekleme, tablo, tarihlerin otomatik güncellenmesi, HTML dışa aktarma",
+        desc: "Görsel ve yapılandırılmış tablolar eklemekten tarihleri otomatik güncellemeye ve içeriğinizi HTML olarak dışa aktarmaya kadar bu not defteri temel metin düzenlemenin çok ötesine geçer.",
+      },
+      {
+        title: "H1’den H6’ya başlıklar",
+        desc: "İçeriğinizi H1’den H6’ya kadar tam bir başlık hiyerarşisi ile düzenleyin; bu not defterine tarayıcınızda profesyonel bir belge düzenleyici yapısı kazandırır.",
+      },
+      {
+        title: "Farklı yazı tipleri",
+        desc: "Yazma deneyiminizi kişiselleştirmek ve belgelerinizi daha okunabilir, daha etkileyici veya daha profesyonel hale getirmek için çeşitli yazı tipleri arasından seçim yapın.",
+      },
+      {
+        title: "Metin rengini değiştirme",
+        desc: "Bu çevrimiçi not defteri, metin rengini değiştirerek önemli noktaları vurgulamanıza ve görsel netlik eklemenize olanak tanır; her yazar için basit ama güçlü bir biçimlendirme aracıdır.",
+      },
+      {
+        title: "Hatasız Yapay Zeka Destekli Sesli Yazıya Dönüştürme",
+        desc: "Düşüncelerinizi konuşun ve bunların ekranda yüksek doğrulukla göründüğünü izleyin. Bu not defterinin yapay zeka destekli sesli yazıya dönüştürme özelliği sesinizi anında temiz ve hatasız metne çevirir, böylece çok zaman kazanırsınız.",
+      },
+      {
+        title: "Giriş yaptıktan sonra paylaşılabilir bağlantı oluşturma",
+        desc: "Giriş yaptıktan sonra not defterimiz, herhangi bir not için benzersiz bir paylaşılabilir bağlantı oluşturmanıza izin verir; iş birliği ve hızlı paylaşım URL kopyalamak kadar kolaydır.",
+      },
+      {
+        title: "Geçmişi kaydetmek için hesap oluşturma",
+        desc: "Bu not defterinde ücretsiz bir hesap oluşturarak not geçmişini açabilir, yazdığınız her şeyi tek bir yerde tekrar görüntüleyebilir, geri yükleyebilir ve yönetebilirsiniz.",
+      },
+    ],
+    outro:
+      "Bunların dışında, ücretsiz olarak kullanıp keyfini çıkarabileceğiniz daha birçok benzersiz özellik bulunmaktadır.",
+  },
+  tk: {
+    title: "Onlaýn Notepad-yň Esasy Aýratynlyklary",
+    features: [
+      {
+        title: "Awtomatiki ýagdaýda onlaýn saklamak",
+        desc: "Biziň onlaýn notepadymyz ýazýan wagtyňyz işiňizi awtomatiki ýagdaýda saklaýar, şonuň üçin brauzer ýykylsa ýa-da taby tötänleýin ýapsaňyz hem bir söz hem ýitmez.",
+      },
+      {
+        title: "TXT we PDF formatlarynda ýüklemek",
+        desc: "Notepadymyz bilen ýazgylaryňyzy derrew arassa TXT ýa-da PDF faýly hökmünde eksport edip bilersiňiz, bu bolsa saklamagy, çap etmegi ýa-da oflaýn paýlaşmagy aňsatlaşdyrýar.",
+      },
+      {
+        title: "Doly ekran",
+        desc: "Doly ekran režimine geçiň we bu ünsüňizi sowmaýan notepad size gyradan gyraga çenli arassa ýazuw meýdançasyny bersin, bu bolsa ünsli ýazmak üçin örän amatlydyr.",
+      },
+      {
+        title: "200% ulaltma aýratynlygy",
+        desc: "Bu onlaýn notepad size 200%-e çenli ulaltmaga mümkinçilik berýär, bu hem uzak wagt ýazanyňyzda ýa-da kiçi tekst bilen işleşeniňizde gözüňizi ýeňilleşdirýär.",
+      },
+      {
+        title: "Surat, tablisa goşmak, seneleri awtomatiki täzelemek, HTML eksport etmek",
+        desc: "Surat we gurluşly tablisalar goşmakdan başlap, seneleri awtomatiki täzelemäge we mazmunyňyzy HTML görnüşinde eksport etmäge çenli, bu notepad adaty tekst redaktirlemeden has köp mümkinçilik berýär.",
+      },
+      {
+        title: "H1-den H6-a çenli atlar",
+        desc: "Mazmunyňyzy H1-den H6-a çenli doly at gurluşy bilen tertipläň, bu notepad-y brauzeriňizde professional dokument redaktoryna öwürýär.",
+      },
+      {
+        title: "Dürli şrift görnüşleri",
+        desc: "Ýazuw tejribäňizi şahsylaşdyrmak we resminamalaryňyzy has okalýan, täsirli ýa-da professional etmek üçin dürli şrift görnüşlerinden saýlaň.",
+      },
+      {
+        title: "Tekstiň reňkini üýtgetmek",
+        desc: "Bu onlaýn notepad möhüm nokatlary tapawutlandyrmaga we tekst reňkini üýtgetmek arkaly has aýdyňlyk goşmaga mümkinçilik berýär, bu bolsa her ýazyjy üçin ýönekeý emma güýçli guraldyr.",
+      },
+      {
+        title: "Ýalňyşsyz AI sesden tekste öwürme",
+        desc: "Pikirleriňizi gürläň we olaryň ýokary takyklyk bilen ekranda peýda bolýandygyny görüň. Bu notepad-yň AI sesden tekste öwürme aýratynlygy siziň sesiňizi derrew arassa we ýalňyşsyz tekste öwürýär, bu bolsa köp wagty tygşytlaýar.",
+      },
+      {
+        title: "Girişden soň paýlaşylýan baglanyşyk döretmek",
+        desc: "Giriş eden soň, notepadymyz islendik bellik üçin aýratyn paýlaşylýan baglanyşyk döretmäge mümkinçilik berýär, bu bolsa hyzmatdaşlygy we çalt paýlaşmagy URL göçürmek ýaly aňsat edýär.",
+      },
+      {
+        title: "Taryhy ýazmak üçin hasap döretmek",
+        desc: "Bu notepad-da mugt hasap dörediň we bellik taryhyny açyň, şeýdip ýazan ähli zatlaryňyzy bir ýerde täzeden görüp, dikeldip we dolandyryp bilersiňiz.",
+      },
+    ],
+    outro:
+      "Bulardan başga-da, mugt ulanyp we lezzet alyp boljak başga-da köp özboluşly aýratynlyklar bar.",
+  },
+  uk: {
+    title: "Основні функції онлайн-блокнота",
+    features: [
+      {
+        title: "Автоматичне збереження онлайн",
+        desc: "Наш онлайн-блокнот автоматично зберігає вашу роботу під час введення, тому ви ніколи не втратите жодного слова, навіть якщо браузер зависне або ви випадково закриєте вкладку.",
+      },
+      {
+        title: "Завантаження у форматах TXT та PDF",
+        desc: "За допомогою нашого блокнота ви можете миттєво експортувати свої нотатки у чистий файл TXT або PDF, що дозволяє легко зберігати, друкувати або ділитися ними офлайн.",
+      },
+      {
+        title: "Повноекранний режим",
+        desc: "Перейдіть у повноекранний режим, і цей блокнот без відволікань надасть вам чисте поле для письма від краю до краю, ідеальне для зосередженого створення текстів.",
+      },
+      {
+        title: "Функція масштабування до 200%",
+        desc: "Цей онлайн-блокнот дозволяє збільшувати масштаб до 200%, що робить роботу комфортнішою для очей під час довгих сесій письма або роботи з дрібним текстом на будь-якому екрані.",
+      },
+      {
+        title: "Вставка зображень, таблиць, автоматичне оновлення дат, експорт HTML",
+        desc: "Від вставки зображень і структурованих таблиць до автоматичного оновлення дат і експорту контенту у формат HTML — цей блокнот виходить далеко за межі базового редагування тексту.",
+      },
+      {
+        title: "Заголовки від H1 до H6",
+        desc: "Організуйте свій контент за повною ієрархією заголовків від H1 до H6, надаючи цьому блокноту структуру професійного редактора документів прямо у вашому браузері.",
+      },
+      {
+        title: "Різні стилі шрифтів",
+        desc: "Оберіть серед різних стилів шрифтів, щоб персоналізувати свій досвід письма та зробити документи більш читабельними, виразними або професійними.",
+      },
+      {
+        title: "Зміна кольору тексту",
+        desc: "Цей онлайн-блокнот дозволяє виділяти ключові моменти та покращувати візуальну зрозумілість шляхом зміни кольору тексту — простий, але потужний інструмент форматування для будь-якого автора.",
+      },
+      {
+        title: "AI-розпізнавання мовлення без помилок",
+        desc: "Висловлюйте свої думки вголос і спостерігайте, як вони з’являються на екрані з високою точністю. Функція AI-розпізнавання мовлення цього блокнота миттєво перетворює ваш голос у чистий і безпомилковий текст, заощаджуючи ваш час.",
+      },
+      {
+        title: "Створення посилання для поширення після входу",
+        desc: "Після входу в систему наш блокнот дозволяє створювати унікальне посилання для будь-якої нотатки, роблячи співпрацю та швидкий обмін таким же простим, як копіювання URL.",
+      },
+      {
+        title: "Створення облікового запису для збереження історії",
+        desc: "Створіть безкоштовний обліковий запис у цьому блокноті, щоб відкрити історію нотаток і мати можливість переглядати, відновлювати та керувати всім, що ви коли-небудь писали, в одному місці.",
+      },
+    ],
+    outro:
+      "Окрім цього, є багато інших унікальних функцій, якими ви можете користуватися безкоштовно та із задоволенням.",
+  },
+  ur: {
+    title: "آن لائن نوٹ پیڈ کی اہم خصوصیات",
+    features: [
+      {
+        title: "خودکار آن لائن سیو",
+        desc: "ہمارا آن لائن نوٹ پیڈ آپ کے لکھتے وقت خود بخود آپ کا کام محفوظ کرتا رہتا ہے، اس لیے آپ کا ایک بھی لفظ ضائع نہیں ہوتا، چاہے براؤزر کریش ہو جائے یا آپ غلطی سے ٹیب بند کر دیں۔",
+      },
+      {
+        title: "TXT اور PDF فارمیٹس میں ڈاؤن لوڈ",
+        desc: "ہمارے نوٹ پیڈ کے ذریعے آپ اپنے نوٹس کو فوراً صاف TXT یا PDF فائل کی صورت میں ایکسپورٹ کر سکتے ہیں، جس سے محفوظ کرنا، پرنٹ کرنا یا آف لائن شیئر کرنا آسان ہو جاتا ہے۔",
+      },
+      {
+        title: "فل اسکرین موڈ",
+        desc: "فل اسکرین موڈ میں جائیں اور اس ڈسٹرکشن فری نوٹ پیڈ کو آپ کو ایک صاف اور کنارے سے کنارے تک لکھنے کی جگہ دینے دیں، جو مکمل توجہ کے ساتھ لکھنے کے لیے بہترین ہے۔",
+      },
+      {
+        title: "200٪ زوم فیچر",
+        desc: "یہ آن لائن نوٹ پیڈ آپ کو 200٪ تک زوم کرنے کی سہولت دیتا ہے، جو لمبے لکھائی کے سیشنز یا چھوٹے متن کے ساتھ کام کرتے وقت آنکھوں کے لیے آسان ہے۔",
+      },
+      {
+        title: "تصاویر شامل کرنا، ٹیبل، تاریخوں کی خودکار اپڈیٹ، HTML ایکسپورٹ",
+        desc: "تصاویر اور منظم ٹیبلز شامل کرنے سے لے کر تاریخوں کو خودکار اپڈیٹ کرنے اور اپنے مواد کو HTML کے طور پر ایکسپورٹ کرنے تک، یہ نوٹ پیڈ بنیادی ٹیکسٹ ایڈیٹنگ سے کہیں آگے ہے۔",
+      },
+      {
+        title: "H1 سے H6 تک ہیڈنگز",
+        desc: "اپنے مواد کو مکمل ہیڈنگ ہائیرارکی H1 سے H6 کے ساتھ منظم کریں، جس سے یہ نوٹ پیڈ آپ کے براؤزر میں ایک پروفیشنل ڈاکیومنٹ ایڈیٹر کی طرح کام کرتا ہے۔",
+      },
+      {
+        title: "مختلف فونٹ اسٹائلز",
+        desc: "اپنے لکھنے کے تجربے کو ذاتی بنانے کے لیے مختلف فونٹ اسٹائلز میں سے انتخاب کریں تاکہ آپ کے نوٹ زیادہ قابلِ مطالعہ، مؤثر یا پروفیشنل بن سکیں۔",
+      },
+      {
+        title: "متن کا رنگ تبدیل کرنا",
+        desc: "یہ آن لائن نوٹ پیڈ اہم نکات کو نمایاں کرنے اور متن کا رنگ تبدیل کر کے بصری وضاحت بڑھانے کی سہولت دیتا ہے، جو ہر لکھنے والے کے لیے ایک سادہ مگر طاقتور ٹول ہے۔",
+      },
+      {
+        title: "AI کے ذریعے بغیر غلطی کے آواز کو متن میں تبدیل کرنا",
+        desc: "اپنے خیالات بولیں اور انہیں اعلیٰ درستگی کے ساتھ اسکرین پر ظاہر ہوتے دیکھیں۔ اس نوٹ پیڈ کا AI سپیچ ٹو ٹیکسٹ فیچر آپ کی آواز کو فوراً صاف اور بغیر غلطی کے متن میں تبدیل کر دیتا ہے، جس سے آپ کا کافی وقت بچتا ہے۔",
+      },
+      {
+        title: "سائن اِن کے بعد شیئر ایبل لنک بنانا",
+        desc: "سائن اِن کرنے کے بعد ہمارا نوٹ پیڈ آپ کو کسی بھی نوٹ کے لیے ایک منفرد شیئر ایبل لنک بنانے کی سہولت دیتا ہے، جس سے تعاون اور شیئر کرنا یو آر ایل کاپی کرنے جتنا آسان ہو جاتا ہے۔",
+      },
+      {
+        title: "تاریخ محفوظ کرنے کے لیے اکاؤنٹ بنائیں",
+        desc: "اس نوٹ پیڈ پر مفت اکاؤنٹ بنا کر آپ نوٹس کی ہسٹری کھول سکتے ہیں تاکہ آپ اپنی لکھی ہوئی ہر چیز کو ایک ہی جگہ پر دوبارہ دیکھ، بحال اور منظم کر سکیں۔",
+      },
+    ],
+    outro:
+      "ان کے علاوہ بھی بہت سی منفرد خصوصیات موجود ہیں جنہیں آپ مفت استعمال کر سکتے ہیں اور لطف اندوز ہو سکتے ہیں۔",
+  },
+  uz: {
+    title: "Onlayn Notepadning asosiy xususiyatlari",
+    features: [
+      {
+        title: "Avtomatik onlayn saqlash",
+        desc: "Bizning onlayn notepad yozayotganingizda ishlaringizni avtomatik saqlab boradi, shuning uchun brauzer ishdan chiqsa yoki tasodifan tabni yopsangiz ham birorta soʻzni yoʻqotmaysiz.",
+      },
+      {
+        title: "TXT va PDF formatlarda yuklab olish",
+        desc: "Bizning notepad orqali siz yozuvlaringizni darhol toza TXT yoki PDF fayl sifatida eksport qilishingiz mumkin, bu esa saqlash, chop etish yoki oflayn ulashishni osonlashtiradi.",
+      },
+      {
+        title: "Toʻliq ekran rejimi",
+        desc: "Toʻliq ekran rejimiga oʻting va bu chalgʻitmaydigan notepad sizga chetidan chetigacha toza yozish maydonini taqdim etsin, bu esa diqqat bilan yozish uchun juda qulay.",
+      },
+      {
+        title: "200% kattalashtirish funksiyasi",
+        desc: "Bu onlayn notepad sizga 200% gacha kattalashtirish imkonini beradi, bu esa uzoq yozish jarayonlarida yoki kichik matn bilan ishlaganda ko‘zlar uchun qulayroq bo‘ladi.",
+      },
+      {
+        title: "Rasm qoʻshish, jadval, sanani avtomatik yangilash, HTML eksport",
+        desc: "Rasm va tuzilgan jadvallar qoʻshishdan tortib, sanalarni avtomatik yangilash va kontentingizni HTML formatida eksport qilishgacha, bu notepad oddiy matn tahriridan ancha keng imkoniyatlarga ega.",
+      },
+      {
+        title: "H1 dan H6 gacha sarlavhalar",
+        desc: "Kontentingizni H1 dan H6 gacha bo‘lgan to‘liq sarlavha ierarxiyasi bilan tartiblang, bu notepadni brauzeringizda professional hujjat muharririga aylantiradi.",
+      },
+      {
+        title: "Turli shrift uslublari",
+        desc: "Yozish tajribangizni shaxsiylashtirish va hujjatlaringizni yanada o‘qilishi oson, ifodali yoki professional qilish uchun turli shrift uslublaridan tanlang.",
+      },
+      {
+        title: "Matn rangini o‘zgartirish",
+        desc: "Bu onlayn notepad muhim nuqtalarni ajratib ko‘rsatish va matn rangini o‘zgartirish orqali vizual aniqlik qo‘shishga yordam beradi, bu har bir yozuvchi uchun oddiy, ammo kuchli vositadir.",
+      },
+      {
+        title: "Sun’iy intellekt asosidagi nutqni matnga aylantirish (xatosiz)",
+        desc: "O‘z fikrlaringizni gapiring va ularning ekranda yuqori aniqlik bilan paydo bo‘lishini kuzating. Ushbu notepadning AI nutqni matnga aylantirish funksiyasi ovozingizni darhol toza va xatosiz matnga aylantiradi, bu esa ko‘p vaqtni tejaydi.",
+      },
+      {
+        title: "Kirishdan so‘ng ulashish havolasini yaratish",
+        desc: "Tizimga kirgandan so‘ng, bizning notepad har qanday eslatma uchun noyob ulashish havolasini yaratishga imkon beradi, bu hamkorlik va tez ulashishni URL nusxalash kabi oson qiladi.",
+      },
+      {
+        title: "Tarixni saqlash uchun hisob yaratish",
+        desc: "Ushbu notepadda bepul hisob yarating va eslatmalar tarixini oching, shunda siz yozgan hamma narsani bir joyda qayta ko‘rish, tiklash va boshqarish imkoniga ega bo‘lasiz.",
+      },
+    ],
+    outro:
+      "Bundan tashqari, siz bepul foydalanishingiz va zavqlanishingiz mumkin bo‘lgan ko‘plab boshqa noyob funksiyalar ham mavjud.",
+  },
+  vi: {
+    title: "Các tính năng chính của Notepad trực tuyến",
+    features: [
+      {
+        title: "Tự động lưu trực tuyến",
+        desc: "Notepad trực tuyến của chúng tôi tự động lưu công việc của bạn khi bạn đang gõ, vì vậy bạn sẽ không bao giờ mất dù chỉ một từ, ngay cả khi trình duyệt bị lỗi hoặc bạn vô tình đóng tab.",
+      },
+      {
+        title: "Tải xuống định dạng TXT và PDF",
+        desc: "Với notepad của chúng tôi, bạn có thể xuất ghi chú ngay lập tức dưới dạng tệp TXT hoặc PDF sạch sẽ, giúp việc lưu, in hoặc chia sẻ ngoại tuyến trở nên dễ dàng.",
+      },
+      {
+        title: "Toàn màn hình",
+        desc: "Chuyển sang chế độ toàn màn hình và để notepad không gây xao nhãng này cung cấp cho bạn một không gian viết sạch từ mép này đến mép kia, hoàn hảo cho các phiên soạn thảo tập trung.",
+      },
+      {
+        title: "Tính năng phóng to 200%",
+        desc: "Notepad trực tuyến này cho phép bạn phóng to lên đến 200%, giúp dễ chịu hơn cho mắt khi viết lâu hoặc làm việc với văn bản nhỏ trên bất kỳ màn hình nào.",
+      },
+      {
+        title: "Chèn hình ảnh, bảng, tự động cập nhật ngày, xuất HTML",
+        desc: "Từ việc chèn hình ảnh và bảng biểu có cấu trúc đến tự động cập nhật ngày tháng và xuất nội dung dưới dạng HTML, notepad này vượt xa việc chỉnh sửa văn bản cơ bản.",
+      },
+      {
+        title: "Tiêu đề từ H1 đến H6",
+        desc: "Sắp xếp nội dung của bạn với hệ thống tiêu đề đầy đủ từ H1 đến H6, giúp notepad này trở thành một trình chỉnh sửa tài liệu chuyên nghiệp ngay trong trình duyệt của bạn.",
+      },
+      {
+        title: "Các kiểu phông chữ khác nhau",
+        desc: "Chọn từ nhiều kiểu phông chữ khác nhau để cá nhân hóa trải nghiệm viết của bạn và giúp tài liệu dễ đọc hơn, biểu cảm hơn hoặc chuyên nghiệp hơn.",
+      },
+      {
+        title: "Thay đổi màu văn bản",
+        desc: "Notepad trực tuyến này cho phép bạn làm nổi bật các điểm quan trọng và tăng độ rõ ràng bằng cách thay đổi màu văn bản, một công cụ định dạng đơn giản nhưng mạnh mẽ cho mọi người viết.",
+      },
+      {
+        title: "Chuyển giọng nói thành văn bản bằng AI không lỗi",
+        desc: "Hãy nói suy nghĩ của bạn và xem chúng xuất hiện trên màn hình với độ chính xác cao. Tính năng chuyển giọng nói thành văn bản bằng AI của notepad này ngay lập tức biến giọng nói của bạn thành văn bản sạch và không lỗi, giúp bạn tiết kiệm rất nhiều thời gian.",
+      },
+      {
+        title: "Tạo liên kết chia sẻ sau khi đăng nhập",
+        desc: "Sau khi đăng nhập, notepad của chúng tôi cho phép bạn tạo một liên kết chia sẻ duy nhất cho bất kỳ ghi chú nào, giúp việc cộng tác và chia sẻ nhanh trở nên đơn giản như sao chép một URL.",
+      },
+      {
+        title: "Tạo tài khoản để lưu lịch sử",
+        desc: "Tạo một tài khoản miễn phí trên notepad này để mở khóa lịch sử ghi chú, giúp bạn xem lại, khôi phục và quản lý mọi thứ bạn đã từng viết tại một nơi duy nhất.",
+      },
+    ],
+    outro:
+      "Ngoài những tính năng này, còn rất nhiều tính năng độc đáo khác mà bạn có thể sử dụng và tận hưởng miễn phí.",
+  },
+  cy: {
+    title: "Prif Nodweddion Notepad Ar-lein",
+    features: [
+      {
+        title: "Arbed Awtomatig Ar-lein",
+        desc: "Mae ein notepad ar-lein yn cadw eich gwaith yn awtomatig wrth i chi deipio, felly ni fyddwch byth yn colli hyd yn oed un gair, hyd yn oed os bydd eich porwr yn chwalu neu os byddwch yn cau’r tab ar ddamwain.",
+      },
+      {
+        title: "Lawrlwytho mewn fformatau TXT a PDF",
+        desc: "Gyda’n notepad, gallwch allforio eich nodiadau ar unwaith fel ffeil TXT neu PDF glân, gan ei gwneud yn hawdd eu cadw, eu hargraffu, neu eu rhannu all-lein.",
+      },
+      {
+        title: "Sgrin Lawn",
+        desc: "Newidiwch i’r modd sgrin lawn a gadewch i’r notepad di-dynnu sylw hwn roi cynfas ysgrifennu glân o ymyl i ymyl i chi, sy’n berffaith ar gyfer sesiynau ysgrifennu â ffocws.",
+      },
+      {
+        title: "Nodwedd Chwyddo 200%",
+        desc: "Mae’r notepad ar-lein hwn yn caniatáu ichi chwyddo hyd at 200%, gan ei gwneud yn haws ar y llygaid ar gyfer sesiynau ysgrifennu hir neu wrth weithio gyda thestun bach ar unrhyw sgrin.",
+      },
+      {
+        title: "Mewnosod Delweddau, Tablau, Diweddaru Dyddiadau’n Awtomatig, Allforio HTML",
+        desc: "O fewnosod delweddau a thablau strwythuredig i ddiweddaru dyddiadau’n awtomatig ac allforio eich cynnwys fel HTML, mae’r notepad hwn yn mynd ymhell y tu hwnt i olygu testun sylfaenol.",
+      },
+      {
+        title: "Penawdau o H1 i H6",
+        desc: "Trefnwch eich cynnwys gyda hierarchaeth lawn o benawdau, H1 i H6, gan roi strwythur golygydd dogfennau proffesiynol i’r notepad hwn yn eich porwr.",
+      },
+      {
+        title: "Arddulliau Ffont Gwahanol",
+        desc: "Dewiswch o amrywiaeth o arddulliau ffont i bersonoli eich profiad ysgrifennu a gwneud eich dogfennau yn fwy darllenadwy, mynegiannol neu broffesiynol.",
+      },
+      {
+        title: "Newid Lliw Testun",
+        desc: "Mae’r notepad ar-lein hwn yn caniatáu ichi amlygu pwyntiau allweddol ac ychwanegu eglurder gweledol trwy newid lliw testun, offeryn fformatio syml ond pwerus i unrhyw awdur.",
+      },
+      {
+        title: "Trosi Llais i Destun â Phŵer AI Heb Unrhyw Gamgymeriad",
+        desc: "Llefarwch eich meddyliau a’u gweld yn ymddangos ar y sgrin gyda chywirdeb uchel. Mae nodwedd trosi llais i destun â phŵer AI y notepad hwn yn troi eich llais yn destun glân heb gamgymeriadau ar unwaith, gan arbed llawer o amser i chi.",
+      },
+      {
+        title: "Cynhyrchu Dolen Rhannu ar ôl Mewngofnodi",
+        desc: "Ar ôl mewngofnodi, mae ein notepad yn caniatáu ichi gynhyrchu dolen unigryw y gellir ei rhannu ar gyfer unrhyw nodyn, gan wneud cydweithio a rhannu cyflym mor syml â chopïo URL.",
+      },
+      {
+        title: "Creu Cyfrif i Gofnodi Hanes",
+        desc: "Creu cyfrif am ddim ar y notepad hwn i ddatgloi hanes nodiadau fel y gallwch ailymweld, adfer a rheoli popeth rydych erioed wedi’i ysgrifennu, i gyd mewn un lle.",
+      },
+    ],
+    outro:
+      "Ar wahân i’r rhain, mae llawer o nodweddion unigryw eraill y gallwch eu defnyddio a’u mwynhau am ddim.",
+  },
+  xh: {
+    title: "Iimpawu eziphambili ze-Notepad ekwi-Intanethi",
+    features: [
+      {
+        title: "Ukugcina ngokuzenzekelayo kwi-intanethi",
+        desc: "I-notepad yethu ekwi-intanethi igcina ngokuzenzekelayo umsebenzi wakho ngelixa uchwetheza, ukuze ungaze ulahlekelwe nalinye igama, nokuba ibhrawuza yakho iyaphazamiseka okanye uvale ithebhu ngempazamo.",
+      },
+      {
+        title: "Khuphela kwiifomathi ze-TXT ne-PDF",
+        desc: "Nge-notepad yethu, ungathumela amanqaku akho ngoko nangoko njengefayile ecocekileyo ye-TXT okanye ye-PDF, nto leyo eyenza kube lula ukugcina, ukuprinta okanye ukwabelana ngawo ngaphandle kwe-intanethi.",
+      },
+      {
+        title: "Isikrini esipheleleyo",
+        desc: "Tshintshela kwimowudi yesikrini esipheleleyo uze le notepad ingaphazamisiyo ikunike indawo ecocekileyo yokubhala ukusuka komnye umda ukuya komnye, ilungele ukubhala kugxilwe ngokupheleleyo.",
+      },
+      {
+        title: "Ukwandisa (Zoom) ukuya kwi-200%",
+        desc: "Le notepad ekwi-intanethi ikuvumela ukuba usondeze ukuya kuthi ga kwi-200%, nto leyo eyenza kube lula emehlweni ngexesha lokubhala ixesha elide okanye xa usebenza ngombhalo omncinci kuso nasiphi na isikrini.",
+      },
+      {
+        title: "Faka imifanekiso, iitafile, uhlaziyo oluzenzekelayo lwemihla, ukuthumela ngaphandle njenge-HTML",
+        desc: "Ukusukela ekufakeni imifanekiso neetafile ezilungelelanisiweyo ukuya kuhlaziyo oluzenzekelayo lwemihla nokuthumela umxholo wakho njenge-HTML, le notepad idlula kude ukuhlela okubhaliweyo okusisiseko.",
+      },
+      {
+        title: "Izihloko ukusuka ku-H1 ukuya ku-H6",
+        desc: "Lungiselela umxholo wakho ngoluhlu olupheleleyo lwezihloko ukusuka ku-H1 ukuya ku-H6, nto leyo eyenza le notepad ibe sisihleli samaxwebhu sobungcali ngaphakathi kwebhrawuza yakho.",
+      },
+      {
+        title: "Iindlela ezahlukeneyo zeefonti",
+        desc: "Khetha kwiindidi ezahlukeneyo zeefonti ukuze wenze amava akho okubhala abe sesakho, wenze amaxwebhu akho afundeke lula, abe nentsingiselo okanye abe nobungcali ngakumbi.",
+      },
+      {
+        title: "Guqula umbala wombhalo",
+        desc: "Le notepad ekwi-intanethi ikuvumela ukuba uqaqambise amanqaku abalulekileyo kwaye wongeze ukucaca ngokubonakalayo ngokutshintsha umbala wombhalo, isixhobo esilula kodwa esinamandla sokuhlela kubabhali bonke.",
+      },
+      {
+        title: "Ukuthetha-kuya-kubhalo okuxhaswa yi-AI ngaphandle kweempazamo",
+        desc: "Thetha iingcinga zakho uze uzibone zibonakala esikrinini ngokuchaneka okuphezulu. Inqaku le-AI lokuguqula intetho ibe ngumbhalo kwale notepad liguqula ilizwi lakho libe ngumbhalo ococekileyo ongenazimpazamo ngoko nangoko, nto leyo egcina ixesha elininzi.",
+      },
+      {
+        title: "Yenza ikhonkco ekwabelwana ngalo emva kokungena",
+        desc: "Emva kokungena, le notepad yethu ikuvumela ukuba wenze ikhonkco elikhethekileyo lokwabelana ngalo kuyo nayiphi na inqaku, nto leyo eyenza intsebenziswano kunye nokwabelana kube lula njengokukopa i-URL.",
+      },
+      {
+        title: "Yenza iakhawunti ukugcina imbali",
+        desc: "Yenza iakhawunti yasimahla kule notepad ukuze uvule imbali yamanqaku, ukuze ukwazi ukubuyela, ukubuyisela kunye nokulawula yonke into owakhe wayibhala kwindawo enye.",
+      },
+    ],
+    outro:
+      "Ngaphandle kwezi, kukho nezinye iimpawu ezininzi ezikhethekileyo onokuzisebenzisa kwaye uzonwabele simahla.",
+  },
+  yo: {
+    title: "Àwọn ànfàní pàtàkì ti Notepad lórí Ayelujara",
+    features: [
+      {
+        title: "Ìfipamọ́ laifọwọyi lórí ayelujara",
+        desc: "Notepad wa lórí ayelujara máa ń fi iṣẹ́ rẹ pamọ́ laifọwọyi bí o ṣe ń kọ, nítorí náà ìwọ kì yóò pàdánù ọ̀rọ̀ kankan, kódà bí browser bá bàjẹ́ tàbí o bá ti ìkànsí pa tab naa.",
+      },
+      {
+        title: "Gbaa lati ayelujara ní fọ́ọ̀mù TXT àti PDF",
+        desc: "Pẹ̀lú notepad wa, o lè yí àwọn àkọsílẹ̀ rẹ padà sí fáìlì TXT tàbí PDF tó mọ́ lẹ́sẹ̀kẹsẹ̀, èyí mú kí o rọrùn láti fi pamọ́, tẹ̀ jáde, tàbí pín ní offline.",
+      },
+      {
+        title: "Ibojú kúnkún (Full Screen)",
+        desc: "Yípadà sí ipo ibojú kúnkún, kí notepad tí kò ní ìdíwọ́ yìí fún ọ ní àyè ìkọ̀wé tó mọ́ látí etí dé etí, tó dára fún ìkọ̀wé pẹ̀lú ìfọkànsìn.",
+      },
+      {
+        title: "Ìmú gíga (Zoom) dé 200%",
+        desc: "Notepad lórí ayelujara yìí jẹ́ kí o lè sun-un (zoom) dé 200%, èyí mú kí ojú rọrùn nígbà tí o bá ń kọ fún àkókò pípẹ́ tàbí nígbà tí o bá ń ṣiṣẹ́ pẹ̀lú ìtẹ̀wé kékeré lórí ibojú kankan.",
+      },
+      {
+        title: "Fífi àwọn àwòrán, tábìlì, ìmúdójúìwọ̀n ọjọ́ laifọwọyi, àti ìtújáde HTML",
+        desc: "Láti fi àwọn àwòrán àti tábìlì tó ṣètò sílẹ̀, dé ìmúdójúìwọ̀n ọjọ́ laifọwọyi àti ìtújáde akoonu rẹ gẹ́gẹ́ bí HTML, notepad yìí kọjá ìṣàtúnṣe ọ̀rọ̀ tó rọrùn.",
+      },
+      {
+        title: "Àwọn akọlé láti H1 dé H6",
+        desc: "Ṣètò akoonu rẹ pẹ̀lú ìpele akọlé kíkún láti H1 dé H6, èyí ń jẹ́ kí notepad yìí dà bí olùṣàtúnṣe ìwé ọjọ́gbọn nínú browser rẹ.",
+      },
+      {
+        title: "Àwọn irú fonti tó yàtọ̀",
+        desc: "Yan lára àwọn irú fonti tó yàtọ̀ láti ṣe àfọwọ́kọ ìrírí ìkọ̀wé rẹ, kí o sì jẹ́ kí àwọn ìwé rẹ rọrùn láti ka, kún fún ìtúmọ̀ tàbí jẹ́ ọjọ́gbọn.",
+      },
+      {
+        title: "Yí àwọ̀ ọ̀rọ̀ padà",
+        desc: "Notepad lórí ayelujara yìí jẹ́ kí o lè fi àfihàn sí àwọn kókó pàtàkì àti mú ìtúmọ̀ kedere pọ̀ sí i nípa yíyí àwọ̀ ọ̀rọ̀ padà, ohun èlò tó rọrùn ṣùgbọ́n tó lágbára fún gbogbo onkọ̀wé.",
+      },
+      {
+        title: "Ìyípadà ohùn sí ìkọ̀wé pẹ̀lú AI láìsí àṣìṣe",
+        desc: "Sọ àwọn ìrònú rẹ kí o sì rí wọn tí wọ́n ń hàn lórí iboju pẹ̀lú ìtòótọ́ gíga. Ẹ̀rọ AI tó ń yí ohùn padà sí ìkọ̀wé nínú notepad yìí máa ń yí ohùn rẹ padà sí ọ̀rọ̀ tó mọ́ àti láìsí àṣìṣe lẹ́sẹ̀kẹsẹ̀, èyí ń jẹ́ kí o fipamọ́ àkókò púpọ̀.",
+      },
+      {
+        title: "Ṣẹ̀dá ìjápọ̀ ìpínpín lẹ́yìn ìwọlé",
+        desc: "Lẹ́yìn tí o bá wọlé, notepad wa máa jẹ́ kí o ṣẹ̀dá ìjápọ̀ aláìlẹ́gbẹ́ tí a lè pín fún àkọsílẹ̀ kankan, èyí mú kí ìfọwọ́sowọ́pọ̀ àti pínpín yara rọrùn bí kíkó URL.",
+      },
+      {
+        title: "Ṣẹ̀dá àkọọ́lẹ̀ láti fi ìtàn pamọ́",
+        desc: "Ṣẹ̀dá àkọọ́lẹ̀ ọfẹ́ lórí notepad yìí láti ṣí ìtàn àkọsílẹ̀, kí o lè tún wò ó, gba padà, kí o sì ṣàkóso gbogbo ohun tí o ti kọ rí ní ibi kan ṣoṣo.",
+      },
+    ],
+    outro:
+      "Lẹ́yìn àwọn wọ̀nyí, ọ̀pọ̀ àwọn ànfàní aláìlẹ́gbẹ́ míì tún wà tí o lè lò àti gbádùn lọ́fẹ̀ẹ́.",
+  },
+  zu: {
+    title: "Izici Eziyinhloko ze-Notepad eku-inthanethi",
+    features: [
+      {
+        title: "Ukulondoloza okuzenzakalelayo ku-inthanethi",
+        desc: "I-notepad yethu eku-inthanethi igcina ngokuzenzakalelayo umsebenzi wakho njengoba uthayipha, ukuze ungalahlekelwa nelilodwa igama, noma ngabe isiphequluli siyawa noma uvala ithebhu ngephutha.",
+      },
+      {
+        title: "Landa ngamafomethi e-TXT ne-PDF",
+        desc: "Nge-notepad yethu, ungathumela amanothi akho ngokushesha njengefayela elihlanzekile le-TXT noma le-PDF, okwenza kube lula ukuligcina, ukuliphrinta noma ukwabelana ngalo ungaxhunyiwe ku-inthanethi.",
+      },
+      {
+        title: "Isikrini esigcwele",
+        desc: "Shintshela kumodi yesikrini esigcwele bese uvumela le notepad engenaziphazamiso ikunike indawo yokubhala ehlanzekile ukusuka kolunye uhlangothi kuya kolunye, efanele kakhulu ukubhala okugxilile.",
+      },
+      {
+        title: "Isici sokusondeza esingu-200%",
+        desc: "Le notepad eku-inthanethi ikuvumela ukuthi usondeze kuze kufike ku-200%, okwenza kube lula emehlweni ngesikhathi sokubhala isikhathi eside noma usebenza ngombhalo omncane esikrinini sanoma yiluphi uhlobo.",
+      },
+      {
+        title: "Ukufaka izithombe, amatafula, ukuvuselela izinsuku ngokuzenzakalelayo, nokuthekelisa i-HTML",
+        desc: "Kusukela ekufakeni izithombe namatafula ahlelekile kuya ekubuyekezweni kwezinsuku ngokuzenzakalelayo nokuthekelisa okuqukethwe kwakho njenge-HTML, le notepad idlula kude ukuhlela umbhalo okuvamile.",
+      },
+      {
+        title: "Izihloko ezisuka ku-H1 kuya ku-H6",
+        desc: "Hlela okuqukethwe kwakho ngohlelo oluphelele lwezihloko kusuka ku-H1 kuya ku-H6, okunikeza le notepad isakhiwo somhleli wemibhalo oqeqeshiwe ngaphakathi kwesiphequluli sakho.",
+      },
+      {
+        title: "Izitayela ezahlukene zamafonti",
+        desc: "Khetha ezinhlotsheni ezahlukene zamafonti ukuze wenze isipiliyoni sakho sokubhala sibe ngesakho futhi wenze imibhalo yakho ifundeke kalula, ibe nencazelo noma ibe sezingeni lobuchwepheshe.",
+      },
+      {
+        title: "Ukushintsha umbala wombhalo",
+        desc: "Le notepad eku-inthanethi ikuvumela ukuthi ugqamise amaphuzu abalulekile futhi ungeze ukucaca ngokubonakalayo ngokushintsha umbala wombhalo, ithuluzi elilula kodwa elinamandla kunoma yimuphi umbhali.",
+      },
+      {
+        title: "Ukuguqula izwi libe umbhalo nge-AI ngaphandle kwamaphutha",
+        desc: "Khuluma imicabango yakho bese uyibona ivela esikrinini ngokunemba okuphezulu. Isici se-AI sokuguqula izwi libe umbhalo sale notepad siguqula izwi lakho ngokushesha libe umbhalo ohlanzekile ongenamaphutha, okusiza ukonga isikhathi esiningi.",
+      },
+      {
+        title: "Dala isixhumanisi esabelwana ngaso ngemva kokungena",
+        desc: "Uma usungenile, le notepad yethu ikuvumela ukuthi udale isixhumanisi esiyingqayizivele sokwabelana nganoma yiliphi inothi, okwenza ukubambisana nokwabelana kusheshe kube lula njengokukopisha i-URL.",
+      },
+      {
+        title: "Dala i-akhawunti ukuze ugcine umlando",
+        desc: "Dala i-akhawunti yamahhala kule notepad ukuze uvule umlando wamanothi, ukuze ukwazi ukubuyela, ukubuyisa futhi uphathe konke okwake wakubhala endaweni eyodwa.",
+      },
+    ],
+    outro:
+      "Ngaphandle kwalokhu, kunezinye izici eziningi ezihlukile ongazisebenzisa futhi uzijabulele mahhala.",
+  },
 };
 
 export function getHomeFeaturesCopy(locale: string): HomeFeaturesCopy {
