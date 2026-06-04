@@ -2779,6 +2779,159 @@ const featuresByLocale: Record<string, HomeFeaturesCopy> = {
     outro:
       "Ezeken kívül még sok más egyedi funkció is elérhető, amelyeket ingyen használhatsz és élvezhetsz.",
   },
+  is: {
+    title: "Helstu eiginleikar netminnisbókar",
+    features: [
+      {
+        title: "Sjálfvirk vistun á netinu",
+        desc: "Netminnisbókin okkar vistar vinnuna þína sjálfkrafa á meðan þú skrifar, þannig að þú tapar aldrei einu einasta orði, jafnvel þótt vafrinn hrynji eða þú lokir flipanum óvart.",
+      },
+      {
+        title: "Niðurhal í TXT og PDF sniði",
+        desc: "Með minnisbókinni okkar geturðu flutt glósurnar þínar út samstundis sem hreina TXT eða PDF skrá, sem gerir það auðvelt að vista, prenta eða deila vinnunni þinni án nettengingar.",
+      },
+      {
+        title: "Fullskjár",
+        desc: "Skiptu í fullskjástillingu og notaðu þessa truflunarlausu minnisbók sem gefur þér hreint ritunarsvæði frá kanti til kants, fullkomið fyrir einbeitta skriflotu.",
+      },
+      {
+        title: "200% aðdráttareiginleiki",
+        desc: "Þessi netminnisbók gerir þér kleift að stækka allt að 200%, sem léttir á augunum við langar skriflotur eða þegar unnið er með lítinn texta á hvaða skjá sem er.",
+      },
+      {
+        title: "Setja inn myndir, töflur, sjálfvirk dagsetningaruppfærsla, flytja út HTML",
+        desc: "Frá því að setja inn myndir og skipulagðar töflur til sjálfvirkrar dagsetningaruppfærslu og útflutnings á efni sem HTML, fer þessi minnisbók langt umfram hefðbundna textavinnslu.",
+      },
+      {
+        title: "Fyrirsagnir frá H1 til H6",
+        desc: "Skipuleggðu efnið þitt með heilli fyrirsagnarstigveldi frá H1 til H6, sem gefur þessari minnisbók uppbyggingu faglegs skjalaritstjóra beint í vafranum þínum.",
+      },
+      {
+        title: "Mismunandi leturgerðir",
+        desc: "Veldu úr fjölbreyttum leturgerðum til að sérsníða skrifupplifun þína og gera skjölin þín læsilegri, tjáningarríkari eða faglegri.",
+      },
+      {
+        title: "Breyta textalit",
+        desc: "Þessi netminnisbók gerir þér kleift að auðkenna lykilatriði og bæta sjónræna skýrleika með því að breyta textalit, einfalt en öflugt sniðverkfæri fyrir alla skrifara.",
+      },
+      {
+        title: "Gervigreindarstudd tal-í-texta umbreyting án villna",
+        desc: "Segðu hugsanir þínar upphátt og sjáðu þær birtast á skjánum með mikilli nákvæmni. Gervigreindarstudd tal-í-texta eiginleiki þessarar minnisbókar umbreytir rödd þinni samstundis í hreinan og villulausan texta, sem sparar þér mikinn tíma.",
+      },
+      {
+        title: "Búa til deilanlegan hlekk eftir innskráningu",
+        desc: "Eftir innskráningu gerir minnisbókin okkar þér kleift að búa til einstakan deilanlegan hlekk fyrir hvaða glósu sem er, sem gerir samvinnu og hraða deilingu eins einfalda og að afrita slóð.",
+      },
+      {
+        title: "Búa til reikning til að vista feril",
+        desc: "Búðu til ókeypis reikning á þessari minnisbók til að opna glósuferil, svo þú getir skoðað, endurheimt og stjórnað öllu sem þú hefur nokkurn tíma skrifað, allt á einum stað.",
+      },
+    ],
+    outro:
+      "Auk þessara eru margar aðrar einstakar eiginleikar sem þú getur notað og notið ókeypis.",
+  },
+  ig: {
+    title: "Njirimara ndị bụ isi nke Notepad dị n’ịntanetị",
+    features: [
+      {
+        title: "Nchekwa akpaghị aka n’ịntanetị",
+        desc: "Notepad anyị dị n’ịntanetị na-echekwa ọrụ gị akpaghị aka mgbe ị na-ede, ya mere ị gaghị atụfu ọbụna otu okwu, ọbụlagodi ma ọ bụrụ na ihe nchọgharị gị daa ma ọ bụ mechie taabụ ahụ n’amaghị ama.",
+      },
+      {
+        title: "Budata na ụdị TXT na PDF",
+        desc: "Site na notepad anyị, ị nwere ike ịtụpụ (export) ndetu gị ozugbo dịka faịlụ TXT ma ọ bụ PDF dị ọcha, nke na-eme ka ọ dị mfe ịchekwa, ibipụta, ma ọ bụ kesaa ọrụ gị na-enweghị ịntanetị.",
+      },
+      {
+        title: "Ihuenyo zuru ezu",
+        desc: "Gbanwee gaa na ọnọdụ ihuenyo zuru ezu ma jiri notepad a na-enweghị ihe na-adọpụ uche nke na-enye gị ebe ide ihe dị ọcha site n’otu akụkụ ruo n’akụkụ ọzọ, nke zuru oke maka ide ihe nke na-achọ itinye uche.",
+      },
+      {
+        title: "Njirimara mbugharị (zoom) 200%",
+        desc: "Notepad a dị n’ịntanetị na-enye gị ohere ime ka ihe dị ukwuu ruo 200%, nke na-eme ka ọ dị mfe maka anya n’oge ide ogologo oge ma ọ bụ mgbe ị na-arụ ọrụ na ederede pere mpe na ihuenyo ọ bụla.",
+      },
+      {
+        title: "Tinye onyonyo, tebụl, mmelite ụbọchị akpaghị aka, mbupụ HTML",
+        desc: "Site n’itinye onyonyo na tebụl ahaziri ahazi ruo na mmelite ụbọchị akpaghị aka na mbupụ ọdịnaya gị dịka HTML, notepad a karịrị nke ukwuu ndezi ederede nkịtị.",
+      },
+      {
+        title: "Aha isiokwu site na H1 ruo H6",
+        desc: "Hazie ọdịnaya gị site na usoro aha isiokwu zuru ezu H1 ruo H6, nke na-enye notepad a nhazi dịka onye editọ akwụkwọ ọkachamara n’ime ihe nchọgharị gị.",
+      },
+      {
+        title: "Ụdị font dị iche iche",
+        desc: "Họrọ n’etiti ụdị font dị iche iche iji hazie ahụmịhe ide gị ma mee ka akwụkwọ gị dịkwuo mfe ịgụ, nwee nkọwa ma ọ bụ bụrụ ọkachamara.",
+      },
+      {
+        title: "Gbanwee agba ederede",
+        desc: "Notepad a dị n’ịntanetị na-enye gị ohere ịkọwapụta isi ihe dị mkpa ma tinye nghọta anya site n’ịgbanwe agba ederede, ngwá ọrụ nhazi dị mfe ma sie ike maka onye ọ bụla na-ede ihe.",
+      },
+      {
+        title: "Ntughari olu gaa na ederede site na AI na-enweghị njehie",
+        desc: "Kwuo echiche gị ma lelee ka ha si apụta na ihuenyo n’ụzọ ziri ezi nke ukwuu. Njirimara AI nke notepad a na-agbanwe olu gaa na ederede na-eme ka olu gị bụrụ ederede dị ọcha na-enweghị njehie ozugbo, nke na-enyere gị aka ịchekwa oge buru ibu.",
+      },
+      {
+        title: "Mepụta njikọ enwere ike ịkekọrịta mgbe ị batara (login)",
+        desc: "Mgbe ị batara n’ime akaụntụ, notepad anyị na-enye gị ohere ịmepụta njikọ pụrụ iche enwere ike ịkekọrịta maka ndetu ọ bụla, nke na-eme ka ịrụkọ ọrụ ọnụ na ịkekọrịta ngwa ngwa dị mfe dịka ịdepụta URL.",
+      },
+      {
+        title: "Mepụta akaụntụ iji chekwa akụkọ (history)",
+        desc: "Mepụta akaụntụ n’efu na notepad a iji mepee akụkọ ndetu, ka i wee nwee ike ileghachi anya, weghachite ma jikwaa ihe niile i dere n’otu ebe.",
+      },
+    ],
+    outro:
+      "E wezụga ihe ndị a, enwere ọtụtụ atụmatụ pụrụ iche ndị ọzọ ị nwere ike iji ma nwee obi ụtọ na ha n’efu.",
+  },
+  id: {
+    title: "Fitur Utama Notepad Online",
+    features: [
+      {
+        title: "Penyimpanan otomatis online",
+        desc: "Notepad online kami secara otomatis menyimpan pekerjaan Anda saat Anda mengetik, sehingga Anda tidak akan kehilangan satu kata pun, bahkan jika browser Anda crash atau Anda tidak sengaja menutup tab.",
+      },
+      {
+        title: "Unduh dalam format TXT dan PDF",
+        desc: "Dengan notepad kami, Anda dapat mengekspor catatan Anda secara instan sebagai file TXT atau PDF yang bersih, sehingga mudah untuk disimpan, dicetak, atau dibagikan secara offline.",
+      },
+      {
+        title: "Layar penuh",
+        desc: "Beralih ke mode layar penuh dan gunakan notepad bebas gangguan ini yang memberikan kanvas menulis yang bersih dari tepi ke tepi, sempurna untuk sesi menulis yang fokus.",
+      },
+      {
+        title: "Fitur zoom 200%",
+        desc: "Notepad online ini memungkinkan Anda memperbesar hingga 200%, sehingga lebih nyaman untuk mata saat sesi menulis panjang atau saat bekerja dengan teks kecil di layar apa pun.",
+      },
+      {
+        title: "Sisipkan gambar, tabel, pembaruan tanggal otomatis, ekspor HTML",
+        desc: "Mulai dari menyisipkan gambar dan tabel terstruktur hingga pembaruan tanggal otomatis dan mengekspor konten Anda sebagai HTML, notepad ini jauh melampaui pengeditan teks dasar.",
+      },
+      {
+        title: "Heading dari H1 sampai H6",
+        desc: "Atur konten Anda dengan hierarki heading lengkap dari H1 hingga H6, memberikan notepad ini struktur seperti editor dokumen profesional langsung di browser Anda.",
+      },
+      {
+        title: "Berbagai gaya font",
+        desc: "Pilih dari berbagai gaya font untuk mempersonalisasi pengalaman menulis Anda dan membuat dokumen Anda lebih mudah dibaca, ekspresif, atau profesional.",
+      },
+      {
+        title: "Ubah warna teks",
+        desc: "Notepad online ini memungkinkan Anda menyoroti poin penting dan menambah kejelasan visual dengan mengubah warna teks, alat pemformatan sederhana namun kuat untuk setiap penulis.",
+      },
+      {
+        title: "Speech-to-text berbasis AI tanpa kesalahan",
+        desc: "Ucapkan pikiran Anda dan lihat semuanya muncul di layar dengan akurasi tinggi. Fitur speech-to-text berbasis AI pada notepad ini secara instan mengubah suara Anda menjadi teks yang bersih dan bebas kesalahan, sehingga Anda dapat menghemat banyak waktu.",
+      },
+      {
+        title: "Buat tautan yang bisa dibagikan setelah login",
+        desc: "Setelah login, notepad kami memungkinkan Anda membuat tautan unik yang dapat dibagikan untuk setiap catatan, sehingga kolaborasi dan berbagi cepat menjadi semudah menyalin URL.",
+      },
+      {
+        title: "Buat akun untuk menyimpan riwayat",
+        desc: "Buat akun gratis di notepad ini untuk membuka riwayat catatan, sehingga Anda dapat melihat kembali, memulihkan, dan mengelola semua yang pernah Anda tulis dalam satu tempat.",
+      },
+    ],
+    outro:
+      "Selain itu, masih banyak fitur unik lainnya yang dapat Anda gunakan dan nikmati secara gratis.",
+  },
 };
 
 export function getHomeFeaturesCopy(locale: string): HomeFeaturesCopy {
