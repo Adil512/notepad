@@ -33,10 +33,13 @@ export default async function Home({
     user = data.user;
   }
 
-  const latest = await getLatestBlogPosts(3);
+  const latest = await getLatestBlogPosts(6);
   const latestBlogPosts = latest.map((p) => ({
     slug: p.slug,
     title: p.title,
+    excerpt: p.excerpt,
+    date: p.date,
+    readTime: p.readTime,
   }));
 
   return (

@@ -1,8 +1,8 @@
 import Link from "next/link";
+import { HomeBlogSection, type HomeBlogPost } from "@/components/HomeBlogSection";
 import {
   Check,
   X,
-  ArrowRight,
   Save,
   Download,
   Maximize2,
@@ -23,7 +23,36 @@ import {
   homeSeoRtlLocales,
 } from "@/lib/home-seo-content";
 
-export type BlogTeaserItem = { slug: string; title: string };
+export type BlogTeaserItem = HomeBlogPost;
+
+/** English copy links “online notepad” to the homepage. */
+function WhatFirstParagraph({
+  locale,
+  text,
+}: {
+  locale: string;
+  text: string;
+}) {
+  const href = localizedPath(locale, "/");
+  const needle = "online notepad";
+  if (locale === "en") {
+    const idx = text.indexOf(needle);
+    if (idx === -1) return <p>{text}</p>;
+    return (
+      <p>
+        {text.slice(0, idx)}
+        <Link
+          href={href}
+          className="text-primary hover:underline font-medium underline-offset-2"
+        >
+          {needle}
+        </Link>
+        {text.slice(idx + needle.length)}
+      </p>
+    );
+  }
+  return <p>{text}</p>;
+}
 
 /** English copy links “distraction-free writing” to the distraction-free writer tool. */
 function WhatSecondParagraph({
@@ -92,7 +121,7 @@ export function SEOContent({
             {seo.whatTitle}
           </h2>
           <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
-            <p>{seo.whatParagraphs[0]}</p>
+            <WhatFirstParagraph locale={locale} text={seo.whatParagraphs[0]} />
             <WhatSecondParagraph locale={locale} text={seo.whatParagraphs[1]} />
           </div>
         </section>
@@ -183,6 +212,8 @@ export function SEOContent({
           </p>
         </section>
 
+        <HomeBlogSection locale={locale} posts={latestBlogPosts} />
+
         {/* Section 3: FAQ */}
         <section className="max-w-3xl mx-auto space-y-8" dir={dir}>
           <div className="text-center">
@@ -208,38 +239,6 @@ export function SEOContent({
               </details>
             ))}
           </div>
-
-          {latestBlogPosts.length > 0 && (
-            <div className="border-t border-border pt-6">
-              <div className="flex items-center justify-between gap-3 mb-3">
-                <h2 className="text-base font-semibold text-foreground font-display">
-                  Our blog
-                </h2>
-                <Link
-                  href={localizedPath(locale, "/blog")}
-                  className="text-xs font-medium text-primary hover:underline shrink-0"
-                >
-                  View all
-                </Link>
-              </div>
-              <ul className="rounded-lg border border-border bg-card divide-y divide-border overflow-hidden">
-                {latestBlogPosts.map((post) => (
-                  <li key={post.slug}>
-                    <Link
-                      href={localizedPath(locale, `/blog/${post.slug}`)}
-                      className="flex items-center gap-3 px-3 py-2 hover:bg-muted/40 transition-colors group"
-                    >
-                      <span className="text-sm text-foreground group-hover:text-primary line-clamp-1 flex-1 min-w-0">
-                        {post.title}
-                      </span>
-                      <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0" />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
         </section>
 
       </div>
