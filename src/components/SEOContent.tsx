@@ -14,12 +14,17 @@ import {
   Mic,
   Share2,
   History,
+  Globe,
+  PenLine,
+  Upload,
+  Sparkles,
 } from "lucide-react";
 import { getHomeFaqs } from "@/lib/faq-data";
 import { localizedPath } from "@/lib/i18n";
 import {
   getHomeSeoCopy,
   getHomeFeaturesCopy,
+  getHomeHowToCopy,
   homeSeoRtlLocales,
 } from "@/lib/home-seo-content";
 
@@ -92,6 +97,7 @@ export function SEOContent({
 }) {
   const seo = getHomeSeoCopy(locale);
   const featuresCopy = getHomeFeaturesCopy(locale);
+  const howToCopy = getHomeHowToCopy(locale);
   const faqs = getHomeFaqs(locale);
   const dir = homeSeoRtlLocales.has(locale) ? "rtl" : "ltr";
   const featureIcons = [
@@ -107,6 +113,7 @@ export function SEOContent({
     Share2,
     History,
   ];
+  const howToIcons = [Globe, PenLine, Upload, Share2, Sparkles];
 
   return (
     <div
@@ -175,6 +182,45 @@ export function SEOContent({
               </tbody>
             </table>
           </div>
+        </section>
+
+        {/* Section: How to Use This Notepad.is */}
+        <section className="max-w-4xl mx-auto space-y-10" dir={dir}>
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground font-display">
+              {howToCopy.title}
+            </h2>
+          </div>
+
+          <ol className="relative space-y-5">
+            <div
+              className="absolute left-5 top-8 bottom-8 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent hidden sm:block"
+              aria-hidden
+            />
+            {howToCopy.steps.map((step, i) => {
+              const Icon = howToIcons[i] ?? PenLine;
+              return (
+                <li
+                  key={i}
+                  className="group relative flex gap-4 sm:gap-6 items-start"
+                >
+                  <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground shadow-md shadow-primary/25 ring-4 ring-background transition-transform group-hover:scale-105">
+                    {i + 1}
+                  </span>
+                  <div className="flex-1 rounded-2xl border border-border bg-card p-5 sm:p-6 shadow-sm transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-primary/30 group-hover:shadow-md">
+                    <div className="flex items-start gap-3">
+                      <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <Icon className="h-5 w-5" />
+                      </span>
+                      <p className="text-base leading-relaxed text-muted-foreground pt-1">
+                        {step}
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
         </section>
 
         {/* Section: Key Features of Notepad Online */}

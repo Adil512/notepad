@@ -6098,3 +6098,27 @@ const featuresByLocale: Record<string, HomeFeaturesCopy> = {
 export function getHomeFeaturesCopy(locale: string): HomeFeaturesCopy {
   return featuresByLocale[locale] ?? featuresEn;
 }
+
+export type HomeHowToCopy = {
+  title: string;
+  steps: string[];
+};
+
+const howToEn: HomeHowToCopy = {
+  title: "How to Use This Notepad.is?",
+  steps: [
+    "Browse notepad.is, and on the homepage, you can see the notepad editor.",
+    "Start typing what you want to type.",
+    "Use the upload docs option if you want to edit an existing text.",
+    "Our Notepad Online also allows you to share the note with anyone. You have to log in to share the notes.",
+    "Use our featured rich editor to format your text. You can add images, use headings, speech to text, and many more features.",
+  ],
+};
+
+const howToByLocale: Record<string, HomeHowToCopy> = {
+  en: howToEn,
+};
+
+export function getHomeHowToCopy(locale: string): HomeHowToCopy {
+  return howToByLocale[locale] ?? howToEn;
+}
