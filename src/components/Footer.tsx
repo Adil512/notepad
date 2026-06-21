@@ -66,8 +66,8 @@ export function Footer({ locale }: { locale: string }) {
   return (
     <footer className="w-full bg-muted/40 border-t mt-auto">
       <div className="max-w-[85rem] mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 md:gap-10">
-          <div className="sm:col-span-2 lg:col-span-1">
+        <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-5 lg:gap-x-12 lg:gap-y-0">
+          <div className="min-w-0">
             <Link href={L("/")} className="flex items-center gap-2 mb-4 group">
               <div className="bg-primary/10 p-1.5 rounded-lg group-hover:bg-primary/20 transition-colors">
                 <FileText className="h-6 w-6 text-primary" />
@@ -119,7 +119,7 @@ export function Footer({ locale }: { locale: string }) {
             </div>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <h3 className="font-semibold mb-4 text-foreground">{labels.company}</h3>
             <ul className="space-y-3">
               <li>
@@ -149,7 +149,7 @@ export function Footer({ locale }: { locale: string }) {
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <h3 className="font-semibold mb-4 text-foreground">{labels.tools}</h3>
             <ul className="space-y-3">
               <li>
@@ -195,7 +195,7 @@ export function Footer({ locale }: { locale: string }) {
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <h3 className="font-semibold mb-4 text-foreground">{labels.more}</h3>
             <ul className="space-y-3">
               <li>
@@ -265,7 +265,7 @@ export function Footer({ locale }: { locale: string }) {
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <h3 className="font-semibold mb-4 text-foreground">{labels.legal}</h3>
             <ul className="space-y-3">
               <li>

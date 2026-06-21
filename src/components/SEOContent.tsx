@@ -88,6 +88,28 @@ function WhatSecondParagraph({
   return <p>{text}</p>;
 }
 
+/** English FAQ answers link “Notepad Online” to notepad.is. */
+function FaqAnswer({ locale, text }: { locale: string; text: string }) {
+  const needle = "Notepad Online";
+  if (locale === "en") {
+    const idx = text.indexOf(needle);
+    if (idx === -1) return <p>{text}</p>;
+    return (
+      <p>
+        {text.slice(0, idx)}
+        <Link
+          href="https://notepad.is/"
+          className="font-bold text-blue-600 hover:text-blue-700 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+        >
+          {needle}
+        </Link>
+        {text.slice(idx + needle.length)}
+      </p>
+    );
+  }
+  return <p>{text}</p>;
+}
+
 export function SEOContent({
   locale,
   latestBlogPosts = [],
@@ -280,7 +302,7 @@ export function SEOContent({
                   </span>
                 </summary>
                 <div className="mt-4 leading-relaxed text-muted-foreground pr-8">
-                  <p>{faq.a}</p>
+                  <FaqAnswer locale={locale} text={faq.a} />
                 </div>
               </details>
             ))}

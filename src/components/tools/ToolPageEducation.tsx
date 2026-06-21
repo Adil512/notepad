@@ -180,21 +180,34 @@ function RichProseCard({ section }: { section: ToolRichSection }) {
 }
 
 function RichParagraph({ text }: { text: string }) {
-  const parts = text.split(/(`[^`]+`)/g);
+  const parts = text.split(/(`[^`]+`|\[[^\]]+\]\([^)]+\))/g);
   return (
     <p>
-      {parts.map((part, i) =>
-        part.startsWith("`") && part.endsWith("`") ? (
-          <code
-            key={i}
-            className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-[0.9em] text-foreground"
-          >
-            {part.slice(1, -1)}
-          </code>
-        ) : (
-          <span key={i}>{part}</span>
-        )
-      )}
+      {parts.map((part, i) => {
+        if (part.startsWith("`") && part.endsWith("`")) {
+          return (
+            <code
+              key={i}
+              className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-[0.9em] text-foreground"
+            >
+              {part.slice(1, -1)}
+            </code>
+          );
+        }
+        const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (linkMatch) {
+          return (
+            <a
+              key={i}
+              href={linkMatch[2]}
+              className="font-bold text-blue-600 hover:text-blue-700 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+            >
+              {linkMatch[1]}
+            </a>
+          );
+        }
+        return <span key={i}>{part}</span>;
+      })}
     </p>
   );
 }

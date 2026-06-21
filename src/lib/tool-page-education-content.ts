@@ -72,7 +72,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
       {
         heading: "Markdown Editor",
         paragraphs: [
-          "A Markdown editor is a text editor that lets you write using plain text formatting syntax and see the formatted output in real time. Instead of clicking toolbar buttons for bold, headings, or lists, you add simple characters like `**` for bold or `#` for headings. The editor converts these symbols into formatted text instantly.",
+          "A Markdown editor is a [text editor](https://notepad.is/) that lets you write using plain text formatting syntax and see the formatted output in real time. Instead of clicking toolbar buttons for bold, headings, or lists, you add simple characters like ** for bold or # for headings. The editor converts these symbols into formatted text instantly.",
         ],
       },
       {
