@@ -17,6 +17,15 @@ export type FooterLabels = {
   copyrightRights: string;
   privacyShort: string;
   termsShort: string;
+  more: string;
+  categoryWritingTools: string;
+  categoryEditorTools: string;
+  categoryTextAnalysisTools: string;
+  categoryDeveloperTools: string;
+  categoryExcelConverterTools: string;
+  categoryDocumentConverterTools: string;
+  categoryDataConverterTools: string;
+  categoryTextUtilityTools: string;
 };
 
 const BASE: FooterLabels = {
@@ -36,6 +45,15 @@ const BASE: FooterLabels = {
   copyrightRights: "",
   privacyShort: "Privacy",
   termsShort: "Terms",
+  more: "Quick Links",
+  categoryWritingTools: "Writing Tools",
+  categoryEditorTools: "Editor Tools",
+  categoryTextAnalysisTools: "Text Analysis Tools",
+  categoryDeveloperTools: "Developer Tools",
+  categoryExcelConverterTools: "Excel Converter Tools",
+  categoryDocumentConverterTools: "Document Converter Tools",
+  categoryDataConverterTools: "Data Converter Tools",
+  categoryTextUtilityTools: "Text Utility Tools",
 };
 
 const FOOTER_I18N: Record<string, Partial<FooterLabels>> = {

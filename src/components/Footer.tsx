@@ -66,7 +66,7 @@ export function Footer({ locale }: { locale: string }) {
   return (
     <footer className="w-full bg-muted/40 border-t mt-auto">
       <div className="max-w-[85rem] mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 md:gap-10">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href={L("/")} className="flex items-center gap-2 mb-4 group">
               <div className="bg-primary/10 p-1.5 rounded-lg group-hover:bg-primary/20 transition-colors">
@@ -190,6 +190,76 @@ export function Footer({ locale }: { locale: string }) {
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   {labels.htmlEditor}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold mb-4 text-foreground">{labels.more}</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href={L("/tools/writing")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {labels.categoryWritingTools}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/editors")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {labels.categoryEditorTools}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/text")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {labels.categoryTextAnalysisTools}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/dev-tools")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {labels.categoryDeveloperTools}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/excel")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {labels.categoryExcelConverterTools}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/documents")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {labels.categoryDocumentConverterTools}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/data")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {labels.categoryDataConverterTools}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={L("/tools/format")}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {labels.categoryTextUtilityTools}
                 </Link>
               </li>
             </ul>
