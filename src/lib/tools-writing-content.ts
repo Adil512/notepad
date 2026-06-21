@@ -9,6 +9,8 @@ export type WritingToolLabel = { h1: string; tagline: string };
 
 export type WritingToolsCopy = {
   pageTitle: string;
+  metaTitle?: string;
+  metaDescription?: string;
   /** Intro paragraph as ordered text/link segments. */
   intro: IntroSegment[];
   ctaAllTools: string;
@@ -26,6 +28,10 @@ export type WritingToolsCopy = {
 
 const en: WritingToolsCopy = {
   pageTitle: "Writing tools",
+  metaTitle:
+    "Best Writing Tools for Productivity – Focus Timer, Dictation, Templates & More",
+  metaDescription:
+    "Boost your writing productivity with powerful writing tools including Focus Timer, Writing Goals, Speech Dictation, Templates, Snippet Shelf and more",
   intro: [
     {
       text: "Our writing tools help you create, organize, and manage digital notes, content, and drafts in the browser. Start from a ",
@@ -48,7 +54,7 @@ const en: WritingToolsCopy = {
   ctaAllTools: "All tools",
   ctaNotepadEditor: "Notepad editor",
   experiencesHeading: "Writing experiences",
-  utilitiesHeading: "Utilities",
+  utilitiesHeading: "Free Online Writing Tools",
   open: "Open",
   landings: {
     distractionFree: {

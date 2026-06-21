@@ -19,9 +19,9 @@ export async function generateMetadata({
   const { locale } = await params;
   const canonical = canonicalUrlForPage(locale, "/tools/dev-tools");
   return {
-    title: "Developer tools | Notepad.is",
+    title: "Free Developer Tools – JSON, HTML, CSS, XML, Base64 & Regex Utilities",
     description:
-      "JSON and XML formatters, HTML minifier, CSS beautifier, Base64 and URL codecs, regex tester—free utilities that run in your browser.",
+      "Access free developer tools to format, validate, encode, decode, and optimize code. Use JSON Formatter & Validator, HTML Minifier, CSS Beautifier, Base64 Encoder/Decoder, URL Encoder/Decoder, Regex Tester, and XML Formatter online.",
     alternates: { canonical },
     openGraph: { url: canonical },
   };
@@ -140,7 +140,7 @@ export default async function DevToolsCategoryPage({
             id="dev-tools-grid-heading"
             className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground"
           >
-            Utilities
+            Free Online Developer Tools
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {visibleIds.map((id) => (
@@ -172,9 +172,6 @@ function DevToolCard({
         </span>
         <span className="min-w-0">
           <span className="block font-medium text-foreground">{m.h1}</span>
-          <span className="mt-1 block text-sm text-muted-foreground">
-            {m.tagline}
-          </span>
         </span>
       </Link>
     </li>

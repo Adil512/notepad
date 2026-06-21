@@ -25,8 +25,9 @@ export async function generateMetadata({
   const canonical = canonicalUrlForPage(locale, "/tools/writing");
   const t = getWritingToolsCopy(locale);
   return {
-    title: `${t.pageTitle} | Notepad.is`,
+    title: t.metaTitle ?? `${t.pageTitle} | Notepad.is`,
     description:
+      t.metaDescription ??
       "Distraction-free workflows, quick notes, dictation, goals, templates, and export utilities—free in your browser.",
     alternates: { canonical },
     openGraph: { url: canonical },
@@ -91,16 +92,7 @@ export default async function WritingToolsCategoryPage({
           </div>
         </header>
 
-        <section
-          className="mt-14"
-          aria-labelledby="writing-landings-heading"
-        >
-          <h2
-            id="writing-landings-heading"
-            className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground"
-          >
-            {t.experiencesHeading}
-          </h2>
+        <section className="mt-14">
           <ul className="grid gap-4 sm:grid-cols-2">
             <WritingLandingCard
               href={L("/distraction-free-writer")}
@@ -187,7 +179,6 @@ function WritingToolCard({
 }) {
   const m = writingToolsMeta[id];
   const h1 = label?.h1 ?? m.h1;
-  const tagline = label?.tagline ?? m.tagline;
   return (
     <li>
       <Link
@@ -199,9 +190,6 @@ function WritingToolCard({
         </span>
         <span className="min-w-0">
           <span className="block font-medium text-foreground">{h1}</span>
-          <span className="mt-1 block text-sm text-muted-foreground">
-            {tagline}
-          </span>
         </span>
       </Link>
     </li>

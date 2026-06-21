@@ -19,9 +19,9 @@ export async function generateMetadata({
   const { locale } = await params;
   const canonical = canonicalUrlForPage(locale, "/tools/text");
   return {
-    title: "Text analysis tools | Notepad.is",
+    title: "Free Text Analysis Tools – Count Words, Characters & Compare Text Online",
     description:
-      "Word and character counters, sentence and paragraph tools, reading time, case conversion, cleaning, sorting, and diff—run locally in your browser.",
+      "Analyze and optimize text with free tools including Word Counter, Character Counter, Sentence Counter, Paragraph Counter, Reading Time Calculator, Case Converter, Text Cleaner, Duplicate Line Remover, Text Sorter, and Text Compare.",
     alternates: { canonical },
     openGraph: { url: canonical },
   };
@@ -169,9 +169,6 @@ function TextAnalysisToolCard({
         </span>
         <span className="min-w-0">
           <span className="block font-medium text-foreground">{m.h1}</span>
-          <span className="mt-1 block text-sm text-muted-foreground">
-            {m.tagline}
-          </span>
         </span>
       </Link>
     </li>

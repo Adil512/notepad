@@ -19,9 +19,9 @@ export async function generateMetadata({
   const { locale } = await params;
   const canonical = canonicalUrlForPage(locale, "/tools/excel");
   return {
-    title: "Excel Converter Tools | Notepad.is",
+    title: "Free Excel Converter Tools – Convert Excel, CSV, JSON, XML, PDF & More",
     description:
-      "Convert spreadsheet data between Excel, CSV, JSON, XML, PDF, Google Sheets, and more with free online Excel converter tools.",
+      "Convert Excel files to and from CSV, JSON, XML, PDF, Google Sheets, ODS, Numbers, HTML, and Text formats. Fast, accurate, and free Excel converter tools for seamless data conversion and spreadsheet management.",
     alternates: { canonical },
     openGraph: { url: canonical },
   };
@@ -79,7 +79,7 @@ export default async function ExcelToolsCategoryPage({
             id="excel-tools-grid-heading"
             className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground"
           >
-            Excel conversion tools
+            Free Online Excel Converter Tools
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {visibleIds.map((id) => (
@@ -110,10 +110,7 @@ function ExcelToolCard({
           <ToolIcon id={id} className="h-6 w-6" />
         </span>
         <span className="min-w-0">
-          <span className="block font-medium text-foreground">{m.h1}</span>
-          <span className="mt-1 block text-sm text-muted-foreground">
-            {m.tagline}
-          </span>
+          <span className="block font-medium text-foreground">{m.h1} Converter</span>
         </span>
       </Link>
     </li>

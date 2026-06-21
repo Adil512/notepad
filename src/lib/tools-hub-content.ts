@@ -8,6 +8,13 @@ export type ToolsHubCategoryCopy = {
 export type ToolsHubCopy = {
   pageTitle: string;
   intro: string;
+  /** When set, intro is rendered with a bold link around `label`. */
+  introLink?: {
+    before: string;
+    label: string;
+    after: string;
+    href?: string;
+  };
   ctaNotepad: string;
   chips: {
     writing: string;
@@ -51,8 +58,15 @@ export type ToolsHubCopy = {
 };
 
 const en: ToolsHubCopy = {
-  pageTitle: "All Tools",
-  intro: "Find all the professional tools that you can use for free, unlimited.",
+  pageTitle: "Notepad & Writing Tools",
+  intro:
+    "Find all the professional Notepad writing tools that you can use for free, unlimited.",
+  introLink: {
+    before: "Find all the professional ",
+    label: "Notepad",
+    after: " writing tools that you can use for free, unlimited.",
+    href: "https://notepad.is/",
+  },
   ctaNotepad: "Notepad Online",
   chips: {
     writing: "Writing tools",

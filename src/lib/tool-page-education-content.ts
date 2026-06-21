@@ -1,10 +1,23 @@
 import type { WritingToolId } from "@/lib/writing-tools-registry";
 import { writingToolsMeta } from "@/lib/writing-tools-registry";
 
+export type ToolRichSubsection = {
+  heading: string;
+  paragraphs: string[];
+};
+
+export type ToolRichSection = {
+  heading: string;
+  paragraphs?: string[];
+  subsections?: ToolRichSubsection[];
+};
+
 export type ToolEducationContent = {
-  whatIs: string[];
-  howToUse: string[];
-  whyUse: string[];
+  whatIs?: string[];
+  howToUse?: string[];
+  whyUse?: string[];
+  /** Structured sections with custom headings (replaces whatIs/howToUse/whyUse when set). */
+  richSections?: ToolRichSection[];
   faqs: { question: string; answer: string }[];
   testimonials?: { name: string; role: string; quote: string }[];
 };
@@ -55,18 +68,61 @@ export function formatToolNameForHeading(h1: string): string {
 
 const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   "markdown-notepad": {
-    whatIs: [
-      "A Markdown editor lets you write structured documents using simple punctuation: headings with #, lists with - or 1., emphasis with asterisks, and links in brackets, without a traditional word processor.",
-      "This tool highlights your syntax, previews GitHub-flavored Markdown, and keeps your draft in the browser so you can focus on content.",
-    ],
-    howToUse: [
-      "Paste or type your Markdown in the editor.",
-      "Choose edit-only, split view, or preview to see rendered output as you work.",
-      "Use format and export actions to copy clean Markdown or download a .md file.",
-    ],
-    whyUse: [
-      "Perfect for READMEs, blog posts, documentation, and notes that need consistent structure.",
-      "Live preview reduces mistakes before you publish or commit to a repo.",
+    richSections: [
+      {
+        heading: "Markdown Editor",
+        paragraphs: [
+          "A Markdown editor is a text editor that lets you write using plain text formatting syntax and see the formatted output in real time. Instead of clicking toolbar buttons for bold, headings, or lists, you add simple characters like `**` for bold or `#` for headings. The editor converts these symbols into formatted text instantly.",
+        ],
+      },
+      {
+        heading: "Online Markdown Editor",
+        paragraphs: [
+          "An online Markdown editor runs entirely in your browser. Open a tab, start writing, and close it when done. Your drafts persist locally without ever leaving your device.",
+          "No installation, no configuration, no account needed. The editor loads instantly and works on any device with a browser. This makes it ideal for quick notes, drafts, or writing on someone else's computer.",
+        ],
+      },
+      {
+        heading: "Why Choose Our Markdown Editor?",
+        subsections: [
+          {
+            heading: "Real-time Preview",
+            paragraphs: [
+              "See your formatted text as you type. The side-by-side preview updates instantly, so you catch formatting errors early. This live preview scroll sync feature keeps both panes aligned as you write.",
+            ],
+          },
+          {
+            heading: "Export Options",
+            paragraphs: [
+              "Export your Markdown to HTML, PDF, or plain text files with a single click. The PDF output preserves tables, code blocks, and headings. HTML export generates clean, semantic code for embedding in websites or CMS platforms.",
+            ],
+          },
+          {
+            heading: "No Registration Required",
+            paragraphs: [
+              "Start writing immediately. No account creation, no email verification, no sign-in. Open the editor and begin typing. This removes all friction between wanting to write and actually writing.",
+            ],
+          },
+          {
+            heading: "Secure & Private",
+            paragraphs: [
+              "Your documents are processed in the browser. Content never leaves your device. No uploads, no server storage, no tracking. This makes the editor safe for confidential planning docs, journal entries, or unreleased product specs.",
+            ],
+          },
+          {
+            heading: "Syntax Highlighting",
+            paragraphs: [
+              "Code blocks are automatically highlighted. Technical documentation becomes clear and readable. The editor supports syntax highlighting for multiple programming languages, making it useful for developers writing API docs or code tutorials.",
+            ],
+          },
+          {
+            heading: "Import Documents",
+            paragraphs: [
+              "Import content from PDF, Word, and Excel files to quickly convert them into Markdown format. This saves time when migrating existing documents into a Markdown workflow.",
+            ],
+          },
+        ],
+      },
     ],
     faqs: [
       {

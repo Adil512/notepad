@@ -19,9 +19,9 @@ export async function generateMetadata({
   const { locale } = await params;
   const canonical = canonicalUrlForPage(locale, "/tools/editors");
   return {
-    title: "Editor tools | Notepad.is",
+    title: "Online Editor Tools – Markdown, JSON, HTML Editor & Code Notepad",
     description:
-      "In-browser Markdown, JSON, HTML, and code editors—no install, work locally in your browser for drafts, structured data, and web content.",
+      "Access powerful online editor tools for writing, coding, and data formatting. Use the Markdown Editor, Code Notepad, JSON Editor, and HTML Editor to create, edit, validate, and manage content efficiently in one place.",
     alternates: { canonical },
     openGraph: { url: canonical },
   };
@@ -147,9 +147,6 @@ function EditorToolCard({
         </span>
         <span className="min-w-0">
           <span className="block font-medium text-foreground">{m.h1}</span>
-          <span className="mt-1 block text-sm text-muted-foreground">
-            {m.tagline}
-          </span>
           <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary">
             Open
             <ArrowRight className="h-4 w-4" />
