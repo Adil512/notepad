@@ -102,13 +102,7 @@ export default async function DataToolsCategoryPage({
           </div>
         </header>
 
-        <section className="mt-14" aria-labelledby="data-tools-grid-heading">
-          <h2
-            id="data-tools-grid-heading"
-            className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground"
-          >
-            Data conversion tools
-          </h2>
+        <section className="mt-14" aria-label="Data conversion tools">
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {visibleIds.map((id) => (
               <DataToolCard key={id} id={id} href={L(`/tools/data/${id}`)} />
@@ -139,9 +133,6 @@ function DataToolCard({
         </span>
         <span className="min-w-0">
           <span className="block font-medium text-foreground">{m.h1}</span>
-          <span className="mt-1 block text-sm text-muted-foreground">
-            {m.tagline}
-          </span>
         </span>
       </Link>
     </li>
