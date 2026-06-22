@@ -110,7 +110,9 @@ function ExcelToolCard({
           <ToolIcon id={id} className="h-6 w-6" />
         </span>
         <span className="min-w-0">
-          <span className="block font-medium text-foreground">{m.h1} Converter</span>
+          <span className="block font-medium text-foreground">
+            {m.h1.endsWith(" Converter") ? m.h1 : `${m.h1} Converter`}
+          </span>
         </span>
       </Link>
     </li>

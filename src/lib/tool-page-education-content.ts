@@ -1122,6 +1122,71 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
   },
 };
 
+const TESTIMONIAL_AUTHORS: { name: string; role: string }[] = [
+  { name: "Sara M.", role: "Content Manager" },
+  { name: "Daniel K.", role: "Data Analyst" },
+  { name: "Nadia R.", role: "Student" },
+  { name: "James T.", role: "Operations Lead" },
+  { name: "Priya S.", role: "Product Manager" },
+  { name: "Marcus L.", role: "Freelance Writer" },
+  { name: "Elena V.", role: "Marketing Specialist" },
+  { name: "Chris W.", role: "Small Business Owner" },
+  { name: "Aisha B.", role: "Research Assistant" },
+  { name: "Tom H.", role: "IT Support" },
+  { name: "Rachel P.", role: "Office Administrator" },
+  { name: "Omar F.", role: "E-commerce Manager" },
+  { name: "Linda C.", role: "Accountant" },
+  { name: "Kevin J.", role: "Developer" },
+  { name: "Mei L.", role: "Graduate Student" },
+];
+
+const TESTIMONIAL_QUOTE_BUILDERS: ((tool: string) => string)[] = [
+  (tool) =>
+    `I use ${tool} weekly — it's quick, accurate, and saves me from manual reformatting.`,
+  (tool) =>
+    `${tool} fits our reporting workflow perfectly. Upload, convert, download — done.`,
+  (tool) =>
+    `Clean and simple. ${tool} gives me the output I need without extra software.`,
+  (tool) =>
+    `Our team switched to ${tool} for routine file conversions. Huge time saver.`,
+  (tool) =>
+    `${tool} handles messy source files better than I expected. Very reliable.`,
+  (tool) =>
+    `I recommend ${tool} to colleagues who need fast format changes in the browser.`,
+  (tool) =>
+    `${tool} is my go-to when a client sends data in the wrong format.`,
+  (tool) =>
+    `Straightforward ${tool} experience — no signup, no clutter, just results.`,
+  (tool) =>
+    `${tool} helped me finish a deadline project when Excel export wasn't available.`,
+  (tool) =>
+    `For ${tool}, the browser workflow is exactly what I needed on a shared machine.`,
+];
+
+function testimonialSeed(id: string): number {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) {
+    h = (h + id.charCodeAt(i) * (i + 3)) % 10_000;
+  }
+  return h;
+}
+
+function buildToolTestimonials(
+  id: WritingToolId,
+  h1: string
+): NonNullable<ToolEducationContent["testimonials"]> {
+  const seed = testimonialSeed(id);
+  return [0, 1, 2].map((offset) => {
+    const author =
+      TESTIMONIAL_AUTHORS[(seed + offset * 5) % TESTIMONIAL_AUTHORS.length];
+    const quote =
+      TESTIMONIAL_QUOTE_BUILDERS[
+        (seed + offset * 7) % TESTIMONIAL_QUOTE_BUILDERS.length
+      ](h1);
+    return { ...author, quote };
+  });
+}
+
 export function getToolPageEducation(
   id: WritingToolId
 ): ToolEducationContent | null {
@@ -1166,26 +1231,7 @@ export function getToolPageEducation(
           "Yes, this tool is built for creators, developers, students, and teams who need fast format conversion during daily work.",
       },
     ],
-    testimonials: [
-      {
-        name: "Sara M.",
-        role: "Content Manager",
-        quote:
-          "This converter helps us move files between formats in seconds, without slowing down publishing.",
-      },
-      {
-        name: "Daniel K.",
-        role: "Data Analyst",
-        quote:
-          "Clean interface and quick output. It saves a lot of repetitive manual steps.",
-      },
-      {
-        name: "Nadia R.",
-        role: "Student",
-        quote:
-          "Super simple to use. I can switch formats quickly for assignments and notes.",
-      },
-    ],
+    testimonials: buildToolTestimonials(id, meta.h1),
   };
 }
 

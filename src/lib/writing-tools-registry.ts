@@ -600,7 +600,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
       "Convert plain text files to Excel instantly with our free Text to Excel converter. Fast, accurate, and supports TXT to XLSX or CSV conversion online.",
     heroDescription:
       "Convert plain text into spreadsheet-ready Excel tables quickly.",
-    h1: "Text to Excel",
+    h1: "Text to Excel Converter",
     tagline: "Convert text rows to sheets",
     category: "converters",
     englishOnly: true,
@@ -611,7 +611,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Easily convert CSV files to Excel format (XLSX) online. Free CSV to Excel converter with fast processing and accurate data formatting.",
     heroDescription: "Turn CSV files into Excel format instantly.",
-    h1: "CSV to Excel",
+    h1: "CSV to Excel Converter",
     tagline: "CSV file to XLSX",
     category: "converters",
     englishOnly: true,
@@ -622,7 +622,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Convert JSON data into Excel spreadsheets instantly. Free JSON to Excel converter with structured output and easy download.",
     heroDescription: "Convert JSON arrays to Excel columns and rows.",
-    h1: "JSON to Excel",
+    h1: "JSON to Excel Converter",
     tagline: "JSON data to XLSX",
     category: "converters",
     englishOnly: true,
@@ -633,7 +633,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Transform XML files into Excel format quickly. Free XML to Excel converter with accurate data mapping and instant download.",
     heroDescription: "Transform XML data into Excel sheets.",
-    h1: "XML to Excel",
+    h1: "XML to Excel Converter",
     tagline: "XML nodes to cells",
     category: "converters",
     englishOnly: true,
@@ -644,7 +644,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Convert HTML tables into Excel spreadsheets online. Fast and free HTML to Excel converter with clean and structured output.",
     heroDescription: "Convert HTML table markup into Excel files.",
-    h1: "HTML to Excel",
+    h1: "HTML to Excel Converter",
     tagline: "HTML tables to XLSX",
     category: "converters",
     englishOnly: true,
@@ -655,7 +655,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Convert PDF files into editable Excel spreadsheets instantly. Free PDF to Excel converter with high accuracy and fast processing.",
     heroDescription: "Extract table-like PDF content for Excel editing.",
-    h1: "PDF to Excel",
+    h1: "PDF to Excel Converter",
     tagline: "PDF tables to sheets",
     category: "converters",
     englishOnly: true,
@@ -666,7 +666,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Easily convert Excel files to CSV format online. Free Excel to CSV converter with fast export and accurate data formatting.",
     heroDescription: "Convert Excel sheets to standard CSV output.",
-    h1: "Excel to CSV",
+    h1: "Excel to CSV Converter",
     tagline: "XLSX to CSV",
     category: "converters",
     englishOnly: true,
@@ -677,7 +677,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Convert Excel spreadsheets into JSON format instantly. Free Excel to JSON converter with structured and developer-friendly output.",
     heroDescription: "Export Excel data as clean JSON.",
-    h1: "Excel to JSON",
+    h1: "Excel to JSON Converter",
     tagline: "Sheets to objects",
     category: "converters",
     englishOnly: true,
@@ -688,7 +688,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Transform Excel files into XML format easily. Free Excel to XML converter with clean structure and instant download.",
     heroDescription: "Convert Excel rows to XML output.",
-    h1: "Excel to XML",
+    h1: "Excel to XML Converter",
     tagline: "Spreadsheet to XML",
     category: "converters",
     englishOnly: true,
@@ -699,7 +699,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Convert Excel spreadsheets to PDF format instantly. Free Excel to PDF converter with high-quality output and fast processing.",
     heroDescription: "Create PDF-ready outputs from Excel data.",
-    h1: "Excel to PDF",
+    h1: "Excel to PDF Converter",
     tagline: "Sheet to document",
     category: "converters",
     englishOnly: true,
@@ -710,7 +710,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Convert Google Sheets to Excel format (XLSX) easily. Fast and free tool to export Google Sheets data into Excel files.",
     heroDescription: "Convert Google Sheet exports to Excel format.",
-    h1: "Google Sheet to Excel",
+    h1: "Google Sheet to Excel Converter",
     tagline: "Sheet export to XLSX",
     category: "converters",
     englishOnly: true,
@@ -722,7 +722,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
       "Convert Apple Numbers files to Excel format online. Free Numbers to Excel converter with accurate and fast conversion.",
     heroDescription:
       "Convert Apple Numbers files to Excel-compatible format.",
-    h1: "Numbers to Excel",
+    h1: "Numbers to Excel Converter",
     tagline: "Apple Numbers to XLSX",
     category: "converters",
     englishOnly: true,
@@ -733,7 +733,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Convert OpenDocument spreadsheets (ODS) to Excel format instantly. Free ODS to Excel converter with fast and accurate results.",
     heroDescription: "Convert OpenDocument Spreadsheet files to Excel.",
-    h1: "ODS to Excel",
+    h1: "ODS to Excel Converter",
     tagline: "ODS to XLSX",
     category: "converters",
     englishOnly: true,
@@ -744,7 +744,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Convert Excel files to OpenDocument (ODS) format online. Free Excel to ODS converter with reliable and quick output.",
     heroDescription: "Convert Excel files to OpenDocument spreadsheets.",
-    h1: "Excel to ODS",
+    h1: "Excel to ODS Converter",
     tagline: "XLSX to ODS",
     category: "converters",
     englishOnly: true,
@@ -755,7 +755,7 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     description:
       "Convert Excel files to Google Sheets format easily. Free Excel to Google Sheets converter with seamless data import.",
     heroDescription: "Prepare Excel data for Google Sheets imports.",
-    h1: "Excel to Google Sheet",
+    h1: "Excel to Google Sheet Converter",
     tagline: "XLSX import prep",
     category: "converters",
     englishOnly: true,

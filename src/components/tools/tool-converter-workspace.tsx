@@ -28,6 +28,24 @@ function fmtSize(n: number) {
   return `${(n / (1024 * 1024)).toFixed(1)} MB`;
 }
 
+const HIDE_CONVERTER_CARD_HEADER = new Set<WritingToolId>([
+  "text-to-excel",
+  "csv-to-excel",
+  "json-to-excel",
+  "xml-to-excel",
+  "html-to-excel",
+  "pdf-to-excel",
+  "excel-to-csv",
+  "excel-to-json",
+  "excel-to-xml",
+  "excel-to-pdf",
+  "google-sheet-to-excel",
+  "numbers-to-excel",
+  "ods-to-excel",
+  "excel-to-ods",
+  "excel-to-google-sheet",
+]);
+
 export function ToolConverterWorkspace({ id }: { id: WritingToolId }) {
   const meta = writingToolsMeta[id];
   const ui = useMemo(() => getConverterWorkspaceUI(id), [id]);
@@ -168,7 +186,12 @@ export function ToolConverterWorkspace({ id }: { id: WritingToolId }) {
 
   return (
     <ToolChrome>
-      <ToolCard title={meta.h1} description={ui.cardDescription}>
+      <ToolCard
+        title={HIDE_CONVERTER_CARD_HEADER.has(id) ? undefined : meta.h1}
+        description={
+          HIDE_CONVERTER_CARD_HEADER.has(id) ? undefined : ui.cardDescription
+        }
+      >
         <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch">
           <div className="flex flex-col">
             <div className="mb-3 flex items-center gap-2">

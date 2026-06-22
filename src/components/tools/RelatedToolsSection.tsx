@@ -26,18 +26,12 @@ export function RelatedToolsSection({
       aria-labelledby="related-tools-heading"
     >
       <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <h2
-            id="related-tools-heading"
-            className="font-display text-lg font-semibold tracking-tight text-foreground sm:text-xl"
-          >
-            Related tools
-          </h2>
-          <p className="mt-1 max-w-xl text-sm text-muted-foreground">
-            Similar converters and utilities you can use next—still free and
-            processed in your browser where applicable.
-          </p>
-        </div>
+        <h2
+          id="related-tools-heading"
+          className="font-display text-lg font-semibold tracking-tight text-foreground sm:text-xl"
+        >
+          Related tools
+        </h2>
       </div>
       <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {toolIds.map((tid) => {
