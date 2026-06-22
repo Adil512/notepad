@@ -51,9 +51,36 @@ export default async function DataToolsCategoryPage({
           </h1>
           <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
             <p>
-              Out Free Online Data converter tools are designed to transform
-              structured data formats such as JSON, CSV, XML, YAML, and SQL.
-              These tools are critical for developers, data engineers, and API
+              Our Free Online Data converter tools are designed to transform
+              structured data formats such as{" "}
+              <Link
+                href={L("/tools/data/json-to-csv")}
+                className="font-semibold text-primary hover:underline"
+              >
+                JSON
+              </Link>
+              ,{" "}
+              <Link
+                href={L("/tools/data/csv-to-json")}
+                className="font-semibold text-primary hover:underline"
+              >
+                CSV
+              </Link>
+              ,{" "}
+              <Link
+                href={L("/tools/data/xml-to-json")}
+                className="font-semibold text-primary hover:underline"
+              >
+                XML
+              </Link>
+              , YAML, and{" "}
+              <Link
+                href={L("/tools/data/sql-to-csv")}
+                className="font-semibold text-primary hover:underline"
+              >
+                SQL
+              </Link>
+              . These tools are critical for developers, data engineers, and API
               integration workflows.
             </p>
           </div>
