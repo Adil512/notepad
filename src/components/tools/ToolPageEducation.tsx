@@ -4,16 +4,22 @@ import {
   Code2,
   Download,
   Eye,
+  FileCode,
   FileInput,
   HelpCircle,
+  Image,
   ListOrdered,
+  Paintbrush,
   Shield,
   Sparkles,
+  Table2,
+  Type,
   UserCheck,
 } from "lucide-react";
 import type {
   ToolEducationContent,
   ToolRichSection,
+  ToolRichSubsection,
 } from "@/lib/tool-page-education-content";
 
 const FEATURE_ICONS: Record<string, typeof Eye> = {
@@ -23,6 +29,14 @@ const FEATURE_ICONS: Record<string, typeof Eye> = {
   "Secure & Private": Shield,
   "Syntax Highlighting": Code2,
   "Import Documents": FileInput,
+  "Styling and Formatting": Paintbrush,
+  "Copy Formatting": Type,
+  "Removing Text Formatting": Type,
+  Autoformatting: Sparkles,
+  "Block-Level Text Formats": ListOrdered,
+  Tables: Table2,
+  "Inserting Images": Image,
+  "Code Snippets": FileCode,
 };
 
 export function ToolPageEducation({
@@ -95,60 +109,154 @@ export function ToolPageEducation({
 }
 
 function RichSectionsBlock({ sections }: { sections: ToolRichSection[] }) {
-  const proseSections = sections.filter((s) => !s.subsections?.length);
-  const featureSection = sections.find((s) => s.subsections?.length);
+  type Chunk =
+    | { type: "prose"; sections: ToolRichSection[] }
+    | { type: "section"; section: ToolRichSection };
+
+  const chunks: Chunk[] = [];
+  let proseBuffer: ToolRichSection[] = [];
+
+  for (const section of sections) {
+    if (!section.subsections?.length) {
+      proseBuffer.push(section);
+    } else {
+      if (proseBuffer.length) {
+        chunks.push({ type: "prose", sections: [...proseBuffer] });
+        proseBuffer = [];
+      }
+      chunks.push({ type: "section", section });
+    }
+  }
+  if (proseBuffer.length) {
+    chunks.push({ type: "prose", sections: proseBuffer });
+  }
 
   return (
     <div className="space-y-6">
-      {proseSections.length > 0 ? (
-        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
-          {proseSections.map((section) => (
-            <RichProseCard key={section.heading} section={section} />
+      {chunks.map((chunk, i) => {
+        if (chunk.type === "prose") {
+          return (
+            <div
+              key={`prose-${i}`}
+              className={`grid gap-6 ${chunk.sections.length > 1 ? "lg:grid-cols-2 lg:gap-8" : ""}`}
+            >
+              {chunk.sections.map((section) => (
+                <RichProseCard key={section.heading} section={section} />
+              ))}
+            </div>
+          );
+        }
+
+        const { section } = chunk;
+        const isSyntax = section.subsections!.some((s) => s.listItems?.length);
+
+        if (isSyntax) {
+          return (
+            <RichSyntaxCard key={section.heading} section={section} />
+          );
+        }
+
+        return (
+          <RichFeaturesCard key={section.heading} section={section} />
+        );
+      })}
+    </div>
+  );
+}
+
+function RichSyntaxCard({ section }: { section: ToolRichSection }) {
+  return (
+    <article className="relative overflow-hidden rounded-2xl border border-border/70 bg-card/70 p-6 shadow-[0_1px_0_0_rgb(0_0_0/0.03),0_12px_32px_-8px_rgb(0_0_0/0.08)] backdrop-blur-md dark:bg-card/40 sm:p-8">
+      <div
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/45 to-transparent opacity-80"
+        aria-hidden
+      />
+      <div className="flex items-start gap-4">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 text-primary shadow-inner ring-1 ring-primary/10 dark:from-primary/25 dark:to-primary/10">
+          <Code2 className="h-6 w-6" strokeWidth={1.75} />
+        </div>
+        <div className="min-w-0 flex-1 space-y-6">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+            {section.heading}
+          </h2>
+          {section.subsections?.map((sub) => (
+            <div key={sub.heading} className="space-y-4">
+              <h3 className="font-display text-lg font-semibold text-foreground">
+                {sub.heading}
+              </h3>
+              {sub.listItems ? (
+                <ul className="grid gap-2.5 sm:grid-cols-2">
+                  {sub.listItems.map((item, i) => (
+                    <li
+                      key={i}
+                      className="flex gap-3 rounded-xl border border-border/50 bg-muted/25 px-4 py-3 text-sm leading-relaxed text-muted-foreground dark:bg-muted/10"
+                    >
+                      <span
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
+                        aria-hidden
+                      />
+                      <RichParagraph text={item} as="span" />
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
           ))}
         </div>
-      ) : null}
+      </div>
+    </article>
+  );
+}
 
-      {featureSection?.subsections ? (
-        <article className="relative overflow-hidden rounded-2xl border border-border/70 bg-card/70 p-6 shadow-[0_1px_0_0_rgb(0_0_0/0.03),0_12px_32px_-8px_rgb(0_0_0/0.08)] backdrop-blur-md transition-[border-color,box-shadow] duration-300 hover:border-primary/25 dark:bg-card/40 dark:shadow-[0_1px_0_0_rgb(255_255_255/0.04),0_12px_40px_-12px_rgb(0_0_0/0.45)] sm:p-8">
-          <div
-            className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/45 to-transparent opacity-80"
-            aria-hidden
-          />
-          <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 text-primary shadow-inner ring-1 ring-primary/10 dark:from-primary/25 dark:to-primary/10">
-              <Sparkles className="h-6 w-6" strokeWidth={1.75} />
-            </div>
-            <div className="min-w-0 flex-1 space-y-6">
-              <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                {featureSection.heading}
-              </h2>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {featureSection.subsections.map((sub) => {
-                  const Icon = FEATURE_ICONS[sub.heading] ?? Sparkles;
-                  return (
-                    <div
-                      key={sub.heading}
-                      className="flex flex-col rounded-xl border border-border/60 bg-background/60 p-5 shadow-sm transition hover:border-primary/25 hover:bg-background/90 dark:bg-background/20 dark:hover:bg-background/35"
-                    >
-                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500/15 to-primary/10 text-primary">
-                        <Icon className="h-5 w-5" strokeWidth={1.75} />
-                      </div>
-                      <h3 className="font-display text-base font-semibold text-foreground">
-                        {sub.heading}
-                      </h3>
-                      <div className="mt-2 space-y-2 text-sm leading-relaxed text-muted-foreground">
-                        {sub.paragraphs.map((p, i) => (
-                          <RichParagraph key={i} text={p} />
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+function RichFeaturesCard({ section }: { section: ToolRichSection }) {
+  return (
+    <article className="relative overflow-hidden rounded-2xl border border-border/70 bg-card/70 p-6 shadow-[0_1px_0_0_rgb(0_0_0/0.03),0_12px_32px_-8px_rgb(0_0_0/0.08)] backdrop-blur-md transition-[border-color,box-shadow] duration-300 hover:border-primary/25 dark:bg-card/40 dark:shadow-[0_1px_0_0_rgb(255_255_255/0.04),0_12px_40px_-12px_rgb(0_0_0/0.45)] sm:p-8">
+      <div
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/45 to-transparent opacity-80"
+        aria-hidden
+      />
+      <div className="flex items-start gap-4">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 text-primary shadow-inner ring-1 ring-primary/10 dark:from-primary/25 dark:to-primary/10">
+          <Sparkles className="h-6 w-6" strokeWidth={1.75} />
+        </div>
+        <div className="min-w-0 flex-1 space-y-6">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+            {section.heading}
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {section.subsections?.map((sub) => (
+              <RichFeatureTile key={sub.heading} subsection={sub} />
+            ))}
           </div>
-        </article>
-      ) : null}
+          {section.footerParagraphs?.map((p, i) => (
+            <p
+              key={i}
+              className="border-t border-border/60 pt-5 text-sm text-muted-foreground"
+            >
+              <RichParagraph text={p} as="span" />
+            </p>
+          ))}
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function RichFeatureTile({ subsection }: { subsection: ToolRichSubsection }) {
+  const Icon = FEATURE_ICONS[subsection.heading] ?? Sparkles;
+  return (
+    <div className="flex flex-col rounded-xl border border-border/60 bg-background/60 p-5 shadow-sm transition hover:border-primary/25 hover:bg-background/90 dark:bg-background/20 dark:hover:bg-background/35">
+      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500/15 to-primary/10 text-primary">
+        <Icon className="h-5 w-5" strokeWidth={1.75} />
+      </div>
+      <h3 className="font-display text-base font-semibold text-foreground">
+        {subsection.heading}
+      </h3>
+      <div className="mt-2 space-y-2 text-sm leading-relaxed text-muted-foreground">
+        {subsection.paragraphs?.map((p, i) => (
+          <RichParagraph key={i} text={p} />
+        ))}
+      </div>
     </div>
   );
 }
@@ -179,37 +287,44 @@ function RichProseCard({ section }: { section: ToolRichSection }) {
   );
 }
 
-function RichParagraph({ text }: { text: string }) {
+function RichParagraph({
+  text,
+  as = "p",
+}: {
+  text: string;
+  as?: "p" | "span";
+}) {
   const parts = text.split(/(`[^`]+`|\[[^\]]+\]\([^)]+\))/g);
-  return (
-    <p>
-      {parts.map((part, i) => {
-        if (part.startsWith("`") && part.endsWith("`")) {
-          return (
-            <code
-              key={i}
-              className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-[0.9em] text-foreground"
-            >
-              {part.slice(1, -1)}
-            </code>
-          );
-        }
-        const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-        if (linkMatch) {
-          return (
-            <a
-              key={i}
-              href={linkMatch[2]}
-              className="font-bold text-blue-600 hover:text-blue-700 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
-            >
-              {linkMatch[1]}
-            </a>
-          );
-        }
-        return <span key={i}>{part}</span>;
-      })}
-    </p>
-  );
+  const inner = parts.map((part, i) => {
+    if (part.startsWith("`") && part.endsWith("`")) {
+      return (
+        <code
+          key={i}
+          className="rounded-md bg-muted px-1.5 py-0.5 font-mono text-[0.9em] text-foreground"
+        >
+          {part.slice(1, -1)}
+        </code>
+      );
+    }
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (linkMatch) {
+      return (
+        <a
+          key={i}
+          href={linkMatch[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-blue-600 hover:text-blue-700 hover:underline dark:text-blue-400 dark:hover:text-blue-300"
+        >
+          {linkMatch[1]}
+        </a>
+      );
+    }
+    return <span key={i}>{part}</span>;
+  });
+
+  if (as === "span") return <>{inner}</>;
+  return <p>{inner}</p>;
 }
 
 function DefaultEducationBlock({

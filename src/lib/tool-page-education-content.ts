@@ -3,13 +3,17 @@ import { writingToolsMeta } from "@/lib/writing-tools-registry";
 
 export type ToolRichSubsection = {
   heading: string;
-  paragraphs: string[];
+  paragraphs?: string[];
+  /** Bullet list items (e.g. syntax fundamentals). */
+  listItems?: string[];
 };
 
 export type ToolRichSection = {
   heading: string;
   paragraphs?: string[];
   subsections?: ToolRichSubsection[];
+  /** Optional lines rendered below subsections (e.g. reference links). */
+  footerParagraphs?: string[];
 };
 
 export type ToolEducationContent = {
@@ -336,16 +340,93 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
   },
   "html-editor": {
-    whatIs: [
-      "An HTML editor with a sandboxed preview lets you write markup (and inline CSS or scripts where allowed) and see output safely separated from the rest of the site.",
-    ],
-    howToUse: [
-      "Edit HTML in the source pane.",
-      "Open split or preview mode to render inside an isolated iframe.",
-      "Download your page as .html when you are happy with the result.",
-    ],
-    whyUse: [
-      "Learn HTML, prototype small layouts, or verify snippets before dropping them into a project.",
+    richSections: [
+      {
+        heading: "HTML Online Editor",
+        paragraphs: [
+          "An HTML editor is a software tool that helps you write, edit, and preview HTML code. It works by providing a text area where you type HTML markup, then displays the rendered result in a live preview pane. Some editors show the visual output directly, while others focus on the source code with syntax highlighting.",
+        ],
+      },
+      {
+        heading: "About HTML",
+        paragraphs: [
+          "HTML (HyperText Markup Language) is the standard markup language for web pages. Tim Berners-Lee created it in 1991. Almost every web page on the internet uses HTML.",
+        ],
+      },
+      {
+        heading: "Syntax help",
+        subsections: [
+          {
+            heading: "Fundamentals",
+            listItems: [
+              "Any HTML document must start with the document declaration `<!DOCTYPE html>`",
+              "HTML documents begin with `<html>` and end with `</html>`",
+              "Headings use `<h1>` to `<h6>` where `<h1>` is the most important",
+              "Paragraphs use `<p>` tags",
+              "Links use `<a>` tags",
+              "Images use `<img>` tags with a `src` attribute",
+              "Buttons use `<button>` tags",
+              "Lists use `<ul>` for unordered and `<ol>` for ordered lists, with `<li>` for items",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Online HTML editor features",
+        subsections: [
+          {
+            heading: "Styling and Formatting",
+            paragraphs: [
+              "Apply bold, italic, underline, strikethrough, subscript, and superscript. Change fonts, sizes, and colors. Adjust alignment and indentation.",
+            ],
+          },
+          {
+            heading: "Copy Formatting",
+            paragraphs: [
+              "Copy formatting from one block of text and apply it to another. This maintains consistency without reapplying each style manually.",
+            ],
+          },
+          {
+            heading: "Removing Text Formatting",
+            paragraphs: [
+              "Strip all formatting from selected text with one click. Returns text to its default style.",
+            ],
+          },
+          {
+            heading: "Autoformatting",
+            paragraphs: [
+              "Type Markdown-style syntax and the editor converts it automatically. For example, typing bold creates bold text.",
+            ],
+          },
+          {
+            heading: "Block-Level Text Formats",
+            paragraphs: [
+              "Apply heading styles, paragraphs, blockquotes, and preformatted text blocks.",
+            ],
+          },
+          {
+            heading: "Tables",
+            paragraphs: [
+              "Create tables with specified rows and columns. Resize cells, merge and split cells, and apply styles.",
+            ],
+          },
+          {
+            heading: "Inserting Images",
+            paragraphs: [
+              "Upload images or insert them via URL. Adjust size, alignment, and alternative text.",
+            ],
+          },
+          {
+            heading: "Code Snippets",
+            paragraphs: [
+              "Insert formatted code blocks with syntax highlighting for HTML, CSS, JavaScript, Python, SQL, and other languages.",
+            ],
+          },
+        ],
+        footerParagraphs: [
+          "Reference: [https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default)",
+        ],
+      },
     ],
     faqs: [
       {
