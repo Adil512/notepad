@@ -60,8 +60,6 @@ export default async function EditorCategoryToolPage({
     <WritingToolPageView
       locale={locale}
       id={id}
-      hubHref={hub}
-      hubLabel="Editor tools"
       breadcrumbs={breadcrumbs}
       categoryHub={{ href: hub, label: "Browse all editor tools" }}
     />

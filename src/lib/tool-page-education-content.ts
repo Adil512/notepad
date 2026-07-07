@@ -9,7 +9,7 @@ export type ToolRichSubsection = {
 };
 
 export type ToolRichSection = {
-  heading: string;
+  heading?: string;
   paragraphs?: string[];
   subsections?: ToolRichSubsection[];
   /** Optional lines rendered below subsections (e.g. reference links). */
@@ -22,6 +22,8 @@ export type ToolEducationContent = {
   whyUse?: string[];
   /** Structured sections with custom headings (replaces whatIs/howToUse/whyUse when set). */
   richSections?: ToolRichSection[];
+  /** Plain typography layout without icons or decorative cards. */
+  layout?: "default" | "simple";
   faqs: { question: string; answer: string }[];
   testimonials?: { name: string; role: string; quote: string }[];
 };
@@ -1119,6 +1121,78 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
           "Yes, this XML formatter is completely free and works instantly in your browser. It requires no signup or installation and provides fast formatting and validation.",
       },
     ],
+  },
+  "focus-timer": {
+    layout: "simple",
+    richSections: [
+      {
+        heading: "Focus Timer Online",
+        paragraphs: [
+          "A focus timer online helps you work in your browser with a timer. You don't need to sign up or install any app. All you have to do is to set the time and start writing in the writing area below what you want to write.",
+          "You can also set a break time here. As the time is up or you reach the break time that you have set before, you will get an alert. You can set the focus time and break time on your own.",
+        ],
+      },
+      {
+        heading: "How Does a Focus Timer Improve Your Productivity?",
+        paragraphs: [
+          "The main reason behind building this tool, Focus Timer, is that our human brain works best in short, focused bursts. Working for hours continuously can reduce productivity, and the chances of mistakes increase.",
+          "The best way is to split the time and increase productivity. This method is also famous as the Pomodoro Technique, in which we train our brain to do more in a limited time period.",
+        ],
+      },
+      {
+        heading: "When To Use an Online Focus Timer?",
+        paragraphs: [
+          "You can use an online focus timer all the time when you are working. But it can be best to use when you have less time to complete any task. This tool can help you to stay focused and complete the task on time.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the best free focus timer online?",
+        answer:
+          "The best free online focus timer is one that runs in your browser with no sign-up or download required. You can use Notepad. It is a free focus timer with no sign-up requirements. You can use it directly in your browser.",
+      },
+      {
+        question: "Does the online focus timer work if I switch tabs?",
+        answer:
+          "Yes. The timer keeps running in the background even when you switch to another tab or app. You will still get the alert when your session ends.",
+      },
+      {
+        question: "How long should a focus session be?",
+        answer:
+          "Most people work best in 25-minute sessions with 5-minute breaks, which follows the Pomodoro Technique. If you handle deep work like coding or writing, try 50-minute sessions with 10-minute breaks. Test both and stick with the length that keeps your attention strong without feeling drained.",
+      },
+      {
+        question: "Can I use a focus timer online for studying?",
+        answer:
+          "Yes. A focus timer is one of the most effective study tools because it breaks long reading or revision hours into short, manageable blocks. Set 25 minutes for one topic, take a short break, then move to the next.",
+      },
+      {
+        question: "Is an online focus timer better than a phone timer?",
+        answer:
+          "An online focus timer keeps your phone out of reach, which removes your biggest distraction. Phone timers force you to pick up your device, and one glance at a notification can cost you 20 minutes of focus.",
+      },
+    ],
+  },
+  "goal-tracker": {
+    layout: "simple",
+    richSections: [
+      {
+        heading: "Writing Goals Tracker",
+        paragraphs: [
+          "With our Free Writing Goals Tracker, you can set a daily or monthly word count goal and track your writing progress with real numbers. Log each writing session to see how much you've written, how much is left, and stay motivated to reach your target.",
+          "With this tool, you can track words and characters on the same page. Set your writing goal once and start writing and tracking.",
+        ],
+      },
+      {
+        heading: "How the Writing Goals Tracker Works",
+        paragraphs: [
+          "The writing goals tracker is very simple and easy to use, but powerful for tracking your writing goals. All you have to do is set your writing target. Update the number field given on the page.",
+          "You can set it to words or characters and start writing. That's it",
+        ],
+      },
+    ],
+    faqs: [],
   },
 };
 

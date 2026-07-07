@@ -59,8 +59,6 @@ export default async function ExcelCategoryToolPage({
     <WritingToolPageView
       locale={locale}
       id={id}
-      hubHref={hub}
-      hubLabel="Excel converter tools"
       breadcrumbs={breadcrumbs}
       categoryHub={{ href: hub, label: "Browse all Excel converter tools" }}
     />

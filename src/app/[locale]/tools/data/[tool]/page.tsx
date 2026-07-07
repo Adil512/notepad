@@ -59,8 +59,6 @@ export default async function DataCategoryToolPage({
     <WritingToolPageView
       locale={locale}
       id={id}
-      hubHref={hub}
-      hubLabel="Data & code converter tools"
       breadcrumbs={breadcrumbs}
       categoryHub={{ href: hub, label: "Browse all data & code converter tools" }}
     />

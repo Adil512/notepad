@@ -48,6 +48,25 @@ export function ToolPageEducation({
 }) {
   const useRichSections =
     content.richSections && content.richSections.length > 0;
+  const isSimple = content.layout === "simple";
+
+  if (isSimple) {
+    return (
+      <section
+        className="mt-12 border-t border-border sm:mt-14"
+        aria-label={`About ${toolName}`}
+      >
+        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+          {useRichSections ? (
+            <SimpleRichSections sections={content.richSections!} />
+          ) : (
+            <SimpleDefaultBlock content={content} />
+          )}
+          <SimpleFaqBlock faqs={content.faqs} />
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section
@@ -477,5 +496,84 @@ function FaqBlock({
         </div>
       </div>
     </article>
+  );
+}
+
+function SimpleRichSections({ sections }: { sections: ToolRichSection[] }) {
+  return (
+    <div className="space-y-10">
+      {sections.map((section) => (
+        <div key={section.heading ?? section.paragraphs?.[0]} className="space-y-4">
+          {section.heading ? (
+            <h2 className="text-xl font-semibold text-foreground">
+              {section.heading}
+            </h2>
+          ) : null}
+          <div className="space-y-4 text-[15px] leading-relaxed text-muted-foreground">
+            {section.paragraphs?.map((p, i) => (
+              <RichParagraph key={i} text={p} />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function SimpleDefaultBlock({
+  content,
+}: {
+  content: ToolEducationContent;
+}) {
+  return (
+    <div className="space-y-10">
+      {content.whatIs?.length ? (
+        <div className="space-y-4">
+          <div className="space-y-4 text-[15px] leading-relaxed text-muted-foreground">
+            {content.whatIs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+        </div>
+      ) : null}
+      {content.howToUse?.length ? (
+        <ol className="list-decimal space-y-2 pl-5 text-[15px] leading-relaxed text-muted-foreground">
+          {content.howToUse.map((step, i) => (
+            <li key={i}>{step}</li>
+          ))}
+        </ol>
+      ) : null}
+      {content.whyUse?.length ? (
+        <ul className="list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-muted-foreground">
+          {content.whyUse.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      ) : null}
+    </div>
+  );
+}
+
+function SimpleFaqBlock({
+  faqs,
+}: {
+  faqs: ToolEducationContent["faqs"];
+}) {
+  if (!faqs.length) return null;
+
+  return (
+    <div className="mt-12 space-y-6 border-t border-border pt-10">
+      <h4 className="text-lg font-semibold text-foreground">FAQs</h4>
+      <div className="space-y-6">
+        {faqs.map((faq, i) => (
+          <div key={i} className="space-y-2">
+            <p className="font-medium text-foreground">{faq.question}</p>
+            <p className="text-[15px] leading-relaxed text-muted-foreground">
+              {faq.answer}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

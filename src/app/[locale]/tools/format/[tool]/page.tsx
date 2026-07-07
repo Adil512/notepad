@@ -59,8 +59,6 @@ export default async function FormatCategoryToolPage({
     <WritingToolPageView
       locale={locale}
       id={id}
-      hubHref={hub}
-      hubLabel="Text utility tools"
       breadcrumbs={breadcrumbs}
       categoryHub={{ href: hub, label: "Browse all text utility tools" }}
     />

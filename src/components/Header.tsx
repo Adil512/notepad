@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { Moon, Sun, User, FileText, Menu, Shield } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { createClient } from "@/utils/supabase/client";
@@ -11,6 +11,86 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLocale } from "./locale-context";
 import { localizedPath } from "@/lib/i18n";
 import { getNavLabels } from "@/lib/nav-labels";
+
+function AuthProfileDropdown({
+  loginHref,
+  signupHref,
+  isAdminRoute,
+}: {
+  loginHref: string;
+  signupHref: string;
+  isAdminRoute: boolean;
+}) {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (event: MouseEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onPointerDown);
+    return () => document.removeEventListener("mousedown", onPointerDown);
+  }, [open]);
+
+  return (
+    <div className="relative" ref={rootRef}>
+      <button
+        type="button"
+        title="Account"
+        aria-expanded={open}
+        aria-haspopup="menu"
+        onClick={() => setOpen((value) => !value)}
+        className={
+          isAdminRoute
+            ? "inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-slate-300 transition-colors hover:bg-slate-700 hover:text-white"
+            : "inline-flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-muted/80 hover:text-foreground"
+        }
+      >
+        <User className="h-[18px] w-[18px]" strokeWidth={1.75} />
+        <span className="sr-only">Account menu</span>
+      </button>
+
+      {open ? (
+        <div
+          role="menu"
+          className={
+            isAdminRoute
+              ? "absolute right-0 top-[calc(100%+0.5rem)] z-[70] min-w-[9.5rem] overflow-hidden rounded-xl border border-slate-700 bg-slate-900 py-1.5 shadow-lg"
+              : "absolute right-0 top-[calc(100%+0.5rem)] z-[70] min-w-[9.5rem] overflow-hidden rounded-xl border border-border/70 bg-background py-1.5 shadow-lg"
+          }
+        >
+          <Link
+            role="menuitem"
+            href={loginHref}
+            onClick={() => setOpen(false)}
+            className={
+              isAdminRoute
+                ? "block px-4 py-2.5 text-sm text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+                : "block px-4 py-2.5 text-sm text-foreground transition-colors hover:bg-muted/60"
+            }
+          >
+            Sign in
+          </Link>
+          <Link
+            role="menuitem"
+            href={signupHref}
+            onClick={() => setOpen(false)}
+            className={
+              isAdminRoute
+                ? "block px-4 py-2.5 text-sm font-bold text-violet-300 transition-colors hover:bg-white/5 hover:text-white"
+                : "block px-4 py-2.5 text-sm font-bold text-primary transition-colors hover:bg-muted/60"
+            }
+          >
+            Sign up
+          </Link>
+        </div>
+      ) : null}
+    </div>
+  );
+}
 
 export function Header({ user }: { user: SupabaseUser | null }) {
   const locale = useLocale();
@@ -195,28 +275,11 @@ export function Header({ user }: { user: SupabaseUser | null }) {
               </button>
             </div>
           ) : (
-            <div className="hidden sm:flex items-center gap-3">
-              <Link
-                href={L("/login")}
-                className={
-                  isAdminRoute
-                    ? "text-sm font-medium text-slate-400 hover:text-white transition-colors px-3"
-                    : "text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-3"
-                }
-              >
-                Sign in
-              </Link>
-              <Link
-                href={L("/signup")}
-                className={
-                  isAdminRoute
-                    ? "text-sm font-medium bg-violet-600 text-white hover:bg-violet-500 transition-colors px-4 py-1.5 rounded-md shadow-sm"
-                    : "text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors px-4 py-1.5 rounded-md shadow-sm"
-                }
-              >
-                Sign up
-              </Link>
-            </div>
+            <AuthProfileDropdown
+              loginHref={L("/login")}
+              signupHref={L("/signup")}
+              isAdminRoute={isAdminRoute}
+            />
           )}
 
           <button
@@ -295,24 +358,7 @@ export function Header({ user }: { user: SupabaseUser | null }) {
             >
               Sign out
             </button>
-          ) : (
-            <div className="flex flex-col gap-3">
-              <Link
-                href={L("/login")}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="px-4 py-3 text-sm font-medium rounded-md text-muted-foreground hover:text-foreground transition-colors hover:bg-accent"
-              >
-                Sign in
-              </Link>
-              <Link
-                href={L("/signup")}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full text-center px-4 py-3 text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors rounded-md shadow-sm"
-              >
-                Get Started
-              </Link>
-            </div>
-          )}
+          ) : null}
         </div>
       )}
     </header>

@@ -60,8 +60,6 @@ export default async function TextAnalysisCategoryToolPage({
     <WritingToolPageView
       locale={locale}
       id={id}
-      hubHref={hub}
-      hubLabel="Text analysis tools"
       breadcrumbs={breadcrumbs}
       categoryHub={{ href: hub, label: "Browse all text analysis tools" }}
     />

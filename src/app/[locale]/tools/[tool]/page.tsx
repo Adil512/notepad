@@ -7,7 +7,6 @@ import {
   toolDetailPublicPath,
   type WritingToolId,
 } from "@/lib/writing-tools-registry";
-import { localizedPath } from "@/lib/i18n";
 import { defaultLocale } from "@/lib/i18n";
 import { buildWritingToolPageMetadata } from "@/lib/writing-tool-page-shared";
 import { WritingToolPageView } from "@/components/tools/WritingToolPageView";
@@ -47,14 +46,11 @@ export default async function WritingToolPage({
 
   const id = tool as WritingToolId;
   if (!isToolVisibleInLocale(id, locale)) notFound();
-  const hub = localizedPath(locale, "/tools");
 
   return (
     <WritingToolPageView
       locale={locale}
       id={id}
-      hubHref={hub}
-      hubLabel="All tools"
     />
   );
 }

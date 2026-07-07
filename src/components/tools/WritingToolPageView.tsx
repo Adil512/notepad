@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { ChevronLeft } from "lucide-react";
 import {
   writingToolsMeta,
   writingToolCategoryAccent,
@@ -22,15 +20,11 @@ import {
 export function WritingToolPageView({
   locale,
   id,
-  hubHref,
-  hubLabel,
   breadcrumbs,
   categoryHub,
 }: {
   locale: string;
   id: WritingToolId;
-  hubHref: string;
-  hubLabel: string;
   breadcrumbs?: { href: string; label: string }[];
   categoryHub?: { href: string; label: string };
 }) {
@@ -52,13 +46,6 @@ export function WritingToolPageView({
           {breadcrumbs?.length ? (
             <ToolPageBreadcrumbs items={breadcrumbs} />
           ) : null}
-          <Link
-            href={hubHref}
-            className="inline-flex w-fit items-center gap-1.5 rounded-full border border-border/80 bg-background/90 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground shadow-sm transition hover:border-primary/30 hover:text-primary dark:bg-background/70"
-          >
-            <ChevronLeft className="h-3.5 w-3.5" />
-            {hubLabel}
-          </Link>
 
           <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
             <div
@@ -80,6 +67,12 @@ export function WritingToolPageView({
 
       <div className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
         <WritingToolView id={id} />
+        {education ? (
+          <ToolPageEducation
+            toolName={educationToolName}
+            content={education}
+          />
+        ) : null}
         <RelatedToolsSection
           locale={locale}
           toolIds={relatedToolIds}
@@ -87,12 +80,6 @@ export function WritingToolPageView({
         />
       </div>
 
-      {education ? (
-        <ToolPageEducation
-          toolName={educationToolName}
-          content={education}
-        />
-      ) : null}
       {faqSchema ? (
         <script
           type="application/ld+json"

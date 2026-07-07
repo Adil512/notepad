@@ -60,8 +60,6 @@ export default async function DevToolsCategoryToolPage({
     <WritingToolPageView
       locale={locale}
       id={id}
-      hubHref={hub}
-      hubLabel="Developer tools"
       breadcrumbs={breadcrumbs}
       categoryHub={{ href: hub, label: "Browse all developer tools" }}
     />

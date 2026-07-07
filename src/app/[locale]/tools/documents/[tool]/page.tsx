@@ -59,8 +59,6 @@ export default async function DocumentCategoryToolPage({
     <WritingToolPageView
       locale={locale}
       id={id}
-      hubHref={hub}
-      hubLabel="Document converter tools"
       breadcrumbs={breadcrumbs}
       categoryHub={{ href: hub, label: "Browse all document converter tools" }}
     />
