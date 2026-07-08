@@ -60,7 +60,6 @@ export default async function FormatCategoryToolPage({
       locale={locale}
       id={id}
       breadcrumbs={breadcrumbs}
-      categoryHub={{ href: hub, label: "Browse all text utility tools" }}
     />
   );
 }

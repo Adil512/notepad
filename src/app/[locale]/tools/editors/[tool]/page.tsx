@@ -61,7 +61,6 @@ export default async function EditorCategoryToolPage({
       locale={locale}
       id={id}
       breadcrumbs={breadcrumbs}
-      categoryHub={{ href: hub, label: "Browse all editor tools" }}
     />
   );
 }

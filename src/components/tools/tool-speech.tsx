@@ -125,11 +125,6 @@ export function SpeechDictationTool() {
         </div>
       )}
 
-      <ToolCard
-        title="Privacy"
-        description="Dictation uses your browser’s speech engine. Audio is processed by the browser/OS vendor, not sent to Notepad.is servers. We do not receive your voice."
-      />
-
       <ToolCard title="Dictation">
         <div className="flex flex-wrap gap-2">
           <button

@@ -11,6 +11,8 @@ export type ToolRichSubsection = {
 export type ToolRichSection = {
   heading?: string;
   paragraphs?: string[];
+  /** Bullet list items under a section heading (simple layout). */
+  listItems?: string[];
   subsections?: ToolRichSubsection[];
   /** Optional lines rendered below subsections (e.g. reference links). */
   footerParagraphs?: string[];
@@ -1128,7 +1130,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
       {
         heading: "Focus Timer Online",
         paragraphs: [
-          "A focus timer online helps you work in your browser with a timer. You don't need to sign up or install any app. All you have to do is to set the time and start writing in the writing area below what you want to write.",
+          "A focus timer online helps you work in your browser with a timer. You don't need to sign up or install any app. All you have to do is to set the time and start [writing](https://notepad.is/tools/writing/) in the writing area below what you want to write.",
           "You can also set a break time here. As the time is up or you reach the break time that you have set before, you will get an alert. You can set the focus time and break time on your own.",
         ],
       },
@@ -1150,7 +1152,7 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
       {
         question: "What is the best free focus timer online?",
         answer:
-          "The best free online focus timer is one that runs in your browser with no sign-up or download required. You can use Notepad. It is a free focus timer with no sign-up requirements. You can use it directly in your browser.",
+          "The best free online focus timer is one that runs in your browser with no sign-up or download required. You can use [Notepad](https://notepad.is/). It is a free focus timer with no sign-up requirements. You can use it directly in your browser.",
       },
       {
         question: "Does the online focus timer work if I switch tabs?",
@@ -1174,14 +1176,79 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
       },
     ],
   },
+  "speech-dictation": {
+    layout: "simple",
+    richSections: [
+      {
+        heading: "Free Online Speech to Text Converter",
+        paragraphs: [
+          "This free online speech-to-text tool converts spoken words into written text using automatic speech recognition (ASR). You need to connect your microphone to speak.  This voice-to-text conversion happens in real time or from recorded files.",
+          "Our speech-to-text converter lets you transcribe audio without installing software or creating accounts. Our website provides a browser-based tool that works on Windows, Mac, and Linux using Google Chrome.",
+        ],
+      },
+      {
+        heading: "Common Use Cases",
+        listItems: [
+          "Dictation and [note-taking](https://notepad.is/) - Writers, students, and professionals use voice typing to create documents, emails, and notes without typing.",
+          "Meeting transcription - Business professionals use real-time transcription services to capture meeting discussions.",
+          "Content creation - Podcast transcription, video captioning, and blog post drafting benefit from speech-to-text.",
+          "Accessibility - Voice-to-text technology helps people with dyslexia, physical disabilities, or hearing impairments.",
+        ],
+      },
+      {
+        heading: "Tips for Best Results",
+        listItems: [
+          "Use a quality microphone - A high-quality USB or headset microphone captures clearer audio than built-in laptop mics.",
+          "Reduce background noise - Noise cancellation helps, but reducing ambient noise improves accuracy significantly.",
+          "Speak clearly and consistently - Maintain a steady pace and avoid mumbling.",
+          "Pause between sentences - Brief pauses let the speech recognition engine process and finalize text.",
+          "Use voice commands - Custom voice commands insert punctuation, formatting, and special characters.",
+          "Check your internet connection - Most online speech-to-text tools require stable internet.",
+        ],
+      },
+      {
+        heading: "Key Advantages",
+        listItems: [
+          "Speed - Speaking is 3x faster than average typing speed.",
+          "Accuracy - Modern ASR systems achieve high accuracy levels above 90% for clear speech.",
+          "Accessibility - Speech-to-text technology enables people with physical limitations to write and communicate effectively.",
+          "Productivity - Dictation software tools reduce the time spent on documentation. Real-time transcription eliminates the need to take notes during meetings.",
+        ],
+      },
+      {
+        heading: "Why Writers Love Our Speech-to-Text Converter",
+        subsections: [
+          {
+            heading: "Save time",
+            paragraphs: [
+              "Users can save a lot of time when they use our speech-to-text tool. Manual writing and typing can take a lot of time.",
+            ],
+          },
+          {
+            heading: "Keep data secure",
+            paragraphs: [
+              "Our tool uses the user's browser to perform all the tasks. No data will be shared or stored on our server. So it is super safe to use.",
+            ],
+          },
+          {
+            heading: "Ensure accuracy",
+            paragraphs: [
+              "We are using Google Speech-to-Text Advanced API to provide the most accurate writing with voice. So users can get error-free writing.",
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [],
+  },
   "goal-tracker": {
     layout: "simple",
     richSections: [
       {
         heading: "Writing Goals Tracker",
         paragraphs: [
-          "With our Free Writing Goals Tracker, you can set a daily or monthly word count goal and track your writing progress with real numbers. Log each writing session to see how much you've written, how much is left, and stay motivated to reach your target.",
-          "With this tool, you can track words and characters on the same page. Set your writing goal once and start writing and tracking.",
+          "With our Free Writing Goals Tracker, you can set a daily or monthly [word count](https://notepad.is/tools/text/word-counter/) goal and track your writing progress with real numbers. Log each writing session to see how much you've written, how much is left, and stay motivated to reach your target.",
+          "With this tool, you can track words and characters on the same page. Set your writing goal once and start [writing](https://notepad.is/tools/writing/) and tracking.",
         ],
       },
       {
@@ -1189,6 +1256,45 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
         paragraphs: [
           "The writing goals tracker is very simple and easy to use, but powerful for tracking your writing goals. All you have to do is set your writing target. Update the number field given on the page.",
           "You can set it to words or characters and start writing. That's it",
+        ],
+      },
+    ],
+    faqs: [],
+  },
+  templates: {
+    layout: "simple",
+    richSections: [
+      {
+        heading: "Writing Templates Online",
+        paragraphs: [
+          "Start writing on any topic with a ready structure without thinking about where to start. Save your time and use a template to start. You can skip the initial structure whether you are writing a blog post, essay, letter, or story outline. We have free ready-made templates for all.",
+          "You can use it directly in your own browser using our website, or you can also copy the template and use it locally on your own computer, laptop, or any other device that you use to write.",
+          "The good thing is that you do not need to install any third-party software or app; no need to [sign in](https://notepad.is/login). You can directly start writing.",
+        ],
+      },
+      {
+        heading: "Free Templates for Every Type of Writing",
+        paragraphs: [
+          "One tool covers all your writing needs. Blog post templates with intro, body, and conclusion sections keep your articles organized.",
+          "And many more templates to make your writing easier and quick.",
+        ],
+        listItems: [
+          "Meeting notes with agenda, notes, and action items.",
+          "Daily journal with Grateful for Focus today and Thoughts",
+          "Checklist with Task list",
+        ],
+      },
+      {
+        heading: "Why Templates Make You a Faster Writer",
+        paragraphs: [
+          "Structuring any content is a critical part and also difficult at the same time. So, just think about it: what if you get a ready-made structure on any topic on which you have to write? And you can just skip the major part, which is already done for you. So you can directly start writing. You can put all your focus and your brain on one thing only, which is the writing. You can not only write faster, but also this can improve your focus and overall productivity as well.",
+        ],
+      },
+      {
+        heading: "How to Use a Writing Template",
+        paragraphs: [
+          "Our [professional writing tools](https://notepad.is/) are easy to use. Here is how you can use this writing template in the easiest possible way.",
+          "On this page, we have a list of [writing templates](https://word.cloud.microsoft/create/en/writing-templates/) that are ready to copy and paste anywhere you want to write and follow the structure.",
         ],
       },
     ],

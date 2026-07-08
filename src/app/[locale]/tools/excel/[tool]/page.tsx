@@ -60,7 +60,6 @@ export default async function ExcelCategoryToolPage({
       locale={locale}
       id={id}
       breadcrumbs={breadcrumbs}
-      categoryHub={{ href: hub, label: "Browse all Excel converter tools" }}
     />
   );
 }

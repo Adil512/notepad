@@ -11,11 +11,9 @@ import {
 export function RelatedToolsSection({
   locale,
   toolIds,
-  categoryHub,
 }: {
   locale: string;
   toolIds: WritingToolId[];
-  categoryHub?: { href: string; label: string };
 }) {
   if (toolIds.length === 0) return null;
   const L = (p: string) => localizedPath(locale, p);
@@ -59,16 +57,6 @@ export function RelatedToolsSection({
           );
         })}
       </ul>
-      {categoryHub ? (
-        <p className="mt-6 text-center text-sm text-muted-foreground sm:text-left">
-          <Link
-            href={categoryHub.href}
-            className="font-semibold text-primary hover:underline"
-          >
-            {categoryHub.label}
-          </Link>
-        </p>
-      ) : null}
     </section>
   );
 }

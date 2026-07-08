@@ -60,7 +60,6 @@ export default async function DataCategoryToolPage({
       locale={locale}
       id={id}
       breadcrumbs={breadcrumbs}
-      categoryHub={{ href: hub, label: "Browse all data & code converter tools" }}
     />
   );
 }

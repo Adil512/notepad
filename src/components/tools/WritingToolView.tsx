@@ -13,8 +13,6 @@ import { ReadingModeTool } from "@/components/tools/tool-reading-mode";
 import { PrintNoteTool } from "@/components/tools/tool-print-note";
 import { ShareNoteTool } from "@/components/tools/tool-share-note";
 import { ImportExportHubTool } from "@/components/tools/tool-import-export";
-import { InstallAppTool } from "@/components/tools/tool-install-app";
-import { KeyboardShortcutsRefTool } from "@/components/tools/tool-keyboard-ref";
 import { CodeNotepadTool } from "@/components/tools/tool-code-notepad";
 import { JsonEditorTool } from "@/components/tools/tool-json-editor";
 import { HtmlEditorTool } from "@/components/tools/tool-html-editor";
@@ -107,10 +105,6 @@ export function WritingToolView({ id }: { id: WritingToolId }) {
       return <ShareNoteTool />;
     case "import-export":
       return <ImportExportHubTool />;
-    case "install-app":
-      return <InstallAppTool />;
-    case "keyboard-shortcuts":
-      return <KeyboardShortcutsRefTool />;
     default:
       return <GenericConverterTool id={id} />;
   }

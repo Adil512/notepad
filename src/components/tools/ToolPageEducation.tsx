@@ -509,11 +509,37 @@ function SimpleRichSections({ sections }: { sections: ToolRichSection[] }) {
               {section.heading}
             </h2>
           ) : null}
-          <div className="space-y-4 text-[15px] leading-relaxed text-muted-foreground">
-            {section.paragraphs?.map((p, i) => (
-              <RichParagraph key={i} text={p} />
-            ))}
-          </div>
+          {section.paragraphs?.length ? (
+            <div className="space-y-4 text-[15px] leading-relaxed text-muted-foreground">
+              {section.paragraphs.map((p, i) => (
+                <RichParagraph key={i} text={p} />
+              ))}
+            </div>
+          ) : null}
+          {section.listItems?.length ? (
+            <ul className="list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-muted-foreground">
+              {section.listItems.map((item, i) => (
+                <li key={i}>
+                  <RichParagraph text={item} as="span" />
+                </li>
+              ))}
+            </ul>
+          ) : null}
+          {section.subsections?.map((sub) => (
+            <div key={sub.heading} className="space-y-2">
+              <h3 className="text-base font-semibold text-foreground">
+                {sub.heading}
+              </h3>
+              {sub.paragraphs?.map((p, i) => (
+                <p
+                  key={i}
+                  className="text-[15px] leading-relaxed text-muted-foreground"
+                >
+                  <RichParagraph text={p} as="span" />
+                </p>
+              ))}
+            </div>
+          ))}
         </div>
       ))}
     </div>
@@ -569,7 +595,7 @@ function SimpleFaqBlock({
           <div key={i} className="space-y-2">
             <p className="font-medium text-foreground">{faq.question}</p>
             <p className="text-[15px] leading-relaxed text-muted-foreground">
-              {faq.answer}
+              <RichParagraph text={faq.answer} as="span" />
             </p>
           </div>
         ))}

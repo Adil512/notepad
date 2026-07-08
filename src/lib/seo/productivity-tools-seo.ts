@@ -15,8 +15,6 @@ const PRODUCTIVITY_TOOL_IDS = [
   "print-note",
   "share-note",
   "import-export",
-  "install-app",
-  "keyboard-shortcuts",
 ] as const satisfies readonly WritingToolId[];
 
 const enTitleByTool: Record<(typeof PRODUCTIVITY_TOOL_IDS)[number], string> = {
@@ -31,8 +29,6 @@ const enTitleByTool: Record<(typeof PRODUCTIVITY_TOOL_IDS)[number], string> = {
   "print-note": "Print Notes Online – Print-Friendly Note Layout Tool",
   "share-note": "Share Notes Online – Export & Share Notes Instantly",
   "import-export": "Import & Export Notes Online – Manage Note Files Easily",
-  "install-app": "Install Notepad App – PWA Install & Home Screen Setup",
-  "keyboard-shortcuts": "Keyboard Shortcuts Guide – Notepad Hotkeys & Commands",
 };
 
 const enDescriptionByTool: Record<(typeof PRODUCTIVITY_TOOL_IDS)[number], string> = {
@@ -58,10 +54,6 @@ const enDescriptionByTool: Record<(typeof PRODUCTIVITY_TOOL_IDS)[number], string
     "Share notes faster with export-friendly formatting and quick copy options for links, chat, and email.",
   "import-export":
     "Import existing note files and export your content in seconds with this simple online note file manager.",
-  "install-app":
-    "Install the notepad as a PWA for quick access, app-like speed, and a better writing workflow on any device.",
-  "keyboard-shortcuts":
-    "Learn essential notepad keyboard shortcuts to write, edit, and navigate faster with power-user efficiency.",
 };
 
 const generatedByTool: Record<(typeof PRODUCTIVITY_TOOL_IDS)[number], Record<string, SeoPack>> =

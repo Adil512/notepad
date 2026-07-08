@@ -29,6 +29,40 @@ function hasExplicitNonEnLocale(pathname: string): boolean {
   return Boolean(seg && isValidLocale(seg) && seg !== defaultLocale);
 }
 
+/** Retired writing tool slugs → permanent redirect target (locale applied in proxy). */
+const RETIRED_WRITING_TOOL_REDIRECTS: Record<string, string> = {
+  "install-app": "/",
+  "keyboard-shortcuts": "/",
+};
+
+function maybeRetiredWritingToolRedirect(
+  request: NextRequest
+): NextResponse | null {
+  const pathname = request.nextUrl.pathname;
+  const inner =
+    getPathWithoutLocale(pathname).replace(/\/+$/, "") || "/";
+  const parts = inner.split("/").filter(Boolean);
+  let slug: string | undefined;
+  if (
+    parts.length === 3 &&
+    parts[0] === "tools" &&
+    parts[1] === "writing" &&
+    parts[2] in RETIRED_WRITING_TOOL_REDIRECTS
+  ) {
+    slug = parts[2];
+  } else if (
+    parts.length === 2 &&
+    parts[0] === "tools" &&
+    parts[1] in RETIRED_WRITING_TOOL_REDIRECTS
+  ) {
+    slug = parts[1];
+  }
+  if (!slug) return null;
+  const locale = getLocaleFromPathname(pathname);
+  const dest = localizedPath(locale, `${RETIRED_WRITING_TOOL_REDIRECTS[slug]}/`);
+  return NextResponse.redirect(new URL(dest, request.url), 301);
+}
+
 function maybeWritingProductivityRedirect(
   request: NextRequest
 ): NextResponse | null {
@@ -171,6 +205,11 @@ function maybeFormatHubRedirect(request: NextRequest): NextResponse | null {
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  const retiredRedirect = maybeRetiredWritingToolRedirect(request);
+  if (retiredRedirect) {
+    return retiredRedirect;
+  }
 
   const writingRedirect = maybeWritingProductivityRedirect(request);
   if (writingRedirect) {

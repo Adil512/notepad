@@ -145,14 +145,6 @@ const af: WritingToolsCopy = {
       h1: "Invoer & uitvoer",
       tagline: "Lêers op een plek",
     },
-    "install-app": {
-      h1: "Installeer app",
-      tagline: "PWA / voeg by tuisskerm",
-    },
-    "keyboard-shortcuts": {
-      h1: "Sleutelbordkortpaaie",
-      tagline: "Kragtige gebruiker verwysing",
-    },
   },
 };
 

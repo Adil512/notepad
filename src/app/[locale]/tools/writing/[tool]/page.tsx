@@ -61,7 +61,6 @@ export default async function WritingCategoryToolPage({
       locale={locale}
       id={id}
       breadcrumbs={breadcrumbs}
-      categoryHub={{ href: hub, label: "Browse all writing tools" }}
     />
   );
 }

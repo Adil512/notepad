@@ -61,7 +61,6 @@ export default async function TextAnalysisCategoryToolPage({
       locale={locale}
       id={id}
       breadcrumbs={breadcrumbs}
-      categoryHub={{ href: hub, label: "Browse all text analysis tools" }}
     />
   );
 }

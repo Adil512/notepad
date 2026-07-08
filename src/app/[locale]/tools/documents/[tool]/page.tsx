@@ -60,7 +60,6 @@ export default async function DocumentCategoryToolPage({
       locale={locale}
       id={id}
       breadcrumbs={breadcrumbs}
-      categoryHub={{ href: hub, label: "Browse all document converter tools" }}
     />
   );
 }

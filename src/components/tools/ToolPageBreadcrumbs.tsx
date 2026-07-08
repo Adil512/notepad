@@ -15,7 +15,7 @@ export function ToolPageBreadcrumbs({
             <li key={`${item.href}-${item.label}`} className="flex items-center gap-1">
               {i > 0 ? (
                 <span className="text-muted-foreground/50" aria-hidden>
-                  /
+                  &gt;
                 </span>
               ) : null}
               {last ? (

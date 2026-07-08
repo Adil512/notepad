@@ -81,8 +81,6 @@ export const WRITING_TOOL_IDS = [
   "print-note",
   "share-note",
   "import-export",
-  "install-app",
-  "keyboard-shortcuts",
   "text-to-excel",
   "csv-to-excel",
   "json-to-excel",
@@ -155,8 +153,6 @@ export const WRITING_PRODUCTIVITY_TOOL_IDS = [
   "print-note",
   "share-note",
   "import-export",
-  "install-app",
-  "keyboard-shortcuts",
 ] as const satisfies readonly WritingToolId[];
 
 export type WritingProductivityToolId =
@@ -573,24 +569,6 @@ export const writingToolsMeta: Record<WritingToolId, WritingToolMeta> = {
     h1: "Import & export",
     tagline: "Files in one place",
     category: "export",
-  },
-  "install-app": {
-    id: "install-app",
-    title: "Install Notepad App – PWA & Add to Home Screen",
-    description:
-      "Install Notepad App as a PWA or add to your home screen. Access your notes quickly with an app-like experience on any device.",
-    h1: "Install app",
-    tagline: "PWA / add to home screen",
-    category: "workspace",
-  },
-  "keyboard-shortcuts": {
-    id: "keyboard-shortcuts",
-    title: "Keyboard Shortcuts – Notepad Power User Guide",
-    description:
-      "Keyboard Shortcuts guide for power users. Learn quick commands to write, edit, and navigate faster in your online notepad.",
-    h1: "Keyboard shortcuts",
-    tagline: "Power-user reference",
-    category: "workspace",
   },
   "text-to-excel": {
     id: "text-to-excel",

@@ -759,14 +759,7 @@ export function Editor({ user }: { user?: User | null }) {
                 Redo
               </li>
             </ul>
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <NextLink
-                href={localizedPath(locale, "/tools/keyboard-shortcuts")}
-                className="text-sm font-semibold text-primary hover:underline"
-                onClick={() => setShowKeyboardHelp(false)}
-              >
-                Full reference →
-              </NextLink>
+            <div className="mt-6">
               <button
                 type="button"
                 onClick={() => setShowKeyboardHelp(false)}
