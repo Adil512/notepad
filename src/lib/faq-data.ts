@@ -16,7 +16,7 @@ const EN_FAQS: FaqItem[] = [
   },
   {
     q: "Can I save my notes online?",
-    a: "Yes, your notes can be saved online so you can access and continue editing them anytime. This ensures your work is محفوظ and available across different sessions and devices.",
+    a: "Yes, your notes can be saved online so you can access and continue editing them anytime. This ensures your work is saved and available across different sessions and devices.",
   },
   {
     q: "Does Notepad Online support auto-save?",
@@ -40,7 +40,7 @@ const EN_FAQS: FaqItem[] = [
   },
   {
     q: "Can I use Notepad Online offline?",
-    a: "Some basic features may work offline depending on your browser capabilities. However, an internet connection is recommended for saving, syncing, and accessing your notes reliably.",
+    a: "Some basic features may work offline depending on your browser capabilities. However, an internet connection is recommended for reliable note saving, syncing, and access.",
   },
   {
     q: "Is Notepad Online better than traditional Notepad or WordPad?",
