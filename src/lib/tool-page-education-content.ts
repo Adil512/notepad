@@ -1300,6 +1300,81 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
     faqs: [],
   },
+  "reading-mode": {
+    layout: "simple",
+    richSections: [
+      {
+        heading: "Reading Mode Online",
+        paragraphs: [
+          "Reading mode online gives you a clean, calm view of your text so you can focus on the words. Paste notes, articles, or drafts into the box, then read them in a simple layout with no ads, sidebars, or extra clutter.",
+          "You can change the font size and line width to match how you like to read. Everything runs in your browser. No signup. No install.",
+        ],
+      },
+      {
+        heading: "Why Use a Distraction-Free Reading Mode?",
+        paragraphs: [
+          "Long pages and busy screens make it hard to stay with the text. A [distraction-free reading](https://notepad.is/distraction-free-writer/) mode removes the noise so your eyes can move line by line with less strain.",
+          "Use it when you need to review notes, proofread a draft, or read something carefully before you edit or share it.",
+        ],
+      },
+      {
+        heading: "How to Use This Reading Mode Tool",
+        paragraphs: [
+          "Paste or type your text in the source box. Adjust font size and line width until the page feels easy to read. Then scroll the reading surface and focus on the content.",
+          "Your text stays on your device in the browser. You can clear it anytime and start again with a new piece of writing.",
+        ],
+      },
+    ],
+    faqs: [],
+  },
+  "print-note": {
+    layout: "simple",
+    richSections: [
+      {
+        paragraphs: [
+          "Need a note on paper or as a [PDF](https://notepad.is/tools/documents/pdf-to-word/)? Type a title, add your text, and hit Print / [Save PDF](https://notepad.is/tools/documents/word-to-pdf/). This page gives you a clean print layout that works in your browser. No Word file. No extra app.",
+        ],
+      },
+      {
+        heading: "What the Printed Page Looks Like",
+        paragraphs: [
+          "The print view keeps a clear title at the top and your note body below it. Spacing is set for paper, so the page is easy to read once it comes out of the printer or opens as a PDF.",
+          "You control the final margins in your browser print settings. That means you can tighten the page for a short note or leave more white space when you want room to write by hand later.",
+        ],
+      },
+      {
+        heading: "Common Reasons People Print Notes",
+        listItems: [
+          "Meeting handouts that need a title and clear body text",
+          "Study sheets you want to mark up with a pen",
+          "Quick PDF copies to email or store offline",
+          "Simple one-page notes when a full document editor is overkill",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "How can I print notes online?",
+        answer:
+          "Simply type or paste your notes into the online editor, format them if needed, and click the Print button. You can print directly from your browser without installing any software.",
+      },
+      {
+        question: "Can I print handwritten or copied notes online?",
+        answer:
+          "Yes. You can paste copied notes or type your own text into the editor, make any necessary changes, and print clean, well-formatted notes online in just a few clicks.",
+      },
+      {
+        question: "Is it free to print notes online?",
+        answer:
+          "Yes. Most online note printing tools let you print notes for free without creating an account. You can quickly prepare and print your notes whenever you need them.",
+      },
+      {
+        question: "Can I print notes online from my phone?",
+        answer:
+          "Yes. You can print notes online from your Android phone, iPhone, tablet, or computer. Open the tool in your browser, edit your notes if needed, and print using a connected printer or save them as a PDF.",
+      },
+    ],
+  },
 };
 
 const TESTIMONIAL_AUTHORS: { name: string; role: string }[] = [

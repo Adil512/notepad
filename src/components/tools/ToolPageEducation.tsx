@@ -505,7 +505,7 @@ function SimpleRichSections({ sections }: { sections: ToolRichSection[] }) {
       {sections.map((section) => (
         <div key={section.heading ?? section.paragraphs?.[0]} className="space-y-4">
           {section.heading ? (
-            <h2 className="text-xl font-semibold text-foreground">
+            <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
               {section.heading}
             </h2>
           ) : null}
@@ -527,7 +527,7 @@ function SimpleRichSections({ sections }: { sections: ToolRichSection[] }) {
           ) : null}
           {section.subsections?.map((sub) => (
             <div key={sub.heading} className="space-y-2">
-              <h3 className="text-base font-semibold text-foreground">
+              <h3 className="font-display text-lg font-semibold text-foreground sm:text-xl">
                 {sub.heading}
               </h3>
               {sub.paragraphs?.map((p, i) => (
@@ -589,7 +589,7 @@ function SimpleFaqBlock({
 
   return (
     <div className="mt-12 space-y-6 border-t border-border pt-10">
-      <h4 className="text-lg font-semibold text-foreground">FAQs</h4>
+      <h4 className="font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl">FAQs</h4>
       <div className="space-y-6">
         {faqs.map((faq, i) => (
           <div key={i} className="space-y-2">

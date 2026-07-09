@@ -20,7 +20,6 @@ import { defaultLocale, localizedPath } from "@/lib/i18n";
 import { splitHtmlAfterFirstParagraph } from "@/lib/blog-content";
 import { blogPostAbsoluteUrl, resolveCanonicalUrl } from "@/lib/blog-urls";
 import { BlogTableOfContents } from "@/components/BlogTableOfContents";
-import { BlogScrollToTop } from "@/components/BlogScrollToTop";
 
 export const dynamicParams = true;
 
@@ -88,7 +87,6 @@ export default async function BlogPostPage({
 
   return (
     <div className="min-h-screen" id="top">
-      <BlogScrollToTop />
       <div className="container max-w-6xl mx-auto px-4 py-12 sm:py-16 lg:py-20">
         <Link
           href={blogHref}

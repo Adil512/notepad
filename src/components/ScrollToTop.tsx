@@ -5,7 +5,7 @@ import { ArrowUp } from "lucide-react";
 
 const SHOW_AFTER_PX = 400;
 
-export function BlogScrollToTop() {
+export function ScrollToTop() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -23,15 +23,15 @@ export function BlogScrollToTop() {
     <button
       type="button"
       onClick={goTop}
-      aria-label="Back to top"
+      aria-label="Go to top"
       className={[
         "fixed z-50 bottom-6 right-4 sm:bottom-8 sm:right-8",
-        "flex h-12 w-12 items-center justify-center rounded-full",
+        "flex h-11 w-11 items-center justify-center rounded-full sm:h-12 sm:w-12",
         "border border-border/80 bg-background/90 text-foreground shadow-lg backdrop-blur-md",
         "ring-1 ring-black/5 dark:ring-white/10",
         "hover:border-primary/40 hover:bg-primary/10 hover:text-primary",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
-        "transition-all duration-300 ease-out",
+        "transition-all duration-300 ease-out print:hidden",
         visible
           ? "translate-y-0 opacity-100 pointer-events-auto"
           : "translate-y-3 opacity-0 pointer-events-none",
