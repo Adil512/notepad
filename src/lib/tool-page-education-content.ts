@@ -1375,6 +1375,79 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
       },
     ],
   },
+  "import-export": {
+    layout: "simple",
+    richSections: [
+      {
+        heading: "What is Import & Export Notes Online?",
+        paragraphs: [
+          "If you are searching for a tool where you can continue working on your existing document and export it in different formats like .md, .txt, or .html. This is the tool you need.",
+          "Simply import your note file into the editor and start editing immediately. There's no software to install, and your notes open directly in your browser.",
+          "Import and Export [Notes Online](https://notepad.is/) is a free and powerful tool where you can write or upload any text or file and export it in different formats like .md, .txt, or [.html](https://notepad.is/tools/editors/html-editor/).",
+        ],
+      },
+      {
+        heading: "Import & Export Notes Online Tool is Useful For",
+        listItems: [
+          "Open saved notes",
+          "Continue unfinished work",
+          "Edit text files online",
+          "Make quick changes before saving again",
+          "Convert and save in three different formats",
+        ],
+      },
+      {
+        heading: "Why Use Our Import & Export Notes Tool?",
+        subsections: [
+          {
+            heading: "Fast File Import",
+            paragraphs: [
+              "Load existing notes instantly without complicated steps. Just click on Choose file and upload your document or start writing in the text field.",
+            ],
+          },
+          {
+            heading: "One-Click Export",
+            paragraphs: [
+              "Download your notes whenever you're ready in three different formats. The tool will automatically convert to your selected format. No extra effort needed.",
+            ],
+          },
+          {
+            heading: "Works in Your Browser",
+            paragraphs: [
+              "This tool will work in your own browser, and you do not need to install any software.",
+            ],
+          },
+          {
+            heading: "Free to Use",
+            paragraphs: [
+              "100% free to use for unlimited time. You don't have to pay a single penny to use this Import & Export Notes Online tool.",
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What files can I import?",
+        answer:
+          "You can import supported text-based note files, such as TXT, HTML, and Markdown files. This will be converted automatically by our tool as you choose the file format to import.",
+      },
+      {
+        question: "Can I export my notes after editing?",
+        answer:
+          "Yes. Once you've finished editing, you can export and download your updated notes in just a few clicks.",
+      },
+      {
+        question: "Do I need to install software?",
+        answer: "No. Everything works directly in your web browser.",
+      },
+      {
+        question: "Is the Import & Export Notes tool free?",
+        answer:
+          "Yes. You can import, edit, and export notes online for free.",
+      },
+    ],
+  },
 };
 
 const TESTIMONIAL_AUTHORS: { name: string; role: string }[] = [
@@ -1508,5 +1581,80 @@ export function getToolFaqSchema(id: WritingToolId): ToolFaqSchema | null {
         text: faq.answer,
       },
     })),
+  };
+}
+
+const TOOL_WEB_APP_SCHEMAS: Partial<
+  Record<
+    WritingToolId,
+    {
+      name: string;
+      description: string;
+      applicationCategory: string;
+      softwareVersion: string;
+      url: string;
+      downloadUrl: string;
+      ratingValue: string;
+      ratingCount: string;
+      operatingSystem?: string;
+    }
+  >
+> = {
+  "import-export": {
+    name: "Import & Export Notes Online",
+    description:
+      "With Import & Export Notes Online, you can import existing note files and export your content in seconds with this simple online note file manager.",
+    applicationCategory: "EducationApplication",
+    softwareVersion: "1",
+    url: "https://notepad.is/tools/writing/import-export/",
+    downloadUrl: "https://notepad.is/tools/writing/import-export/",
+    ratingValue: "4.8",
+    ratingCount: "12689",
+  },
+  "focus-timer": {
+    name: "Focus Timer Online",
+    description:
+      "Use a free online focus timer with Pomodoro sessions, short breaks, and distraction-free writing to stay productive.",
+    applicationCategory: "ProductivityApplication",
+    operatingSystem: "Windows, macOS, Linux",
+    softwareVersion: "1",
+    url: "https://notepad.is/tools/writing/focus-timer/",
+    downloadUrl: "https://notepad.is/tools/writing/focus-timer/",
+    ratingValue: "4.9",
+    ratingCount: "1235",
+  },
+};
+
+export function getToolWebAppSchema(id: WritingToolId) {
+  const pack = TOOL_WEB_APP_SCHEMAS[id];
+  if (!pack) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: pack.name,
+    description: pack.description,
+    applicationCategory: pack.applicationCategory,
+    ...(pack.operatingSystem
+      ? { operatingSystem: pack.operatingSystem }
+      : {}),
+    softwareVersion: pack.softwareVersion,
+    url: pack.url,
+    downloadUrl: pack.downloadUrl,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: pack.ratingValue,
+      ratingCount: pack.ratingCount,
+      bestRating: "5",
+      worstRating: "1",
+    },
+    author: {
+      "@type": "Organization",
+      name: "Notepad.is",
+    },
   };
 }

@@ -13,6 +13,7 @@ import {
   formatToolNameForHeading,
   getToolFaqSchema,
   getToolPageEducation,
+  getToolWebAppSchema,
 } from "@/lib/tool-page-education-content";
 
 export function WritingToolPageView({
@@ -28,6 +29,7 @@ export function WritingToolPageView({
   const hero = getWritingToolHero(id, locale);
   const education = getToolPageEducation(id);
   const faqSchema = getToolFaqSchema(id);
+  const webAppSchema = getToolWebAppSchema(id);
   const educationToolName = formatToolNameForHeading(hero.h1);
   const relatedToolIds = getRelatedToolIds(id, locale);
 
@@ -66,6 +68,12 @@ export function WritingToolPageView({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      ) : null}
+      {webAppSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
         />
       ) : null}
     </div>
