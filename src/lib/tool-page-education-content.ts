@@ -26,6 +26,8 @@ export type ToolEducationContent = {
   richSections?: ToolRichSection[];
   /** Plain typography layout without icons or decorative cards. */
   layout?: "default" | "simple";
+  /** Compact trust badges shown above education content (simple layout). */
+  trustBadges?: string[];
   faqs: { question: string; answer: string }[];
   testimonials?: { name: string; role: string; quote: string }[];
 };
@@ -303,17 +305,45 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
   },
   "json-editor": {
-    whatIs: [
-      "A JSON editor helps you view and change JSON data with validation, pretty-printing, and minify options so you can spot errors before they reach an API or config file.",
+    layout: "simple",
+    trustBadges: [
+      "Free Forever",
+      "Instant Validation",
+      "Browser Based",
+      "Privacy First",
+      "Works Offline After Loading",
+      "No Registration",
     ],
-    howToUse: [
-      "Paste JSON into the editor.",
-      "Watch the status line for parse errors; fix commas, quotes, or brackets as indicated.",
-      "Use Format to indent, Minify to compress, and Copy to grab the result.",
-    ],
-    whyUse: [
-      "Safer than editing raw JSON in a plain textarea when structure matters.",
-      "Speeds up debugging payloads, env snippets, and API responses.",
+    richSections: [
+      {
+        heading: "What Is JSON Editor Online?",
+        paragraphs: [
+          "A JSON editor helps you view and change JSON data with validation, pretty-printing, and minify options so you can spot errors before they reach an API or config file.",
+        ],
+      },
+      {
+        heading: "How To Use This JSON Editor Online?",
+        listItems: [
+          "Paste JSON into the editor.",
+          "Watch the status line for parse errors; fix commas, quotes, or brackets as indicated.",
+          "Use Format to indent, Minify to compress, and Copy to grab the result.",
+        ],
+      },
+      {
+        heading: "Why To Use This JSON Editor Online?",
+        listItems: [
+          "Free to Use – Edit JSON files online without paying or creating an account.",
+          "Instant Validation – Detect JSON syntax errors as you type.",
+          "Format & Beautify – Convert minified JSON into clean, readable code.",
+          "Minify JSON – Remove unnecessary spaces to reduce file size.",
+          "Fast Performance – Handles JSON data quickly in your browser.",
+          "Privacy First – Your JSON is processed locally and never uploaded.",
+          "Copy & Download – Copy the edited JSON or download it with one click.",
+          "Works on Any Device – Use it on Windows, Mac, Linux, Android, or iPhone.",
+          "No Installation Required – Open the editor and start editing immediately.",
+          "Perfect for Developers – Ideal for debugging APIs, configuration files, and JSON documents.",
+        ],
+      },
     ],
     faqs: [
       {
@@ -344,6 +374,14 @@ const EDU: Partial<Record<WritingToolId, ToolEducationContent>> = {
     ],
   },
   "html-editor": {
+    trustBadges: [
+      "Free to Use",
+      "Live Preview",
+      "Browser Based",
+      "No Registration",
+      "Privacy First",
+      "Works on Any Device",
+    ],
     richSections: [
       {
         heading: "HTML Online Editor",

@@ -1,5 +1,6 @@
 import {
   BookOpen,
+  Check,
   ChevronDown,
   Code2,
   Download,
@@ -49,81 +50,96 @@ export function ToolPageEducation({
   const useRichSections =
     content.richSections && content.richSections.length > 0;
   const isSimple = content.layout === "simple";
+  const trustBadges =
+    content.trustBadges?.length ? (
+      <TrustBadgesBlock
+        badges={content.trustBadges}
+        className="mt-12 mb-0 sm:mt-14"
+      />
+    ) : null;
 
   if (isSimple) {
     return (
-      <section
-        className="mt-12 border-t border-border sm:mt-14"
-        aria-label={`About ${toolName}`}
-      >
-        <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
-          {useRichSections ? (
-            <SimpleRichSections sections={content.richSections!} />
-          ) : (
-            <SimpleDefaultBlock content={content} />
-          )}
-          <SimpleFaqBlock faqs={content.faqs} />
-        </div>
-      </section>
+      <>
+        {trustBadges}
+        <section
+          className={`${trustBadges ? "mt-8" : "mt-12 sm:mt-14"} border-t border-border`}
+          aria-label={`About ${toolName}`}
+        >
+          <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+            {useRichSections ? (
+              <SimpleRichSections sections={content.richSections!} />
+            ) : (
+              <SimpleDefaultBlock content={content} />
+            )}
+            <SimpleFaqBlock faqs={content.faqs} />
+          </div>
+        </section>
+      </>
     );
   }
 
   return (
-    <section
-      className="relative mt-12 overflow-hidden border-t border-border/50 sm:mt-14"
-      aria-label={`About ${toolName}`}
-    >
-      <div
-        className="pointer-events-none absolute inset-0 -z-10"
-        aria-hidden
+    <>
+      {trustBadges}
+      <section
+        className={`relative overflow-hidden border-t border-border/50 ${
+          trustBadges ? "mt-8" : "mt-12 sm:mt-14"
+        }`}
+        aria-label={`About ${toolName}`}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.06] via-muted/30 to-background dark:from-primary/[0.08] dark:via-muted/10 dark:to-background" />
-        <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-primary/10 blur-3xl dark:bg-primary/15" />
-        <div className="absolute -right-24 bottom-32 h-64 w-64 rounded-full bg-violet-500/10 blur-3xl dark:bg-violet-400/10" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgb(228_228_231/0.55)_1px,transparent_1px),linear-gradient(to_bottom,rgb(228_228_231/0.55)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:linear-gradient(to_bottom,black,transparent)] dark:bg-[linear-gradient(to_right,rgb(63_63_70/0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgb(63_63_70/0.45)_1px,transparent_1px)]" />
-      </div>
+        <div
+          className="pointer-events-none absolute inset-0 -z-10"
+          aria-hidden
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.06] via-muted/30 to-background dark:from-primary/[0.08] dark:via-muted/10 dark:to-background" />
+          <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-primary/10 blur-3xl dark:bg-primary/15" />
+          <div className="absolute -right-24 bottom-32 h-64 w-64 rounded-full bg-violet-500/10 blur-3xl dark:bg-violet-400/10" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgb(228_228_231/0.55)_1px,transparent_1px),linear-gradient(to_bottom,rgb(228_228_231/0.55)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:linear-gradient(to_bottom,black,transparent)] dark:bg-[linear-gradient(to_right,rgb(63_63_70/0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgb(63_63_70/0.45)_1px,transparent_1px)]" />
+        </div>
 
-      <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-14 lg:px-8">
-        {useRichSections ? (
-          <RichSectionsBlock sections={content.richSections!} />
-        ) : (
-          <DefaultEducationBlock toolName={toolName} content={content} />
-        )}
+        <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-14 lg:px-8">
+          {useRichSections ? (
+            <RichSectionsBlock sections={content.richSections!} />
+          ) : (
+            <DefaultEducationBlock toolName={toolName} content={content} />
+          )}
 
-        <FaqBlock faqs={content.faqs} />
+          <FaqBlock faqs={content.faqs} />
 
-        {content.testimonials && content.testimonials.length > 0 ? (
-          <article className="relative mt-6 overflow-hidden rounded-2xl border border-border/70 bg-card/70 p-6 shadow-[0_1px_0_0_rgb(0_0_0/0.03),0_12px_32px_-8px_rgb(0_0_0/0.08)] backdrop-blur-md sm:mt-8 sm:p-8">
-            <div className="space-y-5">
-              <h2 className="font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl">
-                User Testimonials
-              </h2>
-              <div className="grid gap-4 md:grid-cols-3">
-                {content.testimonials.map((item, i) => (
-                  <blockquote
-                    key={`${item.name}-${i}`}
-                    className="rounded-xl border border-border/60 bg-background/60 p-4"
-                  >
-                    <p className="text-sm leading-relaxed text-muted-foreground">
-                      &ldquo;{item.quote}&rdquo;
-                    </p>
-                    <footer className="mt-3 text-xs">
-                      <span className="font-semibold text-foreground">
-                        {item.name}
-                      </span>
-                      <span className="text-muted-foreground">
-                        {" "}
-                        - {item.role}
-                      </span>
-                    </footer>
-                  </blockquote>
-                ))}
+          {content.testimonials && content.testimonials.length > 0 ? (
+            <article className="relative mt-6 overflow-hidden rounded-2xl border border-border/70 bg-card/70 p-6 shadow-[0_1px_0_0_rgb(0_0_0/0.03),0_12px_32px_-8px_rgb(0_0_0/0.08)] backdrop-blur-md sm:mt-8 sm:p-8">
+              <div className="space-y-5">
+                <h2 className="font-display text-xl font-bold tracking-tight text-foreground sm:text-2xl">
+                  User Testimonials
+                </h2>
+                <div className="grid gap-4 md:grid-cols-3">
+                  {content.testimonials.map((item, i) => (
+                    <blockquote
+                      key={`${item.name}-${i}`}
+                      className="rounded-xl border border-border/60 bg-background/60 p-4"
+                    >
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        &ldquo;{item.quote}&rdquo;
+                      </p>
+                      <footer className="mt-3 text-xs">
+                        <span className="font-semibold text-foreground">
+                          {item.name}
+                        </span>
+                        <span className="text-muted-foreground">
+                          {" "}
+                          - {item.role}
+                        </span>
+                      </footer>
+                    </blockquote>
+                  ))}
+                </div>
               </div>
-            </div>
-          </article>
-        ) : null}
-      </div>
-    </section>
+            </article>
+          ) : null}
+        </div>
+      </section>
+    </>
   );
 }
 
@@ -496,6 +512,38 @@ function FaqBlock({
         </div>
       </div>
     </article>
+  );
+}
+
+function TrustBadgesBlock({
+  badges,
+  className = "mb-12",
+}: {
+  badges: string[];
+  className?: string;
+}) {
+  return (
+    <ul
+      className={[
+        "grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3",
+        className,
+      ].join(" ")}
+    >
+      {badges.map((label) => (
+        <li
+          key={label}
+          className="flex items-center gap-2.5 rounded-xl border border-border/60 bg-background/90 px-3.5 py-2.5 text-sm font-medium text-foreground shadow-sm dark:bg-card/70"
+        >
+          <span
+            className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-600/12 text-emerald-700 dark:bg-emerald-400/15 dark:text-emerald-400"
+            aria-hidden
+          >
+            <Check className="h-3 w-3" strokeWidth={3} />
+          </span>
+          {label}
+        </li>
+      ))}
+    </ul>
   );
 }
 
