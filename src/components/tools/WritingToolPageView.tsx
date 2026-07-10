@@ -27,9 +27,9 @@ export function WritingToolPageView({
 }) {
   const m = writingToolsMeta[id];
   const hero = getWritingToolHero(id, locale);
-  const education = getToolPageEducation(id);
-  const faqSchema = getToolFaqSchema(id);
-  const webAppSchema = getToolWebAppSchema(id);
+  const education = getToolPageEducation(id, locale);
+  const faqSchema = getToolFaqSchema(id, locale);
+  const webAppSchema = getToolWebAppSchema(id, locale);
   const educationToolName = formatToolNameForHeading(hero.h1);
   const relatedToolIds = getRelatedToolIds(id, locale);
 

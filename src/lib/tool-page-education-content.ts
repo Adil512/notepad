@@ -1,5 +1,12 @@
 import type { WritingToolId } from "@/lib/writing-tools-registry";
 import { writingToolsMeta } from "@/lib/writing-tools-registry";
+import { getFocusTimerEducation } from "@/lib/education/focus-timer-education";
+import { getGoalTrackerEducation } from "@/lib/education/goal-tracker-education";
+import { getSpeechDictationEducation } from "@/lib/education/speech-dictation-education";
+import { getTemplatesEducation } from "@/lib/education/templates-education";
+import { getReadingModeEducation } from "@/lib/education/reading-mode-education";
+import { getPrintNoteEducation } from "@/lib/education/print-note-education";
+import { getImportExportEducation } from "@/lib/education/import-export-education";
 
 export type ToolRichSubsection = {
   heading: string;
@@ -1554,8 +1561,38 @@ function buildToolTestimonials(
 }
 
 export function getToolPageEducation(
-  id: WritingToolId
+  id: WritingToolId,
+  locale: string = "en"
 ): ToolEducationContent | null {
+  if (id === "focus-timer") {
+    const localized = getFocusTimerEducation(locale);
+    if (localized) return localized;
+  }
+  if (id === "goal-tracker") {
+    const localized = getGoalTrackerEducation(locale);
+    if (localized) return localized;
+  }
+  if (id === "speech-dictation") {
+    const localized = getSpeechDictationEducation(locale);
+    if (localized) return localized;
+  }
+  if (id === "templates") {
+    const localized = getTemplatesEducation(locale);
+    if (localized) return localized;
+  }
+  if (id === "reading-mode") {
+    const localized = getReadingModeEducation(locale);
+    if (localized) return localized;
+  }
+  if (id === "print-note") {
+    const localized = getPrintNoteEducation(locale);
+    if (localized) return localized;
+  }
+  if (id === "import-export") {
+    const localized = getImportExportEducation(locale);
+    if (localized) return localized;
+  }
+
   const existing = EDU[id];
   if (existing) return existing;
 
@@ -1605,8 +1642,11 @@ export const TOOL_PAGE_EDUCATION_IDS = new Set(
   Object.keys(EDU) as WritingToolId[]
 );
 
-export function getToolFaqSchema(id: WritingToolId): ToolFaqSchema | null {
-  const content = getToolPageEducation(id);
+export function getToolFaqSchema(
+  id: WritingToolId,
+  locale: string = "en"
+): ToolFaqSchema | null {
+  const content = getToolPageEducation(id, locale);
   if (!content || content.faqs.length === 0) return null;
   return {
     "@context": "https://schema.org",
@@ -1663,21 +1703,61 @@ const TOOL_WEB_APP_SCHEMAS: Partial<
   },
 };
 
-export function getToolWebAppSchema(id: WritingToolId) {
+const FOCUS_TIMER_WEB_APP_BY_LOCALE: Partial<
+  Record<string, Pick<(typeof TOOL_WEB_APP_SCHEMAS)["focus-timer"], "name" | "description" | "url" | "downloadUrl">>
+> = {
+  af: {
+    name: "Fokus-tydhouer Aanlyn",
+    description:
+      "Gebruik ’n gratis aanlyn fokus-tydhouer met Pomodoro-sessies, kort pouses en afleidingsvrye skryf om produktief te bly.",
+    url: "https://notepad.is/af/tools/writing/focus-timer/",
+    downloadUrl: "https://notepad.is/af/tools/writing/focus-timer/",
+  },
+};
+
+const IMPORT_EXPORT_WEB_APP_BY_LOCALE: Partial<
+  Record<
+    string,
+    Pick<
+      (typeof TOOL_WEB_APP_SCHEMAS)["import-export"],
+      "name" | "description" | "url" | "downloadUrl"
+    >
+  >
+> = {
+  af: {
+    name: "Invoer & Uitvoer Notas Aanlyn",
+    description:
+      "Met Invoer & Uitvoer Notas Aanlyn kan jy bestaande notalêers invoer en jou inhoud binne sekondes uitvoer met hierdie eenvoudige aanlyn notalêerbestuurder.",
+    url: "https://notepad.is/af/tools/writing/import-export/",
+    downloadUrl: "https://notepad.is/af/tools/writing/import-export/",
+  },
+};
+
+export function getToolWebAppSchema(id: WritingToolId, locale: string = "en") {
   const pack = TOOL_WEB_APP_SCHEMAS[id];
   if (!pack) return null;
+  const localized =
+    id === "focus-timer"
+      ? FOCUS_TIMER_WEB_APP_BY_LOCALE[locale]
+      : id === "import-export"
+        ? IMPORT_EXPORT_WEB_APP_BY_LOCALE[locale]
+        : undefined;
+  const name = localized?.name ?? pack.name;
+  const description = localized?.description ?? pack.description;
+  const url = localized?.url ?? pack.url;
+  const downloadUrl = localized?.downloadUrl ?? pack.downloadUrl;
   return {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: pack.name,
-    description: pack.description,
+    name,
+    description,
     applicationCategory: pack.applicationCategory,
     ...(pack.operatingSystem
       ? { operatingSystem: pack.operatingSystem }
       : {}),
     softwareVersion: pack.softwareVersion,
-    url: pack.url,
-    downloadUrl: pack.downloadUrl,
+    url,
+    downloadUrl,
     offers: {
       "@type": "Offer",
       price: "0",

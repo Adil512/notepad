@@ -75,9 +75,67 @@ const generatedByTool: Record<(typeof PRODUCTIVITY_TOOL_IDS)[number], Record<str
     ])
   ) as Record<(typeof PRODUCTIVITY_TOOL_IDS)[number], Record<string, SeoPack>>;
 
+/** Proper locale packs where string-replacement from JSON formatter SEO fails (e.g. Afrikaans). */
+const productivitySeoOverrides: Partial<
+  Record<(typeof PRODUCTIVITY_TOOL_IDS)[number], Partial<Record<string, SeoPack>>>
+> = {
+  "focus-timer": {
+    af: {
+      title: "Fokus-tydhouer Aanlyn – Pomodoro-tydhouer & Zen-skryfgereedskap",
+      description:
+        "Gebruik ’n gratis aanlyn fokus-tydhouer met Pomodoro-sessies, kort pouses en afleidingsvrye skryf om produktief te bly.",
+    },
+  },
+  "goal-tracker": {
+    af: {
+      title: "Skryfdoelwitte-naspoorder – Stel Teikens & Volg Vordering Aanlyn",
+      description:
+        "Stel skryfdoelwitte, volg mylpale en monitor vordering met hierdie gratis aanlyn skryfdoelwitte-naspoorder.",
+    },
+  },
+  "speech-dictation": {
+    af: {
+      title: "Spraak-na-Teks Aanlyn – Gratis Stemdiktaat-kladblok",
+      description:
+        "Skakel stem onmiddellik om na teks met hierdie gratis spraakdiktaat-hulpmiddel. Vinnig, akkuraat en ideaal vir handvrye skryf.",
+    },
+  },
+  templates: {
+    af: {
+      title: "Skryftemplates Aanlyn – Gereed-vir-Gebruik Nota-templates",
+      description:
+        "Gebruik gereedgemaakte skryftemplates vir vergaderings, joernale, uiteensettings en kontrolelyste om vinniger te skryf en georganiseerd te bly.",
+    },
+  },
+  "reading-mode": {
+    af: {
+      title: "Leesmodus Aanlyn – Skoon, Afleidingsvrye Teksweergawe",
+      description:
+        "Lees teks in ’n skoon, gefokusde uitleg met minder afleidings vir beter leesbaarheid en konsentrasie.",
+    },
+  },
+  "print-note": {
+    af: {
+      title: "Druk Notas Aanlyn – Drukvriendelike Nota-uitleghulpmiddel",
+      description:
+        "Berei notas voor om te druk met ’n skoon drukuitleg en vinnige formateringskontroles vir papiergereed uitset.",
+    },
+  },
+  "import-export": {
+    af: {
+      title: "Invoer & Uitvoer Notas Aanlyn – Bestuur Notalêers Maklik",
+      description:
+        "Voer bestaande notalêers in en voer jou inhoud binne sekondes uit met hierdie eenvoudige aanlyn notalêerbestuurder.",
+    },
+  },
+};
+
 export function getProductivityToolSeo(id: WritingToolId, locale: string): SeoPack | null {
   if (!PRODUCTIVITY_TOOL_IDS.includes(id as (typeof PRODUCTIVITY_TOOL_IDS)[number])) return null;
-  const toolMap = generatedByTool[id as (typeof PRODUCTIVITY_TOOL_IDS)[number]];
+  const toolId = id as (typeof PRODUCTIVITY_TOOL_IDS)[number];
+  const override = productivitySeoOverrides[toolId]?.[locale];
+  if (override) return override;
+  const toolMap = generatedByTool[toolId];
   return toolMap[locale] ?? { title: writingToolsMeta[id].title, description: writingToolsMeta[id].description };
 }
 
