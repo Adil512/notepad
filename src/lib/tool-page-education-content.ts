@@ -1662,22 +1662,24 @@ export function getToolFaqSchema(
   };
 }
 
-const TOOL_WEB_APP_SCHEMAS: Partial<
-  Record<
-    WritingToolId,
-    {
-      name: string;
-      description: string;
-      applicationCategory: string;
-      softwareVersion: string;
-      url: string;
-      downloadUrl: string;
-      ratingValue: string;
-      ratingCount: string;
-      operatingSystem?: string;
-    }
-  >
-> = {
+type ToolWebAppPack = {
+  name: string;
+  description: string;
+  applicationCategory: string;
+  softwareVersion: string;
+  url: string;
+  downloadUrl: string;
+  ratingValue: string;
+  ratingCount: string;
+  operatingSystem?: string;
+};
+
+type ToolWebAppLocaleOverride = Pick<
+  ToolWebAppPack,
+  "name" | "description" | "url" | "downloadUrl"
+>;
+
+const TOOL_WEB_APP_SCHEMAS: Partial<Record<WritingToolId, ToolWebAppPack>> = {
   "import-export": {
     name: "Import & Export Notes Online",
     description:
@@ -1704,7 +1706,7 @@ const TOOL_WEB_APP_SCHEMAS: Partial<
 };
 
 const FOCUS_TIMER_WEB_APP_BY_LOCALE: Partial<
-  Record<string, Pick<(typeof TOOL_WEB_APP_SCHEMAS)["focus-timer"], "name" | "description" | "url" | "downloadUrl">>
+  Record<string, ToolWebAppLocaleOverride>
 > = {
   af: {
     name: "Fokus-tydhouer Aanlyn",
@@ -1716,13 +1718,7 @@ const FOCUS_TIMER_WEB_APP_BY_LOCALE: Partial<
 };
 
 const IMPORT_EXPORT_WEB_APP_BY_LOCALE: Partial<
-  Record<
-    string,
-    Pick<
-      (typeof TOOL_WEB_APP_SCHEMAS)["import-export"],
-      "name" | "description" | "url" | "downloadUrl"
-    >
-  >
+  Record<string, ToolWebAppLocaleOverride>
 > = {
   af: {
     name: "Invoer & Uitvoer Notas Aanlyn",
