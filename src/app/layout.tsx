@@ -49,6 +49,13 @@ export default async function RootLayout({
     <html lang={lang} suppressHydrationWarning>
       <head>
         <GoogleAdSense />
+        <script
+          type="text/javascript"
+          async
+          data-noptimize="1"
+          data-cfasync="false"
+          src="//scripts.scriptwrapper.com/tags/e06862ab-368c-421d-8d71-0bbd2614623b.js"
+        />
       </head>
       <body
         className={`${inter.variable} ${outfit.variable} antialiased selection:bg-primary/30`}
