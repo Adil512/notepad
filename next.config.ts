@@ -11,6 +11,15 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: projectRoot,
   },
+  async redirects() {
+    return [
+      {
+        source: "/ads.txt",
+        destination: "https://adstxt.journeymv.com/sites/e06862ab-368c-421d-8d71-0bbd2614623b/ads.txt",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
