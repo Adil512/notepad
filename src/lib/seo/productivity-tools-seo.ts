@@ -85,12 +85,22 @@ const productivitySeoOverrides: Partial<
       description:
         "Gebruik ’n gratis aanlyn fokus-tydhouer met Pomodoro-sessies, kort pouses en afleidingsvrye skryf om produktief te bly.",
     },
+    sq: {
+      title: "Kohëmatës Fokusi Online – Kohëmatës Pomodoro & Mjet Shkrimi Zen",
+      description:
+        "Përdorni një kohëmatës fokusi falas online me seanca Pomodoro, pushime të shkurtra dhe shkrim pa shpërqendrime për të qëndruar produktiv.",
+    },
   },
   "goal-tracker": {
     af: {
       title: "Skryfdoelwitte-naspoorder – Stel Teikens & Volg Vordering Aanlyn",
       description:
         "Stel skryfdoelwitte, volg mylpale en monitor vordering met hierdie gratis aanlyn skryfdoelwitte-naspoorder.",
+    },
+    sq: {
+      title: "Ndjekës i Objektivave të Shkrimit – Vendosni Synime & Ndiqni Progresin Online",
+      description:
+        "Vendosni objektiva shkrimi, ndiqni arritjet dhe monitoroni progresin me këtë ndjekës falas të objektivave të shkrimit online.",
     },
   },
   "speech-dictation": {
@@ -99,12 +109,22 @@ const productivitySeoOverrides: Partial<
       description:
         "Skakel stem onmiddellik om na teks met hierdie gratis spraakdiktaat-hulpmiddel. Vinnig, akkuraat en ideaal vir handvrye skryf.",
     },
+    sq: {
+      title: "Zë në Tekst Online – Bllok Shënimesh Falas për Diktim me Zë",
+      description:
+        "Konvertoni zërin në tekst menjëherë me këtë mjet falas të diktimit të zërit. I shpejtë, i saktë dhe i shkëlqyer për shkrim pa duar.",
+    },
   },
   templates: {
     af: {
       title: "Skryftemplates Aanlyn – Gereed-vir-Gebruik Nota-templates",
       description:
         "Gebruik gereedgemaakte skryftemplates vir vergaderings, joernale, uiteensettings en kontrolelyste om vinniger te skryf en georganiseerd te bly.",
+    },
+    sq: {
+      title: "Shabllone Shkrimi Online – Shabllone Shënimesh Gati për Përdorim",
+      description:
+        "Përdorni shabllone shkrimi të gatshme për takime, ditarë, skica dhe lista kontrolli për të shkruar më shpejt dhe për të qëndruar të organizuar.",
     },
   },
   "reading-mode": {

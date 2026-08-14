@@ -24,6 +24,26 @@ export const goalTrackerEducationByLocale: Partial<
     ],
     faqs: [],
   },
+  sq: {
+    layout: "simple",
+    richSections: [
+      {
+        heading: "Ndjekës i Objektivave të Shkrimit",
+        paragraphs: [
+          "Me Ndjekësin tonë Falas të Objektivave të Shkrimit, mund të vendosni një objektiv ditor ose mujor të [numrit të fjalëve](https://notepad.is/sq/tools/text/word-counter/) dhe të ndiqni progresin tuaj të shkrimit me numra realë. Regjistroni çdo seancë shkrimi për të parë se sa keni shkruar, sa ka mbetur dhe të qëndroni të motivuar për të arritur synimin tuaj.",
+          "Me këtë mjet, ju mund të ndiqni fjalët dhe karakteret në të njëjtën faqe. Vendosni objektivin tuaj të shkrimit një herë dhe filloni të [shkruani](https://notepad.is/sq/tools/writing/) dhe të ndiqni.",
+        ],
+      },
+      {
+        heading: "Si Funksionon Ndjekësi i Objektivave të Shkrimit",
+        paragraphs: [
+          "Ndjekësi i objektivave të shkrimit është shumë i thjeshtë dhe i lehtë për t'u përdorur, por i fuqishëm për ndjekjen e synimeve tuaja të shkrimit. Gjithçka që duhet të bëni është të vendosni synimin tuaj të shkrimit. Përditësoni fushën e numrit të dhënë në faqe.",
+          "Mund ta vendosni atë në fjalë ose karaktere dhe të filloni të shkruani. Kjo është e gjitha.",
+        ],
+      },
+    ],
+    faqs: [],
+  },
 };
 
 export function getGoalTrackerEducation(

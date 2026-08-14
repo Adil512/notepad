@@ -56,6 +56,58 @@ export const focusTimerEducationByLocale: Partial<
       },
     ],
   },
+  sq: {
+    layout: "simple",
+    richSections: [
+      {
+        heading: "Kohëmatës Fokusi Online",
+        paragraphs: [
+          "Një kohëmatës fokusi online ju ndihmon të punoni në shfletuesin tuaj me një kohëmatës. Nuk keni nevojë të regjistroheni ose të instaloni ndonjë aplikacion. Gjithçka që duhet të bëni është të vendosni kohën dhe të filloni të [shkruani](https://notepad.is/sq/tools/writing/) në zonën e shkrimit më poshtë atë që dëshironi të shkruani.",
+          "Ju gjithashtu mund të vendosni një kohë pushimi këtu. Kur koha të mbarojë ose të arrini kohën e pushimit që keni vendosur më parë, do të merrni një njoftim. Mund ta vendosni vetë kohën e fokusit dhe kohën e pushimit.",
+        ],
+      },
+      {
+        heading: "Si e Përmirëson Produktivitetin Tuaj një Kohëmatës Fokusi?",
+        paragraphs: [
+          "Arsyeja kryesore pas krijimit të këtij mjeti, Kohëmatësi i Fokusit, është se truri ynë njerëzor punon më së miri në periudha të shkurtra dhe të fokusuara. Puna për orë të tëra pa ndërprerje mund të zvogëlojë produktivitetin dhe të rrisë shanset për gabime.",
+          "Mënyra më e mirë është ndarja e kohës dhe rritja e produktivitetit. Kjo metodë njihet gjithashtu si Teknika Pomodoro, në të cilën ne trajnojmë trurin tonë për të bërë më shumë në një periudhë të kufizuar kohe.",
+        ],
+      },
+      {
+        heading: "Kur duhet të përdoret një kohëmatës fokusi online?",
+        paragraphs: [
+          "Ju mund të përdorni një kohëmatës fokusi online gjatë gjithë kohës që punoni. Por mund të jetë më mirë ta përdorni kur keni më pak kohë për të përfunduar një detyrë të caktuar. Ky mjet mund t'ju ndihmojë të qëndroni të fokusuar dhe ta përfundoni detyrën në kohë.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Cili është kohëmatësi më i mirë falas i fokusit online?",
+        answer:
+          "Kohëmatësi më i mirë falas i fokusit online është ai që punon në shfletuesin tuaj pa pasur nevojë për regjistrim ose shkarkim. Mund të përdorni [Notepad](https://notepad.is/sq/). Është një kohëmatës fokusi falas pa kërkesa regjistrimi. Mund ta përdorni direkt në shfletuesin tuaj.",
+      },
+      {
+        question: "A punon kohëmatësi i fokusit online nëse ndryshoj skedat?",
+        answer:
+          "Po. Kohëmatësi vazhdon të punojë në sfond edhe kur kaloni në një skedë ose aplikacion tjetër. Do të merrni përsëri njoftimin kur të përfundojë seanca juaj.",
+      },
+      {
+        question: "Sa e gjatë duhet të jetë një seancë fokusi?",
+        answer:
+          "Shumica e njerëzve punojnë më mirë në seanca 25-minutëshe me pushime 5-minutëshe, gjë që ndjek Teknikën Pomodoro. Nëse merreni me punë të thellë si kodimi ose shkrimi, provoni seanca 50-minutëshe me pushime 10-minutëshe. Testoni të dyja dhe qëndroni me gjatësinë që e mban vëmendjen tuaj të fortë pa u ndier të lodhur.",
+      },
+      {
+        question: "A mund të përdor një kohëmatës fokusi online për të studiuar?",
+        answer:
+          "Po. Kohëmatësi i fokusit është një nga mjetet më efektive të studimit, sepse i ndan orët e gjata të leximit ose përsëritjes në blloqe të shkurtra dhe të menaxhueshme. Vendosni 25 minuta për një temë, bëni një pushim të shkurtër, pastaj kaloni te tjetra.",
+      },
+      {
+        question: "A është një kohëmatës fokusi online më i mirë se një kohëmatës telefoni?",
+        answer:
+          "Një kohëmatës fokusi online e mban telefonin tuaj larg mundësive për t'u prekur, gjë që largon shpërqendrimin tuaj më të madh. Kohëmatësit e telefonit ju detyrojnë të merrni pajisjen tuaj dhe një shikim i shpejtë i një njoftimi mund t'ju kushtojë 20 minuta fokus.",
+      },
+    ],
+  },
 };
 
 export function getFocusTimerEducation(

@@ -43,6 +43,45 @@ export const templatesEducationByLocale: Partial<
     ],
     faqs: [],
   },
+  sq: {
+    layout: "simple",
+    richSections: [
+      {
+        heading: "Shabllone Shkrimi Online",
+        paragraphs: [
+          "Filloni të shkruani për çdo temë me një strukturë të gatshme pa menduar se ku të filloni. Kurseni kohën tuaj dhe përdorni një shabllon për të filluar. Mund ta anashkaloni strukturën fillestare qoftë nëse po shkruani një postim në blog, një ese, një letër apo një skicë historie. Ne kemi shabllone falas të gatshme për të gjitha.",
+          "Mund ta përdorni atë direkt në shfletuesin tuaj duke përdorur faqen tonë të internetit, ose mund ta kopjoni shabllonin dhe ta përdorni lokalisht në kompjuterin tuaj, laptopin apo çdo pajisje tjetër që përdorni për të shkruar.",
+          "E mira është se nuk keni nevojë të instaloni asnjë softuer apo aplikacion të palëve të treta; nuk ka nevojë të [regjistroheni](https://notepad.is/sq/login). Mund të filloni direkt të shkruani.",
+        ],
+      },
+      {
+        heading: "Shabllone Falas për Çdo Lloj Shkrimi",
+        paragraphs: [
+          "Një mjet mbulon të gjitha nevojat tuaja të shkrimit. Shabllonet e postimeve në blog me seksionet e hyrjes, trupit dhe përfundimit i mbajnë artikujt tuaj të organizuar.",
+          "Dhe shumë shabllone të tjera për ta bërë shkrimin tuaj më të lehtë dhe të shpejtë.",
+        ],
+        listItems: [
+          "Shënimet e takimit me agjendën, shënimet dhe pikat e veprimit.",
+          "Ditari ditor me 'Mirënjohës për', 'Fokusi sot' dhe 'Mendime'",
+          "Lista e kontrollit me listën e detyrave",
+        ],
+      },
+      {
+        heading: "Pse Shabllonet Ju Bëjnë një Shkrimtar më të Shpejtë",
+        paragraphs: [
+          "Strukturimi i çdo përmbajtjeje është një pjesë kritike dhe në të njëjtën kohë e vështirë. Mendoni për këtë: çfarë nëse merrni një strukturë të gatshme për çdo temë për të cilën duhet të shkruani? Dhe mund të anashkaloni pjesën më të madhe të punës, e cila tashmë është bërë për ju. Kështu mund të filloni direkt të shkruani. Mund ta përqendroni gjithë fokusin dhe trurin tuaj vetëm në një gjë, që është shkrimi. Jo vetëm që mund të shkruani më shpejt, por kjo gjithashtu mund të përmirësojë fokusin dhe produktivitetin tuaj të përgjithshëm.",
+        ],
+      },
+      {
+        heading: "Si të Përdorni një Shabllon Shkrimi",
+        paragraphs: [
+          "Mjetet tona [profesionale të shkrimit](https://notepad.is/sq/) janë të lehta për t'u përdorur. Ja se si mund ta përdorni këtë shabllon shkrimi në mënyrën më të lehtë të mundshme.",
+          "Në këtë faqe ne kemi një listë të [shablloneve të shkrimit](https://notepad.is/sq/tools/writing/templates/) gati për t'u kopjuar dhe ngjitur kudo që dëshironi të shkruani dhe të ndiqni strukturën.",
+        ],
+      },
+    ],
+    faqs: [],
+  },
 };
 
 export function getTemplatesEducation(
