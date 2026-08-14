@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { localizedPath } from "@/lib/i18n";
+import { getHomeBlogTranslation } from "@/lib/home-seo-content";
+import { BLOG_TRANSLATIONS } from "@/lib/blog-i18n";
 
 export type HomeBlogPost = {
   slug: string;
@@ -20,6 +22,17 @@ export function HomeBlogSection({
   if (posts.length === 0) return null;
 
   const blogPath = localizedPath(locale, "/blog");
+  const t = getHomeBlogTranslation(locale);
+  const postsTranslations = BLOG_TRANSLATIONS[locale]?.posts || BLOG_TRANSLATIONS.en.posts;
+
+  const localizedPosts = posts.map((post) => {
+    const translation = postsTranslations[post.slug];
+    return {
+      ...post,
+      title: translation?.title || post.title,
+      excerpt: translation?.excerpt || post.excerpt,
+    };
+  });
 
   return (
     <section className="relative max-w-6xl mx-auto" aria-labelledby="home-blog-heading">
@@ -30,12 +43,12 @@ export function HomeBlogSection({
           id="home-blog-heading"
           className="text-3xl md:text-4xl font-bold tracking-tight text-foreground font-display"
         >
-          Our blog
+          {t.sectionTitle}
         </h2>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        {posts.map((post) => (
+        {localizedPosts.map((post) => (
           <article
             key={post.slug}
             className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg"
@@ -87,7 +100,7 @@ export function HomeBlogSection({
                 href={localizedPath(locale, `/blog/${post.slug}`)}
                 className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-transform group-hover:translate-x-0.5"
               >
-                Read article
+                {t.readArticle}
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
             </div>
@@ -100,7 +113,7 @@ export function HomeBlogSection({
           href={blogPath}
           className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground shadow-sm transition-all hover:border-primary/40 hover:bg-primary/5 hover:text-primary"
         >
-          View all articles
+          {t.viewAll}
           <ArrowRight className="h-4 w-4" aria-hidden />
         </Link>
       </div>

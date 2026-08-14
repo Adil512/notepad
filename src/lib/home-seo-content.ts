@@ -6116,9 +6116,1510 @@ const howToEn: HomeHowToCopy = {
 };
 
 const howToByLocale: Record<string, HomeHowToCopy> = {
-  en: howToEn,
+  "en": {
+      "title": "How to Use This Notepad.is?",
+      "steps": [
+          "Browse notepad.is, and on the homepage, you can see the notepad editor.",
+          "Start typing what you want to type.",
+          "Use the upload docs option if you want to edit an existing text.",
+          "Our Notepad Online also allows you to share the note with anyone. You have to log in to share the notes.",
+          "Use our featured rich editor to format your text. You can add images, use headings, speech to text, and many more features."
+      ]
+  },
+  "zh": {
+      "title": "如何使用 Notepad.is？",
+      "steps": [
+          "访问 notepad.is，在首页上您可以看到记事本编辑器。",
+          "开始输入您想要写的内容。",
+          "如果您想编辑现有的文本，请使用上传文档选项。",
+          "我们的在线记事本还允许您与任何人分享笔记。您需要登录后才能分享笔记。",
+          "使用我们功能丰富的富文本编辑器来排版您的文本。您可以添加图片、使用标题、语音转文字以及更多功能。"
+      ]
+  },
+  "es": {
+      "title": "¿Cómo usar Notepad.is?",
+      "steps": [
+          "Visita notepad.is y en la página de inicio podrás ver el editor de notas.",
+          "Comienza a escribir lo que desees.",
+          "Utiliza la opción de subir documentos si deseas editar un texto existente.",
+          "Nuestro bloc de notas en línea también te permite compartir la nota con cualquiera. Debes iniciar sesión para compartir las notas.",
+          "Utiliza nuestro editor de texto enriquecido para dar formato a tu texto. Puedes añadir imágenes, usar encabezados, dictado por voz y muchas funciones más."
+      ]
+  },
+  "ar": {
+      "title": "كيف تستخدم Notepad.is؟",
+      "steps": [
+          "تصفح notepad.is، وستجد محرر المفكرة في الصفحة الرئيسية.",
+          "ابدأ في كتابة ما تريد كتابته.",
+          "استخدم خيار تحميل المستندات إذا كنت تريد تعديل نص موجود بالفعل.",
+          "تتيح لك مفكرتنا عبر الإنترنت أيضًا مشاركة الملاحظة مع أي شخص. يجب عليك تسجيل الدخول لمشاركة الملاحظات.",
+          "استخدم محررنا الغني بالميزات لتنسيق نصوصك. يمكنك إضافة صور، استخدام العناوين، تحويل الكلام إلى نص، والعديد من الميزات الأخرى."
+      ]
+  },
+  "id": {
+      "title": "Bagaimana Cara Menggunakan Notepad.is Ini?",
+      "steps": [
+          "Buka notepad.is, dan di halaman utama, Anda dapat melihat editor notepad.",
+          "Mulailah mengetik apa yang ingin Anda ketik.",
+          "Gunakan opsi unggah dokumen jika Anda ingin mengedit teks yang sudah ada.",
+          "Notepad Online kami juga memungkinkan Anda untuk membagikan catatan kepada siapa saja. Anda harus masuk (log in) untuk membagikan catatan.",
+          "Gunakan editor kaya fitur kami untuk memformat teks Anda. Anda dapat menambahkan gambar, menggunakan header, mengubah suara menjadi teks, dan banyak fitur lainnya."
+      ]
+  },
+  "pt": {
+      "title": "Como usar este Notepad.is?",
+      "steps": [
+          "Visite notepad.is e, na página inicial, você poderá ver o editor de notas.",
+          "Comece a digitar o que você deseja escrever.",
+          "Use a opção de upload de documentos se quiser editar um texto existente.",
+          "Nosso Bloco de Notas Online também permite que você compartilhe a nota com qualquer pessoa. Você precisa fazer login para compartilhar as notas.",
+          "Use nosso editor de texto rico para formatar seu texto. Você pode adicionar imagens, usar cabeçalhos, conversão de voz em texto e muitos outros recursos."
+      ]
+  },
+  "fr": {
+      "title": "Comment utiliser Notepad.is ?",
+      "steps": [
+          "Visitez notepad.is, et sur la page d'accueil, vous verrez l'éditeur de bloc-notes.",
+          "Commencez à taper ce que vous souhaitez écrire.",
+          "Utilisez l'option d'importation de documents si vous souhaitez modifier un texte existant.",
+          "Notre bloc-notes en ligne vous permet également de partager vos notes avec n'importe qui. Vous devez vous connecter pour partager vos notes.",
+          "Utilisez notre éditeur de texte enrichi pour mettre en forme votre texte. Vous pouvez ajouter des images, utiliser des titres, utiliser la dictée vocale et bien d'autres fonctionnalités."
+      ]
+  },
+  "ja": {
+      "title": "Notepad.is の使い方は？",
+      "steps": [
+          "notepad.is にアクセスすると、ホームページにメモ帳エディタが表示されます。",
+          "入力したい内容を書き始めます。",
+          "既存のテキストを編集したい場合は、ドキュメントのアップロードオプションを使用します。",
+          "オンラインメモ帳では、メモを誰とでも共有することができます。メモを共有するにはログインが必要です。",
+          "多機能なリッチエディタを使用して、テキストをフォーマットします。画像の追加、見出しの使用、音声入力など、多数の機能を利用できます。"
+      ]
+  },
+  "ru": {
+      "title": "Как пользоваться Notepad.is?",
+      "steps": [
+          "Перейдите на сайт notepad.is, и на главной странице вы увидите редактор блокнота.",
+          "Начните вводить то, что вы хотите написать.",
+          "Используйте функцию загрузки документов, если хотите отредактировать существующий текст.",
+          "Наш онлайн-блокнот также позволяет делиться заметками с кем угодно. Чтобы поделиться заметками, необходимо войти в систему.",
+          "Используйте наш многофункциональный редактор для форматирования текста. Вы можете добавлять изображения, использовать заголовки, преобразовывать речь в текст и использовать множество других функций."
+      ]
+  },
+  "de": {
+      "title": "Wie benutzt man Notepad.is?",
+      "steps": [
+          "Besuchen Sie notepad.is. Auf der Startseite sehen Sie den Notepad-Editor.",
+          "Beginnen Sie zu tippen, was Sie schreiben möchten.",
+          "Nutzen Sie die Option zum Hochladen von Dokumenten, wenn Sie einen bestehenden Text bearbeiten möchten.",
+          "Unser Online-Notizblock ermöglicht es Ihnen auch, die Notiz mit anderen zu teilen. Sie müssen sich anmelden, um Notizen zu teilen.",
+          "Verwenden Sie unseren funktionsreichen Editor, um Ihren Text zu formatieren. Sie können Bilder hinzufügen, Überschriften verwenden, Sprache-zu-Text nutzen und viele weitere Funktionen entdecken."
+      ]
+  },
+  "hi": {
+      "title": "Notepad.is का उपयोग कैसे करें?",
+      "steps": [
+          "notepad.is पर जाएं, और होमपेज पर आप नोटपैڈ एडिटर देख सकते हैं।",
+          "जो आप लिखना चाहते हैं उसे टाइप करना शुरू करें।",
+          "यदि आप किसी मौजूदा टेक्स्ट को संपादित करना चाहते हैं तो दस्तावेज़ अपलोड विकल्प का उपयोग करें।",
+          "हमारा नोटपैड ऑनलाइन आपको किसी के भी साथ नोट साझा करने की अनुमति भी देता है। नोट्स साझा करने के लिए आपको लॉग इन करना होगा।",
+          "अपने टेक्स्ट को फॉर्मेट करने के लिए हमारे फीचर-रिच एडिटर का उपयोग करें। आप इमेज जोड़ सकते हैं, हेडिंग का उपयोग कर सकते हैं, स्पीच टू टेक्स्ट और कई अन्य फीचर्स का लाभ उठा सकते हैं।"
+      ]
+  },
+  "bn": {
+      "title": "Notepad.is কীভাবে ব্যবহার করবেন?",
+      "steps": [
+          "notepad.is ভিজিট করুন, এবং হোমপেজে আপনি নোটপ্যাড এডিটরটি দেখতে পাবেন।",
+          "আপনি যা লিখতে চান তা টাইপ করা শুরু করুন।",
+          "আপনি যদি কোনো বিদ্যমান টেক্সট এডিট করতে চান তবে ডকুমেন্ট আপলোড অপশনটি ব্যবহার করুন।",
+          "আমাদের অনলাইন নোটপ্যাড আপনাকে যে কারো সাথে নোট শেয়ার করার সুযোগ দেয়। নোট শেয়ার করার জন্য আপনাকে লগইন করতে হবে।",
+          "আপনার টেক্সট ফরম্যাট করতে আমাদের ফিচার সমৃদ্ধ রিচ এডিটর ব্যবহার করুন। আপনি ছবি যোগ করতে পারেন, হেডিং ব্যবহার করতে পারেন, স্পিচ-টু-টেক্সট এবং আরও অনেক ফিচার ব্যবহার করতে পারেন।"
+      ]
+  },
+  "ur": {
+      "title": "Notepad.is کا استعمال کیسے کریں؟",
+      "steps": [
+          "notepad.is پر جائیں، اور ہوم پیج پر آپ کو نوٹ پیڈ ایڈیٹر نظر آئے گا۔",
+          "جو کچھ آپ لکھنا چاہتے ہیں اسے ٹائپ کرنا شروع کریں۔",
+          "اگر آپ موجودہ ٹیکسٹ میں ترمیم کرنا چاہتے ہیں تو دستاویزات اپ لوڈ کرنے کا آپشن استعمال کریں۔",
+          "ہمارا آن لائن نوٹ پیڈ آپ کو کسی کے ساتھ بھی نوٹ شیئر کرنے کی اجازت دیتا ہے۔ نوٹ شیئر کرنے کے لیے آپ کو لاگ ان کرنا ہوگا۔",
+          "اپنے ٹیکسٹ کو فارمیٹ کرنے کے لیے ہمارے فیچر سے بھرپور ایڈیٹر کا استعمال کریں۔ آپ تصاویر شامل کر سکتے ہیں، سرخیوں کا استعمال کر سکتے ہیں، اسپیچ ٹو ٹیکسٹ اور بہت سے دوسرے فیچرز استعمال کر سکتے ہیں۔"
+      ]
+  },
+  "tr": {
+      "title": "Notepad.is Nasıl Kullanılır?",
+      "steps": [
+          "notepad.is adresini ziyaret edin, ana sayfada not defteri düzenleyicisini görebilirsiniz.",
+          "Yazmak istediğiniz şeyleri yazmaya başlayın.",
+          "Mevcut bir metni düzenlemek istiyorsanız belge yükleme seçeneğini kullanın.",
+          "Çevrimiçi Not Defterimiz, notları herkesle paylaşmanıza da olanak tanır. Notları paylaşmak için giriş yapmanız gerekir.",
+          "Metninizi biçimlendirmek için özelliklerle dolu zengin düzenleyicimizi kullanın. Görseller ekleyebilir, başlıklar kullanabilir, sesten metne özelliğinden yararlanabilir ve daha birçok özelliği keşfedebilirsiniz."
+      ]
+  },
+  "ko": {
+      "title": "Notepad.is 사용 방법은 무엇인가요?",
+      "steps": [
+          "notepad.is를 방문하시면 홈 페이지에서 메모장 에디터를 보실 수 있습니다.",
+          "작성하고 싶은 내용을 입력하기 시작하세요.",
+          "기존 텍스트를 편집하려면 문서 업로드 옵션을 사용하세요.",
+          "저희 온라인 메모장은 노트를 다른 사람과 공유할 수 있는 기능도 제공합니다. 노트를 공유하려면 로그인이 필요합니다.",
+          "다양한 기능이 포함된 리치 에디터를 사용하여 텍스트 서식을 지정해 보세요. 이미지 추가, 제목 사용, 음성 인식 텍스트 변환 등 여러 기능을 사용할 수 있습니다."
+      ]
+  },
+  "vi": {
+      "title": "Làm thế nào để sử dụng Notepad.is này?",
+      "steps": [
+          "Truy cập notepad.is và bạn có thể thấy trình chỉnh sửa ghi chú ngay trên trang chủ.",
+          "Bắt đầu nhập những gì bạn muốn viết.",
+          "Sử dụng tùy chọn tải lên tài liệu nếu bạn muốn chỉnh sửa một văn bản đã có sẵn.",
+          "Sổ tay Trực tuyến của chúng tôi cũng cho phép bạn chia sẻ ghi chú với bất kỳ ai. Bạn cần đăng nhập để chia sẻ ghi chú.",
+          "Sử dụng trình chỉnh sửa đa tính năng của chúng tôi để định dạng văn bản. Bạn có thể thêm hình ảnh, sử dụng tiêu đề, chuyển giọng nói thành văn bản và nhiều tính năng khác nữa."
+      ]
+  },
+  "it": {
+      "title": "Come usare questo Notepad.is?",
+      "steps": [
+          "Visita notepad.is e sulla homepage potrai vedere l'editor del blocco note.",
+          "Inizia a digitare ciò che desideri scrivere.",
+          "Usa l'opzione di caricamento dei documenti se desideri modificare un testo esistente.",
+          "Il nostro Blocco Note Online ti consente anche di condividere la nota con chiunque. Devi effettuare l'accesso per condividere le note.",
+          "Usa il nostro editor ricco di funzionalità per formattare il tuo testo. Puoi aggiungere immagini, usare intestazioni, la digitazione vocale e molte altre funzioni."
+      ]
+  },
+  "fa": {
+      "title": "چگونه از Notepad.is استفاده کنیم؟",
+      "steps": [
+          "به سایت notepad.is بروید، در صفحه اصلی می‌توانید ویرایشگر دفترچه یادداشت را مشاهده کنید.",
+          "شروع به تایپ کردن مطلبی که می‌خواهید بنویسید کنید.",
+          "اگر می‌خواهید یک متن موجود را ویرایش کنید، از گزینه بارگذاری سند استفاده کنید.",
+          "دفترچه یادداشت آنلاین ما همچنین به شما امکان می‌دهد یادداشت را با هر کسی به اشتراک بگذارید. برای اشتراک‌گذاری یادداشت‌ها باید وارد حساب کاربری خود شوید.",
+          "از ویرایشگر پیشرفته و پر از ویژگی ما برای قالب‌بندی متن خود استفاده کنید. شما می‌توانید تصاویر اضافه کنید، از سربرگ‌ها استفاده کنید، از تبدیل گفتار به متن بهره ببرید و از بسیاری ویژگی‌های دیگر استفاده کنید."
+      ]
+  },
+  "th": {
+      "title": "วิธีใช้งาน Notepad.is?",
+      "steps": [
+          "ไปที่ notepad.is และคุณจะเห็นตัวแก้ไขโน้ตบุ๊กบนหน้าแรก",
+          "เริ่มพิมพ์สิ่งที่คุณต้องการเขียนได้เลย",
+          "ใช้ตัวเลือกอัปโหลดเอกสารหากคุณต้องการแก้ไขข้อความที่มีอยู่",
+          "โน้ตบุ๊กออนไลน์ของเรายังช่วยให้คุณแชร์โน้ตกับใครก็ได้ โดยคุณต้องเข้าสู่ระบบก่อนจึงจะสามารถแชร์โน้ตได้",
+          "ใช้ตัวแก้ไขที่หลากหลายด้วยฟีเจอร์ของเราเพื่อจัดรูปแบบข้อความของคุณ คุณสามารถเพิ่มรูปภาพ ใช้หัวข้อ แปลงเสียงเป็นข้อความ และฟีเจอร์อื่น ๆ อีกมากมาย"
+      ]
+  },
+  "pl": {
+      "title": "Jak korzystać z Notepad.is?",
+      "steps": [
+          "Wejdź na stronę notepad.is, a na stronie głównej zobaczysz edytor notatnika.",
+          "Zacznij wpisywać to, co chcesz napisać.",
+          "Użyj opcji przesłania dokumentów, jeśli chcesz edytować istniejący tekst.",
+          "Nasz Notatnik Online pozwala również udostępniać notatki dowolnej osobie. Aby udostępniać notatki, musisz się zalogować.",
+          "Użyj naszego bogatego w funkcje edytora, aby sformatować tekst. Możesz dodawać obrazy, nagłówki, korzystać z funkcji zamiany mowy na tekst i wielu innych opcji."
+      ]
+  },
+  "nl": {
+      "title": "Hoe gebruik je Notepad.is?",
+      "steps": [
+          "Bezoek notepad.is, en op de startpagina zie je de kladblok-editor.",
+          "Begin te typen wat je wilt schrijven.",
+          "Gebruik de optie voor het uploaden van documenten als je een bestaande tekst wilt bewerken.",
+          "Met ons Online Kladblok kun je de notitie ook met iedereen delen. Je moet inloggen om notities te kunnen delen.",
+          "Gebruik onze veelzijdige editor om je tekst op te maken. Je kunt afbeeldingen toevoegen, koppen gebruiken, spraak-naar-tekst gebruiken en nog veel meer functies ontdekken."
+      ]
+  },
+  "sv": {
+      "title": "Hur använder man Notepad.is?",
+      "steps": [
+          "Gå till notepad.is, så ser du anteckningsredigeraren på startsidan.",
+          "Börja skriva det du vill skriva.",
+          "Använd alternativet för att ladda upp dokument om du vill redigera en befintlig text.",
+          "Vår Notepad Online låter dig också dela anteckningen med vem som helst. Du måste logga in för att dela anteckningarna.",
+          "Använd vår funktionsrika redigerare för att formatera din text. Du kan lägga till bilder, använda rubriker, tal-till-text och många fler funktioner."
+      ]
+  },
+  "el": {
+      "title": "Πώς να χρησιμοποιήσετε το Notepad.is;",
+      "steps": [
+          "Μεταβείτε στο notepad.is και στην αρχική σελίδα θα δείτε το πρόγραμμα επεξεργασίας σημειώσεων.",
+          "Ξεκινήστε να πληκτρολογείτε αυτό που θέλετε.",
+          "Χρησιμοποιήστε την επιλογή μεταφόρτωσης εγγράφων εάν θέλετε να επεξεργαστείτε ένα υπάρχον κείμενο.",
+          "Το Σημειωματάριο Online σάς επιτρέπει επίσης να μοιράζεστε τη σημείωση με οποιονδήποτε. Πρέπει να συνδεθείτε για να μοιραστείτε τις σημειώσεις.",
+          "Χρησιμοποιήστε το πλούσιο σε δυνατότητες πρόγραμμα επεξεργασίας για να μορφοποιήσετε το κείμενό σας. Μπορείτε να προσθέσετε εικόνες, να χρησιμοποιήσετε επικεφαλίδες, μετατροπή ομιλίας σε κείμενο και πολλές άλλες δυνατότητες."
+      ]
+  },
+  "cs": {
+      "title": "Jak používat Notepad.is?",
+      "steps": [
+          "Přejděte na stránku notepad.is a na domovské stránce uvidíte editor poznámkového bloku.",
+          "Začněte psát to, co chcete napsat.",
+          "Pokud chcete upravit stávající text, použijte možnost nahrát dokumenty.",
+          "Náš online poznámkový blok vám také umožňuje sdílet poznámku s kýmkoli. Pro sdílení poznámek se musíte přihlásit.",
+          "K formátování textu použijte náš bohatý editor funkcí. Můžete přidávat obrázky, používat nadpisy, převod řeči na text a mnoho dalších funkcí."
+      ]
+  },
+  "ro": {
+      "title": "Cum se utilizează Notepad.is?",
+      "steps": [
+          "Accesați notepad.is, iar pe pagina principală puteți vedea editorul de notepad.",
+          "Începeți să tastați ceea ce doriți să scrieți.",
+          "Utilizați opțiunea de încărcare a documentelor dacă doriți să editați un text existent.",
+          "Notepad-ul nostru online vă permite, de asemenea, să partajați nota cu oricine. Trebuie să vă autentificați pentru a partaja notele.",
+          "Utilizați editorul nostru bogat în funcții pentru a vă formata textul. Puteți adăuga imagini, utiliza titluri, conversie de text din vorbire și multe alte funcții."
+      ]
+  },
+  "hu": {
+      "title": "Hogyan kell használni a Notepad.is-t?",
+      "steps": [
+          "Látogasson el a notepad.is oldalra, és a kezdőlapon láthatja a jegyzettömb szerkesztőt.",
+          "Kezdje el beírni, amit szeretne.",
+          "Ha egy meglévő szöveget szeretne szerkeszteni, használja a dokumentumok feltöltése opciót.",
+          "Az Online Jegyzetfüzetünk lehetővé teszi a jegyzet megosztását bárkivel. A jegyzetek megosztásához be kell jelentkeznie.",
+          "Használja funkciókban gazdag szerkesztőnket a szöveg formázásához. Hozzáadhat képeket, használhat címsorokat, beszédfelismerést és sok más funkciót."
+      ]
+  },
+  "he": {
+      "title": "כיצד להשתמש ב-Notepad.is?",
+      "steps": [
+          "כנסו ל-notepad.is, ובעמוד הבית תוכלו לראות את עורך פנקס הרשימות.",
+          "התחילו להקליד את מה שאתם רוצים לכתוב.",
+          "השתמשו באפשרות של העלאת מסמכים אם ברצונכם לערוך טקסט קיים.",
+          "פנקס הרשימות המקוון שלנו מאפשר לכם גם לשתף את ההערה со כל אחד. עליכם להתחבר כדי לשתף את ההערות.",
+          "השתמשו בעורך העשיר בתכונות שלנו כדי לעצב את הטקסט שלכם. תוכלו להוסיף תמונות, להשתמש בכותרות, המרת דיבור לטקסט ותכונות רבות נוספות."
+      ]
+  },
+  "da": {
+      "title": "Hvordan bruger man Notepad.is?",
+      "steps": [
+          "Gå til notepad.is, og på startsiden kan du se notesblok-editoren.",
+          "Begynd at skrive det, du vil skrive.",
+          "Brug muligheden for at uploade dokumenter, hvis du vil redigere en eksisterende tekst.",
+          "Vores Notepad Online giver dig også mulighed for at dele noten med alle. Du skal logge ind for at dele noterne.",
+          "Brug vores funktionsrige editor til at formatere din tekst. Du kan tilføje billeder, bruge overskrifter, tale-til-tekst og mange flere funktioner."
+      ]
+  },
+  "fi": {
+      "title": "Miten Notepad.is-palvelua käytetään?",
+      "steps": [
+          "Mene osoitteeseen notepad.is, niin näet muistiinpanomuokkaimen etusivulla.",
+          "Aloita kirjoittamaan haluamaasi tekstiä.",
+          "Käytä asiakirjojen latausvaihtoehtoa, jos haluat muokata olemassa olevaa tekstiä.",
+          "Nettimuistiinpanojemme avulla voit myös jakaa muistiinpanon kenen tahansa kanssa. Sinun on kirjauduttava sisään jakaaksesi muistiinpanoja.",
+          "Käytä monipuolista muokkaintamme tekstin muotoiluun. Voit lisätä kuvia, käyttää otsikoita, käyttää puheesta tekstiksi -toimintoa ja monia muita ominaisuuksia."
+      ]
+  },
+  "no": {
+      "title": "Hvordan bruke Notepad.is?",
+      "steps": [
+          "Gå til notepad.is, og på startsiden kan du se teksteditoren.",
+          "Begynn å skrive det du ønsker.",
+          "Bruk alternativet for å laste opp dokumenter hvis du vil redigere en eksisterende tekst.",
+          "Vår Notepad Online lar deg også dele notatet med hvem som helst. Du må logge inn for å dele notatene.",
+          "Bruk vår funksjonsrike editor for å formatere teksten din. Du kan legge til bilder, bruke overskrifter, tale-til-tekst og mange flere funksjoner."
+      ]
+  },
+  "sk": {
+      "title": "Ako používať Notepad.is?",
+      "steps": [
+          "Prejdite na stránku notepad.is a na domovskej stránke uvidíte editor poznámkového bloku.",
+          "Začnite písať to, čo chcete napísať.",
+          "Ak chcete upraviť existujúci text, použite možnosť nahrať dokumenty.",
+          "Náš online poznámkový blok vám tiež umožňuje zdieľať poznámku s kýmkoľvek. Ak chcete zdieľať poznámky, musíte sa prihlásiť.",
+          "Na formátovanie textu použite náš bohatý editor funkcií. Môžete pridávať obrázky, používať nadpisy, prevod reči na text a mnoho ďalších funkcií."
+      ]
+  },
+  "bg": {
+      "title": "Как да използвате Notepad.is?",
+      "steps": [
+          "Посетете notepad.is и на началната страница ще видите редактора на бележника.",
+          "Започнете да пишете това, което искате.",
+          "Използвайте опцията за качване на документи, ако искате да редактирате съществуващ текст.",
+          "Нашият онлайн бележник също така ви позволява да споделяте бележката с всеки. Трябва да влезете в профила си, за да споделяте бележките.",
+          "Използвайте нашия богат на функции редактор, за да форматирате текста си. Можете да добавяте изображения, да използвате заглавия, преобразуване на реч в текст и много други функции."
+      ]
+  },
+  "hr": {
+      "title": "Kako koristiti Notepad.is?",
+      "steps": [
+          "Posjetite notepad.is i na početnoj stranici možete vidjeti uređivač bilješki.",
+          "Počnite tipkati ono što želite upisati.",
+          "Koristite opciju učitavanja dokumenata ako želite urediti postojeći tekst.",
+          "Naš mrežni Notepad također vam omogućuje dijeljenje bilješke s bilo kim. Morate se prijaviti da biste dijelili bilješke.",
+          "Koristite naš bogati uređivač teksta za oblikovanje teksta. Možete dodavati slike, koristiti naslove, pretvaranje govora u tekst i mnoge druge značajke."
+      ]
+  },
+  "sr": {
+      "title": "Kako koristiti Notepad.is?",
+      "steps": [
+          "Posetite notepad.is i na početnoj stranici možete videti uređivač beležaka.",
+          "Počnite da kucate ono što želite da napišete.",
+          "Koristite opciju otpremanja dokumenata ako želite da uredite postojeći tekst.",
+          "Naš mrežni Notepad vam takođe omogućava da delite belešku sa bilo kim. Morate se prijaviti da biste delili beleške.",
+          "Koristite naš bogat uređivač teksta za formatiranje teksta. Možete dodati slike, koristiti naslove, pretvaranje govora u tekst i mnoge druge funkcije."
+      ]
+  },
+  "uk": {
+      "title": "Як користуватися Notepad.is?",
+      "steps": [
+          "Перейдіть на сайт notepad.is, і на головній сторінці ви побачите редактор блокнота.",
+          "Почніть вводити текст, який ви хочете написати.",
+          "Використовуйте опцію завантаження документів, якщо хочете відредагувати наявний текст.",
+          "Наш онлайн-блокнот також дозволяє ділитися нотатками з будь-ким. Щоб поділитися нотатками, вам потрібно увійти в систему.",
+          "Використовуйте наш багатофункціональний редактор для форматування тексту. Ви можете додавати зображення, використовувати заголовки, функцію «мовлення в текст» та багато інших можливостей."
+      ]
+  },
+  "ta": {
+      "title": "Notepad.is-ஐ எவ்வாறு பயன்படுத்துவது?",
+      "steps": [
+          "notepad.is வலைத்தளத்திற்குச் செல்லவும், முகப்புப் பக்கத்தில் நீங்கள் நோட்பேட் எடிட்டரைக் காணலாம்.",
+          "நீங்கள் தட்டச்சு செய்ய விரும்புவதைத் தட்டச்சு செய்யத் தொடங்குங்கள்.",
+          "ஏற்கனவே உள்ள உரையைத் திருத்த விரும்பினால், ஆவணங்களை பதிவேற்றும் விருப்பத்தைப் பயன்படுத்தவும்.",
+          "எங்கள் ஆன்லைன் நோட்பேட் குறிப்புகளை யாருடனும் பகிரவும் உங்களை அனுமதிக்கிறது. குறிப்புகளைப் பகிர நீங்கள் உள்நுழைய வேண்டும்.",
+          "உங்கள் உரையை வடிவமைக்க எங்கள் சிறந்த அம்சங்கள் கொண்ட எடிட்டரைப் பயன்படுத்தவும். நீங்கள் படங்களைச் சேர்க்கலாம், தலைப்புகளைப் பயன்படுத்தலாம், பேச்சை உரையாக மாற்றலாம் மற்றும் பல அம்சங்களைப் பயன்படுத்தலாம்."
+      ]
+  },
+  "te": {
+      "title": "Notepad.is ఎలా ఉపయోగించాలి?",
+      "steps": [
+          "notepad.is ని సందర్శించండి, హోమ్‌పేజీలో మీరు నోట్‌ప్యాడ్ ఎడిటర్‌ను చూడవచ్చు.",
+          "మీరు టైప్ చేయాలనుకుంటున్న దాన్ని టైప్ చేయడం ప్రారంభించండి.",
+          "మీరు ఇప్పటికే ఉన్న వచనాన్ని సవరించాలనుకుంటే డాక్యుమెంట్‌లను అప్‌లోడ్ చేసే ఆప్షన్‌ను ఉపయోగించండి.",
+          "మా ఆన్‌లైన్ నోట్‌ప్యాడ్ మీ నోట్‌ను ఎవరితోనైనా పంచుకోవడానికి కూడా మిమ్మల్ని అనుమతిస్తుంది. నోట్స్ షేర్ చేయడానికి మీరు లాగిన్ అవ్వాలి.",
+          "మీ వచనాన్ని ఫార్మాట్ చేయడానికి మా ఫీచర్ రిచ్ ఎడిటర్‌ని ఉపయోగించండి. మీరు చిత్రాలను జోడించవచ్చు, హెడ్డింగ్‌లను ఉపయోగించవచ్చు, స్పీచ్ టు టెక్స్ట్ మరియు మరిన్ని ఫీచర్‌లను ఉపయోగించవచ్చు."
+      ]
+  },
+  "mr": {
+      "title": "Notepad.is कसे वापरावे?",
+      "steps": [
+          "notepad.is वर जा, होमपेजवर तुम्हाला नोटपॅड एडिटर दिसेल.",
+          "तुम्हाला जे टाईप करायचे आहे ते टाईप करायला सुरुवात करा.",
+          "तुम्हाला अस्तित्वात असलेला मजकूर सुधारायचा असल्यास दस्तऐवज अपलोड करण्याचा पर्याय वापरा.",
+          "आमचे नोटपॅड ऑनलाइन तुम्हाला तुमची नोंद कोणासोबतही शेअर करण्याची परवानगी देते. नोट्स शेअर करण्यासाठी तुम्हाला लॉग इन करावे लागेल.",
+          "तुमचा मजकूर फॉरमॅट करण्यासाठी आमच्या वैशिष्ट्यपूर्ण एडिटरचा वापर करा. तुम्ही प्रतिमा जोडू शकता, शीर्षके वापरू शकता, स्पीच-टू-टेक्स्ट आणि इतर अनेक वैशिष्ट्ये वापरू शकता."
+      ]
+  },
+  "gu": {
+      "title": "Notepad.is નો ઉપયોગ કેવી રીતે કરવો?",
+      "steps": [
+          "notepad.is ની મુલાકાત લો, અને હોમપેજ પર તમે નોટપેડ એડિટર જોઈ શકો છો.",
+          "તમે જે ટાઇપ કરવા માંગો છો તે ટાઇપ કરવાનું શરૂ કરો.",
+          "જો તમે હયાત લખાણમાં ફેરફાર કરવા માંગતા હોવ તો દસ્તાવેજો અપલોડ કરવાના વિકલ્પનો ઉપયોગ કરો.",
+          "અમારું ઓનલાઈન નોટપેડ તમને કોઈપણ સાથે નોંધ શેર કરવાની પણ મંજૂરી આપે છે. નોંધો શેર કરવા માટે તમારે લોગ ઇન કરવું પડશે.",
+          "તમારા લખાણને ફોર્મેટ કરવા માટે અમારા સુવિધાથી ભરપૂર એડિટરનો ઉપયોગ કરો. તમે છબીઓ ઉમેરી શકો છો, હેડિંગ્સ વાપરી શકો છો, સ્પીચ ટુ ટેક્સ્ટ અને બીજી ઘણી સુવિધાઓનો ઉપયોગ કરી શકો છો."
+      ]
+  },
+  "kn": {
+      "title": "Notepad.is ಅನ್ನು ಬಳಸುವುದು ಹೇಗೆ?",
+      "steps": [
+          "notepad.is ಗೆ ಭೇಟಿ ನೀಡಿ, ಮತ್ತು ಹೋಮ್ ಪೇಜ್‌ನಲ್ಲಿ ನೀವು ನೋಟ್‌ಪ್ಯಾಡ್ ಎಡಿಟರ್ ಅನ್ನು ನೋಡಬಹುದು.",
+          "ನೀವು ಟೈಪ್ ಮಾಡಲು ಬಯಸುವುದನ್ನು ಟೈಪ್ ಮಾಡಲು ಪ್ರಾರಂಭಿಸಿ.",
+          "ನೀವು ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಪಠ್ಯವನ್ನು ಸಂಪಾದಿಸಲು ಬಯಸಿದರೆ ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡುವ ಆಯ್ಕೆಯನ್ನು ಬಳಸಿ.",
+          "ನಮ್ಮ ಆನ್‌ಲೈನ್ ನೋಟ್‌ಪ್ಯಾಡ್ ನಿಮ್ಮ ಟಿಪ್ಪಣಿಯನ್ನು ಯಾರೊಂದಿಗಾದರೂ ಹಂಚಿಕೊಳ್ಳಲು ಅನುಮತಿಸುತ್ತದೆ. ಟಿಪ್ಪಣಿಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ನೀವು ಲಾಗ್ ಇನ್ ಆಗಬೇಕು.",
+          "ನಿಮ್ಮ ಪಠ್ಯವನ್ನು ಫಾರ್ಮ್ಯಾಟ್ ಮಾಡಲು ನಮ್ಮ ವೈಶಿಷ್ಟ್ಯ-ಸಮೃದ್ಧ ಎಡಿಟರ್ ಬಳಸಿ. ನೀವು ಚಿತ್ರಗಳನ್ನು ಸೇರಿಸಬಹುದು, ಹೆಡಿಂಗ್‌ಗಳನ್ನು ಬಳಸಬಹುದು, ಧ್ವನಿಯಿಂದ ಪಠ್ಯಕ್ಕೆ ಮತ್ತು ಇನ್ನೂ ಹಲವು ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಬಳಸಬಹುದು."
+      ]
+  },
+  "ml": {
+      "title": "Notepad.is എങ്ങനെ ഉപയോഗിക്കാം?",
+      "steps": [
+          "notepad.is സന്ദർശിക്കുക, ഹോംപേജിൽ നിങ്ങൾക്ക് നോട്ട്പാഡ് എഡിറ്റർ കാണാൻ കഴിയും.",
+          "നിങ്ങൾക്ക് ടൈപ്പ് ചെയ്യേണ്ടത് ടൈപ്പ് ചെയ്യാൻ ആരംഭിക്കുക.",
+          "നിലവിലുള്ള ഒരു ടെക്സ്റ്റ് എഡിറ്റ് ചെയ്യണമെങ്കിൽ ഡോക്യുമെന്റുകൾ അപ്‌ലോഡ് ചെയ്യാനുള്ള ഓപ്ഷൻ ഉപയോഗിക്കുക.",
+          "ഞങ്ങളുടെ ഓൺലൈൻ നോട്ട്പാഡ് കുറിപ്പുകൾ ആരുമായും പങ്കിടാൻ നിങ്ങളെ അനുവദിക്കുന്നു. കുറിപ്പുകൾ പങ്കിടുന്നതിന് നിങ്ങൾ ലോഗിൻ ചെയ്യണം.",
+          "നിങ്ങളുടെ ടെക്സ്റ്റ് ഫോർമാറ്റ് ചെയ്യാൻ ഞങ്ങളുടെ ഫീച്ചർ റിച്ച് എഡിറ്റർ ഉപയോഗിക്കുക. നിങ്ങൾക്ക് ഇമേജുകൾ ചേർക്കാനും ഹെഡിംഗുകൾ ഉപയോഗിക്കാനും സ്പീച്ച് ടു ടെക്സ്റ്റ് ചെയ്യാനും കൂടാതെ മറ്റു പല ഫീച്ചറുകൾ ഉപയോഗിക്കാനും കഴിയും."
+      ]
+  },
+  "si": {
+      "title": "මෙම Notepad.is භාවිතා කරන්නේ කෙසේද?",
+      "steps": [
+          "notepad.is වෙත පිවිසෙන්න, එවිට ඔබට මුල් පිටුවෙහි notepad සංස්කාරකය දැක ගත හැකිය.",
+          "ඔබට ටයිප් කිරීමට අවශ්‍ය දේ ටයිප් කිරීම ආරම්භ කරන්න.",
+          "ඔබට පවතින පෙළක් සංස්කරණය කිරීමට අවශ්‍ය නම් ලේඛන උඩුගත කිරීමේ (upload docs) විකල්පය භාවිතා කරන්න.",
+          "අපගේ Notepad Online මඟින් ඔබට සටහන ඕනෑම අයෙකු සමඟ බෙදා ගැනීමටද ඉඩ සලසයි. සටහන් බෙදා ගැනීමට ඔබ ලොග් විය යුතුය.",
+          "ඔබගේ පෙළ හැඩසවි ගැන්වීමට (format) අපගේ විශේෂාංගවලින් පොහොසත් සංස්කාරකය භාවිතා කරන්න. ඔබට පින්තූර එක් කිරීමට, ශීර්ෂයන් භාවිතා කිරීමට, කථනයෙන් පෙළට (speech to text) සහ තවත් බොහෝ විශේෂාංග භාවිතා කිරීමට හැකිය."
+      ]
+  },
+  "ne": {
+      "title": "यो Notepad.is कसरी प्रयोग गर्ने?",
+      "steps": [
+          "notepad.is मा जानुहोस्, र गृहपृष्ठमा, तपाईंले नोटप्याड सम्पादक देख्न सक्नुहुन्छ।",
+          "तपाईंले टाइप गर्न चाहनुभएको कुरा टाइप गर्न सुरु गर्नुहोस्।",
+          "यदि तपाईं अवस्थित पाठ सम्पादन गर्न चाहनुहुन्छ भने कागजातहरू अपलोड गर्ने (upload docs) विकल्प प्रयोग गर्नुहोस्।",
+          "हाम्रो अनलाइन नोटप्याडले तपाईंलाई जोकोहीसँग नोट साझा गर्न पनि अनुमति दिन्छ। नोटहरू साझा गर्न तपाईंले लग इन गर्नुपर्छ।",
+          "आफ्नो पाठ ढाँचा (format) गर्न हाम्रो सुविधायुक्त रिच सम्पादक प्रयोग गर्नुहोस्। तपाईं छविहरू थप्न सक्नुहुन्छ, हेडिङहरू प्रयोग गर्न सक्नुहुन्छ, बोलीबाट पाठ (speech to text) र अन्य धेरै सुविधाहरू प्रयोग गर्न सक्नुहुन्छ।"
+      ]
+  },
+  "my": {
+      "title": "ဤ Notepad.is ကို မည်သို့အသုံးပြုရမည်နည်း။",
+      "steps": [
+          "notepad.is သို့ ဝင်ရောက်ကြည့်ရှုပါ၊ ပင်မစာမျက်နှာတွင် notepad တည်းဖြတ်ကိရိယာကို သင်တွေ့နိုင်ပါသည်။",
+          "သင်ရိုက်ထည့်လိုသည့်အရာကို စတင်ရိုက်ထည့်ပါ။",
+          "ရှိပြီးသား စာသားကို တည်းဖြတ်လိုပါက 'upload docs' (စာရွက်စာတမ်း တင်ရန်) ရွေးချယ်ခွင့်ကို အသုံးပြုပါ။",
+          "ကျွန်ုပ်တို့၏ Notepad Online သည် မှတ်စုကို မည်သူနှင့်မဆို မျှဝေရန်လည်း ခွင့်ပြုထားသည်။ မှတ်စုများ မျှဝေရန် သင်သည် လော့ဂ်အင်ဝင်ရပါမည်။",
+          "သင့်စာသားကို ပုံစံချရန် ကျွန်ုပ်တို့၏ လုပ်ဆောင်ချက်စုံလင်သော တည်းဖြတ်ကိရိယာကို အသုံးပြုပါ။ ပုံများထည့်နိုင်သည်၊ ခေါင်းစဉ်များအသုံးပြုနိုင်သည်၊ စကားပြောမှ စာသားပြောင်းလဲခြင်း (speech to text) နှင့် အခြားလုပ်ဆောင်ချက်များစွာကို အသုံးပြုနိုင်ပါသည်။"
+      ]
+  },
+  "km": {
+      "title": "តើត្រូវប្រើប្រាស់ Notepad.is នេះដូចម្តេច?",
+      "steps": [
+          "ចូលទៅកាន់ notepad.is ហើយនៅលើទំព័រដើម អ្នកអាចមើលឃើញកម្មវិធីកែសម្រួល notepad។",
+          "ចាប់ផ្តើមវាយអ្វីដែលអ្នកចង់វាយ។",
+          "ប្រើជម្រើសបង្ហោះឯកសារ (upload docs) ប្រសិនបើអ្នកចង់កែសម្រួលអត្ថបទដែលមានស្រាប់។",
+          "Notepad Online  Our របស់យើងក៏អនុញ្ញាតឱ្យអ្នកចែករំលែកកំណត់ត្រាជាមួយនរណាម្នាក់ផងដែរ។ អ្នកត្រូវតែចូលគណនីដើម្បីចែករំលែកកំណត់ត្រា។",
+          "ប្រើប្រាស់កម្មវិធីកែសម្រួលដ៏សម្បូរបែបរបស់យើងដើម្បីរៀបចំទ្រង់ទ្រាយអត្ថបទរបស់អ្នក។ អ្នកអាចបន្ថែមរូបភាព ប្រើប្រាស់ចំណងជើង បម្លែងសំឡេងទៅជាអត្ថបទ និងមុខងារជាច្រើនទៀត។"
+      ]
+  },
+  "lo": {
+      "title": "ວິທີການນໍາໃຊ້ Notepad.is ນີ້?",
+      "steps": [
+          "ເຂົ້າໄປທີ່ notepad.is, ແລະໃນໜ້າທຳອິດ, ທ່ານສາມາດເຫັນຕົວແກ້ໄຂ notepad ໄດ້.",
+          "ເລີ່ມພິມສິ່ງທີ່ທ່ານຕ້ອງການພິມ.",
+          "ໃຊ້ຕົວເລືອກ ອັບໂຫຼດເອກະສານ (upload docs) ຖ້າທ່ານຕ້ອງການແກ້ໄຂຂໍ້ຄວາມທີ່ມີຢູ່ແລ້ວ.",
+          "Notepad Online ຂອງພວກເຮົາຍังອະນຸຍາດໃຫ້ທ່ານແບ່ງປັນບັນທຶກກັບໃຜກໍໄດ້. ທ່ານຕ້ອງເຂົ້າສູ່ລະບົບເພື່ອແບ່ງປັນບັນທຶກ.",
+          "ໃຊ້ຕົວແກ້ໄຂທີ່ອຸດົມສົມບູນໄປດ້ວຍຄຸນສົມບັດຂອງພວກເຮົາເພື່ອຈັດຮູບແບບຂໍ້ຄວາມຂອງທ່ານ. ທ່ານສາມາດເພີ່ມຮູບພາບ, ໃຊ້ຫົວຂໍ້, ການປ່ຽນສຽງເປັນຂໍ້ຄວາມ, ແລະຄຸນສົມບັດອື່ນໆອີກຫຼາຍຢ່າງ."
+      ]
+  },
+  "mn": {
+      "title": "Энэхүү Notepad.is-ийг хэрхэн ашиглах вэ?",
+      "steps": [
+          "notepad.is сайт руу орж, нүүр хуудаснаас тэмдэглэлийн дэвтэр засварлагчийг харах боломжтой.",
+          "Бичихийг хүссэн зүйлээ бичиж эхэлнэ үү.",
+          "Хэрэв та байгаа текстийг засахыг хүсвэл баримт бичиг байршуулах (upload docs) сонголтыг ашиглана уу.",
+          "Манай Онлайн Тэмдэглэлийн дэвтэр нь тэмдэглэлийг хэн нэгэнтэй хуваалцах боломжийг олгодог. Тэмдэглэл хуваалцахын тулд та нэвтрэх шаардлагатай.",
+          "Текстээ форматлахын тулд манай олон функцтэй баялаг засварлагчийг ашиглаарай. Та зураг нэмэх, гарчиг ашиглах, яриаг текст рүү хөрвүүлэх болон бусад олон функцийг ашиглах боломжтой."
+      ]
+  },
+  "ka": {
+      "title": "როგორ გამოვიყენოთ Notepad.is?",
+      "steps": [
+          "ეწვიეთ notepad.is-ს და მთავარ გვერდზე დაინახავთ ნოუთბუქის რედაქტორს.",
+          "დაიწყეთ იმის წერა, რაც გსურთ.",
+          "გამოიყენეთ დოკუმენტების ატვირთვის ოფცია (upload docs), თუ გსურთ არსებული ტექსტის რედაქტირება.",
+          "ჩვენი Notepad Online ასევე გაძლევთ საშუალებას გაუზიაროთ ჩანაწერი ნებისმიერს. ჩანაწერების გასაზიარებლად საჭიროა სისტემაში შესვლა.",
+          "გამოიყენეთ ჩვენი მრავალფუნქციური რედაქტორი ტექსტის დასაფორმატებლად. შეგიძლიათ დაამატოთ სურათები, გამოიყენოთ სათაურები, ხმის ტექსტად გარდაქმნა და მრავალი სხვა ფუნქცია."
+      ]
+  },
+  "hy": {
+      "title": "Ինչպե՞ս օգտագործել այս Notepad.is-ը:",
+      "steps": [
+          "Մուտք գործեք notepad.is, և գլխավոր էջում կտեսնեք նոթատետրի խմբագրիչը:",
+          "Սկսեք մուտքագրել այն, ինչ ցանկանում եք գրել:",
+          "Օգտագործեք փաստաթղթերի վերբեռնման (upload docs) տարբերակը, եթե ցանկանում եք խմբագրել գոյություն ունեցող տեքստը:",
+          "Մեր Notepad Online-ը նաև հնարավորություն է տալիս կիսվել նշումով ցանկացած մարդու հետ: Նշումները կիսվելու համար անհրաժեշտ է մուտք գործել համակարգ:",
+          "Օգտագործեք մեր բազմաֆունկցիոնալ խմբագրիչը ձեր տեքստը ձևաչափելու համար: Դուք կարող եք ավելացնել պատկերներ, օգտագործել վերնագրեր, ձայնը տեքստի վերածելու հնարավորություն և շատ այլ գործառույթներ:"
+      ]
+  },
+  "az": {
+      "title": "Bu Notepad.is-dən necə istifadə etməli?",
+      "steps": [
+          "notepad.is saytına daxil olun, ana səhifədə qeyd dəftəri redaktorunu görə bilərsiniz.",
+          "Yazmaq istədiyinizi yazmağa başlayın.",
+          "Mövcud mətni redaktə etmək istəyirsinizsə, sənədləri yükləmək (upload docs) seçimindən istifadə edin.",
+          "Bizim Onlayn Qeyd Dəftərimiz həmçinin qeydi hər kəslə paylaşmağa imkan verir. Qeydləri paylaşmaq üçün daxil olmalısınız.",
+          "Mətninizi formatlaşdırmaq üçün zəngin funksiyalı redaktorumuzdan istifadə edin. Siz şəkillər əlavə edə, başlıqlardan istifadə edə, səsi mətnə çevirə və daha çox funksiyadan yararlana bilərsiniz."
+      ]
+  },
+  "sw": {
+      "title": "Jinsi ya Kutumia Notepad.is Hii?",
+      "steps": [
+          "Tembelea notepad.is, na kwenye ukurasa wa nyumbani, unaweza kuona hariri ya kitalu cha vidokezo (notepad editor).",
+          "Anza kuandika kile unachotaka kuandika.",
+          "Tumia chaguo la kupakia hati (upload docs) ikiwa unataka kuhariri maandishi yaliyopo.",
+          "Notepad yetu ya Mtandaoni pia inakuwezesha kushiriki dokezo na mtu yeyote. Lazima uingie kwenye akaunti ili kushiriki vidokezo.",
+          "Tumia hariri yetu yenye vipengele vingi ili kuumbiza maandishi yako. Unaweza kuongeza picha, kutumia vichwa vya habari, kubadilisha usemi kuwa maandishi, na vipengele vingine vingi."
+      ]
+  },
+  "zu": {
+      "title": "Isetshenziswa Kanjani Le Notepad.is?",
+      "steps": [
+          "Vakashela i-notepad.is, futhi ekhasini lasekhaya, ungabona umhleli we-notepad.",
+          "Qala ngokubhala lokho okufuna ukukubhala.",
+          "Sebenzisa inketho yokulayisha amadokhumenti (upload docs) uma ufuna ukuhlela umbhalo okhona.",
+          "I-Notepad yethu ye-Inthanethi iphinde ikuvumele ukuthi wabelane ngenothi nanoma ubani. Kufanele ungene ngemvume ukuze wabelane ngamanothi.",
+          "Sebenzisa umhleli wethu ocebile ngezici ukuze ufomethe umbhalo wakho. Ungangeza izithombe, usebenzise izihloko, ukuguqula inkulumo ibe umbhalo, nezinye izici eziningi."
+      ]
+  },
+  "af": {
+      "title": "Hoe om hierdie Notepad.is te gebruik?",
+      "steps": [
+          "Gaan na notepad.is, en op die tuisblad kan jy die kladblok-redigeerder sien.",
+          "Begin tik wat jy wil tik.",
+          "Gebruik die 'upload docs'-opsie as jy 'n bestaande teks wil redigeer.",
+          "Ons Notepad Online laat jou ook toe om die nota met enige iemand te deel. Jy moet aanmeld om die notas te deel.",
+          "Gebruik ons kenmerkryke redigeerder om jou teks te formateer. Jy kan prente byvoeg, opskrifte gebruik, spraak-na-teks, en nog vele meer funksies gebruik."
+      ]
+  },
+  "am": {
+      "title": "ይህን Notepad.is እንዴት መጠቀም ይቻላል?",
+      "steps": [
+          "ወደ notepad.is ይሂዱ፣ እና በዋናው ገጽ ላይ የማስታወሻ ደብተር አርታዒውን ማየት ይችላሉ።",
+          "ለመጻፍ የሚፈልጉትን መጻፍ ይጀምሩ።",
+          "ነባር ጽሑፍን ማርትዕ ከፈለጉ ሰነዶችን የመጫኛ (upload docs) አማራጭን ይጠቀሙ።",
+          "የእኛ የመስመር ላይ ማስታወሻ ደብተር ማስታወሻውን ለማንኛውም ሰው እንዲያካፍሉ ይፈቅድልዎታል። ማስታወሻዎቹን ለማጋራት መግባት አለብዎት።",
+          "ጽሑፍዎን ለመቅረጽ በባህሪያት የበለጸገውን አርታኢያችንን ይጠቀሙ። ምስሎችን ማከል፣ አርዕስተ ዜናዎችን መጠቀም፣ ንግግርን ወደ ጽሑፍ መለወጥ እና ሌሎች ብዙ ባህሪያትን መጠቀም ይችላሉ።"
+      ]
+  },
+  "so": {
+      "title": "Sida loo isticmaalo Notepad.is-tan?",
+      "steps": [
+          "Booqo notepad.is, oo bogga guriga, waxaad ku arki kartaa tifaftiraha notepad-ka.",
+          "Ku billow inaad qorto waxaad rabto inaad qorto.",
+          "Isticmaal ikhtiyaarka soo roridda dukumentiyada (upload docs) haddii aad rabto inaad wax ka beddesho qoraal hore u jiray.",
+          "Notepad-kayaga Online wuxuu sidoo kale kuu ogolaanayaa inaad qoraalka la wadaagto qof kasta. Waa inaad gashid si aad u wadaagto qoraallada.",
+          "Isticmaal tifaftirahayaga qani ku ah sifooyinka si aad u qaabayso qoraalkaaga. Waxaad ku dari kartaa sawirro, isticmaali kartaa cinwaanno, hadal u beddel qoraal, iyo sifooyin kale oo badan."
+      ]
+  },
+  "yo": {
+      "title": "Bawo ni lati lo Notepad.is yii?",
+      "steps": [
+          "Ṣabẹwo si notepad.is, ati lori oju-iwe ile, o le wo olootu notepad.",
+          "Bẹrẹ tit tẹ ohun ti o fẹ tẹ.",
+          "Lo aṣayan lati gbe awọn iwe aṣẹ soke (upload docs) ti o ba fẹ ṣatunkọ ọrọ ti o wa tẹlẹ.",
+          "Notepad Online wa tun gba ọ laaye lati pin akọsilẹ pẹlu ẹnikẹni. O gbọdọ buwolu wọle lati pin awọn akọsilẹ.",
+          "Lo olootu ọlọrọ ẹya wa lati ṣe ọna kika ọrọ rẹ. O le ṣafikun awọn aworan, lo awọn akọle, ọrọ sisọ si ọrọ, ati ọpọlọpọ awọn ẹya miiran."
+      ]
+  },
+  "ig": {
+      "title": "Otu esi eji Notepad.is a?",
+      "steps": [
+          "Gaa na notepad.is, na home page, ị ga-ahụ ebe nchịkọta akụkọ notepad.",
+          "Malite pịnye ihe ị chọrọ ịkpọ.",
+          "Jiri nhọrọ 'upload docs' bulite akwụkwọ ma ọ bụrụ na ịchọrọ idezi ederede dị adị.",
+          "Notepad Online anyị na-enye gị ohere ịkọrọ onye ọ bụla ndetu ahụ. Ị ghaghị ịbanye na akaụntụ gị iji kesaa ndetu ahụ.",
+          "Jiri ebe nchịkọta akụkọ anyị nwere njirimara bara ụba hazie ederede gị. Ị nwere ike ịgbakwunye onyonyo, jiri isiokwu, okwu gaa na ederede, na ọtụtụ atụmatụ ndị ọzọ."
+      ]
+  },
+  "ha": {
+      "title": "Yadda ake Amfani da Wannan Notepad.is?",
+      "steps": [
+          "Ziyarci notepad.is, kuma a shafin gida, zaku iya ganin editan notepad.",
+          "Fara rubuta abin da kuke son rubutawa.",
+          "Yi amfani da zabin 'upload docs' don loda takardu idan kana son gyara rubutun da ke akwai.",
+          "Notepad ɗinmu na kan layi kuma yana ba ku damar raba bayanin kula da kowa. Dole ne ku shiga don raba bayanan kula.",
+          "Yi amfani da editan mu mai wadatar siffofi don tsara rubutun ku. Kuna iya ƙara hotuna, amfani da kanku, magana zuwa rubutu, da sauran abubuwa da yawa."
+      ]
+  },
+  "mg": {
+      "title": "Ahoana no fampiasana an'ity Notepad.is ity?",
+      "steps": [
+          "Tsidiho ny notepad.is, ary eo amin'ny pejy fandraisana dia ho hitanao ny mpamoaka lahatsoratra notepad.",
+          "Atombohy ny manoratra izay tianao hosoratana.",
+          "Ampiasao ny safidy fampitomboana antontan-taratasy (upload docs) raha te hanova lahatsoratra efa misy ianao.",
+          "Ny Notepad Online-nay dia mamela anao hizara ny fanamarihana amin'ny olon-drehetra koa. Tsy maintsy miditra ianao vao afaka mizara fanamarihana.",
+          "Ampiasao ny mpamoaka lahatsoratra feno endri-javatra mba handrafetana ny lahatsoratrao. Afaka mampiditra sary ianao, mampiasa lohateny, mandika feo ho lahatsoratra, ary endri-javatra maro hafa."
+      ]
+  },
+  "uz": {
+      "title": "Ushbu Notepad.is-dan qanday foydalaniladi?",
+      "steps": [
+          "notepad.is saytiga kiring, bosh sahifada bloknot muharririni ko'rishingiz mumkin.",
+          "Yozmoqchi bo'lgan narsangizni yozishni boshlang.",
+          "Mavjud matnni tahrirlamoqchi bo'lsangiz, hujjatlarni yuklash (upload docs) variantidan foydalaning.",
+          "Bizning Onlayn Bloknotimiz qeydni istalgan kishi bilan ulashish imkonini ham beradi. Eslatmalarni ulashish uchun tizimga kirishingiz kerak.",
+          "Matningizni formatlash uchun boy funksiyali muharririmizdan foydalaning. Rasm qo'shishingiz, sarlavhalardan foydalanishingiz, nutqni matnga aylantirishingiz va yana ko'plab xususiyatlardan foydalanishingiz mumkin."
+      ]
+  },
+  "kk": {
+      "title": "Бұл Notepad.is-ті қалай пайдалануға болады?",
+      "steps": [
+          "notepad.is сайтына өтіңіз, басты бетте блокнот редакторын көре аласыз.",
+          "Тергіңіз келген нәрсені тере бастаңыз.",
+          "Бұрыннан бар мәтінді өңдегіңіз келсе, құжаттарды жүктеу (upload docs) опциясын пайдаланыңыз.",
+          "Біздің Онлайн Блокнотымыз жазбаны кез келген адаммен бөлісуге мүмкіндік береді. Жазбаларды бөлісу үшін жүйеге кіруіңіз керек.",
+          "Мәтінді пішімдеу үшін көп функциялы редакторымызды пайдаланыңыз. Суреттер қосуға, тақырыптарды пайдалануға, дауысты мәтінге айналдыруға және басқа да көптеген мүмкіндіктерді пайдалануға болады."
+      ]
+  },
+  "ky": {
+      "title": "Бул Notepad.is кызматын кантип колдонсо болот?",
+      "steps": [
+          "notepad.is сайтына кириңиз, башкы бетте сиз блокнот редакторун көрө аласыз.",
+          "Каалаган нерсеңизди терип баштаңыз.",
+          "Учурдагы текстти түзөтүүнү кааласаңыз, документтерди жүктөө опциясын колдонуңуз.",
+          "Биздин Онлайн Блокнотубуз сизге жазууну каалагандар менен бөлүшүүгө мүмкүндүк берет. Жазууларды бөлүшүү үчүн сиз системага киришиңиз керек.",
+          "Текстиңизди форматтоо үчүн биздин көп функциялуу редакторубузду колдонуңуз. Сиз сүрөттөрдү кошуп, аталыштарды, үн менен текстти терүүнү жана башка көптөгөн функцияларды колдоно аласыз."
+      ]
+  },
+  "tg": {
+      "title": "Чӣ тавр аз ин Notepad.is истифода бурдан мумкин аст?",
+      "steps": [
+          "Ба notepad.is ворид шавед ва дар саҳифаи асосӣ шумо метавонед муҳаррири блокнотро бинед.",
+          "Чизеро, ки мехоҳед нависед, ба чоп кардан оғоз кунед.",
+          "Агар шумо хоҳед, ки матни мавҷударо таҳрир кунед, имконияти боркунии ҳуҷҷатҳоро (upload docs) истифода баред.",
+          "Блокноти онлайни мо инчунин ба шумо имкон медиҳад, ки ёддоштро бо ҳар кас мубодила кунед. Барои мубодилаи ёддоштҳо шумо бояд ворид шавед.",
+          "Барои формат кардани матни худ аз муҳаррири бойи функсионалии мо истифода баред. Шумо метавонед тасвирҳо илова кунед, сарлавҳаҳоро истифода баред, табдили нутқ ба матн ва бисёр хусусиятҳои дигарро истифода баред."
+      ]
+  },
+  "tk": {
+      "title": "Bu Notepad.is-i nähili ulanmaly?",
+      "steps": [
+          "notepad.is sahypasyna giriň we baş sahypada bloknot redaktoryny görüp bilersiňiz.",
+          "Ýazmak isleýän zadyňyzy ýazyp başlaň.",
+          "Bar bolan teksti redaktirlemek isleseňiz, resminmalary ýüklemek saýlamasyny ulanyň.",
+          "Onlaýn Bloknotymyz belligi islendik adam bilen paýlaşmaga hem mümkinçilik berýär. Bellikleri paýlaşmak üçin ulgama girmeli.",
+          "Tekstiňizi formatlamak üçün baý redaktorumyzy ulanyň. Suratlary goşup, sözbaşylary ulanyp, gürlemegi tekstine öwrüp we başga-da köp aýratynlyklary ulanyp bilersiňiz."
+      ]
+  },
+  "ps": {
+      "title": "د دې Notepad.is کارولو څرنګوالی؟",
+      "steps": [
+          "نوټ پیډ.is وپلټئ، او په کور پاڼه کې، تاسو کولی شئ د نوټ پیډ ایډیټر وګورئ.",
+          "هغه څه چې غواړئ ولیکئ پیل کړئ.",
+          "که تاسو غواړئ یو شتون لرونکی متن سم کړئ، نو د اسنادو پورته کولو (upload docs) اختیار وکاروئ.",
+          "زموږ آنلاین نوټ پیډ تاسو ته اجازه درکви چې نوټ له هرچا سره شریک کړئ. د یادښتونو شریکولو لپاره تاسو باید ننوځئ.",
+          "د خپل متن فارمیټ کولو لپاره زموږ د بډایه ب featuresو ایډیټر څخه کار واخلئ. تاسو کولی شئ عکسونه اضافه کړئ، سرلیکونه وکاروئ، وینا متن ته واړوئ، او ډیری نورې بڼې."
+      ]
+  },
+  "ku": {
+      "title": "Çawa Notepad.is Bi Kar Bînin?",
+      "steps": [
+          "Biçin notepad.is-ê, û li ser rûpela malê, hûn dikarin edîtorê defterê bibînin.",
+          "Tişta ku hûn dixwazin binivîsin dest bi nivîsandinê bikin.",
+          "Heke hûn dixwazin metnek heyî biguherînin, vebijarka barkirina belgeyan bikar bînin.",
+          "Deftera me ya Serhêl (Notepad Online) di heman demê de dihêle hûn notê bi her kesî re parve bikin. Ji bo parvekirina nîşeyan divê hûn têkevinê.",
+          "Ji bo formatkirina nivîsa xwe edîtorê meya dewlemend-taybetmendî bikar bînin. Hûn dikarin wêneyan lê zêde bikin, sernavan bikar bînin, axaftinê veguherînin nivîsê, û gelek taybetmendiyên din."
+      ]
+  },
+  "sq": {
+      "title": "Si ta përdorni këtë Notepad.is?",
+      "steps": [
+          "Shfletoni notepad.is, dhe në faqen kryesore mund të shihni redaktuesin e bllokut të shënimeve.",
+          "Filloni të shkruani atë që dëshironi të shkruani.",
+          "Përdorni opsionin e ngarkimit të dokumenteve nëse dëshironi të redaktoni një tekst ekzistues.",
+          "Notepad-i ynë Online ju lejon gjithashtu të ndani shënimin me këdo. Duhet të identifikoheni për të ndarë shënimet.",
+          "Përdorni redaktuesin tonë të pasur me karakteristika për të formatuar tekstin tuaj. Mund të shtoni imazhe, të përdorni tituj, kthimin e të folurit në tekst dhe shumë veçori të tjera."
+      ]
+  },
+  "lt": {
+      "title": "Kaip naudotis Notepad.is?",
+      "steps": [
+          "Apsilankykite svetainėje notepad.is ir pagrindiniame puslapyje pamatysite užrašinės redaktorių.",
+          "Pradėkite rašyti tai, ką norite parašyti.",
+          "Jei norite redaguoti esamą tekstą, naudokite dokumentų įkėlimo parinktį.",
+          "Mūsų internetinė užrašinė taip pat leidžia bendrinti užrašą su bet kuo. Norėdami bendrinti užrašus, turite prisijungti.",
+          "Teksto formatavimui naudokite mūsų funkcionalų redaktorių. Galite pridėti paveikslėlių, naudoti antraštes, kalbos konvertavimą į tekstą ir daug kitų funkcijų."
+      ]
+  },
+  "lv": {
+      "title": "Kā lietot Notepad.is?",
+      "steps": [
+          "Apmeklējiet vietni notepad.is, un mājaslapā redzēsiet piezīmju grāmatiņas redaktoru.",
+          "Sāciet rakstīt to, ko vēlaties.",
+          "Izmantojiet dokumentu augšupielādes opciju, ja vēlaties rediģēt esošu tekstu.",
+          "Mūsu tiešsaistes piezīmju grāmatiņa (Notepad Online) ļauj arī kopīgot piezīmi ar jebkuru personu. Lai kopīgotu piezīmes, jums ir jāpiesakās.",
+          "Izmantojiet mūsu daudzfunkcionālo redaktoru, lai formatētu tekstu. Varat pievienot attēlus, izmantot virsrakstus, runas pārvēršanu tekstā un daudzas citas funkcijas."
+      ]
+  },
+  "et": {
+      "title": "Kuidas kasutada Notepad.is?",
+      "steps": [
+          "Külastage veebilehte notepad.is ja avalehel näete märkmiku redaktorit.",
+          "Alustage soovitud teksti kirjutamist.",
+          "Kui soovite olemasolevat teksti muuta, kasutage dokumentide üleslaadimise valikut.",
+          "Meie veebipõhine märkmik võimaldab teil ka märkmeid kõigiga jagada. Märkmete jagamiseks peate sisse logima.",
+          "Kasutage teksti vormindamiseks meie funktsioonirikkaid redaktorit. Saate lisada pilte, kasutada pealkirju, kõne tekstiks muutmist ja palju muid funktsioone."
+      ]
+  },
+  "is": {
+      "title": "Hvernig á að nota Notepad.is?",
+      "steps": [
+          "Farðu á notepad.is og á forsíðunni geturðu séð minnisblokkarritilinn.",
+          "Byrjaðu að skrifa það sem þú vilt skrifa.",
+          "Notaðu skjalaupphleðslumöguleikann ef þú vilt breyta núverandi texta.",
+          "Online Notepad okkar gerir þér einnig kleift að deila minnismiðanum með hverjum sem er. Þú verður að skrá þig inn til að deila minnismiðum.",
+          "Notaðu öfluga ritilinn okkar til að sníða textan þinn. Þú getur bætt við myndum, notað fyrirsagnir, tal í texta og marga aðra eiginleika."
+      ]
+  },
+  "ga": {
+      "title": "Conas Notepad.is a Úsáid?",
+      "steps": [
+          "Brabhsáil notepad.is, agus ar an leathanach baile, is féidir leat eagarthóir an nóta-cheap a fheiceáil.",
+          "Tosaigh ag clóscríobh cad is mian leat a scríobh.",
+          "Úsáid an rogha chun cáipéisí a uaslódáil más mian leat téacs atá ann cheana a chur in eagar.",
+          "Ligeann ár Nóta-cheap Ar Líne duit freisin an nóta a roinnt le duine ar bith. Caithfidh tú logáil isteach chun na nótaí a roinnt.",
+          "Úsáid ár saor-eagarthóir gné-saibhir chun do théacs a fhormáidiú. Is féidir leat íomhánna a chur leis, ceannteidil a úsáid, urlabhra go téacs, agus go leor gnéithe eile a úsáid."
+      ]
+  },
+  "cy": {
+      "title": "Sut i Ddefnyddio Notepad.is?",
+      "steps": [
+          "Porwch notepad.is, ac ar y hafan, gallwch weld y golygydd notepad.",
+          "Dechreuwch deipio'r hyn rydych chi am ei deipio.",
+          "Defnyddiwch yr opsiwn uwchlwytho dogfennau os ydych am olygu testun presennol.",
+          "Mae ein Notepad Ar-lein hefyd yn caniatáu ichi rannu'r nodyn ag unrhyw un. Mae'n rhaid i chi fewngofnodi i rannu'r nodiadau.",
+          "Defnyddiwch ein golygydd cyfoethog i fformatio eich testun. Gallwch ychwanegu delweddau, defnyddio penawdau, lleferydd i destun, a llawer mwy o nodweddion."
+      ]
+  },
+  "eu": {
+      "title": "Nola erabili Notepad.is hau?",
+      "steps": [
+          "Nabigatu notepad.is webgunean, eta orri nagusian ohar-blokearen editorea ikusiko duzu.",
+          "Hasi idatzi nahi duzuna idazten.",
+          "Erabili dokumentuak igotzeko aukera lehendik dagoen testu bat editatu nahi baduzu.",
+          "Gure lineako ohar-blokeak oharra edonorekin partekatzeko aukera ere ematen dizu. Saioa hasi behar duzu oharrak partekatzeko.",
+          "Erabili gure editore aberatsa zure testua formatu bera emateko. Irudiak gehitu ditzakezu, izenburuak erabili, ahotsa testu bihurtu eta beste hainbat funtzio erabili ditzakezu."
+      ]
+  },
+  "ca": {
+      "title": "Com utilitzar Notepad.is?",
+      "steps": [
+          "Navegueu a notepad.is i, a la pàgina d'inici, podreu veure l'editor del bloc de notes.",
+          "Comenceu a escriure el que vulgueu.",
+          "Utilitzeu l'opció de penjar documents si voleu editar un text existent.",
+          "El nostre bloc de notes en línia també us permet compartir la nota amb qualsevol persona. Heu d'iniciar sessió per compartir les notes.",
+          "Utilitzeu el nostre editor de text enriquit per formatar el text. Podeu afegir imatges, utilitzar encapçalaments, dictat per veu i moltes funcions més."
+      ]
+  },
+  "gl": {
+      "title": "Como usar Notepad.is?",
+      "steps": [
+          "Navega por notepad.is e, na páxina de inicio, verás o editor do bloc de notas.",
+          "Comeza a escribir o que queiras.",
+          "Usa a opción de subir documentos se queres editar un texto existente.",
+          "O noso Bloc de Notas en liña tamén che permite compartir a nota con calquera persoa. Debes iniciar sesión para compartir as notas.",
+          "Usa o noso editor enriquecido para darlle formato ao teu texto. Podes engadir imaxes, usar títulos, converter voz en texto e moitas máis funcións."
+      ]
+  },
+  "mt": {
+      "title": "Kif tuża dan Notepad.is?",
+      "steps": [
+          "Mur fuq notepad.is, u fuq il-paġna ewlenija, tista' tara l-editur tan-notepad.",
+          "Ibda ikteb dak li trid tikteb.",
+          "Uża l-għażla li ttella' dokumenti jekk trid teditja test eżistenti.",
+          "In-Notepad Online tagħna jippermettilek ukoll li taqsam in-nota ma' kulħadd. Trid tilloggja biex taqsam in-noti.",
+          "Uża l-editur għani f'karatteristiċi tagħna biex tifformatta t-test tiegħek. Tista' żżid immaġini, tuża intestaturi, diskors għal test, u ħafna karatteristiċi oħra."
+      ]
+  },
+  "lb": {
+      "title": "Wéi benotzt een dësen Notepad.is?",
+      "steps": [
+          "Besicht notepad.is, an op der Startseite gesitt Dir de Notepad-Editor.",
+          "Fänkt un ze tippen, wat Dir schreiwen wëllt.",
+          "Benotzt d'Optioun fir Dokumenter eropzelueden, wann Dir en existéierten Text editéiere wëllt.",
+          "Eise Notepad Online erlaabt Iech och, d'Notiz mat jidderengem ze deelen. Dir musst Iech aloggen fir d'Notizen ze deelen.",
+          "Benotzt eise versatile Editor, fir Ären Text ze formatéieren. Dir kënnt Biller derbäisetzen, Iwwerschrëften benotzen, Sprooch-zu-Text an vill aner Funktiounen notzen."
+      ]
+  },
+  "mk": {
+      "title": "Како да го користите Notepad.is?",
+      "steps": [
+          "Посетете ја notepad.is и на почетната страница ќе го видите уредникот на бележникот.",
+          "Почнете да го пишувате она што го сакате.",
+          "Користете ја опцијата за прикачување документи ако сакате да уредите постоечки текст.",
+          "Нашиот онлајн бележник исто така ви овозможува да ја споделите белешката со секого. Мора да се најавите за да ги споделите белешките.",
+          "Користете го нашиот напреден уредник за да го форматирате вашиот текст. Можете да додавате слики, да користите наслови, говор во текст и многу други функции."
+      ]
+  },
+  "bs": {
+      "title": "Kako koristiti ovaj Notepad.is?",
+      "steps": [
+          "Posjetite notepad.is i na početnoj stranici možete vidjeti uređivač bilježnice.",
+          "Počnite tipkati ono što želite.",
+          "Koristite opciju učitavanja dokumenata ako želite urediti postojeći tekst.",
+          "Naš Notepad Online vam također omogućava da podijelite bilješku s bilo kim. Morate se prijaviti da biste podijelili bilješke.",
+          "Koristite naš bogati uređivač teksta da formatirate svoj tekst. Možete dodati slike, koristiti naslove, pretvaranje govora u tekst i mnoge druge funkcije."
+      ]
+  },
+  "sl": {
+      "title": "Kako uporabljati Notepad.is?",
+      "steps": [
+          "Obiščite notepad.is in na domači strani boste videli urejevalnik beležnice.",
+          "Začnite tipkati, kar želite napisati.",
+          "Če želite urediti obstoječe besedilo, uporabite možnost za nalaganje dokumentov.",
+          "Naša spletna beležnica vam omogoča tudi deljenje zapiskov z drugimi. Če želite deliti zapiske, se morate prijaviti.",
+          "Za oblikovanje besedila uporabite naš napredni urejevalnik. Dodate lahko slike, uporabite naslove, pretvorbo govora v besedilo in številne druge funkcije."
+      ]
+  },
+  "fj": {
+      "title": "E vakayagataki vakacava na Notepad.is oqo?",
+      "steps": [
+          "Sikova na notepad.is, ka o na raica na dautataro ni notepad ena tabana levu.",
+          "Tekivu vola na ka o vinakata me volai.",
+          "Vakayagataka na digidigi ni vakakabira na ivola (upload docs) ke o vinakata me edititaki e dua na tabaivola sa tiko rawa.",
+          "E vakatara talega na neimami Notepad Online mo wasea na volavola vei ira tale e so. E dodonu mo curu yani (log in) mo rawa ni wasea kina na volavola.",
+          "Vakayagataka na neimami dautataro vutuniyau ena ka e vakarautaki (featured rich editor) me tatarotaki kina na nomu tabaivola. O rawa ni kuria kina na iyaloyalo, vakayagataka na ulu ni tabaivola (headings), vosa me vuki me tabaivola (speech to text), kei na vuqa tale na ka e vakarautaki."
+      ]
+  },
+  "mi": {
+      "title": "Me pēhea te whakamahi i tēnei Notepad.is?",
+      "steps": [
+          "Haere ki te notepad.is, a, i te whārangi kāinga, ka kite koe i te kaiwhakatika tuhipoka.",
+          "Timata ki te tuhi i nga mea e hiahia ana koe ki te tuhi.",
+          "Whakamahia te kōwhiringa tuku tuhinga ki te hiahia koe ki te whakatika i tētahi tuhinga kua oti te hanga.",
+          "Ka taea hoki e tā mātou Notepad Online te tuhatoha i te tuhipoka ki te tangata i hiahia ai koe. Me takiuru koe ki te tuhatoha i ngā tuhipoka.",
+          "Whakamahia tō mātou kaiwhakatika whai āhuatanga maha hei whakahōputu i tō tuhinga. Ka taea e koe te whakauru whakaahua, te whakamahi ūpoko, te huri i te reo ki te tuhinga, me te maha atu o ngā āhuatanga."
+      ]
+  },
+  "sm": {
+      "title": "Fa'afefea ona Fa'aoga lenei Notepad.is?",
+      "steps": [
+          "Asiasi i le notepad.is, ma i luga o le itulau autu, e mafai ona e vaʻai ai i le faatonu o le notepad.",
+          "Amata ona taina mea e te manaʻo e taina.",
+          "Fa'aaoga le filifiliga e lafo ai pepa pe a e mana'o e sui se tusitusiga o lo'o iai.",
+          "O la matou Notepad Online e mafai ai foi ona e faʻasoa le tusi i soʻo se tasi. E tatau ona e saini i totonu e faʻasoa ai tusi.",
+          "Fa'aaoga lo matou faatonu mauoa e fa'asolo ai au tusitusiga. E mafai ona e faʻaopoopoina ata, faʻaaoga ulutala, tautalaga i tusitusiga, ma le lona lua o isi vaega."
+      ]
+  },
+  "to": {
+      "title": "Ko e fē fē hono ngāueʻaki ʻo e Notepad.is ni?",
+      "steps": [
+          "Vakai ki he notepad.is, pea ʻi he peisi tefito, te ke lava ʻo sio ki he feituʻu faitohi ʻo e notepad.",
+          "Kamata taipeʻi ʻa e meʻa ʻoku ke loto ke taipeʻi.",
+          "Ngāueʻaki ʻa e fili ke fakafoʻou ʻa e fakamatala kapau ʻoku ke loto ke fetongi ha tohi kuo ʻosi ʻi ai.",
+          "ʻOku fakaʻatā foki ʻe heʻemau Notepad Online ke ke vahevahe ʻa e fakamatala mo ha taha pē. Kuo pau ke ke hū ki loto (log in) ke vahevahe ʻa e ngaahi fakamatala.",
+          "Ngāueʻaki ʻemau meʻangaue faitohi lelei ke fokotuʻutuʻu hoʻo tohi. Te ke lava ʻo tānaki atu ha ngaahi fakatātā, ngāueʻaki ʻa e ngaahi kaveinga, lea ki he tohi (speech to text), mo e ngaahi meʻa lahi kehe."
+      ]
+  },
+  "ht": {
+      "title": "Kijan pou w sèvi ak Notepad.is sa a?",
+      "steps": [
+          "Ale sou notepad.is, epi sou paj akèy la, ou ka wè editè kaye nòt la.",
+          "Kòmanse tape sa ou vle ekri a.",
+          "Sèvi ak opsyon telechaje dokiman an si ou vle modifye yon tèks ki deja egziste.",
+          "Notepad Online nou an pèmèt ou tou pataje nòt la ak nenpòt moun. Ou dwe konekte pou w ka pataje nòt yo.",
+          "Sèvi ak bèl editè rich nou an pou fòmate tèks ou a. Ou ka ajoute imaj, sèvi ak tit, konvèti vwa an tèks, ak anpil lòt karakteristik ankò."
+      ]
+  },
+  "qu": {
+      "title": "Imaynatam kay Notepad.is nisqata llamkachwan?",
+      "steps": [
+          "Notepad.is nisqaman yaykuy, chay qallariy qillqasqapitaq notepad allichaqta rikunki.",
+          "Qillqayta qallariy munasqaykita.",
+          "Kaq qillqasqata allichayta munaspaqa, qillqakuna churana akllanata llamkachiy.",
+          "Notepad Online nisqaykuqa huk runakunamanpas qillqasqayki rakinaykipaqmi yanapasunki. Yaykunaykim tiyan qillqasqaykikunata rakinaykipaq.",
+          "Sumaq allichaqniykuta llamkachiy qillqasqayki allichanaykipaq. Rikchakunata yapayta atinki, umallichaqkunata llamkachiy, rimayta qillqaman kutichiy, hukkunatawan."
+      ]
+  },
+  "ay": {
+      "title": "Kunjamas aka Notepad.is apnaqaña?",
+      "steps": [
+          "Notepad.is ukar mantam, ukat uka qallta jananxa notepad askichiri uñjanki.",
+          "Munañamatjam qillqañ qalltañani.",
+          "Uka qillqata askichañ munsta ukhax qillqanaka yakaña lurañampi apnaqam.",
+          "Notepad Online nisanux jumarux qillqatanakam yaqha jaqinakar t'aqanuqañatakiw yanapt'atam. Mantanapawa aka qillqatanaka t'aqanuqañataki.",
+          "Suma askichiri apnaqam qillqatama sumachañataki. Jamunaka yapantasmawa, p'iqi qillqatanaka apnaqasma, arut qillqaru mayjt'ayaña, juk'ampinakampi."
+      ]
+  },
+  "gn": {
+      "title": "Mba'éichapa Ojepuru ko Notepad.is?",
+      "steps": [
+          "Eike notepad.is-pe, ha ipajina ñepyrũme, ikatu rehecha pe notepad mopo'ãha.",
+          "Eñepyrũ ehaika upe rehai mbyaséva.",
+          "Epuru upe mbohasa kuatia rehegua reipotáramo reanduka peteĩ kuatia oĩmava.",
+          "Ore Notepad Online avei oheja ndéve reikuave'ẽ ne kuatiahaipyre oimeraẽvape. Reike va'erã reikuave'ẽ hag̃ua umi kuatiahaipyre.",
+          "Epuru ore mopo'ãha rricho rehegua oñemohenda hag̃ua ne moñe'ẽrã. Ikatu remoĩ ta'anga, eipuru akãrã, ñe'ẽmby oñembohasa kuatiápe, ha hetave mba'e."
+      ]
+  },
+  "nv": {
+      "title": "Díí Notepad.is haitʼéego choolʼį́?",
+      "steps": [
+          "Notepad.is bichʼįʼ dínílʼį́, índa tʼáá sahdi bee ahidadiʼdlaʼígi, notepad bikááʼ akʼeʼalchíhí yitʼį́į doo.",
+          "Díidígitsʼínígíí bikááʼ akʼeʼalchíhígíí łahgo bidiilní.",
+          "Naaltsoos bee iih náádajiyiniłígíí choidííłʼįįł łahgo ádeileʼgo naaltsoos tʼáá hólónígi.",
+          "Nihí Notepad Online tʼáá háiida bił ałchʼįʼ deidiyínííł binahjįʼ tʼáá ákótʼé. Íiyisíí log in bidiiłnííł tʼahdo bił ałchʼįʼ deidiyíníłí yę́ę.",
+          "Nihí bee akʼeʼalchíhí lánigo bee yáʼátʼéehii choidííłʼįįł áko ninaaltsoos hashtʼedilnííł. Naaltsoos bikááʼ elgai tʼáá bíyó, bitsitsʼin bikááʼígíí choidííłʼįįł, yátiʼ tʼáá akʼeʼalchíhí kʼehgo, índa lánigo bee choolʼį́į dooleełii."
+      ]
+  },
+  "iu": {
+      "title": "ᖃᓄᖅ ᐊᑐᕐᑕᐅᓲᖑᕙ ᐅᓇ Notepad.is?",
+      "steps": [
+          "ᖃᐅᔨᓴᕐᓗᒍ notepad.is, ᐊᒻᒪᓗ ᐊᓪᓚᕐᕕᐅᑉ ᓯᕗᓪᓕᖅᐹᖓᓂ ᑕᑯᔪᓐᓇᖅᑐᑎᑦ notepad ᐋᖅᑭᒋᐊᕆᔨᖓᓂᒃ.",
+          "ᑎᑎᕋᕆᐊᕐᓗᑎᑦ ᑎᑎᕋᕈᒪᔭᕐᓂᒃ.",
+          "ᐊᑐᕐᓗᒍ ᑎᑎᕋᕐᓯᒪᔪᑦ ᓇᒃᓯᐅᔾᔭᐅᓂᖏᑦ ᐋᖅᑭᒋᐊᕈᒪᒍᕕᐅᒃ ᑎᑎᕋᕐᓯᒪᔪᒥᒃ.",
+          "ᐅᓇ ᖃᕆᑕᐅᔭᒃᑯtt ᑎᑎᕋᕐᕕᕗᑦ (Notepad Online) ᐊᑐᐃᓐᓇᐅᑎᑦᑎᒻᒥᔪᖅ ᐊᒥᐊᒃᑯᖏᓐᓂᑦ ᐊᓯᖏᓐᓄᑦ ᑐᓂᓯᔪᓐᓇᕐᓗᑎᑦ. ᐃᓯᕆᐊᖃᖅᑐᑎᑦ ᑐᓂᓯᔪᓐᓇᕐᓂᐊᕐᓗᒋᑦ.",
+          "ᐊᑐᕐᓗᒍ ᐱᐅᓯᒋᐊᕐᓯᒪᔪᖅ ᐋᖅᑭᒋᐊᕆᔾjuᑎᕗᑦ ᐋᖅᑭᒃᓱᕈᒪᒍᕕᐅᒃ ᑎᑎᕋᖅᓯᒪᔪᖅ. ᐃᓚᓯᔪᓐᓇᖅᑐᑎᑦ ᐊᔾᔨᙳᐊᓂᒃ, ᐊᑐᕐᓗᑎᑦ ᐊᐅᓚᑦᑎᔾᔪᑎᓂᒃ, ᓂᐱ ᑎᑎᕋᐅᓯᕐᒧᑦ, ᐊᒻᒪᓗ ᐊᓯᖏᓐᓂᒃ ᖃᓄᐃᓕᐅᕈᑎᓂᒃ."
+      ]
+  },
+  "kl": {
+      "title": "Qanoq uuma Notepad.is atorneqartarpa?",
+      "steps": [
+          "Ukuarsigit notepad.is, saqqaanilu takusinnaavat notepad aaqqissuisarfia.",
+          "Allallutit aallartigit suna allallugu kissaatigigit.",
+          "Dokumentinik ikkussineq atoruk allassimasut pioreersut aaqqissuukkusukkukkit.",
+          "Uagut Notepad Online aamma atorlugu allatseq allanik avitseqatigiissutigisinnaavat. Iserfigisariaqarpat avitseqatigiissutiginiarlugu.",
+          "Uagut aaqqissuisarfipput atoruk allassimasat aaqqissuunniarlugu. Assiliartaliisinnaavutit, niaqutit atorsinnaallugit, oqalunneq allatanngortillugu, allarpassuillu atorlugit."
+      ]
+  },
+  "om": {
+      "title": "Notepad.is Kana Akkamitti Fayyadamna?",
+      "steps": [
+          "Notepad.is irratti bani, fuula jalqabaa irratti qopheessaa notepad arguu dandeessa.",
+          "Waan barreessuu barbaaddu barreessuu jalqabi.",
+          "Barreeffama jiru tokko sirreessuu yoo barbaadde, filannoo sanadoota fe'uu (upload docs) fayyadami.",
+          "Notepad Online keenya barreeffama kee eenyufuu akka qooddu si dandeessisa. Barreeffamoota qooduuf seenuu (log in) qabda.",
+          "Barreeffama kee tolchuuf qopheessaa keenya bifa adda addaa qabu fayyadami. Fakkiiwwan dabaluu, mata dureewwan fayyadamuu, dubbii gara barreeffamatti jijjiiruu fi dandeettiiwwan biroo baay'ee fayyadamuu dandeessa."
+      ]
+  },
+  "ti": {
+      "title": "ነዚ Notepad.is ብኸመይ ንጥቀመሉ?",
+      "steps": [
+          "ኣብ notepad.is ብምእታው፣ ኣብቲ ናይ መእተዊ ገጽ ናይ notepad መአረምታ (editor) ክትርእዮ ትኽእል ኢኻ።",
+          "ክትጽሕፎ እትደሊ ክትጽሕፍ ጀምር።",
+          "ነቲ ዘሎ ጽሑፍ ክተመሓይሽ እንተደሊኻ፣ ሰነዳት ናይ ምጽዓን (upload docs) መማረጺ ተጠቐም።",
+          "ናትና Notepad Online ነቲ ዘስታወስካዮ ጽሑፍ ምስ ዝኾነ ሰብ ንከተካፍሎ የፍቅደልካ እዩ። ነቲ ጽሑፍ ንከተካፍሎ ግን ክትኣቱ (log in ክትገብር) ኣለካ።",
+          "ንጽሑፍካ ቅርጺ ንክትህቦ ነቲ ብዙሕ መሳለጥያታት ዘለዎ መአረምታና ተጠቐም። ስእልታት ክትውስኽ፣ ኣርእስታት ክትጥቀም፣ ድምጺ ናብ ጽሑፍ ክትቅይርን ብዙሓት ካልኦት መሳለጥያታትን ክትጥቀም ትኽእል ኢኻ።"
+      ]
+  },
+  "sn": {
+      "title": "Mashandisiro Aunoita Notepad.is Iyi?",
+      "steps": [
+          "Shanyira notepad.is, uye papeji yekutanga, unogona kuona notepad editor.",
+          "Tanga kunyora zvaunoda kunyora.",
+          "Shandisa sarudzo yekuisa magwaro (upload docs) kana uchida kugadzirisa rugwaro rwatovepo.",
+          "Notepad Online yedu inokutenderawo kugovana chinyorwa chako nemunhu wese. Unofanira kupinda (log in) kuti ugogoverana zvinyorwa.",
+          "Shandisa rich editor yedu ine zvakawanda zvingasarudzwa kugadzirisa zvakanyorwa zvako. Unogona kuwedzera mifananidzo, kushandisa misoro yenyaya, kushandura inzwi kuita zvakanyorwa, nezvimwe zvakawanda."
+      ]
+  },
+  "xh": {
+      "title": "Isetyenziswa Kanjani i-Notepad.is?",
+      "steps": [
+          "Ngena ku-notepad.is, kwaye kwiphepha lasekhaya, uza kubona umhleli we-notepad.",
+          "Qala ukubhala le nto ufuna ukuyibhala.",
+          "Sebenzisa ukhetho lokulayisha amaxwebhu (upload docs) ukuba ufuna ukuhlela isicatshulwa esikhoyo.",
+          "i-Notepad Online yethu ikuvumela ukuba wabelane ngenqaku lakho naye nabani na. Kufuneka ungene (log in) ukuze wabelane ngamanqaku.",
+          "Sebenzisa umhleli wethu onezinto ezininzi zokuhlela isicatshulwa sakho. Unokongeza imifanekiso, usebenzise izihloko, uthethe kuguqulelwe kwi-text, kunye nezinye izinto ezininzi."
+      ]
+  },
+  "tl": {
+      "title": "Paano Gamitin ang Notepad.is na Ito?",
+      "steps": [
+          "Bisitahin ang notepad.is, at sa homepage, makikita mo ang notepad editor.",
+          "Magsimulang mag-type ng gusto mong isulat.",
+          "Gamitin ang opsyon na mag-upload ng mga dokumento kung gusto mong i-edit ang isang umiiral na teksto.",
+          "Pinapayagan ka rin ng aming Notepad Online na ibahagi ang tala sa kahit kanino. Kailangan mong mag-log in upang maibahagi ang mga tala.",
+          "Gamitin ang aming tampok na rich editor upang i-format ang iyong teksto. Maaari kang magdagdag ng mga imahe, gumamit ng mga heading, speech to text, at marami pang iba pang mga tampok."
+      ]
+  },
+  "jv": {
+      "title": "Kepiye Cara Nggunakake Notepad.is Iki?",
+      "steps": [
+          "Bukak notepad.is, lan ing kaca ngarep, sampeyan bisa ndeleng editor notepad.",
+          "Mulai ngetik apa sing pengin sampeyan ketik.",
+          "Gunakake pilihan unggah dokumen yen sampeyan pengin ngowahi teks sing wis ana.",
+          "Notepad Online kita uga ngidini sampeyan nuduhake cathetan karo sapa wae. Sampeyan kudu mlebu (log in) kanggo nuduhake cathetan.",
+          "Gunakake editor sugih fitur kita kanggo ngatur format teks sampeyan. Sampeyan bisa nambah gambar, nggunakake judhul, ngowahi ucapan dadi teks, lan akeh fitur liyane."
+      ]
+  },
+  "su": {
+      "title": "Kumaha Cara Ngagunakeun Notepad.is Ieu?",
+      "steps": [
+          "Buka notepad.is, sarta dina kaca utama, anjeun bisa ningali éditor notepad.",
+          "Mimitian ngetik naon anu hoyong anjeun ketik.",
+          "Anggo pilihan unggah dokumén upami anjeun hoyong ngédit téks anu tos aya.",
+          "Notepad Online kami ogé ngamungkinkeun anjeun ngabagi catetan ka saha waé. Anjeun kedah lebet (log in) pikeun ngabagi catetan.",
+          "Anggo éditor beunghar fitur kami pikeun ngaformat téks anjeun. Anjeun tiasa nambihan gambar, nganggo judul, ucapan kana téks, sareng seueur deui fitur sanésna."
+      ]
+  }
 };
 
 export function getHomeHowToCopy(locale: string): HomeHowToCopy {
   return howToByLocale[locale] ?? howToEn;
+}
+
+export type HomeBlogTranslation = {
+  sectionTitle: string;
+  readArticle: string;
+  viewAll: string;
+};
+
+const homeBlogTranslations: Record<string, HomeBlogTranslation> = {
+  "en": {
+      "sectionTitle": "Our blog",
+      "readArticle": "Read article",
+      "viewAll": "View all articles"
+  },
+  "zh": {
+      "sectionTitle": "我们的博客",
+      "readArticle": "阅读文章",
+      "viewAll": "查看所有文章"
+  },
+  "es": {
+      "sectionTitle": "Nuestro blog",
+      "readArticle": "Leer artículo",
+      "viewAll": "Ver todos los artículos"
+  },
+  "ar": {
+      "sectionTitle": "مدونتنا",
+      "readArticle": "قراءة المقال",
+      "viewAll": "عرض جميع المقالات"
+  },
+  "id": {
+      "sectionTitle": "Blog kami",
+      "readArticle": "Baca artikel",
+      "viewAll": "Lihat semua artikel"
+  },
+  "pt": {
+      "sectionTitle": "Nosso blog",
+      "readArticle": "Ler artigo",
+      "viewAll": "Ver todos os artigos"
+  },
+  "fr": {
+      "sectionTitle": "Notre blog",
+      "readArticle": "Lire l'article",
+      "viewAll": "Voir tous les articles"
+  },
+  "ja": {
+      "sectionTitle": "私たちのブログ",
+      "readArticle": "記事を読む",
+      "viewAll": "すべての記事を表示"
+  },
+  "ru": {
+      "sectionTitle": "Наш блог",
+      "readArticle": "Читать статью",
+      "viewAll": "Посмотреть все статьи"
+  },
+  "de": {
+      "sectionTitle": "Unser Blog",
+      "readArticle": "Artikel lesen",
+      "viewAll": "Alle Artikel anzeigen"
+  },
+  "hi": {
+      "sectionTitle": "हमारा ब्लॉग",
+      "readArticle": "लेख पढ़ें",
+      "viewAll": "सभी लेख देखें"
+  },
+  "bn": {
+      "sectionTitle": "আমাদের ব্লগ",
+      "readArticle": "নিবন্ধটি পড়ুন",
+      "viewAll": "সব নিবন্ধ দেখুন"
+  },
+  "ur": {
+      "sectionTitle": "ہمارا بلاگ",
+      "readArticle": "آرٹیکل پڑھیں",
+      "viewAll": "تمام آرٹیکلز دیکھیں"
+  },
+  "tr": {
+      "sectionTitle": "Blogumuz",
+      "readArticle": "Makaleyi oku",
+      "viewAll": "Tüm makaleleri görüntüle"
+  },
+  "ko": {
+      "sectionTitle": "우리 블로그",
+      "readArticle": "아티클 읽기",
+      "viewAll": "모든 아티클 보기"
+  },
+  "vi": {
+      "sectionTitle": "Blog của chúng tôi",
+      "readArticle": "Đọc bài viết",
+      "viewAll": "Xem tất cả bài viết"
+  },
+  "it": {
+      "sectionTitle": "Il nostro blog",
+      "readArticle": "Leggi l'articolo",
+      "viewAll": "Visualizza tutti gli articoli"
+  },
+  "fa": {
+      "sectionTitle": "وبلاگ ما",
+      "readArticle": "خواندن مقاله",
+      "viewAll": "مشاهده همه مقالات"
+  },
+  "th": {
+      "sectionTitle": "บล็อกของเรา",
+      "readArticle": "อ่านบทความ",
+      "viewAll": "ดูบทความทั้งหมด"
+  },
+  "pl": {
+      "sectionTitle": "Nasz blog",
+      "readArticle": "Przeczytaj artykuł",
+      "viewAll": "Zobacz wszystkie artykuły"
+  },
+  "nl": {
+      "sectionTitle": "Onze blog",
+      "readArticle": "Artikel lezen",
+      "viewAll": "Alle artikelen bekijken"
+  },
+  "sv": {
+      "sectionTitle": "Vår blogg",
+      "readArticle": "Läs artikel",
+      "viewAll": "Visa alla artiklar"
+  },
+  "el": {
+      "sectionTitle": "Το blog μας",
+      "readArticle": "Διαβάστε το άρθρο",
+      "viewAll": "Προβολή όλων των άρθρων"
+  },
+  "cs": {
+      "sectionTitle": "Náš blog",
+      "readArticle": "Přečíst článek",
+      "viewAll": "Zobrazit všechny články"
+  },
+  "ro": {
+      "sectionTitle": "Blogul nostru",
+      "readArticle": "Citește articolul",
+      "viewAll": "Vezi toate articolele"
+  },
+  "hu": {
+      "sectionTitle": "Blogunk",
+      "readArticle": "Cikk elolvasása",
+      "viewAll": "Összes cikk megtekintése"
+  },
+  "he": {
+      "sectionTitle": "הבלוג שלנו",
+      "readArticle": "קרא כתבה",
+      "viewAll": "הצג את כל הכתבות"
+  },
+  "da": {
+      "sectionTitle": "Vores blog",
+      "readArticle": "Læs artikel",
+      "viewAll": "Vis alle artikler"
+  },
+  "fi": {
+      "sectionTitle": "Blogimme",
+      "readArticle": "Lue artikkeli",
+      "viewAll": "Näytä kaikki artikkelit"
+  },
+  "no": {
+      "sectionTitle": "Vår blogg",
+      "readArticle": "Les artikkel",
+      "viewAll": "Vis alle artikler"
+  },
+  "sk": {
+      "sectionTitle": "Náš blog",
+      "readArticle": "Prečítať článok",
+      "viewAll": "Zobraziť všetky články"
+  },
+  "bg": {
+      "sectionTitle": "Нашият блог",
+      "readArticle": "Прочетете статията",
+      "viewAll": "Вижте всички статии"
+  },
+  "hr": {
+      "sectionTitle": "Naš blog",
+      "readArticle": "Pročitaj članak",
+      "viewAll": "Prikaži sve članke"
+  },
+  "sr": {
+      "sectionTitle": "Наш блог",
+      "readArticle": "Прочитај чланак",
+      "viewAll": "Прикажи све чланке"
+  },
+  "uk": {
+      "sectionTitle": "Наш блог",
+      "readArticle": "Читати статтю",
+      "viewAll": "Переглянути всі статті"
+  },
+  "ta": {
+      "sectionTitle": "எங்கள் வலைப்பதிவு",
+      "readArticle": "கட்டுரையைப் படியுங்கள்",
+      "viewAll": "அனைத்து கட்டுரைகளையும் காண்க"
+  },
+  "te": {
+      "sectionTitle": "మా బ్లాగ్",
+      "readArticle": "వ్యాసం చదవండి",
+      "viewAll": "అన్ని వ్యాసాలను చూడండి"
+  },
+  "mr": {
+      "sectionTitle": "आमचा ब्लॉग",
+      "readArticle": "लेख वाचा",
+      "viewAll": "सर्व लेख पहा"
+  },
+  "gu": {
+      "sectionTitle": "અમારો બ્લોગ",
+      "readArticle": "લેખ વાંચો",
+      "viewAll": "બધા લેખો જુઓ"
+  },
+  "kn": {
+      "sectionTitle": "ನಮ್ಮ ಬ್ಲಾಗ್",
+      "readArticle": "ಲೇಖನವನ್ನು ಓದಿ",
+      "viewAll": "ಎಲ್ಲಾ ಲೇಖನಗಳನ್ನು ವೀಕ್ಷಿಸಿ"
+  },
+  "ml": {
+      "sectionTitle": "ഞങ്ങളുടെ ബ്ലോഗ്",
+      "readArticle": "ലേഖനം വായിക്കുക",
+      "viewAll": "എല്ലാ ലേഖനങ്ങളും കാണുക"
+  },
+  "si": {
+      "sectionTitle": "අපගේ බ්ලොග් අඩවිය",
+      "readArticle": "ලිපිය කියවන්න",
+      "viewAll": "සියලුම ලිපි බලන්න"
+  },
+  "ne": {
+      "sectionTitle": "हाम्रो ब्लग",
+      "readArticle": "लेख पढ्नुहोस्",
+      "viewAll": "सबै लेखहरू हेर्नुहोस्"
+  },
+  "my": {
+      "sectionTitle": "ကျွန်ုပ်တို့၏ ဘလော့ဂ်",
+      "readArticle": "ဆောင်းပါးကို ဖတ်ရန်",
+      "viewAll": "ဆောင်းပါးအားလုံးကို ကြည့်ရန်"
+  },
+  "km": {
+      "sectionTitle": "ប្លុករបស់យើង",
+      "readArticle": "អានអត្ថបទ",
+      "viewAll": "មើលអត្ថបទទាំងអស់"
+  },
+  "lo": {
+      "sectionTitle": "ບລັອກຂອງພວກເຮົາ",
+      "readArticle": "ອ່ານບົດຄວາມ",
+      "viewAll": "ເບິ່ງບົດຄວາມທັງໝົດ"
+  },
+  "mn": {
+      "sectionTitle": "Манай блог",
+      "readArticle": "Нийтлэл унших",
+      "viewAll": "Бүх нийтлэлийг үзэх"
+  },
+  "ka": {
+      "sectionTitle": "ჩვენი ბლოგი",
+      "readArticle": "სტატიის წაკითხვა",
+      "viewAll": "ყველა სტატიის ნახვა"
+  },
+  "hy": {
+      "sectionTitle": "Մեր բլոգը",
+      "readArticle": "Կարդալ հոդվածը",
+      "viewAll": "Դիտել բոլոր հոդվածները"
+  },
+  "az": {
+      "sectionTitle": "Bloqumuz",
+      "readArticle": "Məqaləni oxu",
+      "viewAll": "Bütün məqalələrə bax"
+  },
+  "sw": {
+      "sectionTitle": "Blogu yetu",
+      "readArticle": "Soma makala",
+      "viewAll": "Tazama makala zote"
+  },
+  "zu": {
+      "sectionTitle": "I-blog yethu",
+      "readArticle": "Funda isihloko",
+      "viewAll": "Buka zonke izihloko"
+  },
+  "af": {
+      "sectionTitle": "Ons blog",
+      "readArticle": "Lees artikel",
+      "viewAll": "Bekyk alle artikels"
+  },
+  "am": {
+      "sectionTitle": "ብሎጋችን",
+      "readArticle": "ጽሁፉን አንብብ",
+      "viewAll": "ሁሉንም ጽሁፎች ይመልከቱ"
+  },
+  "so": {
+      "sectionTitle": "Blog-ga aan ku leenahay",
+      "readArticle": "Akhri maqaalka",
+      "viewAll": "Eeg dhammaan maqaallada"
+  },
+  "yo": {
+      "sectionTitle": "Bọọgụ wa",
+      "readArticle": "Ka àpilẹkọ náà",
+      "viewAll": "Wo gbogbo awọn àpilẹkọ"
+  },
+  "ig": {
+      "sectionTitle": "Blọgụ anyị",
+      "readArticle": "Gụọ edemede",
+      "viewAll": "Lee edemede niile"
+  },
+  "ha": {
+      "sectionTitle": "Shafinmu na bulog",
+      "readArticle": "Karanta labarin",
+      "viewAll": "Duba duk labarai"
+  },
+  "mg": {
+      "sectionTitle": "Ny bilaoginay",
+      "readArticle": "Vakio ny lahatsoratra",
+      "viewAll": "Jereo ny lahatsoratra rehetra"
+  },
+  "uz": {
+      "sectionTitle": "Bizning blogimiz",
+      "readArticle": "Maqolani o'qish",
+      "viewAll": "Barcha maqolalarni ko'rish"
+  },
+  "kk": {
+      "sectionTitle": "Біздің блог",
+      "readArticle": "Мақаланы оқу",
+      "viewAll": "Барлық мақалаларды көру"
+  },
+  "ky": {
+      "sectionTitle": "Биздин блог",
+      "readArticle": "Макаланы окуу",
+      "viewAll": "Бардык макалаларды көрүү"
+  },
+  "tg": {
+      "sectionTitle": "Блоги мо",
+      "readArticle": "Хондани мақола",
+      "viewAll": "Дидани ҳамаи мақолаҳо"
+  },
+  "tk": {
+      "sectionTitle": "Bizň blog",
+      "readArticle": "Makalamy oka",
+      "viewAll": "Ähli makalalary gör"
+  },
+  "ps": {
+      "sectionTitle": "زموږ بلاګ",
+      "readArticle": "مقاله لوستل",
+      "viewAll": "ټولې مقالې لیدل"
+  },
+  "ku": {
+      "sectionTitle": "Blogsa me",
+      "readArticle": "Gotarê bixwîne",
+      "viewAll": "Hemû gotaran bibîne"
+  },
+  "sq": {
+      "sectionTitle": "Blogi ynë",
+      "readArticle": "Lexo artikullin",
+      "viewAll": "Shiko të gjithë artikujt"
+  },
+  "lt": {
+      "sectionTitle": "Mūsų tinklaraštis",
+      "readArticle": "Skaityti straipsnį",
+      "viewAll": "Žiūrėti visus straipsnius"
+  },
+  "lv": {
+      "sectionTitle": "Mūsu emuārs",
+      "readArticle": "Lasīt rakstu",
+      "viewAll": "Skatīt visus rakstus"
+  },
+  "et": {
+      "sectionTitle": "Meie blogi",
+      "readArticle": "Loe artiklit",
+      "viewAll": "Vaata kõiki artikleid"
+  },
+  "is": {
+      "sectionTitle": "Bloggið okkar",
+      "readArticle": "Lesa grein",
+      "viewAll": "Skoða allar greinar"
+  },
+  "ga": {
+      "sectionTitle": "Ár bhlag",
+      "readArticle": "Léigh an t-alt",
+      "viewAll": "Féach ar na hailt go léir"
+  },
+  "cy": {
+      "sectionTitle": "Ein blog",
+      "readArticle": "Darllen yr erthygl",
+      "viewAll": "Gweld yr holl erthyglau"
+  },
+  "eu": {
+      "sectionTitle": "Gure bloga",
+      "readArticle": "Irakurri artikulua",
+      "viewAll": "Ikusi artikulu guztiak"
+  },
+  "ca": {
+      "sectionTitle": "El nostre bloc",
+      "readArticle": "Llegir l'article",
+      "viewAll": "Veure tots els articles"
+  },
+  "gl": {
+      "sectionTitle": "O noso blog",
+      "readArticle": "Ler o artigo",
+      "viewAll": "Ver todos os artigos"
+  },
+  "mt": {
+      "sectionTitle": "Il-blog tagħna",
+      "readArticle": "Aqra l-artiklu",
+      "viewAll": "Ara l-artikoli kollha"
+  },
+  "lb": {
+      "sectionTitle": "Eise Blog",
+      "readArticle": "Artikel liesen",
+      "viewAll": "All Artikele wysen"
+  },
+  "mk": {
+      "sectionTitle": "Нашиот блог",
+      "readArticle": "Прочитај ја статијата",
+      "viewAll": "Прикажи ги сите статии"
+  },
+  "bs": {
+      "sectionTitle": "Naš blog",
+      "readArticle": "Pročitajte članak",
+      "viewAll": "Pogledajte sve članke"
+  },
+  "sl": {
+      "sectionTitle": "Naš blog",
+      "readArticle": "Preberi članek",
+      "viewAll": "Poglej vse članke"
+  },
+  "fj": {
+      "sectionTitle": "Na neitou blogi",
+      "readArticle": "Wilika na tikina qo",
+      "viewAll": "Raica kece na volavola"
+  },
+  "mi": {
+      "sectionTitle": "Tā mātou rangitaki",
+      "readArticle": "Pānuihia te tuhinga",
+      "viewAll": "Tirohia nga tuhinga katoa"
+  },
+  "sm": {
+      "sectionTitle": "Le matou blog",
+      "readArticle": "Faitau le tusitusiga",
+      "viewAll": "Vaʻai uma tala"
+  },
+  "to": {
+      "sectionTitle": "Ko e ʻemau palakami",
+      "readArticle": "Lau ʻa e kupu",
+      "viewAll": "Vakai ki he kotoa ʻo e ngaahi kupu"
+  },
+  "ht": {
+      "sectionTitle": "Blog nou an",
+      "readArticle": "Li atik la",
+      "viewAll": "Gade tout atik yo"
+  },
+  "qu": {
+      "sectionTitle": "Blogniyku",
+      "readArticle": "Qillqata ñawinchay",
+      "viewAll": "Tukuy qillqakunata qhaway"
+  },
+  "ay": {
+      "sectionTitle": "Blog sat ukaxa",
+      "readArticle": "Qillqat liyt'añani",
+      "viewAll": "Taqi qillqatanak uñjañani"
+  },
+  "gn": {
+      "sectionTitle": "Ore blog",
+      "readArticle": "Moñe'ẽ marandu",
+      "viewAll": "Ehecha opaite marandu"
+  },
+  "nv": {
+      "sectionTitle": "Nihi blog",
+      "readArticle": "Naaltsoos bił hahoshichid",
+      "viewAll": "T'áá ałtso naaltsoos bee hodoonih"
+  },
+  "iu": {
+      "sectionTitle": "Allagaqarfivut",
+      "readArticle": "Uqalimaarlugu allaqqusitaq",
+      "viewAll": "Takugit tamarmik allaqqusitat"
+  },
+  "kl": {
+      "sectionTitle": "Blog-iliorsimasavut",
+      "readArticle": "Allaaserisaq atuaruk",
+      "viewAll": "Allaaserisat tamaasa takukkit"
+  },
+  "om": {
+      "sectionTitle": "Blogii keenya",
+      "readArticle": "Barruu dubbisi",
+      "viewAll": "Barruulee hunda ilaali"
+  },
+  "ti": {
+      "sectionTitle": "블로그 (Blog)ናt",
+      "readArticle": "ጽሑፍ አንብብ",
+      "viewAll": "ኩሉ ጽሑፋት ርአ"
+  },
+  "sn": {
+      "sectionTitle": "Blog yedu",
+      "readArticle": "Verenga chinyorwa",
+      "viewAll": "Tarisa zvinyorwa zvese"
+  },
+  "xh": {
+      "sectionTitle": "Ibhlog yethu",
+      "readArticle": "Funda inqaku",
+      "viewAll": "Jonga zonke amanqaku"
+  },
+  "tl": {
+      "sectionTitle": "Ang aming blog",
+      "readArticle": "Basahin ang artikulo",
+      "viewAll": "Tingnan ang lahat ng mga artikulo"
+  },
+  "jv": {
+      "sectionTitle": "Blog kita",
+      "readArticle": "Waca artikel",
+      "viewAll": "Deleng kabeh artikel"
+  },
+  "su": {
+      "sectionTitle": "Blog urang",
+      "readArticle": "Baca tulisan",
+      "viewAll": "Tempo sadaya tulisan"
+  }
+};
+
+export function getHomeBlogTranslation(locale: string): HomeBlogTranslation {
+  return homeBlogTranslations[locale] ?? {
+    sectionTitle: "Our blog",
+    readArticle: "Read article",
+    viewAll: "View all articles"
+  };
 }
