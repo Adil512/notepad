@@ -778,5 +778,680 @@ export const BLOG_TRANSLATIONS: Record<string, {
         ]
       }
     }
+  },
+  ar: {
+    ui: {
+        "metaTitle": "المدونة",
+        "metaDescription": "اقرأ أحدث الأخبار والتحديثات والمقالات حول الإنتاجية، تدوين الملاحظات السريعة، وأدوات الكتابة.",
+        "pageTitle": "المدونة",
+        "newsletterTitle": "لا تفوت أي تحديث",
+        "newsletterDescription": "انضم إلى آلاف الكُتّاب الذين يتلقون استراتيجياتنا الشهرية حول كيفية الحفاظ على تدفق كتابي خالي من المشتتات.",
+        "newsletterPlaceholder": "أدخل بريدك الإلكتروني",
+        "newsletterSubscribe": "اشتراك",
+        "newsletterAlert": "ميزة الاشتراك ستتوفر قريباً!",
+        "noArticles": "لا توجد مقالات حتى الآن. تحقق مرة أخرى قريباً.",
+        "read": "قراءة"
+    },
+    postUi: {
+        "backToBlog": "العودة إلى المدونة",
+        "popularPosts": "المقالات الشائعة",
+        "startWriting": "ابدأ الكتابة",
+        "startWritingDesc": "استخدم دفتر الملاحظات المجاني عبر الإنترنت في المتصفح. لا توجد تثبيتات، مع حفظ تلقائي على جهازك.",
+        "openFreeNotepad": "افتح دفتر الملاحظات المجاني عبر الإنترنت",
+        "relatedPosts": "مقالات ذات صلة",
+        "readPost": "قراءة المقال",
+        "articleInProgress": "المقال قيد الإعداد",
+        "articleInProgressDesc": "نحن بصدد وضع اللمسات الأخيرة على هذا المقال. تصفح فهرس المدونة للاطلاع على مقالات أخرى، أو افتح المحرر وابدأ في كتابة ملاحظاتك الخاصة في هذه الأثناء.",
+        "allPosts": "جميع المقالات",
+        "openNotepad": "افتح دفتر الملاحظات"
+    },
+    posts: {
+      "how-to-create-a-xml-file-in-notepad": {
+        "slug": "how-to-create-a-xml-file-in-notepad",
+        "title": "كيفية إنشـاء ملف XML. في المفكرة عبر الإنترنت",
+        "excerpt": "ملف XML هو عبارة عن نص عادي بهيكل يعتمد على العلامات (Tags). تقوم المفكرة بكتابته دون الحاجة لأي برامج إضافية.",
+        "metaTitle": "كيفية إنشاء ملف .XML في المفكرة عبر الإنترنت (بدون برامج)",
+        "metaDescription": "كيفية إنشاء ملف .XML في المفكرة عبر الإنترنت خطوة بخطوة دون تثبيت أي برامج، مع قواعد العلامات والأخطاء الشائعة لتجنبها قبل حفظه.",
+        "contentHtml": "<p>ملف XML هو عبارة عن نص عادي بهيكل يعتمد على العلامات (Tags). تقوم المفكرة بكتابته دون الحاجة لأي برامج إضافية. المفتاح يكمن في اتباع قواعد العلامات حتى يظل الملف صالحاً بمجرد حفظه.</p><h2 id=\"what-is-an-xml-file\"><strong>ما هو ملف XML؟</strong></h2><p>تخضع كلمة XML لـ Extensible Markup Language (لغة العلامات القابلة لامتداد). وهو يقوم بتخزين البيانات داخل علامات مخصصة تقوم بتعريفها بنفسك، متداخلة لإظهار مدى ارتباط البيانات ببعضها. تستخدم ملفات التكوين (Config files)، ومستشعرات البيانات، وإعدادات التطبيقات هذه اللغة لأن هيكلها سهل القراءة وسهل التحليل بواسطة البرامج الأخرى.</p><p><strong>يبدو ملف XML الأساسي كالتالي:</strong></p><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&lt;person&gt;</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;&lt;name&gt;John&lt;/name&gt;</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;&lt;age&gt;28&lt;/age&gt;</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;&lt;city&gt;New York&lt;/city&gt;</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&lt;/person&gt;</code></pre><h2 id=\"step-by-step-create-an-xml-file-in-notepad\"><strong>خطوة بخطوة: إنشاء ملف XML في المفكرة (Notepad)</strong></h2><h3 id=\"step-1-open-notepad\"><strong>الخطوة 1: فتح المفكرة</strong></h3><p>افتح برنامج المفكرة على حاسوبك، أو استخدم <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/\"> <strong><u>مفكرة مجانية عبر الإنترنت</u></strong></a> إذا كنت تفضل تخطي تطبيق سطح المكتب.</p><h3 id=\"step-2-add-the-xml-declaration\"><strong>الخطوة 2: إضافة إقرار XML</strong></h3><p>ابدأ الملف بهذا السطر:</p><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;</code></pre><p>هذا يخبر أي برنامج يقرأ الملف بإصدار XML وترميز الأحرف المتوقع.</p><h3 id=\"step-3-add-a-root-element\"><strong>الخطوة 3: إضافة عنصر جذري (Root Element)</strong></h3><p>يحتاج كل ملف XML إلى عنصر جذري واحد بالضبط يلتف حول كل شيء آخر.</p><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&lt;catalog&gt;</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&lt;/catalog&gt;</code></pre><h3 id=\"step-4-add-child-elements\"><strong>الخطوة 4: إضافة عناصر فرعية</strong></h3><p>قم بتداخل بياناتك داخل العنصر الجذري باستخدام علامات تقوم بتسميتها بنفسك.</p><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&lt;catalog&gt;</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;&lt;book&gt;</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Sample Book&lt;/title&gt;</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;author&gt;Jane Doe&lt;/author&gt;</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;&lt;/book&gt;</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&lt;/catalog&gt;</code></pre><h3 id=\"step-5-close-every-tag\"><strong>الخطوة 5: إغلاق كل علامة</strong></h3><p>كل علامة فتح تحتاج إلى علامة إغلاق مطابقة، بنفس ترتيب فتحها. العلامة &lt;book&gt; تغلق باستخدام &lt;/book&gt;، وليس قبلها.</p><h3 id=\"step-6-save-with-a-xml-extension\"><strong>الخطوة 6: الحفظ بامتداد .xml</strong></h3><p>اذهب إلى ملف (File)، ثم حفظ باسم (Save As). اختر \"كل الملفات\" (All Files) في قائمة الحفظ كنوع. قم بتسمية الملف بامتداد .xml، على سبيل المثال catalog.xml. ترك الامتداد كـ .txt يعني أن البرنامج الأخرى لن تقرأ الملف كملف XML.</p><h2 id=\"xml-rules-to-remember\"><strong>قواعد XML يجب تذكرها</strong></h2><ul class=\"list-disc pl-6 my-2\"><li><p><strong>عنصر جذري واحد.</strong> كل شيء آخر يتداخل داخله. لا يمكنك امتلاك علامتين في المستوى الأعلى.</p></li><li><p><strong>العلامات تحترم حالة الأحرف (Case-sensitive).</strong> يتم التعامل مع &lt;Name&gt; و &lt;name&gt; كعلامات مختلفة.</p></li><li><p><strong>كل علامة تحتاج إلى إغلاق.</strong> العلامات ذاتية الإغلاق تستخدم شرطة مائلة للأمام، مثل &lt;br/&gt;.</p></li><li><p><strong>الخصائص تحتاج إلى علامات تنصيص.</strong> اكتب &lt;book id=\"1\"&gt;، وليس &lt;book id=1&gt;.</p></li><li><p><strong>تجنب الأحرف الخاصة (Escape characters).</strong> استخدم &amp;amp; لرمز &amp; و &amp;lt; لرمز &lt; و &amp;gt; لرمز &gt; داخل محتوى النص.</p></li></ul><h4 id=\"conclusion\"><strong>الخاتمة</strong></h4><p>ملف <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://www.w3schools.com/xml/xml_whatis.asp\"><strong>XML</strong></a> هو عبارة عن نص منظم في علامات تقوم بتعريفها أنت. ابدأ بالإقرار، أضف عنصرًا جذريًا واحدًا، تداخل بياناتك داخله، أغلق كل علامة، واحفظ الملف بامتداد .xml. اجعل الهيكل مرئيًا أثناء الكتابة، وستكون معظم الأخطاء سهلة الاكتشاف قبل أن تتسبب في أي مشكلة.</p>",
+        "toc": [
+                  {
+                            "id": "what-is-an-xml-file",
+                            "title": "ما هو ملف XML؟"
+                  },
+                  {
+                            "id": "step-by-step-create-an-xml-file-in-notepad",
+                            "title": "خطوة بخطوة: إنشاء ملف XML في المفكرة (Notepad)"
+                  },
+                  {
+                            "id": "step-1-open-notepad",
+                            "title": "الخطوة 1: فتح المفكرة"
+                  },
+                  {
+                            "id": "step-2-add-the-xml-declaration",
+                            "title": "الخطوة 2: إضافة إقرار XML"
+                  },
+                  {
+                            "id": "step-3-add-a-root-element",
+                            "title": "الخطوة 3: إضافة عنصر جذري (Root Element)"
+                  },
+                  {
+                            "id": "step-4-add-child-elements",
+                            "title": "الخطوة 4: إضافة عناصر فرعية"
+                  },
+                  {
+                            "id": "step-5-close-every-tag",
+                            "title": "الخطوة 5: إغلاق كل علامة"
+                  },
+                  {
+                            "id": "step-6-save-with-a-xml-extension",
+                            "title": "الخطوة 6: الحفظ بامتداد .xml"
+                  },
+                  {
+                            "id": "xml-rules-to-remember",
+                            "title": "قواعد XML يجب تذكرها"
+                  },
+                  {
+                            "id": "conclusion",
+                            "title": "الخاتمة"
+                  }
+        ]
+      },
+      "how-to-create-a-bat-file-using-online-notepad": {
+        "slug": "how-to-create-a-bat-file-using-online-notepad",
+        "title": "كيفية إنشاء ملف .BAT باستخدام المفكرة عبر الإنترنت (Online Notepad)",
+        "excerpt": "تعرف على كيفية إنشاء ملف .BAT باستخدام المفكرة عبر الإنترنت (Online Notepad) بسهولة وبدون أي برامج معقدة.",
+        "metaTitle": "كيفية إنشاء ملف .BAT باستخدام المفكرة بدون أي برامج",
+        "metaDescription": "تعلم كيفية إنشاء ملف .BAT باستخدام المفكرة عبر الإنترنت بدون أي برامج. اكتب نصوص ويندوز البرمجية البسيطة، واحفظها بشكل صحيح، وشغّل أمرك الأول في دقائق.",
+        "contentHtml": "<p>ملف .bat هو نص برمجي صغير يقوم بتنفيذ مجموعة من الأوامر على نظام ويندوز تلقائياً. لست بحاجة إلى أي برامج خاصة لكتابته، فبرنامج المفكرة (Notepad) يكفي الغرض.</p><h2 id=\"what-is-a-bat-file\"><strong>ما هو ملف .BAT؟</strong></h2><p>يرمز الحرفان BAT إلى ملفات الدفعات (Batch). يحتوي ملف الدفعات على قائمة من الأوامر التي ينفذها ويندوز بالترتيب عند النقر فوقه مرتين، وهي نفس الأوامر التي تكتبها في موجه الأوامر (Command Prompt) واحداً تلو الآخر. إنها طريقة سريعة لأتمتة المهام المتكررة مثل فتح البرامج، أو نسخ الملفات، أو تشغيل سلسلة من النصوص البرمجية.</p><h2 id=\"step-by-step-create-a-bat-file-in-notepad\"><strong>خطوة بخطوة: إنشاء ملف .BAT في المفكرة</strong></h2><h3 id=\"step-1-open-notepad\"><strong>الخطوة 1: افتح المفكرة</strong></h3><p>افتح برنامج المفكرة على ويندوز، أو اكتب النص البرمجي الخاص بك في <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/\"> <strong><u>مفكرة مجانية عبر الإنترنت</u></strong></a> أولاً ثم الصقه لاحقاً.</p><h3 id=\"step-2-start-with-echo-off\"><strong>الخطوة 2: ابدأ بالأمر @echo off</strong></h3><p>أضف هذا السطر في أعلى الملف:</p><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>@echo off</code></pre><p>هذا يمنع نظام ويندوز من عرض كل أمر أثناء تشغيله، بحيث ترى المخرجات الفعلية فقط.</p><h3 id=\"step-3-write-your-commands\"><strong>الخطوة 3: اكتب الأوامر الخاصة بك</strong></h3><p>أضف كل أمر في سطر منفصل. إليك مثال بسيط ينشئ مجلداً ويفتح المفكرة:</p><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>@echo off</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>echo Creating folder...</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>mkdir MyFolder</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>echo Done!</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>pause\nالخطوة 4: احفظ الملف بامتداد .bat</code></pre><p>اذهب إلى \"ملف\" (File)، ثم \"حفظ باسم\" (Save As). اختر \"كل الملفات\" (All Files) من قائمة \"حفظ كنوع\" (Save as type). قم بتسمية الملف بامتداد .bat، على سبيل المثال setup.bat. بدون هذه الخطوة، سيقوم ويندوز بحفظه كملف .txt ولن يعمل كنص برمجي.</p><h3 id=\"step-5-run-the-file\"><strong>الخطوة 5: تشغيل الملف</strong></h3><p>انقر نقراً مزدوجاً فوق ملف .bat لتشغيله. ستفتح نافذة سوداء لموجه الأوامر (Command Prompt) لتنفذ كل سطر بالترتيب.</p><h2 id=\"common-commands-used-in-batch-files\"><strong>الأوامر الشائعة المستخدمة في ملفات الدفعات</strong></h2><ul class=\"list-disc pl-6 my-2\"><li><p>echo لعرض النصوص على الشاشة.</p></li><li><p>pause لإيقاف النص البرمجي مؤقتاً والانتظار الضغط على أي مفتاح، وهو مفيد لقراءة المخرجات قبل إغلاق النافذة.</p></li><li><p>mkdir لإنشاء مجلد جديد.</p></li><li><p>del لحذف ملف.</p></li><li><p>cd لتغيير الدليل الحالي.</p></li><li><p>cls لمسح الشاشة.</p></li><li><p>start لفتح برنامج أو ملف.</p></li></ul><h4 id=\"conclusion\"><strong>الخاتمة</strong></h4><p>ملف .bat ليس أكثر من قائمة أوامر محفوظة كنص برمجي. اكتب أوامرك في المفكرة، واحفظ الملف بامتداد .bat، وانقر نقراً مزدوجاً لتشغيله. ابدأ بشيء بسيط مثل فتح مجلد، ثم تطور تدريجياً بمجرد أن تشعر بالراحة في التعامل معه.</p>",
+        "toc": [
+                  {
+                            "id": "what-is-a-bat-file",
+                            "title": "ما هو ملف .BAT؟"
+                  },
+                  {
+                            "id": "step-by-step-create-a-bat-file-in-notepad",
+                            "title": "خطوة بخطوة: إنشاء ملف .BAT في المفكرة"
+                  },
+                  {
+                            "id": "step-1-open-notepad",
+                            "title": "الخطوة 1: افتح المفكرة"
+                  },
+                  {
+                            "id": "step-2-start-with-echo-off",
+                            "title": "الخطوة 2: ابدأ بالأمر @echo off"
+                  },
+                  {
+                            "id": "step-3-write-your-commands",
+                            "title": "الخطوة 3: اكتب الأوامر الخاصة بك"
+                  },
+                  {
+                            "id": "step-5-run-the-file",
+                            "title": "الخطوة 5: تشغيل الملف"
+                  },
+                  {
+                            "id": "common-commands-used-in-batch-files",
+                            "title": "الأوامر الشائعة المستخدمة في ملفات الدفعات"
+                  },
+                  {
+                            "id": "conclusion",
+                            "title": "الخاتمة"
+                  }
+        ]
+      },
+      "how-to-create-a-json-file-in-notepad": {
+        "slug": "how-to-create-a-json-file-in-notepad",
+        "title": "كيفية إنشاء ملف .JSON في برنامج المفكرة (Notepad)",
+        "excerpt": "JSON هو نص عادي ذو قواعد صارمة، ويمكن لبرنامج المفكرة كتابته بشكل جيد. الجزء الذي يخطئ فيه الناس هو بناء الجملة وليس الأداة. اجعل الهيكل صحيحاً، وحفظ الملف هو الجزء الأسهل.",
+        "metaTitle": "كيفية إنشاء ملف .JSON في المفكرة (بدون أخطاء)",
+        "metaDescription": "تعلم كيفية إنشاء ملف .JSON في برنامج المفكرة خطوة بخطوة، مع قواعد بناء الجملة التي تبقيه خالياً من الأخطاء قبل حفظه.",
+        "contentHtml": "<p>JSON هو نص عادي ذو قواعد صارمة. يمكن لبرنامج المفكرة كتابته بشكل جيد. الجزء الذي يخطئ فيه الناس هو بناء الجملة وليس الأداة. اجعل الهيكل صحيحاً، وحفظ الملف هو الجزء الأسهل.</p><h2 id=\"what-is-a-json-file\"><strong>ما هو ملف JSON؟</strong></h2><p>تختصر كلمة JSON لـ JavaScript Object Notation. وهي تخزن البيانات كأزواج من المفتاح والقيمة داخل أقواس متعرجة، مع دعم الكائنات المتداخلة والمصفوفات. تستخدمها التطبيقات، وواجهات برمجة التطبيقات (APIs)، وملفات التكوين لأنها خفيفة الوزن وكل لغة برمجة رئيسية يمكنها قراءتها.</p><p><br>يبدو ملف JSON الأساسي كالتالي:</p><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>{</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;\"name\": \"John\",</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;\"age\": 28,</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;\"isActive\": true,</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;\"skills\": [\"writing\", \"editing\"]</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>}</code></pre><h2 id=\"step-by-step-create-a-json-file-in-notepad\"><strong>خطوة بخطوة: إنشاء ملف JSON في برنامج المفكرة</strong></h2><h3 id=\"step-1-open-notepad\"><strong>الخطوة 1: افتح برنامج المفكرة (Notepad)</strong></h3><p>افتَح برنامج المفكرة على حاسوبك، أو استخدم<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/\"> <strong><u>مفكرة مجانية عبر الإنترنت</u></strong></a> من أي متصفح.</p><h3 id=\"step-2-start-with-an-opening-brace\"><strong>الخطوة 2: ابدأ بقوس فتح</strong></h3><p>يبدأ كل ملف JSON بـ { للكائن أو [ للمصفوفة. يبدأ معظم الملفات بكائن.</p><h3 id=\"step-3-add-your-keys-and-values\"><strong>الخطوة 3: أضف مفاتيحك وقيمك</strong></h3><p>اكتب كل مفتاح بين علامتي اقتباس مزدوجتين، يليه نقطتان رأسيتان، ثم القيمة. افصل بين كل زوج بفصلة (فارزة).</p><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>{</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;\"title\": \"Sample File\",</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>&nbsp;&nbsp;\"version\": 1</code></pre><pre class=\"rounded-lg bg-muted p-3 text-sm font-mono my-3\"><code>}</code></pre><h3 id=\"step-4-close-the-file-properly\"><strong>الخطوة 4: اغلق الملف بشكل صحيح</strong></h3><p>طابق كل قوس فتح أو قوس مربع بقوس إغلاق. زوج المفتاح والقيمة الأخير في الكائن أو المصفوفة لا يحتاج إلى فصلة في نهايته.</p><h3 id=\"step-5-save-with-a-json-extension\"><strong>الخطوة 5: احفظ الملف بامتداد .json</strong></h3><p>اذهب إلى ملف (File)، ثم حفظ باسم (Save As). اختر \"كل الملفات\" (All Files) من قائمة \"حفظ كنوع\" (Save as type) المنسدلة. سمِّ الملف بامتداد .json، على سبيل المثال data.json. الحفظ دون تغيير هذه القائمة المنسدلة سيتركك مع ملف .txt لن يتم قراءته كملف JSON.</p><h3 id=\"step-6-validate-before-you-use-it\"><strong>الخطوة 6: تحقق من صحة الملف قبل استخدامه</strong></h3><p>قم لصق الملف في<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/tools/editors/json-editor/\"> <strong><u>محرر JSON</u></strong></a> للتأكد من أنه صالح قبل استخدامه في برنامج نصي أو تطبيق. الفحص السريع هنا يوفر عليك عناء تصحيح الأخطاء لاحقاً.</p><h2 id=\"json-syntax-rules-to-remember\"><strong>قواعد بناء جملة JSON التي يجب تذكرها</strong></h2><ul class=\"list-disc pl-6 my-2\"><li><p><strong>علامات اقتباس مزدوجة فقط.</strong> تحتاج المفاتيح وقيم النصوص إلى علامات اقتباس مزدوجة وليس مفردة.</p></li><li><p><strong>بدون فصلة زائدة في النهاية.</strong> لا يوجد شيء يتبع العنصر الأخير في الكائن أو المصفوفة.</p></li><li><p><strong>بدون تعليقات.</strong> لا يدعم JSON القياسي ملاحظات التعليق مثل // أو /* */ داخل الملف.</p></li><li><p><strong>القيم البوليانية بأحرف صغيرة (lowercase).</strong> استخدم true و false، وليس True أو FALSE.</p></li><li><p><strong>الأرقام لا تحتاج إلى علامات اقتباس.</strong> اكتب 28، وليس \"28\"، إلا إذا كانت القيمة مقصودة كنص.</p></li></ul><h2 id=\"common-errors-and-how-to-avoid-them\"><strong>الأخطاء الشائعة وكيفية تجنبها</strong></h2><p><strong>المشكلة:</strong> فصلة مفقودة بين أزواج المفتاح والقيمة. <strong>الحل:</strong> كل زوج باستثناء الأخير يحتاج إلى فصلة بعده.</p><p><strong>المشكلة:</strong> أقواس غير متطابقة. <strong>الحل:</strong> عدّ أقواس {} و [] الخاصة بك. سيوجهك المدقق إلى السطر الدقيق الذي لا تتطابق فيه.</p><p><strong>المشكلة:</strong> اقتباسات غير مسربة داخل نص. <strong>الحل:</strong> قم بهروب (Escape) الاقتباسات الداخلية بشرطة مائلة عكسية، على سبيل المثال \\\"He said \\\\\\\"hello\\\\\\\"\".</p><p><strong>المشكلة:</strong> مفتاح بدون علامات اقتباس. <strong>الحل:</strong> يجب أن يتم لف كل مفتاح بعلامات اقتباس مزدوجة، حتى البسيطة منها مثل id أو name.</p><h4 id=\"conclusion\"><strong>الخاتمة</strong></h4><p>ملف <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://json.org/\"><strong>JSON</strong></a> هو مجرد نص يتبع تنسيقاً صارماً. اكتب مفاتيحك وقيمك علامات اقتباس مزدوجة، وطابق أقواسك، وتخطي الفصلة الأخيرة، واحفظه بامتداد .json. شغله عبر أداة التحقق مرة واحدة قبل استخدامه، وستكون جاهزاً.</p>",
+        "toc": [
+                  {
+                            "id": "what-is-a-json-file",
+                            "title": "ما هو ملف JSON؟"
+                  },
+                  {
+                            "id": "step-by-step-create-a-json-file-in-notepad",
+                            "title": "خطوة بخطوة: إنشاء ملف JSON في برنامج المفكرة"
+                  },
+                  {
+                            "id": "step-1-open-notepad",
+                            "title": "الخطوة 1: افتح برنامج المفكرة (Notepad)"
+                  },
+                  {
+                            "id": "step-2-start-with-an-opening-brace",
+                            "title": "الخطوة 2: ابدأ بقوس فتح"
+                  },
+                  {
+                            "id": "step-3-add-your-keys-and-values",
+                            "title": "الخطوة 3: أضف مفاتيحك وقيمك"
+                  },
+                  {
+                            "id": "step-4-close-the-file-properly",
+                            "title": "الخطوة 4: اغلق الملف بشكل صحيح"
+                  },
+                  {
+                            "id": "step-5-save-with-a-json-extension",
+                            "title": "الخطوة 5: احفظ الملف بامتداد .json"
+                  },
+                  {
+                            "id": "step-6-validate-before-you-use-it",
+                            "title": "الخطوة 6: تحقق من صحة الملف قبل استخدامه"
+                  },
+                  {
+                            "id": "json-syntax-rules-to-remember",
+                            "title": "قواعد بناء جملة JSON التي يجب تذكرها"
+                  },
+                  {
+                            "id": "common-errors-and-how-to-avoid-them",
+                            "title": "الأخطاء الشائعة وكيفية تجنبها"
+                  },
+                  {
+                            "id": "conclusion",
+                            "title": "الخاتمة"
+                  }
+        ]
+      },
+      "how-to-create-a-csv-file-in-notepad": {
+        "slug": "how-to-create-a-csv-file-in-notepad",
+        "title": "كيفية إنشاء ملف CSV في المفكرة (Notepad)",
+        "excerpt": "ملف CSV هو عبارة عن نص عادي فقط. هذا يعني أنك لست بحاجة إلى Excel أو Google Sheets لإنشائه. المفكرة (Notepad)، أو مفكرة سريعة عبر الإنترنت، تفي بالغرض في خطوات معدودة.",
+        "metaTitle": "كيفية إنشاء ملف .CSV في المفكرة (Notepad) [بخطوات سريعة]",
+        "metaDescription": "تعلم كيفية إنشاء ملف .CSV في المفكرة في خطوات بسيطة وسريعة. لست بحاجة إلى برامج جداول بيانات - فقط نصوص عادية والتنسيق الصحيح",
+        "contentHtml": "<p>ملف CSV هو عبارة عن نص عادي فقط. هذا يعني أنك لست بحاجة إلى Excel أو Google Sheets لإنشائه. المفكرة (Notepad)، أو<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/\"> <strong><u>مفكرة سريعة عبر الإنترنت</u></strong></a>، تفي بالغرض في خطوات معدودة.</p><h2 id=\"what-is-a-csv-file\"><strong>ما هو ملف CSV؟</strong></h2><p>يختصر مصطلح CSV القيم المفصولة بفواصل (Comma-Separated Values). وهو يخزن البيانات في صفوف، حيث يتم فصل كل قيمة في الصف بواسطة فاصلة. تقرأ تطبيقات الجداول البيانية، وقواعد البيانات، والبرامج النصية هذا التنسيق، مما يجعله أحد أكثر الطرق شيوعاً لنقل البيانات بين الأدوات المختلفة.</p><p><strong>يبدو ملف CSV البسيط هكذا:</strong></p><p>Name, Age, City</p><p>John,28, New York</p><p>Sara,24, London</p><p></p><p>كل سطر يمثل صفاً. وكل فاصلة تحدد عموداً جديداً.</p><h2 id=\"step-by-step-create-a-csv-file-in-notepad\"><strong>خطوة بخطوة: إنشاء ملف CSV في المفكرة (Notepad)</strong></h2><h3 id=\"step-1-open-notepad\"><strong>الخطوة 1: افتح المفكرة (Notepad)</strong></h3><p>افتح برنامج المفكرة على جهاز الكمبيوتر الخاص بك، أو استخدم<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/\"> <strong><u>مفكرة مجانية عبر الإنترنت</u></strong></a> إذا كنت تريد تخطي تطبيق سطح المكتب.</p><h3 id=\"step-2-type-your-column-headers\"><strong>الخطوة 2: اكتب رؤوس الأعمدة الخاصة بك</strong></h3><p>اكتب رؤوس الأعمدة في السطر الأول، مفصولة بفواصل. على سبيل المثال:</p><p>Product, Price, Quantity</p><h3 id=\"step-3-add-your-data\"><strong>الخطوة 3: أضف بياناتك</strong></h3><p>أضف كل صف من البيانات في سطر جديد، مع الحفاظ على نفس ترتيب رؤوس الأعمدة.</p><p>Product, Price, Quantity</p><p>Laptop,850,5</p><p>Mouse,20,30</p><p>Keyboard,45,15</p><h3 id=\"step-4-save-the-file-with-a-csv-extension\"><strong>الخطوة 4: احفظ الملف بامتداد .csv</strong></h3><p>اذهب إلى ملف (File)، ثم حفظ باسم (Save As). في قائمة \"حفظ كنوع\" (Save as type)، اختر كل الملفات (All Files). قم بتسمية ملفك بامتداد .csv، على سبيل المثال inventory.csv. إذا تخطيت هذه الخطوة، فسوف تحفره المفكرة كملف .txt، ولن يتم قراءته كجدول بيانات.</p><h3 id=\"step-5-open-and-check-the-file\"><strong>الخطوة 5: افتح الملف وتحقق منه</strong></h3><p>افتح الملف في Excel أو Google Sheets أو أي تطبيق جداول بيانات للتأكد من أن الأعمدة والصفوف تصطف بالشكل الذي تتوقعه.</p><h2 id=\"common-mistakes-to-avoid\"><strong>الأخطاء الشائعة التي يجب تجنبها</strong></h2><ul class=\"list-disc pl-6 my-2\"><li><p><strong>فواصل إضافية في القيمة.</strong> إذا كانت القيمة نفسها تحتوي على فاصلة، قم بوضعها بين علامتي تنصيص مزدوجة، مثل \"New York, NY\". وإلا فسوف تنقسم إلى عمودين عن طريق الخطأ.</p></li><li><p><strong>أعمدة غير متسقة.</strong> يحتاج كل صف إلى نفس عدد القيم الموجودة في صف الرأس. الفاصلة المفقودة تفسد الصف بأكمله.</p></li><li><p><strong>امتداد ملف خاطئ.</strong> الحفظ بصيغة .txt بدلاً من .csv يعني أن تطبيقات الجداول البيانية لن تفتحه بشكل صحيح.</p></li><li><p><strong>مسافات إضافية بعد الفواصل.</strong> تقرأ بعض الأدوات المسافة التي تلي الفاصلة كجزء من القيمة. اجعل الفواصل متلاصقة مع القيمة التالية ما لم يكن تطبيقك المستهدف يتوقع وجود مسافات.</p></li></ul><h2 id=\"quick-tips\"><strong>نصائح سريعة</strong></h2><ul class=\"list-disc pl-6 my-2\"><li><p>احتفظ بصف واحد في كل سطر. لا تقسم الصف الواحد على سطرين.</p></li><li><p>استخدم صف رؤوس الأعمدة حتى يعرف أي شخص يفتح الملف ما يعنيه كل عمود.</p></li><li><p>إذا كنت تنشئ ملف CSV كبيرًا، فاكتبه في تطبيق جداول بيانات أولاً، ثم قم تصديره إلى CSV، بدلاً من كتابة مئات الصفوف يدوياً.</p></li><li><p>هل لديك بيانات في Excel بالفعل وتريدها بصيغة CSV، أو العكس؟ استخدم<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/tools/excel/csv-to-excel/\"> <strong><u>محول CSV إلى Excel</u></strong></a> مجاني بدلاً من إعادة كتابة كل شيء.</p></li></ul><h4 id=\"conclusion\"><strong>الخاتمة</strong></h4><p>ملف <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://en.wikipedia.org/wiki/Comma-separated_values\"><strong><u>CSV</u></strong></a> ليس أكثر من نص مفصول بفواصل ومحفوظ بالامتداد الصحيح. تتعامل معه المفكرة دون أي برامج إضافية. اكتب رؤوس الأعمدة، وأضف صفوفك، واحفظه بصيغة .csv، وسيكون جاهزاً للفتح في أي أداة جداول بيانات.</p>",
+        "toc": [
+                  {
+                            "id": "what-is-a-csv-file",
+                            "title": "ما هو ملف CSV؟"
+                  },
+                  {
+                            "id": "step-by-step-create-a-csv-file-in-notepad",
+                            "title": "خطوة بخطوة: إنشاء ملف CSV في المفكرة (Notepad)"
+                  },
+                  {
+                            "id": "step-1-open-notepad",
+                            "title": "الخطوة 1: افتح المفكرة (Notepad)"
+                  },
+                  {
+                            "id": "step-2-type-your-column-headers",
+                            "title": "الخطوة 2: اكتب رؤوس الأعمدة الخاصة بك"
+                  },
+                  {
+                            "id": "step-3-add-your-data",
+                            "title": "الخطوة 3: أضف بياناتك"
+                  },
+                  {
+                            "id": "step-4-save-the-file-with-a-csv-extension",
+                            "title": "الخطوة 4: احفظ الملف بامتداد .csv"
+                  },
+                  {
+                            "id": "step-5-open-and-check-the-file",
+                            "title": "الخطوة 5: افتح الملف وتحقق منه"
+                  },
+                  {
+                            "id": "common-mistakes-to-avoid",
+                            "title": "الأخطاء الشائعة التي يجب تجنبها"
+                  },
+                  {
+                            "id": "quick-tips",
+                            "title": "نصائح سريعة"
+                  },
+                  {
+                            "id": "conclusion",
+                            "title": "الخاتمة"
+                  }
+        ]
+      },
+      "how-to-edit-json-online": {
+        "slug": "how-to-edit-json-online",
+        "title": "كيفية تعديل ملفات JSON عبر الإنترنت بدون تثبيت برامج",
+        "excerpt": "محرر JSON هو أداة تتيح لك كتابة وقراءة والتحقق من بيانات JSON. JSON تعني ترميز كائن JavaScript.",
+        "metaTitle": "كيفية تعديل JSON عبر الإنترنت بدون تثبيت برامج [الطريقة الأسهل]",
+        "metaDescription": "قم بتعديل ملفات JSON عبر الإنترنت دون الحاجة لتثبيت أي برامج. قم بتنسيق، والتحقق، وضغط كود JSON مباشرة في متصفحك عبر هذا الدليل المجاني خطوة بخطوة.",
+        "contentHtml": "<p>أنت لست بحاجة إلى بيئة تطور متكاملة (IDE) أو تطبيق سطح مكتب لإصلاح ملف JSON معطوب. <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/tools/editors/json-editor/\"> <strong><u>محرر JSON</u></strong></a> الذي يعمل مباشرة في متصفحك ينجز المهمة في ثوانٍ، مع ميزات مدمجة لتلوين الكود، التحقق من الصحة، والتنسيق.</p><h2 id=\"what-is-a-json-editor\"><strong>ما هو محرر JSON؟</strong></h2><p>محرر JSON هو أداة تتيح لك كتابة وقراءة والتحقق من بيانات JSON. JSON تعني JavaScript Object Notation (ترميز كائن JavaScript). إنه التنسيق الذي تستخدمه معظم واجهات برمجة التطبيقات (APIs)، وملفات التكوين، والتطبيقات لتخزين البيانات المنظمة كأزواج من المفتاح والقيمة.</p><p>يقوم محرر JSON الجيد بثلاثة أمور: يوضح الصيغة بحيث يسهل قراءة الهيكل، ويتحقق من البيانات أثناء الكتابة لتكتشف الأخطاء على الفور، ويهيكل الملف بحيث يسهل تتبع الكائنات والمصفوفات المتداخلة.</p><h2 id=\"why-edit-json-online-instead-of-installing-software\"><strong>لماذا تعدل JSON عبر الإنترنت بدلاً من تثبيت البرامج؟</strong></h2><p>تثبيت تطبيق مححر JSON أو إضافة لمحرر الكواد يستغرق وقتاً قد لا تملكه عندما تحتاج فقط إلى إصلاح ملف واحد. تعديل JSON عبر الإنترنت يتخطى هذه الخطوة.</p><ul class=\"list-disc pl-6 my-2\"><li><p>بدون تحميل، وبدون إعداد. افتح الصفحة وابدأ الكتابة فوراً.</p></li><li><p>يعمل على أي جهاز مزود بمتصفح، بما في ذلك أجهزة Chromebook والأجهزة اللوحية.</p></li><li><p>لا شيء ليتم تحديثه. الأداة دائماً في أحدث إصدار لها.</p></li><li><p>تبقى بياناتك في متصفحك بدلاً من رفعها إلى الخادم (السيرفر).</p></li><li><p>أسرع للتعديلات الفردية مقارنة بفتح محرّر أكواد كامل لمجرد التحقق من ملف تكوين.</p></li></ul><h2 id=\"step-by-step-edit-json-online\"><strong>خطوة بخطوة: تعديل JSON عبر الإنترنت</strong></h2><p>إليك كيفية تنسيق، والتحقق من صحة، وتنظيف ملفات JSON باستخدام <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/tools/editors/json-editor/\"> <strong><u>محرر JSON عبر الإنترنت</u></strong></a>:</p><h3 id=\"step-1-open-the-json-editor\"><strong>الخطوة 1: افتح محرر JSON</strong></h3><p>انتقل إلى صفحة <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/tools/editors/json-editor/\"> <u>محرر JSON</u></a>. لا يلزم أي تسجيل.</p><h3 id=\"step-2-paste-your-json\"><strong>الخطوة 2: الصق كود JSON الخاص بك</strong></h3><p>الصق بيانات JSON الخاصة بك في المحرر. يمكن أن يكون استجابة لـ API، أو ملف تكوين، أو شيئاً تكتبه من الصفر.</p><h3 id=\"step-3-check-the-validity-badge\"><strong>الخطوة 3: تحقق من شارة الصلاحية</strong></h3><p>انظر إلى شارة الحالة في الزاوية العلوية اليمنى. تقرأ \"Valid JSON\" عندما يكون الهيكل صحيحاً. إذا كان هناك خطأ ما، تتغير الشارة وتوجهك نحو المشكلة حتى تتمكن من إصلاحها قبل أن تتسبب في تعطيل تطبيقك أو السكريبت الخاص بك.</p><h3 id=\"step-4-format-the-json\"><strong>الخطوة 4: تنسيق JSON</strong></h3><p>انقر فوق \"تنسيق\" (Format) لإضافة مسافات بادئة وفواصل أسطر للملف. هذا يحول كتلة نصية كثيفة إلى هيكل يمكنك قراءته بالفعل، مع وجود كل مفتاح وقيمة في سطر خاص به.</p><h3 id=\"step-5-minify-the-json\"><strong>الخطوة 5: ضغط JSON (تصغير الحجم)</strong></h3><p>انقر فوق \"تصغير\" (Minify) عندما تحتاج إلى العكس: نسخة مدمجة بدون مسافات إضافية أو فواصل أسطر. هذا هو ما تحتاجه قبل إرسال JSON إلى الخادم أو تخزينه في ملف أصغر حجماً.</p><h3 id=\"step-6-copy-the-result\"><strong>الخطوة 6: انسخ النتيجة</strong></h3><p>انقر فوق \"نسخ\" (Copy) للحصول على كود JSON المنسق أو المضغوط ولصقه أينما احتجت إليه، سواء كان ذلك في ملف تكوين، أو سكريبت، أو طلب API.</p><h2 id=\"understanding-the-editor-features\"><strong>فهم ميزات المحرر</strong></h2><ul class=\"list-disc pl-6 my-2\"><li><p><strong>تلوين الصيغة (Syntax highlighting)</strong>: تحظى المفتاح، والقيم النصية، والأرقام، والقيم المنطقية (booleans) بلون خاص بها، مما يتيح لك فحص الهيكل دون الحاجة لقراءة كل حرف.</p></li><li><p><strong>التحقق الفوري</strong>: يتحقق المحرر من كود JSON الخاص بك أثناء الكتابة ويحدد الأخطاء قبل أن تقوم بحفظ الملف أو إرساله.</p></li><li><p><strong>الحفظ التلقائي</strong>: يتم حفظ عملك تلقائياً أثناء التقدم، لذا فإن إغلاق علامة تبحث لن يجعلك تفقد تعديلاتك.</p></li><li><p><strong>السمات الفاتحة، والداكنة، ونظام التشغيل</strong>: قم بتبديل وضع المحرر ليناسب شاشتك ويقلل من إجهاد العين خلال جلسات التعديل الطويلة.</p></li><li><p><strong>المعالجة المحلية</strong>: يظل كود JSON الخاص بك داخل متصفحك. لا يتم إرسال أي شيء إلى الخادم لمجرد تنسيقه أو التحقق من صحته.</p></li></ul><h2 id=\"common-json-errors-and-how-to-fix-them\"><strong>أخطاء JSON الشائعة وكيفية إصلاحها</strong></h2><p><strong>المشكلة:</strong> فاصلة زائدة (Trailing comma) بعد العنصر الأخير في كائن أو مصفوفة. <strong>الحل:</strong> قم بإزالة الفاصلة. لا يسمح JSON بوجود فاصلة بعد زوج المفتاح والقيمة الأخير.</p><p><strong>المشكلة:</strong> استخدام علامات تنصيص مفردة بدلاً من المزدوجة. <strong>الحل:</strong> يتطلب JSON استخدام علامات تنصيص مزدوجة حول المفتاح والقيم النصية. علامات التنصيص المفردة ستتسبب في تعطيل الملف.</p><p><strong>المشكلة:</strong> أقواس مفقودة أو غير متطابقة. <strong>الحل:</strong> قم بحعد أقواس الفتح والإغلاق {} و []. سيشير المدقق إلى السطر الذي ينكسر فيه الهيكل.</p><p><strong>المشكلة:</strong> أحرف خاصة غير مهربة داخل النص. <strong>الحل:</strong> قم بترميز الأحرف مثل علامات التنصيص والشرطة المائلة العكسية باستخدام شرطة مائلة عكسية، على سبيل المثال \\\" أو \\\\.</p><p><strong>المشكلة:</strong> ترك تعليق زائد في الملف. <strong>الحل:</strong> لا يدعم تنسيق JSON القياسي التعليقات. قم بإزالة أي ملاحظات بصيغة // أو /* */ قبل التحقق من الصحة.</p><h2 id=\"tips-for-editing-json-online\"><strong>نصائح لتعديل JSON عبر الإنترنت</strong></h2><ul class=\"list-disc pl-6 my-2\"><li><p>قم بتنسيق الملف أولاً لكي تتمكن من اكتشاف الأخطاء بسهولة أكبر.</p></li><li><p>تحقق من صحة الملف قبل ضغطه وليس بعده. من الصعب قراءة رسائل الخطأ في ملف مضغوط.</p></li><li><p>احتفظ بننسخة منسقة للرجوع إليها ونسخة مضغوطة للإنتاج.</p></li><li><p>تحقق جيداً من الكائنات والمصفوفات المتداخلة. معظم أخطاء JSON تحدث على عمق بضعة مستويات، وليس في القمة.</p></li></ul><h4 id=\"faqs\"><strong>الأسئلة الشائعة&nbsp;</strong></h4><p><strong>هل أضطر لتثبيت أي شيء لتعديل JSON عبر الإنترنت؟</strong> لا. يعمل محرر JSON القائم على المتصفح بدون أي تنزيل أو تثبيت. افتح الصفحة وابدأ التعديل.</p><p><strong>هل تعديل JSON عبر الإنترنت آمن؟</strong> نعم، طالما أن المحرر يعالج بياناتك محلياً في المتصفح بدلاً من رفعها إلى الخادم. تحقق من ذلك قبل لصق أي بيانات حساسة.</p><p><strong>ما الفرق بين تنسيق وضغط (Minifying) كود JSON؟</strong> يضيف التنسيق مسافات بادئة وفواصل أسطر لجعل الملف سهل القراءة. بينما يزيل الضغط المسافات الإضافية وفواصل الأسطر ليكون حجم الملف أصغر ما يمكن، وهو ما تحتاجه قبل إرساله عبر الشبكة.</p><p><strong>هل يمكنني تعديل ملفات JSON الكبيرة عبر الإنترنت؟</strong> نعم، على الرغم من أن الملفات الكبيرة جداً قد يكون التعامل معها أسهل إذا تم تجزئتها بدلاً من تعديلها دفعة واحدة.</p><h4 id=\"conclusion\"><strong>الخاتمة</strong></h4><p>تعديل ملفات JSON لا يتطلب إعداداً معقداً. محرر قائم على المتصفح مع ميزات التنسيق والتحقق والتصغير المدمجة يغطي معظم ما ستحتاج إلى القيام به مع أي ملف JSON. جرب <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/tools/editors/json-editor/\"> <strong><u>محرر JSON المجاني عبر الإنترنت</u></strong></a> وأصلح ملفك القادم في أقل من دقيقة.</p>",
+        "toc": [
+                  {
+                            "id": "what-is-a-json-editor",
+                            "title": "ما هو محرر JSON؟"
+                  },
+                  {
+                            "id": "why-edit-json-online-instead-of-installing-software",
+                            "title": "لماذا تعدل JSON عبر الإنترنت بدلاً من تثبيت البرامج؟"
+                  },
+                  {
+                            "id": "step-by-step-edit-json-online",
+                            "title": "خطوة بخطوة: تعديل JSON عبر الإنترنت"
+                  },
+                  {
+                            "id": "step-1-open-the-json-editor",
+                            "title": "الخطوة 1: افتح محرر JSON"
+                  },
+                  {
+                            "id": "step-2-paste-your-json",
+                            "title": "الخطوة 2: الصق كود JSON الخاص بك"
+                  },
+                  {
+                            "id": "step-3-check-the-validity-badge",
+                            "title": "الخطوة 3: تحقق من شارة الصلاحية"
+                  },
+                  {
+                            "id": "step-4-format-the-json",
+                            "title": "الخطوة 4: تنسيق JSON"
+                  },
+                  {
+                            "id": "step-5-minify-the-json",
+                            "title": "الخطوة 5: ضغط JSON (تصغير الحجم)"
+                  },
+                  {
+                            "id": "step-6-copy-the-result",
+                            "title": "الخطوة 6: انسخ النتيجة"
+                  },
+                  {
+                            "id": "understanding-the-editor-features",
+                            "title": "فهم ميزات المحرر"
+                  },
+                  {
+                            "id": "common-json-errors-and-how-to-fix-them",
+                            "title": "أخطاء JSON الشائعة وكيفية إصلاحها"
+                  },
+                  {
+                            "id": "tips-for-editing-json-online",
+                            "title": "نصائح لتعديل JSON عبر الإنترنت"
+                  },
+                  {
+                            "id": "faqs",
+                            "title": "الأسئلة الشائعة"
+                  },
+                  {
+                            "id": "conclusion",
+                            "title": "الخاتمة"
+                  }
+        ]
+      },
+      "create-ini-files-in-notepad": {
+        "slug": "create-ini-files-in-notepad",
+        "title": "كيفية إنشاء ملفات INI. في المفكرة: أسهل دليل على الإطلاق",
+        "excerpt": "يُستخدم ملف INI. في المفكرة لتخزين وإدارة إعدادات البرامج بنص عادي بحيث يسهل قراءتها وفهمها.",
+        "metaTitle": "كيفية إنشاء ملفات INI. في المفكرة: أسهل دليل على الإطلاق",
+        "metaDescription": "تعرف على كيفية إنشاء ملفات INI. في المفكرة: هذا هو أسهل دليل على الإطلاق لإنشاء ملف .ini باستخدام المفكرة.",
+        "contentHtml": "<p>يُستخدم ملف INI. في <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/\"><strong>المفكرة (Notepad)</strong></a> لتخزين وإدارة إعدادات البرامج بنص عادي بحيث يسهل قراءتها وفهمها. فهو يحافظ على تنظيم الإعدادات ليسهل على المستخدمين فتحها وتعديلها.</p><p>تستخدم العديد من برامج ويندوز ملفات INI. لتخزين إعدادات المستخدم والتفضيلات وخيارات البرنامج.</p><h2 id=\"what-is-an-ini-file\"><strong>ما هو ملف INI.؟</strong></h2><p>ملف INI. (اختصار لـ Initialization file أو ملف التهيئة) هو ملف نصي يُستخدم لتخزين وإدارة البرنامج بطريقة يسهل قراءتها وفهمها.</p><p>يمكنك رؤيتها بأسماء مثل:</p><ul class=\"list-disc pl-6 my-2\"><li><p>config.ini</p></li><li><p>settings.ini</p></li><li><p>Appname.ini</p></li></ul><h2 id=\"why-create-ini-files\"><strong>لماذا نقوم بإنشاء ملفات INI.؟</strong></h2><p>يقوم الأشخاص بإنشاء ملفات INI. لأسباب عديدة:</p><ul class=\"list-disc pl-6 my-2\"><li><p>تغيير إعدادات البرامج</p></li><li><p>ضبط إعدادات الألعاب</p></li><li><p>حفظ معلومات تسجيل الدخول أو مسارات الملفات</p></li><li><p>إنشاء إعدادات التطبيقات</p></li><li><p>صنع أدوات أو نصوص برمجية صغيرة</p></li><li><p>إصلاح مشاكل البرامج عن طريق تغيير الإعدادات</p></li></ul><h2 id=\"what-tools-do-you-need-to-create-an-ini-file\"><strong>ما هي الأدوات التي تحتاجها لإنشاء ملف INI.؟<br></strong></h2><ul class=\"list-disc pl-6 my-2\"><li><p>المفكرة (Notepad) (وهي تأتي مثبتة مسبقاً في جميع إصدارات ويندوز)</p></li><li><p>جهاز كمبيوتر مكتبي أو محمول</p></li><li><p>مهارة أساسية في الكتابة</p></li></ul><p>هذا كل شيء؛ لا يلزم وجود أي معرفة برمجية.</p><h3 id=\"step-by-step-create-an-ini-file-in-notepad\"><strong>خطوة بخطوة: إنشاء ملف INI. في المفكرة</strong></h3><p>اتبع هذه الخطوات الثماني السهلة لإنشاء ملف INI. في المفكرة:</p><h3 id=\"step-1-open-notepad\"><strong>الخطوة 1: افتح المفكرة</strong></h3><ul class=\"list-disc pl-6 my-2\"><li><p>افتح المفكرة</p></li><li><p>للقيام بذلك، يمكنك ببساطة الضغط على مفتاح ويندوز + S</p></li><li><p>سيفتح خيار البحث، اكتب Notepad</p></li></ul><h3 id=\"step-2-write-simple-ini-content\"><strong>الخطوة 2: اكتب محتوى INI. بسيط</strong></h3><ul class=\"list-disc pl-6 my-2\"><li><p>اكتب محتوى ملف INI. داخل المفكرة مثل:</p></li></ul><p><strong>&nbsp;[General]</strong></p><p><strong>username=John</strong></p><p><strong>theme=dark</strong></p><p><strong>language=English</strong></p><p></p><p><strong>[Display]</strong></p><p><strong>width=1920</strong></p><p><strong>height=1080</strong></p><p><strong>fullscreen=true</strong></p><p><strong>[Audio]</strong></p><p><strong>volume=80</strong></p><p><strong>mute=false</strong></p><h3 id=\"step-3-click-on-file\"><strong>الخطوة 3: اضغط على ملف (File)</strong></h3><ul class=\"list-disc pl-6 my-2\"><li><p>بمجرد كتابة محتوى INI.</p></li><li><p>اضغط على الزاوية العلوية اليسرى ثم اضغط على خيار حفظ باسم (Save As)</p></li></ul><h3 id=\"step-4-choose-save-location\"><strong>الخطوة 4: اختر موقع الحفظ</strong></h3><ul class=\"list-disc pl-6 my-2\"><li><p>يمكنك اختيار أي موقع لحفظ محتوى ملف INI.، مثل سطح المكتب، أو المجلدات، أو التنزيلات، إلخ.</p></li><li><p>بمجرد تحديد الموقع، اضغط فقط على خيار الحفظ. سيتم حفظ ملف INI. هناك، ولكن قبل الحفظ، قم بتغيير اسم الملف والمسار.</p></li></ul><h3 id=\"step-5-change-file-name\"><strong>الخطوة 5: تغيير اسم الملف</strong></h3><p>تعد هذه واحدة من أهم الخطوات، وعادةً ما يرتكب المطورون أخطاءً هنا<strong>:</strong></p><ul class=\"list-disc pl-6 my-2\"><li><p>بمجرد اختيار الملف الذي يحتوي على محتوى INI.</p></li><li><p>يجب عليك حفظ الاسم بامتداد \".INI\"، مثل config.INI</p></li></ul><h3 id=\"step-6-change-save-type\">&nbsp;<strong>الخطوة 6: تغيير نوع الحفظ</strong></h3><p>في نوع حفظ الملف، يمكنك العثور على خيارين:</p><ol class=\"list-decimal pl-6 my-2\"><li><p><strong>كافة الملفات (All Files (*.*))</strong></p></li><li><p><strong>مستندات نصية (*.txt)</strong></p></li></ol><p>يجب عليك اختيار كافة الملفات (All Files) ثم الضغط على خيار الحفظ.<br></p><h3 id=\"step-7-save-the-file\"><strong>الخطوة 7: حفظ الملف</strong></h3><ul class=\"list-disc pl-6 my-2\"><li><p>الآن، اضغط على خيار الحفظ</p></li><li><p>تم إنشاء ملف INI. الخاص بك بنجاح</p></li></ul><h3 id=\"step-8-check-your-file\"><strong>الخطوة 8: تحقق من ملفك</strong></h3><p>للتحقق مما إذا كان قد تم إنشاء ملفك بنجاح أم لا، قم بتنفيذ هذه الخطوات:</p><ul class=\"list-disc pl-6 my-2\"><li><p>اذهب إلى الموقع الذي حفظت فيه ملف .ini</p></li><li><p>سترى اسماً لملف محفوظ مثل config.INI.</p></li><li><p>إذا رأيت اسماً مختلفاً للملف محفوظاً بامتداد آخر غير .ini، فهذا يعني أن الملف قد حُفظ بشكل غير صحيح.</p></li><li><p>تأكد من أن الملف المحفوظ ينتهي بـ .ini؛ وإلا فلن يعمل كملف إعدادات.</p></li></ul><h2 id=\"tips-for-working-with-ini-files\"><strong>نصائح للتعامل مع ملفات INI.</strong></h2><ul class=\"list-disc pl-6 my-2\"><li><p>استخدم اسماً بسيطاً للملفات، ولا تضف رموزاً خاصة يصعب تذكرها</p></li><li><p>احفظ الملف بتنسيق UTF-8</p></li><li><p>تحقق من ملفك مرة أخرى بعد إجراء التغييرات</p></li><li><p>أضف ملاحظات إذا لزم الأمر</p></li></ul><h2 id=\"common-problems-and-solutions\"><strong>المشاكل الشائعة والحلول</strong></h2><p><strong>المشكلة:</strong> حفظ الملف بامتداد .txt أو .html بدلاً من .ini</p><p><strong>الحل:</strong> احفظ الملف دائماً بامتداد .ini<br></p><p><strong>المشكلة:</strong> البرنامج لا يقرأ الملف</p><p><strong>الحل:</strong> تحقق من وجود أخطاء إملائية وتأكد أيضاً من عدم وجود مسافات إضافية.</p><p></p><p><strong>المشكلة:</strong> الرموز الخاصة لا تظهر بشكل صحيح.</p><p><strong>الحل:</strong> احفظ الملف بتنسيق UTF-8. حاول دائماً إضافة أحرف إنجليزية بسيطة وتجنب استخدام الرموز الخاصة.</p><h2 id=\"can-we-create-a-ini-file-using-online-notepad\">هل يمكننا إنشاء ملف INI. باستخدام مفكرة عبر الإنترنت؟</h2><p>لا، لا يمكنك مباشرة إنشاء ملف INI. باستخدام أدوات <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/\"><strong>المفكرة المجانية عبر الإنترنت</strong></a>. لهذا، يجب عليك استخدام تطبيق المفكرة الموجود على سطح المكتب فقط.</p><h3 id=\"conclusion\"><strong>الخلاصة</strong></h3><p>إنشاء ملف INI. أمر بسيط للغاية في المفكرة. بمجرد إتقان التنسيق البسيط والطريقة الصحيحة لحفظها، ستتمكن من تكوين إعدادات أي برنامج يدعم ملفات INI. تقريباً.</p>",
+        "toc": [
+                  {
+                            "id": "what-is-an-ini-file",
+                            "title": "ما هو ملف INI.؟"
+                  },
+                  {
+                            "id": "why-create-ini-files",
+                            "title": "لماذا نقوم بإنشاء ملفات INI.؟"
+                  },
+                  {
+                            "id": "what-tools-do-you-need-to-create-an-ini-file",
+                            "title": "ما هي الأدوات التي تحتاجها لإنشاء ملف INI.؟"
+                  },
+                  {
+                            "id": "step-by-step-create-an-ini-file-in-notepad",
+                            "title": "خطوة بخطوة: إنشاء ملف INI. في المفكرة"
+                  },
+                  {
+                            "id": "step-1-open-notepad",
+                            "title": "الخطوة 1: افتح المفكرة"
+                  },
+                  {
+                            "id": "step-2-write-simple-ini-content",
+                            "title": "الخطوة 2: اكتب محتوى INI. بسيط"
+                  },
+                  {
+                            "id": "step-3-click-on-file",
+                            "title": "الخطوة 3: اضغط على ملف"
+                  },
+                  {
+                            "id": "step-4-choose-save-location",
+                            "title": "الخطوة 4: اختر موقع الحفظ"
+                  },
+                  {
+                            "id": "step-5-change-file-name",
+                            "title": "الخطوة 5: تغيير اسم الملف"
+                  },
+                  {
+                            "id": "step-6-change-save-type",
+                            "title": "الخطوة 6: تغيير نوع الحفظ"
+                  },
+                  {
+                            "id": "step-7-save-the-file",
+                            "title": "الخطوة 7: حفظ الملف"
+                  },
+                  {
+                            "id": "step-8-check-your-file",
+                            "title": "الخطوة 8: تحقق من ملفك"
+                  },
+                  {
+                            "id": "tips-for-working-with-ini-files",
+                            "title": "نصائح للتعامل مع ملفات INI."
+                  },
+                  {
+                            "id": "common-problems-and-solutions",
+                            "title": "المشاكل الشائعة والحلول"
+                  },
+                  {
+                            "id": "can-we-create-a-ini-file-using-online-notepad",
+                            "title": "هل يمكننا إنشاء ملف INI. باستخدام مفكرة عبر الإنترنت؟"
+                  },
+                  {
+                            "id": "conclusion",
+                            "title": "الخلاصة"
+                  }
+        ]
+      },
+      "open-notepad-in-windows-11": {
+        "slug": "open-notepad-in-windows-11",
+        "title": "كيفية فتح المفكرة (Notepad) في ويندوز 11 (10 طرق سهلة)",
+        "excerpt": "افتح المفكرة في ويندوز 11 باستخدام البحث، قائمة ابدأ، نافذة التشغيل Run، موجه الأوامر CMD، باور شكل PowerShell، شريط المهام، أو اختصار سطح المكتب. بالإضافة إلى بديل أسرع يعتمد على المتصفح دون الحاجة للتثبيت.",
+        "metaTitle": "كيفية فتح المفكرة (Notepad) في ويندوز 11 (10 طرق سهلة)",
+        "metaDescription": "افتح المفكرة في ويندوز 11 باستخدام البحث، ابدأ، Run، CMD، PowerShell، شريط المهام، أو اختصار سطح المكتب. بالإضافة إلى بديل أسرع يعتمد على المتصفح دون تثبيت.",
+        "contentHtml": "<h2 id=\"how-to-open-notepad-in-windows-11-10-easy-methods\"><strong>كيفية فتح المفكرة (Notepad) في ويندوز 11 (10 طرق سهلة)</strong></h2><p><br>القيام بالمزيد من المهام عبر توفير وإدارة الوقت بفعالية هو مهارة بحد ذاتها لا يتقنها الجميع.</p><p>إذا كنت من مستخدمي نظام ويندوز مثلي، فلا بد أنك تتعامل مع برنامج <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/\"><strong>المفكرة (Notepad)</strong></a> بشكل منتظم. لتسجيل ملاحظة سريعة، تعد المفكرة الخيار الأفضل والأصح؛ فهي سهلة الفتح وخفيفة التحميل، كما يسهل حفظها والوصول إليها متى شئت بنقرة بحث واحدة. وإذا كنت مدمناً مثلي على الاحتفاظ بمثل هذه الملاحظات السريعة محفوظة على سطح المكتب، فسيكون العثور عليها أسهل بكثير وقت الحاجة (ولكن ينبغي أن تكون جميع الملفات منظمة بشكل جيد).</p><h2 id=\"quick-answer-the-fastest-way-to-open-notepad-on-windows-11\"><strong>إجابة سريعة: أسرع طريقة لفتح المفكرة في ويندوز 11</strong></h2><p>أسرع طريقة لفتح المفكرة في ويندوز 11 هي استخدام ميزة البحث والضغط على زر ENTER. اضغط على لوحة المفاتيح على مفتاح WINDOWS واكتب NOTEPAD (لا داعي لكتابة الكلمة كاملة هنا. فأنا أكتب حرف N دائماً وأضغط على ENTER. هذا كل ما في الأمر. يمكنك تجربة ذلك فوراً هنا قبل قراءة هذا المقال بالكامل).</p><p>نظام التشغيل ويندوز لديك ذكي بما يكفي لفهم ما تحاول فتحه باستخدام ميزة البحث. يمكنك أيضاً كتابة المزيد من الحروف مثل NOTE والضغط على ENTER، وسيقوم مرة أخرى بفتح المفكرة لك. ولكن الطريقة الأسرع هي كتابة حرف \"N\" والضغط على ENTER.</p><p>ولكن في هذا الدليل على موقع <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://notepad.is\"><strong>notepad.is</strong></a>، سنستعرض 10 طرق سهلة وسريعة مع دليل عملي حول كيف يمكنك الوصول إلى المفكرة وفتحها في ويندوز 11.</p><p>.دعنا نناقش الطريقة الأولى حول كيفية فتح المفكرة في ويندوز 11.</p><h2 id=\"method-1-from-the-search-bar-the-easiest\"><strong>الطريقة 1 — من شريط البحث (الأسهل)</strong></h2><p><br>يمكنك استخدام ميزة البحث التقليدية في ويندوز للبحث عن أي برنامج مثبت على جهازك؛ وسواء كان برنامجاً مدمجاً ومثبتاً مسبقاً أو برنامجاً تابعاً لجهة خارجية قمت بتثبيته لاحقاً.</p><p>المفكرة بحد ذاتها هي تطبيق مدمج في ويندوز.</p><p>في الشريط السفلي لويندوز الخاص بك، يمكنك رؤية شريط البحث. انقر عليه وابدأ في كتابة \"Notepad\". بمجرد أن تبدأ في كتابة الكلمة، سيُظهر لك النظام كافة البرامج والمستندات وسائط الوسائط وغيرها التي تتطابق مع الحروف التي تكتبها. ستظهر لك المفكرة في القائمة.<br>بمجرد أن ترى المفكرة، توقف هناك وانقر عليها أو اضغط على مفتاح ENTER في لوحة المفاتيح. ولكن تأكد من تحريك مؤشر الماوس فوق المفكرة قبل استخدام لوحة المفاتيح لفتحها. وبواسطة الماوس، يمكنك فقط النقر عليها وسيتم فتح المفكرة لك.</p><p>تُطبق هذه الطريقة في ويندوز 10، 11 والإصدارات الأخرى أيضاً.</p><h2 id=\"method-2-from-the-start-menu-all-apps\"><br><strong>الطريقة 2 — من قائمة ابدأ ← كل التطبيقات (Start menu → All apps)</strong></h2><p><br>هذه هي الطريقة الثانية لفتح المفكرة على ويندوز 11 حيث يمكنك استخدام ميزة قائمة ابدأ.</p><p>هذه طريقة سهلة وسريعة. انقر على زر ابدأ أو أيقونة ويندوز الصغيرة في الشريط السفلي على شاشتك. بمجرد فتحها، سترى عدداً من التطبيقات التي تستخدمها بشكل متكرر. بشكل افتراضي، سيُظهر لك نظامك تلك التطبيقات فقط. إذا كنت تستخدم المفكرة معظم الوقت، ستراها في القائمة. وهناك زر يُسمى \"عرض الكل\" (Show All) انقر عليه إذا لم تكن المفكرة تظهر لك.</p><p>الآن ابحث عن المفكرة في قائمة التطبيقات. يعتمد العثور عليها بسرعة على عدد التطبيقات المثبتة في نظامك.</p><h2 id=\"method-3-run-dialog-win-r\"><strong>الطريقة 3 — نافذة التشغيل (Win + R)</strong></h2><p><br>هذه هي الطريقة الأكثر شهرة للبحث عن أي برنامج مثبت في ويندوز والعثور عليه. ومن واقع خبرتي، يعشق المبرمجون والمطورون استخدام هذه الطريقة.<br>بينما لا يمتلك مستخدمو الكمبيوتر العاديون الكثير من المعرفة حول اختصارات لوحة المفاتيح.</p><p>اضغط على مفتاح WINDOWS + R في لوحة المفاتيح، وستفتح لك نافذة منبثقة صغيرة على الشاشة بعنوان \"RUN\". سيسمح لك هذا بكتابة والبحث عن أي شيء في جهازك. في حقل البحث، اكتب ببساطة notepad واضغط على Enter أو انقر على زر OK. سيتم فتح المفكرة لك.</p><h2 id=\"method-4-command-prompt\"><strong>الطريقة 4 — موجه الأوامر (Command Prompt)</strong></h2><p><br>يُعرف أيضاً بواجهة سطر الأوامر (CLI)، وهو طريقة أخرى لفتح المفكرة من خلال موجه الأوامر CMD. تُعد هذه أيضاً الطريقة المفضلة لفتح أي برنامج بالنسبة لمحترفي الكمبيوتر. المستخدمون العاديون لا يستخدمون هذه الطريقة مثلهم. لاستخدام سطر الأوامر في ويندوز، يجب أن تكون على دراية بأساسيات كتابة أوامر CMD (البرمجة).</p><h2 id=\"method-5-powershell-or-windows-terminal\"><strong>الطريقة 5 — باور شل أو نافذة طرفية ويندوز (PowerShell or Windows Terminal)</strong></h2><p><br>يُعتبر ويندوز باور شل أو نافذة طرفية ويندوز (Windows Terminals) متشابهين إلى حد كبير مع موجه الأوامر الذي ناقشناه للتو.</p><p>يُعد كل من PowerShell و Windows Terminals أداة قوية واحترافية لتنفيذ أي مهمة على جهاز الكمبيوتر الخاص بك. وهذا ليس مخصصاً للمستخدمين المبتدئين، لأنه لاستخدامه يجب أن تمتلك بعض المعرفة حول القليل من البرمجة وأكواد سطر الأوامر.</p><p></p><h2 id=\"method-6-file-explorer-address-bar\"><strong>الطريقة 6 — شريط عنوان مستكشف الملفات (File Explorer Address Bar)</strong></h2><p><br>هذه طريقة فريدة أخرى لفتح المفكرة في ويندوز 11. معظم مستخدمي ويندوز لا يعرفون هذه الطريقة. ربما تكون أنت أيضاً أحد هؤلاء.</p><p>افتح مدير الملفات الخاص بك، وفي شريط عنوان مستكشف الملفات حيث يوجد مسار المجلد الحالي، قم بتحديد الكل، واحذف كل شيء، ثم اكتب notepad واضغط على Enter. سيؤدي هذا إلى فتح المفكرة مباشرة لك.</p><p>يمكنك فتح أي برنامج على جهازك باستخدام هذه الطريقة. إنها حقاً حيلة ذكية.</p><h2 id=\"method-7-right-click-a-txt-file-open-with\"><strong>الطريقة 7 — النقر بزر الماوس الأيمن على ملف نصي .txt ← فتح بواسطة (Open with)</strong></h2><p><br>تُستخدم المفكرة لكتابة وحفظ الملفات النصية (.txt) في ويندوز. لذا، إذا كان لديك بالفعل أي ملف .txt على جهازك المحلي، يمكنك ببساطة النقر بزر الماوس الأيمن عليه فتحه باستخدام المفكرة. سيتم فتح المفكرة لك.</p><p>بمجرد فتحها، يمكنك الضغط على Ctrl + N لفتح ملف مفكرة جديد وتكرار هذه العملية بالقدر الذي تريده من الملفات الجديدة الأخرى.</p><h2 id=\"method-8-pin-notepad-to-the-taskbar-for-one-click-access\"><strong>الطريقة 8 — تثبيت المفكرة في شريط المهام للوصول بنقرة واحدة (Pin Notepad to the Taskbar)</strong><br></h2><p>طريقة سريعة أخرى لفتح المفكرة أو أي برنامج في ويندوز وهي تثبيته (PIN) في شريط المهام. بنقرة واحدة فقط يمكنك فتح أي برنامج. ستعمل هذه الطريقة وتنطبق على جميع إصدارات ويندوز.</p><p>أنا شخصياً استخدم هذه الطريقة للتطبيقات التي أستدمها بانتظام.</p><h2 id=\"method-9-create-a-desktop-shortcut\"><strong>الطريقة 9 — إنشاء اختصار على سطح المكتب (Create A Desktop Shortcut)</strong></h2><p><br>يسمح لك ويندوز بإنشاء اختصارات على سطح المكتب لأي برنامج. يمكنك فقط النقر بزر الماوس الأيمن والسحب قليلاً على أيقونة المفكرة حيث يتم تثبيتها. سيوفر لك خياراً لإنشاء اختصار. قم بإنشائه وإرساله، أو نسخه أو قصه ولصقه على سطح المكتب، ومن هناك يمكنك بسهولة الوصول إلى المفكرة.</p><h2 id=\"method-10-pin-a-specific-txt-file-to-the-taskbar-advanced\"><strong>الطريقة 10 — تثبيت ملف نصي .txt معين في شريط المهام (متقدم)</strong></h2><p></p><p>طريقة أسرع أخرى لفتح المفكرة وهي تثبيتها في شريط المهام.</p><p>ميزة إضافية: تخطي التثبيت — افتح مفكرة عبر الإنترنت فوراً<br>جميع الطرق الـ 10 المذكورة أعلاه لفتح المفكرة في ويندوز تتطلب تثبيت برنامج المفكرة على جهازك. ولكن هناك بديل لذلك وهو استخدام المفكرة عبر الإنترنت.</p><p>يتوفر عدد من أدوات المفكرة المجانية عبر الإنترنت. تُعد <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.is\">Notepad.is</a> إحداها حيث يمكنك البدء في الكتابة دون أي تسجيل دخول أو إنشاء حساب.</p><h2 id=\"why-notepad-sometimes-wont-open-and-how-to-fix-it\"><strong>لماذا لا تفتح المفكرة أحياناً (وكيفية إصلاح ذلك)</strong></h2><p></p><p>قد تواجه أيضاً مشكلة مشابهة تتمثل في عدم عمل المفكرة وعدم فتحها على ويندوز. يواجه معظم المستخدمين هذا النوع من المشكلات، والتي تحدث لأسباب متعددة.</p><ul class=\"list-disc pl-6 my-2\"><li><p>ملفات النظام التالفة</p></li><li><p>تحديثات ويندوز المتسببة في حدوث أخطاء (Bugs)</p></li><li><p>إعدادات التطبيق التالفة</p></li><li><p>برامج متعارضة</p></li><li><p>برامج ضارة أو فيروسات</p></li><li><p>فقدان تثبيت المفكرة</p></li><li><p>روابط ملفات TXT المعطلة</p></li><li><p>موارد نظام غير كافية</p></li></ul><h2 id=\"how-to-fix\"><strong>كيفية الإصلاح؟</strong></h2><ol class=\"list-decimal pl-6 my-2\"><li><p>إعادة تشغيل الكمبيوتر</p></li><li><p>حاول فتح المفكرة من أمر التشغيل Run Command</p></li><li><p>إعادة تثبيت المفكرة</p></li><li><p>إصلاح ملفات ويندوز التالفة</p></li><li><p>التحقق من تحديثات ويندوز</p></li><li><p>فحص البرامج الضارة</p></li><li><p>إصلاح ارتباطات ملفات TXT</p></li></ol><p>يمكنك تنزيل المفكرة لويندوز 11 مجاناً من هنا <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://apps.microsoft.com/detail/9msmlrh6lzf3\">https://apps.microsoft.com/detail/9msmlrh6lzf3</a></p><p></p>",
+        "toc": [
+                  {
+                            "id": "how-to-open-notepad-in-windows-11-10-easy-methods",
+                            "title": "كيفية فتح المفكرة (Notepad) في ويندوز 11 (10 طرق سهلة)"
+                  },
+                  {
+                            "id": "quick-answer-the-fastest-way-to-open-notepad-on-windows-11",
+                            "title": "إجابة سريعة: أسرع طريقة لفتح المفكرة في ويندوز 11"
+                  },
+                  {
+                            "id": "method-1-from-the-search-bar-the-easiest",
+                            "title": "الطريقة 1 — من شريط البحث (الأسهل)"
+                  },
+                  {
+                            "id": "method-2-from-the-start-menu-all-apps",
+                            "title": "الطريقة 2 — من قائمة ابدأ ← كل التطبيقات (Start menu → All apps)"
+                  },
+                  {
+                            "id": "method-3-run-dialog-win-r",
+                            "title": "الطريقة 3 — نافذة التشغيل (Win + R)"
+                  },
+                  {
+                            "id": "method-4-command-prompt",
+                            "title": "الطريقة 4 — موجه الأوامر (Command Prompt)"
+                  },
+                  {
+                            "id": "method-5-powershell-or-windows-terminal",
+                            "title": "الطريقة 5 — باور شل أو نافذة طرفية ويندوز (PowerShell or Windows Terminal)"
+                  },
+                  {
+                            "id": "method-6-file-explorer-address-bar",
+                            "title": "الطريقة 6 — شريط عنوان مستكشف الملفات (File Explorer Address Bar)"
+                  },
+                  {
+                            "id": "method-7-right-click-a-txt-file-open-with",
+                            "title": "الطريقة 7 — النقر بزر الماوس الأيمن على ملف نصي .txt ← فتح بواسطة (Open with)"
+                  },
+                  {
+                            "id": "method-8-pin-notepad-to-the-taskbar-for-one-click-access",
+                            "title": "الطريقة 8 — تثبيت المفكرة في شريط المهام للوصول بنقرة واحدة (Pin Notepad to the Taskbar)"
+                  },
+                  {
+                            "id": "method-9-create-a-desktop-shortcut",
+                            "title": "الطريقة 9 — إنشاء اختصار على سطح المكتب (Create A Desktop Shortcut)"
+                  },
+                  {
+                            "id": "method-10-pin-a-specific-txt-file-to-the-taskbar-advanced",
+                            "title": "الطريقة 10 — تثبيت ملف نصي .txt معين في شريط المهام (متقدم)"
+                  },
+                  {
+                            "id": "why-notepad-sometimes-wont-open-and-how-to-fix-it",
+                            "title": "لماذا لا تفتح المفكرة أحياناً (وكيفية إصلاح ذلك)"
+                  },
+                  {
+                            "id": "how-to-fix",
+                            "title": "كيفية الإصلاح؟"
+                  }
+        ]
+      },
+      "notepadis-vs-notepad-plus-plus": {
+        "slug": "notepadis-vs-notepad-plus-plus",
+        "title": "مقارنة بين Notepad.is و Notepad++: أيهما الأفضل للاستخدام",
+        "excerpt": "تحقق من جميع ميزات Notepad.is و Notepad++ وقرر أيهما يجب عليك استخدامه ولأي أغراض.",
+        "metaTitle": "مقارنة بين Notepad.is و Notepad++: أيهما الأفضل للاستخدام",
+        "metaDescription": "مقارنة مفصلة بين Notepad.is و Notepad++: أيهما الأفضل للاستخدام بناءً على مهامك؟ تعرف على جميع الميزات المتقدمة التي تقدمها كلتا أداتي المفكرة هاتين.",
+        "contentHtml": "<p>هناك مئات من أدوات المفكرة عبر الإنترنت وغير المتصلة بالinternet <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/\"><strong>notepad</strong></a> والتي يمكن للمستخدمين استخدامها في المتجر، ويمكنهم أيضاً تنزيلها واستخدامها على أجهزتهم المحلية.</p><p>تتضمن أنظمة تشغيل Windows وأنظمة التشغيل الأخرى أيضاً أداة مفكرة مدمجة، وهي بسيطة للغاية ولكنها تؤدي بشكل جيد أيضاً لتدوين الملاحظات السريعة.</p><p>في هذا الدليل، سنستعرض الميزات الرئيسية لاثنين من برامج المفكرة الشهيرة، وهما Notepad++ و <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.is\">Notepad.is</a></p><p>أداة مفكرة عبر الإنترنت وبرنامج مفكرة كامل يحتاج إلى التنزيل والتثبيت على نظام المستخدم.</p><h2 id=\"notepadis\"><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.is\">Notepad.is</a></h2><p>هذه أداة مفكرة عبر الإنترنت يمكن استخدامها وتشغيلها مباشرة في متصفح المستخدم، وتحتوي على الكثير من الميزات المتقدمة.</p><h2 id=\"key-features-of-notepad-is\">الميزات الرئيسية لـ Notepad .is</h2><p>إليك أهم الميزات المتقدمة لأداة تدوين الملاحظات المجانية عبر الإنترنت.</p><ol class=\"list-decimal pl-6 my-2\"><li><p><strong>مجانية بالكامل للاستخدام:</strong> نعم، هذه المفكرة مجانية 100% للاستخدام، ولا تتطلب بطاقة ائتمان.</p></li><li><p><strong>تسجيل الدخول اختياري:</strong> للاستخدام العادي والشخصي، لا يلزم تسجيل الدخول أو الاشتراك في هذه المفكرة عبر الإنترنت. ولكن إذا كنت تعمل ضمن فريق وترغب في مشاركة الملاحظات مع زملائك في الفريق، فيمكنك أيضاً القيام بذلك باستخدام هذه المفكرة. عليك إنشاء حساب بسيط، وبعد ذلك يُسمح لك بتوليد رابط قابل للمشاركة. هذه واحدة من أفضل ميزات هذه الأداة.</p></li><li><p><strong>ميزة تحويل الكلام إلى نص مدعومة بالذكاء الاصطناعي:</strong> ميزة متقدمة أخرى لهذه المفكرة وهي الكتابة عبر تحويل الكلام إلى نص. نعم، يمكنك التحدث فقط، وسيقوم هذا البرنامج المتقدم بكتابته لك بدقة 100%.</p></li><li><p>أدوات نصوص مجانية أخرى: لا تحتوي المفكرة على أداة واحدة عبر الإنترنت فحسب، بل توفر أيضاً المئات من أدوات النصوص المجانية والمتقدمة الأخرى مثل <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/distraction-free-writer/\"><strong>الكتابة بدون تشتيت</strong></a>، و <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/quick-notes/\"><strong>كاتب الملاحظات السريعة</strong></a>، و <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/tools/writing/focus-timer/\"><strong>مؤقت التركيز</strong></a>، و <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/tools/writing/snippet-shelf/\"><strong>رف القصاصات</strong></a>، والعديد من الأدوات الأخرى التي يمكنك العثور عليها في قسم <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/tools/writing/\"><strong>أدوات كتابة المفكرة</strong></a>.</p></li><li><p><strong>آمنة ومحمية:</strong> ستعمل هذه المفكرة في المتصفح فقط، لذا فهي تُعتبر آمنة تماماً.</p></li></ol><h2 id=\"notepad\"><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad-plus-plus.org/\">Notepad++</a></h2><p>يُعد Notepad++ أيضاً محرراً نصياً وبيئة تطوير متكاملة (IDE) شهيرة يستخدمها المبرمجون والمطورون، ولكنه مشهور أيضاً بين المستخدمين العاديين الذين يرغبون في الحصول على أداة مفكرة متقدمة على أجهزتهم، والتي تكون أفضل من أداة مفكرة Windows التقليدية.</p><h2 id=\"key-features-of-notepad\">الميزات الرئيسية لـ Notepad++</h2><ol class=\"list-decimal pl-6 my-2\"><li><p><strong>إصدار متقدم من مفكرة Windows:</strong> إذا كنت تعاني من الضجر والانزعاج بسبب أداة مفكرة Windows البسيطة وتريد شيئاً بميزات متقدمة، فإن Notepad++ مناسب لك.</p></li><li><p><strong>الأفضل للمبرمجين:</strong> تم تصميم هذا البرنامج خصيصاً للمطورين والمبرمجين مع خيارات <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/tools/editors/code-notepad/\"><strong>تمييز بناء الجملة (Syntax highlighting)</strong></a> وميزات متقدمة أخرى.</p></li><li><p><strong>مجاني للتنزيل:</strong> Notepad++ هو أيضاً برنامج مجاني، ولكن لا يمكن تشغيله في المتصفح. يجب على المستخدمين تنزيله من الموقع الرسمي وتشغيله على أجهزتهم الخاصة. البرنامج خفيف الوزن، لذا يمكنك تشغيله بسهولة على أي نظام.</p></li><li><p><strong>تحديثات منتظمة:</strong> يقوم مطورو هذا البرنامج بتحديث أداة Notepad++ بانتظام، لذا فهو آمن دائماً للتنزيل والاستخدام. بالإضافة إلى ذلك، يمكن للمستخدمين أيضاً الحصول على أحدث الميزات بمرور الوقت.</p></li><li><p><strong>اكتشاف ثغرات أمنية أحياناً:</strong> تُكتشف أحياناً أنواع معينة من الثغرات في مثل هذه البرامج، والتي يمكن أن تضر نظامك بأكمله إذا كان الهجوم خطيراً. تم الإبلاغ عن <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-044/\"><strong>ثغرة أمنية حديثة في Notepad++</strong></a> على الموقع الرسمي للحكومة السغافورية.</p></li></ol><h3 id=\"conclusion\">الخاتمة</h3><p>بين Notepad و Notepad++، يمكنك اختيار الأنسب لمهمتك. إذا كنت تدون ملاحظة سريعة أو تريد مشاركة شيء ما مع فريقك، فاستخدم <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://notepda.is\">notepda.is</a> فهو سمنحك كل هذه الميزات. ولكن إذا كنت ترغب في تنزيله واستخدامه على نظامك الخاص، فيجب عليك اختيار Notepad++.</p><p>كلاهما الأفضل في مجاله الخاص.</p><p></p>",
+        "toc": [
+                  {
+                            "id": "notepadis",
+                            "title": "Notepad.is"
+                  },
+                  {
+                            "id": "key-features-of-notepad-is",
+                            "title": "الميزات الرئيسية لـ Notepad .is"
+                  },
+                  {
+                            "id": "notepad",
+                            "title": "Notepad++"
+                  },
+                  {
+                            "id": "key-features-of-notepad",
+                            "title": "الميزات الرئيسية لـ Notepad++"
+                  },
+                  {
+                            "id": "conclusion",
+                            "title": "الخاتمة"
+                  }
+        ]
+      },
+      "6-best-online-notepads": {
+        "slug": "6-best-online-notepads",
+        "title": "مقارنة بين أفضل 6 دفاتر ملاحظات مجانية على الإنترنت (أدوات سريعة وبسيطة)",
+        "excerpt": "اكتشف أفضل 6 دفاتر ملاحظات مجانية على الإنترنت. قارن بين الميزات والسرعة وسولة الاستخدام لتجد أداة الكتابة البسيطة والسريعة والخالية من الإلهاء.",
+        "metaTitle": "مقارنة بين أفضل 6 دفاتر ملاحظات مجانية على الإنترنت (أدوات سريعة وبسيطة)",
+        "metaDescription": "اكتشف أفضل 6 دفاتر ملاحظات مجانية على الإنترنت. قارن بين الميزات والسرعة وسولة الاستخدام لتجد أداة الكتابة البسيطة والسريعة والخالية من الإلهاء.",
+        "contentHtml": "<p>في عالمنا الرقمي اليوم، تشعر أن معظم الأدوات مثقلة بالمعلومات والمعقدة. ولكن في بعض الأحيان، أنت لا تحتاج إلى كل تلك الميزات؛ بل تحتاج إلى مساحة نظيفة وبسيطة للكتابة.</p><p>سواء كنت بحاجة إلى تدوين فكرة سريعة، أو إصلاح نص غير منظم، أو إعداد ملاحظة قصيرة، يمكن أن يكون دفتر الملاحظات عبر الإنترنت أسرع وأسهل طريقة لإنجاز ذلك. إنه مباشر وخالٍ من الإلهاء وجاهز دائماً عندما تكون أنت جاهزاً.</p><p>يستعرض هذا الدليل <strong>أفضل ستة دفاتر ملاحظات مجانية على الإنترنت</strong> لمساعدتك في العثور على بيئة الكتابة البسيطة والمثالية.</p><h2 id=\"what-to-look-for-in-a-free-online-notepad\"><strong>ما الذي تبحث عنه في دفتر ملاحظات مجاني على الإنترنت؟</strong></h2><p>ولكن انتظر، قبل أن تختار أداة دفتر ملاحظات عبر الإنترنت، هناك بعض العوامل الحاسمة التي يجب عليك مراعاتها لتحقيق أقصى استفادة منها بأقل وقت ممكن.</p><p><br><strong>السرعة وإمكانية الوصول:</strong> يجب أن يكون دفتر الملاحظات السريع والذي يمكن الوصول إليه عبر الإنترنت أولويتك القصوى لتوفير الكثير من وقتك. بعض الصفحات لا يتم تحميلها بسرعة.&nbsp;</p><ul class=\"list-disc pl-6 my-2\"><li><p><strong>الخصوصية والأمان:</strong> يضمن النهج الذي يضع الخصوصية أولاً معالجة ملاحظاتك محلياً في المتصفح أو عبر تخزين آمن وغير متطفل.</p></li><li><p><strong>وظيفة الحفظ التلقائي:</strong> لمنع فقدان البيانات، يجب أن يقوم المحرر بحفظ تقدمك تلقائياً في التخزين المحلي لمتصفحك.</p></li><li><p><strong>واجهة المستخدم (UI):</strong> تصميم نظيف وخالٍ من الإلهاء مع دعم الوضع الداكن يقلل من إجهاد العين أثناء جلسات الكتابة الطويلة.</p></li><li><p><strong>أدوات مساعدة:</strong> ميزات مثل عد الكلمات، وتحويل حالة الأحرف، وأزرار \"نسخ إلى الحافظة\" توفر قيمة كبيرة للكتاب والمطورين.</p><p><strong>خيار المشاركة:</strong> لا توفر جميع الأدوات هذه الميزة. يُعد خيار مشاركة عنوان URL أمراً بالغ الأهمية عندما تعمل مع فريق من الكتاب، وما إلى ذلك. يمكنك الكتابة والمشاركة بسهولة وبسرعة.</p></li></ul><p><strong>يمكنك العثور على كل هذه الميزات المفيدة في موقعنا </strong><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://notepad.is\"><strong>notepad.is</strong></a></p><h2 id=\"1-notepadis-the-gold-standard-for-quick-note-taking\"><strong>1. </strong><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.is\"><strong><u>Notepad.is</u></strong></a><strong>: المعيار الذهبي لتدوين الملاحظات السريعة</strong></h2><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.is\">Notepad.is</a> هو خيار رائع لأي شخص يريد السرعة والتصميم النظيف والحديث. على عكس العديد من الأدوات الأخرى التي تبدو قديمة، تم بناؤها باستخدام تقنية بسيطة و حديثة تجعلها تتحميل بسرعة وتعمل بسلاسة على كل من أجهزة سطح المكتب والهواتف المحمولة. كما أن هذه الأداة آمنة وتضع الخصوصية في المقام الأول.&nbsp;</p><p>إحدى الميزات الرئيسية لدفتر الملاحظات الخاص بنا هي <strong>ميزة تحويل الكلام إلى نص</strong>. لست بحاجة إلى كتابة أي شيء لوحة المفاتيح الخاصة بك. ما عليك سوى تشغيل خيار تحويل الكلام إلى نص الظاهر على شاشة المحرر الرئيسية، والبدء في التحدث. سيستمع إليك الذكاء الاصطناعي المتقدم الخاص بنا بعناية فائقة ويكتب كل كلمة تنطق بها دون أي أخطاء.&nbsp;</p><p>ميزة أخرى متقدمة ومفيدة يقدمها دفتر الملاحظات عبر الإنترنت الخاص بنا هي <strong>إضافة جوجل كروم المجانية لدفتر الملاحظات</strong>. يمكن لإضافة دفتر الملاحظات المجانية الخاصة بنا توفير طن من وقتك.</p><p>كل ما عليك فعله هو تثبيت إضافة كروم الخفيفة جداً لدفتر الملاحظات، وبنقرة واحدة فقط، يمكنك تدوين جميع مهامك اليومية. يستخدمها بالفعل آلاف المستخدمين لإدارة مهامهم اليومية وكذلك لمهام تدوين الملاحظات اليومية الأخرى.&nbsp;</p><p><strong>يمكنك تثبيت إضافة كروم الخاصة بدفتر الملاحظات هنا مجاناً. </strong><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://chromewebstore.google.com/detail/notepadis/dhmnleochiopeodajekdgidhglodiodb\"><strong>https://chromewebstore.google.com/detail/notepadis/dhmnleochiopeodajekdgidhglodiodb</strong></a></p><h3 id=\"key-differentiators\"><strong>الميزات المميزة الرئيسية:</strong></h3><ul class=\"list-disc pl-6 my-2\"><li><p><strong>فائدة فورية:</strong> لا يلزم مطلقاً تسجيل الدخول أو إنشاء حساب. أنت تصل إلى الصفحة وتبدأ الكتابة فوراً.</p></li><li><p><strong>هندسة تركز على الخصوصية أولاً:</strong> يتم حفظ ملاحظاتك في التخزين المحلي لمتصفحك، مما يعني أنها لا توجد على خوادم خارجية ما لم تختار مشاركتها.</p></li><li><p><strong>بيئة خالية من الإلهاء:</strong> ميزات مثل \"وضع الزن\" واجهة مستخدم نظيفة تشبه الزجاج تتيح لك التركيز بالكامل على المحتوى الخاص بك. بالإضافة إلى ذلك، لدينا <strong>دفتر ملاحظات كتابة خالٍ من الإلهاء</strong> وهو خالٍ تماماً من أي نوع من الإعلانات والميزات الأخرى. يمكنك الكتابة مع انعدام تام للإلهاء.</p></li><li><p><strong>أدوات نصية مدمجة:</strong> يتضمن عداداً مباشراً للكلمات والأحرف والأسطور، إلى جانب محولات حالة الأحرف ومنظفات تنسيق النصوص.</p></li></ul><h2 id=\"2-notepadpw\"><strong>2. </strong><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.pw\"><strong>Notepad.pw</strong></a></h2><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.pw\">Notepad.pw</a> هو خيار شائع للمستخدمين الذين يحتاجون إلى إنشاء عناوين URL سريعة وقابلة للمشاركة لملاحظاتهم. ورغم تفوقه في المشاركة الفورية، إلا أنه يفتقر إلى ميزات التحرير العميقة واجهة المستخدم الحديثة الموجودة في <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.is\">Notepad.is</a>.</p><h2 id=\"3-anotepadcom\"><strong>3. </strong><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://aNotepad.com\"><strong>aNotepad.com</strong></a></h2><p>يقدم aNotepad تجربة أكثر تقليدية. إنه يسمح بتدوين الملاحظات بشكل مجهول والتخزين السحري القائم على الحساب. ومع ذلك، غالباً ما تكون واجهته مزدحمة بالإعلانات، وقد يكون أداؤه أبطأ مقارنة بالبدائل الثابتة والخفيفة السكريبتات.</p><h2 id=\"4-onlinenotepadorg\"><strong>4. </strong><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://OnlineNotepad.org\"><strong>OnlineNotepad.org</strong></a></h2><p>توفر هذه الأداة بيئة أساسية ووظيفية. وبينما هي موثوقة لإدخال النصوص البسيطة، إلا أنها تفتقر إلى \"العمق الموضوعي\"، مما يعني أنها لا تقدم أدلة الإنتاجية القوية أو الأدوات النصية المتقدمة التي يتوقعها المستخدمون المعاصرون.</p><h2 id=\"5-rapidtables-online-notepad\"><strong>5. </strong><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Rapidtables.com\"><strong>Rapidtables </strong></a><strong>دفتر ملاحظات عبر الإنترنت</strong></h2><p>RapidTables هو موقع \"يعتمد على الأدوات أولاً\". دفتر الملاحظات الخاص بهم هو واحد من العديد من الأدوات على النطاق. وبسبب كونه جزءاً من مجموعة أدوات ضخمة، فإن واجهة المستخدم عامة وتفتقر إلى \"شخصية العلامة التجارية\" المكررة والميزات المتخصصة لتطبيق دفتر ملاحظات مخصص.</p><h2 id=\"6-windows-notepad-alternative-online\"><strong>6. بديل دفتر ملاحظات ويندوز (عبر الإنترنت)</strong></h2><p>توجد العديد من النسخ المتماثلة للويب \"بأسلوب ويندوز\" للمستخدمين الذين يفتقدون تجربة سطح المكتب الكلاسيكية. ورغم أنها تثير الحنين، إلا أن هذه الأدوات غالباً ما تفتقر إلى الضروريات الحديثة مثل تصميم الهاتف المحمول المتجاوب والأمان المتقدم القائم على المتصفح.</p><h2 id=\"choosing-the-right-tool-for-your-use-case\"><strong>اختيار الأداة المناسبة لحالة الاستخدام الخاصة بك</strong></h2><p>اعتماداً على احتياجاتك المحددة، قد تخدمك دفاتر الملاحظات المختلفة بشكل أفضل:</p><h3 id=\"which-ones-require-an-account\"><strong>أيها يتطلب حساباً؟</strong></h3><ul class=\"list-disc pl-6 my-2\"><li><p><strong>لا يتطلب حساباً:</strong> <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.is\"><u>Notepad.is</u></a>، <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.pw\">Notepad.pw</a>، Rapidtables.</p></li><li><p><strong>حساب اختياري:</strong> <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://aNotepad.com\">aNotepad.com</a> (للمزامنة السحابية طويلة الأجل).</p></li></ul><h3 id=\"which-ones-offer-dark-mode\"><strong>أيها يوفر الوضع الداكن؟</strong></h3><ul class=\"list-disc pl-6 my-2\"><li><p><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.is\"><u>Notepad.is</u></a> (يتميز باكتشاف تفضيلات النظام).</p></li></ul><h3 id=\"which-ones-autosave-your-work\"><strong>أيها يحفظ عملك تلقائياً؟</strong></h3><ul class=\"list-disc pl-6 my-2\"><li><p><strong>الحفظ التلقائي في التخزين المحلي:</strong> <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.is\"><u>Notepad.is</u></a> و a notepad PW، يضمن بقاء النص الخاص بك حتى إذا قمت بتحديث المتصفح.</p></li><li><p><strong>الحفظ التلقائي السحابي:</strong> aNotepad (يتطلب تسجيل الدخول).</p></li></ul><h4 id=\"final-recommendation\"><strong>التوصية النهائية</strong></h4><p>بالنسبة للغالبية العظمى من المهام اليومية، من مسودات \"الكتابة السريعة\" إلى تنظيف النصوص المنسقة، فإن <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.is\"><strong><u>Notepad.is</u></strong></a> هو الخيار الأفضل. الميزات التي تقدمها أداتنا متقدمة للغاية واحترافية وسهلة الاستخدام. يمكن للمستخدمين الحصول على شعور استخدام <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/blog/online-notepad-vs-notion/\"><strong>Notion</strong></a>، ولكن الأداة الأسرع تأتي واجهة سهلة الاستخدام.</p><p>بالإضافة إلى ذلك، فإن إضافة كروم المجانية الخاصة بنا تجعل هذا المزيج هو الأفضل.</p><p></p>",
+        "toc": [
+                  {
+                            "id": "what-to-look-for-in-a-free-online-notepad",
+                            "title": "ما الذي تبحث عنه في دفتر ملاحظات مجاني على الإنترنت؟"
+                  },
+                  {
+                            "id": "1-notepadis-the-gold-standard-for-quick-note-taking",
+                            "title": "1. Notepad.is: المعيار الذهبي لتدوين الملاحظات السريعة"
+                  },
+                  {
+                            "id": "key-differentiators",
+                            "title": "الميزات المميزة الرئيسية:"
+                  },
+                  {
+                            "id": "2-notepadpw",
+                            "title": "2. Notepad.pw"
+                  },
+                  {
+                            "id": "3-anotepadcom",
+                            "title": "3. aNotepad.com"
+                  },
+                  {
+                            "id": "4-onlinenotepadorg",
+                            "title": "4. OnlineNotepad.org"
+                  },
+                  {
+                            "id": "5-rapidtables-online-notepad",
+                            "title": "5. Rapidtables دفتر ملاحظات عبر الإنترنت"
+                  },
+                  {
+                            "id": "6-windows-notepad-alternative-online",
+                            "title": "6. بديل دفتر ملاحظات ويندوز (عبر الإنترنت)"
+                  },
+                  {
+                            "id": "choosing-the-right-tool-for-your-use-case",
+                            "title": "اختيار الأداة المناسبة لحالة الاستخدام الخاصة بك"
+                  },
+                  {
+                            "id": "which-ones-require-an-account",
+                            "title": "أيها يتطلب حساباً؟"
+                  },
+                  {
+                            "id": "which-ones-offer-dark-mode",
+                            "title": "أيها يوفر الوضع الداكن؟"
+                  },
+                  {
+                            "id": "which-ones-autosave-your-work",
+                            "title": "أيها يحفظ عملك تلقائياً؟"
+                  },
+                  {
+                            "id": "final-recommendation",
+                            "title": "التوصية النهائية"
+                  }
+        ]
+      },
+      "online-notepad-vs-notion": {
+        "slug": "online-notepad-vs-notion",
+        "title": "مقارنة بين Notepad.is و Notion: متى تفوق المفكرة البسيطة عبر الإنترنت تطبيقاً قوياً",
+        "excerpt": "مقارنة بين Notepad.is و Notion: متى تتفوق المفكرة البسيطة عبر الإنترنت على تطبيق قوي، وكيف يمكن لمفكرة بسيطة على الويب التفوق على تطبيقات الويب القوية مثل Notion في بعض الميزات. في حالتنا هذه، سنقوم بفحص مفكرة بسيطة عبر الإنترنت.",
+        "metaTitle": "Notepad.is مقابل Notion: متى تتفوق المفكرة البسيطة عبر الإنترنت",
+        "metaDescription": "مقارنة بين Notepad.is و Notion: متى تتفوق المفكرة البسيطة عبر الإنترنت على تطبيق قوي، وكيف يمكن لمفكرة بسيطة على الويب التفوق على تطبيقات الويب القوية مثل Notion في بعض الميزات. في حالتنا هذه، سنقوم بفحص مفكرة بسيطة عبر الإنترنت.",
+        "contentHtml": "<p>يتمتع Notion بالقوة مع الكثير من الميزات المتقدمة، ولكن عندما يتعلق الأمر بتجربة المستخدم، فهو يخسر. يضيع المبتدئون بمجرد تسجيل الدخول إلى حساباتهم على Notion.&nbsp;<br></p><p>بينما حرصوا على جعله أكثر تقدمًا، نسوا جعله سهل الاستخدام والتنقل. خاصة إذا كان المستخدم بحاجة إلى تدوين ملاحظة سريعة أثناء القيام بأشياء أخرى في نفس الوقت. إنشاء مشروع جديد، أو إعطاؤه اسمًا جديدًا، أو حفظه، وما إلى ذلك. هناك عملية طويلة يجب اتباعها، وهي في الواقع عديمة الفائدة في مثل هذه السيناريوهات. ظهرت المفكرة عبر الإنترنت، مثل <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://notepad.is\"><u>Notepad.is</u></a> وتعتبر البديل الأفضل لبرامج وتطبيقات تدوين الملاحظات التقليدية عبر الإنترنت.&nbsp;<br></p><p>في هذا الدليل، سنوضح لك كيف يمكن لمفكرة بسيطة عبر الإنترنت التفوق على تطبيقات الويب القوية مثل Notion في بعض الميزات. في حالتنا، نحن نتحقق من <strong>مفكرة بسيطة عبر الإنترنت</strong>.</p><h2 id=\"why-notion-is-overkill-for-quick-notes\"><strong>لماذا يُعد Notion مبالغاً فيه للملاحظات السريعة</strong></h2><p>تم تصميم Notion ليكون مركزًا تنظيميًا عميقًا، ولكن هذا العمق الهيكلي يخلق احتكاكًا غير ضروري لالتقاط الأفكار البسيطة. عندما تحتاج إلى تدوين رقم هاتف أو قائمة تسوق، فإن التصفح عبر المجلدات والصفحات الفرعية يجعل الأمور أكثر تعقيدًا وتستغرق وقتًا أطول. في الواقع، لاควร أن تستغرق هذه الأنواع من المهام البسيطة هذا القدر من الوقت.</p><p>&nbsp;توفر المفكرة البسيطة عبر الإنترنت بيئة فورية \"بدون تسجيل\" تعطي الأولوية للنص على الهيكل. يمكنك ببساطة تدوين كل هذه الأمور بسهولة دون قضاء الكثير من الوقت. أيضًا، يمكنك تجربة مفكرة <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/distraction-free-writer/\"><strong>خالية من الإلهاء للكتابة</strong></a> عبر الإنترنت. </p><h2 id=\"the-loading-time-problem-with-heavy-tools\"><br><strong>مشكلة وقت التحميل مع الأدوات الثقيلة</strong></h2><p>التعقيد يأتي دائما بتكلفة. كل هذه الأدوات الثقيلة مثل Notion وغيرها مصممة على أطر عمل ضخمة والكثير من الأكواد والبنية التحتية. لذا فهي تؤثر على الأداء أيضًا.&nbsp;</p><p>من ناحية أخرى، تم بناء المفكرة عبر الإنترنت ببساطة دون مثل هذه البنى التحتية الثقيلة، مما يجعلها سريعة التحميل وتوفر تجربة مستخدم أفضل.&nbsp;</p><h2 id=\"what-you-lose-when-note-taking-has-too-many-features\"><strong>ما الذي تخسره عندما يحتوي تطبيق تدوين الملاحظات على عدد كبير جداً من الميزات</strong></h2><p>الخسارة الكبرى لاستخدام مواقع تدوين الملاحظات الثقيلة هي الوقت. فالتنسيق، والتخصيصات التي لا تنتهي، والميزات المشابهة تستغرق وقتًا طويلاً جدًا لتلك المهام التي لا تحتاج في الواقع إلى مثل هذه الميزات والتخصيصات.&nbsp;</p><h2 id=\"when-the-online-notepad-wins-every-time\"><strong>متى تفوز المفكرة عبر الإنترنت في كل مرة</strong></h2><p>تعتبر المفكرة عبر الإنترنت الخيار المتفوق للمهام عالية السرعة والمؤقتة أو المهام الخدمية:</p><ul class=\"list-disc pl-6 my-2\"><li><p><strong>الالتقاط الفوري:</strong> تدوين ملاحظات الاجتماعات السريعة دون القلق بشأن مكان حفظ الملف.</p></li><li><p><strong>تنسيق النص:</strong> استخدام الأدوات المدمجة لحساب الكلمات، أو حساب الاحرف، أو تحويل حالة الأحرف.</p></li><li><p><strong>تنظيف النصوص العادية:</strong> إزالة التنسيقات غير المرغوب فيها من النص المنسوخ قبل لصقه في مكان آخر.</p></li></ul><p><strong>الكتابة دون التزام:</strong> صياغة معلومات حساسة أو مؤقتة لا تحتاج إلى أرشفتها في قاعدة بيانات دائمية.</p><h2 id=\"when-notion-is-the-right-choice\"><strong>متى يكون Notion هو الخيار الصحيح</strong></h2><p>يظل Notion المعيار الذهبي لاحتياجات إدارة المشاريع طويلة الأجل المحددة:</p><ul class=\"list-disc pl-6 my-2\"><li><p><strong>التوثيق النظيف:</strong> إنشاء ويكيبيديا داخلية أو أدلة شركة منظمة.</p></li><li><p><strong>التعاون الجماعي:</strong> إدارة جداول زمنية للمشاريع المشتركة وقواعد بيانات المهام المعقدة.</p></li><li><p><strong>البيانات العلائقية:</strong> عندما تحتاج ملاحظاتك إلى التفاعل مع بعضها البعض من خلال العلامات (Tags) والعلاقات.</p></li></ul><p></p>",
+        "toc": [
+                  {
+                            "id": "why-notion-is-overkill-for-quick-notes",
+                            "title": "لماذا يُعد Notion مبالغاً فيه للملاحظات السريعة"
+                  },
+                  {
+                            "id": "the-loading-time-problem-with-heavy-tools",
+                            "title": "مشكلة وقت التحميل مع الأدوات الثقيلة"
+                  },
+                  {
+                            "id": "what-you-lose-when-note-taking-has-too-many-features",
+                            "title": "ما الذي تخسره عندما يحتوي تطبيق تدوين الملاحظات على عدد كبير جداً من الميزات"
+                  },
+                  {
+                            "id": "when-the-online-notepad-wins-every-time",
+                            "title": "متى تفوز المفكرة عبر الإنترنت في كل مرة"
+                  },
+                  {
+                            "id": "when-notion-is-the-right-choice",
+                            "title": "متى يكون Notion هو الخيار الصحيح"
+                  }
+        ]
+      },
+      "useful-ways-to-use-an-online-notepad": {
+        "slug": "useful-ways-to-use-an-online-notepad",
+        "title": "7 طرق مفيدة بشكل مدهش لاستخدام المفكرة عبر الإنترنت كل يوم",
+        "excerpt": "7 طرق مفيدة بشكل مدهش لاستخدام المفكرة عبر الإنترنت كل يوم.",
+        "metaTitle": "7 طرق مفيدة بشكل مدهش لاستخدام المفكرة عبر الإنترنت كل يوم",
+        "metaDescription": "7 طرق مفيدة بشكل مدهش لاستخدام المفكرة عبر الإنترنت كل يوم. تعرف على الحقائق المثيرة للاهتمام حول سبب كون استخدام المفكرة عبر الإنترنت الخيار الأفضل لك بدلاً من تثبيت برامج ثقيلة.",
+        "contentHtml": "<p>في عالم مليء بمعالجات النصوص القوية مثل Google Docs، وMicrosoft Word، وتطبيقات تدوين الملاحظات المعقدة، غالباً ما يتم إغفال <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/\"><strong>المفكرة عبر الإنترنت</strong></a> البسيطة.&nbsp;</p><p><br>إليك 7 طرق مفيدة بشكل مدهش للاستفادة من بساطة المفكرة عبر الإنترنت:</p><h2 id=\"1-instant-idea-capture-your-mental-scratchpad\">1. التقاط الأفكار الفوري: مسودتك الذهنية</h2><p>عندما تتدفق فكرة رائعة، فأنت بحاجة إلى أسرع طريقة لتسجيلها. يتم تحميل المفكرات عبر الإنترنت على الفور (وغالباً ما يتم تصميمها بأقصى قدر من الأداء)، مما يوفر مساحة فائقة السرعة \"للالتقاط السريع\" للأفكار العابرة، دون انتظار تشغيل تطبيق ثقيل الميزات.</p><h2 id=\"2-easy-formatter\">2. أداة تنسيق سهلة</h2><p>عادةً، عندما نقوم بنصح أي نص من أي مكان، يأتي مع جميع التصميمات والتنسيقات التي ندركها عندما نلصقها في مستنداتنا. وأحياناً، نظراً لتصميمات التنسيق المعقدة، يستغرق إزالة تلك التنسيقات وقتاً طويلاً.&nbsp;</p><p>هنا يأتي دور المفكرة عبر الإنترنت. يمكنك النسخ واللصق من أي مكان وبأي تصميم إلى المفكرة. ستتم إزالة التصميمات تلقائياً بواسطة المفكرة. لذا يمكنك النسخ مرة أخرى دون إهدار ثانية واحدة.</p><h2 id=\"3-draft-your-daily-to-do-list\">3. صياغة قائمة المهام اليومية</h2><p>لا يمكنك استخدام Google Docs، أو Microsoft Word، أو غيرها من مدير المهام المعقدة كلما اضطررت إلى صياغة قائمة المهام الخاصة بك. يمكن أن تكون المفكرة عبر الإنترنت (Notepad Online) رفيقك الأفضل في ذلك. يمكنك فقط صياغة قائمة المهام الخاصة بك بسهولة وبسرعة.</p><h2 id=\"4-distraction-free-writing-for-focus\">4. كتابة خالية من الإلهاء للتركيز</h2><p></p><p>تعد أداة الكتابة الخالية من الإلهاء الخاصة بنا الأفضل لأولئك الذين يميلون إلى فقدان تركيزهم أثناء العمل، خاصة عندما يقومون بالكتابة.</p><p>تم تصميم أداة الكتابة الخالية من الإلهاء خصيصاً لهذا الغرض لتجنب المشتتات.</p><p>إذا كنت تعاني من القوائم والخيارات في محررات النصوص المنسقة، توفر المفكرة عبر الإنترنت بيئة \"كتابة خالية من الإلهاء\" حقاً. يدعم هذا النهج البسيط تقنيات التركيز، مما يجعله مثالياً لصياغة محتوى عالي الأهمية.</p><h2 id=\"5-quick-check-word-and-character-counts\">5. التحقق السريع من عدد الكلمات والأحرف</h2><p>تتميز العديد من المفكرات الحديثة عبر الإنترنت بعدادات كلمات وأحرف مباشرة. يُعد هذا مثالياً للتحقق بسرعة مما إذا كان النص القصير - مثل منشور وسائل التواصل الاجتماعي، أو عنوان رئيسي، أو موضوع بريد إلكتروني - يلبي متطلبات طول معين، مما يلغي غالباً الحاجة إلى أداة عد كلمات مخصصة.</p><h2 id=\"6-drafting-for-developers-and-code-snippets\">6. الصياغة للمطورين ومقتطفات التعليمات البرمجية</h2><p>غالباً ما يحتاج المطورون إلى مكان لتسجيل مقتطفات التعليمات البرمجية، أو أوامر وحدة الطرفية (Terminal)، أو الملاحظات المنظمة. تجعل طبيعة النص البسيط للمفكرة عبر الإنترنت هذه المهمة سهلة.</p><h2 id=\"7-outlining-complex-projects\">7. تخطيط المشاريع المعقدة</h2><p>قبل الغوص في مستند طويل، استخدم المفكرة عبر الإنترنت لتحديد الهيكل الخاص بك سريعاً باستخدام النقاط البسيطة والمسافات البادئة. تتيح لك هذه الممارسة، المعروفة باسم \"تقنيات التخطيط\"، تثبيت تدفق المحتوى وتنظيمه قبل أن تغرق في النثر المفصل.</p><p><br><br><br><br></p>",
+        "toc": [
+                  {
+                            "id": "1-instant-idea-capture-your-mental-scratchpad",
+                            "title": "1. التقاط الأفكار الفوري: مسودتك الذهنية"
+                  },
+                  {
+                            "id": "2-easy-formatter",
+                            "title": "2. أداة تنسيق سهلة"
+                  },
+                  {
+                            "id": "3-draft-your-daily-to-do-list",
+                            "title": "3. صياغة قائمة المهام اليومية"
+                  },
+                  {
+                            "id": "4-distraction-free-writing-for-focus",
+                            "title": "4. كتابة خالية من الإلهاء للتركيز"
+                  },
+                  {
+                            "id": "5-quick-check-word-and-character-counts",
+                            "title": "5. التحقق السريع من عدد الكلمات والأحرف"
+                  },
+                  {
+                            "id": "6-drafting-for-developers-and-code-snippets",
+                            "title": "6. الصياغة للمطورين ومقتطفات التعليمات البرمجية"
+                  },
+                  {
+                            "id": "7-outlining-complex-projects",
+                            "title": "7. تخطيط المشاريع المعقدة"
+                  }
+        ]
+      },
+      "notepad-vs-google-docs-vs-microsoft-word": {
+        "slug": "notepad-vs-google-docs-vs-microsoft-word",
+        "title": "مفكرة الإنترنت مقابل مستندات جوجل مقابل مايكروسوفت وورد: أيهما يجب أن تستخدم؟",
+        "excerpt": "يُعد اختيار أداة الكتابة المناسبة بناءً على الغرض أمراً بالغ الأهمية، حيث يمكن أن يوفر الكثير من وقتك ويؤثر على إنتاجيتك أيضاً.",
+        "metaTitle": "مفكرة الإنترنت مقابل مستندات جوجل مقابل مايكروسوفت وورد: أيهما يجب أن تستخدم؟",
+        "metaDescription": "مفكرة الإنترنت مقابل مستندات جوجل مقابل مايكروسوفت وورد: أيهما يجب أن تستخدم؟ يُعد اختيار أداة الكتابة المناسبة بناءً على الغرض أمراً بالغ الأهمية، حيث يمكن أن يوفر الكثير من وقتك ويؤثر على إنتاجيتك أيضاً.",
+        "contentHtml": "<p>يُعد اختيار أداة الكتابة المناسبة بناءً على الغرض أمراً بالغ الأهمية، حيث يمكن أن يوفر الكثير من وقتك ويؤثر على إنتاجيتك أيضاً. اليوم، وبمجرد بحث واحد، يمكنك العثور على عدد كبير من أدوات الكتابة عبر الإنترنت مثل المفكرة عبر الإنترنت (Notepad Online) وغيرها من أدوات الكتابة المشابهة.&nbsp;</p><p></p><p>تظل أدوات جوجل الشهيرة دائماً مثل مستندات جوجل (Google Docs) ومايكروسوفت وورد (Microsoft Word) الخيار الأفضل لسنوات. في هذا الدليل، سنكتشف أداة الكتابة التي يجب عليك اختيارها فعلياً ولأي أغراض.</p><h2 id=\"what-each-tool-is-actually-built-for\"><strong>ما تم تصميم كل أداة من أجلها بالفعل؟</strong></h2><p>كلما قامت شركة أو فرد بإطلاق أي أداة، يكون في ذهنهم مشكلة محددة. ولحل هذه المشكلة، يقومون بتطوير مثل هذه الأدوات. تستهدف كل واحدة من هذه الأدوات مستويات مختلفة من التعقيد.&nbsp;</p><p></p><p>تم تصميم المفكرات عبر الإنترنت من أجل السرعة، والسهولة، وتدوين الملاحظات السريعة. كما يمكن للمعلمين استخدام المفكرة عبر الإنترنت في محاضراتهم من خلال استخدامها كلوحة بيضاء بسهولة.&nbsp;</p><p></p><p>يُعد جوجل دوكس الخيار الأمثل للحوسبة السحابية، والتعاون، وسهولة الوصول. يمكنك كتابة أي مستند ومشاركته في أي مكان باستخدام رابط المشاركة. لذلك، بالنسبة للشركات الفرق، يمكن أن يكون هذا الخيار الأمثل.&nbsp;</p><p></p><p>لكتابة أي مستند والاحتفاظ به آمنًا محلياً على أجهزتك الخاصة، يمكن أن يكون مايكروسوفت وورد الخيار الأفضل.</p><h2 id=\"when-an-online-notepad-is-the-better-choice\"><strong>متى تكون المفكرة عبر الإنترنت الخيار الأفضل؟</strong></h2><p>تُعد المفكرة عبر الإنترنت الخيار الأفضل لتدوين الملاحظات السريعة. من غير الممكن الوصول إلى جوجل دوكس ومايكروسوفت وورد طوال الوقت وفي كل مكان. ببحث واحد فقط في جوجل، يمكنك العثور على الكثير من الخيارات لاستخدام المفكرة عبر الإنترنت مجاناً. <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"http://Notepad.is\"><u>Notepad.is</u></a> هي أحد أفضل الخيارات لمستخدمي المفكرات عبر الإنترنت.&nbsp;</p><p>متاحة على مدار الساعة طوال أيام الأسبوع ويمكن الوصول إليها من أي مكان وباستخدام أي جهاز.</p><p>لا توجد حسابات لتسجيل الدخول إليها ولا واجهات ثقيلة للتحميل. إنها الخيار الأفضل لتخزين النصوص المؤقتة، مثل إزالة التنسيق من النص المنقول، أو تدوين قائمة بقالة سريعة، أو صياغة رسالة بريد إلكتروني قصيرة دون تشتيت انتباه معالج الكلمات الكامل.</p><p></p><h2 id=\"when-google-docs-makes-more-sense\">متى تصبح مستندات جوجل خياراً منطقياً أكثر؟</h2><p>تُعد مستندات جوجل الملك المتوج للتعاون. إذا كانت مهمتك تتضمن عدة أشخاص يقومون بتحرير مستند في نفس الوقت، فإن مستندات جوجل توفر التجربة الأكثر سلاسة. كما أنها تعتبر منطقية أكثر للمستخدمين الذين يتبادلون الأجهزة بشكل متكرر، حيث تضمن وظيفة الحفظ التلقائي والتكامل السحابي أن عملك متواجد معك أينما كنت دون الحاجة إلى المزامنة اليدوية.</p><p></p><p>يمكنك بسهولة مشاركة الرابط مع فريقك والاحتفاظ به معك أيضاً لتتمكن من الوصول إليه من أي مكان ومن جهاز آخر إذا اضطررت لتغيير جهازك في كل مرة.</p><h2 id=\"when-microsoft-word-is-worth-to-use\">متى يستحق مايكروسوفت وورد الاستخدام؟</h2><p>يمكن أن يكون مايكروسوفت وورد الخيار الأفضل إذا كان عليك الاحتفاظ بمستند آمن على جهازك المحلي لفترة زمنية أطول. يمكن أن يكون هذا أي ملف ترغب في الاحتفاظ به آمناً للاستخدام المستقبلي والمراجع.<br><br></p><p></p>",
+        "toc": [
+                  {
+                            "id": "what-each-tool-is-actually-built-for",
+                            "title": "ما تم تصميم كل أداة من أجلها بالفعل؟"
+                  },
+                  {
+                            "id": "when-an-online-notepad-is-the-better-choice",
+                            "title": "متى تكون المفكرة عبر الإنترنت الخيار الأفضل؟"
+                  },
+                  {
+                            "id": "when-google-docs-makes-more-sense",
+                            "title": "متى تصبح مستندات جوجل خياراً منطقياً أكثر؟"
+                  },
+                  {
+                            "id": "when-microsoft-word-is-worth-to-use",
+                            "title": "متى يستحق مايكروسوفت وورد الاستخدام؟"
+                  }
+        ]
+      },
+      "how-to-use-an-online-notepad": {
+        "slug": "how-to-use-an-online-notepad",
+        "title": "كيفية استخدام المفكرة عبر الإنترنت (دليل خطوة بخطوة)",
+        "excerpt": "كيفية استخدام المفكرة عبر الإنترنت (دليل خطوة بخطوة). تعتبر المفكرة عبر الإنترنت إحدى أسهل الطرق لكتابة الملاحظات وتعديلها وحفظها مباشرة في متصفحك دون تثبيت أي برامج.",
+        "metaTitle": "كيفية استخدام المفكرة عبر الإنترنت (دليل خطوة بخطوة)",
+        "metaDescription": "كيفية استخدام المفكرة عبر الإنترنت (دليل خطوة بخطوة). تعتبر المفكرة عبر الإنترنت إحدى أسهل الطرق لكتابة الملاحظات وتعديلها وحفظها مباشرة في متصفحك دون تثبيت أي برامج.",
+        "contentHtml": "<p>تعتبر <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/\">المفكرة عبر الإنترنت</a> إحدى أسهل الطرق لكتابة الملاحظات وتعديلها وحفظها مباشرة في متصفحك دون تثبيت أي برامج. وسواء كنت تدون أفكاراً سريعة، أو تكتب مسودات، أو تدير مهامك اليومية، فإن استخدام المفكرة عبر الإنترنت يمكن أن يوفر وقتك ويحسن إنتاجيتك.</p><p>في هذا الدليل، ستتعلم بدقة كيفية استخدام المفكرة عبر الإنترنت بكفاءة.</p><hr><h2 id=\"what-is-an-online-notepad\">ما هي المفكرة عبر الإنترنت؟</h2><p>المفكرة عبر الإنترنت هي محرر نصوص قائم على الويب يتيح لك إنشاء الملاحظات وإدارتها فوراً. على عكس تطبيقات سطح المكتب التقليدية، تعمل هذه المفكرة مباشرة في متصفحك ويمكن الوصول إليها من أي جهاز متصل بالإنترنت.</p><hr><h2 id=\"step-by-step-how-to-use-an-online-notepad\">خطوة بخطوة: كيفية استخدام المفكرة عبر الإنترنت</h2><h3 id=\"1-open-the-online-notepad\">1. افتح المفكرة عبر الإنترنت</h3><p>انتقل إلى موقع المفكرة المفضل لديك عبر الإنترنت <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://notepad.is/ar/\"><strong>https://notepad.is/</strong></a> باستخدام أي متصفح مثل كروم (Chrome)، أو إيدج (Edge)، أو سفاري (Safari). يتم تحميل معظم المفكرات عبر الإنترنت فوراً دون الحاجة للتسجيل.</p><hr><h3 id=\"2-start-writing-your-notes\">2. ابدأ في كتابة ملاحظاتك</h3><p>بمجرد فتح المحرر، ما عليك سوى النقر داخل مساحة النص والبدء في الكتابة. يمكنك كتابة أي شيء بدءاً من الملاحظات السريعة والتذكيرات وصولاً إلى المستندات الكاملة.</p><hr><h3 id=\"3-edit-and-format-your-text\">3. تعديل وتنسيق النص الخاص بك</h3><p>تقدم العديد من المفكرات عبر الإنترنت ميزات تحرير أساسية مثل النسخ، واللصق، والتراجع، والإعادة، وأحياناً خيارات التنسيق. استخدم هذه الأدوات لتنظيم محتواك بوضوح.</p><hr><h3 id=\"4-save-your-notes\">4. احفظ ملاحظاتك</h3><p>اعتماداً على النظام الأساسي، قد يتم حفظ ملاحظاتك تلقائياً (الحفظ التلقائي) أو تتطلب حفظاً يدوياً. يضمن الحفظ الاحتفاظ بمحتواك وإمكانية الوصول إليه لاحقاً.</p><hr><h3 id=\"5-access-notes-anytime-anywhere\">5. الوصول إلى الملاحظات في أي وقت وفي أي مكان</h3><p>تُعد سهولة الوصول إحدى أكبر مزايا المفكرة عبر الإنترنت. يمكنك فتح ملاحظاتك المحفوظة من أي جهاز، بما في ذلك الهواتف المحمولة، أو الأجهزة اللوحية، أو أجهزة سطح المكتب.</p><hr><h3 id=\"6-share-your-notes\">6. شارك ملاحظاتك</h3><p>تتيح لك بعض المفكرات عبر الإنترنت إنشاء رابط قابل للمشاركة. وهذا يسهل إرسال ملاحظاتك إلى أصدقائك أو زملائك أو عملائك.</p><hr><h3 id=\"7-continue-editing-anytime\">7. متابعة التعديل في أي وقت</h3><p>يمكنك إعادة زيارة ملاحظاتك في أي وقت لتحديثها، أو تعديلها، أو توسيع نطاقها. هذا يجعل المفكرات عبر الإنترنت مثالية للأعمال والمسودات المستمرة.</p><hr><h2 id=\"benefits-of-using-our-online-notepad\">فوائد استخدام مفكرتنا عبر الإنترنت</h2><ul class=\"list-disc pl-6 my-2\"><li><p>لا تتطلب أي تثبيت، وتعمل مباشرة في متصفحك</p></li><li><p>مجانية وسهلة الاستخدام للجميع</p></li><li><p>يمكن الوصول إليها من أي جهاز متصل بالإنترنت</p></li><li><p>الحفظ التلقائي يمنع فقدان البيانات</p></li><li><p>خيارات مشاركة وتعاون سريعة</p></li></ul><hr><h2 id=\"tips-for-better-usage\">نصائح للاستخدام الأفضل</h2><p>للحصول على أقصى استفادة من المفكرة عبر الإنترنت، حافظ على تنظيم ملاحظاتك، واستخدم عناوين واضحة، وقم بحفظ عملك أو مزامنته بانتظام. إن توفرت، استخدم ميزات مثل الحفظ التلقائي والمشاركة لتحسين كفاءتك.</p><hr><h2 id=\"conclusion\">الخاتمة</h2><p>يُعد استخدام <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"text-primary underline underline-offset-2\" href=\"https://simple.wikipedia.org/wiki/Notepad\">المفكرة عبر الإنترنت</a> طريقة بسيطة وقوية لإدارة مهام الكتابة الخاصة بك. سواء كنت تدون ملاحظات سريعة أو تعمل على محتوى أطول، فهي توفر المرونة والسرعة والراحة دون الحاجة إلى برامج ثقيلة.</p>",
+        "toc": [
+                  {
+                            "id": "what-is-an-online-notepad",
+                            "title": "ما هي المفكرة عبر الإنترنت؟"
+                  },
+                  {
+                            "id": "step-by-step-how-to-use-an-online-notepad",
+                            "title": "خطوة بخطوة: كيفية استخدام المفكرة عبر الإنترنت"
+                  },
+                  {
+                            "id": "1-open-the-online-notepad",
+                            "title": "1. افتح المفكرة عبر الإنترنت"
+                  },
+                  {
+                            "id": "2-start-writing-your-notes",
+                            "title": "2. ابدأ في كتابة ملاحظاتك"
+                  },
+                  {
+                            "id": "3-edit-and-format-your-text",
+                            "title": "3. تعديل وتنسيق النص الخاص بك"
+                  },
+                  {
+                            "id": "4-save-your-notes",
+                            "title": "4. احفظ ملاحظاتك"
+                  },
+                  {
+                            "id": "5-access-notes-anytime-anywhere",
+                            "title": "5. الوصول إلى الملاحظات في أي وقت وفي أي مكان"
+                  },
+                  {
+                            "id": "6-share-your-notes",
+                            "title": "6. شارك ملاحظاتك"
+                  },
+                  {
+                            "id": "7-continue-editing-anytime",
+                            "title": "7. متابعة التعديل في أي وقت"
+                  },
+                  {
+                            "id": "benefits-of-using-our-online-notepad",
+                            "title": "فوائد استخدام مفكرتنا عبر الإنترنت"
+                  },
+                  {
+                            "id": "tips-for-better-usage",
+                            "title": "نصائح للاستخدام الأفضل"
+                  },
+                  {
+                            "id": "conclusion",
+                            "title": "الخاتمة"
+                  }
+        ]
+      }
+    }
   }
 };
