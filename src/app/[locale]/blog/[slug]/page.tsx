@@ -21,6 +21,8 @@ import { splitHtmlAfterFirstParagraph } from "@/lib/blog-content";
 import { blogPostAbsoluteUrl, resolveCanonicalUrl } from "@/lib/blog-urls";
 import { BlogTableOfContents } from "@/components/BlogTableOfContents";
 
+import { BLOG_TRANSLATIONS } from "@/lib/blog-i18n";
+
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
@@ -39,8 +41,11 @@ export async function generateMetadata({
     return { title: "Post not found" };
   }
 
-  const title = post.metaTitle?.trim() || post.title;
-  const description = post.metaDescription?.trim() || post.excerpt;
+  const translations = BLOG_TRANSLATIONS[locale]?.posts;
+  const transPost = translations?.[slug];
+
+  const title = transPost?.metaTitle?.trim() || transPost?.title || post.metaTitle?.trim() || post.title;
+  const description = transPost?.metaDescription?.trim() || transPost?.excerpt || post.metaDescription?.trim() || post.excerpt;
   const defaultCanonical = blogPostAbsoluteUrl(locale, slug);
   const canonical = resolveCanonicalUrl(post.canonicalUrl, defaultCanonical);
 
@@ -73,17 +78,47 @@ export default async function BlogPostPage({
   ]);
   if (!post) notFound();
 
+  const transPost = BLOG_TRANSLATIONS[locale]?.posts?.[slug];
+  const tUi = BLOG_TRANSLATIONS[locale]?.postUi || BLOG_TRANSLATIONS.en.postUi;
+  const postsTranslations = BLOG_TRANSLATIONS[locale]?.posts || BLOG_TRANSLATIONS.en.posts;
+
+  const localizedPost = {
+    ...post,
+    title: transPost?.title || post.title,
+    excerpt: transPost?.excerpt || post.excerpt,
+    contentHtml: transPost?.contentHtml || post.contentHtml,
+  };
+
   const popular = getPopularPostsUnified(all, post.slug, 3);
   const related = getRelatedPostsUnified(post, all);
+
+  const localizedPopular = popular.map((p) => {
+    const translation = postsTranslations[p.slug];
+    return {
+      ...p,
+      title: translation?.title || p.title,
+    };
+  });
+
+  const localizedRelated = related.map((p) => {
+    const translation = postsTranslations[p.slug];
+    return {
+      ...p,
+      title: translation?.title || p.title,
+      excerpt: translation?.excerpt || p.excerpt,
+    };
+  });
 
   const blogHref = localizedPath(locale, "/blog");
   const homeHref = localizedPath(locale, "/");
 
-  const hasStaticSections = Boolean(post.sections && post.sections.length > 0);
-  const hasDbBody = Boolean(post.contentHtml?.trim());
+  const hasStaticSections = Boolean(localizedPost.sections && localizedPost.sections.length > 0);
+  const hasDbBody = Boolean(localizedPost.contentHtml?.trim());
 
   const staticTocItems =
-    post.sections?.map((s) => ({ id: s.id, title: s.title })) ?? [];
+    localizedPost.sections?.map((s) => ({ id: s.id, title: s.title })) ?? [];
+
+  const tocItems = transPost?.toc || post.toc || [];
 
   return (
     <div className="min-h-screen" id="top">
@@ -93,33 +128,33 @@ export default async function BlogPostPage({
           className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors mb-10"
         >
           <ArrowLeft className="w-4 h-4" />
-          Back to blog
+          {tUi.backToBlog}
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-12 lg:gap-16">
           <article>
             <header className="mb-10">
               <h1 className="font-display text-3xl sm:text-4xl lg:text-[2.5rem] font-bold tracking-tight text-foreground leading-tight">
-                {post.title}
+                {localizedPost.title}
               </h1>
               <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
                 <span className="inline-flex items-center gap-1.5">
                   <Calendar className="w-4 h-4 shrink-0" />
-                  {post.date}
+                  {localizedPost.date}
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <Clock className="w-4 h-4 shrink-0" />
-                  {post.readTime}
+                  {localizedPost.readTime}
                 </span>
               </div>
             </header>
 
-            {hasStaticSections && post.sections && post.sections.length > 0 ? (
+            {hasStaticSections && localizedPost.sections && localizedPost.sections.length > 0 ? (
               <>
                 {(() => {
-                  const sec0 = post.sections[0];
+                  const sec0 = localizedPost.sections[0];
                   const [firstPara, ...restParas0] = sec0.paragraphs;
-                  const restSections = post.sections.slice(1);
+                  const restSections = localizedPost.sections.slice(1);
                   return (
                     <>
                       <section
@@ -174,7 +209,7 @@ export default async function BlogPostPage({
               <>
                 {(() => {
                   const { lead, rest } = splitHtmlAfterFirstParagraph(
-                    post.contentHtml!
+                    localizedPost.contentHtml!
                   );
                   return (
                     <>
@@ -184,8 +219,8 @@ export default async function BlogPostPage({
                           dangerouslySetInnerHTML={{ __html: lead }}
                         />
                       ) : null}
-                      {post.toc.length > 0 && (
-                        <BlogTableOfContents items={post.toc} />
+                      {tocItems.length > 0 && (
+                        <BlogTableOfContents items={tocItems} />
                       )}
                       {rest ? (
                         <div
@@ -203,25 +238,23 @@ export default async function BlogPostPage({
                   <Sparkles className="w-7 h-7" />
                 </div>
                 <h2 className="font-display text-xl font-semibold text-foreground mb-3">
-                  Article in progress
+                  {tUi.articleInProgress}
                 </h2>
                 <p className="text-muted-foreground max-w-md mx-auto leading-relaxed">
-                  We are finishing this piece. Browse the blog index for other
-                  posts, or open the editor and start writing your own notes in
-                  the meantime.
+                  {tUi.articleInProgressDesc}
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-3">
                   <Link
                     href={blogHref}
                     className="inline-flex items-center justify-center rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
                   >
-                    All posts
+                    {tUi.allPosts}
                   </Link>
                   <Link
                     href={homeHref}
                     className="inline-flex items-center justify-center rounded-xl border border-border bg-background px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-muted/50 transition-colors"
                   >
-                    Open notepad
+                    {tUi.openNotepad}
                   </Link>
                 </div>
               </div>
@@ -232,10 +265,10 @@ export default async function BlogPostPage({
             <div className="lg:sticky lg:top-28 space-y-6">
               <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
                 <h2 className="text-xs font-bold tracking-widest uppercase text-muted-foreground mb-4">
-                  Popular posts
+                  {tUi.popularPosts}
                 </h2>
                 <ul className="space-y-4">
-                  {popular.map((p) => (
+                  {localizedPopular.map((p) => (
                     <li key={`${p.kind}-${p.slug}`}>
                       <Link
                         href={localizedPath(locale, `/blog/${p.slug}`)}
@@ -255,31 +288,30 @@ export default async function BlogPostPage({
 
               <div className="rounded-2xl border border-border bg-gradient-to-br from-primary/[0.08] to-transparent dark:from-primary/[0.12] p-6 shadow-sm">
                 <p className="text-sm font-medium text-foreground mb-1">
-                  Start writing
+                  {tUi.startWriting}
                 </p>
                 <p className="text-xs text-muted-foreground leading-relaxed mb-4">
-                  Use our free online notepad in the browser. No install, autosave
-                  on your device.
+                  {tUi.startWritingDesc}
                 </p>
                 <Link
                   href={homeHref}
                   className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors text-center leading-snug"
                 >
                   <Home className="w-4 h-4 shrink-0" />
-                  Open free online notepad
+                  {tUi.openFreeNotepad}
                 </Link>
               </div>
             </div>
           </aside>
         </div>
 
-        {related.length > 0 && (
+        {localizedRelated.length > 0 && (
           <section className="mt-20 pt-16 border-t border-border">
             <h2 className="font-display text-2xl font-bold text-foreground mb-8">
-              Related posts
+              {tUi.relatedPosts}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {related.map((p) => (
+              {localizedRelated.map((p) => (
                 <Link
                   key={`${p.kind}-${p.slug}`}
                   href={localizedPath(locale, `/blog/${p.slug}`)}
@@ -292,7 +324,7 @@ export default async function BlogPostPage({
                     {p.excerpt}
                   </p>
                   <span className="inline-flex items-center text-sm font-semibold text-primary mt-auto">
-                    Read post
+                    {tUi.readPost}
                     <ArrowUpRight className="w-4 h-4 ml-1 opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </span>
                 </Link>

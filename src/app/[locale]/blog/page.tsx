@@ -5,6 +5,7 @@ import { BlogNewsletter } from "@/components/BlogNewsletter";
 import { getMergedBlogPosts } from "@/lib/blog-service";
 import { localizedPath } from "@/lib/i18n";
 import { canonicalUrlForPage } from "@/lib/site";
+import { BLOG_TRANSLATIONS } from "@/lib/blog-i18n";
 
 export async function generateMetadata({
   params,
@@ -12,10 +13,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const t = BLOG_TRANSLATIONS[locale]?.ui || BLOG_TRANSLATIONS.en.ui;
   return {
-    title: "Blog",
-    description:
-      "Read the latest news, updates, and articles on productivity, quick note taking, and writing tools.",
+    title: t.metaTitle,
+    description: t.metaDescription,
     alternates: { canonical: canonicalUrlForPage(locale, "/blog") },
     openGraph: { url: canonicalUrlForPage(locale, "/blog") },
   };
@@ -29,21 +30,33 @@ export default async function BlogPage({
   const { locale } = await params;
   const blogPosts = await getMergedBlogPosts();
 
+  const t = BLOG_TRANSLATIONS[locale]?.ui || BLOG_TRANSLATIONS.en.ui;
+  const postsTranslations = BLOG_TRANSLATIONS[locale]?.posts || BLOG_TRANSLATIONS.en.posts;
+
+  const localizedPosts = blogPosts.map((post) => {
+    const translation = postsTranslations[post.slug];
+    return {
+      ...post,
+      title: translation?.title || post.title,
+      excerpt: translation?.excerpt || post.excerpt,
+    };
+  });
+
   return (
     <div className="container max-w-[85rem] mx-auto px-4 py-16 sm:py-24 min-h-screen">
       <div className="max-w-3xl mx-auto text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-display">
-          Blog
+          {t.pageTitle}
         </h1>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 object-cover">
-        {blogPosts.length === 0 ? (
+        {localizedPosts.length === 0 ? (
           <p className="col-span-full text-center text-muted-foreground text-sm border border-dashed border-border rounded-2xl py-16 px-6">
-            No articles yet. Check back soon.
+            {t.noArticles}
           </p>
         ) : null}
-        {blogPosts.map((post) => (
+        {localizedPosts.map((post) => (
           <div
             key={`${post.kind}-${post.slug}`}
             className="group border border-border bg-card rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col"
@@ -77,7 +90,7 @@ export default async function BlogPage({
                   href={localizedPath(locale, `/blog/${post.slug}`)}
                   className="text-sm font-semibold text-primary flex items-center group-hover:translate-x-1 transition-transform"
                 >
-                  Read <ArrowRight className="w-4 h-4 ml-1" />
+                  {t.read} <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             </div>
@@ -85,7 +98,13 @@ export default async function BlogPage({
         ))}
       </div>
 
-      <BlogNewsletter />
+      <BlogNewsletter
+        title={t.newsletterTitle}
+        description={t.newsletterDescription}
+        placeholder={t.newsletterPlaceholder}
+        buttonText={t.newsletterSubscribe}
+        alertText={t.newsletterAlert}
+      />
     </div>
   );
 }
