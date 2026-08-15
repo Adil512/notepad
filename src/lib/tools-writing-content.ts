@@ -308,11 +308,92 @@ const zh: WritingToolsCopy = {
   },
 };
 
+const ar: WritingToolsCopy = {
+  pageTitle: "أدوات الكتابة",
+  metaTitle: "أدوات كتابة ممتازة لزيادة الإنتاجية - مؤقت التركيز، الإملاء الصوتي، القوالب والمزيد",
+  metaDescription: "عزز إنتاجيتك في الكتابة باستخدام أدوات قوية مثل مؤقت التركيز، وتتبع أهداف الكتابة، والإملاء الصوتي، وقوالب المحتوى، ورف القصاصات والمزيد.",
+  intro: [
+    {
+      text: "تساعدك أدوات الكتابة لدينا على إنشاء وتنظيم وإدارة ملاحظاتك الرقمية ومحتواك ومسوداتك مباشرة في متصفحك. يمكنك البدء بـ ",
+    },
+    { link: "/distraction-free-writer", label: "وضع كاتب خالٍ من المشتتات" },
+    { text: " أو استخدام " },
+    { link: "/quick-notes", label: "ملاحظات سريعة" },
+    { text: " لالتقاط أفكارك بشكل سريع، ثم إضافة أدوات مساعدة لزيادة الإنتاجية مثل: " },
+    { link: "/tools/writing/focus-timer", label: "مؤقت التركيز" },
+    { text: ", " },
+    { link: "/tools/writing/speech-dictation", label: "الإملاء الصوتي" },
+    { text: ", " },
+    { link: "/tools/writing/goal-tracker", label: "تتبع الأهداف" },
+    { text: " و " },
+    { link: "/tools/writing/templates", label: "قوالب المحتوى" },
+    {
+      text: ". سواء كنت تدون، أو تكتب مسودات للعمل، أو تدرس، فإن هذه الأدوات مصممة لتعزيز تركيزك وإنتاجيتك دون مغادرة Notepad.is.",
+    },
+  ],
+  ctaAllTools: "كل الأدوات",
+  ctaNotepadEditor: "محرر الملاحظات",
+  experiencesHeading: "تجارب الكتابة",
+  utilitiesHeading: "أدوات كتابة مجانية عبر الإنترنت",
+  open: "فتح",
+  landings: {
+    distractionFree: {
+      title: "كتابة خالية من المشتتات",
+      description:
+        "مساحة كاملة هادئة مصممة للعمل العميق والتركيز - لا مشتتات، فقط كلماتك.",
+    },
+    quickNotes: {
+      title: "ملاحظات سريعة",
+      description:
+        "التقط الأفكار والقوائم بسرعة عندما لا تحتاج إلى محرر ملاحظات كامل.",
+    },
+  },
+  toolLabels: {
+    "focus-timer": {
+      h1: "مؤقت التركيز والكتابة",
+      tagline: "تقنية البومودورو + محرر الزن + إحصاءات محلية",
+    },
+    "goal-tracker": {
+      h1: "أهداف الكتابة",
+      tagline: "حدد الأهداف، وتتبع تقدمك، وحقق الإنجازات",
+    },
+    "speech-dictation": {
+      h1: "الإملاء الصوتي",
+      tagline: "تحويل الصوت إلى نص داخل المتصفح",
+    },
+    templates: {
+      h1: "القوالب",
+      tagline: "إنشاء هياكل المحتوى بنقرة واحدة",
+    },
+    "snippet-shelf": {
+      h1: "رف القصاصات",
+      tagline: "إعادة استخدام النصوص ونسخها بسرعة",
+    },
+    "reading-mode": {
+      h1: "وضع القراءة",
+      tagline: "تنسيق قراءة نظيف ومريح للعين",
+    },
+    "print-note": {
+      h1: "طباعة الملاحظة",
+      tagline: "تنسيق جاهز ومحسن للطباعة الورقية",
+    },
+    "share-note": {
+      h1: "مشاركة الملاحظة",
+      tagline: "تصدير ومشاركة الملاحظات محلياً",
+    },
+    "import-export": {
+      h1: "استيراد وتصدير",
+      tagline: "إدارة ملفات الملاحظات في مكان واحد",
+    },
+  },
+};
+
 const byLocale: Record<string, WritingToolsCopy> = {
   en,
   af,
   ko,
   zh,
+  ar,
 };
 
 export function getWritingToolsCopy(locale: string): WritingToolsCopy {
