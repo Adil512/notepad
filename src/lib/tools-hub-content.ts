@@ -1381,6 +1381,80 @@ const id: ToolsHubCopy = {
   },
 };
 
+const ceb: ToolsHubCopy = {
+  pageTitle: "Mga Himan sa Pagsulat ug Notepad",
+  intro:
+    "Pangitaa ang tanang propesyonal nga mga himan sa pagsulat sa Notepad nga mahimo nimong magamit nga libre, walay kutub.",
+  introLink: {
+    before: "Pangitaa ang tanang propesyonal nga ",
+    label: "Notepad",
+    after: " nga mga himan sa pagsulat nga mahimo nimong magamit nga libre, walay kutub.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad Online",
+  chips: {
+    writing: "Mga himan sa pagsulat",
+    editors: "Mga himan sa editor",
+    text: "Pagtuki sa teksto",
+    devTools: "Mga himan sa developer",
+    excel: "Mga konverter sa Excel",
+  },
+  categoryLabel: "Kategorya",
+  openCategory: "Ablihi ang kategorya",
+  toolsCountWord: "himan",
+  categories: {
+    writing: {
+      title: "Mga Himan sa Pagsulat",
+      description:
+        "Pagsulat nga walay makabalda, dali nga mga nota, mga sesyon sa focus, mga tumong, dictation, mga templat, mga snippet, ug mga tabang sa workflow.",
+    },
+    editors: {
+      title: "Mga Himan sa Editor",
+      description:
+        "Mga editor sa Markdown, code, JSON, ug HTML para sa teknikal nga pagsulat ug structured nga mga sulod.",
+    },
+    text: {
+      title: "Mga Himan sa Pagtuki sa Teksto",
+      description:
+        "Mga counter sa pulong, karakter, sentensya, ug parapo nga adunay mga kapuslanan sa pagbasa ug pagtandi.",
+    },
+    devTools: {
+      title: "Mga Himan sa Developer",
+      description:
+        "Mga formatter, minifier, encoder, ug regex nga mga utility para sa adlaw-adlaw nga web development.",
+    },
+    excel: {
+      title: "Mga Himan sa Konverter sa Excel",
+      description:
+        "Pag-convert tali sa Excel ug CSV, JSON, XML, PDF, ODS, Google Sheets, ug uban pang mga format sa spreadsheet.",
+    },
+    documents: {
+      title: "Mga Himan sa Konverter sa Dokumento",
+      description:
+        "I-transform ang mga PDF, Word, TXT, Markdown, HTML, RTF, ug PowerPoint nga mga file para sa pag-edit ug pagmantala.",
+    },
+    data: {
+      title: "Mga Himan sa Data & Code Converter",
+      description:
+        "Ibalhin ang data tali sa JSON, CSV, XML, YAML, SQL, ug yano nga mga format sa teksto para sa API ug data workflows.",
+    },
+    format: {
+      title: "Mga Himan sa Teksto nga Utility",
+      description:
+        "Pagbalhin sa case sa teksto, mga operasyon sa linya, paglimpyo sa teksto, ug compact nga mga himan sa pag-format para sa dali nga pagbag-o sa teksto.",
+    },
+  },
+  aboutTitle: "Bahin sa Atong Libreng Online nga mga Himan",
+  aboutBody:
+    "Welcome sa among kompleto nga koleksyon sa libreng online nga mga himan nga gidisenyo aron pasyohon ang pag-edit sa teksto, pag-convert sa data, pagproseso sa dokumento, ug mga workflow sa developer.",
+  footer: {
+    before: "Nangita sa klasiko nga canvas? Ang ",
+    linkLabel: "Editor sa Notepad",
+    after:
+      " mao gihapon ang bug-os nga rich-text nga kasinatian nga adunay mga lamesa, mga imahe, ug pag-format.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -1401,6 +1475,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   fr,
   ko,
   id,
+  ceb,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
