@@ -3083,6 +3083,228 @@ const iu: ToolsHubCopy = {
   },
 };
 
+const ga: ToolsHubCopy = {
+  pageTitle: "Notepad & Uirlisí Scríbhneoireachta",
+  intro:
+    "Aimsigh gach uirlis scríbhneoireachta Notepad gairmiúil ar féidir leat a úsáid saor in aisce agus gan teorainn.",
+  introLink: {
+    before: "Aimsigh gach uirlis scríbhneoireachta ",
+    label: "Notepad",
+    after: " gairmiúil ar féidir leat a úsáid saor in aisce agus gan teorainn.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad ar líne",
+  chips: {
+    writing: "Uirlisí scríbhneoireachta",
+    editors: "Eagarthóirí",
+    text: "Anailís téacs",
+    devTools: "Uirlisí forbróra",
+    excel: "Tiontairí Excel",
+  },
+  categoryLabel: "Catagóir",
+  openCategory: "Oscail an chatagóir",
+  toolsCountWord: "uirlisí",
+  categories: {
+    writing: {
+      title: "Uirlisí Scríbhneoireachta",
+      description:
+        "Scríbhneoireacht saor ó tharraingt aird, meabhraithe tapa, seisiúin dírithe, spriocanna, deachtú, teimpléid, blúiríní cóid agus cabhróirí sreafa oibre.",
+    },
+    editors: {
+      title: "Eagarthóirí",
+      description:
+        "Eagarthóirí Markdown, cóid, JSON agus HTML le haghaidh scríbhneoireachta teicniúla agus obair ábhair struchtúrtha.",
+    },
+    text: {
+      title: "Uirlisí Anailíse Téacs",
+      description:
+        "Áiritheoirí focal, carachtar, abairtí agus alt le fóntais inléiteachta agus comparáide.",
+    },
+    devTools: {
+      title: "Uirlisí Forbróra",
+      description:
+        "Formáiditheoirí, mionaitheoirí, ionchódóirí agus fóntais regex le haghaidh forbairt gréasáin laethúil.",
+    },
+    excel: {
+      title: "Uirlisí Tiontaithe Excel",
+      description:
+        "Tiontaigh idir Excel agus CSV, JSON, XML, PDF, ODS, Google Sheets agus formáidí scarbhileoige eile.",
+    },
+    documents: {
+      title: "Uirlisí Tiontaithe Doiciméad",
+      description:
+        "Claochlú comhaid PDF, Word, TXT, Markdown, HTML, RTF agus PowerPoint le haghaidh eagarthóireacht agus foilsiú.",
+    },
+    data: {
+      title: "Uirlisí Tiontaithe Sonraí & Cóid",
+      description:
+        "Bog sonraí idir formáidí JSON, CSV, XML, YAML, SQL agus téacs soiléir le haghaidh sreafaí oibre API agus sonraí.",
+    },
+    format: {
+      title: "Uirlisí Fóntais Téacs",
+      description:
+        "Tiontú cáis, oibríochtaí líne, glanadh téacs agus uirlisí formáidithe dlúth le haghaidh claochluithe téacs tapa.",
+    },
+  },
+  aboutTitle: "Faoi Ár nUirlisí Ar Líne In Aisce",
+  aboutBody:
+    "Fáilte chuig ár mbailiúchán iomlán de uirlisí ar líne in aisce atá deartha chun eagarthóireacht téacs, tiontú sonraí, próiseáil doiciméad agus sreafaí oibre forbróra a shimpliú.",
+  footer: {
+    before: "An bhfuil tú ag lorg an chanbhás clasaiceach? Cuireann an ",
+    linkLabel: "Eagarthóir Notepad",
+    after:
+      " taithí iomlán téacs shaibhir ar fáil fós le táblaí, íomhánna agus formáidiú.",
+  },
+};
+
+const it: ToolsHubCopy = {
+  pageTitle: "Notepad & Strumenti di Scrittura",
+  intro:
+    "Trova tutti gli strumenti di scrittura professionali di Notepad che puoi utilizzare gratuitamente e senza limiti.",
+  introLink: {
+    before: "Trova tutti gli strumenti di scrittura professionali di ",
+    label: "Notepad",
+    after: " che puoi utilizzare gratuitamente e senza limiti.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad online",
+  chips: {
+    writing: "Strumenti di scrittura",
+    editors: "Editor",
+    text: "Analisi del testo",
+    devTools: "Strumenti di sviluppo",
+    excel: "Convertitori Excel",
+  },
+  categoryLabel: "Categoria",
+  openCategory: "Apri categoria",
+  toolsCountWord: "strumenti",
+  categories: {
+    writing: {
+      title: "Strumenti di Scrittura",
+      description:
+        "Scrittura senza distrazioni, note rapide, sessioni di concentrazione, obiettivi, dettatura, modelli, frammenti di codice e assistenti per il flusso di lavoro.",
+    },
+    editors: {
+      title: "Editor",
+      description:
+        "Editor Markdown, codice, JSON e HTML per scrittura tecnica e gestione di contenuti strutturati.",
+    },
+    text: {
+      title: "Strumenti di Analisi del Testo",
+      description:
+        "Conteggio di parole, caratteri, frasi e paragrafi con strumenti di leggibilità e confronto.",
+    },
+    devTools: {
+      title: "Strumenti di Sviluppo",
+      description:
+        "Formattatori, minificatori, encoder e utilità regex per lo sviluppo web quotidiano.",
+    },
+    excel: {
+      title: "Strumenti di Conversione Excel",
+      description:
+        "Converti tra Excel e CSV, JSON, XML, PDF, ODS, Google Sheets e altri formati di fogli di calcolo.",
+    },
+    documents: {
+      title: "Strumenti di Conversione Documenti",
+      description:
+        "Trasforma file PDF, Word, TXT, Markdown, HTML, RTF e PowerPoint per la modifica e la pubblicazione.",
+    },
+    data: {
+      title: "Strumenti di Conversione Dati e Codice",
+      description:
+        "Trasferisci dati tra i formati JSON, CSV, XML, YAML, SQL e testo semplice per API e flussi di lavoro di dati.",
+    },
+    format: {
+      title: "Strumenti di Utilità di Testo",
+      description:
+        "Conversione maiuscole/minuscole, operazioni sulle righe, pulizia del testo e strumenti di formattazione compatta per rapide modifiche al testo.",
+    },
+  },
+  aboutTitle: "Informazioni sui nostri strumenti online gratuiti",
+  aboutBody:
+    "Benvenuto nella nostra raccolta completa di strumenti online gratuiti progettati per semplificare l'editing di testi, la conversione di dati, l'elaborazione di documenti e i flussi di lavoro degli sviluppatori.",
+  footer: {
+    before: "Cerchi l'area di lavoro classica? L'",
+    linkLabel: "editor di Notepad",
+    after:
+      " offre ancora l'esperienza di testo avanzata completa con tabelle, immagini e formattazione.",
+  },
+};
+
+const ja: ToolsHubCopy = {
+  pageTitle: "メモ帳＆執筆ツール",
+  intro:
+    "無料かつ無制限で使用できる、メモ帳のすべてのプロフェッショナルな執筆ツールをご覧ください。",
+  introLink: {
+    before: "無料かつ無制限で使用できる、",
+    label: "メモ帳",
+    after: "のすべてのプロフェッショナルな執筆ツールをご覧ください。",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "オンラインメモ帳",
+  chips: {
+    writing: "執筆ツール",
+    editors: "エディタツール",
+    text: "テキスト分析",
+    devTools: "開発者ツール",
+    excel: "Excel変換",
+  },
+  categoryLabel: "カテゴリ",
+  openCategory: "カテゴリを開く",
+  toolsCountWord: "個のツール",
+  categories: {
+    writing: {
+      title: "執筆ツール",
+      description:
+        "気を散らさない執筆、クイックメモ、集中セッション、目標設定、音声入力、テンプレート、コードスニペット、ワークフロー支援ツール。",
+    },
+    editors: {
+      title: "エディタツール",
+      description:
+        "テクニカルライティングや構造化されたコンテンツ作成のためのMarkdown、コード、JSON、HTMLエディタ。",
+    },
+    text: {
+      title: "テキスト分析ツール",
+      description:
+        "可読性スコアや比較ユーティリティを備えた単語、文字、文、段落カウンター。",
+    },
+    devTools: {
+      title: "開発者ツール",
+      description:
+        "日常的なウェブ開発に役立つフォーマッタ、ミニファイア、エンコーダ、正規表現ユーティリティ。",
+    },
+    excel: {
+      title: "Excel変換ツール",
+      description:
+        "ExcelとCSV、JSON、XML、PDF、ODS、Googleスプレッドシート、その他のスプレッドシート形式間の相互変換。",
+    },
+    documents: {
+      title: "文書変換ツール",
+      description:
+        "編集や公開のためのPDF、Word、TXT、Markdown、HTML、RTF、PowerPointファイルの相互変換。",
+    },
+    data: {
+      title: "データ＆コード変換ツール",
+      description:
+        "APIやデータワークフロー用にJSON、CSV、XML、YAML、SQL、プレーンテキスト形式間でデータを移行。",
+    },
+    format: {
+      title: "テキストユーティリティ",
+      description:
+        "大文字・小文字変換、行操作、テキストクリーニング、クイック編集用のコンパクトな書式設定ツール。",
+    },
+  },
+  aboutTitle: "無料のオンラインツールについて",
+  aboutBody:
+    "テキスト編集, データ変換, ドキュメント処理, 開発者ワークフローを簡素化するために設計された, 無料オンラインツールの完全なコレクションへようこそ。",
+  footer: {
+    before: "クラシックな執筆キャンバスをお探しですか？ ",
+    linkLabel: "メモ帳エディタ",
+    after:
+      "は、表、画像、書式設定を備えた完全なリッチテキスト体験を引き続き提供しています。",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -3126,6 +3348,9 @@ const byLocale: Record<string, ToolsHubCopy> = {
   is,
   ig,
   iu,
+  ga,
+  it,
+  ja,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
