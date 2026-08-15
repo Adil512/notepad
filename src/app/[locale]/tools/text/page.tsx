@@ -117,6 +117,41 @@ const CONTENT = {
       "text-compare-diff": "文本对比",
     },
   },
+  ar: {
+    metaTitle: "أدوات مجانية لتحليل النصوص – حساب الكلمات، الحروف ومقارنة النصوص عبر الإنترنت",
+    metaDesc: "قم بتحليل النصوص وتحسينها باستخدام أدوات مجانية تشمل عداد الكلمات، عداد الحروف، عداد الجمل، عداد الفقرات، حاسبة وقت القراءة، محول حالة الأحرف، منظف النصوص، مزيل الأسطر المكررة، مرتب النصوص، وأداة مقارنة النصوص.",
+    pageTitle: "أدوات تحليل النصوص",
+    introPrefix: "تساعدك أدوات تحليل النصوص لدينا على قياس وتقييم وتحسين المحتوى المكتوب من حيث سهولة القراءة والبنية المهيكلة. ابدأ بـ ",
+    introWordCounter: "عداد الكلمات",
+    introOr: " أو ",
+    introCharCounter: "عداد الحروف",
+    introStart: "، ثم تعمق في حساب ",
+    introSentences: "الجمل",
+    introAnd: " و ",
+    introParagraphs: "الفقرات",
+    introDig: "، وتقدير ",
+    introReadingTime: "وقت القراءة",
+    introEstimate: "، وضبط ",
+    introCase: "حالة الأحرف",
+    introSuffix: "، وتنظيف الأسطر أو ترتيبها، ومقارنة المسودات - كل ذلك دون تحميل محتواك إلى أي خادم.",
+    ctaAllTools: "كل الأدوات",
+    ctaEditorTools: "أدوات المحرر",
+    ctaWritingTools: "أدوات الكتابة",
+    ctaNotepadEditor: "محرر الملاحظات",
+    sectionHeading: "الأدوات",
+    toolTitles: {
+      "word-counter": "عداد الكلمات",
+      "character-counter": "عداد الحروف",
+      "sentence-counter": "عداد الجمل",
+      "paragraph-counter": "عداد الفقرات",
+      "reading-time-calculator": "حاسبة وقت القراءة",
+      "case-converter": "محول حالة الأحرف",
+      "text-cleaner": "منظف النصوص",
+      "duplicate-remover": "مزيل الأسطر المكررة",
+      "text-sorter": "مرتب النصوص",
+      "text-compare-diff": "مقارنة النصوص",
+    },
+  },
 };
 
 export async function generateMetadata({
@@ -166,42 +201,42 @@ export default async function TextAnalysisCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/text/word-counter" : L("/tools/text/word-counter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/text/word-counter" : L("/tools/text/word-counter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introWordCounter}
               </Link>
               {t.introOr}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/text/character-counter" : L("/tools/text/character-counter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/text/character-counter" : L("/tools/text/character-counter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCharCounter}
               </Link>
               {t.introStart}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/text/sentence-counter" : L("/tools/text/sentence-counter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/text/sentence-counter" : L("/tools/text/sentence-counter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introSentences}
               </Link>
               {t.introAnd}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/text/paragraph-counter" : L("/tools/text/paragraph-counter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/text/paragraph-counter" : L("/tools/text/paragraph-counter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introParagraphs}
               </Link>
               {t.introDig}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/text/reading-time-calculator" : L("/tools/text/reading-time-calculator")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/text/reading-time-calculator" : L("/tools/text/reading-time-calculator")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introReadingTime}
               </Link>
               {t.introEstimate}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/text/case-converter" : L("/tools/text/case-converter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/text/case-converter" : L("/tools/text/case-converter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCase}
@@ -252,7 +287,7 @@ export default async function TextAnalysisCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  (locale === "zh" || locale === "ko")
+                  (locale === "zh" || locale === "ko" || locale === "ar")
                     ? `/tools/text/${id}`
                     : L(`/tools/text/${id}`)
                 }
