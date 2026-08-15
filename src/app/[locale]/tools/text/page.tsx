@@ -11,6 +11,79 @@ import { canonicalUrlForPage } from "@/lib/site";
 import { ToolIcon } from "@/components/tools/ToolIcon";
 import { ArrowRight } from "lucide-react";
 
+const CONTENT = {
+  en: {
+    metaTitle: "Free Text Analysis Tools – Count Words, Characters & Compare Text Online",
+    metaDesc: "Analyze and optimize text with free tools including Word Counter, Character Counter, Sentence Counter, Paragraph Counter, Reading Time Calculator, Case Converter, Text Cleaner, Duplicate Line Remover, Text Sorter, and Text Compare.",
+    pageTitle: "Text analysis tools",
+    introPrefix: "Our text analysis tools help you measure, evaluate, and optimize written content for readability and structure. Start with a ",
+    introWordCounter: "word counter",
+    introOr: " or ",
+    introCharCounter: "character counter",
+    introStart: ", then dig into ",
+    introSentences: "sentences",
+    introAnd: " and ",
+    introParagraphs: "paragraphs",
+    introDig: ", estimate ",
+    introReadingTime: "reading time",
+    introEstimate: ", adjust ",
+    introCase: "case",
+    introSuffix: ", clean or sort lines, and compare drafts—all without uploading your content to a server.",
+    ctaAllTools: "All tools",
+    ctaEditorTools: "Editor tools",
+    ctaWritingTools: "Writing tools",
+    ctaNotepadEditor: "Notepad editor",
+    sectionHeading: "Tools",
+    toolTitles: {
+      "word-counter": "Word Counter",
+      "character-counter": "Character Counter",
+      "sentence-counter": "Sentence Counter",
+      "paragraph-counter": "Paragraph Counter",
+      "reading-time-calculator": "Reading Time Calculator",
+      "case-converter": "Case Converter",
+      "text-cleaner": "Text Cleaner",
+      "duplicate-remover": "Duplicate Line Remover",
+      "text-sorter": "Text Sorter",
+      "text-compare-diff": "Text Compare",
+    },
+  },
+  ko: {
+    metaTitle: "무료 텍스트 분석 도구 – 온라인 단어, 글자 수 계산 및 텍스트 비교",
+    metaDesc: "단어 계산기, 글자 수 계산기, 문장 계산기, 단락 계산기, 읽기 시간 계산기, 대소문자 변환기, 텍스트 정리기, 중복 라인 제거기, 텍스트 정렬기, 텍스트 비교기를 포함한 무료 도구로 텍스트를 분석하고 최적화해 보세요.",
+    pageTitle: "텍스트 분석 도구",
+    introPrefix: "저희 텍스트 분석 도구는 가독성과 구조를 위해 작성된 콘텐츠를 측정, 평가 및 최적화하도록 돕습니다. ",
+    introWordCounter: "단어 계산기",
+    introOr: " 또는 ",
+    introCharCounter: "글자 수 계산기",
+    introStart: "로 시작한 다음, ",
+    introSentences: "문장",
+    introAnd: " 및 ",
+    introParagraphs: "단락",
+    introDig: "을 세부적으로 분석하고, ",
+    introReadingTime: "읽기 시간",
+    introEstimate: "을 예측하고, ",
+    introCase: "대소문자",
+    introSuffix: "를 조절하거나 줄을 정리 또는 정렬하고, 초안을 비교해 보세요. 이 모든 작업은 콘텐츠를 서버에 업로드하지 않고 수행됩니다.",
+    ctaAllTools: "모든 도구",
+    ctaEditorTools: "에디터 도구",
+    ctaWritingTools: "글쓰기 도구",
+    ctaNotepadEditor: "메모장 에디터",
+    sectionHeading: "도구",
+    toolTitles: {
+      "word-counter": "단어 계산기",
+      "character-counter": "글자 수 계산기",
+      "sentence-counter": "문장 계산기",
+      "paragraph-counter": "단락 계산기",
+      "reading-time-calculator": "읽기 시간 계산기",
+      "case-converter": "대소문자 변환기",
+      "text-cleaner": "텍스트 정리기",
+      "duplicate-remover": "중복 라인 제거기",
+      "text-sorter": "텍스트 정렬기",
+      "text-compare-diff": "텍스트 비교기",
+    },
+  },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -18,12 +91,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const canonical = canonicalUrlForPage(locale, "/tools/text");
+  const t = CONTENT[locale as keyof typeof CONTENT] ?? CONTENT.en;
   return {
-    title: "Free Text Analysis Tools – Count Words, Characters & Compare Text Online",
-    description:
-      "Analyze and optimize text with free tools including Word Counter, Character Counter, Sentence Counter, Paragraph Counter, Reading Time Calculator, Case Converter, Text Cleaner, Duplicate Line Remover, Text Sorter, and Text Compare.",
+    title: t.metaTitle,
+    description: t.metaDesc,
     alternates: { canonical },
-    openGraph: { url: canonical },
+    openGraph: {
+      url: canonical,
+      title: t.metaTitle,
+      description: t.metaDesc,
+    },
   };
 }
 
@@ -34,6 +111,7 @@ export default async function TextAnalysisCategoryPage({
 }) {
   const { locale } = await params;
   const L = (p: string) => localizedPath(locale, p);
+  const t = CONTENT[locale as keyof typeof CONTENT] ?? CONTENT.en;
   const visibleIds = TEXT_ANALYSIS_HUB_TOOL_IDS.filter((id) =>
     isToolVisibleInLocale(id, locale)
   );
@@ -47,55 +125,53 @@ export default async function TextAnalysisCategoryPage({
       <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-12 lg:px-8">
         <header className="mx-auto max-w-3xl lg:mx-0">
           <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Text analysis tools
+            {t.pageTitle}
           </h1>
           <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
             <p>
-              Our text analysis tools help you measure, evaluate, and optimize
-              written content for readability and structure. Start with a{" "}
+              {t.introPrefix}
               <Link
                 href={L("/tools/text/word-counter")}
                 className="font-semibold text-primary hover:underline"
               >
-                word counter
-              </Link>{" "}
-              or{" "}
+                {t.introWordCounter}
+              </Link>
+              {t.introOr}
               <Link
                 href={L("/tools/text/character-counter")}
                 className="font-semibold text-primary hover:underline"
               >
-                character counter
+                {t.introCharCounter}
               </Link>
-              , then dig into{" "}
+              {t.introStart}
               <Link
                 href={L("/tools/text/sentence-counter")}
                 className="font-semibold text-primary hover:underline"
               >
-                sentences
-              </Link>{" "}
-              and{" "}
+                {t.introSentences}
+              </Link>
+              {t.introAnd}
               <Link
                 href={L("/tools/text/paragraph-counter")}
                 className="font-semibold text-primary hover:underline"
               >
-                paragraphs
+                {t.introParagraphs}
               </Link>
-              , estimate{" "}
+              {t.introDig}
               <Link
                 href={L("/tools/text/reading-time-calculator")}
                 className="font-semibold text-primary hover:underline"
               >
-                reading time
+                {t.introReadingTime}
               </Link>
-              , adjust{" "}
+              {t.introEstimate}
               <Link
                 href={L("/tools/text/case-converter")}
                 className="font-semibold text-primary hover:underline"
               >
-                case
+                {t.introCase}
               </Link>
-              , clean or sort lines, and compare drafts—all without uploading
-              your content to a server.
+              {t.introSuffix}
             </p>
           </div>
 
@@ -104,25 +180,25 @@ export default async function TextAnalysisCategoryPage({
               href={L("/tools")}
               className="inline-flex items-center gap-2 rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              All tools
+              {t.ctaAllTools}
             </Link>
             <Link
               href={L("/tools/editors")}
               className="inline-flex items-center gap-2 rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              Editor tools
+              {t.ctaEditorTools}
             </Link>
             <Link
               href={L("/tools/writing")}
               className="inline-flex items-center gap-2 rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              Writing tools
+              {t.ctaWritingTools}
             </Link>
             <Link
               href={L("/")}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:bg-primary/90"
             >
-              Notepad editor
+              {t.ctaNotepadEditor}
               <ArrowRight className="h-4 w-4 opacity-90" />
             </Link>
           </div>
@@ -133,7 +209,7 @@ export default async function TextAnalysisCategoryPage({
             id="text-tools-grid-heading"
             className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground"
           >
-            Tools
+            {t.sectionHeading}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {visibleIds.map((id) => (
@@ -141,6 +217,10 @@ export default async function TextAnalysisCategoryPage({
                 key={id}
                 id={id}
                 href={L(`/tools/text/${id}`)}
+                title={
+                  t.toolTitles[id as keyof typeof t.toolTitles] ??
+                  writingToolsMeta[id].h1
+                }
               />
             ))}
           </ul>
@@ -153,11 +233,12 @@ export default async function TextAnalysisCategoryPage({
 function TextAnalysisToolCard({
   id,
   href,
+  title,
 }: {
   id: WritingToolId;
   href: string;
+  title: string;
 }) {
-  const m = writingToolsMeta[id];
   return (
     <li>
       <Link
@@ -168,7 +249,7 @@ function TextAnalysisToolCard({
           <ToolIcon id={id} className="h-6 w-6" />
         </span>
         <span className="min-w-0">
-          <span className="block font-medium text-foreground">{m.h1}</span>
+          <span className="block font-medium text-foreground">{title}</span>
         </span>
       </Link>
     </li>

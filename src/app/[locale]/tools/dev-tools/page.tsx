@@ -11,6 +11,77 @@ import { canonicalUrlForPage } from "@/lib/site";
 import { ToolIcon } from "@/components/tools/ToolIcon";
 import { ArrowRight } from "lucide-react";
 
+const CONTENT = {
+  en: {
+    metaTitle: "Free Developer Tools – JSON, HTML, CSS, XML, Base64 & Regex Utilities",
+    metaDesc: "Access free developer tools to format, validate, encode, decode, and optimize code. Use JSON Formatter & Validator, HTML Minifier, CSS Beautifier, Base64 Encoder/Decoder, URL Encoder/Decoder, Regex Tester, and XML Formatter online.",
+    pageTitle: "Developer tools",
+    introPrefix: "Developer tools give you essential utilities for web development, programming, and technical SEO—without installing desktop software. Format and inspect JSON with the ",
+    introJsonFormatter: "JSON formatter",
+    introTighten: ", tighten markup using the ",
+    introHtmlMinifier: "HTML minifier",
+    introTidy: ", tidy styles with the ",
+    introCssBeautifier: "CSS beautifier",
+    introEncode: ", encode or decode with ",
+    introBase64: "Base64",
+    introAnd: " and ",
+    introUrl: "URL",
+    introValidate: " tools, validate patterns in the ",
+    introRegexTester: "regex tester",
+    introStructure: ", and structure XML in the ",
+    introXmlFormatter: "XML formatter",
+    introSuffix: ". Everything runs locally in your browser where supported.",
+    ctaAllTools: "All tools",
+    ctaEditorTools: "Editor tools",
+    ctaTextAnalysis: "Text analysis",
+    ctaNotepadEditor: "Notepad editor",
+    sectionHeading: "Free Online Developer Tools",
+    toolTitles: {
+      "json-formatter": "JSON Formatter",
+      "html-minifier": "HTML Minifier",
+      "css-beautifier": "CSS Beautifier",
+      "base64-codec": "Base64 Codec",
+      "url-codec": "URL Codec",
+      "regex-tester": "Regex Tester",
+      "xml-formatter": "XML Formatter",
+    },
+  },
+  ko: {
+    metaTitle: "무료 개발자 도구 – JSON, HTML, CSS, XML, Base64 및 정규식 유틸리티",
+    metaDesc: "코드를 포맷하고, 유효성을 검증하며, 인코딩, 디코딩 및 최적화하기 위한 무료 개발자 도구를 사용해 보세요. JSON 포맷터 & 검증기, HTML 미니파이어, CSS 뷰티파이어, Base64 인코더/디코더, URL 인코더/디코더, 정규식 테스터, XML 포맷터를 온라인에서 사용할 수 있습니다.",
+    pageTitle: "개발자 도구",
+    introPrefix: "개발자 도구는 데스크톱 소프트웨어를 설치하지 않고도 웹 개발, 프로그래밍 및 기술적 SEO를 위한 필수 유틸리티를 제공합니다. ",
+    introJsonFormatter: "JSON 포맷터",
+    introTighten: "로 JSON을 포맷하고 검사하며, ",
+    introHtmlMinifier: "HTML 미니파이어",
+    introTidy: "로 마크업을 압축하고, ",
+    introCssBeautifier: "CSS 뷰티파이어",
+    introEncode: "로 스타일을 정리하며, ",
+    introBase64: "Base64",
+    introAnd: " 및 ",
+    introUrl: "URL",
+    introValidate: " 도구로 인코딩 또는 디코딩하고, ",
+    introRegexTester: "정규식 테스터",
+    introStructure: "에서 패턴을 검증하고, ",
+    introXmlFormatter: "XML 포맷터",
+    introSuffix: "에서 XML을 구조화할 수 있습니다. 지원되는 모든 기능은 브라우저에서 로컬로 실행됩니다.",
+    ctaAllTools: "모든 도구",
+    ctaEditorTools: "에디터 도구",
+    ctaTextAnalysis: "텍스트 분석",
+    ctaNotepadEditor: "메모장 에디터",
+    sectionHeading: "무료 온라인 개발자 도구",
+    toolTitles: {
+      "json-formatter": "JSON 포맷터",
+      "html-minifier": "HTML 미니파이어",
+      "css-beautifier": "CSS 뷰티파이어",
+      "base64-codec": "Base64 변환기",
+      "url-codec": "URL 변환기",
+      "regex-tester": "정규식 테스터",
+      "xml-formatter": "XML 포맷터",
+    },
+  },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -18,12 +89,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const canonical = canonicalUrlForPage(locale, "/tools/dev-tools");
+  const t = CONTENT[locale as keyof typeof CONTENT] ?? CONTENT.en;
   return {
-    title: "Free Developer Tools – JSON, HTML, CSS, XML, Base64 & Regex Utilities",
-    description:
-      "Access free developer tools to format, validate, encode, decode, and optimize code. Use JSON Formatter & Validator, HTML Minifier, CSS Beautifier, Base64 Encoder/Decoder, URL Encoder/Decoder, Regex Tester, and XML Formatter online.",
+    title: t.metaTitle,
+    description: t.metaDesc,
     alternates: { canonical },
-    openGraph: { url: canonical },
+    openGraph: {
+      url: canonical,
+      title: t.metaTitle,
+      description: t.metaDesc,
+    },
   };
 }
 
@@ -34,6 +109,7 @@ export default async function DevToolsCategoryPage({
 }) {
   const { locale } = await params;
   const L = (p: string) => localizedPath(locale, p);
+  const t = CONTENT[locale as keyof typeof CONTENT] ?? CONTENT.en;
   const visibleIds = DEV_TOOLS_HUB_TOOL_IDS.filter((id) =>
     isToolVisibleInLocale(id, locale)
   );
@@ -47,62 +123,60 @@ export default async function DevToolsCategoryPage({
       <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-12 lg:px-8">
         <header className="mx-auto max-w-3xl lg:mx-0">
           <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Developer tools
+            {t.pageTitle}
           </h1>
           <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
             <p>
-              Developer tools give you essential utilities for web development,
-              programming, and technical SEO—without installing desktop software.
-              Format and inspect JSON with the{" "}
+              {t.introPrefix}
               <Link
                 href={L("/tools/dev-tools/json-formatter")}
                 className="font-semibold text-primary hover:underline"
               >
-                JSON formatter
+                {t.introJsonFormatter}
               </Link>
-              , tighten markup using the{" "}
+              {t.introTighten}
               <Link
                 href={L("/tools/dev-tools/html-minifier")}
                 className="font-semibold text-primary hover:underline"
               >
-                HTML minifier
+                {t.introHtmlMinifier}
               </Link>
-              , tidy styles with the{" "}
+              {t.introTidy}
               <Link
                 href={L("/tools/dev-tools/css-beautifier")}
                 className="font-semibold text-primary hover:underline"
               >
-                CSS beautifier
+                {t.introCssBeautifier}
               </Link>
-              , encode or decode with{" "}
+              {t.introEncode}
               <Link
                 href={L("/tools/dev-tools/base64-codec")}
                 className="font-semibold text-primary hover:underline"
               >
-                Base64
-              </Link>{" "}
-              and{" "}
+                {t.introBase64}
+              </Link>
+              {t.introAnd}
               <Link
                 href={L("/tools/dev-tools/url-codec")}
                 className="font-semibold text-primary hover:underline"
               >
-                URL
-              </Link>{" "}
-              tools, validate patterns in the{" "}
+                {t.introUrl}
+              </Link>
+              {t.introValidate}
               <Link
                 href={L("/tools/dev-tools/regex-tester")}
                 className="font-semibold text-primary hover:underline"
               >
-                regex tester
+                {t.introRegexTester}
               </Link>
-              , and structure XML in the{" "}
+              {t.introStructure}
               <Link
                 href={L("/tools/dev-tools/xml-formatter")}
                 className="font-semibold text-primary hover:underline"
               >
-                XML formatter
+                {t.introXmlFormatter}
               </Link>
-              . Everything runs locally in your browser where supported.
+              {t.introSuffix}
             </p>
           </div>
 
@@ -111,25 +185,25 @@ export default async function DevToolsCategoryPage({
               href={L("/tools")}
               className="inline-flex items-center gap-2 rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              All tools
+              {t.ctaAllTools}
             </Link>
             <Link
               href={L("/tools/editors")}
               className="inline-flex items-center gap-2 rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              Editor tools
+              {t.ctaEditorTools}
             </Link>
             <Link
               href={L("/tools/text")}
               className="inline-flex items-center gap-2 rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              Text analysis
+              {t.ctaTextAnalysis}
             </Link>
             <Link
               href={L("/")}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:bg-primary/90"
             >
-              Notepad editor
+              {t.ctaNotepadEditor}
               <ArrowRight className="h-4 w-4 opacity-90" />
             </Link>
           </div>
@@ -140,11 +214,19 @@ export default async function DevToolsCategoryPage({
             id="dev-tools-grid-heading"
             className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground"
           >
-            Free Online Developer Tools
+            {t.sectionHeading}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {visibleIds.map((id) => (
-              <DevToolCard key={id} id={id} href={L(`/tools/dev-tools/${id}`)} />
+              <DevToolCard
+                key={id}
+                id={id}
+                href={L(`/tools/dev-tools/${id}`)}
+                title={
+                  t.toolTitles[id as keyof typeof t.toolTitles] ??
+                  writingToolsMeta[id].h1
+                }
+              />
             ))}
           </ul>
         </section>
@@ -156,11 +238,12 @@ export default async function DevToolsCategoryPage({
 function DevToolCard({
   id,
   href,
+  title,
 }: {
   id: WritingToolId;
   href: string;
+  title: string;
 }) {
-  const m = writingToolsMeta[id];
   return (
     <li>
       <Link
@@ -171,7 +254,7 @@ function DevToolCard({
           <ToolIcon id={id} className="h-6 w-6" />
         </span>
         <span className="min-w-0">
-          <span className="block font-medium text-foreground">{m.h1}</span>
+          <span className="block font-medium text-foreground">{title}</span>
         </span>
       </Link>
     </li>

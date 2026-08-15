@@ -11,6 +11,53 @@ import { canonicalUrlForPage } from "@/lib/site";
 import { ToolIcon } from "@/components/tools/ToolIcon";
 import { ArrowRight } from "lucide-react";
 
+const CONTENT = {
+  en: {
+    metaTitle: "Text Utility Tools | Notepad.is",
+    metaDesc: "Use text utility tools for fast cleaning, formatting, transforming, and comparing text, including case changes, line operations, and minification.",
+    pageTitle: "Text Utility Tools",
+    intro: "Text utility tools provide fast and lightweight operations for cleaning, formatting, transforming, and comparing text. This includes case conversion, duplicate removal, text sorting, line merging, diff checker, and text cleaning utilities.",
+    ctaAllTools: "All tools",
+    ctaNotepadEditor: "Notepad editor",
+    sectionHeading: "Text utility tools",
+    toolLabels: {
+      "text-uppercase-lowercase": { h1: "Case Converter", tagline: "Upper, lower, title, sentence, capital case" },
+      "text-to-camel-case": { h1: "Camel Case Converter", tagline: "Transform text to camelCase style" },
+      "text-to-snake-case": { h1: "Snake Case Converter", tagline: "Transform text to snake_case style" },
+      "text-to-kebab-case": { h1: "Kebab Case Converter", tagline: "Transform text to kebab-case style" },
+      "split-text-to-columns": { h1: "Split Text to Columns", tagline: "Split lines into columns by delimiters" },
+      "merge-text-lines": { h1: "Merge Text Lines", tagline: "Combine multiple lines into a single line" },
+      "convert-line-endings": { h1: "Convert Line Endings", tagline: "Change line endings to Windows, Mac, Linux format" },
+      "minify-json": { h1: "Minify JSON", tagline: "Compress JSON by removing whitespace and line breaks" },
+      "minify-xml": { h1: "Minify XML", tagline: "Compress XML by removing whitespace and line breaks" },
+      "paste-clean": { h1: "Paste & Clean Text", tagline: "Remove formatting, lines, and clean text" },
+      "compare-drafts": { h1: "Compare Text (Diff)", tagline: "Compare two texts side-by-side to find differences" },
+    },
+  },
+  ko: {
+    metaTitle: "텍스트 유틸리티 도구 | Notepad.is",
+    metaDesc: "대소문자 변경, 줄 작업 및 압축을 포함하여 텍스트를 빠르게 정리, 포맷, 변환 및 비교할 수 있는 텍스트 유틸리티 도구를 사용해 보세요.",
+    pageTitle: "텍스트 유틸리티 도구",
+    intro: "텍스트 유틸리티 도구는 텍스트를 정리, 포맷, 변환 및 비교하기 위한 빠르고 가벼운 작업을 제공합니다. 여기에는 대소문자 변환, 중복 라인 제거, 텍스트 정렬, 줄 합치기, 차이(diff) 검사기 및 텍스트 정리 유틸리티가 포함됩니다.",
+    ctaAllTools: "모든 도구",
+    ctaNotepadEditor: "메모장 에디터",
+    sectionHeading: "텍스트 유틸리티 도구",
+    toolLabels: {
+      "text-uppercase-lowercase": { h1: "대소문자 변환기", tagline: "대문자, 소문자, 제목 표시 등" },
+      "text-to-camel-case": { h1: "카멜 케이스 변환기", tagline: "camelCase 형식으로 단어 변환" },
+      "text-to-snake-case": { h1: "스네이크 케이스 변환기", tagline: "snake_case 형식으로 단어 변환" },
+      "text-to-kebab-case": { h1: "케밥 케이스 변환기", tagline: "kebab-case 형식으로 단어 변환" },
+      "split-text-to-columns": { h1: "텍스트 열 분할기", tagline: "구분 기호 기준으로 텍스트 열 나누기" },
+      "merge-text-lines": { h1: "텍스트 줄 병합기", tagline: "여러 줄의 텍스트를 하나의 라인으로 합치기" },
+      "convert-line-endings": { h1: "줄 바꿈 문자 변환기", tagline: "Windows, Mac, Linux 간 줄 바꿈 형식 변환" },
+      "minify-json": { h1: "JSON 미니파이어", tagline: "공백과 줄 바꿈을 제거하여 JSON 압축" },
+      "minify-xml": { h1: "XML 미니파이어", tagline: "공백과 줄 바꿈을 제거하여 XML 압축" },
+      "paste-clean": { h1: "텍스트 정리기", tagline: "서식과 빈 줄을 제거하고 텍스트 정리" },
+      "compare-drafts": { h1: "텍스트 비교기", tagline: "두 텍스트를 나란히 비교하여 차이점 확인" },
+    },
+  },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -18,12 +65,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const canonical = canonicalUrlForPage(locale, "/tools/format");
+  const t = CONTENT[locale as keyof typeof CONTENT] ?? CONTENT.en;
   return {
-    title: "Text Utility Tools | Notepad.is",
-    description:
-      "Use text utility tools for fast cleaning, formatting, transforming, and comparing text, including case changes, line operations, and minification.",
+    title: t.metaTitle,
+    description: t.metaDesc,
     alternates: { canonical },
-    openGraph: { url: canonical },
+    openGraph: {
+      url: canonical,
+      title: t.metaTitle,
+      description: t.metaDesc,
+    },
   };
 }
 
@@ -34,6 +85,7 @@ export default async function FormatToolsCategoryPage({
 }) {
   const { locale } = await params;
   const L = (p: string) => localizedPath(locale, p);
+  const t = CONTENT[locale as keyof typeof CONTENT] ?? CONTENT.en;
   const visibleIds = TEXT_FORMAT_CONVERTER_TOOL_IDS.filter((id) =>
     isToolVisibleInLocale(id, locale)
   );
@@ -47,15 +99,10 @@ export default async function FormatToolsCategoryPage({
       <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-12 lg:px-8">
         <header className="mx-auto max-w-3xl lg:mx-0">
           <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Text Utility Tools
+            {t.pageTitle}
           </h1>
           <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            <p>
-              Text utility tools provide fast and lightweight operations for
-              cleaning, formatting, transforming, and comparing text. This
-              includes case conversion, duplicate removal, text sorting, line
-              merging, diff checker, and text cleaning utilities.
-            </p>
+            <p>{t.intro}</p>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-2.5">
@@ -63,13 +110,13 @@ export default async function FormatToolsCategoryPage({
               href={L("/tools")}
               className="inline-flex items-center gap-2 rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              All tools
+              {t.ctaAllTools}
             </Link>
             <Link
               href={L("/")}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:bg-primary/90"
             >
-              Notepad editor
+              {t.ctaNotepadEditor}
               <ArrowRight className="h-4 w-4 opacity-90" />
             </Link>
           </div>
@@ -80,11 +127,16 @@ export default async function FormatToolsCategoryPage({
             id="format-tools-grid-heading"
             className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground"
           >
-            Text utility tools
+            {t.sectionHeading}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {visibleIds.map((id) => (
-              <FormatToolCard key={id} id={id} href={L(`/tools/format/${id}`)} />
+              <FormatToolCard
+                key={id}
+                id={id}
+                href={L(`/tools/format/${id}`)}
+                labels={t.toolLabels[id as keyof typeof t.toolLabels]}
+              />
             ))}
           </ul>
         </section>
@@ -96,11 +148,15 @@ export default async function FormatToolsCategoryPage({
 function FormatToolCard({
   id,
   href,
+  labels,
 }: {
   id: WritingToolId;
   href: string;
+  labels?: { h1: string; tagline: string };
 }) {
   const m = writingToolsMeta[id];
+  const h1 = labels?.h1 ?? m.h1;
+  const tagline = labels?.tagline ?? m.tagline;
   return (
     <li>
       <Link
@@ -111,9 +167,9 @@ function FormatToolCard({
           <ToolIcon id={id} className="h-6 w-6" />
         </span>
         <span className="min-w-0">
-          <span className="block font-medium text-foreground">{m.h1}</span>
+          <span className="block font-medium text-foreground">{h1}</span>
           <span className="mt-1 block text-sm text-muted-foreground">
-            {m.tagline}
+            {tagline}
           </span>
         </span>
       </Link>

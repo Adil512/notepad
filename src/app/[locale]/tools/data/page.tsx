@@ -11,6 +11,67 @@ import { canonicalUrlForPage } from "@/lib/site";
 import { ToolIcon } from "@/components/tools/ToolIcon";
 import { ArrowRight } from "lucide-react";
 
+const CONTENT = {
+  en: {
+    metaTitle: "Data & Code Converter Tools | Notepad.is",
+    metaDesc: "Transform structured data formats including JSON, CSV, XML, YAML, and SQL with free online data and code converter tools.",
+    pageTitle: "Data & Code Converter Tools",
+    introPrefix: "Our Free Online Data converter tools are designed to transform structured data formats such as ",
+    introJson: "JSON",
+    introCsv: "CSV",
+    introXml: "XML",
+    introAndSql: ", YAML, and ",
+    introSql: "SQL",
+    introSuffix: ". These tools are critical for developers, data engineers, and API integration workflows.",
+    ctaAllTools: "All tools",
+    ctaNotepadEditor: "Notepad editor",
+    sectionHeading: "Data conversion tools",
+    toolTitles: {
+      "json-to-csv": "JSON to CSV",
+      "csv-to-json": "CSV to JSON",
+      "json-to-xml": "JSON to XML",
+      "xml-to-json": "XML to JSON",
+      "yaml-to-json": "YAML to JSON",
+      "json-to-yaml": "JSON to YAML",
+      "sql-to-csv": "SQL to CSV",
+      "csv-to-sql": "CSV to SQL",
+      "text-to-json": "Text to JSON",
+      "json-to-text": "JSON to Text",
+      "text-to-xml": "Text to XML",
+      "xml-to-text": "XML to Text",
+    },
+  },
+  ko: {
+    metaTitle: "데이터 및 코드 변환 도구 | Notepad.is",
+    metaDesc: "무료 온라인 데이터 및 코드 변환 도구로 JSON, CSV, XML, YAML, SQL을 포함한 구조화된 데이터 형식을 변환해 보세요.",
+    pageTitle: "데이터 및 코드 변환 도구",
+    introPrefix: "저희의 무료 온라인 데이터 변환 도구는 ",
+    introJson: "JSON",
+    introCsv: "CSV",
+    introXml: "XML",
+    introAndSql: ", YAML 및 ",
+    introSql: "SQL",
+    introSuffix: "과 같은 구조화된 데이터 형식을 변환하도록 설계되었습니다. 이러한 도구는 개발자, 데이터 엔지니어 및 API 통합 워크플로에 필수적입니다.",
+    ctaAllTools: "모든 도구",
+    ctaNotepadEditor: "메모장 에디터",
+    sectionHeading: "데이터 변환 도구",
+    toolTitles: {
+      "json-to-csv": "JSON을 CSV로 변환",
+      "csv-to-json": "CSV를 JSON으로 변환",
+      "json-to-xml": "JSON을 XML로 변환",
+      "xml-to-json": "XML을 JSON으로 변환",
+      "yaml-to-json": "YAML을 JSON으로 변환",
+      "json-to-yaml": "JSON을 YAML로 변환",
+      "sql-to-csv": "SQL을 CSV로 변환",
+      "csv-to-sql": "CSV를 SQL로 변환",
+      "text-to-json": "텍스트를 JSON으로 변환",
+      "json-to-text": "JSON을 텍스트로 변환",
+      "text-to-xml": "텍스트를 XML로 변환",
+      "xml-to-text": "XML을 텍스트로 변환",
+    },
+  },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -18,12 +79,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const canonical = canonicalUrlForPage(locale, "/tools/data");
+  const t = CONTENT[locale as keyof typeof CONTENT] ?? CONTENT.en;
   return {
-    title: "Data & Code Converter Tools | Notepad.is",
-    description:
-      "Transform structured data formats including JSON, CSV, XML, YAML, and SQL with free online data and code converter tools.",
+    title: t.metaTitle,
+    description: t.metaDesc,
     alternates: { canonical },
-    openGraph: { url: canonical },
+    openGraph: {
+      url: canonical,
+      title: t.metaTitle,
+      description: t.metaDesc,
+    },
   };
 }
 
@@ -34,6 +99,7 @@ export default async function DataToolsCategoryPage({
 }) {
   const { locale } = await params;
   const L = (p: string) => localizedPath(locale, p);
+  const t = CONTENT[locale as keyof typeof CONTENT] ?? CONTENT.en;
   const visibleIds = DATA_CODE_CONVERTER_TOOL_IDS.filter((id) =>
     isToolVisibleInLocale(id, locale)
   );
@@ -47,41 +113,39 @@ export default async function DataToolsCategoryPage({
       <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-12 lg:px-8">
         <header className="mx-auto max-w-3xl lg:mx-0">
           <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Data &amp; Code Converter Tools
+            {t.pageTitle}
           </h1>
           <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
             <p>
-              Our Free Online Data converter tools are designed to transform
-              structured data formats such as{" "}
+              {t.introPrefix}
               <Link
                 href={L("/tools/data/json-to-csv")}
                 className="font-semibold text-primary hover:underline"
               >
-                JSON
+                {t.introJson}
               </Link>
               ,{" "}
               <Link
                 href={L("/tools/data/csv-to-json")}
                 className="font-semibold text-primary hover:underline"
               >
-                CSV
+                {t.introCsv}
               </Link>
               ,{" "}
               <Link
                 href={L("/tools/data/xml-to-json")}
                 className="font-semibold text-primary hover:underline"
               >
-                XML
+                {t.introXml}
               </Link>
-              , YAML, and{" "}
+              {t.introAndSql}
               <Link
                 href={L("/tools/data/sql-to-csv")}
                 className="font-semibold text-primary hover:underline"
               >
-                SQL
+                {t.introSql}
               </Link>
-              . These tools are critical for developers, data engineers, and API
-              integration workflows.
+              {t.introSuffix}
             </p>
           </div>
 
@@ -90,22 +154,30 @@ export default async function DataToolsCategoryPage({
               href={L("/tools")}
               className="inline-flex items-center gap-2 rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              All tools
+              {t.ctaAllTools}
             </Link>
             <Link
               href={L("/")}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:bg-primary/90"
             >
-              Notepad editor
+              {t.ctaNotepadEditor}
               <ArrowRight className="h-4 w-4 opacity-90" />
             </Link>
           </div>
         </header>
 
-        <section className="mt-14" aria-label="Data conversion tools">
+        <section className="mt-14" aria-label={t.sectionHeading}>
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {visibleIds.map((id) => (
-              <DataToolCard key={id} id={id} href={L(`/tools/data/${id}`)} />
+              <DataToolCard
+                key={id}
+                id={id}
+                href={L(`/tools/data/${id}`)}
+                title={
+                  t.toolTitles[id as keyof typeof t.toolTitles] ??
+                  writingToolsMeta[id].h1
+                }
+              />
             ))}
           </ul>
         </section>
@@ -117,11 +189,12 @@ export default async function DataToolsCategoryPage({
 function DataToolCard({
   id,
   href,
+  title,
 }: {
   id: WritingToolId;
   href: string;
+  title: string;
 }) {
-  const m = writingToolsMeta[id];
   return (
     <li>
       <Link
@@ -132,7 +205,7 @@ function DataToolCard({
           <ToolIcon id={id} className="h-6 w-6" />
         </span>
         <span className="min-w-0">
-          <span className="block font-medium text-foreground">{m.h1}</span>
+          <span className="block font-medium text-foreground">{title}</span>
         </span>
       </Link>
     </li>

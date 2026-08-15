@@ -11,6 +11,55 @@ import { canonicalUrlForPage } from "@/lib/site";
 import { ToolIcon } from "@/components/tools/ToolIcon";
 import { ArrowRight } from "lucide-react";
 
+const CONTENT = {
+  en: {
+    metaTitle: "Online Editor Tools – Markdown, JSON, HTML Editor & Code Notepad",
+    metaDesc: "Access powerful online editor tools for writing, coding, and data formatting. Use the Markdown Editor, Code Notepad, JSON Editor, and HTML Editor to create, edit, validate, and manage content efficiently in one place.",
+    pageTitle: "Editor tools",
+    introPrefix: "Our editor tools provide advanced in-browser editing environments for structured and technical formats—",
+    introMarkdown: "Markdown",
+    introJson: "JSON",
+    introHtml: "HTML",
+    introAnd: " and ",
+    introCode: "code snippets",
+    introSuffix: ". Developers can edit and update snippets without installing a heavy third-party IDE. Technical writers and SEO professionals who work with structured data and web content can use the same lightweight workspace in the tab they already have open.",
+    ctaAllTools: "All tools",
+    ctaWritingTools: "Writing tools",
+    ctaNotepadEditor: "Notepad editor",
+    sectionHeading: "Editors",
+    cardOpen: "Open",
+    toolTitles: {
+      "markdown-notepad": "Markdown Editor",
+      "code-notepad": "Code Notepad",
+      "json-editor": "JSON Editor",
+      "html-editor": "HTML Editor",
+    },
+  },
+  ko: {
+    metaTitle: "온라인 에디터 도구 – 마크다운, JSON, HTML 에디터 & 코드 메모장",
+    metaDesc: "글쓰기, 코딩 및 데이터 서식 지정을 위한 강력한 온라인 에디터 도구를 사용해 보세요. 마크다운 에디터, 코드 메모장, JSON 에디터, HTML 에디터를 사용하여 콘텐츠를 한곳에서 효율적으로 작성, 편집, 검증 및 관리할 수 있습니다.",
+    pageTitle: "에디터 도구",
+    introPrefix: "저희 에디터 도구는 구조화되고 기술적인 형식을 위한 고급 브라우저 내 편집 환경을 제공합니다—",
+    introMarkdown: "마크다운",
+    introJson: "JSON",
+    introHtml: "HTML",
+    introAnd: " 및 ",
+    introCode: "코드 스니펫",
+    introSuffix: ". 개발자는 무거운 타사 IDE를 설치하지 않고도 스니펫을 편집하고 업데이트할 수 있습니다. 구조화된 데이터 및 웹 콘텐츠를 다루는 기술 작가와 SEO 전문가는 이미 열려 있는 탭에서 동일한 가벼운 작업 공간을 사용할 수 있습니다.",
+    ctaAllTools: "모든 도구",
+    ctaWritingTools: "글쓰기 도구",
+    ctaNotepadEditor: "메모장 에디터",
+    sectionHeading: "에디터",
+    cardOpen: "열기",
+    toolTitles: {
+      "markdown-notepad": "마크다운 에디터",
+      "code-notepad": "코드 메모장",
+      "json-editor": "JSON 에디터",
+      "html-editor": "HTML 에디터",
+    },
+  },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -18,12 +67,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const canonical = canonicalUrlForPage(locale, "/tools/editors");
+  const t = CONTENT[locale as keyof typeof CONTENT] ?? CONTENT.en;
   return {
-    title: "Online Editor Tools – Markdown, JSON, HTML Editor & Code Notepad",
-    description:
-      "Access powerful online editor tools for writing, coding, and data formatting. Use the Markdown Editor, Code Notepad, JSON Editor, and HTML Editor to create, edit, validate, and manage content efficiently in one place.",
+    title: t.metaTitle,
+    description: t.metaDesc,
     alternates: { canonical },
-    openGraph: { url: canonical },
+    openGraph: {
+      url: canonical,
+      title: t.metaTitle,
+      description: t.metaDesc,
+    },
   };
 }
 
@@ -34,6 +87,7 @@ export default async function EditorToolsCategoryPage({
 }) {
   const { locale } = await params;
   const L = (p: string) => localizedPath(locale, p);
+  const t = CONTENT[locale as keyof typeof CONTENT] ?? CONTENT.en;
   const visibleIds = EDITOR_HUB_TOOL_IDS.filter((id) =>
     isToolVisibleInLocale(id, locale)
   );
@@ -47,43 +101,39 @@ export default async function EditorToolsCategoryPage({
       <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-12 lg:px-8">
         <header className="mx-auto max-w-3xl lg:mx-0">
           <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            Editor tools
+            {t.pageTitle}
           </h1>
           <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
             <p>
-              Our editor tools provide advanced in-browser editing environments
-              for structured and technical formats—
+              {t.introPrefix}
               <Link
                 href={L("/tools/editors/markdown-notepad")}
                 className="font-semibold text-primary hover:underline"
               >
-                Markdown
+                {t.introMarkdown}
               </Link>
               ,{" "}
               <Link
                 href={L("/tools/editors/json-editor")}
                 className="font-semibold text-primary hover:underline"
               >
-                JSON
+                {t.introJson}
               </Link>
               ,{" "}
               <Link
                 href={L("/tools/editors/html-editor")}
                 className="font-semibold text-primary hover:underline"
               >
-                HTML
+                {t.introHtml}
               </Link>
-              , and{" "}
+              {t.introAnd}
               <Link
                 href={L("/tools/editors/code-notepad")}
                 className="font-semibold text-primary hover:underline"
               >
-                code snippets
+                {t.introCode}
               </Link>
-              . Developers can edit and update snippets without installing a
-              heavy third-party IDE. Technical writers and SEO professionals who
-              work with structured data and web content can use the same
-              lightweight workspace in the tab they already have open.
+              {t.introSuffix}
             </p>
           </div>
 
@@ -92,19 +142,19 @@ export default async function EditorToolsCategoryPage({
               href={L("/tools")}
               className="inline-flex items-center gap-2 rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              All tools
+              {t.ctaAllTools}
             </Link>
             <Link
               href={L("/tools/writing")}
               className="inline-flex items-center gap-2 rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
-              Writing tools
+              {t.ctaWritingTools}
             </Link>
             <Link
               href={L("/")}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:bg-primary/90"
             >
-              Notepad editor
+              {t.ctaNotepadEditor}
               <ArrowRight className="h-4 w-4 opacity-90" />
             </Link>
           </div>
@@ -115,11 +165,20 @@ export default async function EditorToolsCategoryPage({
             id="editor-tools-grid-heading"
             className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground"
           >
-            Editors
+            {t.sectionHeading}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2">
             {visibleIds.map((id) => (
-              <EditorToolCard key={id} id={id} href={L(`/tools/editors/${id}`)} />
+              <EditorToolCard
+                key={id}
+                id={id}
+                href={L(`/tools/editors/${id}`)}
+                title={
+                  t.toolTitles[id as keyof typeof t.toolTitles] ??
+                  writingToolsMeta[id].h1
+                }
+                openLabel={t.cardOpen}
+              />
             ))}
           </ul>
         </section>
@@ -131,11 +190,14 @@ export default async function EditorToolsCategoryPage({
 function EditorToolCard({
   id,
   href,
+  title,
+  openLabel,
 }: {
   id: WritingToolId;
   href: string;
+  title: string;
+  openLabel: string;
 }) {
-  const m = writingToolsMeta[id];
   return (
     <li>
       <Link
@@ -146,9 +208,9 @@ function EditorToolCard({
           <ToolIcon id={id} className="h-6 w-6" />
         </span>
         <span className="min-w-0">
-          <span className="block font-medium text-foreground">{m.h1}</span>
+          <span className="block font-medium text-foreground">{title}</span>
           <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-            Open
+            {openLabel}
             <ArrowRight className="h-4 w-4" />
           </span>
         </span>

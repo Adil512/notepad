@@ -1233,6 +1233,80 @@ const fr: ToolsHubCopy = {
   },
 };
 
+const ko: ToolsHubCopy = {
+  pageTitle: "메모장 및 글쓰기 도구",
+  intro:
+    "제한 없이 무료로 사용할 수 있는 모든 전문적인 메모장 글쓰기 도구를 찾아보세요.",
+  introLink: {
+    before: "제한 없이 무료로 사용할 수 있는 모든 전문적인 ",
+    label: "메모장",
+    after: " 글쓰기 도구를 찾아보세요.",
+    href: "https://notepad.is/ko/",
+  },
+  ctaNotepad: "온라인 메모장",
+  chips: {
+    writing: "글쓰기 도구",
+    editors: "에디터 도구",
+    text: "텍스트 분석",
+    devTools: "개발자 도구",
+    excel: "Excel 변환기",
+  },
+  categoryLabel: "카테고리",
+  openCategory: "카테고리 열기",
+  toolsCountWord: "개 도구",
+  categories: {
+    writing: {
+      title: "글쓰기 도구",
+      description:
+        "집중을 방해하지 않는 글쓰기, 빠른 메모, 집중 세션, 목표 설정, 음성 받아쓰기, 템플릿, 스니펫 및 워크플로 도우미.",
+    },
+    editors: {
+      title: "에디터 도구",
+      description:
+        "기술 문서 작성 및 구조화된 콘텐츠 작업을 위한 Markdown, 코드, JSON 및 HTML 에디터.",
+    },
+    text: {
+      title: "텍스트 분석 도구",
+      description:
+        "가독성 및 비교 유틸리티가 포함된 단어, 문자, 문장 및 단락 수 계산기.",
+    },
+    devTools: {
+      title: "개발자 도구",
+      description:
+        "일반적인 웹 개발 작업을 위한 포맷터, 미니파이어, 인코더 및 정규식(Regex) 유틸리티.",
+    },
+    excel: {
+      title: "Excel 변환 도구",
+      description:
+        "Excel과 CSV, JSON, XML, PDF, ODS, Google Sheets 및 기타 스프레드시트 형식 간 변환.",
+    },
+    documents: {
+      title: "문서 변환 도구",
+      description:
+        "편집 및 게시를 위해 PDF, Word, TXT, Markdown, HTML, RTF 및 PowerPoint 파일 변환.",
+    },
+    data: {
+      title: "데이터 및 코드 변환 도구",
+      description:
+        "API 및 데이터 워크플로를 위해 JSON, CSV, XML, YAML, SQL 및 일반 텍스트 형식 간 데이터 이동.",
+    },
+    format: {
+      title: "텍스트 유틸리티 도구",
+      description:
+        "빠른 텍스트 변환을 위한 대소문자 변환, 줄 작업, 텍스트 정리 및 컴팩트한 포맷팅 도구.",
+    },
+  },
+  aboutTitle: "무료 온라인 도구 소개",
+  aboutBody:
+    "텍스트 편집, 데이터 변환, 문서 처리 및 개발자 워크플로를 단순화하도록 설계된 다양한 무료 온라인 도구를 만나보세요.",
+  footer: {
+    before: "클래식 캔버스를 찾고 계신가요? ",
+    linkLabel: "메모장 에디터",
+    after:
+      "는 여전히 표, 이미지, 서식을 포함한 모든 서식 있는 텍스트(Rich-Text) 편집 환경을 제공합니다.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -1251,6 +1325,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   ru,
   zh,
   fr,
+  ko,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
