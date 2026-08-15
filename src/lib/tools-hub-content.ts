@@ -3527,6 +3527,450 @@ const kk: ToolsHubCopy = {
   },
 };
 
+const km: ToolsHubCopy = {
+  pageTitle: "កូនសៀវភៅចំណាំ និងឧបករណ៍សរសេរ",
+  intro:
+    "ស្វែងរកឧបករណ៍សរសេរកូនសៀវភៅចំណាំអាជីពទាំងអស់ដែលអ្នកអាចប្រើបានដោយឥតគិតថ្លៃ និងគ្មានដែនកំណត់។",
+  introLink: {
+    before: "ស្វែងរកឧបករណ៍សរសេរ ",
+    label: "កូនសៀវភៅចំណាំ",
+    after: " អាជីពទាំងអស់ដែលអ្នកអាចប្រើបានដោយឥតគិតថ្លៃ និងគ្មានដែនកំណត់។",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "កូនសៀវភៅចំណាំអនឡាញ",
+  chips: {
+    writing: "ឧបករណ៍សរសេរ",
+    editors: "ឧបករណ៍កែសម្រួល",
+    text: "ការវិភាគអត្ថបទ",
+    devTools: "ឧបករណ៍អ្នកអភិវឌ្ឍន៍",
+    excel: "កម្មវិធីបម្លែង Excel",
+  },
+  categoryLabel: "ប្រភេទ",
+  openCategory: "បើកប្រភេទ",
+  toolsCountWord: "ឧបករណ៍",
+  categories: {
+    writing: {
+      title: "ឧបករណ៍សរសេរ",
+      description:
+        "ការសរសេរដោយគ្មានការរំខាន, កំណត់ត្រារហ័ស, វគ្គផ្តោតអារម្មណ៍, គោលដៅ, ការសរសេរតាមការអាន, គំរូ, បំណែកកូដ និងជំនួយការលំហូរការងារ។",
+    },
+    editors: {
+      title: "ឧបករណ៍កែសម្រួល",
+      description:
+        "កម្មវិធីកែសម្រួល Markdown, កូដ, JSON និង HTML សម្រាប់ការសរសេរបច្ចេកទេស និងការងារមាតិកាដែលមានរចនាសម្ព័ន្ធ។",
+    },
+    text: {
+      title: "ឧបករណ៍វិភាគអត្ថបទ",
+      description:
+        "ឧបករណ៍រាប់ពាក្យ, តួអក្សរ, ប្រយោគ និងកថាខណ្ឌ ជាមួយឧបករណ៍វាស់កម្រិតអានងាយស្រួល និងការប្រៀបធៀប។",
+    },
+    devTools: {
+      title: "ឧបករណ៍អ្នកអភិវឌ្ឍន៍",
+      description:
+        "កម្មវិធីរៀបចំទ្រង់ទ្រាយ, កម្មវិធីបង្រួមកូដ, កម្មវិធីកូដនីយកម្ម និងឧបករណ៍ regex សម្រាប់ការអភិវឌ្ឍន៍គេហទំព័រប្រចាំថ្ងៃ។",
+    },
+    excel: {
+      title: "ឧបករណ៍បម្លែង Excel",
+      description:
+        "បម្លែងរវាង Excel និង CSV, JSON, XML, PDF, ODS, Google Sheets និងទម្រង់សន្លឹកកិច្ចការផ្សេងទៀត។",
+    },
+    documents: {
+      title: "ឧបករណ៍បម្លែងឯកសារ",
+      description:
+        "បម្លែងឯកសារ PDF, Word, TXT, Markdown, HTML, RTF និង PowerPoint សម្រាប់ការកែសម្រួល និងការបោះពុម្ពផ្សាយ។",
+    },
+    data: {
+      title: "ឧបករណ៍បម្លែងទិន្នន័យ និងកូដ",
+      description:
+        "ផ្លាស់ប្តូរទិន្នន័យរវាងទម្រង់ JSON, CSV, XML, YAML, SQL និងអត្ថបទធម្មតាសម្រាប់ API និងលំហូរការងារទិន្នន័យ។",
+    },
+    format: {
+      title: "ឧបករណ៍ប្រើប្រាស់អត្ថបទ",
+      description:
+        "បម្លែងអក្សរធំ/តូច, ប្រតិបត្តិការលើបន្ទាត់, ការសម្អាតអត្ថបទ និងឧបករណ៍តម្រឹមទ្រង់ទ្រាយរហ័ស។",
+    },
+  },
+  aboutTitle: "អំពីឧបករណ៍អនឡាញឥតគិតថ្លៃរបស់យើង",
+  aboutBody:
+    "សូមស្វាគមន៍មកកាន់ការប្រមូលផ្តុំពេញលេញនៃឧបករណ៍អនឡាញឥតគិតថ្លៃglassរបស់យើង ដែលត្រូវបានរចនាឡើងដើម្បីសម្រួលដល់ការកែសម្រួលអត្ថបទ ការបម្លែងទិន្នន័យ ការដំណើរការឯកសារ និងលំហូរការងាររបស់អ្នកអភិវឌ្ឍន៍។",
+  footer: {
+    before: "តើអ្នកកំពុងស្វែងរកផ្ទាំងសរសេរបែបបុរាណមែនទេ? ",
+    linkLabel: "កម្មវិធីនិពន្ធកូនសៀវភៅចំណាំ",
+    after:
+      " នៅតែផ្តល់នូវបទពិសោធន៍អត្ថបទសម្បូរបែបពេញលេញជាមួយតារាង រូបភាព និងទ្រង់ទ្រាយផ្សេងៗ។",
+  },
+};
+
+const ku: ToolsHubCopy = {
+  pageTitle: "Nîşe & Amûrên Nivîsandinê",
+  intro:
+    "Hemî amûrên nivîsandinê yên profesyonel ên Nîşeyê ku hûn dikarin belaş û bêsînor bikar bînin bibînin.",
+  introLink: {
+    before: "Hemî amûrên nivîsandinê yên ",
+    label: "Nîşe",
+    after: " ên profesyonel ku hûn dikarin belaş û bêsînor bikar bînin bibînin.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Nîşe serhêl",
+  chips: {
+    writing: "Amûrên nivîsandinê",
+    editors: "Amûrên edîtorê",
+    text: "Analîza nivîsê",
+    devTools: "Amûrên pêşdebir",
+    excel: "Veguherînerên Excel",
+  },
+  categoryLabel: "Kategorî",
+  openCategory: "Kategorî veke",
+  toolsCountWord: "amûr",
+  categories: {
+    writing: {
+      title: "Amûrên Nivîsandinê",
+      description:
+        "Nivîsandina bêbaldariyê, nîşeyên bilez, danişînên balê, armanc, dîktatorî, şablon, snippet û alîkarên xebatê.",
+    },
+    editors: {
+      title: "Amûrên Edîtorê",
+      description:
+        "Edîtorên Markdown, kod, JSON û HTML ji bo nivîsandina teknîkî û naveroka sazkirî.",
+    },
+    text: {
+      title: "Amûrên Analîza Nivîsê",
+      description:
+        "Jimarkerên peyvan, tîpan, hevokan û paragrafan bi karûbarên xwendinê û berhevkirinê.",
+    },
+    devTools: {
+      title: "Amûrên Pêşdebir",
+      description:
+        "Formatker, kêmker, şîfreker û amûrên regex ji bo pêşvebirina malperê ya rojane.",
+    },
+    excel: {
+      title: "Amûrên Veguherandina Excel",
+      description:
+        "Di navbera Excel û CSV, JSON, XML, PDF, ODS, Google Sheets û formatên din ên tabloyê de veguherînin.",
+    },
+    documents: {
+      title: "Amûrên Veguherandina Belgeyan",
+      description:
+        "Pelên PDF, Word, TXT, Markdown, HTML, RTF û PowerPoint ji bo edîtokirin û weşandinê veguherînin.",
+    },
+    data: {
+      title: "Amûrên Veguherandina Dane û Kodê",
+      description:
+        "Ji bo API û workflows daneyan, daneyan di navbera formatên JSON, CSV, XML, YAML, SQL û nivîsa sade de biguhazînin.",
+    },
+    format: {
+      title: "Amûrên Karûbarê Nivîsê",
+      description:
+        "Veguheztina tîpan, karên rêzê, paqijkirina nivîsê û amûrên formatkirina kompakt ji bo guhertinên bilez ên nivîsê.",
+    },
+  },
+  aboutTitle: "Amûrên Me Yên Serhêl Ên Belaş",
+  aboutBody:
+    "Bi xêr hatî berhevoka meya bêkêmasî ya amûrên serhêl ên belaş ku ji bo hêsankirina edîtokirina nivîsê, veguherandina daneyan, hilberandina belgeyan û karên pêşdebiran hatine sêwirandin.",
+  footer: {
+    before: "Li kaxezek klasîk digerin? ",
+    linkLabel: "Edîtorê Nîşeyê",
+    after:
+      " hîn jî bi tablo, wêne û formatkirinê re ezmûnek nivîsê ya dewlemend a bêkêmasî pêşkêşî dike.",
+  },
+};
+
+const ky: ToolsHubCopy = {
+  pageTitle: "Блокнот жана жазуу куралдары",
+  intro:
+    "Блокноттун бардык кесипкөй жазуу куралдарын табыңыз, аларды акысыз жана чектөөсүз колдоно аласыз.",
+  introLink: {
+    before: "Табыңыз бардык кесипкөй жазуу куралдарын ",
+    label: "Блокнот",
+    after: " акысыз жана чектөөсүз колдоно аласыз.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Блокнот онлайн",
+  chips: {
+    writing: "Жазуу куралдары",
+    editors: "Редактор куралдары",
+    text: "Текстти талдоо",
+    devTools: "Иштеп чыгуучу куралдары",
+    excel: "Excel конвертерлери",
+  },
+  categoryLabel: "Категория",
+  openCategory: "Категорияны ачуу",
+  toolsCountWord: "курал",
+  categories: {
+    writing: {
+      title: "Жазуу Куралдары",
+      description:
+        "Алаксыбай жазуу, тез жазуулар, фокус сессиялары, максаттар, диктант, шаблондор, код үзүндүлөрү жана жумуш процессинин көмөкчүлөрү.",
+    },
+    editors: {
+      title: "Редактор Куралдары",
+      description:
+        "Техникалык жазуу жана структураланган мазмун менен иштөө үчүн Markdown, код, JSON жана HTML редакторлору.",
+    },
+    text: {
+      title: "Текстти Талдоо Куралдары",
+      description:
+        "Окулушун баалоо жана салыштыруу утилиталары бар сөз, символ, сүйлөм жана абзац эсептегичтери.",
+    },
+    devTools: {
+      title: "Иштеп Чыгуучу Куралдары",
+      description:
+        "Күнүмдүк веб-иштеп чыгуу үчүн форматтоочулар, минификаторлар, коддоочулар жана regex утилиталары.",
+    },
+    excel: {
+      title: "Excel Түрлөнтүү Куралдары",
+      description:
+        "Excel жана CSV, JSON, XML, PDF, ODS, Google Sheets жана башка электрондук таблица форматтарынын ортосунда түрлөнтүү.",
+    },
+    documents: {
+      title: "Документтерди Түрлөнтүү Куралдары",
+      description:
+        "Өзгөртүү жана жарыялоо үчүн PDF, Word, TXT, Markdown, HTML, RTF жана PowerPoint файлдарын түрлөнтүү.",
+    },
+    data: {
+      title: "Маалыматтар жана Кодду Түрлөнтүү Куралдары",
+      description:
+        "API жана маалымат агымдары үчүн JSON, CSV, XML, YAML, SQL жана жөнөкөй текст форматтарынын ортосунда маалыматтарды өткөрүү.",
+    },
+    format: {
+      title: "Тексттик Утилиталар",
+      description:
+        "Тез тексттик өзгөртүүлөр үчүн регистрди алмаштыруу, саптар менен иштөө, текстти тазалоо жана чакан форматтоо куралдары.",
+    },
+  },
+  aboutTitle: "Биздин акысыз онлайн куралдарымыз жөнүндө",
+  aboutBody:
+    "Текстти өзгөртүүнү, маалыматтарды түрлөнтүүнү, документтерди иштетүүнү жана иштеп чыгуучулардын жумуш процесстерин жеңілдетүүгө багытталган акысыз онлайн куралдарымыздын толук жыйнагына кош келиңиз.",
+  footer: {
+    before: "Классикалык кенепти издеп жатасызбы? ",
+    linkLabel: "Блокнот редактору",
+    after:
+      " дагы эле таблицалар, сүрөттөр жана форматтоо мүмкүнчүлүктөрү бар толық кандуу бай текст тажрыйбасын сунуштайт.",
+  },
+};
+
+const lo: ToolsHubCopy = {
+  pageTitle: "ປື້ມບັນທຶກ & ເຄື່ອງມືການຂຽນ",
+  intro:
+    "ຊອກຫາເຄື່ອງມືການຂຽນປື້ມບັນທຶກແບບມືອາຊີບທັງໝົດທີ່ທ່ານສາມາດນໍາໃຊ້ໄດ້ຟຣີ ແລະ ບໍ່ຈໍາກັດ.",
+  introLink: {
+    before: "ຊອກຫາເຄື່ອງມືການຂຽນ ",
+    label: "ປື້ມບັນທຶກ",
+    after: " ແບບມືອາຊີບທັງໝົດທີ່ທ່ານສາມາດນໍາໃຊ້ໄດ້ຟຣີ ແລະ ບໍ່ຈໍາກັດ.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "ປື້ມບັນທຶກອອນໄລນ໌",
+  chips: {
+    writing: "ເຄື່ອງມືການຂຽນ",
+    editors: "ເຄື່ອງມືບັນນາທິການ",
+    text: "ການວິເຄາະຂໍ້ຄວາມ",
+    devTools: "ເຄື່ອງມືນັກພັດທະນາ",
+    excel: "ຕົວແປງ Excel",
+  },
+  categoryLabel: "ໝວດໝູ່",
+  openCategory: "ເປີດໝວດໝູ່",
+  toolsCountWord: "ເຄື່ອງມື",
+  categories: {
+    writing: {
+      title: "ເຄື່ອງມືການຂຽນ",
+      description:
+        "CN: ການຂຽນທີ່ບໍ່ມີການລົບກວນ, ບັນທຶກໄວ, ເຊດຊັນຈຸດສຸມ, ເປົ້າໝາຍ, ການຂຽນຕາມຄໍາບອກ, ແມ່ແບບ, ບົດສະຫຼຸບລະຫັດ ແລະ ຕົວຊ່ວຍຂະບວນການເຮັດວຽກ.",
+    },
+    editors: {
+      title: "ເຄື່ອງມືບັນນາທິການ",
+      description:
+        "ຕົວແກ້ໄຂ Markdown, ລະຫັດ, JSON ແລະ HTML ສໍາລັບການຂຽນດ້ານວິຊາການ ແລະ ວຽກງານເນື້ອຫາທີ່ມີໂຄງສ້າງ.",
+    },
+    text: {
+      title: "...: ເຄື່ອງມືວິເຄາະຂໍ້ຄວາມ",
+      description:
+        "ເຄື່ອງມືນັບຄໍາສັບ, ຕົວອັກສອນ, ປະໂຫຍກ ແລະ ຫຍໍ້ໜ້າ ພ້ອມເຄື່ອງມືວັດແທກຄວາມງ່າຍໃນການອ່ານ ແລະ ການປຽបທຽ比.",
+    },
+    devTools: {
+      title: "ເຄື່ອງມືນັກພັດທະນາ",
+      description:
+        "ຕົວຈັດຮູບແບບ, ຕົວບີບອັດລະຫັດ, ຕົວເຂົ້າລະຫັດ ແລະ ເຄື່ອງມື regex ສໍາລັບການພັດທະນາເວັບປະຈໍາວັນ.",
+    },
+    excel: {
+      title: "ເຄື່ອງມືແປງ Excel",
+      description:
+        "ແປງລະຫວ່າງ Excel ແລະ CSV, JSON, XML, PDF, ODS, Google Sheets ແລະ ຮູບແບບສະເປຣດຊີດອື່ນໆ.",
+    },
+    documents: {
+      title: "ເຄື່ອງມືແປງເອກະសານ",
+      description:
+        "ແປງໄຟລ໌ PDF, Word, TXT, Markdown, HTML, RTF ແລະ PowerPoint ສໍາລັບການແກ້ໄຂ ແລະ ການເຜີຍແຜ່.",
+    },
+    data: {
+      title: "ເຄື່ອງມືແປງຂໍ້ມູນ ແລະ ລະຫັດ",
+      description:
+        "ຍົกຍ້າຍຂໍ້ມູນລະຫວ່າງຮູບແບບ JSON, CSV, XML, YAML, SQL ແລະ ຂໍ້ຄວາມທໍາມະດາສໍາລັບ API ແລະ ຂະບວນການເຮັດວຽກຂອງຂໍ້ມູນ.",
+    },
+    format: {
+      title: "ເຄື່ອງມືໃຊ້ສອยຂໍ້ຄວາມ",
+      description:
+        "ແປງຕົວອັກສອນໃຫຍ່/ນ້ອຍ, ການເຮັດວຽກກັບແຖວ, ການອະນາໄມຂໍ້ຄວາມ ແລະ ເຄື່ອງມືຈັດຮູບແບບດ່ວນ.",
+    },
+  },
+  aboutTitle: "ກ່ຽວກັບເຄື່ອງມືອອນໄລນ໌ຟຣີຂອງພວກເຮົາ",
+  aboutBody:
+    "ຍິນດີຕ້ອນຮັບສູ່ຄໍເລັກຊັນເຄື່ອງມືອອນໄລນ໌ຟຣີທັງໝົດຂອງພວກເຮົາ ທີ່ຖືກອອກແບບມາເພື່ອເຮັດໃຫ້ການແກ້ໄຂຂໍ້ຄວາມ, ການແປງຂໍ້ມູນ, ການປະມວນຜົນເອກະສານ ແລະ ຂະບວນการເຮັດວຽກຂອງນັກພັດທະນາງ່າຍຂຶ້ນ.",
+  footer: {
+    before: "ທ່ານກໍາລັງຊອກຫາພື້ນທີ່ຂຽນແບບຄລາສສິກບໍ່? ",
+    linkLabel: "ຕົວແກ້ໄຂປື້ມບັນທຶກ",
+    after:
+      " ຍັງຄົງສະໜອງປະສົບການຂໍ້ຄວາມທີ່ສົມບູນແບບດ້ວຍຕາຕະລາງ, ຮູບພາບ ແລະ ການຈັດຮູບແບບ.",
+  },
+};
+
+const lv: ToolsHubCopy = {
+  pageTitle: "Piezīmjbloks & Rakstīšanas rīki",
+  intro:
+    "Atrodiet visus profesionālos Piezīmjbloka rakstīšanas rīkus, kurus varat izmantot bez maksas un bez ierobežojumiem.",
+  introLink: {
+    before: "Atrodiet visus profesionālos ",
+    label: "Piezīmjbloka",
+    after: " rakstīšanas rīkus, kurus varat izmantot bez maksas un bez ierobežojumiem.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Piezīmjbloks tiešsaistē",
+  chips: {
+    writing: "Rakstīšanas rīki",
+    editors: "Redaktori",
+    text: "Teksta analīze",
+    devTools: "Izstrādātāju rīki",
+    excel: "Excel konvertētāji",
+  },
+  categoryLabel: "Kategorija",
+  openCategory: "Atvērt kategoriju",
+  toolsCountWord: "rīki",
+  categories: {
+    writing: {
+      title: "Rakstīšanas Rīki",
+      description:
+        "Rakstīšana bez traucēkļiem, ātras piezīmes, fokusa sesijas, mērķi, diktēšana, veidnes, koda fragmenti un darba plūsmas palīgi.",
+    },
+    editors: {
+      title: "Redaktori",
+      description:
+        "Markdown, koda, JSON un HTML redaktori tehniskai rakstīšanai un strukturētam satura darbam.",
+    },
+    text: {
+      title: "Teksta Analīzes Rīki",
+      description:
+        "Vārdu, rakstzīmju, teikumu un rindkopu skaitītāji ar lasāmības un salīdzināšanas utilītprogrammām.",
+    },
+    devTools: {
+      title: "Izstrādātāju Rīki",
+      description:
+        "Formatētāji, minificētāji, kodētāji un regex rīki ikdienas tīmekļa izstrādei.",
+    },
+    excel: {
+      title: "Excel Konvertēšanas Rīki",
+      description:
+        "Konvertējiet starp Excel un CSV, JSON, XML, PDF, ODS, Google Sheets un citiem izklājlapu formātiem.",
+    },
+    documents: {
+      title: "Dokumentu Konvertēšanas Rīki",
+      description:
+        "Pārveidojiet PDF, Word, TXT, Markdown, HTML, RTF un PowerPoint failus rediģēšanai un publicēšanai.",
+    },
+    data: {
+      title: "Datu un Koda Konvertēšanas Rīki",
+      description:
+        "Pārvietojiet datus starp JSON, CSV, XML, YAML, SQL un vienkārša teksta formātiem API un datu darba plūsmām.",
+    },
+    format: {
+      title: "Teksta Utilītprogrammas",
+      description:
+        "Reģistra konvertēšana, darbības ar rindām, teksta tīrīšana un kompakti formatēšanas rīki ātrām teksta izmaiņām.",
+    },
+  },
+  aboutTitle: "Par mūsu bezmaksas tiešsaistes rīkiem",
+  aboutBody:
+    "Laipni lūdzam mūsu pilnajā bezmaksas tiešsaistes rīku kolekcijā, kas paredzēta teksta rediģēšanas, datu konvertēšanas, dokumentu apstrādes un izstrādātāju darba plūsmu vienkāršošanai.",
+  footer: {
+    before: "Meklējat klasisko darba virsmu? ",
+    linkLabel: "Piezīmjbloka redaktors",
+    after:
+      " joprojām piedāvā pilnvērtīgu bagātināta teksta pieredzi ar tabulām, attēliem un formatējumu.",
+  },
+};
+
+const lt: ToolsHubCopy = {
+  pageTitle: "Užrašinė & Rašymo įrankiai",
+  intro:
+    "Raskite visus profesionalius Užrašinės rašymo įrankius, kuriais galite naudotis nemokamai ir be apribojimų.",
+  introLink: {
+    before: "Raskite visus profesionalius ",
+    label: "Užrašinės",
+    after: " rašymo įrankius, kuriais galite naudotis nemokamai ir be apribojimų.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Užrašinė internete",
+  chips: {
+    writing: "Rašymo įrankiai",
+    editors: "Redaktoriai",
+    text: "Teksto analizė",
+    devTools: "Kūrėjų įrankiai",
+    excel: "Excel keitikliai",
+  },
+  categoryLabel: "Kategorija",
+  openCategory: "Atidaryti kategoriją",
+  toolsCountWord: "įrankiai",
+  categories: {
+    writing: {
+      title: "Rašymo Įrankiai",
+      description:
+        "Rašymas be blaškymosi, greiti užrašai, susikaupimo sesijos, tikslai, diktavimas, šablonai, kodo fragmentai ir darbo eigos padėjėjai.",
+    },
+    editors: {
+      title: "Redaktoriai",
+      description:
+        "Markdown, koda, JSON ir HTML redaktoriai techniniam rašymui ir struktūrizuotam turinio darbui.",
+    },
+    text: {
+      title: "Teksto Analizės Įrankiai",
+      description:
+        "Žodžių, simbolių, sakinių ir pastraipų skaitikliai su skaitomumo ir palyginimo komunalinėmis programomis.",
+    },
+    devTools: {
+      title: "Kūrėjų Įrankiai",
+      description:
+        "Formatuotuvai, minifikatoriai, kodavimo įrankiai ir regex įrankiai kasdieniam svetainių kūrimui.",
+    },
+    excel: {
+      title: "Excel Konvertavimo Įrankiai",
+      description:
+        "Konvertuokite tarp Excel ir CSV, JSON, XML, PDF, ODS, Google Sheets ir kitų skaičiuoklių formatų.",
+    },
+    documents: {
+      title: "Dokumentų Konvertavimo Įrankiai",
+      description:
+        "Konvertuokite PDF, Word, TXT, Markdown, HTML, RTF ir PowerPoint failus redagavimui ir publikavimui.",
+    },
+    data: {
+      title: "Duomenų ir Kodo Konvertavimo Įrankiai",
+      description:
+        "Perkelkite duomenis tarp JSON, CSV, XML, YAML, SQL ir paprasto teksto formatų API ir duomenų darbo eigoms.",
+    },
+    format: {
+      title: "Teksto Komunalinės Programos",
+      description:
+        "Didžiųjų/mažųjų raidžių keitimas, veiksmai su eilutėmis, teksto valymas ir kompaktiški formatavimo įrankiai greitam teksto keitimui.",
+    },
+  },
+  aboutTitle: "Apie mūsų nemokamus internetinius įrankius",
+  aboutBody:
+    "Sveiki atvykę į mūsų nemokamų internetinių įrankių kolekciją, skirtą teksto redagavimui, duomenų konvertavimui, dokumentų apdorojimui ir kūrėjų darbo eigoms supaprastinti.",
+  footer: {
+    before: "Iškote klasikinės darbo vietos? ",
+    linkLabel: "Užrašinės redaktorius",
+    after:
+      " vis dar siūlo pilnavertę raiškiojo teksto patirtį su lentelėmis, paveikslėliais ir formatavimu.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -3576,6 +4020,12 @@ const byLocale: Record<string, ToolsHubCopy> = {
   jv,
   kn,
   kk,
+  km,
+  ku,
+  ky,
+  lo,
+  lv,
+  lt,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
