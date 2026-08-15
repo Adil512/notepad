@@ -74,8 +74,30 @@ const CONTENT = {
       "convert-line-endings": { h1: "换行符转换器", tagline: "在 Windows、Mac、Linux 格式之间转换换行符" },
       "minify-json": { h1: "JSON 压缩器", tagline: "通过删除空格和换行符来压缩 JSON" },
       "minify-xml": { h1: "XML 压缩器", tagline: "通过删除空格和换行符来压缩 XML" },
-      "paste-clean": { h1: "纯文本清洗器", tagline: "删除格式和空白行，净化文本内容" },
+      "paste-clean": { h1: "纯文本清洗器", tagline: "删除格式 and 空白行，净化文本内容" },
       "compare-drafts": { h1: "文本对比器 (Diff)", tagline: "并排对比两个文本以查找差异" },
+    },
+  },
+  ar: {
+    metaTitle: "أدوات مساعدة للنصوص | Notepad.is",
+    metaDesc: "استخدم أدوات مساعدة للنصوص لتنظيف وتنسيق وتحويل ومقارنة النصوص بسرعة، بما في ذلك تغيير حالة الأحرف، والعمليات على الأسطر، وضغط الأكواد.",
+    pageTitle: "أدوات مساعدة للنصوص",
+    intro: "توفر الأدوات المساعدة للنصوص عمليات سريعة وخفيفة لتنظيف وتنسيق وتحويل ومقارنة النصوص. ويشمل ذلك محول حالة الأحرف، ومزيل التكرار، وترتيب النصوص، ودمج الأسطر، والتحقق من الفروق (Diff)، ومنظف النصوص.",
+    ctaAllTools: "كل الأدوات",
+    ctaNotepadEditor: "محرر الملاحظات",
+    sectionHeading: "أدوات مساعدة للنصوص",
+    toolLabels: {
+      "text-uppercase-lowercase": { h1: "محول حالة الأحرف", tagline: "أحرف كبيرة، صغيرة، حالة العنوان، بداية الجملة" },
+      "text-to-camel-case": { h1: "محول Camel Case", tagline: "تحويل النص إلى نمط camelCase" },
+      "text-to-snake-case": { h1: "محول Snake Case", tagline: "تحويل النص إلى نمط snake_case" },
+      "text-to-kebab-case": { h1: "محول Kebab Case", tagline: "تحويل النص إلى نمط kebab-case" },
+      "split-text-to-columns": { h1: "تقسيم النص إلى أعمدة", tagline: "تقسيم الأسطر إلى أعمدة بواسطة محددات" },
+      "merge-text-lines": { h1: "دمج أسطر النصوص", tagline: "دمج عدة أسطر في سطر واحد" },
+      "convert-line-endings": { h1: "تحويل نهايات الأسطر", tagline: "تغيير نهايات الأسطر إلى تنسيقات Windows، Mac، Linux" },
+      "minify-json": { h1: "ضاغط JSON", tagline: "تخفيض حجم JSON عن طريق إزالة المسافات والفواصل" },
+      "minify-xml": { h1: "ضاغط XML", tagline: "تخفيض حجم XML عن طريق إزالة المسافات والفواصل" },
+      "paste-clean": { h1: "لصق وتنظيف النصوص", tagline: "إزالة التنسيق والأسطر الزائدة وتنظيف النص" },
+      "compare-drafts": { h1: "مقارنة النصوص (Diff)", tagline: "مقارنة نصين جنباً إلى جنب لمعرفة الاختلافات" },
     },
   },
 };
@@ -157,7 +179,7 @@ export default async function FormatToolsCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  (locale === "zh" || locale === "ko")
+                  (locale === "zh" || locale === "ko" || locale === "ar")
                     ? `/tools/format/${id}`
                     : L(`/tools/format/${id}`)
                 }
