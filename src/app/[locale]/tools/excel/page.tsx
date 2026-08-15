@@ -64,6 +64,32 @@ const CONTENT = {
       "excel-to-google-sheet": "Excel을 Google Sheets로 변환",
     },
   },
+  zh: {
+    metaTitle: "免费 Excel 转换工具 – 转换 Excel, CSV, JSON, XML, PDF 等 | Notepad.is",
+    metaDesc: "支持 Excel 文件与 CSV, JSON, XML, PDF, Google Sheets, ODS, Numbers, HTML 以及文本格式之间的双向转换。快速、准确且免费的 Excel 转换工具，助您轻松进行数据转换与表格管理。",
+    pageTitle: "Excel 转换工具",
+    intro: "我们的免费在线 Excel 转换工具可帮助您在电子表格与多种格式之间进行数据转换，包括 CSV, JSON, XML, PDF 和 Google Sheets。",
+    ctaAllTools: "所有工具",
+    ctaNotepadEditor: "记事本编辑器",
+    sectionHeading: "免费在线 Excel 转换工具",
+    toolTitles: {
+      "text-to-excel": "文本转 Excel",
+      "csv-to-excel": "CSV 转 Excel",
+      "json-to-excel": "JSON 转 Excel",
+      "xml-to-excel": "XML 转 Excel",
+      "html-to-excel": "HTML 转 Excel",
+      "pdf-to-excel": "PDF 转 Excel",
+      "excel-to-csv": "Excel 转 CSV",
+      "excel-to-json": "Excel 转 JSON",
+      "excel-to-xml": "Excel 转 XML",
+      "excel-to-pdf": "Excel 转 PDF",
+      "google-sheet-to-excel": "Google Sheets 转 Excel",
+      "numbers-to-excel": "Numbers 转 Excel",
+      "ods-to-excel": "ODS 转 Excel",
+      "excel-to-ods": "Excel 转 ODS",
+      "excel-to-google-sheet": "Excel 转 Google Sheets",
+    },
+  },
 };
 
 export async function generateMetadata({
@@ -142,7 +168,11 @@ export default async function ExcelToolsCategoryPage({
               <ExcelToolCard
                 key={id}
                 id={id}
-                href={L(`/tools/excel/${id}`)}
+                href={
+                  locale === "zh"
+                    ? `/tools/excel/${id}`
+                    : L(`/tools/excel/${id}`)
+                }
                 title={
                   t.toolTitles[id as keyof typeof t.toolTitles] ??
                   writingToolsMeta[id].h1
