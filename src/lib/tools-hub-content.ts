@@ -1603,6 +1603,154 @@ const cs: ToolsHubCopy = {
   },
 };
 
+const da: ToolsHubCopy = {
+  pageTitle: "Notepad & skriveværktøjer",
+  intro:
+    "Find alle de professionelle Notepad skriveværktøjer, som du kan bruge gratis, ubegrænset.",
+  introLink: {
+    before: "Find alle de professionelle ",
+    label: "Notepad",
+    after: " skriveværktøjer, som du kan bruge gratis, ubegrænset.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad online",
+  chips: {
+    writing: "Skriveværktøjer",
+    editors: "Editor-værktøjer",
+    text: "Tekstanalyse",
+    devTools: "Udviklerværktøjer",
+    excel: "Excel-konvertere",
+  },
+  categoryLabel: "Kategori",
+  openCategory: "Åbn kategori",
+  toolsCountWord: "værktøjer",
+  categories: {
+    writing: {
+      title: "Skriveværktøjer",
+      description:
+        "Distraktionsfri skrivning, hurtige noter, fokussessioner, mål, diktering, skabeloner, uddrag og workflow-hjælpere.",
+    },
+    editors: {
+      title: "Editor-værktøjer",
+      description:
+        "Markdown-, kode-, JSON- og HTML-editorer til teknisk skrivning og struktureret indholdsarbejde.",
+    },
+    text: {
+      title: "Tekstanalyseværktøjer",
+      description:
+        "Ord-, tegn-, sætnings- og afsnitstællere med læsbarheds- og sammenligningsværktøjer.",
+    },
+    devTools: {
+      title: "Udviklerværktøjer",
+      description:
+        "Formateringsværktøjer, minimeringsværktøjer, kodere og regex-værktøjer til daglig webudvikling.",
+    },
+    excel: {
+      title: "Excel-konverteringsværktøjer",
+      description:
+        "Konverter mellem Excel og CSV, JSON, XML, PDF, ODS, Google Sheets og flere regnearksformater.",
+    },
+    documents: {
+      title: "Dokumentkonverteringsværktøjer",
+      description:
+        "Transformer PDF-, Word-, TXT-, Markdown-, HTML-, RTF- og PowerPoint-filer til redigering og udgivelse.",
+    },
+    data: {
+      title: "Data- & kodekonverteringsværktøjer",
+      description:
+        "Flyt data mellem JSON-, CSV-, XML-, YAML-, SQL- og almindelige tekstformater til API- og dataworkflows.",
+    },
+    format: {
+      title: "Tekstværktøjer",
+      description:
+        "Versal- og minuskelkonvertering, linjeoperationer, tekstoprydning og kompakte formateringsværktøjer til hurtige teksttransformationer.",
+    },
+  },
+  aboutTitle: "Om vores gratis online værktøjer",
+  aboutBody:
+    "Velkommen til vores komplette samling af gratis online værktøjer designet til at forenkle tekstredigering, datakonvertering, dokumentbehandling og udviklerworkflows.",
+  footer: {
+    before: "Leder du efter det klassiske lærred? ",
+    linkLabel: "Notepad-editoren",
+    after:
+      " er stadig den fulde rige tekstoplevelse med tabeller, billeder og formatering.",
+  },
+};
+
+const nl: ToolsHubCopy = {
+  pageTitle: "Notepad & schrijfhulpmiddelen",
+  intro:
+    "Vind alle professionele Notepad schrijfhulpmiddelen die je gratis en onbeperkt kunt gebruiken.",
+  introLink: {
+    before: "Vind alle profesionale ",
+    label: "Notepad",
+    after: " schrijfhulpmiddelen die je gratis en onbeperkt kunt gebruiken.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad online",
+  chips: {
+    writing: "Schrijfhulpmiddelen",
+    editors: "Editor-tools",
+    text: "Tekstanalyse",
+    devTools: "Ontwikkelaarstools",
+    excel: "Excel-converters",
+  },
+  categoryLabel: "Categorie",
+  openCategory: "Open categorie",
+  toolsCountWord: "tools",
+  categories: {
+    writing: {
+      title: "Schrijfhulpmiddelen",
+      description:
+        "Afleidingsvrij schrijven, snelle notities, focussessies, doelen, dicteren, sjablonen, fragmenten en workflow-helpers.",
+    },
+    editors: {
+      title: "Editor-tools",
+      description:
+        "Markdown-, code-, JSON- en HTML-editors voor technisch schrijven en gestructureerd inhoudelijk werk.",
+    },
+    text: {
+      title: "Tekstanalysetools",
+      description:
+        "Woord-, teken-, zin- en alineatellers met leesbaarheids- en vergelijkingstools.",
+    },
+    devTools: {
+      title: "Ontwikkelaarstools",
+      description:
+        "Formatters, minifiers, encoders en regex-tools voor dagelijkse webontwikkeling.",
+    },
+    excel: {
+      title: "Excel-conversietools",
+      description:
+        "Converteer tussen Excel en CSV, JSON, XML, PDF, ODS, Google Sheets en meer spreadsheet-indelingen.",
+    },
+    documents: {
+      title: "Documentconversietools",
+      description:
+        "Transformeer PDF-, Word-, TXT-, Markdown-, HTML-, RTF- en PowerPoint-bestanden voor bewerking en publicatie.",
+    },
+    data: {
+      title: "Data- & codeconversietools",
+      description:
+        "Verplaats gegevens tussen JSON-, CSV-, XML-, YAML-, SQL- en platte tekstindelingen voor API- en dataworkflows.",
+    },
+    format: {
+      title: "Tekstutil-tools",
+      description:
+        "Omzetten van hoofdletters naar kleine letters, regelbewerkingen, tekst opschonen en compacte opmaaktools for snelle teksttransformaties.",
+    },
+  },
+  aboutTitle: "Over onze gratis online tools",
+  aboutBody:
+    "Welkom bij onze complete verzameling gratis online tools die zijn ontworpen om tekstbewerking, gegevensconversie, documentverwerking en ontwikkelaarsworkflows te vereenvoudigen.",
+  footer: {
+    before: "Op zoek naar het klassieke canvas? De ",
+    linkLabel: "Notepad-editor",
+    after:
+      " biedt nog steeds de volledige rich-text-ervaring met tabellen, afbeeldingen en opmaak.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -1626,6 +1774,8 @@ const byLocale: Record<string, ToolsHubCopy> = {
   ceb,
   hr,
   cs,
+  da,
+  nl,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
