@@ -388,12 +388,93 @@ const ar: WritingToolsCopy = {
   },
 };
 
+const id: WritingToolsCopy = {
+  pageTitle: "Alat Menulis",
+  metaTitle: "Alat Menulis Premium untuk Produktivitas - Timer Fokus, Dikte Suara, Templat, dan Lainnya",
+  metaDescription: "Tingkatkan produktivitas menulis Anda dengan alat canggih seperti timer fokus, pelacak target menulis, dikte suara, templat konten, rak cuplikan, dan lainnya.",
+  intro: [
+    {
+      text: "Alat menulis kami membantu Anda membuat, mengatur, dan mengelola catatan digital, konten, dan draf langsung di browser Anda. Anda dapat memulai dengan ",
+    },
+    { link: "/distraction-free-writer", label: "Penulis Bebas Gangguan" },
+    { text: " atau gunakan " },
+    { link: "/quick-notes", label: "Catatan Cepat" },
+    { text: " untuk menangkap ide dengan cepat, lalu tambahkan utilitas pendukung produktivitas seperti: " },
+    { link: "/tools/writing/focus-timer", label: "Timer Fokus" },
+    { text: ", " },
+    { link: "/tools/writing/speech-dictation", label: "Dikte Suara" },
+    { text: ", " },
+    { link: "/tools/writing/goal-tracker", label: "Pelacak Target" },
+    { text: " dan " },
+    { link: "/tools/writing/templates", label: "Templat Konten" },
+    {
+      text: ". Baik saat Anda sedang ngeblog, menulis draf kerja, atau belajar, alat-alat ini dirancang untuk meningkatkan fokus dan hasil Anda tanpa meninggalkan Notepad.is.",
+    },
+  ],
+  ctaAllTools: "Semua Alat",
+  ctaNotepadEditor: "Editor Catatan",
+  experiencesHeading: "Pengalaman Menulis",
+  utilitiesHeading: "Alat Menulis Online Gratis",
+  open: "Buka",
+  landings: {
+    distractionFree: {
+      title: "Menulis Bebas Gangguan",
+      description:
+        "Kanvas layar penuh yang tenang untuk fokus kerja mendalam—tanpa gangguan, hanya kata-kata Anda.",
+    },
+    quickNotes: {
+      title: "Catatan Cepat",
+      description:
+        "Tangkap ide dan daftar tugas secara instan saat Anda tidak membutuhkan editor catatan lengkap.",
+    },
+  },
+  toolLabels: {
+    "focus-timer": {
+      h1: "Timer Fokus & Menulis",
+      tagline: "Teknik Pomodoro + Editor Zen + Statistik Lokal",
+    },
+    "goal-tracker": {
+      h1: "Target Menulis",
+      tagline: "Tetapkan target, lacak kemajuan, dan capai pencapaian",
+    },
+    "speech-dictation": {
+      h1: "Dikte Suara",
+      tagline: "Ubah ucapan menjadi teks di dalam browser",
+    },
+    templates: {
+      h1: "Templat",
+      tagline: "Hasilkan struktur konten dalam satu klik",
+    },
+    "snippet-shelf": {
+      h1: "Rak Cuplikan",
+      tagline: "Gunakan kembali teks dan salin dengan cepat",
+    },
+    "reading-mode": {
+      h1: "Mode Membaca",
+      tagline: "Tata letak membaca yang rapi dan nyaman",
+    },
+    "print-note": {
+      h1: "Cetak Catatan",
+      tagline: "Format yang dioptimalkan untuk dicetak",
+    },
+    "share-note": {
+      h1: "Bagikan Catatan",
+      tagline: "Ekspor dan bagikan catatan Anda secara lokal",
+    },
+    "import-export": {
+      h1: "Impor & Ekspor",
+      tagline: "Kelola file catatan Anda dalam satu tempat",
+    },
+  },
+};
+
 const byLocale: Record<string, WritingToolsCopy> = {
   en,
   af,
   ko,
   zh,
   ar,
+  id,
 };
 
 export function getWritingToolsCopy(locale: string): WritingToolsCopy {

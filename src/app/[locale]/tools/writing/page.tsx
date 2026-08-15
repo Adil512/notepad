@@ -64,7 +64,7 @@ export default async function WritingToolsCategoryPage({
                   <Link
                     key={i}
                     href={
-                      (locale === "zh" || locale === "ko" || locale === "ar") && seg.link.startsWith("/tools/")
+                      (locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") && seg.link.startsWith("/tools/")
                         ? seg.link
                         : L(seg.link)
                     }
@@ -126,7 +126,7 @@ export default async function WritingToolsCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  (locale === "zh" || locale === "ko" || locale === "ar")
+                  (locale === "zh" || locale === "ko" || locale === "ar" || locale === "id")
                     ? `/tools/writing/${id}`
                     : L(`/tools/writing/${id}`)
                 }
