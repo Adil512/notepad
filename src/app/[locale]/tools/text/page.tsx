@@ -152,6 +152,41 @@ const CONTENT = {
       "text-compare-diff": "مقارنة النصوص",
     },
   },
+  id: {
+    metaTitle: "Alat Analisis Teks Online Gratis – Jumlah Kata, Karakter & Perbandingan Teks",
+    metaDesc: "Analisis dan optimalkan teks Anda dengan alat gratis termasuk penghitung kata, penghitung karakter, penghitung kalimat, penghitung paragraf, kalkulator waktu membaca, pengubah kasus, pembersih teks, penghapus baris duplikat, penyortir teks, dan alat perbandingan teks.",
+    pageTitle: "Alat Analisis Teks",
+    introPrefix: "Alat analisis teks kami membantu Anda mengukur, mengevaluasi, dan mengoptimalkan keterbacaan serta struktur konten yang Anda tulis. Anda dapat memulai dengan ",
+    introWordCounter: "Penghitung Kata",
+    introOr: " atau ",
+    introCharCounter: "Penghitung Karakter",
+    introStart: ", lalu menganalisis lebih dalam dengan ",
+    introSentences: "Kalimat",
+    introAnd: " dan ",
+    introParagraphs: "Paragraf",
+    introDig: ", memperkirakan ",
+    introReadingTime: "Waktu Membaca",
+    introEstimate: ", menyesuaikan ",
+    introCase: "Huruf Besar/Kecil",
+    introSuffix: ", membersihkan atau menyortir baris teks, serta membandingkan draf—semuanya tanpa mengunggah konten Anda ke server.",
+    ctaAllTools: "Semua Alat",
+    ctaEditorTools: "Alat Editor",
+    ctaWritingTools: "Alat Menulis",
+    ctaNotepadEditor: "Editor Catatan",
+    sectionHeading: "Alat",
+    toolTitles: {
+      "word-counter": "Penghitung Kata",
+      "character-counter": "Penghitung Karakter",
+      "sentence-counter": "Penghitung Kalimat",
+      "paragraph-counter": "Penghitung Paragraf",
+      "reading-time-calculator": "Kalkulator Waktu Membaca",
+      "case-converter": "Pengubah Kasus",
+      "text-cleaner": "Pembersih Teks",
+      "duplicate-remover": "Penghapus Baris Duplikat",
+      "text-sorter": "Penyortir Teks",
+      "text-compare-diff": "Perbandingan Teks",
+    },
+  },
 };
 
 export async function generateMetadata({
@@ -201,42 +236,42 @@ export default async function TextAnalysisCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/text/word-counter" : L("/tools/text/word-counter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/word-counter" : L("/tools/text/word-counter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introWordCounter}
               </Link>
               {t.introOr}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/text/character-counter" : L("/tools/text/character-counter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/character-counter" : L("/tools/text/character-counter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCharCounter}
               </Link>
               {t.introStart}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/text/sentence-counter" : L("/tools/text/sentence-counter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/sentence-counter" : L("/tools/text/sentence-counter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introSentences}
               </Link>
               {t.introAnd}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/text/paragraph-counter" : L("/tools/text/paragraph-counter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/paragraph-counter" : L("/tools/text/paragraph-counter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introParagraphs}
               </Link>
               {t.introDig}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/text/reading-time-calculator" : L("/tools/text/reading-time-calculator")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/reading-time-calculator" : L("/tools/text/reading-time-calculator")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introReadingTime}
               </Link>
               {t.introEstimate}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/text/case-converter" : L("/tools/text/case-converter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/case-converter" : L("/tools/text/case-converter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCase}
@@ -287,7 +322,7 @@ export default async function TextAnalysisCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  (locale === "zh" || locale === "ko" || locale === "ar")
+                  (locale === "zh" || locale === "ko" || locale === "ar" || locale === "id")
                     ? `/tools/text/${id}`
                     : L(`/tools/text/${id}`)
                 }
