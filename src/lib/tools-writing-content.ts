@@ -228,10 +228,91 @@ const ko: WritingToolsCopy = {
   },
 };
 
+const zh: WritingToolsCopy = {
+  pageTitle: "写作工具",
+  metaTitle: "提高效率的极佳写作工具 – 专注计时器、语音听写、模板等",
+  metaDescription: "使用专注计时器、写作目标、语音听写、内容模板、便签架等强大的写作工具，提升您的写作效率。",
+  intro: [
+    {
+      text: "我们的写作工具可帮助您在浏览器中创建、组织和管理数字笔记、内容和草稿。您可以从 ",
+    },
+    { link: "/distraction-free-writer", label: "无干扰写作模式" },
+    { text: " 开始，或者使用 " },
+    { link: "/quick-notes", label: "快速笔记" },
+    { text: " 捕捉灵感，然后添加提高效率的辅助工具：" },
+    { link: "/tools/writing/focus-timer", label: "专注计时器" },
+    { text: ", " },
+    { link: "/tools/writing/speech-dictation", label: "语音听写" },
+    { text: ", " },
+    { link: "/tools/writing/goal-tracker", label: "写作目标" },
+    { text: " 和 " },
+    { link: "/tools/writing/templates", label: "内容模板" },
+    {
+      text: "。无论您是写博客、撰写工作草稿还是学习，这些工具都能在不离开 Notepad.is 的情况下提高您的专注度和产出。",
+    },
+  ],
+  ctaAllTools: "所有工具",
+  ctaNotepadEditor: "记事本编辑器",
+  experiencesHeading: "写作体验",
+  utilitiesHeading: "免费在线写作工具",
+  open: "打开",
+  landings: {
+    distractionFree: {
+      title: "无干扰写作",
+      description:
+        "安静的全屏画布，专为深度工作设计——没有任何杂念，只有您的文字。",
+    },
+    quickNotes: {
+      title: "快速笔记",
+      description:
+        "在不需要完整编辑器时，轻量级捕捉想法和清单。",
+    },
+  },
+  toolLabels: {
+    "focus-timer": {
+      h1: "专注计时器 & 写作",
+      tagline: "番茄钟 + 禅宗编辑器 + 本地统计数据",
+    },
+    "goal-tracker": {
+      h1: "写作目标",
+      tagline: "设定目标、跟踪进度、里程碑",
+    },
+    "speech-dictation": {
+      h1: "语音听写",
+      tagline: "浏览器内语音转文字",
+    },
+    templates: {
+      h1: "模板",
+      tagline: "一键生成内容结构",
+    },
+    "snippet-shelf": {
+      h1: "便签架",
+      tagline: "复用文本，快速复制",
+    },
+    "reading-mode": {
+      h1: "阅读模式",
+      tagline: "安静的阅读排版布局",
+    },
+    "print-note": {
+      h1: "打印笔记",
+      tagline: "适合打印的排版格式",
+    },
+    "share-note": {
+      h1: "分享笔记",
+      tagline: "导出并在本地分享",
+    },
+    "import-export": {
+      h1: "导入与导出",
+      tagline: "文件一站式管理",
+    },
+  },
+};
+
 const byLocale: Record<string, WritingToolsCopy> = {
   en,
   af,
   ko,
+  zh,
 };
 
 export function getWritingToolsCopy(locale: string): WritingToolsCopy {
