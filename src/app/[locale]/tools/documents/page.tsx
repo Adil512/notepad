@@ -99,6 +99,35 @@ const CONTENT = {
       "word-to-html": { h1: "Word 转 HTML", tagline: "将 Word 文档转换为 HTML 文件" },
     },
   },
+  ar: {
+    metaTitle: "أدوات تحويل المستندات | Notepad.is",
+    metaDesc: "قم بتحويل تنسيقات المستندات عبر الإنترنت، بما في ذلك PDF، Word، TXT، Markdown، HTML، و PowerPoint، باستخدام أدوات مجانية لتحويل المستندات.",
+    pageTitle: "أدوات تحويل المستندات",
+    intro: "تتيح أدوات تحويل المستندات تحويلاً سلساً بين تنسيقات المستندات المختلفة مثل PDF، Word، TXT، Markdown، HTML، و PowerPoint. وتُستخدم على نطاق واسع في تحرير المستندات ونشرها وتوافق الملفات.",
+    ctaAllTools: "كل الأدوات",
+    ctaNotepadEditor: "محرر الملاحظات",
+    sectionHeading: "أدوات تحويل المستندات",
+    toolLabels: {
+      "pdf-to-word": { h1: "محول PDF إلى Word", tagline: "تحويل ملفات PDF إلى مستندات Word قابلة للتعديل" },
+      "word-to-pdf": { h1: "محول Word إلى PDF", tagline: "تحويل مستندات Word إلى ملفات PDF" },
+      "text-to-pdf": { h1: "محول النص إلى PDF", tagline: "تحويل ملفات النصوص العادية إلى مستندات PDF" },
+      "pdf-to-text": { h1: "محول PDF إلى نص", tagline: "استخراج نصوص عادية من ملفات PDF" },
+      "word-to-txt": { h1: "محول Word إلى TXT", tagline: "استخراج نصوص عادية من مستندات Word" },
+      "txt-to-word": { h1: "محول TXT إلى Word", tagline: "تحويل ملفات النصوص العادية إلى مستندات Word" },
+      "html-to-pdf": { h1: "محول HTML إلى PDF", tagline: "تحويل صفحات الويب أو أكواد HTML إلى ملفات PDF" },
+      "pdf-to-html": { h1: "محول PDF إلى HTML", tagline: "تحويل ملفات PDF إلى تنسيق صفحات الويب" },
+      "markdown-to-pdf": { h1: "محول Markdown إلى PDF", tagline: "تحويل مستندات Markdown إلى ملفات PDF" },
+      "pdf-to-markdown": { h1: "محول PDF إلى Markdown", tagline: "تحويل مستندات PDF إلى ملفات Markdown" },
+      "ppt-to-pdf": { h1: "محول PPT إلى PDF", tagline: "تحويل عرض PowerPoint التقديمي إلى ملفات PDF" },
+      "pdf-to-ppt": { h1: "محول PDF إلى PPT", tagline: "تحويل ملفات PDF إلى عروض PowerPoint تقديمية" },
+      "rtf-to-pdf": { h1: "محول RTF إلى PDF", tagline: "تحويل ملفات RTF إلى مستندات PDF" },
+      "pdf-to-rtf": { h1: "محول PDF إلى RTF", tagline: "تحويل ملفات PDF إلى مستندات RTF" },
+      "txt-to-markdown": { h1: "محول TXT إلى Markdown", tagline: "تحويل ملفات النصوص العادية إلى تنسيق Markdown" },
+      "markdown-to-txt": { h1: "محول Markdown إلى TXT", tagline: "استخراج نصوص عادية من مستندات Markdown" },
+      "html-to-word": { h1: "محول HTML إلى Word", tagline: "تحويل ملفات HTML إلى مستندات Word" },
+      "word-to-html": { h1: "محول Word إلى HTML", tagline: "تحويل مستندات Word إلى ملفات HTML" },
+    },
+  },
 };
 
 export async function generateMetadata({
@@ -181,7 +210,7 @@ export default async function DocumentToolsCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  (locale === "zh" || locale === "ko")
+                  (locale === "zh" || locale === "ko" || locale === "ar")
                     ? `/tools/documents/${id}`
                     : L(`/tools/documents/${id}`)
                 }
