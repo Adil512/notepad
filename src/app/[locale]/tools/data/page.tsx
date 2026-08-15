@@ -99,6 +99,35 @@ const CONTENT = {
       "xml-to-text": "XML 转 文本",
     },
   },
+  ar: {
+    metaTitle: "أدوات تحويل البيانات والأكواد | Notepad.is",
+    metaDesc: "قم بتحويل تنسيقات البيانات المهيكلة بما في ذلك JSON، CSV، XML، YAML، و SQL باستخدام أدوات مجانية لتحويل البيانات والأكواد عبر الإنترنت.",
+    pageTitle: "أدوات تحويل البيانات والأكواد",
+    introPrefix: "تم تصميم أدواتنا المجانية لتحويل البيانات عبر الإنترنت لتحويل تنسيقات البيانات المهيكلة مثل ",
+    introJson: "JSON",
+    introCsv: "CSV",
+    introXml: "XML",
+    introAndSql: "، YAML، و ",
+    introSql: "SQL",
+    introSuffix: ". وتعتبر هذه الأدوات بالغة الأهمية للمطورين، ومهندسي البيانات، وسير عمل تكامل واجهات البرمجة (APIs).",
+    ctaAllTools: "كل الأدوات",
+    ctaNotepadEditor: "محرر الملاحظات",
+    sectionHeading: "أدوات تحويل البيانات",
+    toolTitles: {
+      "json-to-csv": "تحويل JSON إلى CSV",
+      "csv-to-json": "تحويل CSV إلى JSON",
+      "json-to-xml": "تحويل JSON إلى XML",
+      "xml-to-json": "تحويل XML إلى JSON",
+      "yaml-to-json": "تحويل YAML إلى JSON",
+      "json-to-yaml": "تحويل JSON إلى YAML",
+      "sql-to-csv": "تحويل SQL إلى CSV",
+      "csv-to-sql": "تحويل CSV إلى SQL",
+      "text-to-json": "تحويل النص إلى JSON",
+      "json-to-text": "تحويل JSON إلى نص",
+      "text-to-xml": "تحويل النص إلى XML",
+      "xml-to-text": "تحويل XML إلى نص",
+    },
+  },
 };
 
 export async function generateMetadata({
@@ -148,28 +177,28 @@ export default async function DataToolsCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/data/json-to-csv" : L("/tools/data/json-to-csv")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/data/json-to-csv" : L("/tools/data/json-to-csv")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introJson}
               </Link>
               ,{" "}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/data/csv-to-json" : L("/tools/data/csv-to-json")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/data/csv-to-json" : L("/tools/data/csv-to-json")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCsv}
               </Link>
               ,{" "}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/data/xml-to-json" : L("/tools/data/xml-to-json")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/data/xml-to-json" : L("/tools/data/xml-to-json")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introXml}
               </Link>
               {t.introAndSql}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/data/sql-to-csv" : L("/tools/data/sql-to-csv")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/data/sql-to-csv" : L("/tools/data/sql-to-csv")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introSql}
@@ -202,7 +231,7 @@ export default async function DataToolsCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  (locale === "zh" || locale === "ko")
+                  (locale === "zh" || locale === "ko" || locale === "ar")
                     ? `/tools/data/${id}`
                     : L(`/tools/data/${id}`)
                 }
