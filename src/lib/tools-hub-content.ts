@@ -1307,6 +1307,80 @@ const ko: ToolsHubCopy = {
   },
 };
 
+const id: ToolsHubCopy = {
+  pageTitle: "Alat Catatan & Menulis",
+  intro:
+    "Temukan semua alat menulis Catatan profesional yang dapat Anda gunakan secara gratis dan tanpa batas.",
+  introLink: {
+    before: "Temukan semua alat menulis ",
+    label: "Catatan",
+    after: " profesional yang dapat Anda gunakan secara gratis dan tanpa batas.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Catatan Online",
+  chips: {
+    writing: "Alat Menulis",
+    editors: "Alat Editor",
+    text: "Analisis Teks",
+    devTools: "Alat Pengembang",
+    excel: "Konverter Excel",
+  },
+  categoryLabel: "Kategori",
+  openCategory: "Buka kategori",
+  toolsCountWord: "alat",
+  categories: {
+    writing: {
+      title: "Alat Menulis",
+      description:
+        "Menulis bebas gangguan, catatan cepat, sesi fokus, target menulis, dikte suara, templat, potongan teks, dan asisten alur kerja.",
+    },
+    editors: {
+      title: "Alat Editor",
+      description:
+        "Editor Markdown, kode, JSON, dan HTML untuk penulisan teknis dan konten terstruktur.",
+    },
+    text: {
+      title: "Alat Analisis Teks",
+      description:
+        "Penghitung kata, karakter, kalimat, dan paragraf dengan alat keterbacaan dan perbandingan teks.",
+    },
+    devTools: {
+      title: "Alat Pengembang",
+      description:
+        "Pemformat, pemampat (minify), penyandi (encoder), dan utilitas regex untuk pengembangan web sehari-hari.",
+    },
+    excel: {
+      title: "Alat Konverter Excel",
+      description:
+        "Konversi antara Excel dan CSV, JSON, XML, PDF, ODS, Google Sheets, dan format spreadsheet lainnya.",
+    },
+    documents: {
+      title: "Alat Konverter Dokumen",
+      description:
+        "Ubah file PDF, Word, TXT, Markdown, HTML, RTF, dan PowerPoint untuk penyuntingan dan penerbitan.",
+    },
+    data: {
+      title: "Alat Konverter Data & Kode",
+      description:
+        "Pindahkan data antara format JSON, CSV, XML, YAML, SQL, and teks biasa untuk alur kerja API dan data.",
+    },
+    format: {
+      title: "Alat Utilitas Teks",
+      description:
+        "Konversi huruf besar/kecil, operasi baris, pembersihan teks, dan format ringkas untuk transformasi teks cepat.",
+    },
+  },
+  aboutTitle: "Tentang Alat Online Gratis Kami",
+  aboutBody:
+    "Selamat datang di koleksi lengkap alat online gratis kami yang dirancang untuk menyederhanakan penyuntingan teks, konversi data, pemrosesan dokumen, dan alur kerja pengembang.",
+  footer: {
+    before: "Mencari kanvas klasik? ",
+    linkLabel: "Editor Catatan",
+    after:
+      " tetap menyajikan pengalaman teks kaya (rich-text) lengkap dengan tabel, gambar, dan pemformatan.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -1326,6 +1400,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   zh,
   fr,
   ko,
+  id,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
