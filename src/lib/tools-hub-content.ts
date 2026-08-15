@@ -2861,6 +2861,228 @@ const hu: ToolsHubCopy = {
   },
 };
 
+const is: ToolsHubCopy = {
+  pageTitle: "Gjörðabók & Ritverkfæri",
+  intro:
+    "Finndu öll fagleg ritverkfæri fyrir Gjörðabók sem þú getur notað ókeypis og takmarkalaust.",
+  introLink: {
+    before: "Finndu öll fagleg ritverkfæri fyrir ",
+    label: "Gjörðabók",
+    after: " sem þú getur notað ókeypis og takmarkalaust.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Gjörðabók á netinu",
+  chips: {
+    writing: "Ritverkfæri",
+    editors: "Ritstjórar",
+    text: "Textagreining",
+    devTools: "Hönnuðaverkfæri",
+    excel: "Excel breytar",
+  },
+  categoryLabel: "Flokkur",
+  openCategory: "Opna flokk",
+  toolsCountWord: "verkfæri",
+  categories: {
+    writing: {
+      title: "Ritverkfæri",
+      description:
+        "Truflanalaus skrif, hraðskrifaðar glósur, einbeitingarlotur, markmið, upplestur, sniðmát og vinnuflæðishjálp.",
+    },
+    editors: {
+      title: "Ritstjórar",
+      description:
+        "Markdown-, kóða-, JSON- og HTML-ritstjórar fyrir tæknilegan skrif og skipulagt efni.",
+    },
+    text: {
+      title: "Textagreiningartól",
+      description:
+        "Orða-, stafa-, setninga- og málsgreinatölur með læsileika- og samanburðarverkfærum.",
+    },
+    devTools: {
+      title: "Hönnuðaverkfæri",
+      description:
+        "Sniðarar, minnkarar, kóðarar og regex-tól fyrir daglega vefþróun.",
+    },
+    excel: {
+      title: "Excel breytingatól",
+      description:
+        "Breyta á milli Excel og CSV, JSON, XML, PDF, ODS, Google Sheets og fleiri töflureiknissniða.",
+    },
+    documents: {
+      title: "Skjala breytingatól",
+      description:
+        "Breyta PDF-, Word-, TXT-, Markdown-, HTML-, RTF- og PowerPoint-skrám til ritunar og útgáfu.",
+    },
+    data: {
+      title: "Gagna- og kóðabreytar",
+      description:
+        "Flytja gögn á milli JSON, CSV, XML, YAML, SQL og venjulegs texta fyrir vefþjónustu og gagnaflæði.",
+    },
+    format: {
+      title: "Textahjálpartól",
+      description:
+        "Breyta há-/lágstöfum, línuvinnsla, textahreinsun og þjappað sniðverkfæri fyrir fljótlegar textabreytingar.",
+    },
+  },
+  aboutTitle: "Um ókeypis netverkfærin okkar",
+  aboutBody:
+    "Velkomin í heildarsafn ókeypis netverkfæra okkar sem eru hönnuð til að einfalda textaritun, gagnaumbreytingu, skjalavinnslu og vinnuflæði hönnuða.",
+  footer: {
+    before: "Ertu að leita að klassíska ritfletinum? ",
+    linkLabel: "Gjörðabókarritstjórinn",
+    after:
+      " býður enn upp á fullkomna ríkulega textaupplifun með töflum, myndum og sniði.",
+  },
+};
+
+const ig: ToolsHubCopy = {
+  pageTitle: "Notepad & Kayan Ọrụ Ederede",
+  intro:
+    "Chọta kayan ọrụ ederede Notepad ọkachamara niile ị nwere ike iji n'efu na n'enweghị njedebe.",
+  introLink: {
+    before: "Chọta kayan ọrụ ederede ",
+    label: "Notepad",
+    after: " ọkachamara niile ị nwere ike iji n'efu na n'enweghị njedebe.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad n'ịntanetị",
+  chips: {
+    writing: "Kayan ederede",
+    editors: "Kayan editọ",
+    text: "Nyocha ederede",
+    devTools: "Kayan mmemme",
+    excel: "Ndị ntụgharị Excel",
+  },
+  categoryLabel: "Ụdị",
+  openCategory: "Mepee ụdị",
+  toolsCountWord: "kayan ọrụ",
+  categories: {
+    writing: {
+      title: "Kayan Ederede",
+      description:
+        "Ederede na-enweghị mgbagwoju anya, ndetu ngwa ngwa, oge nlebara anya, ebumnuche, dictation, templates, snippets na ndị na-enyere aka na workflow.",
+    },
+    editors: {
+      title: "Kayan Editọ",
+      description:
+        "Editọ Markdown, koodu, JSON na HTML maka ederede teknụzụ na ọrụ ọdịnaya a haziri ahazi.",
+    },
+    text: {
+      title: "Kayan Nyocha Ederede",
+      description:
+        "Ihe counter okwu, mkpụrụ edemede, ahịrịokwu na paragraf nwere akara ọgụgụ na ngwa ntụnyere.",
+    },
+    devTools: {
+      title: "Kayan Mmemme",
+      description:
+        "Ndị na-ahazi koodu, ndị na-ebelata koodu, ndị na-ezobe koodu na ngwa regex maka mmepe weebụ kwa ụbọchị.",
+    },
+    excel: {
+      title: "Kayan Ntụgharị Excel",
+      description:
+        "Tụgharịa n'etiti Excel na CSV, JSON, XML, PDF, ODS, Google Sheets na usoro mpempe akwụkwọ ndị ọzọ.",
+    },
+    documents: {
+      title: "Kayan Ntụgharị Akwụkwọ",
+      description:
+        "Tụgharịa faịlụ PDF, Word, TXT, Markdown, HTML, RTF na PowerPoint maka edeziri na mbipụta.",
+    },
+    data: {
+      title: "Kayan Ntụgharị Data & Koodu",
+      description:
+        "Bugharịa data n'etiti usoro JSON, CSV, XML, YAML, SQL na ederede doro anya maka API na workflows data.",
+    },
+    format: {
+      title: "Kayan Ọrụ Ederede Dị Mkpa",
+      description:
+        "Tụgharịa mkpụrụ edemede ukwu/obere, arụmọrụ ahịrị, nhicha ederede na ngwa nhazi ederede maka ngwa ngwa.",
+    },
+  },
+  aboutTitle: "Maka Kayan Ọrụ Ịntanetị N'efu Anyị",
+  aboutBody:
+    "Nnọọ na nchịkọta zuru ezu nke kayan ọrụ ịntanetị n'efu anyị emebere iji mee ka ederede ederede, ntụgharị data, nhazi akwụkwọ na mmepe mmemme dị mfe.",
+  footer: {
+    before: "Ị na-achọ asambodo ederede mbụ? ",
+    linkLabel: "Editọ Notepad",
+    after:
+      " ka na-enye ahụmịhe ederede zuru oke nwere tebụl, foto na usoro ederede.",
+  },
+};
+
+const iu: ToolsHubCopy = {
+  pageTitle: "ᑎᑎᕋᕐᕕᒃ ᐊᒻᒪ ᑎᑎᕋᕈᑎᑦ ᐊᑐᒐᐃᑦ",
+  intro:
+    "ᓇᓂᓯᓗᑎᑦ ᑕᒪᐃᓐᓂᒃ ᑎᑎᕋᕐᕕᐅᑉ ᐱᓕᕆᔨᒻᒪᕆᖕᓄᑦ ᑎᑎᕋᕈᑎᖏᓐᓂᒃ ᐊᑐᕈᓐᓇᖅ台ᕐᓂᒃ ᐊᑭᖃᙱᓪᓗᓂ ᐊᒻᒪ ᐊ लिमिटᖃᙱᓪᓗᓂ.",
+  introLink: {
+    before: "ᓇᓂᓯᓗᑎᑦ ᑕᒪᐃᓐᓂᒃ ᑎᑎᕋᕈᑎᖏᓐᓂᒃ ",
+    label: "ᑎᑎᕋᕐᕕᒃ",
+    after: " ᐱᓕᕆᔨᒻᒪᕆᖕᓄᑦ ᑎᑎᕋᕈᑎᖏᓐᓂᒃ ᐊᑐᕈᓐᓇᖅᑕᕐᓂᒃ ᐊᑭᖃᙱᓪᓗᓂ.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "ᑎᑎᕋᕐᕕᒃ ᖃᕆᑕᐅᔭᒃᑯᑦ",
+  chips: {
+    writing: "ᑎᑎᕋᕈᑎᑦ",
+    editors: "ᐋᖅᑭᒃᓱᐃᔨᑦ",
+    text: "ᑎᑎᖅᑲᓂᒃ ᖃᐅᔨᓴᕐᓂᖅ",
+    devTools: "ᓴᓇᔨᐅᑉ ᐊᑐᒐᖏᑦ",
+    excel: "Excel-ᒧᑦ ᑐᑭᓯᓇᖅᓯᑎᑦᑎᔨᑦ",
+  },
+  categoryLabel: "ᖃᓄᐃᑦᑐᓂᖓ",
+  openCategory: "ᐋᖅᑭᒃᓱᐃᓂᖅ ᖃᓄᐃᑦᑐᓂᖓᓂᒃ",
+  toolsCountWord: "ᐊᑐᒐᐃᑦ",
+  categories: {
+    writing: {
+      title: "ᑎᑎᕋᕈᑎᑦ ᐊᑐᒐᐃᑦ",
+      description:
+        "ᑎᑎᕋᕐᓂᖅ ᐅᐃgroupedᙱᓪᓗᓂ, ᓱᑲᔪᒥᒃ ᑎᑎᕋᕐᓂᖅ, ᑕᐅᑐᒃᑕᑐᐊᖃᓪᓚᕆᖕᓂᖅ, ᑐᕌᒐᐃᑦ, ᐅᖃᓪᓚᖕᓂᒃᑯᑦ ᑎᑎᕋᕐᓂᖅ, ᐊᑐᒐᒃᓴᐃᑦ ᐊᒻᒪ ᖃᓄᐃᓕᐅᕐᓂᕐᒧᑦ ᐃᑲᔪᖅᑎᑦ.",
+    },
+    editors: {
+      title: "ᐋᖅᑭᒃᓱᐃᔨᑦ ᐊᑐᒐᐃᑦ",
+      description:
+        "Markdown, code, JSON ᐊᒻᒪ HTML ᐋᖅᑭᒃᓱᐃᔨᑦ ᐱᓕᕆᔾᔪᑎᓄᑦ ᑎᑎᕋᕈᑎᓄᑦ ᐊᒻᒪ ᐋᖅᑭᒃᓯᒪᔪᓄᑦ ᐃᓗᓕᖏᓐᓄᑦ.",
+    },
+    text: {
+      title: "ᑎᑎᖅᑲᓂᒃ ᖃᐅᔨᓴᕐᓂᕐᒧᑦ ᐊᑐᒐᐃᑦ",
+      description:
+        "ᐅᖃᐅᓯᖅ, ᓇᑭᖅᑕᐅᑦ, ᐅᖃᐅᓯᕐloᒃ ᐊᒻᒪ ᖃᑉᓯᐅᓂᖏᓐᓂᒃ ᖃᐅᔨᓴᕈᑎᑦ ᐅᖃᓕᒫᕈᓐᓇᕐᓂᕐᒧᑦ ᐊᒻᒪ ᐊᔾᔨᐅᙱᓐniᖏᓐᓂᒃ ᖃᐅᔨᓴᕈᑎᑦ.",
+    },
+    devTools: {
+      title: "ᓴᓇᔨᐅᑉ ᐊᑐᒐᖏᑦ",
+      description:
+        "ᐋᖅᑭᒃᓯᒪᔪᑦ, ᒥᑭᓪᓕᒋᐊᖅᓯᒪᔪᑦ, ᑐᑭᓕᐅᖅᓯᒪᔪᑦ ᐊᒻᒪ regex ᐊᑐᒐᐃᑦ ᖃᐅᑕᒫᑦ ᖃᕆᑕᐅᔭᒃᑯᑦ ᓴᓇᓂᕐᒧᑦ.",
+    },
+    excel: {
+      title: "Excel-ᒧᑦ ᑐᑭᓯᓇᖅᓯᑎᑦᑎᓂᕐᒧᑦ ᐊᑐᒐᐃᑦ",
+      description:
+        "Excel ᐊᒻᒪ CSV, JSON, XML, PDF, ODS, Google Sheets ᐊᒻᒪ ᐊᓯᖏᑦ ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᑎᕋᕈᑎᑦ ᐊᑯᓐniᖓᓂ.",
+    },
+    documents: {
+      title: "ᑎᑎᖅᑲᓂᒃ ᑐᑭᓯᓇᖅᓯᑎᑦᑎᓂᕐᒧᑦ ᐊᑐᒐᐃᑦ",
+      description:
+        "PDF, Word, TXT, Markdown, HTML, RTF ᐊᒻᒪ PowerPoint ᑐᑭᓯᓇᖅᓯᑎᓪᓗᒋᑦ ᐋᖅᑭᒋᐊᕈᑎᓄᑦ ᐊᒻᒪ ᓴᖅᑭᑎᑦᑎᓂᕐᒧᑦ.",
+    },
+    data: {
+      title: "ᑐᓴᕐᓂᖅ & Code ᑐᑭᓯᓇᖅᓯᑎᑦᑎᓂᕐᒧᑦ ᐊᑐᒐᐃᑦ",
+      description:
+        "ᑐᓴᕐᓂᖅ JSON, CSV, XML, YAML, SQL ᐊᒻᒪ plain text ᐊᑯᓐᓂᖓᓂ API ᐊᒻᒪ data workflows-mo.",
+    },
+    format: {
+      title: "ᑎᑎᖅᑲᓂᒃ ᐋᖅᑭᒃᓱᐃᓂᕐᒧᑦ ᐊᑐᒐᐃᑦ",
+      description:
+        "Case ᐋᖅᑭᒋᐊᕐᓗᒍ, ᑎᑎᖅᑲᑦ ᐃᓚᖏᑦ, ᑎᑎᖅᑲᓂᒃ ᓴᓗᒻᒪᖅsaᐃᓂᖅ ᐊᒻᒪ ᒥᑭᔪᑦ ᐋᖅᑭᒃᓱᐃᔾᔪᑎᑦ ᓱᑲᔪᒥᒃ ᑎᑎᖅᑲᓂᒃ ᐋᖅᑭᒋᐊᕐᓂᕐᒧᑦ.",
+    },
+  },
+  aboutTitle: "ᖃᕆᑕᐅᔭᒃᑯᑦ ᐊᑭᖃᙱᑦᑐᓂᒃ ᐊᑐᒐᑦᑎᓐᓂᒃ",
+  aboutBody:
+    "ᑐᙵᓱᒋᑦ ᖃᕆᑕᐅᔭᒃᑯᑦ ᐊᑭᖃᙱᑦᑐᓂᒃ ᐊᑐᒐᑦᑎᓐᓄᑦ ᐋᖅᑭᒃᑕᐅᓯᒪᔪᑦ ᑎᑎᖅᑲᓂᒃ ᐋᖅᑭᒃᓱᐃᓂᕐᒧᑦ, ᑐᓴᕋᓱᐊᕐᓂᕐᒧᑦ, ᑎᑎᖅᑲᓂᒃ ᐱᓕᕆᓂᕐᒧᑦ ᐊᒻᒪ ᓴᓇᔨᓄᑦ ᐃᑲᔪᕈᑎᓄᑦ.",
+  footer: {
+    before: "Classic-ᒥᒃ ᑎᑎᕋᕐᕕᖕᒥᒃ ᓇᓂᓯᔪᒪᒍᕕᑦ? ᑎᑎᕋᕐᕕᐅᑉ ",
+    linkLabel: "ᑎᑎᕋᕐᕕᐅᑉ ᐋᖅᑭᒃᓱᐃᔨᖓ",
+    after:
+      " ᓱᓕ ᐊᑐᕈᓐᓇᖅᑎᑦᑎᕗᖅ ᑎᑎᕋᕈᑎᓂᒃ ᒪᓂᕋᕐᓂᒃ, ᐊᔾᔨᓂᒃ ᐊᒻᒪ ᐋᖅᑭᒃᓱᐃᔾᔪᑎᓂᒃ.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -2901,6 +3123,9 @@ const byLocale: Record<string, ToolsHubCopy> = {
   he,
   hi,
   hu,
+  is,
+  ig,
+  iu,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
