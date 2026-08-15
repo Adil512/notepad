@@ -58,6 +58,29 @@ const CONTENT = {
       "html-editor": "HTML 에디터",
     },
   },
+  zh: {
+    metaTitle: "在线编辑器工具 – Markdown、JSON、HTML 编辑器和代码记事本",
+    metaDesc: "访问功能强大的在线编辑器工具，进行写作、编码和数据格式化。在同一个地方高效地使用 Markdown 编辑器、代码记事本、JSON 编辑器和 HTML 编辑器来创建、编辑、验证和管理内容。",
+    pageTitle: "编辑器工具",
+    introPrefix: "我们的编辑器工具为结构化和技术格式提供了先进的浏览器内编辑环境——",
+    introMarkdown: "Markdown",
+    introJson: "JSON",
+    introHtml: "HTML",
+    introAnd: " 以及 ",
+    introCode: "代码片段",
+    introSuffix: "。开发人员无需安装笨重的第三方 IDE 即可编辑和更新代码片段。处理结构化数据和网页内容的技术作家和 SEO 专业人员，可以在已打开的标签页中使用同样轻量级的辅助工作区。",
+    ctaAllTools: "所有工具",
+    ctaWritingTools: "写作工具",
+    ctaNotepadEditor: "记事本编辑器",
+    sectionHeading: "编辑器",
+    cardOpen: "打开",
+    toolTitles: {
+      "markdown-notepad": "Markdown 编辑器",
+      "code-notepad": "代码记事本",
+      "json-editor": "JSON 编辑器",
+      "html-editor": "HTML 编辑器",
+    },
+  },
 };
 
 export async function generateMetadata({
