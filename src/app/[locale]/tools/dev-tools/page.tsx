@@ -114,6 +114,40 @@ const CONTENT = {
       "xml-formatter": "XML 格式化器",
     },
   },
+  ar: {
+    metaTitle: "أدوات مجانية للمطورين – أدوات مساعدة لـ JSON، HTML، CSS، XML، Base64 والتعبيرات النمطية",
+    metaDesc: "استخدم أدوات مطورين مجانية لتنسيق الكود والتحقق من صحته وترميزه وفك ترميزه وتحسينه. استخدم منسق JSON والتحقق من صحته، ضاغط HTML، مجمل CSS، مشفر/مفكك Base64، مشفر/مفكك URL، ومختبر التعبيرات النمطية (Regex)، ومنسق XML عبر الإنترنت.",
+    pageTitle: "أدوات المطورين",
+    introPrefix: "توفر أدوات المطورين لدينا الأدوات المساعدة الأساسية التي تحتاجها لتطوير الويب والبرمجة وتحسين محركات البحث التقني (SEO) دون الحاجة لتثبيت برامج مكتبية. يمكنك استخدام ",
+    introJsonFormatter: "منسق JSON",
+    introTighten: " لتنسيق وفحص ملفات JSON، واستخدام ",
+    introHtmlMinifier: "ضاغط HTML",
+    introTidy: " لضغط الكود البرمجي، واستخدام ",
+    introCssBeautifier: "مجمل CSS",
+    introEncode: " لترتيب الأنماط، وتشفير أو فك تشفير البيانات عبر أدوات ",
+    introBase64: "Base64",
+    introAnd: " و ",
+    introUrl: "URL",
+    introValidate: "، والتحقق من الأنماط في ",
+    introRegexTester: "مختبر التعبيرات النمطية (Regex)",
+    introStructure: "، وتنظيم بنية XML في ",
+    introXmlFormatter: "منسق XML",
+    introSuffix: ". تعمل جميع الأدوات محلياً داخل متصفحك عند دعم ذلك.",
+    ctaAllTools: "كل الأدوات",
+    ctaEditorTools: "أدوات المحرر",
+    ctaTextAnalysis: "تحليل النصوص",
+    ctaNotepadEditor: "محرر الملاحظات",
+    sectionHeading: "أدوات مطورين مجانية عبر الإنترنت",
+    toolTitles: {
+      "json-formatter": "منسق JSON",
+      "html-minifier": "ضاغط HTML",
+      "css-beautifier": "مجمل CSS",
+      "base64-codec": "مشفر/مفكك Base64",
+      "url-codec": "مشفر/مفكك URL",
+      "regex-tester": "مختبر التعبيرات النمطية (Regex)",
+      "xml-formatter": "منسق XML",
+    },
+  },
 };
 
 export async function generateMetadata({
@@ -163,49 +197,49 @@ export default async function DevToolsCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/json-formatter" : L("/tools/dev-tools/json-formatter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/json-formatter" : L("/tools/dev-tools/json-formatter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introJsonFormatter}
               </Link>
               {t.introTighten}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/html-minifier" : L("/tools/dev-tools/html-minifier")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/html-minifier" : L("/tools/dev-tools/html-minifier")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introHtmlMinifier}
               </Link>
               {t.introTidy}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/css-beautifier" : L("/tools/dev-tools/css-beautifier")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/css-beautifier" : L("/tools/dev-tools/css-beautifier")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCssBeautifier}
               </Link>
               {t.introEncode}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/base64-codec" : L("/tools/dev-tools/base64-codec")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/base64-codec" : L("/tools/dev-tools/base64-codec")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introBase64}
               </Link>
               {t.introAnd}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/url-codec" : L("/tools/dev-tools/url-codec")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/url-codec" : L("/tools/dev-tools/url-codec")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introUrl}
               </Link>
               {t.introValidate}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/regex-tester" : L("/tools/dev-tools/regex-tester")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/regex-tester" : L("/tools/dev-tools/regex-tester")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introRegexTester}
               </Link>
               {t.introStructure}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/xml-formatter" : L("/tools/dev-tools/xml-formatter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/xml-formatter" : L("/tools/dev-tools/xml-formatter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introXmlFormatter}
@@ -256,7 +290,7 @@ export default async function DevToolsCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  (locale === "zh" || locale === "ko")
+                  (locale === "zh" || locale === "ko" || locale === "ar")
                     ? `/tools/dev-tools/${id}`
                     : L(`/tools/dev-tools/${id}`)
                 }
