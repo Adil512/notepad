@@ -70,6 +70,35 @@ const CONTENT = {
       "word-to-html": { h1: "Word를 HTML로 변환", tagline: "Word 문서를 HTML 파일로 변환" },
     },
   },
+  zh: {
+    metaTitle: "文档转换工具 | Notepad.is",
+    metaDesc: "使用免费的在线文档转换工具转换文档格式，包括 PDF、Word、TXT、Markdown、HTML 和 PowerPoint。",
+    pageTitle: "文档转换工具",
+    intro: "文档转换工具允许在 PDF、Word、TXT、Markdown、HTML 和 PowerPoint 等文档格式之间进行无缝转换。它们广泛用于文档编辑、出版和文件兼容性。",
+    ctaAllTools: "所有工具",
+    ctaNotepadEditor: "记事本编辑器",
+    sectionHeading: "文档转换工具",
+    toolLabels: {
+      "pdf-to-word": { h1: "PDF 转 Word", tagline: "将 PDF 文件转换为可编辑的 Word 文档" },
+      "word-to-pdf": { h1: "Word 转 PDF", tagline: "将 Word 文档转换为 PDF 文件" },
+      "text-to-pdf": { h1: "文本转 PDF", tagline: "将纯文本文件转换为 PDF 文档" },
+      "pdf-to-text": { h1: "PDF 转 文本", tagline: "从 PDF 文件中提取纯文本" },
+      "word-to-txt": { h1: "Word 转 TXT", tagline: "从 Word 文档中提取纯文本" },
+      "txt-to-word": { h1: "TXT 转 Word", tagline: "将纯文本文件转换为 Word 文档" },
+      "html-to-pdf": { h1: "HTML 转 PDF", tagline: "将网页或 HTML 代码转换为 PDF 文件" },
+      "pdf-to-html": { h1: "PDF 转 HTML", tagline: "将 PDF 文件转换为网页格式" },
+      "markdown-to-pdf": { h1: "Markdown 转 PDF", tagline: "将 Markdown 文档渲染为 PDF 文件" },
+      "pdf-to-markdown": { h1: "PDF 转 Markdown", tagline: "将 PDF 文档转换为 Markdown 文件" },
+      "ppt-to-pdf": { h1: "PPT 转 PDF", tagline: "将 PowerPoint 幻灯片转换为 PDF 文件" },
+      "pdf-to-ppt": { h1: "PDF 转 PPT", tagline: "将 PDF 文件转换为 PowerPoint 幻灯片" },
+      "rtf-to-pdf": { h1: "RTF 转 PDF", tagline: "将 RTF 文件转换为 PDF 文档" },
+      "pdf-to-rtf": { h1: "PDF 转 RTF", tagline: "将 PDF 文件转换为 RTF 文档" },
+      "txt-to-markdown": { h1: "TXT 转 Markdown", tagline: "将纯文本文件转换为 Markdown 格式" },
+      "markdown-to-txt": { h1: "Markdown 转 TXT", tagline: "从 Markdown 文档中提取纯文本" },
+      "html-to-word": { h1: "HTML 转 Word", tagline: "将 HTML 文件转换为 Word 文档" },
+      "word-to-html": { h1: "Word 转 HTML", tagline: "将 Word 文档转换为 HTML 文件" },
+    },
+  },
 };
 
 export async function generateMetadata({
@@ -151,7 +180,11 @@ export default async function DocumentToolsCategoryPage({
               <DocumentToolCard
                 key={id}
                 id={id}
-                href={L(`/tools/documents/${id}`)}
+                href={
+                  locale === "zh"
+                    ? `/tools/documents/${id}`
+                    : L(`/tools/documents/${id}`)
+                }
                 labels={t.toolLabels[id as keyof typeof t.toolLabels]}
               />
             ))}
