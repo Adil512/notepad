@@ -1899,6 +1899,154 @@ const fj: ToolsHubCopy = {
   },
 };
 
+const fi: ToolsHubCopy = {
+  pageTitle: "Muistio- ja kirjoitustyökalut",
+  intro:
+    "Löydä kaikki ammattimaiset Muistio-kirjoitustyökalut, joita voit käyttää ilmaiseksi ja rajoituksetta.",
+  introLink: {
+    before: "Löydä kaikki ammattimaiset ",
+    label: "Muistio",
+    after: "-kirjoitustyökalut, joita voit käyttää ilmaiseksi ja rajoituksetta.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Muistio verkossa",
+  chips: {
+    writing: "Kirjoitustyökalut",
+    editors: "Editorityökalut",
+    text: "Tekstianalyysi",
+    devTools: "Kehittäjätyökalut",
+    excel: "Excel-muuntimet",
+  },
+  categoryLabel: "Kategoria",
+  openCategory: "Avaa kategoria",
+  toolsCountWord: "työkalua",
+  categories: {
+    writing: {
+      title: "Kirjoitustyökalut",
+      description:
+        "Häiriötön kirjoittaminen, pikamuistiinpanot, keskittymisistunnot, tavoitteet, saneilu, mallit, koodipätkät ja työnkulun auttajat.",
+    },
+    editors: {
+      title: "Editorityökalut",
+      description:
+        "Markdown-, koodi-, JSON- ja HTML-editorit tekniseen kirjoittamiseen ja rakenteisen sisällön työstämiseen.",
+    },
+    text: {
+      title: "Tekstianalyysityökalut",
+      description:
+        "Sana-, merkki-, lause- ja kappalelaskurit sekä luettavuus- ja vertailuohjelmat.",
+    },
+    devTools: {
+      title: "Kehittäjätyökalut",
+      description:
+        "Muotoilijat, tiivistäjät, kooderit ja regex-työkalut päivittäiseen web-kehitykseen.",
+    },
+    excel: {
+      title: "Excel-muunnostyökalut",
+      description:
+        "Muunna Excelin ja CSV-, JSON-, XML-, PDF-, ODS-, Google Sheets- ja muiden taulukkomuotojen välillä.",
+    },
+    documents: {
+      title: "Asiakirjojen muunnostyökalut",
+      description:
+        "Muunna PDF-, Word-, TXT-, Markdown-, HTML-, RTF- ja PowerPoint-tiedostoja muokkausta ja julkaisemista varten.",
+    },
+    data: {
+      title: "Datan ja koodin muunnostyökalut",
+      description:
+        "Siirrä tietoja JSON-, CSV-, XML-, YAML-, SQL- ja pelkän tekstin muotojen välillä API- ja datatyönkulkuja varten.",
+    },
+    format: {
+      title: "Tekstiapuohjelmat",
+      description:
+        "Kirjainkoon muunnos, rivitoiminnot, tekstin puhdistus ja kompaktit muotoilutyökalut nopeaan tekstin muokkaamiseen.",
+    },
+  },
+  aboutTitle: "Tietoja ilmaisista verkkotyökaluistamme",
+  aboutBody:
+    "Tervetuloa kattavaan ilmaisten verkkotyökalujen kokoelmaamme, joka on suunniteltu yksinkertaistamaan tekstin muokkausta, tiedonsiirtoa, asiakirjojen käsittelyä ja kehittäjien työnkulkuja.",
+  footer: {
+    before: "Etsitkö perinteistä työtilaa? ",
+    linkLabel: "Muistio-editori",
+    after:
+      " tarjoaa edelleen täydellisen rikaan tekstin käsittelykokemuksen taulukoineen, kuvineen ja muotoiluineen.",
+  },
+};
+
+const gl: ToolsHubCopy = {
+  pageTitle: "Ferramentas de escrita e bloc de notas",
+  intro:
+    "Atopa todas las ferramentas de escrita profesionais do bloc de notas que podes usar de balde e sen límites.",
+  introLink: {
+    before: "Atopa todas las ferramentas de escrita profesionais do ",
+    label: "bloc de notas",
+    after: " que podes usar de balde e sen límites.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Bloc de notas en liña",
+  chips: {
+    writing: "Ferramentas de escrita",
+    editors: "Editores",
+    text: "Análise de texto",
+    devTools: "Ferramentas de desenvolvedor",
+    excel: "Conversores de Excel",
+  },
+  categoryLabel: "Categoría",
+  openCategory: "Abrir categoría",
+  toolsCountWord: "ferramentas",
+  categories: {
+    writing: {
+      title: "Ferramentas de Escrita",
+      description:
+        "Escrita sen distraccións, notas rápidas, sesións de concentración, obxectivos, ditado, modelos, fragmentos de código e axudantes de fluxo de traballo.",
+    },
+    editors: {
+      title: "Editores",
+      description:
+        "Editores de Markdown, código, JSON e HTML para escrita técnica e traballo de contido estruturado.",
+    },
+    text: {
+      title: "Ferramentas de Análise de Texto",
+      description:
+        "Contadores de palabras, caracteres, frases e parágrafos con utilidades de lexitibilidade e comparación.",
+    },
+    devTools: {
+      title: "Ferramentas de Desenvolvedor",
+      description:
+        "Formatadores, minificadores, codificadores e utilidades regex para o desenvolvemento web diario.",
+    },
+    excel: {
+      title: "Ferramentas de Conversión de Excel",
+      description:
+        "Converte entre Excel e CSV, JSON, XML, PDF, ODS, Google Sheets e máis formatos de follas de cálculo.",
+    },
+    documents: {
+      title: "Ferramentas de Conversión de Documentos",
+      description:
+        "Transforma ficheiros PDF, Word, TXT, Markdown, HTML, RTF e PowerPoint para edición e publicación.",
+    },
+    data: {
+      title: "Ferramentas de Conversión de Datos e Código",
+      description:
+        "Move datos entre formatos JSON, CSV, XML, YAML, SQL e texto plano para fluxos de traballo de API e datos.",
+    },
+    format: {
+      title: "Ferramentas de Utilidade de Texto",
+      description:
+        "Conversión de maiúsculas e minúsculas, operacións de liña, limpeza de texto e ferramentas de formato compacto para transformacións rápidas de texto.",
+    },
+  },
+  aboutTitle: "Sobre as nosas ferramentas en liña gratuítas",
+  aboutBody:
+    "Benvido á nosa colección completa de ferramentas en liña gratuítas deseñadas para simplificar a edición de texto, a conversión de datos, o procesamento de documentos e os fluxos de traballo dos desenvolvedores.",
+  footer: {
+    before: "Buscas o lenzo clásico? O ",
+    linkLabel: "editor de bloc de notas",
+    after:
+      " segue a ofrecer a experiencia completa de texto enriquecido con táboas, imaxes e formato.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -1926,6 +2074,8 @@ const byLocale: Record<string, ToolsHubCopy> = {
   nl,
   et,
   fj,
+  fi,
+  gl,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
