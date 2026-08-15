@@ -2195,6 +2195,228 @@ const de: ToolsHubCopy = {
   },
 };
 
+const el: ToolsHubCopy = {
+  pageTitle: "Notepad & Εργαλεία Συγγραφής",
+  intro:
+    "Βρείτε όλα τα επαγγελματικά εργαλεία συγγραφής Notepad που μπορείτε να χρησιμοποιήσετε δωρεάν και απεριόριστα.",
+  introLink: {
+    before: "Βρείτε όλα τα επαγγελματικά εργαλεία συγγραφής ",
+    label: "Notepad",
+    after: " που μπορείτε να χρησιμοποιήσετε δωρεάν και απεριόριστα.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad online",
+  chips: {
+    writing: "Εργαλεία συγγραφής",
+    editors: "Εργαλεία επεξεργαστή",
+    text: "Ανάλυση κειμένου",
+    devTools: "Εργαλεία προγραμματιστή",
+    excel: "Μετατροπείς Excel",
+  },
+  categoryLabel: "Κατηγορία",
+  openCategory: "Άνοιγμα κατηγορίας",
+  toolsCountWord: "εργαλεία",
+  categories: {
+    writing: {
+      title: "Εργαλεία Συγγραφής",
+      description:
+        "Συγγραφή χωρίς περισπασμούς, γρήγορες σημειώσεις, συνεδρίες εστίασης, στόχοι, υπαγόρευση, πρότυπα, αποσπάσματα και βοηθοί ροής εργασίας.",
+    },
+    editors: {
+      title: "Εργαλεία Επεξεργαστή",
+      description:
+        "Επεξεργαστές Markdown, κώδικα, JSON και HTML για τεχνική συγγραφή και δομημένο περιεχόμενο.",
+    },
+    text: {
+      title: "Εργαλεία Ανάλυσης Κειμένου",
+      description:
+        "Μετρητές λέξεων, χαρακτήρων, προτάσεων και παραγράφων με βοηθητικά προγράμματα αναγνωσιμότητας και σύγκρισης.",
+    },
+    devTools: {
+      title: "Εργαλεία Προγραμματιστή",
+      description:
+        "Μορφοποιητές, συμπιεστές (minifiers), κωδικοποιητές και βοηθητικά προγράμματα regex για καθημερινή ανάπτυξη ιστού.",
+    },
+    excel: {
+      title: "Εργαλεία Μετατροπής Excel",
+      description:
+        "Μετατροπή μεταξύ Excel και CSV, JSON, XML, PDF, ODS, Google Sheets και άλλων μορφών υπολογιστικών φύλλων.",
+    },
+    documents: {
+      title: "Εργαλεία Μετατροπής Εγγράφων",
+      description:
+        "Μετατροπή αρχείων PDF, Word, TXT, Markdown, HTML, RTF και PowerPoint για επεξεργασία και δημοσίευση.",
+    },
+    data: {
+      title: "Εργαλεία Μετατροπής Δεδομένων & Κώδικα",
+      description:
+        "Μεταφορά δεδομένων μεταξύ μορφών JSON, CSV, XML, YAML, SQL και απλού κειμένου για ροές εργασίας API και δεδομένων.",
+    },
+    format: {
+      title: "Εργαλεία Βοηθητικού Κειμένου",
+      description:
+        "Μετατροπή πεζών/κεφαλαίων, λειτουργίες γραμμής, καθαρισμός κειμένου και συμπαγή εργαλεία μορφοποίησης για γρήγορες μετατροπές κειμένου.",
+    },
+  },
+  aboutTitle: "Σχετικά με τα Δωρεάν Online Εργαλεία μας",
+  aboutBody:
+    "Καλώς ορίσατε στην πλήρη συλλογή δωρεάν online εργαλείων που έχουν σχεδιαστεί για να απλοποιούν την επεξεργασία κειμένου, τη μετατροπή δεδομένων, την επεξεργασία εγγράφων και τις ροές εργασίας των προγραμματιστών.",
+  footer: {
+    before: "Ψάχνετε για τον κλασικό καμβά; Ο ",
+    linkLabel: "Επεξεργαστής Notepad",
+    after:
+      " εξακολουθεί να προσφέρει την πλήρη εμπειρία εμπλουτισμένου κειμένου με πίνακες, εικόνες και μορφοποίηση.",
+  },
+};
+
+const kl: ToolsHubCopy = {
+  pageTitle: "Allaffissutit & Allannermi Atortut",
+  intro:
+    "Notepad allannermi atortut pikkorissut akeqanngitsumik killeqanngitsumillu atorsinnaasasi tamaasa uani nassaarikkit.",
+  introLink: {
+    before: "Nalinginnaasumik allaffissaq ",
+    label: "Notepad",
+    after: " allannermi atortut pikkorissut akeqanngitsumik killeqanngitsumillu atorsinnaasasi tamaasa uani nassaarikkit.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad Online",
+  chips: {
+    writing: "Allannermi atortut",
+    editors: "Aaqqissuisut",
+    text: "Allatanik misissueqqissaarneq",
+    devTools: "Inerisaasup atortui",
+    excel: "Excel-mut veisartut",
+  },
+  categoryLabel: "Sumut atassuseq",
+  openCategory: "Ammasoq sumut atassuseq",
+  toolsCountWord: "atortut",
+  categories: {
+    writing: {
+      title: "Allannermi Atortut",
+      description:
+        "Akornusersorneqanngitsumik allanneq, allattukkat pilertortut, ukkatarinninnerit, anguniakkat, oqalunnikkut allanneq, skabelonit, snippet-it allallu.",
+    },
+    editors: {
+      title: "Aaqqissuisut",
+      description:
+        "Markdown-, kode-, JSON- HTML-imillu aaqqissuisut teknikkikkut allannermut aaqqissugaasumillu suliaqarnermut.",
+    },
+    text: {
+      title: "Allatanik Misissueqqissaarneq",
+      description:
+        "Oqaatsinik, naqinnernik, oqaaseqatigiinnik paragraffinillu kisitsissutit atuaruminassutsimik oqimaalutaanermullu atortut.",
+    },
+    devTools: {
+      title: "Inerisaasup Atortui",
+      description:
+        "Formatiterissutit, minifier-it, encoder-it regex-imillu atortut ulluinnarni web-developer-inut.",
+    },
+    excel: {
+      title: "Excel-mut Veisartut",
+      description:
+        "Excel-ip CSV-illu, JSON-ip, XML-ip, PDF-ip, ODS-ip, Google Sheets-ip regneark-illu formats assigiinngitsut akornanni veisineq.",
+    },
+    documents: {
+      title: "Allagaatinik Veisartut",
+      description:
+        "PDF, Word, TXT, Markdown, HTML, RTF PowerPoint-illu fiilit aaqqissuunneqarnissaannut saqqummersinneqarnissaannullu veisineq.",
+    },
+    data: {
+      title: "Data & Kode-mut Veisartut",
+      description:
+        "Datat JSON, CSV, XML, YAML, SQL tekst-iinnarmillu formats akornanni nuunneri API data workflows-inullu.",
+    },
+    format: {
+      title: "Allatanut Atortut",
+      description:
+        "Naqinnerit angissusaannik veisineq, laininik suliaqarneq, allatanik samaneq formatiterinerillu pilertortumik veisitsinermut.",
+    },
+  },
+  aboutTitle: "Akeqanngitsumik Online Atortut pillugit",
+  aboutBody:
+    "Tikilluarit akeqanngitsumik online atortutsinnut, siunertaralugu allatanik aaqqissuussinerup, datanik veisinermut, allagaatinik suliaqarnermut inerisaasunullu workflows pisariillisaanissaq.",
+  footer: {
+    before: "Klassiskiusoq allaffissaq ujarpiuk? Na ",
+    linkLabel: "Notepad Aaqqissuisoq",
+    after:
+      " suli rich-text taucoko vata tabel-inik, assilissanut aaqqissuussinermillu pigalugu.",
+  },
+};
+
+const gn: ToolsHubCopy = {
+  pageTitle: "Kuatiahai ha Kuatiarogue ha Kuatiañe'ẽ rembiporu",
+  intro:
+    "Etopa opaite kuatiarogue Notepad mba'epururã ikatuva reiporu reiete ha ijapyra'ỹva.",
+  introLink: {
+    before: "Etopa opaite kuatiarogue ",
+    label: "Notepad",
+    after: " mba'epururã ikatuva reiporu reiete ha ijapyra'ỹva.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad Ñandutípe",
+  chips: {
+    writing: "Hai rembiporu",
+    editors: "Mba'emboguejyha",
+    text: "Ñe'ẽnguéra ñehesa'ỹijo",
+    devTools: "Dapohã rembiporu",
+    excel: "Excel mbohasa rembiporu",
+  },
+  categoryLabel: "Ñemohenda",
+  openCategory: "Epe'a ñemohenda",
+  toolsCountWord: "rembiporu",
+  categories: {
+    writing: {
+      title: "Hai Rembiporu",
+      description:
+        "Hai joko'ỹre, kuatiañe'ẽ pya'e, mba'erecha añetete, tembiaporã, ñe'ẽ haipyre, kuatiarogue ha tembiapo pytyvõha.",
+    },
+    editors: {
+      title: "Mba'emboguejyha",
+      description:
+        "Markdown, code, JSON ha HTML mba'emboguejyha hai tekniko ha kuatiañe'ẽ apytépe guarã.",
+    },
+    text: {
+      title: "Ñe'ẽnguéra Ñehesa'ỹijo",
+      description:
+        "Ñe'ẽ, taiky, ñe'ẽjoaju ha parakaravu papaha ñe'ẽporã ha jopoipyrã ndive.",
+    },
+    devTools: {
+      title: "Dapohã Rembiporu",
+      description:
+        "Formatter, minifier, encoder ha regex rembiapo ára ha ára ñanduti guarápe.",
+    },
+    excel: {
+      title: "Excel Mbohasa Rembiporu",
+      description:
+        "Mbohasa Excel guive CSV, JSON, XML, PDF, ODS, Google Sheets ha ambue kuatia marandúpe.",
+    },
+    documents: {
+      title: "Kuatia Mbohasa Rembiporu",
+      description:
+        "Mbohasa PDF, Word, TXT, Markdown, HTML, RTF ha PowerPoint marandu apytépe aaqqissuunnerã.",
+    },
+    data: {
+      title: "Data & Code Mbohasa",
+      description:
+        "Kauta data JSON, CSV, XML, YAML, SQL ha plain text formats apytépe API ha data workflows-pe.",
+    },
+    format: {
+      title: "Kuatiañe'ẽ Rembiporu Mba'e",
+      description:
+        "Taiguasu/taichĩ mbohasa, laini rembiapo, kuatiañe'ẽ samaki ha formatiterinerillu pya'e ñembohasarã.",
+    },
+  },
+  aboutTitle: "Orereiete Online Rembiporu rehegua",
+  aboutBody:
+    "Eguahẽ porãite orereiete online rembiporu apytépe oñeimo'ãva omofaçilita haguã kuatiañe'ẽ samaki, data mbohasa, allagaatinik suliaqarneq ha developer workflows.",
+  footer: {
+    before: "Eheka kuatia ymaguare? Na ",
+    linkLabel: "Notepad Mba'emboguejyha",
+    after:
+      " oguereko gueteri rich-text experience taucoko vata tabel-inik, images ha formatting ndive.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -2226,6 +2448,9 @@ const byLocale: Record<string, ToolsHubCopy> = {
   gl,
   ka,
   de,
+  el,
+  kl,
+  gn,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
