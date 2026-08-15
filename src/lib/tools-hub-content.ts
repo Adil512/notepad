@@ -3971,6 +3971,80 @@ const lt: ToolsHubCopy = {
   },
 };
 
+const lb: ToolsHubCopy = {
+  pageTitle: "Notizblock & Schreifgeschier",
+  intro:
+    "Fannt all professionell Schreifgeschier vum Notizblock déi Dir gratis an ouni Limite benotze kënnt.",
+  introLink: {
+    before: "Fannt all professionell Schreifgeschier vum ",
+    label: "Notizblock",
+    after: " déi Dir gratis an ouni Limite benotze kënnt.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notizblock online",
+  chips: {
+    writing: "Schreifgeschier",
+    editors: "Editoren",
+    text: "Textanalyse",
+    devTools: "Entwéckler-Tools",
+    excel: "Excel-Konverter",
+  },
+  categoryLabel: "Kategorie",
+  openCategory: "Kategorie opmaachen",
+  toolsCountWord: "Tools",
+  categories: {
+    writing: {
+      title: "Schreifgeschier",
+      description:
+        "Schreiwen ouni Oflenkung, séier Notizen, Fokussektiounen, Ziler, Diktat, Virlagen, Code-Snippets an Aarbechtsflosshëllef.",
+    },
+    editors: {
+      title: "Editoren",
+      description:
+        "Markdown-, Code-, JSON- an HTML-Editore fir technesch Schreiwen an strukturéiert Inhaltsaarbecht.",
+    },
+    text: {
+      title: "Textanalyse-Tools",
+      description:
+        "Zielen vu Wierder, Zeechen, Sätz a Paragrafen mat Liesbarkeets- an Verglachshëllefen.",
+    },
+    devTools: {
+      title: "Entwéckler-Tools",
+      description:
+        "Formatéierer, Minifizéierer, Encoderen an Regex-Tools fir alldeeglech Webentwécklung.",
+    },
+    excel: {
+      title: "Excel-Konvertéierungstools",
+      description:
+        "Konvertéieren tëscht Excel an CSV, JSON, XML, PDF, ODS, Google Sheets an aneren Tabellenformater.",
+    },
+    documents: {
+      title: "Dokumente-Konvertéierungstools",
+      description:
+        "Konvertéieren vu PDF-, Word-, TXT-, Markdown-, HTML-, RTF- an PowerPoint-Dateie fir Redaktioun an Verëffentlechung.",
+    },
+    data: {
+      title: "Daten- a Code-Konvertéierungstools",
+      description:
+        "Daten réckelen tëscht JSON, CSV, XML, YAML, SQL an einfachem Text fir API- an Daten-Aarbechtsflëss.",
+    },
+    format: {
+      title: "Text-Utility-Tools",
+      description:
+        "Grouss-/Klengschreiwen änneren, Zeilenoperatiounen, Text botzen an kompakt Formatéierungsgeschier fir séier Textännerungen.",
+    },
+  },
+  aboutTitle: "Iwwer eis gratis Online-Tools",
+  aboutBody:
+    "Wëllkomm an eiser kompletter Sammlung vu gratis Online-Tools, déi entwéckelt sinn fir d'Textredaktioun, d'Datenkonvertéierung, d'Dokumenteveraarbechtung an d'Entwéckler-Aarbechtsflëss ze vereinfachen.",
+  footer: {
+    before: "Sicht Dir no der klassescher Schreiffläch? Den ",
+    linkLabel: "Notizblock-Editor",
+    after:
+      " bitt nach ëmmer eng voll Rich-Text Erfarung mat Tabellen, Biller an Formatéierung.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -4026,6 +4100,7 @@ const byLocale: Record<string, ToolsHubCopy> = {
   lo,
   lv,
   lt,
+  lb,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
