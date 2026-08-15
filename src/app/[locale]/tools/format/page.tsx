@@ -56,6 +56,28 @@ const CONTENT = {
       "compare-drafts": { h1: "텍스트 비교기", tagline: "두 텍스트를 나란히 비교하여 차이점 확인" },
     },
   },
+  zh: {
+    metaTitle: "文本实用工具 | Notepad.is",
+    metaDesc: "使用文本实用工具快速清洗、格式化、转换和对比文本，包括大小写转换、文本行操作和代码压缩。",
+    pageTitle: "文本实用工具",
+    intro: "文本实用工具为清洗、格式化、转换和对比文本提供了快速且轻量级的操作。这包括大小写转换、重复行删除、文本排序、文本行合并、差异对比（diff）和文本清洗等实用工具。",
+    ctaAllTools: "所有工具",
+    ctaNotepadEditor: "记事本编辑器",
+    sectionHeading: "文本实用工具",
+    toolLabels: {
+      "text-uppercase-lowercase": { h1: "大小写转换器", tagline: "大写、小写、标题格式、首字母大写等" },
+      "text-to-camel-case": { h1: "驼峰命名转换器", tagline: "将文本转换为 camelCase 格式" },
+      "text-to-snake-case": { h1: "下划线命名转换器", tagline: "将文本转换为 snake_case 格式" },
+      "text-to-kebab-case": { h1: "短横线命名转换器", tagline: "将文本转换为 kebab-case 格式" },
+      "split-text-to-columns": { h1: "分列工具", tagline: "通过分隔符将单行文本拆分为多列" },
+      "merge-text-lines": { h1: "文本行合并器", tagline: "将多行文本合并为单行" },
+      "convert-line-endings": { h1: "换行符转换器", tagline: "在 Windows、Mac、Linux 格式之间转换换行符" },
+      "minify-json": { h1: "JSON 压缩器", tagline: "通过删除空格和换行符来压缩 JSON" },
+      "minify-xml": { h1: "XML 压缩器", tagline: "通过删除空格和换行符来压缩 XML" },
+      "paste-clean": { h1: "纯文本清洗器", tagline: "删除格式和空白行，净化文本内容" },
+      "compare-drafts": { h1: "文本对比器 (Diff)", tagline: "并排对比两个文本以查找差异" },
+    },
+  },
 };
 
 export async function generateMetadata({
