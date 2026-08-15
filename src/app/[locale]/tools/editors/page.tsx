@@ -81,6 +81,29 @@ const CONTENT = {
       "html-editor": "HTML 编辑器",
     },
   },
+  ar: {
+    metaTitle: "أدوات المحرر عبر الإنترنت - محرر Markdown، JSON، HTML ومفكرة الأكواد",
+    metaDesc: "استمتع بالوصول إلى أدوات تحرير قوية عبر الإنترنت للكتابة والبرمجة وتنسيق البيانات. استخدم محرر Markdown، ومفكرة الأكواد، ومحرر JSON، ومحرر HTML لإنشاء المحتوى وتعديله والتحقق من صحته وإدارته بكفاءة في مكان واحد.",
+    pageTitle: "أدوات المحرر",
+    introPrefix: "توفر أدوات المحرر لدينا بيئات تحرير متقدمة داخل المتصفح لتنسيقات البيانات المهيكلة والتقنية—",
+    introMarkdown: "Markdown",
+    introJson: "JSON",
+    introHtml: "HTML",
+    introAnd: " و ",
+    introCode: "قصاصات الأكواد",
+    introSuffix: ". يمكن للمطورين تعديل وتحديث قصاصات الأكواد دون تثبيت برنامج تطوير متكامل (IDE) ثقيل تابع لجهة خارجية. يمكن للكتاب التقنيين ومحترفي تحسين محركات البحث (SEO) الذين يعملون مع البيانات المهيكلة ومحتوى الويب استخدام نفس مساحة العمل خفيفة الوزن في علامة التبويب المفتوحة بالفعل.",
+    ctaAllTools: "كل الأدوات",
+    ctaWritingTools: "أدوات الكتابة",
+    ctaNotepadEditor: "محرر الملاحظات",
+    sectionHeading: "المحررات",
+    cardOpen: "فتح",
+    toolTitles: {
+      "markdown-notepad": "محرر Markdown",
+      "code-notepad": "مفكرة الأكواد",
+      "json-editor": "محرر JSON",
+      "html-editor": "محرر HTML",
+    },
+  },
 };
 
 export async function generateMetadata({
@@ -130,28 +153,28 @@ export default async function EditorToolsCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/editors/markdown-notepad" : L("/tools/editors/markdown-notepad")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/editors/markdown-notepad" : L("/tools/editors/markdown-notepad")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introMarkdown}
               </Link>
               ,{" "}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/editors/json-editor" : L("/tools/editors/json-editor")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/editors/json-editor" : L("/tools/editors/json-editor")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introJson}
               </Link>
               ,{" "}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/editors/html-editor" : L("/tools/editors/html-editor")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/editors/html-editor" : L("/tools/editors/html-editor")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introHtml}
               </Link>
               {t.introAnd}
               <Link
-                href={(locale === "zh" || locale === "ko") ? "/tools/editors/code-notepad" : L("/tools/editors/code-notepad")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/editors/code-notepad" : L("/tools/editors/code-notepad")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCode}
@@ -196,7 +219,7 @@ export default async function EditorToolsCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  (locale === "zh" || locale === "ko")
+                  (locale === "zh" || locale === "ko" || locale === "ar")
                     ? `/tools/editors/${id}`
                     : L(`/tools/editors/${id}`)
                 }
