@@ -2047,6 +2047,154 @@ const gl: ToolsHubCopy = {
   },
 };
 
+const ka: ToolsHubCopy = {
+  pageTitle: "Notepad & საწერი ინსტრუმენტები",
+  intro:
+    "იპოვეთ Notepad-ის ყველა პროფესიონალური საწერი ინსტრუმენტი, რომელთა გამოყენებაც შეგიძლიათ უფასოდ, შეუზღუდავად.",
+  introLink: {
+    before: "იპოვეთ ",
+    label: "Notepad",
+    after: "-ის ყველა პროფესიონალური საწერი ინსტრუმენტი, რომელთა გამოყენებაც შეგიძლიათ უფასოდ, შეუზღუდავად.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad ონლაინ",
+  chips: {
+    writing: "საწერი ინსტრუმენტები",
+    editors: "რედაქტორის ინსტრუმენტები",
+    text: "ტექსტის ანალიზი",
+    devTools: "დეველოპერის ინსტრუმენტები",
+    excel: "Excel-ის კონვერტერები",
+  },
+  categoryLabel: "კატეგორია",
+  openCategory: "გახსენით კატეგორია",
+  toolsCountWord: "ინსტრუმენტი",
+  categories: {
+    writing: {
+      title: "საწერი ინსტრუმენტები",
+      description:
+        "სამუშაო სივრცე ყურადღების გაფანტვის გარეშე, სწრაfi შენიშვნები, ფოკუსის სესიები, მიზნები, კარნახი, შაბლონები, ფრაგმენტები და სამუშაო ნაკადის დამხმარეები.",
+    },
+    editors: {
+      title: "რედაქტორის ინსტრუმენტები",
+      description:
+        "Markdown, კოდი, JSON და HTML რედაქტორები ტექნიკური წერისა და სტრუქტურირებული შინაარსისთვის.",
+    },
+    text: {
+      title: "ტექსტის ანალიზის ინსტრუმენტები",
+      description:
+        "სიტყვების, სიმბოლოების, წინადადებებისა და აბზაცების მრიცხველები წაკითხვადობისა და შედარების უტილიტებით.",
+    },
+    devTools: {
+      title: "დეველოპერის ინსტრუმენტები",
+      description:
+        "ფორმატორები, მინიფიკატორები, ენკოდერები და regex უტილიტები ყოველდღიური ვებ დეველოპმენტისთვის.",
+    },
+    excel: {
+      title: "Excel-ის კონვერტერები",
+      description:
+        "კონვერტაცია Excel-სა და CSV, JSON, XML, PDF, ODS, Google Sheets და სხვა ელექტრონული ცხრილების ფორმატებს შორის.",
+    },
+    documents: {
+      title: "დოკუმენტების კონვერტერები",
+      description:
+        "PDF, Word, TXT, Markdown, HTML, RTF და PowerPoint ფაილების კონვერტაცია რედაქტირებისა და გამოქვეყნებისთვის.",
+    },
+    data: {
+      title: "მონაცემთა & კოდის კონვერტერები",
+      description:
+        "მონაცემების გადატანა JSON, CSV, XML, YAML, SQL და ჩვეულებრივ ტექსტურ ფორმატებს შორის API და მონაცემთა სამუშაოებისთვის.",
+    },
+    format: {
+      title: "ტექსტის დამხმარე უტილიტები",
+      description:
+        "ასოების რეგისტრის შეცვლა, ხაზებთან მუშაობა, ტექსტის გასუფთავება და კომპაქტური ფორმატირების ინსტრუმენტები ტექსტის სწრაfi გარდაქმნისთვის.",
+    },
+  },
+  aboutTitle: "ჩვენი უფასო ონლაინ ინსტრუმენტების შესახებ",
+  aboutBody:
+    "კეთილი იყოს თქვენი მობრძანება ჩვენს უფასო ონლაინ ინსტრუმენტების სრულ კოლექციაში, რომელიც შექმნილია ტექსტის რედაქტირების, მონაცემთა კონვერტაციის, დოკუმენტების დამუშავებისა და დეველოპერის სამუშაო ნაკადების გასამარტივებლად.",
+  footer: {
+    before: "ეძებთ კლასიკურ სამუშაო გარემოს? ",
+    linkLabel: "Notepad-ის რედაქტორი",
+    after:
+      " კვლავ გთავაზობთ სრულყოფილ rich-text გამოცდილებას ცხრილებით, სურათებითა და ფორმატირებით.",
+  },
+};
+
+const de: ToolsHubCopy = {
+  pageTitle: "Notepad & Schreibwerkzeuge",
+  intro:
+    "Finden Sie alle professionellen Notepad-Schreibwerkzeuge, die Sie kostenlos und unbegrenzt nutzen können.",
+  introLink: {
+    before: "Finden Sie alle professionellen ",
+    label: "Notepad",
+    after: "-Schreibwerkzeuge, die Sie kostenlos und unbegrenzt nutzen können.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad online",
+  chips: {
+    writing: "Schreibwerkzeuge",
+    editors: "Editoren",
+    text: "Textanalyse",
+    devTools: "Entwicklerwerkzeuge",
+    excel: "Excel-Konverter",
+  },
+  categoryLabel: "Kategorie",
+  openCategory: "Kategorie öffnen",
+  toolsCountWord: "Werkzeuge",
+  categories: {
+    writing: {
+      title: "Schreibwerkzeuge",
+      description:
+        "Ablenkungsfreies Schreiben, schnelle Notizen, Focussitzungen, Ziele, Diktat, Vorlagen, Snippets und Workflow-Helfer.",
+    },
+    editors: {
+      title: "Editoren",
+      description:
+        "Markdown-, Code-, JSON- und HTML-Editoren für technisches Schreiben und strukturierte Inhaltsarbeit.",
+    },
+    text: {
+      title: "Textanalyse-Werkzeuge",
+      description:
+        "Wort-, Zeichen-, Satz- und Absatzzähler mit Lesbarkeits- und Vergleichswerkzeugen.",
+    },
+    devTools: {
+      title: "Entwicklerwerkzeuge",
+      description:
+        "Formatierer, Minifier, Encoder und Regex-Werkzeuge für die tägliche Webentwicklung.",
+    },
+    excel: {
+      title: "Excel-Konvertierungswerkzeuge",
+      description:
+        "Konvertieren Sie zwischen Excel und CSV, JSON, XML, PDF, ODS, Google Sheets und weiteren Tabellenkalkulationsformaten.",
+    },
+    documents: {
+      title: "Dokumentenkonvertierungswerkzeuge",
+      description:
+        "Konvertieren Sie PDF-, Word-, TXT-, Markdown-, HTML-, RTF- und PowerPoint-Dateien zur Bearbeitung und Veröffentlichung.",
+    },
+    data: {
+      title: "Daten- & Codekonvertierungswerkzeuge",
+      description:
+        "Verschieben Sie Daten zwischen JSON, CSV, XML, YAML, SQL und Klartextformaten für API- und Datenworkflows.",
+    },
+    format: {
+      title: "Text-Hilfswerkzeuge",
+      description:
+        "Groß-/Kleinschreibung ändern, Zeilenoperationen, Textbereinigung und kompakte Formatierungswerkzeuge für schnelle Texttransformationen.",
+    },
+  },
+  aboutTitle: "Über unsere kostenlosen Online-Werkzeuge",
+  aboutBody:
+    "Willkommen in unserer kompletten Sammlung kostenloser Online-Werkzeuge, mit denen Sie Textbearbeitung, Datenkonvertierung, Dokumentenverarbeitung und Entwicklerworkflows vereinfachen können.",
+  footer: {
+    before: "Suchen Sie die klassische Arbeitsfläche? Der ",
+    linkLabel: "Notepad-Editor",
+    after:
+      " bietet weiterhin die vollständige Rich-Text-Erfahrung mit Tabellen, Bildern und Formatierungen.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -2076,6 +2224,8 @@ const byLocale: Record<string, ToolsHubCopy> = {
   fj,
   fi,
   gl,
+  ka,
+  de,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
