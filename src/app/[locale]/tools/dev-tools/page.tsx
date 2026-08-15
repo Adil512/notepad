@@ -143,9 +143,42 @@ const CONTENT = {
       "html-minifier": "ضاغط HTML",
       "css-beautifier": "مجمل CSS",
       "base64-codec": "مشفر/مفكك Base64",
-      "url-codec": "مشفر/مفكك URL",
       "regex-tester": "مختبر التعبيرات النمطية (Regex)",
       "xml-formatter": "منسق XML",
+    },
+  },
+  id: {
+    metaTitle: "Alat Pengembang Gratis – Utilitas JSON, HTML, CSS, XML, Base64 & Regex",
+    metaDesc: "Gunakan alat pengembang gratis untuk memformat, memvalidasi, menyandikan, mendekode, dan mengoptimalkan kode. Gunakan format & validator JSON, kompresor HTML, pemercantik CSS, encoder/decoder Base64, encoder/decoder URL, penguji ekspresi reguler (Regex), dan format XML secara online.",
+    pageTitle: "Alat Pengembang",
+    introPrefix: "Alat pengembang kami menyediakan utilitas penting yang Anda butuhkan untuk pengembangan web, pemrograman, dan SEO teknis tanpa perlu menginstal perangkat lunak desktop. Anda dapat menggunakan ",
+    introJsonFormatter: "Format JSON",
+    introTighten: " untuk memformat dan memvalidasi JSON, menggunakan ",
+    introHtmlMinifier: "Kompresor HTML",
+    introTidy: " untuk memperkecil markup, menggunakan ",
+    introCssBeautifier: "Pemercantik CSS",
+    introEncode: " untuk merapikan gaya, menyandikan atau mendekode data melalui alat ",
+    introBase64: "Base64",
+    introAnd: " dan ",
+    introUrl: "URL",
+    introValidate: "، memvalidasi pola di ",
+    introRegexTester: "Penguji Regex",
+    introStructure: "، dan menyusun struktur XML di ",
+    introXmlFormatter: "Format XML",
+    introSuffix: ". Semua alat berjalan secara lokal di browser Anda jika didukung.",
+    ctaAllTools: "Semua Alat",
+    ctaEditorTools: "Alat Editor",
+    ctaTextAnalysis: "Analisis Teks",
+    ctaNotepadEditor: "Editor Catatan",
+    sectionHeading: "Alat Pengembang Online Gratis",
+    toolTitles: {
+      "json-formatter": "Format JSON",
+      "html-minifier": "Kompresor HTML",
+      "css-beautifier": "Pemercantik CSS",
+      "base64-codec": "Penyandi/Dekode Base64",
+      "url-codec": "Penyandi/Dekode URL",
+      "regex-tester": "Penguji Regex",
+      "xml-formatter": "Format XML",
     },
   },
 };
@@ -197,49 +230,49 @@ export default async function DevToolsCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/json-formatter" : L("/tools/dev-tools/json-formatter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/dev-tools/json-formatter" : L("/tools/dev-tools/json-formatter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introJsonFormatter}
               </Link>
               {t.introTighten}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/html-minifier" : L("/tools/dev-tools/html-minifier")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/dev-tools/html-minifier" : L("/tools/dev-tools/html-minifier")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introHtmlMinifier}
               </Link>
               {t.introTidy}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/css-beautifier" : L("/tools/dev-tools/css-beautifier")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/dev-tools/css-beautifier" : L("/tools/dev-tools/css-beautifier")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCssBeautifier}
               </Link>
               {t.introEncode}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/base64-codec" : L("/tools/dev-tools/base64-codec")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/dev-tools/base64-codec" : L("/tools/dev-tools/base64-codec")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introBase64}
               </Link>
               {t.introAnd}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/url-codec" : L("/tools/dev-tools/url-codec")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/dev-tools/url-codec" : L("/tools/dev-tools/url-codec")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introUrl}
               </Link>
               {t.introValidate}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/regex-tester" : L("/tools/dev-tools/regex-tester")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/dev-tools/regex-tester" : L("/tools/dev-tools/regex-tester")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introRegexTester}
               </Link>
               {t.introStructure}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/dev-tools/xml-formatter" : L("/tools/dev-tools/xml-formatter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/dev-tools/xml-formatter" : L("/tools/dev-tools/xml-formatter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introXmlFormatter}
@@ -290,7 +323,7 @@ export default async function DevToolsCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  (locale === "zh" || locale === "ko" || locale === "ar")
+                  (locale === "zh" || locale === "ko" || locale === "ar" || locale === "id")
                     ? `/tools/dev-tools/${id}`
                     : L(`/tools/dev-tools/${id}`)
                 }
