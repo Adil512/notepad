@@ -2417,6 +2417,228 @@ const gn: ToolsHubCopy = {
   },
 };
 
+const gu: ToolsHubCopy = {
+  pageTitle: "નોટપેડ અને લેખન સાધનો",
+  intro:
+    "નોટપેડના તમામ વ્યાવસાયિક લેખન સાધનો શોધો જેનો તમે મફત અને અમર્યાદિત ઉપયોગ કરી શકો છો.",
+  introLink: {
+    before: "શોધો તમામ વ્યાવસાયિક ",
+    label: "નોટપેડ",
+    after: " લેખન સાધનો જેને તમે મફતમાં અને અમર્યાદિત રીતે વાપરી શકો છો.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "નોટપેડ ઓનલાઇન",
+  chips: {
+    writing: "લેખન સાધનો",
+    editors: "એડિટર સાધનો",
+    text: "ટેક્સ્ટ વિશ્લેષણ",
+    devTools: "ડેવલપર સાધનો",
+    excel: "એક્સેલ કન્વર્ટર",
+  },
+  categoryLabel: "કેટેગરી",
+  openCategory: "કેટેગરી ખોલો",
+  toolsCountWord: "સાધનો",
+  categories: {
+    writing: {
+      title: "લેખન સાધનો",
+      description:
+        "ધ્યાન ભટક્યા વિના લેખન, ઝડપી નોંધો, ફોકસ સત્રો, લક્ષ્યો, ડિક્ટેશન, ટેમ્પલેટ્સ, સ્નિપેટ્સ અને વર્કફ્લો સહાયકો.",
+    },
+    editors: {
+      title: "એડિટર સાધનો",
+      description:
+        "ટેકનિકલ લેખન અને માળખાગત સામગ્રી માટે માર્કડાઉન, કોડ, JSON અને HTML એડિટર્સ.",
+    },
+    text: {
+      title: "ટેક્સ્ટ વિશ્લેષણ સાધનો",
+      description:
+        "વાંચનક્ષમતા અને સરખામણી ઉપયોગિતાઓ સાથે શબ્દો, અક્ષરો, વાક્યો અને ફકરાના કાઉન્ટર્સ.",
+    },
+    devTools: {
+      title: "ડેવલપર સાધનો",
+      description:
+        "રોજિંદા વેબ ડેવલપમેન્ટ માટે ફોર્મેટર્સ, મિનિફાયર્સ, એન્કોડર્સ અને રેજેક્સ ઉપયોગિતાઓ.",
+    },
+    excel: {
+      title: "એક્સેલ કન્વર્ઝન સાધનો",
+      description:
+        "એક્સેલ અને CSV, JSON, XML, PDF, ODS, ગૂગલ શીટ્સ અને અન્ય સ્પ્રેડશીટ ફોર્મેટ્સ વચ્ચે કન્વર્ટ કરો.",
+    },
+    documents: {
+      title: "દસ્તાવેજ કન્વર્ઝન સાધનો",
+      description:
+        "ફેરફાર અને પ્રકાશન માટે PDF, Word, TXT, માર્કડાઉન, HTML, RTF અને પાવરપોઇન્ટ ફાઇલોને કન્વર્ટ કરો.",
+    },
+    data: {
+      title: "ડેટા અને કોડ કન્વર્ઝન સાધનો",
+      description:
+        "JSON, CSV, XML, YAML, SQL અને પ્લેઇન ટેક્સ્ટ ફોર્મેટ્સ વચ્ચે API અને ડેટા વર્કફ્લો માટે ડેટા ખસેડો.",
+    },
+    format: {
+      title: "ટેક્સ્ટ ઉપયોગિતા સાધનો",
+      description:
+        "ઝડપી ટેક્સ્ટ ફેરફારો માટે કેસ કન્વર્ઝન, લાઇન ઓપરેશन्स, ટેક્સ્ટ ક્લિનિંગ અને કોમ્પેક્ટ ફોર્મેટિંગ સાધનો.",
+    },
+  },
+  aboutTitle: "અમારા મફત ઓનલાઇન સાધનો વિશે",
+  aboutBody:
+    "ટેક્સ્ટ એડિટિંગ, ડેટા કન્વર્ઝન, દસ્તાવેજ પ્રોસેસિંગ અને ડેવલપર વર્કફ્લોને સરળ બનાવવા માટે રચાયેલા અમારા મફત ઓનલાઇન સાધનોના સંપૂર્ણ સંગ્રહમાં તમારું સ્વાગત છે.",
+  footer: {
+    before: "શું તમે ક્લાસિક કેનવાસ શોધી રહ્યા છો? ",
+    linkLabel: "નોટપેડ એડિટર",
+    after:
+      " હજી પણ કોષ્ટકો, છબીઓ અને ફોર્મેટિંગ સાથે સંપૂર્ણ રિચ-ટેક્સ્ટ અનુભવ પ્રદાન કરે છે.",
+  },
+};
+
+const ht: ToolsHubCopy = {
+  pageTitle: "Notepad & Zouti Ekri",
+  intro:
+    "Jwenn tout zouti ekri Notepad pwofesyonèl ou ka itilize gratis epi san limit.",
+  introLink: {
+    before: "Jwenn tout zouti ekri ",
+    label: "Notepad",
+    after: " pwofesyonèl ou ka itilize gratis epi san limit.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad sou entènèt",
+  chips: {
+    writing: "Zouti ekri",
+    editors: "Zouti editè",
+    text: "Analiz tèks",
+    devTools: "Zouti devlopè",
+    excel: "Konvètisè Excel",
+  },
+  categoryLabel: "Kategori",
+  openCategory: "Louvri kategori",
+  toolsCountWord: "zouti",
+  categories: {
+    writing: {
+      title: "Zouti Ekri",
+      description:
+        "Ekri san distraksyon, nòt rapid, sesyon konsantrasyon, objektif, dikte, modèl, kòd kout ak èd pou workflow.",
+    },
+    editors: {
+      title: "Zouti Editè",
+      description:
+        "Editè Markdown, kòd, JSON ak HTML pou ekri teknik ak travay sou kontni estriktire.",
+    },
+    text: {
+      title: "Zouti Analiz Tèks",
+      description:
+        "Kompteur mo, karaktè, fraz ak paragraf avèk sèvis piblik pou lizibilite ak konparezon.",
+    },
+    devTools: {
+      title: "Zouti Devlopè",
+      description:
+        "Formatè, minifikateur, ankodè ak sèvis piblik regex pou devlopman entènèt chak jou.",
+    },
+    excel: {
+      title: "Zouti Konvèsyon Excel",
+      description:
+        "Konvèti ant Excel ak CSV, JSON, XML, PDF, ODS, Google Sheets ak lòt fòma fèy kalkil.",
+    },
+    documents: {
+      title: "Zouti Konvèsyon Dokiman",
+      description:
+        "Transfòme dosye PDF, Word, TXT, Markdown, HTML, RTF ak PowerPoint pou edisyon ak piblikasyon.",
+    },
+    data: {
+      title: "Zouti Konvèsyon Done & Kòd",
+      description:
+        "Deplase done ant fòma JSON, CSV, XML, YAML, SQL ak tèks senp pou API ak workflows done.",
+    },
+    format: {
+      title: "Zouti Sèvis Piblik Tèks",
+      description:
+        "Konvèsyon ka, operasyon liy, netwayaj tèks ak zouti fòma kontra enfòmèl ant pou transfòmasyon tèks rapid.",
+    },
+  },
+  aboutTitle: "Konsènan Zouti sou Entènèt Gratis Nou Yo",
+  aboutBody:
+    "Byenveni nan koleksyon konplè zouti sou entènèt gratis nou yo ki fèt pou senplifye edisyon tèks, konvèsyon done, pwosesis dokiman ak workflows devlopè.",
+  footer: {
+    before: "Èske w ap chèche twal klasik la? ",
+    linkLabel: "Editè Notepad",
+    after:
+      " la toujou ofri eksperyans konplè rich-tèks la avèk tab, imaj ak fòma.",
+  },
+};
+
+const ha: ToolsHubCopy = {
+  pageTitle: "Notepad & Kayan Rubutu",
+  intro:
+    "Nemi duk ƙwararrun kayan rubutu na Notepad waɗanda zaku iya amfani da su kyauta kuma ba tare da iyaka ba.",
+  introLink: {
+    before: "Nemi duk ƙwararrun kayan rubutu na ",
+    label: "Notepad",
+    after: " waɗanda zaku iya amfani da su kyauta kuma ba tare da iyaka ba.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad kan layi",
+  chips: {
+    writing: "Kayan rubutu",
+    editors: "Kayan edita",
+    text: "Binciken rubutu",
+    devTools: "Kayan mai haɓakawa",
+    excel: "Masu canza Excel",
+  },
+  categoryLabel: "Rukunoni",
+  openCategory: "Buɗe rukunoni",
+  toolsCountWord: "kayan aiki",
+  categories: {
+    writing: {
+      title: "Kayan Rubutu",
+      description:
+        "Rubutu ba tare da shagala ba, rubutu mai sauri, zaman mayar da hankali, buri, faɗar rubutu, samfura, gutsuttsuran kodi da mataimaka.",
+    },
+    editors: {
+      title: "Kayan Edita",
+      description:
+        "Editocin Markdown, kodi, JSON da HTML don rubuce-rubucen fasaha da tsarin abun ciki.",
+    },
+    text: {
+      title: "Kayan Binciken Rubutu",
+      description:
+        "Masu ƙididdige kalmomi, haruffa, jimloli da sassa tare da kayan karantawa da kwatanta rubutu.",
+    },
+    devTools: {
+      title: "Kayan Mai Haɓakawa",
+      description:
+        "Masu tsara kodi, masu rage girman kodi, masu ɓoye kodi da kayan regex don haɓaka gidan yanar gizo na yau da kullun.",
+    },
+    excel: {
+      title: "Kayan Canza Excel",
+      description:
+        "Canza tsakanin Excel da CSV, JSON, XML, PDF, ODS, Google Sheets da sauran tsarin maƙunsar bayanai.",
+    },
+    documents: {
+      title: "Kayan Canza Takardu",
+      description:
+        "Canza fayilolin PDF, Word, TXT, Markdown, HTML, RTF da PowerPoint don gyarawa da bugawa.",
+    },
+    data: {
+      title: "Kayan Canza Bayanai & Kodi",
+      description:
+        "Canza bayanai tsakanin tsarin JSON, CSV, XML, YAML, SQL da bayyanannen rubutu don API da tsarin bayanai.",
+    },
+    format: {
+      title: "Kayan Aiki na Musamman",
+      description:
+        "Canza manyan/ƙananan haruffa, ayyukan layi, tsaftace rubutu da kayan tsara rubutu don saurin canza rubutu.",
+    },
+  },
+  aboutTitle: "Game da Kayan Aikinmu na Kan Layi Kyauta",
+  aboutBody:
+    "Barka da zuwa cikakken rukunin kayan aikinmu na kan layi kyauta wanda aka tsara don sauƙaƙe gyaran rubutu, canza bayanai, sarrafa takardu da tsarin aikin mai haɓakawa.",
+  footer: {
+    before: "Kuna neman asalin shafin rubutu? ",
+    linkLabel: "Editan Notepad",
+    after:
+      " yana ci gaba da ba da cikakkiyar ƙwarewar rubutu tare da tebura, hotuna da tsarin rubutu.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -2451,6 +2673,9 @@ const byLocale: Record<string, ToolsHubCopy> = {
   el,
   kl,
   gn,
+  gu,
+  ht,
+  ha,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
