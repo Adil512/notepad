@@ -1455,6 +1455,154 @@ const ceb: ToolsHubCopy = {
   },
 };
 
+const hr: ToolsHubCopy = {
+  pageTitle: "Notepad i alati za pisanje",
+  intro:
+    "Pronađite sve profesionalne Notepad alate za pisanje koje možete koristiti besplatno i neograničeno.",
+  introLink: {
+    before: "Pronađite sve profesionalne ",
+    label: "Notepad",
+    after: " alate za pisanje koje možete koristiti besplatno i neograničeno.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad na mreži",
+  chips: {
+    writing: "Alati za pisanje",
+    editors: "Urednički alati",
+    text: "Analiza teksta",
+    devTools: "Razvojni alati",
+    excel: "Excel pretvarači",
+  },
+  categoryLabel: "Kategorija",
+  openCategory: "Otvori kategoriju",
+  toolsCountWord: "alati",
+  categories: {
+    writing: {
+      title: "Alati za pisanje",
+      description:
+        "Pisanje bez ometanja, brze bilješke, fokusirane sesije, ciljevi, diktat, predlošci, isječci i pomoćnici za tijek rada.",
+    },
+    editors: {
+      title: "Urednički alati",
+      description:
+        "Markdown, kod, JSON i HTML urednici za tehničko pisanje i rad s strukturiranim sadržajem.",
+    },
+    text: {
+      title: "Alati za analizu teksta",
+      description:
+        "Brojači riječi, znakova, rečenica i odlomaka s alatima za čitljivost i usporedbu.",
+    },
+    devTools: {
+      title: "Razvojni alati",
+      description:
+        "Formatatori, minifikatori, koderi i regex uslužni alati za svakodnevni web razvoj.",
+    },
+    excel: {
+      title: "Alati za pretvorbu Excela",
+      description:
+        "Pretvorite između Excela i CSV, JSON, XML, PDF, ODS, Google Sheets i drugih formata proračunskih tablica.",
+    },
+    documents: {
+      title: "Alati za pretvorbu dokumenata",
+      description:
+        "Pretvorite PDF, Word, TXT, Markdown, HTML, RTF i PowerPoint datoteke za uređivanje i objavljivanje.",
+    },
+    data: {
+      title: "Alati za pretvorbu podataka i koda",
+      description:
+        "Premjestite podatke između JSON, CSV, XML, YAML, SQL i običnih tekstualnih formata za API i podatkovne tijekove rada.",
+    },
+    format: {
+      title: "Uslužni tekstualni alati",
+      description:
+        "Pretvorba velikih i malih slova, operacije s linijama, čišćenje teksta i kompaktni alati za oblikovanje za brze transformacije teksta.",
+    },
+  },
+  aboutTitle: "O našim besplatnim online alatima",
+  aboutBody:
+    "Dobrodošli u našu cjelovitu kolekciju besplatnih online alata dizajniranih za pojednostavljenje uređivanja teksta, pretvorbe podataka, obrade dokumenata i razvojnih tijekova rada.",
+  footer: {
+    before: "Tražite klasično platno? ",
+    linkLabel: "Urednik Notepada",
+    after:
+      " i dalje nudi potpuno iskustvo bogatog teksta s tablicama, slikama i oblikovanjem.",
+  },
+};
+
+const cs: ToolsHubCopy = {
+  pageTitle: "Nástroje pro Poznámkový blok a psaní",
+  intro:
+    "Najděte všechny profesionální nástroje na psaní v Poznámkovém bloku, které můžete používat zdarma a neomezeně.",
+  introLink: {
+    before: "Najděte všechny profesionální nástroje na psaní v ",
+    label: "Poznámkovém bloku",
+    after: ", které můžete používat zdarma a neomezeně.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Poznámkový blok online",
+  chips: {
+    writing: "Nástroje pro psaní",
+    editors: "Editory",
+    text: "Analýza textu",
+    devTools: "Vývojářské nástroje",
+    excel: "Převodníky Excel",
+  },
+  categoryLabel: "Kategorie",
+  openCategory: "Otevřít kategorii",
+  toolsCountWord: "nástroje",
+  categories: {
+    writing: {
+      title: "Nástroje pro psaní",
+      description:
+        "Psaní bez rozptylování, rychlé poznámky, soustředěná sezení, cíle, diktování, šablony, úryvky a pomocníci pro pracovní postupy.",
+    },
+    editors: {
+      title: "Editory",
+      description:
+        "Editory Markdown, kódu, JSON a HTML pro technické psaní a práci se strukturovaným obsahem.",
+    },
+    text: {
+      title: "Nástroje pro analýzu textu",
+      description:
+        "Počítadla slov, znaků, vět a odstavců s nástroji pro čitelnost a porovnávání.",
+    },
+    devTools: {
+      title: "Vývojářské nástroje",
+      description:
+        "Formátovače, minifikátory, kodéry a regex nástroje pro každodenní vývoj webu.",
+    },
+    excel: {
+      title: "Nástroje pro převod Excelu",
+      description:
+        "Převod mezi formáty Excel, CSV, JSON, XML, PDF, ODS, Google Tabulky a dalšími tabulkovými formáty.",
+    },
+    documents: {
+      title: "Nástroje pro převod dokumentů",
+      description:
+        "Převod souborů PDF, Word, TXT, Markdown, HTML, RTF a PowerPoint pro úpravy a publikování.",
+    },
+    data: {
+      title: "Nástroje pro převod dat a kódu",
+      description:
+        "Přenos dat mezi formáty JSON, CSV, XML, YAML, SQL a prostým textem pro rozhraní API a datové toky.",
+    },
+    format: {
+      title: "Užitečné textové nástroje",
+      description:
+        "Převod velikosti písma, řádkové operace, čištění textu a kompaktní formátovací nástroje pro rychlé úpravy textu.",
+    },
+  },
+  aboutTitle: "O našich bezplatných online nástrojích",
+  aboutBody:
+    "Vítejte v naší kompletní sbírce bezplatných online nástrojů navržených pro zjednodušení úprav textu, převodu dat, zpracování dokumentů a vývojářských pracovních postupů.",
+  footer: {
+    before: "Hledáte klasické plátno? ",
+    linkLabel: "Editor Poznámkového bloku",
+    after:
+      " stále nabízí plnohodnotné úpravy formátovaného textu s tabulkami, obrázky a formátováním.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -1476,6 +1624,8 @@ const byLocale: Record<string, ToolsHubCopy> = {
   ko,
   id,
   ceb,
+  hr,
+  cs,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
