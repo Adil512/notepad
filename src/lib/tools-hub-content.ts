@@ -1751,6 +1751,154 @@ const nl: ToolsHubCopy = {
   },
 };
 
+const et: ToolsHubCopy = {
+  pageTitle: "Märkmiku ja kirjutamise tööriistad",
+  intro:
+    "Leidke kõik professionaalsed märkmiku kirjutamise tööriistad, mida saate kasutada tasuta ja piiramatult.",
+  introLink: {
+    before: "Leidke kõik professionaalsed ",
+    label: "Märkmiku",
+    after: " kirjutamise tööriistad, mida saate kasutada tasuta ja piiramatult.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Märkmik veebis",
+  chips: {
+    writing: "Kirjutamise tööriistad",
+    editors: "Redaktori tööriistad",
+    text: "Tekstianalüüs",
+    devTools: "Arendaja tööriistad",
+    excel: "Exceli konverterid",
+  },
+  categoryLabel: "Kategooria",
+  openCategory: "Ava kategooria",
+  toolsCountWord: "tööriistad",
+  categories: {
+    writing: {
+      title: "Kirjutamise Tööriistad",
+      description:
+        "Häiretevaba kirjutamine, kiired märkmed, keskendumissessioonid, eesmärgid, dikteerimine, mallid, koodilõigud ja töövoo abimehed.",
+    },
+    editors: {
+      title: "Redaktori Tööriistad",
+      description:
+        "Markdowni, koodi, JSON-i ja HTML-i redaktorid tehniliseks kirjutamiseks ja struktureeritud sisu loomiseks.",
+    },
+    text: {
+      title: "Tekstianalüüsi Tööriistad",
+      description:
+        "Sõnade, märkide, lausete ja lõikude loendurid koos loetavuse ja võrdlemise utiliitidega.",
+    },
+    devTools: {
+      title: "Arendaja Tööriistad",
+      description:
+        "Vormindajad, minimeerijad, kodeerijad ja regulaaravaldiste (regex) utiliidid igapäevaseks veebiarenduseks.",
+    },
+    excel: {
+      title: "Exceli Konverteerimise Tööriistad",
+      description:
+        "Konverteerige Exceli ja CSV, JSON-i, XML-i, PDF-i, ODS-i, Google'i tabelite ning teiste tabelivormingute vahel.",
+    },
+    documents: {
+      title: "Dokumendi Konverteerimise Tööriistad",
+      description:
+        "Teisendage PDF-, Wordi, TXT-, Markdowni, HTML-i, RTF-i ja PowerPointi faile redigeerimiseks ja avaldamiseks.",
+    },
+    data: {
+      title: "Andmete ja Koodi Konverteerimise Tööriistad",
+      description:
+        "Teisaldage andmeid JSON-i, CSV, XML-i, YAML-i, SQL-i ja lihtteksti vormingute vahel API- ja andmetöövoogude jaoks.",
+    },
+    format: {
+      title: "Teksti Utiliidid",
+      description:
+        "Suur- ja väiketähtede konverteerimine, reatoimingud, teksti puhastamine ja kompaktsed vormindustööriistad kiireks teksti muutmiseks.",
+    },
+  },
+  aboutTitle: "Meie tasuta veebitööriistade kohta",
+  aboutBody:
+    "Tere tulemast meie täielikku tasuta veebitööriistade kogusse, mis on loodud tekstiredigeerimise, andmete teisendamise, dokumenditöötluse ja arendaja töövoogude lihtsustamiseks.",
+  footer: {
+    before: "Kas otsite klassikalist lõuendit? ",
+    linkLabel: "Märkmiku redaktor",
+    after:
+      " pakub endiselt täielikku rikkaliku teksti kogemust koos tabelite, piltide ja vormindamisega.",
+  },
+};
+
+const fj: ToolsHubCopy = {
+  pageTitle: "iYaya ni Volavola kei na Notepad",
+  intro:
+    "Kunea kece na iyaya ni volavola ni Notepad vakacakacaka ka rawa ni o vakayagataka walega, sega ni vakaiyalayala.",
+  introLink: {
+    before: "Kunea kece na iyaya ni volavola ni ",
+    label: "Notepad",
+    after: " vakacakacaka ka rawa ni o vakayagataka walega, sega ni vakaiyalayala.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad Online",
+  chips: {
+    writing: "iYaya ni volavola",
+    editors: "iYaya ni editor",
+    text: "Vakadidike ni volavola",
+    devTools: "iYaya ni developer",
+    excel: "Veisau ni Excel",
+  },
+  categoryLabel: "Wasewase",
+  openCategory: "Dolava na wasewase",
+  toolsCountWord: "iyaya",
+  categories: {
+    writing: {
+      title: "iYaya ni Volavola",
+      description:
+        "Volavola galugalu, volavola totolo, gauna ni focus, takete, dictation, templates, snippets, kei na dauveivuke ni workflow.",
+    },
+    editors: {
+      title: "iYaya ni Editor",
+      description:
+        "Markdown, code, JSON, kei na HTML editors me baleta na volavola vakatekinikolo kei na cakacaka ni lewena sa tuvani makawa.",
+    },
+    text: {
+      title: "iYaya ni Vakadidike ni Volavola",
+      description:
+        "Wili vosa, matanivola, iyatuvosa, kei na parakaravu vata kei na iyaya ni wilivola kei na veidutaitaki.",
+    },
+    devTools: {
+      title: "iYaya ni Developer",
+      description:
+        "Formatters, minifiers, encoders, kei na regex utilities me baleta na veisiga yadua ni web development.",
+    },
+    excel: {
+      title: "iYaya ni Veisau ni Excel",
+      description:
+        "Veisautaka na Excel kei na CSV, JSON, XML, PDF, ODS, Google Sheets, kei na so tale na formats ni spreadsheet.",
+    },
+    documents: {
+      title: "iYaya ni Veisau ni Document",
+      description:
+        "Veisautaka na PDF, Word, TXT, Markdown, HTML, RTF, kei na PowerPoint files me baleta na veisau kei na tabaki.",
+    },
+    data: {
+      title: "iYaya ni Veisau ni Data & Code",
+      description:
+        "Kauta na data ena kedra maliwa na JSON, CSV, XML, YAML, SQL, kei na plain text formats me baleta na API kei na data workflows.",
+    },
+    format: {
+      title: "iYaya ni Teksto ni Utility",
+      description:
+        "Veisau ni case, cakacaka ni laini, samaki ni teksto, kei na iyaya ni format lalai me baleta na veisau totolo ni teksto.",
+    },
+  },
+  aboutTitle: "Baleta na Noda iYaya ni Livaliva Soliwale",
+  aboutBody:
+    "Bula mai ki na noda kumuni iyaya ni livaliva soliwale kece sa tuvanaki me vakarawarawataka na veisau ni teksto, veisau ni data, processing ni document, kei na workflows ni developer.",
+  footer: {
+    before: "Vakasaqara tiko na classic canvas? Na ",
+    linkLabel: "Notepad Editor",
+    after:
+      " e se tiko ga kina na rich-text experience taucoko vata kei na tables, images, kei na formatting.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -1776,6 +1924,8 @@ const byLocale: Record<string, ToolsHubCopy> = {
   cs,
   da,
   nl,
+  et,
+  fj,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
