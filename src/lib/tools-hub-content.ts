@@ -2639,6 +2639,228 @@ const ha: ToolsHubCopy = {
   },
 };
 
+const he: ToolsHubCopy = {
+  pageTitle: "פנקס רשימות וכלי כתיבה",
+  intro:
+    "מצאו את כל כלי הכתיבה המקצועיים של פנקס הרשימות בהם תוכלו להשתמש בחינם וללא הגבלה.",
+  introLink: {
+    before: "מצאו את כל כלי הכתיבה המקצועיים של ",
+    label: "פנקס הרשימות",
+    after: " בהם תוכלו להשתמש בחינם וללא הגבלה.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "פנקס רשימות אונליין",
+  chips: {
+    writing: "כלי כתיבה",
+    editors: "כלי עריכה",
+    text: "ניתוח טקסט",
+    devTools: "כלי מפתח",
+    excel: "ממירי אקסל",
+  },
+  categoryLabel: "קטגוריה",
+  openCategory: "פתיחת קטגוריה",
+  toolsCountWord: "כלים",
+  categories: {
+    writing: {
+      title: "כלי כתיבה",
+      description:
+        "כתיבה ללא הסחות דעת, הערות מהירות, מפגשי מיקוד, יעדים, הכתבה, תבניות, קטעי קוד ועזרי זרימת עבודה.",
+    },
+    editors: {
+      title: "כלי עריכה",
+      description:
+        "עורכי Markdown, קוד, JSON ו-HTML לכתיבה טכנית ועבודה על תוכן מובנה.",
+    },
+    text: {
+      title: "כלי ניתוח טקסט",
+      description:
+        "מוני מילים, תווים, משפטים ופסקאות עם כלי קריאות והשוואה.",
+    },
+    devTools: {
+      title: "כלי מפתח",
+      description:
+        "מעצבים, מכווצים, מקודדים וכלי regex לפיתוח אינטרנט יומיומי.",
+    },
+    excel: {
+      title: "כלי המרת אקסל",
+      description:
+        "המר בין Excel ל-CSV, JSON, XML, PDF, ODS, Google Sheets ופורמטים נוספים של גיליונות אלקטרוניים.",
+    },
+    documents: {
+      title: "כלי המרת מסמכים",
+      description:
+        "המר קובצי PDF, Word, TXT, Markdown, HTML, RTF ו-PowerPoint לעריכה ופרסום.",
+    },
+    data: {
+      title: "כלי המרת נתונים וקוד",
+      description:
+        "העבר נתונים בין פורמטים של JSON, CSV, XML, YAML, SQL וטקסט רגיל עבור זרימות עבודה של API ונתונים.",
+    },
+    format: {
+      title: "כלי עזר לטקסט",
+      description:
+        "המרת אותיות רישיות/קטנות, פעולות שורה, ניקוי טקסט וכלי עיצוב קומפקטיים לשינויי טקסט מהירים.",
+    },
+  },
+  aboutTitle: "אודות הכלים המקוונים החינמיים שלנו",
+  aboutBody:
+    "ברוכים הבאים לאוסף המלא של הכלים המקוונים החינמיים שלנו, שנועדו לפשט עריכת טקסט, המרת נתונים, עיבוד מסמכים וזרימות עבודה של מפתחים.",
+  footer: {
+    before: "מחפשים את לוח העבודה הקלאסי? ",
+    linkLabel: "עורך פנקס הרשימות",
+    after:
+      " עדיין מציע את חוויית הטקסט העשיר המלאה עם טבלאות, תמונות ועיצוב.",
+  },
+};
+
+const hi: ToolsHubCopy = {
+  pageTitle: "नोटपैड और लेखन उपकरण",
+  intro:
+    "नोटपैड के सभी पेशेवर लेखन उपकरण खोजें जिनका आप मुफ्त और असीमित उपयोग कर सकते हैं.",
+  introLink: {
+    before: "खोजें सभी पेशेवर ",
+    label: "नोटपैड",
+    after: " लेखन उपकरण जिनका आप मुफ्त और असीमित उपयोग कर सकते हैं.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "नोटपैड ऑनलाइन",
+  chips: {
+    writing: "लेखन उपकरण",
+    editors: "संपादक उपकरण",
+    text: "पाठ विश्लेषण",
+    devTools: "डेवलपर उपकरण",
+    excel: "एक्सेल कन्वर्टर्स",
+  },
+  categoryLabel: "श्रेणी",
+  openCategory: "श्रेणी खोलें",
+  toolsCountWord: "उपकरण",
+  categories: {
+    writing: {
+      title: "लेखन उपकरण",
+      description:
+        "बिना ध्यान भटके लिखना, त्वरित नोट्स, फोकस सत्र, लक्ष्य, श्रुतलेख, टेम्पलेट, स्निपेट और वर्कफ़्लो सहायक.",
+    },
+    editors: {
+      title: "संपादक उपकरण",
+      description:
+        "तकनीकी लेखन और संरचित सामग्री कार्य के लिए मार्कडाउन, कोड, JSON और HTML संपादक.",
+    },
+    text: {
+      title: "पाठ विश्लेषण उपकरण",
+      description:
+        "पठनीयता और तुलना उपयोगिताओं के साथ शब्द, वर्ण, वाक्य और पैराग्राफ काउंटर.",
+    },
+    devTools: {
+      title: "डेवलपर उपकरण",
+      description:
+        "दैनिक वेब विकास के लिए फ़ॉर्मेटर्स, मिनिफ़ायर्स, एन्कोडर और रेगेक्स उपयोगिताएँ.",
+    },
+    excel: {
+      title: "एक्सेल रूपांतरण उपकरण",
+      description:
+        "एक्सेल और CSV, JSON, XML, PDF, ODS, Google Sheets और अन्य स्प्रेडशीट प्रारूपों के बीच कनवर्ट करें.",
+    },
+    documents: {
+      title: "दस्तावेज़ रूपांतरण उपकरण",
+      description:
+        "संपादन और प्रकाशन के लिए PDF, Word, TXT, मार्कडाउन, HTML, RTF और PowerPoint फ़ाइलों को कनवर्ट करें.",
+    },
+    data: {
+      title: "डेटा और कोड रूपांतरण उपकरण",
+      description:
+        "API और डेटा वर्कफ़्लो के लिए JSON, CSV, XML, YAML, SQL और प्लेन टेक्स्ट प्रारूपों के बीच डेटा स्थानांतरित करें.",
+    },
+    format: {
+      title: "पाठ उपयोगिता उपकरण",
+      description:
+        "त्वरित पाठ परिवर्तनों के लिए केस रूपांतरण, लाइन संचालन, पाठ सफाई और कॉम्पैक्ट फ़ॉर्मेटिंग टूल.",
+    },
+  },
+  aboutTitle: "हमारे निःशुल्क ऑनलाइन टूल के बारे में",
+  aboutBody:
+    "पाठ संपादन, डेटा रूपांतरण, दस्तावेज़ प्रसंस्करण और डेवलपर वर्कफ़्लो को सरल बनाने के लिए डिज़ाइन किए गए हमारे मुफ़्त ऑनलाइन टूल के संपूर्ण संग्रह में आपका स्वागत है.",
+  footer: {
+    before: "क्या आप क्लासिक कैनवास की तलाश में हैं? ",
+    linkLabel: "नोटपैड संपादक",
+    after:
+      " अभी भी तालिकाओं, छवियों और फ़ॉर्मेटिंग के साथ संपूर्ण रिच-टेक्स्ट अनुभव प्रदान करता है.",
+  },
+};
+
+const hu: ToolsHubCopy = {
+  pageTitle: "Jegyzettömb & Íróeszközök",
+  intro:
+    "Találja meg a Jegyzettömb összes professzionális íróeszközét, amelyeket ingyenesen és korlátlanul használhat.",
+  introLink: {
+    before: "Találja meg a ",
+    label: "Jegyzettömb",
+    after: " összes professzionális íróeszközét, amelyeket ingyenesen és korlátlanul használhat.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Jegyzettömb online",
+  chips: {
+    writing: "Íróeszközök",
+    editors: "Szerkesztő eszközök",
+    text: "Szövegelemzés",
+    devTools: "Fejlesztői eszközök",
+    excel: "Excel konverterer",
+  },
+  categoryLabel: "Kategória",
+  openCategory: "Kategória megnyitása",
+  toolsCountWord: "eszköz",
+  categories: {
+    writing: {
+      title: "Íróeszközök",
+      description:
+        "Zavaró tényezőktől mentes írás, gyors jegyzetek, fókuszálási alkalmak, célok, diktálás, sablonok, kódrészletek és munkafolyamat-segítők.",
+    },
+    editors: {
+      title: "Szerkesztő Eszközök",
+      description:
+        "Markdown, kód, JSON és HTML szerkesztők technikai íráshoz és strukturált tartalomkészítéshez.",
+    },
+    text: {
+      title: "Szövegelemző Eszközök",
+      description:
+        "Szó-, karakter-, mondat- és bekezdésszámlálók olvashatósági és összehasonlító segédprogramokkal.",
+    },
+    devTools: {
+      title: "Fejlesztői Eszközök",
+      description:
+        "Formázók, minifikálók, kódolók és regex segédprogramok a napi webfejlesztéshez.",
+    },
+    excel: {
+      title: "Excel Konverziós Eszközök",
+      description:
+        "Konvertáljon Excel és CSV, JSON, XML, PDF, ODS, Google Táblázatok és egyéb táblázatkezelő formátumok között.",
+    },
+    documents: {
+      title: "Dokumentum Konverziós Eszközök",
+      description:
+        "Alakítson át PDF, Word, TXT, Markdown, HTML, RTF és PowerPoint fájlokat szerkesztéshez és közzétételhez.",
+    },
+    data: {
+      title: "Adat- és Kódkonverziós Eszközök",
+      description:
+        "Adatok mozgatása JSON, CSV, XML, YAML, SQL és sima szöveges formátumok között API- és adat-munkafolyamatokhoz.",
+    },
+    format: {
+      title: "Szöveges Segédprogramok",
+      description:
+        "Kis- és nagybetűk konvertálása, sorvegyes műveletek, szövegtisztítás és kompakt formázóeszközök a gyors szövegmódosításokhoz.",
+    },
+  },
+  aboutTitle: "Az ingyenes online eszközeinkről",
+  aboutBody:
+    "Üdvözöljük az ingyenes online eszközeink teljes gyűjteményében, amelyek célja a szövegszerkesztés, az adatkonvertálás, a dokumentumfeldolgozás és a fejlesztői munkafolyamatok egyszerűsítése.",
+  footer: {
+    before: "A klasszikus felületet keresi? A ",
+    linkLabel: "Jegyzettömb szerkesztő",
+    after:
+      " továbbra is teljes gazdag szöveges élményt nyújt táblázatokkal, képekkel és formázással.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -2676,6 +2898,9 @@ const byLocale: Record<string, ToolsHubCopy> = {
   gu,
   ht,
   ha,
+  he,
+  hi,
+  hu,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
