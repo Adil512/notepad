@@ -130,28 +130,28 @@ export default async function EditorToolsCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={L("/tools/editors/markdown-notepad")}
+                href={locale === "zh" ? "/tools/editors/markdown-notepad" : L("/tools/editors/markdown-notepad")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introMarkdown}
               </Link>
               ,{" "}
               <Link
-                href={L("/tools/editors/json-editor")}
+                href={locale === "zh" ? "/tools/editors/json-editor" : L("/tools/editors/json-editor")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introJson}
               </Link>
               ,{" "}
               <Link
-                href={L("/tools/editors/html-editor")}
+                href={locale === "zh" ? "/tools/editors/html-editor" : L("/tools/editors/html-editor")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introHtml}
               </Link>
               {t.introAnd}
               <Link
-                href={L("/tools/editors/code-notepad")}
+                href={locale === "zh" ? "/tools/editors/code-notepad" : L("/tools/editors/code-notepad")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCode}
@@ -195,7 +195,11 @@ export default async function EditorToolsCategoryPage({
               <EditorToolCard
                 key={id}
                 id={id}
-                href={L(`/tools/editors/${id}`)}
+                href={
+                  locale === "zh"
+                    ? `/tools/editors/${id}`
+                    : L(`/tools/editors/${id}`)
+                }
                 title={
                   t.toolTitles[id as keyof typeof t.toolTitles] ??
                   writingToolsMeta[id].h1

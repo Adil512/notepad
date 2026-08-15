@@ -156,7 +156,11 @@ export default async function FormatToolsCategoryPage({
               <FormatToolCard
                 key={id}
                 id={id}
-                href={L(`/tools/format/${id}`)}
+                href={
+                  locale === "zh"
+                    ? `/tools/format/${id}`
+                    : L(`/tools/format/${id}`)
+                }
                 labels={t.toolLabels[id as keyof typeof t.toolLabels]}
               />
             ))}

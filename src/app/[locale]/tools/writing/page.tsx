@@ -63,7 +63,11 @@ export default async function WritingToolsCategoryPage({
                 "link" in seg ? (
                   <Link
                     key={i}
-                    href={L(seg.link)}
+                    href={
+                      locale === "zh" && seg.link.startsWith("/tools/")
+                        ? seg.link
+                        : L(seg.link)
+                    }
                     className="font-semibold text-primary hover:underline"
                   >
                     {seg.label}
@@ -121,7 +125,11 @@ export default async function WritingToolsCategoryPage({
               <WritingToolCard
                 key={id}
                 id={id}
-                href={L(`/tools/writing/${id}`)}
+                href={
+                  locale === "zh"
+                    ? `/tools/writing/${id}`
+                    : L(`/tools/writing/${id}`)
+                }
                 label={
                   isWritingProductivityToolId(id)
                     ? t.toolLabels?.[id]

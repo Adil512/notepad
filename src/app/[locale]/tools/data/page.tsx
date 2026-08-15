@@ -148,28 +148,28 @@ export default async function DataToolsCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={L("/tools/data/json-to-csv")}
+                href={locale === "zh" ? "/tools/data/json-to-csv" : L("/tools/data/json-to-csv")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introJson}
               </Link>
               ,{" "}
               <Link
-                href={L("/tools/data/csv-to-json")}
+                href={locale === "zh" ? "/tools/data/csv-to-json" : L("/tools/data/csv-to-json")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCsv}
               </Link>
               ,{" "}
               <Link
-                href={L("/tools/data/xml-to-json")}
+                href={locale === "zh" ? "/tools/data/xml-to-json" : L("/tools/data/xml-to-json")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introXml}
               </Link>
               {t.introAndSql}
               <Link
-                href={L("/tools/data/sql-to-csv")}
+                href={locale === "zh" ? "/tools/data/sql-to-csv" : L("/tools/data/sql-to-csv")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introSql}
@@ -201,7 +201,11 @@ export default async function DataToolsCategoryPage({
               <DataToolCard
                 key={id}
                 id={id}
-                href={L(`/tools/data/${id}`)}
+                href={
+                  locale === "zh"
+                    ? `/tools/data/${id}`
+                    : L(`/tools/data/${id}`)
+                }
                 title={
                   t.toolTitles[id as keyof typeof t.toolTitles] ??
                   writingToolsMeta[id].h1

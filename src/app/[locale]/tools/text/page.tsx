@@ -166,42 +166,42 @@ export default async function TextAnalysisCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={L("/tools/text/word-counter")}
+                href={locale === "zh" ? "/tools/text/word-counter" : L("/tools/text/word-counter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introWordCounter}
               </Link>
               {t.introOr}
               <Link
-                href={L("/tools/text/character-counter")}
+                href={locale === "zh" ? "/tools/text/character-counter" : L("/tools/text/character-counter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCharCounter}
               </Link>
               {t.introStart}
               <Link
-                href={L("/tools/text/sentence-counter")}
+                href={locale === "zh" ? "/tools/text/sentence-counter" : L("/tools/text/sentence-counter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introSentences}
               </Link>
               {t.introAnd}
               <Link
-                href={L("/tools/text/paragraph-counter")}
+                href={locale === "zh" ? "/tools/text/paragraph-counter" : L("/tools/text/paragraph-counter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introParagraphs}
               </Link>
               {t.introDig}
               <Link
-                href={L("/tools/text/reading-time-calculator")}
+                href={locale === "zh" ? "/tools/text/reading-time-calculator" : L("/tools/text/reading-time-calculator")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introReadingTime}
               </Link>
               {t.introEstimate}
               <Link
-                href={L("/tools/text/case-converter")}
+                href={locale === "zh" ? "/tools/text/case-converter" : L("/tools/text/case-converter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCase}
@@ -251,7 +251,11 @@ export default async function TextAnalysisCategoryPage({
               <TextAnalysisToolCard
                 key={id}
                 id={id}
-                href={L(`/tools/text/${id}`)}
+                href={
+                  locale === "zh"
+                    ? `/tools/text/${id}`
+                    : L(`/tools/text/${id}`)
+                }
                 title={
                   t.toolTitles[id as keyof typeof t.toolTitles] ??
                   writingToolsMeta[id].h1
