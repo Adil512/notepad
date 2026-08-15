@@ -163,49 +163,49 @@ export default async function DevToolsCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={locale === "zh" ? "/tools/dev-tools/json-formatter" : L("/tools/dev-tools/json-formatter")}
+                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/json-formatter" : L("/tools/dev-tools/json-formatter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introJsonFormatter}
               </Link>
               {t.introTighten}
               <Link
-                href={locale === "zh" ? "/tools/dev-tools/html-minifier" : L("/tools/dev-tools/html-minifier")}
+                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/html-minifier" : L("/tools/dev-tools/html-minifier")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introHtmlMinifier}
               </Link>
               {t.introTidy}
               <Link
-                href={locale === "zh" ? "/tools/dev-tools/css-beautifier" : L("/tools/dev-tools/css-beautifier")}
+                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/css-beautifier" : L("/tools/dev-tools/css-beautifier")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCssBeautifier}
               </Link>
               {t.introEncode}
               <Link
-                href={locale === "zh" ? "/tools/dev-tools/base64-codec" : L("/tools/dev-tools/base64-codec")}
+                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/base64-codec" : L("/tools/dev-tools/base64-codec")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introBase64}
               </Link>
               {t.introAnd}
               <Link
-                href={locale === "zh" ? "/tools/dev-tools/url-codec" : L("/tools/dev-tools/url-codec")}
+                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/url-codec" : L("/tools/dev-tools/url-codec")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introUrl}
               </Link>
               {t.introValidate}
               <Link
-                href={locale === "zh" ? "/tools/dev-tools/regex-tester" : L("/tools/dev-tools/regex-tester")}
+                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/regex-tester" : L("/tools/dev-tools/regex-tester")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introRegexTester}
               </Link>
               {t.introStructure}
               <Link
-                href={locale === "zh" ? "/tools/dev-tools/xml-formatter" : L("/tools/dev-tools/xml-formatter")}
+                href={(locale === "zh" || locale === "ko") ? "/tools/dev-tools/xml-formatter" : L("/tools/dev-tools/xml-formatter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introXmlFormatter}
@@ -256,7 +256,7 @@ export default async function DevToolsCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  locale === "zh"
+                  (locale === "zh" || locale === "ko")
                     ? `/tools/dev-tools/${id}`
                     : L(`/tools/dev-tools/${id}`)
                 }

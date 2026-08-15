@@ -181,7 +181,7 @@ export default async function DocumentToolsCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  locale === "zh"
+                  (locale === "zh" || locale === "ko")
                     ? `/tools/documents/${id}`
                     : L(`/tools/documents/${id}`)
                 }

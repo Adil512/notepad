@@ -169,7 +169,7 @@ export default async function ExcelToolsCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  locale === "zh"
+                  (locale === "zh" || locale === "ko")
                     ? `/tools/excel/${id}`
                     : L(`/tools/excel/${id}`)
                 }

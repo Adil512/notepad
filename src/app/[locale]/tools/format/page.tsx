@@ -157,7 +157,7 @@ export default async function FormatToolsCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  locale === "zh"
+                  (locale === "zh" || locale === "ko")
                     ? `/tools/format/${id}`
                     : L(`/tools/format/${id}`)
                 }
