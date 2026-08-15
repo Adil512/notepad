@@ -125,31 +125,31 @@ export default async function ToolsHubPage({
               <ArrowRight className="h-4 w-4 opacity-90" />
             </Link>
             <Link
-              href={(locale === "id" || locale === "ceb" || locale === "hr" || locale === "cs" || locale === "da" || locale === "nl" || locale === "et" || locale === "fj" || locale === "fi" || locale === "gl" || locale === "ka" || locale === "de" || locale === "el" || locale === "kl" || locale === "gn" || locale === "gu" || locale === "ht" || locale === "ha" || locale === "he" || locale === "hi" || locale === "hu" || locale === "is" || locale === "ig" || locale === "iu" || locale === "ga" || locale === "it" || locale === "ja") ? "/tools/writing" : L("/tools/writing")}
+              href={(locale === "id" || locale === "ceb" || locale === "hr" || locale === "cs" || locale === "da" || locale === "nl" || locale === "et" || locale === "fj" || locale === "fi" || locale === "gl" || locale === "ka" || locale === "de" || locale === "el" || locale === "kl" || locale === "gn" || locale === "gu" || locale === "ht" || locale === "ha" || locale === "he" || locale === "hi" || locale === "hu" || locale === "is" || locale === "ig" || locale === "iu" || locale === "ga" || locale === "it" || locale === "ja" || locale === "jv" || locale === "kn" || locale === "kk") ? "/tools/writing" : L("/tools/writing")}
               className="rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
               {t.chips.writing}
             </Link>
             <Link
-              href={(locale === "id" || locale === "ceb" || locale === "hr" || locale === "cs" || locale === "da" || locale === "nl" || locale === "et" || locale === "fj" || locale === "fi" || locale === "gl" || locale === "ka" || locale === "de" || locale === "el" || locale === "kl" || locale === "gn" || locale === "gu" || locale === "ht" || locale === "ha" || locale === "he" || locale === "hi" || locale === "hu" || locale === "is" || locale === "ig" || locale === "iu" || locale === "ga" || locale === "it" || locale === "ja") ? "/tools/editors" : L("/tools/editors")}
+              href={(locale === "id" || locale === "ceb" || locale === "hr" || locale === "cs" || locale === "da" || locale === "nl" || locale === "et" || locale === "fj" || locale === "fi" || locale === "gl" || locale === "ka" || locale === "de" || locale === "el" || locale === "kl" || locale === "gn" || locale === "gu" || locale === "ht" || locale === "ha" || locale === "he" || locale === "hi" || locale === "hu" || locale === "is" || locale === "ig" || locale === "iu" || locale === "ga" || locale === "it" || locale === "ja" || locale === "jv" || locale === "kn" || locale === "kk") ? "/tools/editors" : L("/tools/editors")}
               className="rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
               {t.chips.editors}
             </Link>
             <Link
-              href={(locale === "id" || locale === "ceb" || locale === "hr" || locale === "cs" || locale === "da" || locale === "nl" || locale === "et" || locale === "fj" || locale === "fi" || locale === "gl" || locale === "ka" || locale === "de" || locale === "el" || locale === "kl" || locale === "gn" || locale === "gu" || locale === "ht" || locale === "ha" || locale === "he" || locale === "hi" || locale === "hu" || locale === "is" || locale === "ig" || locale === "iu" || locale === "ga" || locale === "it" || locale === "ja") ? "/tools/text" : L("/tools/text")}
+              href={(locale === "id" || locale === "ceb" || locale === "hr" || locale === "cs" || locale === "da" || locale === "nl" || locale === "et" || locale === "fj" || locale === "fi" || locale === "gl" || locale === "ka" || locale === "de" || locale === "el" || locale === "kl" || locale === "gn" || locale === "gu" || locale === "ht" || locale === "ha" || locale === "he" || locale === "hi" || locale === "hu" || locale === "is" || locale === "ig" || locale === "iu" || locale === "ga" || locale === "it" || locale === "ja" || locale === "jv" || locale === "kn" || locale === "kk") ? "/tools/text" : L("/tools/text")}
               className="rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
               {t.chips.text}
             </Link>
             <Link
-              href={(locale === "id" || locale === "ceb" || locale === "hr" || locale === "cs" || locale === "da" || locale === "nl" || locale === "et" || locale === "fj" || locale === "fi" || locale === "gl" || locale === "ka" || locale === "de" || locale === "el" || locale === "kl" || locale === "gn" || locale === "gu" || locale === "ht" || locale === "ha" || locale === "he" || locale === "hi" || locale === "hu" || locale === "is" || locale === "ig" || locale === "iu" || locale === "ga" || locale === "it" || locale === "ja") ? "/tools/dev-tools" : L("/tools/dev-tools")}
+              href={(locale === "id" || locale === "ceb" || locale === "hr" || locale === "cs" || locale === "da" || locale === "nl" || locale === "et" || locale === "fj" || locale === "fi" || locale === "gl" || locale === "ka" || locale === "de" || locale === "el" || locale === "kl" || locale === "gn" || locale === "gu" || locale === "ht" || locale === "ha" || locale === "he" || locale === "hi" || locale === "hu" || locale === "is" || locale === "ig" || locale === "iu" || locale === "ga" || locale === "it" || locale === "ja" || locale === "jv" || locale === "kn" || locale === "kk") ? "/tools/dev-tools" : L("/tools/dev-tools")}
               className="rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
               {t.chips.devTools}
             </Link>
             <Link
-              href={(locale === "id" || locale === "ceb" || locale === "hr" || locale === "cs" || locale === "da" || locale === "nl" || locale === "et" || locale === "fj" || locale === "fi" || locale === "gl" || locale === "ka" || locale === "de" || locale === "el" || locale === "kl" || locale === "gn" || locale === "gu" || locale === "ht" || locale === "ha" || locale === "he" || locale === "hi" || locale === "hu" || locale === "is" || locale === "ig" || locale === "iu" || locale === "ga" || locale === "it" || locale === "ja") ? "/tools/excel" : L("/tools/excel")}
+              href={(locale === "id" || locale === "ceb" || locale === "hr" || locale === "cs" || locale === "da" || locale === "nl" || locale === "et" || locale === "fj" || locale === "fi" || locale === "gl" || locale === "ka" || locale === "de" || locale === "el" || locale === "kl" || locale === "gn" || locale === "gu" || locale === "ht" || locale === "ha" || locale === "he" || locale === "hi" || locale === "hu" || locale === "is" || locale === "ig" || locale === "iu" || locale === "ga" || locale === "it" || locale === "ja" || locale === "jv" || locale === "kn" || locale === "kk") ? "/tools/excel" : L("/tools/excel")}
               className="rounded-full border border-border/90 bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/30 hover:bg-muted/40"
             >
               {t.chips.excel}
@@ -164,7 +164,7 @@ export default async function ToolsHubPage({
           {categories.map((cat) => (
             <Link
               key={cat.href}
-              href={(locale === "id" || locale === "ceb" || locale === "hr" || locale === "cs" || locale === "da" || locale === "nl" || locale === "et" || locale === "fj" || locale === "fi" || locale === "gl" || locale === "ka" || locale === "de" || locale === "el" || locale === "kl" || locale === "gn" || locale === "gu" || locale === "ht" || locale === "ha" || locale === "he" || locale === "hi" || locale === "hu" || locale === "is" || locale === "ig" || locale === "iu" || locale === "ga" || locale === "it" || locale === "ja") ? cat.href : L(cat.href)}
+              href={(locale === "id" || locale === "ceb" || locale === "hr" || locale === "cs" || locale === "da" || locale === "nl" || locale === "et" || locale === "fj" || locale === "fi" || locale === "gl" || locale === "ka" || locale === "de" || locale === "el" || locale === "kl" || locale === "gn" || locale === "gu" || locale === "ht" || locale === "ha" || locale === "he" || locale === "hi" || locale === "hu" || locale === "is" || locale === "ig" || locale === "iu" || locale === "ga" || locale === "it" || locale === "ja" || locale === "jv" || locale === "kn" || locale === "kk") ? cat.href : L(cat.href)}
               className={`group rounded-2xl border p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-md sm:p-6 ${cat.accent}`}
             >
               <h2 className="font-display text-xl font-semibold text-foreground">

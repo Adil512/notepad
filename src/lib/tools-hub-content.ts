@@ -3305,6 +3305,228 @@ const ja: ToolsHubCopy = {
   },
 };
 
+const jv: ToolsHubCopy = {
+  pageTitle: "Notepad & Piranti Nulis",
+  intro:
+    "Temokake kabeh piranti nulis Notepad profesional sing bisa digunakake kanthi gratis lan tanpa watesan.",
+  introLink: {
+    before: "Temokake kabeh piranti nulis ",
+    label: "Notepad",
+    after: " profesional sing bisa digunakake kanthi gratis lan tanpa watesan.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Notepad online",
+  chips: {
+    writing: "Piranti nulis",
+    editors: "Piranti editor",
+    text: "Analisis teks",
+    devTools: "Piranti pangembang",
+    excel: "Konverter Excel",
+  },
+  categoryLabel: "Kategori",
+  openCategory: "Bukak kategori",
+  toolsCountWord: "piranti",
+  categories: {
+    writing: {
+      title: "Piranti Nulis",
+      description:
+        "Nulis tanpa gangguan, cathetan cepet, sesi fokus, target, dikte, template, snippet, lan pembantu alur kerja.",
+    },
+    editors: {
+      title: "Piranti Editor",
+      description:
+        "Editor Markdown, kode, JSON, lan HTML kanggo nulis teknis lan karya konten sing terstruktur.",
+    },
+    text: {
+      title: "Piranti Analisis Teks",
+      description:
+        "Kalkulator tembung, karakter, ukara, lan paragraf kanthi utilitas keterbacaan lan perbandingan.",
+    },
+    devTools: {
+      title: "Piranti Pangembang",
+      description:
+        "Formatter, minifier, encoder, lan utilitas regex kanggo pangembangan web saben dina.",
+    },
+    excel: {
+      title: "Piranti Konversi Excel",
+      description:
+        "Konversi antarane Excel lan CSV, JSON, XML, PDF, ODS, Google Sheets, lan format spreadsheet liyane.",
+    },
+    documents: {
+      title: "Piranti Konversi Dokumen",
+      description:
+        "Transformasi file PDF, Word, TXT, Markdown, HTML, RTF, lan PowerPoint kanggo nyunting lan nerbitake.",
+    },
+    data: {
+      title: "Piranti Konversi Data & Kode",
+      description:
+        "Pindhah data ing antarane JSON, CSV, XML, YAML, SQL, lan format plain text kanggo API lan alur kerja data.",
+    },
+    format: {
+      title: "Piranti Utilitas Teks",
+      description:
+        "Konversi kasus, operasi baris, reresik teks, lan piranti format kompak kanggo transformasi teks cepet.",
+    },
+  },
+  aboutTitle: "Babagan Piranti Online Gratis Kita",
+  aboutBody:
+    "Sugeng rawuh in koleksi lengkap piranti online gratis sing dirancang kanggo nyederhanakake nyunting teks, konversi data, pangolahan dokumen, lan alur kerja pangembang.",
+  footer: {
+    before: "Nggoleki kanvas klasik? Na ",
+    linkLabel: "Editor Notepad",
+    after:
+      " isih nawakake pengalaman rich-text lengkap kanthi tabel, gambar, lan format.",
+  },
+};
+
+const kn: ToolsHubCopy = {
+  pageTitle: "ನೋಟ್‌ಪ್ಯಾಡ್ ಮತ್ತು ಬರವಣಿಗೆಯ ಉಪಕರಣಗಳು",
+  intro:
+    "ನೀವು ಉಚಿತವಾಗಿ ಮತ್ತು ಅನಿಯಮಿತವಾಗಿ ಬಳಸಬಹುದಾದ ನೋಟ್‌ಪ್ಯಾಡ್‌ನ ಎಲ್ಲಾ ವೃತ್ತಿಪರ ಬರವಣಿಗೆಯ ಉಪಕರಣಗಳನ್ನು ಹುಡುಕಿ.",
+  introLink: {
+    before: "ಹುಡುಕಿ ಎಲ್ಲಾ ವೃತ್ತಿಪರ ",
+    label: "ನೋಟ್‌ಪ್ಯಾಡ್",
+    after: " ಬರವಣಿಗೆಯ ಉಪಕರಣಗಳನ್ನು ನೀವು ಉಚಿತವಾಗಿ ಮತ್ತು ಅನಿಯಮಿತವಾಗಿ ಬಳಸಬಹುದು.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "ನೋಟ್‌ಪ್ಯಾಡ್ ಆನ್‌ಲיין",
+  chips: {
+    writing: "ಬರವಣಿಗೆಯ ಉಪಕರಣಗಳು",
+    editors: "ಎಡಿಟರ್ ಉಪಕರಣಗಳು",
+    text: "ಪಠ್ಯ ವಿಶ್ಲೇಷಣೆ",
+    devTools: "ಡೆವಲಪರ್ ಉಪಕರಣಗಳು",
+    excel: "ಎಕ್ಸೆಲ್ ಪರಿವರ್ತಕಗಳು",
+  },
+  categoryLabel: "ವರ್ಗ",
+  openCategory: "ವರ್ಗವನ್ನು ತೆರೆಯಿರಿ",
+  toolsCountWord: "ಉಪಕರಣಗಳು",
+  categories: {
+    writing: {
+      title: "ಬರವಣಿಗೆಯ ಉಪಕರಣಗಳು",
+      description:
+        "ಗಮನ ಬೇರೆಡೆಗೆ ಸೆಳೆಯದ ಬರವಣಿಗೆ, ತ್ವರಿತ ಟಿಪ್ಪಣಿಗಳು, ಗಮನ ಕೇಂದ್ರೀಕರಿಸುವ ಅವಧಿಗಳು, ಗುರಿಗಳು, ಡಿಕ್ಟೇಶನ್, ಟೆಂಪ್ಲೇಟ್‌ಗಳು, ತುಣುಕುಗಳು ಮತ್ತು ವರ್ಕ್‌ಫ್ಲೋ ಸಹಾಯಕರು.",
+    },
+    editors: {
+      title: "ಎಡಿಟರ್ ಉಪಕರಣಗಳು",
+      description:
+        "ತಾಂತ್ರಿక ಬರವಣಿಗೆ空间 ಮತ್ತು ರಚನಾತ್ಮक ವಿಷಯದ ಕೆಲಸಕ್ಕಾಗಿ ಮಾರ್ಕ್‌ಡೌನ್, ಕೋಡ್, JSON ಮತ್ತು HTML ಎಡಿಟರ್‌ಗಳು.",
+    },
+    text: {
+      title: "ಪಠ್ಯ ವಿಶ್ಲೇಷಣಾ ಉಪಕರಣಗಳು",
+      description:
+        "ಓದುವಿಕೆ ಮತ್ತು ಹೋಲಿಕೆ ಉಪಯುಕ್ತತೆಗಳೊಂದಿಗೆ ಪದಗಳು, ಅಕ್ಷರಗಳು, ವಾಕ್ಯಗಳು ಮತ್ತು ಪ್ಯಾರಾಗ್ರಾಫ್ ಕೌಂಟರ್‌ಗಳು.",
+    },
+    devTools: {
+      title: "ಡೆವಲಪರ್ ಉಪಕರಣಗಳು",
+      description:
+        "ದೈನಂದಿನ ವೆಬ್ ಅಭಿವೃದ್ಧಿಗಾಗಿ ಫಾರ್ಮ್ಯಾಟರ್‌ಗಳು, ಮಿನಿಫೈಯರ್‌ಗಳು, ಎನ್‌ಕೋಡರ್‌ಗಳು ಮತ್ತು ರೆಜೆಕ್ಸ್ ಉಪಯುಕ್ತತೆಗಳು.",
+    },
+    excel: {
+      title: "ಎಕ್ಸೆಲ್ ಪರಿವರ್ತನಾ ಉಪಕರಣಗಳು",
+      description:
+        "ಎಕ್ಸೆಲ್ ಮತ್ತು CSV, JSON, XML, PDF, ODS, ಗೂಗል ಶೀಟ್‌ಗಳು ಮತ್ತು ಇತರ ಸ್ಪ್ರೆಡ್‌ಶೀಟ್ ಫಾರ್ಮ್ಯಾಟ್‌ಗಳ ನಡುವೆ ಪರಿವರ್ತಿಸಿ.",
+    },
+    documents: {
+      title: "ದಾಖಲೆ ಪರಿವರ್ತನಾ ಉಪಕರಣಗಳು",
+      description:
+        "ಸಂಪಾದನೆ ಮತ್ತು ಪ್ರಕಟಣೆಗಾಗಿ PDF, Word, TXT, ಮಾರ್ಕ್‌ಡೌನ್, HTML, RTF ಮತ್ತು ಪವರ್‌ಪಾಯಿಂಟ್ ಫೈಲ್‌ಗಳನ್ನು ಪರಿವರ್ತಿಸಿ.",
+    },
+    data: {
+      title: "ಡೇಟಾ ಮತ್ತು ಕೋಡ್ ಪರಿವರ್ತನಾ ಉಪಕರಣಗಳು",
+      description:
+        "API ಮತ್ತು ಡೇಟಾ ವರ್ಕ್‌ಫ್ಲೋಗಳಿಗಾಗಿ JSON, CSV, XML, YAML, SQL ಮತ್ತು ಪ್ಲೇನ್ ಟೆಕ್ಸ್ಟ್ ಫಾರ್ಮ್ಯಾಟ್‌ಗಳ ನಡುವೆ ಡೇಟಾವನ್ನು ವರ್ಗಾಯಿಸಿ.",
+    },
+    format: {
+      title: "ಪಠ್ಯ ಉಪಯುಕ್ತತೆಯ ಉಪಕರಣಗಳು",
+      description:
+        "ತ್ವರಿತ ಪಠ್ಯ ಬದಲಾವಣೆಗಳಿಗಾಗಿ ಕೇಸ್ ಪರಿವರ್ತನೆ, ಸಾಲಿನ ಕಾರ್ಯಾಚರಣೆಗಳು, ಪಠ್ಯ ಸ್ವಚ್ಛಗೊಳಿಸುವಿಕೆ ಮತ್ತು ಕಾಂಪ್ಯಾಕ್ಟ್ ಫಾರ್ಮ್ಯಾಟಿಂಗ್ ಉಪಕರಣಗಳು.",
+    },
+  },
+  aboutTitle: "ನಮ್ಮ ಉಚಿತ ಆನ್‌ಲೈನ್ ಉಪಕರಣಗಳ ಕುರಿತು",
+  aboutBody:
+    "ಪಠ್ಯ ಸಂಪಾದನೆ, ಡೇಟಾ ಪರಿವರ್ತನೆ, ದಾಖಲೆ ಸಂಸ್ಕರಣೆ ಮತ್ತು ಡೆವಲಪರ್ ವರ್ಕ್‌ಫ್ಲೋಗಳನ್ನು ಸರಳಗೊಳಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ನಮ್ಮ ಉಚಿತ ಆನ್‌ಲೈನ್ ಉಪಕರಣಗಳ ಸಂಪೂರ್ಣ ಸಂಗ್ರಹಕ್ಕೆ ಸುಸ್ವಾಗत.",
+  footer: {
+    before: "ನೀವು ಕ್ಲಾಸಿಕ್ ಕ್ಯಾನ್ವಾಸ್ ಅನ್ನು ಹುಡುಕುತ್ತಿದ್ದೀರಾ? ",
+    linkLabel: "ನೋಟ್‌ಪ್ಯಾಡ್ ಎಡಿಟರ್",
+    after:
+      " ಇಂದಿಗೂ ಕೋಷ್ಟಕಗಳು, ಚಿತ್ರಗಳು ಮತ್ತು ಫಾರ್ಮ್ಯಾಟಿಂಗ್‌ನೊಂದಿಗೆ ಸಂಪೂರ್ಣ ರಿಚ್-ಟೆಕ್ಸ್ಟ್ ಅನುಭವವನ್ನು ನೀಡುತ್ತದೆ.",
+  },
+};
+
+const kk: ToolsHubCopy = {
+  pageTitle: "Блокнот және жазу құралдары",
+  intro:
+    "Блокноттың барлық кәсіби жазу құралдарын табыңыз, оларды тегін және шектеусіз пайдалана аласыз.",
+  introLink: {
+    before: "Табыңыз барлық кәсіби ",
+    label: "Блокнот",
+    after: " жазу құралдарын, оларды тегін және шектеусіз пайдалана аласыз.",
+    href: "https://notepad.is/",
+  },
+  ctaNotepad: "Блокнот онлайн",
+  chips: {
+    writing: "Жазу құралдары",
+    editors: "Редактор құралдары",
+    text: "Мәтінді талдау",
+    devTools: "Әзірлеуші құралдары",
+    excel: "Excel түрлендіргіштері",
+  },
+  categoryLabel: "Санат",
+  openCategory: "Санатты ашу",
+  toolsCountWord: "құрал",
+  categories: {
+    writing: {
+      title: "Жазу Құралдары",
+      description:
+        "Алаңдаусыз жазу, жылдам жазбалар, фокус сессиялары, мақсаттар, диктант, шаблондар, код үзінділері және жұмыс процесінің көмекшілері.",
+    },
+    editors: {
+      title: "Редактор Құралдары",
+      description:
+        "Техникалық жазу және құрылымдалған мазмұнмен жұмыс істеуге арналған Markdown, код, JSON және HTML редакторлары.",
+    },
+    text: {
+      title: "Мәтінді Талдау Құралдары",
+      description:
+        "Оқылу деңгейін бағалау және салыстыру утилиталары бар сөз, таңба, сөйлем және параграф есептегіштері.",
+    },
+    devTools: {
+      title: "Әзірлеуші Құралдары",
+      description:
+        "Күнделікті веб-әзірлеуге арналған форматтаушылар, минификаторлар, кодтаушылар және regex утилиталары.",
+    },
+    excel: {
+      title: "Excel Түрлендіру Құралдары",
+      description:
+        "Excel мен CSV, JSON, XML, PDF, ODS, Google Sheets және басқа электрондық кесте форматтары арасында түрлендіру.",
+    },
+    documents: {
+      title: "Құжаттарды Түрлендіру Құралдары",
+      description:
+        "Өңдеу және жариялау үшін PDF, Word, TXT, Markdown, HTML, RTF және PowerPoint файлдарын түрлендіру.",
+    },
+    data: {
+      title: "Деректер мен Кодты Түрлендіру Құралдары",
+      description:
+        "API және деректер ағындары үшін JSON, CSV, XML, YAML, SQL және қарапайым мәтін форматтары арасында деректерді тасымалдау.",
+    },
+    format: {
+      title: "Мәтіндік Утилиталар",
+      description:
+        "Жылдам мәтіндік өзгерістерге арналған регистрді ауыстыру, жолдармен жұмыс, мәтінді тазалау және ықшам форматтау құралдары.",
+    },
+  },
+  aboutTitle: "Біздің тегін онлайн құралдарымыз туралы",
+  aboutBody:
+    "Мәтінді өңдеуді, деректерді түрлендіруді, құжаттарды өңдеуді және әзірлеушілердің жұмыс процестерін жеңілдетуге арналған тегін онлайн құралдардың толық жиынтығына қош келдіңіз.",
+  footer: {
+    before: "Классикалық кенепті іздеп жүрсіз бе? ",
+    linkLabel: "Блокнот редакторы",
+    after:
+      " әлі күнге дейін кестелер, суреттер және форматтау мүмкіндіктері бар толыққанды бай мәтінмен жұмыс істеу мүмкіндігін ұсынады.",
+  },
+};
+
 const byLocale: Record<string, ToolsHubCopy> = {
   en,
   af,
@@ -3351,6 +3573,9 @@ const byLocale: Record<string, ToolsHubCopy> = {
   ga,
   it,
   ja,
+  jv,
+  kn,
+  kk,
 };
 
 /** Locales rendered right-to-left on the tools hub page. */
