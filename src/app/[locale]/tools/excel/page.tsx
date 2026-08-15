@@ -90,6 +90,32 @@ const CONTENT = {
       "excel-to-google-sheet": "Excel 转 Google Sheets",
     },
   },
+  ar: {
+    metaTitle: "أدوات مجانية لتحويل Excel – تحويل Excel، CSV، JSON، XML، PDF والمزيد",
+    metaDesc: "قم بتحويل ملفات Excel من وإلى تنسيقات CSV، JSON، XML، PDF، Google Sheets، ODS، Numbers، HTML، والنصوص. أدوات سريعة ودقيقة ومجانية لتحويل Excel لتسهيل تحويل البيانات وإدارتها.",
+    pageTitle: "أدوات تحويل Excel",
+    intro: "تساعدك أدوات تحويل Excel المجانية عبر الإنترنت على تحويل البيانات بين جداول البيانات والتنسيقات المتعددة بما في ذلك CSV، JSON، XML، PDF، و Google Sheets.",
+    ctaAllTools: "كل الأدوات",
+    ctaNotepadEditor: "محرر الملاحظات",
+    sectionHeading: "أدوات مجانية لتحويل Excel عبر الإنترنت",
+    toolTitles: {
+      "text-to-excel": "محول النص إلى Excel",
+      "csv-to-excel": "محول CSV إلى Excel",
+      "json-to-excel": "محول JSON إلى Excel",
+      "xml-to-excel": "محول XML إلى Excel",
+      "html-to-excel": "محول HTML إلى Excel",
+      "pdf-to-excel": "محول PDF إلى Excel",
+      "excel-to-csv": "محول Excel إلى CSV",
+      "excel-to-json": "محول Excel إلى JSON",
+      "excel-to-xml": "محول Excel إلى XML",
+      "excel-to-pdf": "محول Excel إلى PDF",
+      "google-sheet-to-excel": "محول Google Sheets إلى Excel",
+      "numbers-to-excel": "محول Numbers إلى Excel",
+      "ods-to-excel": "محول ODS إلى Excel",
+      "excel-to-ods": "محول Excel إلى ODS",
+      "excel-to-google-sheet": "محول Excel إلى Google Sheets",
+    },
+  },
 };
 
 export async function generateMetadata({
@@ -169,7 +195,7 @@ export default async function ExcelToolsCategoryPage({
                 key={id}
                 id={id}
                 href={
-                  (locale === "zh" || locale === "ko")
+                  (locale === "zh" || locale === "ko" || locale === "ar")
                     ? `/tools/excel/${id}`
                     : L(`/tools/excel/${id}`)
                 }
