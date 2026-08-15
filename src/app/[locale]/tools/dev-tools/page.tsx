@@ -80,6 +80,40 @@ const CONTENT = {
       "xml-formatter": "XML 포맷터",
     },
   },
+  zh: {
+    metaTitle: "免费开发者工具 – JSON、HTML、CSS、XML、Base64 和 正则表达式实用程序",
+    metaDesc: "使用免费的开发者工具来格式化、验证、编码、解码和优化代码。在线使用 JSON 格式化与验证器、HTML 压缩器、CSS 美化器、Base64 编码/解码器、URL 编码/解码器、正则表达式测试器和 XML 格式化器。",
+    pageTitle: "开发者工具",
+    introPrefix: "开发者工具为您提供了网页开发、编程和技术 SEO 所需的必备实用工具，而无需安装桌面软件。您可以使用 ",
+    introJsonFormatter: "JSON 格式化器",
+    introTighten: " 来格式化和检查 JSON，使用 ",
+    introHtmlMinifier: "HTML 压缩器",
+    introTidy: " 来精简标记，使用 ",
+    introCssBeautifier: "CSS 美化器",
+    introEncode: " 来整理样式，使用 ",
+    introBase64: "Base64",
+    introAnd: " 和 ",
+    introUrl: "URL",
+    introValidate: " 工具进行编码或解码，在 ",
+    introRegexTester: "正则表达式测试器",
+    introStructure: " 中验证模式，并在 ",
+    introXmlFormatter: "XML 格式化器",
+    introSuffix: " 中构建 XML 结构。在支持的情况下，所有工具均在您的浏览器中本地运行。",
+    ctaAllTools: "所有工具",
+    ctaEditorTools: "编辑器工具",
+    ctaTextAnalysis: "文本分析",
+    ctaNotepadEditor: "记事本编辑器",
+    sectionHeading: "免费在线开发者工具",
+    toolTitles: {
+      "json-formatter": "JSON 格式化器",
+      "html-minifier": "HTML 压缩器",
+      "css-beautifier": "CSS 美化器",
+      "base64-codec": "Base64 编解码器",
+      "url-codec": "URL 编解码器",
+      "regex-tester": "正则表达式测试器",
+      "xml-formatter": "XML 格式化器",
+    },
+  },
 };
 
 export async function generateMetadata({
@@ -129,49 +163,49 @@ export default async function DevToolsCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={L("/tools/dev-tools/json-formatter")}
+                href={locale === "zh" ? "/tools/dev-tools/json-formatter" : L("/tools/dev-tools/json-formatter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introJsonFormatter}
               </Link>
               {t.introTighten}
               <Link
-                href={L("/tools/dev-tools/html-minifier")}
+                href={locale === "zh" ? "/tools/dev-tools/html-minifier" : L("/tools/dev-tools/html-minifier")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introHtmlMinifier}
               </Link>
               {t.introTidy}
               <Link
-                href={L("/tools/dev-tools/css-beautifier")}
+                href={locale === "zh" ? "/tools/dev-tools/css-beautifier" : L("/tools/dev-tools/css-beautifier")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCssBeautifier}
               </Link>
               {t.introEncode}
               <Link
-                href={L("/tools/dev-tools/base64-codec")}
+                href={locale === "zh" ? "/tools/dev-tools/base64-codec" : L("/tools/dev-tools/base64-codec")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introBase64}
               </Link>
               {t.introAnd}
               <Link
-                href={L("/tools/dev-tools/url-codec")}
+                href={locale === "zh" ? "/tools/dev-tools/url-codec" : L("/tools/dev-tools/url-codec")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introUrl}
               </Link>
               {t.introValidate}
               <Link
-                href={L("/tools/dev-tools/regex-tester")}
+                href={locale === "zh" ? "/tools/dev-tools/regex-tester" : L("/tools/dev-tools/regex-tester")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introRegexTester}
               </Link>
               {t.introStructure}
               <Link
-                href={L("/tools/dev-tools/xml-formatter")}
+                href={locale === "zh" ? "/tools/dev-tools/xml-formatter" : L("/tools/dev-tools/xml-formatter")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introXmlFormatter}
@@ -221,7 +255,11 @@ export default async function DevToolsCategoryPage({
               <DevToolCard
                 key={id}
                 id={id}
-                href={L(`/tools/dev-tools/${id}`)}
+                href={
+                  locale === "zh"
+                    ? `/tools/dev-tools/${id}`
+                    : L(`/tools/dev-tools/${id}`)
+                }
                 title={
                   t.toolTitles[id as keyof typeof t.toolTitles] ??
                   writingToolsMeta[id].h1
