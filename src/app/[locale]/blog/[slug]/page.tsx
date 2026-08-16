@@ -263,6 +263,9 @@ export default async function BlogPostPage({
 
           <aside className="lg:pt-2">
             <div className="lg:sticky lg:top-28 space-y-6">
+              {/* Mediavine Top Sidebar Ad Placeholder */}
+              <div id="sidebar_atf_target" className="w-full min-h-[50px] empty:hidden" />
+
               <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
                 <h2 className="text-xs font-bold tracking-widest uppercase text-muted-foreground mb-4">
                   {tUi.popularPosts}
@@ -301,6 +304,9 @@ export default async function BlogPostPage({
                   {tUi.openFreeNotepad}
                 </Link>
               </div>
+
+              {/* Mediavine Bottom Sidebar Ad Placeholder */}
+              <div id="sidebar_btf_target" className="w-full min-h-[50px] empty:hidden" />
             </div>
           </aside>
         </div>
