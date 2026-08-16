@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Outfit } from "next/font/google";
 import { headers } from "next/headers";
 import "./globals.css";
-import { GoogleAdSense } from "@/components/google-adsense";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { ThemeProvider } from "@/components/theme-provider";
 import { getLocaleMetadata } from "@/lib/locale-metadata";
@@ -45,7 +44,6 @@ export default async function RootLayout({
   return (
     <html lang={lang} suppressHydrationWarning>
       <head>
-        <GoogleAdSense />
         <script
           type="text/javascript"
           async
