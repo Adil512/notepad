@@ -16,6 +16,9 @@ import {
   isFormatHubToolId,
   isTextAnalysisHubToolId,
   isWritingProductivityToolId,
+  isWritingToolId,
+  isToolVisibleInLocale,
+  writingToolsMeta,
 } from "@/lib/writing-tools-registry";
 import { localeRequestHeaders } from "@/lib/request-locale-header";
 
@@ -203,7 +206,99 @@ function maybeFormatHubRedirect(request: NextRequest): NextResponse | null {
   return NextResponse.redirect(new URL(dest, request.url), 308);
 }
 
+function cleanPathFromTypoSuffix(pathname: string): string | null {
+  const pathLower = pathname.toLowerCase();
+  if (pathLower.includes("-home")) {
+    return "/";
+  }
+  if (pathLower.includes("-tools")) {
+    return "/tools/";
+  }
+  if (pathLower.includes("-writing")) {
+    return "/tools/writing/";
+  }
+  if (pathLower.includes("-editors")) {
+    return "/tools/editors/";
+  }
+  if (pathLower.includes("-format")) {
+    return "/tools/format/";
+  }
+  if (pathLower.includes("-excel")) {
+    return "/tools/excel/";
+  }
+  if (pathLower.includes("-data")) {
+    return "/tools/data/";
+  }
+  if (pathLower.includes("-templates")) {
+    return "/tools/writing/templates/";
+  }
+  return null;
+}
+
+function getToolFolder(toolId: string): string | null {
+  if (isWritingProductivityToolId(toolId)) return "writing";
+  if (isEditorHubToolId(toolId)) return "editors";
+  if (isTextAnalysisHubToolId(toolId)) return "text";
+  if (isDevToolsHubToolId(toolId)) return "dev-tools";
+  if (isExcelHubToolId(toolId)) return "excel";
+  if (isDocumentHubToolId(toolId)) return "documents";
+  if (isDataHubToolId(toolId)) return "data";
+  if (isFormatHubToolId(toolId)) return "format";
+  return null;
+}
+
+function maybeLegacyOrEnglishFallbackRedirect(
+  request: NextRequest
+): NextResponse | null {
+  const pathname = request.nextUrl.pathname;
+
+  // 1. Clean quote characters if present in URL path
+  if (pathname.includes('"') || pathname.includes('%22') || pathname.includes('\\')) {
+    return NextResponse.redirect(new URL("/", request.url), 301);
+  }
+
+  // 2. Check for Suffix Typos
+  const cleanedSuffixPath = cleanPathFromTypoSuffix(pathname);
+  if (cleanedSuffixPath) {
+    return NextResponse.redirect(new URL(cleanedSuffixPath, request.url), 301);
+  }
+
+  // 3. Check for non-English locales accessing English-only tools or hidden tools
+  const locale = getLocaleFromPathname(pathname);
+  if (locale !== defaultLocale) {
+    const inner = getPathWithoutLocale(pathname).replace(/\/+$/, "") || "/";
+    const parts = inner.split("/").filter(Boolean);
+    
+    // Check if the path targets a tool
+    if (parts[0] === "tools" && parts.length >= 2) {
+      const toolId = parts[parts.length - 1];
+      if (isWritingToolId(toolId)) {
+        if (!isToolVisibleInLocale(toolId, locale)) {
+          const category = getToolFolder(toolId);
+          const dest = category ? `/tools/${category}/${toolId}/` : `/tools/${toolId}/`;
+          return NextResponse.redirect(new URL(dest, request.url), 301);
+        }
+      }
+    } else if (parts.length === 1 && isWritingToolId(parts[0])) {
+      // Handle direct /[locale]/[toolId] urls (legacy/direct urls)
+      const toolId = parts[0];
+      if (!isToolVisibleInLocale(toolId, locale)) {
+        const category = getToolFolder(toolId);
+        const dest = category ? `/tools/${category}/${toolId}/` : `/tools/${toolId}/`;
+        return NextResponse.redirect(new URL(dest, request.url), 301);
+      }
+    }
+  }
+
+  return null;
+}
+
 export async function proxy(request: NextRequest) {
+  const legacyOrFallbackRedirect = maybeLegacyOrEnglishFallbackRedirect(request);
+  if (legacyOrFallbackRedirect) {
+    return legacyOrFallbackRedirect;
+  }
+
   const { pathname } = request.nextUrl;
 
   const retiredRedirect = maybeRetiredWritingToolRedirect(request);
