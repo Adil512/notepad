@@ -51,6 +51,10 @@ export default async function RootLayout({
           data-cfasync="false"
           src="//scripts.scriptwrapper.com/tags/e06862ab-368c-421d-8d71-0bbd2614623b.js"
         />
+        <script
+          async
+          src="https://news.google.com/swg/js/v1/publisher.js"
+        />
       </head>
       <body
         className={`${inter.variable} ${outfit.variable} antialiased selection:bg-primary/30`}
