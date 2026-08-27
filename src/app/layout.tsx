@@ -46,7 +46,7 @@ export default async function RootLayout({
       <head>
         <script
           type="text/javascript"
-          async
+          {...({ async: "async" } as any)}
           data-noptimize="1"
           data-cfasync="false"
           src="//scripts.scriptwrapper.com/tags/e06862ab-368c-421d-8d71-0bbd2614623b.js"

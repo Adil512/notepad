@@ -349,7 +349,8 @@ export async function proxy(request: NextRequest) {
   if (
     pathname.startsWith("/auth") ||
     pathname === "/sitemap.xml" ||
-    pathname === "/robots.txt"
+    pathname === "/robots.txt" ||
+    pathname === "/ads.txt"
   ) {
     return updateSession(request);
   }
