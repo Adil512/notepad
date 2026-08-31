@@ -207,30 +207,32 @@ function maybeFormatHubRedirect(request: NextRequest): NextResponse | null {
 }
 
 function cleanPathFromTypoSuffix(pathname: string): string | null {
-  const pathLower = pathname.toLowerCase();
-  if (pathLower.includes("-home")) {
-    return "/";
-  }
-  if (pathLower.includes("-tools")) {
-    return "/tools/";
-  }
-  if (pathLower.includes("-writing")) {
-    return "/tools/writing/";
-  }
-  if (pathLower.includes("-editors")) {
-    return "/tools/editors/";
-  }
-  if (pathLower.includes("-format")) {
-    return "/tools/format/";
-  }
-  if (pathLower.includes("-excel")) {
-    return "/tools/excel/";
-  }
-  if (pathLower.includes("-data")) {
-    return "/tools/data/";
-  }
-  if (pathLower.includes("-templates")) {
-    return "/tools/writing/templates/";
+  const parts = pathname.toLowerCase().split("/").filter(Boolean);
+  for (const part of parts) {
+    if (part === "tools-tools") {
+      return "/tools/";
+    }
+    if (part === "writing-writing") {
+      return "/tools/writing/";
+    }
+    if (part === "editors-editors") {
+      return "/tools/editors/";
+    }
+    if (part === "format-format") {
+      return "/tools/format/";
+    }
+    if (part === "excel-excel" || part === "tools-excel") {
+      return "/tools/excel/";
+    }
+    if (part === "data-data" || part === "tools-data") {
+      return "/tools/data/";
+    }
+    if (part === "templates-templates") {
+      return "/tools/writing/templates/";
+    }
+    if (part === "home-home" || part === "tools-home") {
+      return "/";
+    }
   }
   return null;
 }
