@@ -177,28 +177,28 @@ export default async function DataToolsCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/data/json-to-csv" : L("/tools/data/json-to-csv")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/data/json-to-csv/" : L("/tools/data/json-to-csv/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introJson}
               </Link>
               ,{" "}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/data/csv-to-json" : L("/tools/data/csv-to-json")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/data/csv-to-json/" : L("/tools/data/csv-to-json/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCsv}
               </Link>
               ,{" "}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/data/xml-to-json" : L("/tools/data/xml-to-json")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/data/xml-to-json/" : L("/tools/data/xml-to-json/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introXml}
               </Link>
               {t.introAndSql}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/data/sql-to-csv" : L("/tools/data/sql-to-csv")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar") ? "/tools/data/sql-to-csv/" : L("/tools/data/sql-to-csv/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introSql}
@@ -232,8 +232,8 @@ export default async function DataToolsCategoryPage({
                 id={id}
                 href={
                   (locale === "zh" || locale === "ko" || locale === "ar")
-                    ? `/tools/data/${id}`
-                    : L(`/tools/data/${id}`)
+                    ? `/tools/data/${id}/`
+                    : L(`/tools/data/${id}/`)
                 }
                 title={
                   t.toolTitles[id as keyof typeof t.toolTitles] ??

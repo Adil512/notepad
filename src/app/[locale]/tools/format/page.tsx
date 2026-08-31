@@ -180,8 +180,8 @@ export default async function FormatToolsCategoryPage({
                 id={id}
                 href={
                   (locale === "zh" || locale === "ko" || locale === "ar")
-                    ? `/tools/format/${id}`
-                    : L(`/tools/format/${id}`)
+                    ? `/tools/format/${id}/`
+                    : L(`/tools/format/${id}/`)
                 }
                 labels={t.toolLabels[id as keyof typeof t.toolLabels]}
               />

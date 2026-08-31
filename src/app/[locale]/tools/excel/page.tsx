@@ -196,8 +196,8 @@ export default async function ExcelToolsCategoryPage({
                 id={id}
                 href={
                   (locale === "zh" || locale === "ko" || locale === "ar")
-                    ? `/tools/excel/${id}`
-                    : L(`/tools/excel/${id}`)
+                    ? `/tools/excel/${id}/`
+                    : L(`/tools/excel/${id}/`)
                 }
                 title={
                   t.toolTitles[id as keyof typeof t.toolTitles] ??

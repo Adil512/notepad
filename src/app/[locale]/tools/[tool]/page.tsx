@@ -28,7 +28,7 @@ export async function generateMetadata({
   const { locale, tool } = await params;
   const canonicalPath = isWritingToolId(tool)
     ? toolDetailPublicPath(tool)
-    : `/tools/${tool}`;
+    : `/tools/${tool}/`;
   return buildWritingToolPageMetadata({
     locale,
     tool,

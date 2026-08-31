@@ -211,8 +211,8 @@ export default async function DocumentToolsCategoryPage({
                 id={id}
                 href={
                   (locale === "zh" || locale === "ko" || locale === "ar")
-                    ? `/tools/documents/${id}`
-                    : L(`/tools/documents/${id}`)
+                    ? `/tools/documents/${id}/`
+                    : L(`/tools/documents/${id}/`)
                 }
                 labels={t.toolLabels[id as keyof typeof t.toolLabels]}
               />

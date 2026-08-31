@@ -127,8 +127,8 @@ export default async function WritingToolsCategoryPage({
                 id={id}
                 href={
                   (locale === "zh" || locale === "ko" || locale === "ar" || locale === "id")
-                    ? `/tools/writing/${id}`
-                    : L(`/tools/writing/${id}`)
+                    ? `/tools/writing/${id}/`
+                    : L(`/tools/writing/${id}/`)
                 }
                 label={
                   isWritingProductivityToolId(id)

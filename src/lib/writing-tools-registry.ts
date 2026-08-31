@@ -164,17 +164,16 @@ export function isWritingProductivityToolId(
   return (WRITING_PRODUCTIVITY_TOOL_IDS as readonly string[]).includes(s);
 }
 
-/** Path segment after domain, with leading slash, no locale prefix. */
 export function toolDetailPublicPath(id: WritingToolId): string {
-  if (isWritingProductivityToolId(id)) return `/tools/writing/${id}`;
-  if (isEditorHubToolId(id)) return `/tools/editors/${id}`;
-  if (isTextAnalysisHubToolId(id)) return `/tools/text/${id}`;
-  if (isDevToolsHubToolId(id)) return `/tools/dev-tools/${id}`;
-  if (isExcelHubToolId(id)) return `/tools/excel/${id}`;
-  if (isDocumentHubToolId(id)) return `/tools/documents/${id}`;
-  if (isDataHubToolId(id)) return `/tools/data/${id}`;
-  if (isFormatHubToolId(id)) return `/tools/format/${id}`;
-  return `/tools/${id}`;
+  if (isWritingProductivityToolId(id)) return `/tools/writing/${id}/`;
+  if (isEditorHubToolId(id)) return `/tools/editors/${id}/`;
+  if (isTextAnalysisHubToolId(id)) return `/tools/text/${id}/`;
+  if (isDevToolsHubToolId(id)) return `/tools/dev-tools/${id}/`;
+  if (isExcelHubToolId(id)) return `/tools/excel/${id}/`;
+  if (isDocumentHubToolId(id)) return `/tools/documents/${id}/`;
+  if (isDataHubToolId(id)) return `/tools/data/${id}/`;
+  if (isFormatHubToolId(id)) return `/tools/format/${id}/`;
+  return `/tools/${id}/`;
 }
 
 export type WritingToolCategory =

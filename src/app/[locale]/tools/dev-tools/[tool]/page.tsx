@@ -32,7 +32,7 @@ export async function generateMetadata({
   return buildWritingToolPageMetadata({
     locale,
     tool,
-    canonicalPath: `/tools/dev-tools/${tool}`,
+    canonicalPath: `/tools/dev-tools/${tool}/`,
   });
 }
 
@@ -53,7 +53,7 @@ export default async function DevToolsCategoryToolPage({
     { href: L("/"), label: "Home" },
     { href: L("/tools"), label: "Tools" },
     { href: hub, label: "Developer tools" },
-    { href: L(`/tools/dev-tools/${id}`), label: writingToolsMeta[id].h1 },
+    { href: L(`/tools/dev-tools/${id}/`), label: writingToolsMeta[id].h1 },
   ];
 
   return (

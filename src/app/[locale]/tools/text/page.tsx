@@ -236,42 +236,42 @@ export default async function TextAnalysisCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/word-counter" : L("/tools/text/word-counter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/word-counter/" : L("/tools/text/word-counter/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introWordCounter}
               </Link>
               {t.introOr}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/character-counter" : L("/tools/text/character-counter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/character-counter/" : L("/tools/text/character-counter/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCharCounter}
               </Link>
               {t.introStart}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/sentence-counter" : L("/tools/text/sentence-counter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/sentence-counter/" : L("/tools/text/sentence-counter/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introSentences}
               </Link>
               {t.introAnd}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/paragraph-counter" : L("/tools/text/paragraph-counter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/paragraph-counter/" : L("/tools/text/paragraph-counter/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introParagraphs}
               </Link>
               {t.introDig}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/reading-time-calculator" : L("/tools/text/reading-time-calculator")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/reading-time-calculator/" : L("/tools/text/reading-time-calculator/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introReadingTime}
               </Link>
               {t.introEstimate}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/case-converter" : L("/tools/text/case-converter")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/text/case-converter/" : L("/tools/text/case-converter/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCase}
@@ -323,8 +323,8 @@ export default async function TextAnalysisCategoryPage({
                 id={id}
                 href={
                   (locale === "zh" || locale === "ko" || locale === "ar" || locale === "id")
-                    ? `/tools/text/${id}`
-                    : L(`/tools/text/${id}`)
+                    ? `/tools/text/${id}/`
+                    : L(`/tools/text/${id}/`)
                 }
                 title={
                   t.toolTitles[id as keyof typeof t.toolTitles] ??

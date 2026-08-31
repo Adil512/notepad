@@ -176,28 +176,28 @@ export default async function EditorToolsCategoryPage({
             <p>
               {t.introPrefix}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/editors/markdown-notepad" : L("/tools/editors/markdown-notepad")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/editors/markdown-notepad/" : L("/tools/editors/markdown-notepad/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introMarkdown}
               </Link>
               ,{" "}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/editors/json-editor" : L("/tools/editors/json-editor")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/editors/json-editor/" : L("/tools/editors/json-editor/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introJson}
               </Link>
               ,{" "}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/editors/html-editor" : L("/tools/editors/html-editor")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/editors/html-editor/" : L("/tools/editors/html-editor/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introHtml}
               </Link>
               {t.introAnd}
               <Link
-                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/editors/code-notepad" : L("/tools/editors/code-notepad")}
+                href={(locale === "zh" || locale === "ko" || locale === "ar" || locale === "id") ? "/tools/editors/code-notepad/" : L("/tools/editors/code-notepad/")}
                 className="font-semibold text-primary hover:underline"
               >
                 {t.introCode}
@@ -243,8 +243,8 @@ export default async function EditorToolsCategoryPage({
                 id={id}
                 href={
                   (locale === "zh" || locale === "ko" || locale === "ar" || locale === "id")
-                    ? `/tools/editors/${id}`
-                    : L(`/tools/editors/${id}`)
+                    ? `/tools/editors/${id}/`
+                    : L(`/tools/editors/${id}/`)
                 }
                 title={
                   t.toolTitles[id as keyof typeof t.toolTitles] ??
