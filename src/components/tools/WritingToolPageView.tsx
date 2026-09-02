@@ -57,7 +57,7 @@ export function WritingToolPageView({
         <WritingToolView id={id} />
 
         <div className="my-8 flex justify-center">
-          <div google-add-preferred-source-btn="" className="flex shrink-0">
+          <div className="flex shrink-0">
             <a
               href="https://www.google.com/preferences/source?q=notepad.is"
               target="_blank"

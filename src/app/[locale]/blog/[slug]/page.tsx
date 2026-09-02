@@ -266,7 +266,7 @@ export default async function BlogPostPage({
               {/* Mediavine Top Sidebar Ad Placeholder */}
               <div id="sidebar_atf_target" className="w-full min-h-[50px] empty:hidden" />
 
-              <div google-add-preferred-source-btn="" className="flex shrink-0 w-full">
+              <div className="flex shrink-0 w-full">
                 <a
                   href="https://www.google.com/preferences/source?q=notepad.is"
                   target="_blank"

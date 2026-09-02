@@ -11,7 +11,7 @@ export function AdminFooterGate({ locale }: { locale: string }) {
     <>
       <div className="w-full border-t border-border/60 bg-background py-10">
         <div className="mx-auto flex max-w-[85rem] flex-col items-center gap-6 px-4 sm:px-6 lg:px-8 text-center">
-          <div google-add-preferred-source-btn="" className="flex shrink-0">
+          <div className="flex shrink-0">
             <a
               href="https://www.google.com/preferences/source?q=notepad.is"
               target="_blank"

@@ -179,7 +179,7 @@ export function SocialShare() {
 
         <span className="hidden sm:block h-5 w-px bg-border" />
 
-        <div google-add-preferred-source-btn="" className="flex shrink-0">
+        <div className="flex shrink-0">
           <a
             href="https://www.google.com/preferences/source?q=notepad.is"
             target="_blank"
