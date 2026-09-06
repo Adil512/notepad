@@ -139,7 +139,7 @@ export function Editor({ user }: { user?: User | null }) {
     editorProps: {
       attributes: {
         // Line-height is adjusted to roughly match the lined background pattern (1.75rem)
-        class: "prose prose-sm sm:prose-base dark:prose-invert prose-p:leading-[1.75rem] prose-p:my-0 prose-pre:bg-muted prose-pre:text-muted-foreground focus:outline-none max-w-none w-full min-h-[70vh] pb-32",
+        class: "prose prose-sm sm:prose-base dark:prose-invert prose-p:leading-[1.75rem] prose-p:my-0 prose-pre:bg-muted prose-pre:text-muted-foreground focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 max-w-none w-full min-h-[70vh] pb-32",
       },
     },
   });
@@ -557,7 +557,7 @@ export function Editor({ user }: { user?: User | null }) {
         <ToolbarItem onClick={() => editor.chain().focus().toggleOrderedList().run()} isActive={editor.isActive("orderedList")} title="Numbered List"><ListOrdered className="w-4 h-4" /></ToolbarItem>
       </div>
       {isHomeEditor ? (
-        <div className="mt-2 flex items-center justify-end gap-2">
+        <div className="mt-2 mb-5 flex items-center justify-end gap-2">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/90 px-2 py-1 shadow-sm">
             <span className="hidden sm:inline px-1 text-xs font-medium text-muted-foreground">
               Voice typing
@@ -591,7 +591,7 @@ export function Editor({ user }: { user?: User | null }) {
         </div>
       ) : null}
       {isHomeEditor && (isDictating || speechError) ? (
-        <div className="mt-2 rounded-md border border-border bg-background px-3 py-2 text-xs text-muted-foreground">
+        <div className="mt-2 mb-4 rounded-md border border-border bg-background px-3 py-2 text-xs text-muted-foreground">
           {isDictating ? "Listening... Speak to type in the editor." : speechError}
         </div>
       ) : null}
@@ -607,36 +607,40 @@ export function Editor({ user }: { user?: User | null }) {
           .dark .notebook-paper {
             background-image: linear-gradient(transparent 95%, #2a2a2a 5%);
           }
-          /* The left vertical margin red line for the notebook effect */
-          .notebook-margin {
-            position: absolute;
-            left: 5rem;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background-color: rgba(239, 68, 68, 0.2);
-            z-index: 0;
-          }
-          .dark .notebook-margin {
-            background-color: rgba(239, 68, 68, 0.15);
-          }
           .editor-inner-content {
             position: relative;
             z-index: 10;
-            margin-left: 2.5rem; /* Push text past the red line */
             transform-origin: top left;
           }
+          .tiptap,
+          .tiptap:focus,
+          .tiptap:focus-visible,
+          .tiptap *:focus,
+          .tiptap *:focus-visible,
+          .notebook-paper,
+          .notebook-paper:focus,
+          .notebook-paper:focus-visible,
+          .editor-inner-content,
+          .editor-inner-content:focus,
+          .editor-inner-content:focus-visible,
+          .ProseMirror,
+          .ProseMirror:focus,
+          .ProseMirror:focus-visible,
+          .ProseMirror-focused {
+            outline: none !important;
+            box-shadow: none !important;
+            --tw-ring-color: transparent !important;
+            --tw-ring-shadow: none !important;
+            --tw-ring-offset-shadow: none !important;
+          }
         `}} />
-        
-        {/* Decorative margin line */}
-        <div className="notebook-margin hidden sm:block"></div>
 
         {/* Editor Instance with Zoom Control */}
         <div 
-          className="editor-inner-content px-4 py-8 sm:px-14 sm:py-8"
+          className="editor-inner-content px-4 pt-0 pb-12 sm:px-6 sm:pt-0 sm:pb-12 focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0"
           style={{ transform: `scale(${zoomLevel / 100})`, width: `${(100 / (zoomLevel / 100))}%` }}
         >
-          <EditorContent editor={editor} className="w-full text-lg cursor-text min-h-[700px] outline-none" onClick={() => editor.commands.focus()} />
+          <EditorContent editor={editor} className="w-full text-lg cursor-text min-h-[700px] outline-none focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0" onClick={() => editor.commands.focus()} />
         </div>
       </div>
 
