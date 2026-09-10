@@ -207,33 +207,107 @@ function maybeFormatHubRedirect(request: NextRequest): NextResponse | null {
 }
 
 function cleanPathFromTypoSuffix(pathname: string): string | null {
-  const parts = pathname.toLowerCase().split("/").filter(Boolean);
-  for (const part of parts) {
-    if (part === "tools-tools") {
-      return "/tools/";
-    }
-    if (part === "writing-writing") {
-      return "/tools/writing/";
-    }
-    if (part === "editors-editors") {
-      return "/tools/editors/";
-    }
-    if (part === "format-format") {
-      return "/tools/format/";
-    }
-    if (part === "excel-excel" || part === "tools-excel") {
-      return "/tools/excel/";
-    }
-    if (part === "data-data" || part === "tools-data") {
-      return "/tools/data/";
-    }
-    if (part === "templates-templates") {
-      return "/tools/writing/templates/";
-    }
-    if (part === "home-home" || part === "tools-home") {
+  const rawParts = pathname.split("/").filter(Boolean);
+  if (rawParts.length === 0) return null;
+
+  // 1. Handle single segment /[locale]-Home or /[locale]-home (e.g. /sk-Home, /ay-Home/, /am-Home, /he-Home, /id-Home)
+  if (rawParts.length === 1) {
+    const single = rawParts[0].toLowerCase();
+    if (single.endsWith("-home")) {
+      const prefix = single.slice(0, -5); // strip "-home"
+      if (isValidLocale(prefix)) {
+        return prefix === defaultLocale ? "/" : `/${prefix}/`;
+      }
       return "/";
     }
   }
+
+  // 2. Check each segment for duplicate-typo suffixes or trailing hyphen-segments
+  let modified = false;
+  const cleanedParts: string[] = [];
+
+  for (let i = 0; i < rawParts.length; i++) {
+    const part = rawParts[i];
+    const partLower = part.toLowerCase();
+
+    // Check if segment is a standalone hyphenated tag like "-Templates", "-Tools", "-Home", "-Writing", etc.
+    if (part.startsWith("-") && part.length > 1) {
+      modified = true;
+      continue; // drop this trailing hyphenated segment
+    }
+
+    // Check for [locale]-home as a segment
+    if (partLower.endsWith("-home") && i === 0) {
+      const prefix = partLower.slice(0, -5);
+      if (isValidLocale(prefix)) {
+        if (prefix !== defaultLocale) cleanedParts.push(prefix);
+        modified = true;
+        continue;
+      }
+    }
+
+    // Check for known category duplicate/typo segments
+    if (partLower === "tools-tools" || partLower === "tools-home") {
+      cleanedParts.push("tools");
+      modified = true;
+    } else if (partLower === "writing-writing" || partLower === "tools-writing") {
+      cleanedParts.push("writing");
+      modified = true;
+    } else if (partLower === "editors-editors" || partLower === "tools-editors") {
+      cleanedParts.push("editors");
+      modified = true;
+    } else if (partLower === "format-format" || partLower === "tools-format") {
+      cleanedParts.push("format");
+      modified = true;
+    } else if (partLower === "excel-excel" || partLower === "tools-excel") {
+      cleanedParts.push("excel");
+      modified = true;
+    } else if (partLower === "data-data" || partLower === "tools-data") {
+      cleanedParts.push("data");
+      modified = true;
+    } else if (partLower === "dev-tools-dev-tools" || partLower === "tools-dev-tools") {
+      cleanedParts.push("dev-tools");
+      modified = true;
+    } else if (partLower === "documents-documents" || partLower === "tools-documents") {
+      cleanedParts.push("documents");
+      modified = true;
+    } else if (partLower === "templates-templates") {
+      cleanedParts.push("templates");
+      modified = true;
+    } else if (partLower.endsWith("-templates") && partLower !== "templates") {
+      const base = partLower.slice(0, -"-templates".length);
+      if (base === "templates" || base === "writing") {
+        cleanedParts.push("templates");
+        modified = true;
+      } else {
+        cleanedParts.push(part);
+      }
+    } else {
+      // Check if string is formed by repeating a substring with a dash, e.g. foo-foo or xml-formatter-xml-formatter
+      if (partLower.length > 4 && partLower.includes("-")) {
+        const len = partLower.length;
+        if (len % 2 === 1) {
+          const mid = (len - 1) / 2;
+          if (partLower[mid] === "-") {
+            const left = partLower.slice(0, mid);
+            const right = partLower.slice(mid + 1);
+            if (left === right) {
+              cleanedParts.push(left);
+              modified = true;
+              continue;
+            }
+          }
+        }
+      }
+      cleanedParts.push(part);
+    }
+  }
+
+  if (modified) {
+    if (cleanedParts.length === 0) return "/";
+    return `/${cleanedParts.join("/")}/`;
+  }
+
   return null;
 }
 
