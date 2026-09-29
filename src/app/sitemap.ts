@@ -27,6 +27,7 @@ const staticPaths = [
   "/tools/documents",
   "/tools/data",
   "/tools/format",
+  "/smart-notepad",
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
