@@ -92,7 +92,7 @@ function AuthProfileDropdown({
   );
 }
 
-export function Header({ user }: { user: SupabaseUser | null }) {
+export function Header({ user = null }: { user?: SupabaseUser | null } = {}) {
   const locale = useLocale();
   const nav = getNavLabels(locale);
   const { theme, setTheme } = useTheme();

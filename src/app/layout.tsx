@@ -1,12 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Outfit } from "next/font/google";
-import { headers } from "next/headers";
 import "./globals.css";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { ThemeProvider } from "@/components/theme-provider";
 import { getLocaleMetadata } from "@/lib/locale-metadata";
 import { defaultLocale } from "@/lib/i18n";
-import { LOCALE_REQUEST_HEADER } from "@/lib/request-locale-header";
 import { getMetadataBase } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -33,16 +31,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const h = await headers();
-  const lang = h.get(LOCALE_REQUEST_HEADER) ?? defaultLocale;
-
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="text/javascript"

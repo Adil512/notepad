@@ -422,13 +422,13 @@ export async function proxy(request: NextRequest) {
     return formatRedirect;
   }
 
+  // Static utility files
   if (
-    pathname.startsWith("/auth") ||
     pathname === "/sitemap.xml" ||
     pathname === "/robots.txt" ||
     pathname === "/ads.txt"
   ) {
-    return updateSession(request);
+    return NextResponse.next();
   }
 
   // Default locale must not use /en in the address bar
@@ -444,18 +444,31 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(url, 308);
   }
 
+  const isAuthOrAdmin =
+    pathname.startsWith("/auth") ||
+    pathname.includes("/admin") ||
+    pathname.includes("/protected") ||
+    pathname.endsWith("/login") ||
+    pathname.endsWith("/signup");
+
   if (hasExplicitNonEnLocale(pathname)) {
-    return updateSession(request);
+    if (isAuthOrAdmin) {
+      return updateSession(request);
+    }
+    return NextResponse.next();
   }
 
   // English: rewrite internally to /en/... so app/[locale] still matches
   const rewriteUrl = request.nextUrl.clone();
   rewriteUrl.pathname = pathname === "/" ? "/en" : `/en${pathname}`;
 
-  const headers = localeRequestHeaders(request);
-  return updateSession(request, () =>
-    NextResponse.rewrite(rewriteUrl, { request: { headers } })
-  );
+  if (isAuthOrAdmin) {
+    return updateSession(request, () =>
+      NextResponse.rewrite(rewriteUrl)
+    );
+  }
+
+  return NextResponse.rewrite(rewriteUrl);
 }
 
 export const config = {

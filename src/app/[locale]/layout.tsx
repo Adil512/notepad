@@ -5,7 +5,6 @@ import { AdminFooterGate } from "@/components/AdminFooterGate";
 import { LocaleProvider } from "@/components/locale-context";
 import { DocumentLang } from "@/components/document-lang";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { createClient } from "@/utils/supabase/server";
 import { isValidLocale, locales } from "@/lib/i18n";
 import { getLocaleMetadata } from "@/lib/locale-metadata";
 
@@ -50,18 +49,11 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const supabase = await createClient();
-  let user = null;
-  if (supabase) {
-    const { data } = await supabase.auth.getUser();
-    user = data.user;
-  }
-
   return (
     <LocaleProvider locale={locale}>
       <DocumentLang locale={locale} />
       <div className="flex flex-col min-h-screen">
-        <Header user={user} />
+        <Header />
         <main className="flex-1 flex flex-col min-h-0">{children}</main>
         <AdminFooterGate locale={locale} />
         <ScrollToTop />
