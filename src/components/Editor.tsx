@@ -97,12 +97,23 @@ export function Editor({ user }: { user?: User | null }) {
 
   const showFloatingChrome = isFullscreen || editorBlockInView;
 
+  const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const rafCursorRef = useRef<number | null>(null);
+
   const updateCursorInfo = (ed: any) => {
-    const { selection } = ed.state;
-    // Estimate Line based on block element index, and Col based on text offset in block
-    const line = selection.$head.index(0) + 1;
-    const col = selection.$head.parentOffset + 1;
-    setCursorPos({ line, col });
+    if (!ed?.state?.selection) return;
+    if (rafCursorRef.current) return;
+    rafCursorRef.current = requestAnimationFrame(() => {
+      try {
+        const { selection } = ed.state;
+        const line = selection.$head.index(0) + 1;
+        const col = selection.$head.parentOffset + 1;
+        setCursorPos({ line, col });
+      } catch {
+        // selection state fallback
+      }
+      rafCursorRef.current = null;
+    });
   };
 
   const editor = useEditor({
@@ -129,9 +140,19 @@ export function Editor({ user }: { user?: User | null }) {
     content: "",
     onUpdate: ({ editor }) => {
       setSaveStatus("saving");
-      localStorage.setItem(STORAGE_KEY, editor.getHTML());
       updateCursorInfo(editor);
-      setTimeout(() => setSaveStatus("saved"), 500);
+
+      if (saveTimeoutRef.current) {
+        clearTimeout(saveTimeoutRef.current);
+      }
+      saveTimeoutRef.current = setTimeout(() => {
+        try {
+          localStorage.setItem(STORAGE_KEY, editor.getHTML());
+        } catch {
+          // localStorage full or unavailable
+        }
+        setSaveStatus("saved");
+      }, 1000);
     },
     onSelectionUpdate: ({ editor }) => {
       updateCursorInfo(editor);
@@ -152,6 +173,29 @@ export function Editor({ user }: { user?: User | null }) {
       }
     }
   }, [editor, isMounted]);
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      if (editor && saveTimeoutRef.current) {
+        clearTimeout(saveTimeoutRef.current);
+        try {
+          localStorage.setItem(STORAGE_KEY, editor.getHTML());
+        } catch {
+          // noop
+        }
+      }
+    };
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      if (saveTimeoutRef.current) {
+        clearTimeout(saveTimeoutRef.current);
+      }
+      if (rafCursorRef.current) {
+        cancelAnimationFrame(rafCursorRef.current);
+      }
+    };
+  }, [editor]);
 
   useEffect(() => {
     if (!editor || !isMounted || !isHomeEditor) return;
