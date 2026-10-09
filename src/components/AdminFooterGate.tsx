@@ -4,6 +4,37 @@ import { usePathname } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { ExternalLink } from "lucide-react";
 
+function MicrosoftIcon({ className = "h-4 w-4 shrink-0" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24">
+      <path fill="#f25022" d="M1 1h10v10H1z" />
+      <path fill="#00a4ef" d="M1 13h10v10H1z" />
+      <path fill="#7fba00" d="M13 1h10v10H13z" />
+      <path fill="#ffb900" d="M13 13h10v10H13z" />
+    </svg>
+  );
+}
+
+function ChromeIcon({ className = "h-4 w-4 shrink-0" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24">
+      <path
+        fill="#EA4335"
+        d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L7.53 8.71C8.38 7.68 9.68 7 11.14 7h10.38C19.67 4.02 16.08 2 12 2z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M2.97 16.29C4.54 19.66 8 22 12 22c2.09 0 4.02-.64 5.63-1.74l-4.56-7.89c-.61.39-1.33.63-2.07.63-1.63 0-3.03-.98-3.66-2.39L2.97 16.29z"
+      />
+      <path
+        fill="#34A853"
+        d="M21.52 7H11.14c.64 0 1.25.16 1.78.44l4.56 7.89c.33.57.52 1.23.52 1.93 0 .7-.19 1.36-.52 1.93l.15.07c2.72-1.63 4.57-4.58 4.89-8.04V7z"
+      />
+      <circle cx="12" cy="12" r="4.5" fill="#4285F4" />
+    </svg>
+  );
+}
+
 export function AdminFooterGate({ locale }: { locale: string }) {
   const pathname = usePathname();
   if (pathname?.includes("/admin")) return null;
@@ -42,15 +73,29 @@ export function AdminFooterGate({ locale }: { locale: string }) {
             </a>
           </div>
 
-          <a
-            href="https://chromewebstore.google.com/detail/notepadis/dhmnleochiopeodajekdgidhglodiodb"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/20"
-          >
-            Install Our Free Extension
-            <ExternalLink className="h-4 w-4" />
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <a
+              href="https://apps.microsoft.com/store/detail/9NXTDG63ST54?cid=DevShareMCLPCS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary transition-all duration-200 hover:bg-primary/20 hover:-translate-y-0.5 shadow-sm"
+            >
+              <MicrosoftIcon className="h-4 w-4 shrink-0" />
+              <span>Get on Microsoft Store</span>
+              <ExternalLink className="h-3.5 w-3.5 opacity-75" />
+            </a>
+
+            <a
+              href="https://chromewebstore.google.com/detail/notepadis/dhmnleochiopeodajekdgidhglodiodb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary transition-all duration-200 hover:bg-primary/20 hover:-translate-y-0.5 shadow-sm"
+            >
+              <ChromeIcon className="h-4 w-4 shrink-0" />
+              <span>Install Our Free Extension</span>
+              <ExternalLink className="h-3.5 w-3.5 opacity-75" />
+            </a>
+          </div>
         </div>
       </div>
       <Footer locale={locale} />
