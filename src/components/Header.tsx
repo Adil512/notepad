@@ -117,10 +117,10 @@ export function Header({ user = null }: { user?: SupabaseUser | null } = {}) {
   const navLinks = [
     { name: nav.notepad, path: "/" },
     { name: nav.writingTools, path: "/tools" },
+    { name: "Writing", path: "/tools/writing" },
+    { name: "Excel", path: "/tools/excel" },
+    { name: "Document", path: "/tools/documents" },
     { name: nav.blog, path: "/blog" },
-    { name: nav.about, path: "/about" },
-    { name: nav.contact, path: "/contact" },
-    { name: nav.privacy, path: "/privacy" },
   ];
 
   const isAdminRoute = pathname?.includes("/admin");
@@ -204,12 +204,15 @@ export function Header({ user = null }: { user?: SupabaseUser | null } = {}) {
               })
             : navLinks.map((link) => {
                 const href = L(link.path);
+                const pn = norm(pathname || "");
+                const h = norm(href);
+                const active = link.path === "/" ? pn === h : pn === h || pn.startsWith(`${h}/`);
                 return (
                   <Link
                     key={link.name}
                     href={href}
-                    className={`px-4 py-1.5 text-sm font-medium rounded-full transition-colors ${
-                      pathname === href
+                    className={`px-3.5 py-1.5 text-sm font-medium rounded-full transition-colors ${
+                      active
                         ? "text-primary bg-primary/10"
                         : "text-muted-foreground hover:text-foreground hover:bg-accent"
                     }`}
@@ -330,13 +333,16 @@ export function Header({ user = null }: { user?: SupabaseUser | null } = {}) {
           ) : (
             navLinks.map((link) => {
               const href = L(link.path);
+              const pn = norm(pathname || "");
+              const h = norm(href);
+              const active = link.path === "/" ? pn === h : pn === h || pn.startsWith(`${h}/`);
               return (
                 <Link
                   key={link.name}
                   href={href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`px-4 py-3 text-sm font-medium rounded-md transition-colors ${
-                    pathname === href
+                    active
                       ? "text-primary bg-primary/10"
                       : "text-muted-foreground hover:text-foreground hover:bg-accent"
                   }`}
