@@ -139,11 +139,16 @@ export function SEOContent({
 
   return (
     <div
-      className="w-full bg-background pt-16 pb-24 border-t"
+      className="w-full bg-background pt-10 sm:pt-12 pb-24 border-t"
       dir={dir}
     >
-      <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
-        
+      <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-20">
+        {/* Mediavine In-Content / Above Section 1 Ad Placement */}
+        <div
+          id="home_content_atf_target"
+          className="content_hint content_desktop_hint w-full min-h-[50px] flex justify-center items-center my-4 empty:hidden"
+        />
+
         {/* Section 1: What is an online notepad? */}
         <section className="max-w-3xl mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground font-display">
