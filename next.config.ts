@@ -5,6 +5,8 @@ import { fileURLToPath } from "node:url";
 const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
+  /** Required for OpenNext standalone bundle tracing without re-invoking `next build`. */
+  output: "standalone",
   /** Aligns public URLs and sitemap `<loc>` entries (e.g. `https://notepad.is/`). */
   trailingSlash: true,
   /** Avoid wrong inferred root when another lockfile exists higher in the tree (fixes missing `src/proxy` / bad module paths in dev). */
