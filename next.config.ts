@@ -5,22 +5,16 @@ import { fileURLToPath } from "node:url";
 const projectRoot = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
-  /** Required for OpenNext standalone bundle tracing without re-invoking `next build`. */
-  output: "standalone",
+  /** Pure static export to `./out` for Cloudflare Workers Static Assets + edge router. */
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
   /** Aligns public URLs and sitemap `<loc>` entries (e.g. `https://notepad.is/`). */
   trailingSlash: true,
-  /** Avoid wrong inferred root when another lockfile exists higher in the tree (fixes missing `src/proxy` / bad module paths in dev). */
+  /** Avoid wrong inferred root when another lockfile exists higher in the tree. */
   turbopack: {
     root: projectRoot,
-  },
-  async redirects() {
-    return [
-      {
-        source: "/ads.txt",
-        destination: "https://adstxt.journeymv.com/sites/e06862ab-368c-421d-8d71-0bbd2614623b/ads.txt",
-        permanent: true,
-      },
-    ];
   },
 };
 

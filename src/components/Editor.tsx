@@ -32,8 +32,6 @@ import {
   Mic,
   MicOff,
 } from "lucide-react";
-import type { User } from "@supabase/supabase-js";
-import { createClient } from "@/utils/supabase/client";
 import NextLink from "next/link";
 import { useLocale } from "@/components/locale-context";
 import { getPathWithoutLocale, localizedPath } from "@/lib/i18n";
@@ -52,7 +50,7 @@ type SpeechRecognitionLike = {
   onend: (() => void) | null;
 };
 
-export function Editor({ user }: { user?: User | null }) {
+export function Editor() {
   const pathname = usePathname();
   const locale = useLocale();
   const [isMounted, setIsMounted] = useState(false);
@@ -369,33 +367,21 @@ export function Editor({ user }: { user?: User | null }) {
   };
 
   const handleShare = async () => {
-    if (!user) {
-      alert("Please sign in to share notes publicly.");
-      return;
-    }
-    const htmlData = editor?.getHTML();
-    if (!htmlData) return;
-    
+    const textData = editor?.getText()?.trim();
+    if (!textData) return;
     setIsSharing(true);
-    const supabase = createClient();
-    if (!supabase) {
-      alert("Sign-in is not available (app configuration).");
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: "Notepad.is Note", text: textData });
+      } else {
+        await navigator.clipboard.writeText(textData);
+        alert("Note copied to clipboard!");
+      }
+    } catch {
+      // User cancelled native share or clipboard blocked
+    } finally {
       setIsSharing(false);
-      return;
     }
-    const { data, error } = await supabase.from('notes').insert([
-      { user_id: user.id, content: htmlData, is_public: true }
-    ]).select().single();
-    
-    if (error) {
-      console.error(error);
-      alert("Error sharing note. Make sure you have created the Database table properly per the implementation guide!");
-    } else if (data) {
-      const url = `${window.location.origin}/share/${data.id}`;
-      navigator.clipboard.writeText(url);
-      alert("Sharable public link successfully generated and copied to clipboard!\n" + url);
-    }
-    setIsSharing(false);
   };
 
   const clearAll = () => {
@@ -446,7 +432,7 @@ export function Editor({ user }: { user?: User | null }) {
     return "p";
   };
 
-  const showNotice = !user && !dismissedNotice && (editor.storage.characterCount.words() > 30);
+  const showNotice = false;
 
   return (
     <div

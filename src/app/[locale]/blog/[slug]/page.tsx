@@ -23,8 +23,6 @@ import { BlogTableOfContents } from "@/components/BlogTableOfContents";
 
 import { BLOG_TRANSLATIONS } from "@/lib/blog-i18n";
 
-export const dynamicParams = true;
-
 export async function generateStaticParams() {
   const slugs = await getAllPublishedSlugs();
   return slugs.map((slug) => ({ locale: defaultLocale, slug }));

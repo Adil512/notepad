@@ -6,18 +6,16 @@ import {
   isToolVisibleInLocale,
   writingToolsMeta,
 } from "@/lib/writing-tools-registry";
-import { localizedPath } from "@/lib/i18n";
-import { defaultLocale } from "@/lib/i18n";
+import { localizedPath, locales } from "@/lib/i18n";
 import { buildWritingToolPageMetadata } from "@/lib/writing-tool-page-shared";
 import { WritingToolPageView } from "@/components/tools/WritingToolPageView";
 
-export const dynamicParams = true;
-
 export function generateStaticParams() {
-  return EDITOR_HUB_TOOL_IDS.map((tool) => ({
-    locale: defaultLocale,
-    tool,
-  }));
+  return locales.flatMap((locale) =>
+    EDITOR_HUB_TOOL_IDS
+      .filter((tool) => isToolVisibleInLocale(tool, locale))
+      .map((tool) => ({ locale, tool }))
+  );
 }
 
 export async function generateMetadata({

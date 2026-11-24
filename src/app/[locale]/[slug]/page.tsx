@@ -4,16 +4,16 @@ import { QuickNotesApp } from "@/components/QuickNotesApp";
 import { seoPages, defaultSEO } from "@/lib/seo-data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { defaultLocale } from "@/lib/i18n";
+import { locales } from "@/lib/i18n";
 import { canonicalUrlForPage } from "@/lib/site";
 
-export const dynamicParams = true;
-
 export function generateStaticParams() {
-  return Object.keys(seoPages).map((slug) => ({
-    locale: defaultLocale,
-    slug,
-  }));
+  return locales.flatMap((locale) =>
+    Object.keys(seoPages).map((slug) => ({
+      locale,
+      slug,
+    }))
+  );
 }
 
 interface Props {

@@ -7,11 +7,9 @@ import {
   toolDetailPublicPath,
   type WritingToolId,
 } from "@/lib/writing-tools-registry";
-import { defaultLocale } from "@/lib/i18n";
+import { defaultLocale, locales } from "@/lib/i18n";
 import { buildWritingToolPageMetadata } from "@/lib/writing-tool-page-shared";
 import { WritingToolPageView } from "@/components/tools/WritingToolPageView";
-
-export const dynamicParams = true;
 
 export function generateStaticParams() {
   return WRITING_TOOL_IDS.map((tool) => ({

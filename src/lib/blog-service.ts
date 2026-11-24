@@ -2,8 +2,7 @@ import {
   blogPosts as staticBlogPosts,
   type BlogSection,
 } from "@/lib/blog-data";
-import { createPublicSupabaseClient } from "@/utils/supabase/public";
-import { unstable_noStore as noStore } from "next/cache";
+import staticDbRows from "@/lib/static-blog-posts.json";
 
 export type TocItem = { id: string; title: string };
 
@@ -96,23 +95,12 @@ function parsePublishedAt(post: UnifiedBlogPost): number {
   return Number.isFinite(parsed) ? parsed : 0;
 }
 
-async function fetchPublishedDbPosts(): Promise<UnifiedBlogPost[]> {
-  const supabase = createPublicSupabaseClient();
-  if (!supabase) return [];
+const snapshotPosts: DbBlogPostRow[] = (staticDbRows as DbBlogPostRow[]).filter(
+  (r) => r.published !== false
+);
 
-  const { data, error } = await supabase
-    .from("blog_posts")
-    .select("*")
-    .eq("published", true)
-    .order("published_at", { ascending: false });
-
-  if (error || !data) return [];
-  return (data as DbBlogPostRow[]).map(dbRowToUnified);
-}
-
-/** Published posts: database first; static posts fill in slugs not overridden by DB. */
 export async function getMergedBlogPosts(): Promise<UnifiedBlogPost[]> {
-  const dbPosts = await fetchPublishedDbPosts();
+  const dbPosts = snapshotPosts.map(dbRowToUnified);
   const dbSlugs = new Set(dbPosts.map((p) => p.slug));
   const staticOnly = staticToUnified().filter((p) => !dbSlugs.has(p.slug));
   const merged = [...dbPosts, ...staticOnly];
@@ -123,16 +111,8 @@ export async function getMergedBlogPosts(): Promise<UnifiedBlogPost[]> {
 export async function getBlogPostBySlug(
   slug: string
 ): Promise<UnifiedBlogPost | undefined> {
-  const supabase = createPublicSupabaseClient();
-  if (supabase) {
-    const { data } = await supabase
-      .from("blog_posts")
-      .select("*")
-      .eq("slug", slug)
-      .eq("published", true)
-      .maybeSingle();
-    if (data) return dbRowToUnified(data as DbBlogPostRow);
-  }
+  const found = snapshotPosts.find((r) => r.slug === slug);
+  if (found) return dbRowToUnified(found);
 
   const staticPost = staticBlogPosts.find((p) => p.slug === slug);
   if (!staticPost) return undefined;
@@ -174,25 +154,13 @@ export async function getAllPublishedSlugs(): Promise<string[]> {
   return posts.map((p) => p.slug);
 }
 
-/** For sitemap: published posts (DB + static fallback) with last modified time. */
 export async function getPublishedBlogSlugsForSitemap(): Promise<
   { slug: string; lastModified: Date }[]
 > {
-  noStore();
   const bySlug = new Map<string, Date>();
-  const supabase = createPublicSupabaseClient();
 
-  if (supabase) {
-    const { data, error } = await supabase
-      .from("blog_posts")
-      .select("slug, updated_at")
-      .eq("published", true);
-
-    if (!error && data) {
-      for (const row of data as { slug: string; updated_at: string }[]) {
-        bySlug.set(row.slug, new Date(row.updated_at || Date.now()));
-      }
-    }
+  for (const row of snapshotPosts) {
+    bySlug.set(row.slug, new Date(row.updated_at || row.published_at || Date.now()));
   }
 
   for (const post of staticBlogPosts) {

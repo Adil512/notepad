@@ -8,7 +8,7 @@ export default function NotFound() {
   return (
     <LocaleProvider locale="en">
       <div className="flex flex-col min-h-screen">
-        <Header user={null} />
+        <Header />
         <main className="flex-1 flex flex-col min-h-0">
           <NotFoundContent />
         </main>

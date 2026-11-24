@@ -10,7 +10,8 @@ import { absoluteUrl } from "@/lib/site";
 import { blogPostPath } from "@/lib/blog-urls";
 import { getPublishedBlogSlugsForSitemap } from "@/lib/blog-service";
 
-/** Regenerate on a schedule and when blog admin actions call `revalidatePath`. */
+/** Static export requires force-static on metadata routes. */
+export const dynamic = "force-static";
 export const revalidate = 3600;
 
 /** Indexed static paths only (no auth, account, or legal utility pages). */
