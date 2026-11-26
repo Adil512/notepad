@@ -45,6 +45,19 @@ function redirect(url: URL | string, status = 308): Response {
   return Response.redirect(typeof url === "string" ? url : url.toString(), status);
 }
 
+function redirectToPath(
+  url: URL,
+  destPath: string,
+  status = 308,
+  preserveSearch = false
+): Response {
+  const cleaned = destPath.replace(/\/{2,}/g, "/");
+  const normalized = cleaned.startsWith("/") ? cleaned : `/${cleaned}`;
+  const target = new URL(preserveSearch ? url.toString() : url.origin);
+  target.pathname = normalized || "/";
+  return redirect(target, status);
+}
+
 function getToolFolder(toolId: string): string | null {
   if (isWritingProductivityToolId(toolId)) return "writing";
   if (isEditorHubToolId(toolId)) return "editors";
@@ -164,12 +177,12 @@ function maybeCheckRedirects(url: URL): Response | null {
   }
 
   if (pathname.includes('"') || pathname.includes("%22") || pathname.includes("\\")) {
-    return redirect(new URL("/", url), 301);
+    return redirectToPath(url, "/", 301);
   }
 
   const cleanedSuffix = cleanPathFromTypoSuffix(pathname);
   if (cleanedSuffix) {
-    return redirect(new URL(cleanedSuffix, url), 301);
+    return redirectToPath(url, cleanedSuffix, 301);
   }
 
   const locale = getLocaleFromPathname(pathname);
@@ -182,14 +195,14 @@ function maybeCheckRedirects(url: URL): Response | null {
       if (isWritingToolId(toolId) && !isToolVisibleInLocale(toolId, locale)) {
         const category = getToolFolder(toolId);
         const dest = category ? `/tools/${category}/${toolId}/` : `/tools/${toolId}/`;
-        return redirect(new URL(dest, url), 301);
+        return redirectToPath(url, dest, 301);
       }
     } else if (parts.length === 1 && isWritingToolId(parts[0])) {
       const toolId = parts[0];
       if (!isToolVisibleInLocale(toolId, locale)) {
         const category = getToolFolder(toolId);
         const dest = category ? `/tools/${category}/${toolId}/` : `/tools/${toolId}/`;
-        return redirect(new URL(dest, url), 301);
+        return redirectToPath(url, dest, 301);
       }
     }
   }
@@ -211,11 +224,9 @@ function maybeCheckRedirects(url: URL): Response | null {
     retiredSlug = parts[1];
   }
   if (retiredSlug) {
-    const dest = localizedPath(
-      locale,
-      `${RETIRED_WRITING_TOOL_REDIRECTS[retiredSlug]}/`
-    );
-    return redirect(new URL(dest, url), 301);
+    const rawDest = localizedPath(locale, RETIRED_WRITING_TOOL_REDIRECTS[retiredSlug]);
+    const dest = rawDest === "/" ? "/" : `${rawDest.replace(/\/+$/, "")}/`;
+    return redirectToPath(url, dest, 301);
   }
 
   // Legacy flat /tools/:id -> category hub redirects
@@ -224,7 +235,7 @@ function maybeCheckRedirects(url: URL): Response | null {
     const folder = getToolFolder(seg);
     if (folder) {
       const dest = localizedPath(locale, `/tools/${folder}/${seg}/`);
-      return redirect(new URL(dest, url), 308);
+      return redirectToPath(url, dest, 308);
     }
   }
 
@@ -238,23 +249,19 @@ function maybeCheckRedirects(url: URL): Response | null {
     pathname.endsWith("/signup/") ||
     pathname.includes("/reset-password")
   ) {
-    return redirect(new URL("/", url), 308);
+    return redirectToPath(url, "/", 308);
   }
 
   // Default locale must not appear as /en in the browser URL bar
   if (pathname === "/en" || pathname === "/en/") {
-    const target = new URL(url.toString());
-    target.pathname = "/";
-    return redirect(target, 308);
+    return redirectToPath(url, "/", 308, true);
   }
   if (pathname.startsWith("/en/")) {
-    const target = new URL(url.toString());
     let rest = pathname.slice("/en".length) || "/";
     if (rest !== "/" && !rest.endsWith("/") && !STATIC_EXT_RE.test(rest)) {
       rest = `${rest}/`;
     }
-    target.pathname = rest.startsWith("/") ? rest : `/${rest}`;
-    return redirect(target, 308);
+    return redirectToPath(url, rest, 308, true);
   }
 
   return null;
@@ -332,11 +339,16 @@ const worker = {
     const redir = maybeCheckRedirects(url);
     if (redir) return redir;
 
+    if (pathname.includes("//")) {
+      const collapsed = pathname.replace(/\/{2,}/g, "/") || "/";
+      const targetPath =
+        collapsed !== "/" && !collapsed.endsWith("/") ? `${collapsed}/` : collapsed;
+      return redirectToPath(url, targetPath, 308, true);
+    }
+
     // Normalize trailing slash on HTML pages to match Next.js `trailingSlash: true`
     if (pathname !== "/" && !pathname.endsWith("/")) {
-      const target = new URL(url.toString());
-      target.pathname = `${pathname}/`;
-      return redirect(target, 308);
+      return redirectToPath(url, `${pathname}/`, 308, true);
     }
 
     // Rewrite default English paths (`/`, `/about/`, etc.) to `/en/...` static assets
@@ -345,7 +357,12 @@ const worker = {
       assetUrl.pathname = pathname === "/" ? "/en/" : `/en${pathname}`;
     }
 
-    const res = await env.ASSETS.fetch(new Request(assetUrl.toString(), request));
+    const res = await env.ASSETS.fetch(
+      new Request(assetUrl.toString(), {
+        method: request.method,
+        headers: request.headers,
+      })
+    );
     if (res.status === 404) {
       const notFoundUrl = new URL("/404.html", url);
       const nf = await env.ASSETS.fetch(new Request(notFoundUrl.toString()));
