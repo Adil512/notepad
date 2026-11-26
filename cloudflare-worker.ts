@@ -190,7 +190,9 @@ function maybeCheckRedirects(url: URL): Response | null {
   const parts = inner.split("/").filter(Boolean);
 
   if (locale !== defaultLocale) {
-    if (parts[0] === "tools" && parts.length >= 2) {
+    if (parts.length === 2 && parts[0] === "blog") {
+      return redirectToPath(url, `/blog/${parts[1]}/`, 301);
+    } else if (parts[0] === "tools" && parts.length >= 2) {
       const toolId = parts[parts.length - 1];
       if (isWritingToolId(toolId) && !isToolVisibleInLocale(toolId, locale)) {
         const category = getToolFolder(toolId);
@@ -333,7 +335,12 @@ const worker = {
 
       const txtUrl = new URL(url.toString());
       txtUrl.pathname = assetPath;
-      return env.ASSETS.fetch(new Request(txtUrl.toString(), request));
+      return env.ASSETS.fetch(
+        new Request(txtUrl.toString(), {
+          method: request.method,
+          headers: request.headers,
+        })
+      );
     }
 
     const redir = maybeCheckRedirects(url);
